@@ -12,11 +12,11 @@ Git-it is one of many [nodeschool.io](http://nodeschool.io) workshoppers that ru
 
 ### Git-it on Electron
 
-If you don't know, [Electron](http:electron.atom.io), is a tool that lets you build desktop apps (ones you download and click icons on your computer's desktop or dock to run) with only web stuff like HTML, CSS and JavaScript. Normally these applications are written in code native  different operating systems and thus requires knowing more than just web languages.
+If you don't know, [Electron](http:electron.atom.io), is a tool that lets you build desktop apps (ones you download and click icons on your computer's desktop or dock to run) with only web stuff like HTML, CSS and JavaScript. Normally these applications are written in code native  to different operating systems and thus requires knowing more than just web languages.
 
 Electron takes the web code you've written and packages it up to run on Windows, Mac and Linux operating systems. This is is awesome.
 
-So I'm going to move Git-it to Electron. You'll still use your terminal to do the Git commands you learn yourself (that's the point!) but Git-it will move from also being in your terminal window to being its own app which display [the guide](http://jlord.github.io/git-it) and verifies completed challenges.
+So I'm going to move Git-it to Electron. You'll still use your terminal to do the Git commands you learn yourself (that's the point!) but Git-it will move from also being in your terminal window to being its own app which display [the guide](http://jlord.github.io/git-it) and verify completed challenges.
 
 ### Play Along!
 
