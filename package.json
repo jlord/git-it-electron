@@ -18,5 +18,8 @@
   "homepage": "https://github.com/jlord/git-it-electron",
   "devDependencies": {
     "electron-prebuilt": "^0.25.2"
+  },
+  "dependencies": {
+    "standard": "^3.7.3"
   }
 }
