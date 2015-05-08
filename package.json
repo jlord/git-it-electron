@@ -1,0 +1,22 @@
+{
+  "name": "git-it-electron",
+  "version": "1.0.0",
+  "description": "### A Git-it Desktop App!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlord/git-it-electron.git"
+  },
+  "author": "Jessica Lord",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/jlord/git-it-electron/issues"
+  },
+  "homepage": "https://github.com/jlord/git-it-electron",
+  "devDependencies": {
+    "electron-prebuilt": "^0.25.2"
+  }
+}
