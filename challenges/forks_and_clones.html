@@ -1,0 +1,154 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Git-it Guide</title>
+        <meta name="description" content="learn git and github">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      <!--[if lt IE 8]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+        <header class="site-header">
+  <div class="nav u-posFixed">
+    <div class="wrap-width u-textCenter">
+      <a href="remote_control.html"
+        <span class="u-floatLeft hand">☜</span>
+      </a>
+      <a class="filledblock" href="../index.html">Git-it</a>
+      <a href="branches_arent_just_for_birds.html"
+        <span class="u-floatRight hand">☞</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <div class="u-floatLeft">
+      <span class="all-caps">CHALLENGE</span>
+      <h2 class="challenge-name">forks and clones</h2>
+    </div>
+    <div class="u-floatRight u-textRight">
+      <span class="all-caps">NUMBER</span>
+      <h2 class="challenge-name">6 / 11</h2>
+    </div>
+  </div>
+</header>
+      <div class="wrapper">
+
+             <div class="challenge">
+        <h2>The Challenge:</h2>
+        <p>Fork a project from GitHub.com and clone it locally.</p>
+      </div>
+
+      <h2>Forks</h2>
+
+      <p>Now you've made a project locally and pushed it to GitHub, but that's
+        only half the fun. The other half is working with other people and
+        projects.</p>
+
+      <p>When you <strong>fork</strong> a repository, you're creating a copy of it on
+        your GitHub account. Your fork begins its life as a <strong>remote</strong> repository. Forks are used for creating your own
+        version of a project or contributing back fixes or features to the
+        original project. </p>
+
+      <p>Once a project is forked, you then <strong>clone</strong> (aka copy) it from
+        GitHub to your computer to work on locally.</p>
+
+      <img src="../assets/imgs/clone.png" width="600">
+
+      <h2>Step: Fork Patchwork Repository</h2>
+      <p>The project we'll work with is <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>. Go to that site and click the fork button at the top right. Once the
+        fork animation is complete, you've got a copy on your account. Copy
+        your fork's HTTP URL on the right sidebar.</p>
+
+      <h2>Step: Clone Fork Locally</h2>
+      <p>Now, in terminal, clone the repository onto your computer. It will create a new folder
+        for the repository so no need to create one. But make sure you aren't
+        cloning it inside of another Git repository folder! So, if you're still
+        inside of the 'hello-world' repository you worked in on the earlier challenges,
+        back out of that folder. You can leave the folder you're in (and be in the folder that it was inside of) by 'changing directory' with two dots:
+
+      <p><code>$ cd ..</code></p>
+
+      Now clone:
+
+      <p><code>$ git clone &#60;URLFROMGITHUB&#62;</code></p>
+
+      <p>Go into the folder for the fork it created (in this case, named 'patchwork')</p>
+      <p><code>$ cd patchwork</code></p>
+
+      <p>Now you've got a copy of the repository on your computer and it is
+        automatically connected to the remote repository (your forked copy)
+        on your GitHub account.</p>
+
+      <h2>Step: Connect to the Original Repository</h2>
+
+      <p>But what if the original repository you forked from changes? You'll want
+        to be able to <strong>pull</strong> in those changes too. So let's add another remote
+        connection, this time to the original, <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>, repository
+        with its URL, found on the right hand side of the original on GitHub.</p>
+
+      <p>You can name this remote connection anything you want, but often
+        people use 'upstream', let's use that for this.</p>
+
+      <p><code>$ git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+
+      <div class="verify">
+        <h3>Verify with </h3> <code>git-it verify </code><br>
+        <h3>Go to the next challenge </h3> <code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>Tips</h2>
+        <ul>
+          <li><strong>Add remote connections</strong></li>
+          <li><code>$ git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
+          <li><strong>View remote connections</strong></li>
+          <li><code>$ git remote -v</code></li>
+        </ul>
+      </div>
+
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="remote_control.html" class="u-inline-block all-caps">remote control
+    <div>⤶ </div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="branches_arent_just_for_birds.html" class="u-inlineBlock all-caps">branches aren&#x27;t just for birds
+    <div>⤷</div>
+    </a>
+  </div>
+</div>
+<footer>
+  <ul>
+    <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../about.html">About</a></li>
+    <li class="all-caps"><a href="../dictionary.html">Dictionary</a></li>
+    <li class="all-caps"><a href="../resources.html">Resources</a></li>
+    <li class="all-caps">
+      <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
+    </li>
+  </ul>
+</footer>
+
+      </div>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-52690821-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Git-it Guide</title>
+        <meta name="description" content="learn git and github">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      <!--[if lt IE 8]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+        <header class="site-header">
+  <div class="nav u-posFixed">
+    <div class="wrap-width u-textCenter">
+      <a href="its_a_small_world.html"
+        <span class="u-floatLeft hand">☜</span>
+      </a>
+      <a class="filledblock" href="../index-zhtw.html">Git-it</a>
+      <a href="requesting_you_pull_please.html"
+        <span class="u-floatRight hand">☞</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <div class="u-floatLeft">
+      <span class="all-caps">CHALLENGE</span>
+      <h2 class="challenge-name">pull never out of date</h2>
+    </div>
+    <div class="u-floatRight u-textRight">
+      <span class="all-caps">NUMBER</span>
+      <h2 class="challenge-name">9 / 11</h2>
+    </div>
+  </div>
+</header>
+      <div class="wrapper">
+
+              <div class="challenge">
+        <h2>&#x95DC;&#x5361;&#x5167;&#x5BB9;&#xFF1A;</h2>
+        <p>&#x7528; <v><span class="superscript">&#x6536;&#x53D6;</span>pull</v> &#x4F86;&#x548C;&#x5176;&#x4ED6; <n><span class="superscript">&#x5925;&#x4F34;&#x5011;</span>collaborators</n> &#x540C;&#x6B65;&#x66F4;&#x65B0;&#xFF0C;&#x78BA;&#x4FDD;&#x7A0B;&#x5F0F;&#x662F;&#x6700;&#x65B0;&#x7684;&#x7248;&#x672C;&#x3002;</p>
+      </div>
+
+      <h2>&#x5F9E; <n><span class="superscript">&#x9060;&#x7AEF;</span>Remote</n> <v><span class="superscript">&#x6536;&#x53D6;</span>pull</v> &#x66F4;&#x65B0;</h2>
+      <p>&#x82E5;&#x662F;&#x548C;&#x5225;&#x4EBA;&#x4E00;&#x8D77;&#x5408;&#x4F5C;&#xFF0C;&#x5C31;&#x6703;&#x9700;&#x8981;&#x628A;&#x6A94;&#x6848;&#x4FDD;&#x6301;&#x5728;&#x6700;&#x65B0;&#x72C0;&#x614B;&#xFF0C;&#x4EE5;&#x514D;&#x4FEE;&#x6539;&#x5230;&#x76F8;&#x540C;&#x7684;&#x6A94;&#x6848;&#x9020;&#x6210;&#x7248;&#x672C;&#x885D;&#x7A81;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4F60;&#x5C31;&#x6703;&#x9700;&#x8981;&#x6642;&#x5E38; <strong><v><span class="superscript">&#x6536;&#x53D6;</span>pull</v></strong> &#x4E0B;&#x5176;&#x4ED6;&#x4EBA;&#x5C0D;&#x7A0B;&#x5F0F;&#x6240;&#x4F5C;&#x7684;&#x4FEE;&#x6539;&#x3002;</p>
+
+      <img src="../assets/imgs/pull.png" width="600">
+
+      <h2>&#x6B65;&#x9A5F;&#xFF1A;Reporobot &#x90FD;&#x505A;&#x4E86;&#x4EC0;&#x9EBC;&#x5462;&#xFF1F;</h2>
+
+      <p>&#x628A; GitHub &#x4E0A; &apos;origin&apos; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x7684;&#x66F4;&#x65B0; <v><span class="superscript">&#x6536;&#x53D6;</span>pull</v> &#x5230;&#x4F60;&#x7684;&#x96FB;&#x8166;&#x4E0A;&#xFF0C;&#x4F86;&#x770B; Reporobot &#x662F;&#x5426;&#x6709;&#x5728; &apos;add-&apos; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x505A;&#x4E86;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#xFF1A;</p>
+
+      <p><code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code></p>
+
+      <p>&#x5982;&#x679C;&#x6C92;&#x6709;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#xFF0C;Git &#x6703;&#x544A;&#x8A34;&#x4F60; &apos;Already up-to-date&apos;&#x3002;&#x82E5;&#x6709;&#x4FEE;&#x6539;&#x7684;&#x8A71;&#xFF0C;Git &#x6703;&#x628A;&#x90A3;&#x4E9B;&#x4FEE;&#x6539; <v><span class="superscript">&#x5408;&#x4F75;</span>merge</v> &#x5230;&#x96FB;&#x8166;&#x88E1;&#x54E6;&#x3002;</p>
+
+      <p>Reporobot &#x6709;&#x4FEE;&#x6539;&#x55CE;&#xFF1F;Git &#x6703;&#x544A;&#x8A34;&#x4F60;&#x90A3;&#x4E9B;&#x5730;&#x65B9;&#x6709;&#x8B8A;&#x5316;&#x3002;&#x53EF;&#x4EE5;&#x6253;&#x958B;&#x4FEE;&#x6539;&#x904E;&#x7684;&#x6A94;&#x6848;&#x770B;&#x770B;&#xFF0C;Reporobot &#x4FEE;&#x6539;&#x4E86;&#x4EC0;&#x9EBC;&#x3002;&#x54C7;&#xFF01;Reporobot &#x771F;&#x662F;&#x500B;&#x85DD;&#x8853;&#x5BB6;&#x5440;&#xFF01;</p>
+
+      <div class="verify">
+        <h3>&#x78BA;&#x8A8D;&#x4F60;&#x5B8C;&#x6210;&#x4E86;&#x6240;&#x6709;&#x6B65;&#x9A5F;&#xFF1A;</h3><code>git-it verify</code>
+        <h3>&#x524D;&#x5F80;&#x4E0B;&#x4E00;&#x95DC;&#xFF1A;</h3><code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>&#x6487;&#x6B65;</h2>
+          <ul>
+          <li><strong>&#x6AA2;&#x67E5; Git &#x72C0;&#x614B;</strong></li>
+          <code>$ git status</code>
+          <li><strong>&#x5F9E;&#x9060;&#x7AEF;&#x5206;&#x652F; <v><span class="superscript">&#x6536;&#x53D6;</span>pull</v> &#x66F4;&#x65B0;&#x56DE;&#x4F86;</strong></li>
+          <code>$ git pull <remotename> <remotebranch></remotebranch></remotename></code>
+          <li><strong>&#x5728;&#x6536;&#x53D6;&#x66F4;&#x65B0;&#x524D;&#x5148;&#x6AA2;&#x67E5; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x662F;&#x5426;&#x6709;&#x8B8A;&#x52D5;</strong></li>
+          <code>$ git fetch --dry-run</code>
+        </ul>
+      </div>
+
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="its_a_small_world.html" class="u-inline-block all-caps">it&#x27;s a small world
+    <div>⤶ </div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="requesting_you_pull_please.html" class="u-inlineBlock all-caps">requesting you pull please
+    <div>⤷</div>
+    </a>
+  </div>
+</div>
+<footer>
+  <ul>
+    <li class="all-caps"><a href="../index-zhtw.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../about.html">About</a></li>
+    <li class="all-caps"><a href="../dictionary.html">Dictionary</a></li>
+    <li class="all-caps"><a href="../resources.html">Resources</a></li>
+    <li class="all-caps">
+      <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
+    </li>
+  </ul>
+</footer>
+
+      </div>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-52690821-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

@@ -1,0 +1,265 @@
+body {
+  font-family: 'Source Sans Pro';
+  line-height: 1.8em;
+  color: #333935;
+  background-color: #f5f5f5;
+  font-size: 15px;
+  margin: 0;
+}
+
+.u-floatRight {
+  float: right;
+}
+
+.u-floatLeft {
+  float: left;
+}
+
+.u-textCenter {
+  text-align: center;
+}
+
+.u-textRight {
+  text-align: right;
+}
+
+.u-posFixed {
+  position: fixed;
+}
+
+li {
+  padding-bottom: 4px;
+}
+
+.nav {
+  width: 100%;
+  background-color: #fafafa;
+  top: 0;
+}
+
+.wrap-width {
+  width: 600px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.wrapper {
+  width: 600px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  font-size: 20px;
+  background: #fafafa;
+  overflow: auto;
+}
+
+.hand {
+  font-size: 40px;
+  padding: 4px 0;
+  color: #0087ff;
+}
+
+.challenge-name {
+  text-transform: capitalize;
+  font-weight: 900;
+  color: #0087ff;
+}
+
+.site-header {
+  border-bottom-width: 3px;
+}
+
+.filledblock {
+  display: inline-block;
+  padding: 4px 10px;
+  font-weight: 900;
+}
+
+.filledblock:hover {
+  background: #4BABFF;
+  color: #fff;
+  text-shadow: #fff 0px 0px 5px;
+}
+
+.all-caps {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.site-header h2 {
+  margin-top: 12px;
+}
+
+h1, h2, h3, h4, .toc {
+  font-family: "Source Sans Pro";
+}
+
+h1, h2, h3, h4 {
+  margin-top: 50px;
+}
+
+a {
+  color: #0087ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4BABFF;
+}
+
+.toc li {
+  margin-bottom: 10px;
+}
+
+.toc li a {
+  font-weight: 700;
+}
+
+.toc {
+  padding-left: 0;
+  text-align: left;
+  list-style-position: inside;
+}
+
+.toc .done:before {
+  content: 'done!';
+  float: right;
+  color: #aaa;
+  text-decoration: none !important;
+}
+
+.toc .done a {
+  text-decoration: line-through;
+}
+
+code, .outof {
+  border: 1px solid #9DA6B3;
+  padding: 4px 6px;
+  border-radius: 2px;
+  font-family: Liberation Mono, Monaco, Courier New, monospace;
+  white-space: nowrap;
+}
+
+footer {
+  border-top: 3px solid #0087ff;
+  margin: 20px 0;
+  padding: 12px 0;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+footer ul li {
+  display: inline-block;
+  padding: 0 6px;
+}
+
+.prenext {
+  overflow: auto;
+}
+
+.challenge-desc {
+  color: #777;
+  font-style: italic;
+}
+
+#git-tips, .didnt-pass {
+  background: #BADFFF;
+  padding: 18px;
+  margin: 18px 0;
+  color: #0087ff;
+}
+
+#git-tips ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#git-tips code, .didnt-pass code {
+  border-color: #0087ff;
+}
+
+#git-tips li {
+  margin-top: 12px;
+}
+
+.challenge, .verify {
+  background-color: #0087ff;
+  color: #fff;
+  padding: 18px 18px 5px;
+}
+
+.verify code {
+  border-color: #fff;
+  display: inline-block;
+}
+
+.verify {
+  margin: 30px 0;
+}
+
+#git-tips h2,
+#git-tips h4,
+.didnt-pass h2,
+.didnt-pass h4,
+.challenge h2,
+.verify h3 {
+  margin-top: 0;
+}
+
+.didnt-pass {
+  background: #E3EEF8;
+}
+
+.didnt-pass p + h4 {
+  padding-top: 30px;
+}
+
+.verify h3 {
+  display: inline-block;
+  padding-right: 12px;
+}
+
+blockquote {
+  border-left: 2px solid #acacac;
+  padding-left: 30px;
+  margin: 30px 0;
+  color: #acacac;
+}
+
+.weehero {
+  background-color: #0087ff;
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+img {
+  margin: 30px 0 18px;
+}
+
+n, v, adj {
+  position: relative;
+}
+
+.superscript {
+  font-size: 0.6em;
+  position: absolute;
+  top: -20%;
+  line-height: 0.6em;
+  font-weight: normal;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+
+.u-inlineBlock {
+  display: inline-block;
+}

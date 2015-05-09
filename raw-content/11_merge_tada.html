@@ -1,0 +1,63 @@
+      <div class="challenge">
+        <h2>The Challenge:</h2>
+        <p>Merge your branch locally, delete old branch and pull from upstream for much win!</p>
+       </div>
+
+      <h2>Step: Merge Locally</h2>
+
+      <p>Your pull request has been merged! Now, since you
+        know that you definitely want those updates in your forked version,
+        and your branch is in good working order, merge it into the main
+        branch on your forked repository, in this case, 'gh-pages'.</p>
+
+      <p>First, move into the branch you want to merge <em>into</em> — in this case,
+        branch 'gh-pages'.</p>
+
+      <p><code>$ git checkout gh-pages</code></p>
+
+      <p>Now tell Git what branch you want to merge <em>in</em> — in this case,
+        your feature branch that begins with "add-".</p>
+
+      <p><code>$ git merge &#60;BRANCHNAME&#62;</code></p>
+
+      <p>Tidy up by deleting your feature branch now that it has been merged.</p>
+      <p><code>$ git branch -d &#60;BRANCHNAME&#62;</code></p>
+
+      <p>You can also delete the branch from your fork on GitHub:</p>
+      <p><code>$ git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
+
+      <h2>Step: Pull from Upstream</h2>
+      <p>And last but not least, if you pull in updates from the original
+        (since it now shows you on the home page) you'll be up to date
+        and have a version too, live at: yourusername.github.io/patchwork.</p>
+
+      <p>To pull from the original upstream:</p>
+
+      <p><code>$ git pull upstream gh-pages</code></p>
+
+      <h2>Congratulations!</h2>
+      <p>You've created local repositories, remote repositories, worked with
+        a collaborator, pushed, pulled and joined the millions of others
+        developing and enriching open source!</p>
+      <p>Visit <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> to see your name incorporated!</p>
+
+      <div class="verify">
+        <h3>Verify with </h3> <code>git-it verify</code><br>
+        <h3>Go to the next challenge </h3> <code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>Tips</h2>
+        <ul>
+          <li><strong>Merge a branch into current branch</strong></li>
+          <code>$ git merge &#60;BRANCHNAME&#62;</code>
+          <li><strong>Change the branch you're working on</strong></li>
+          <code>$ git checkout &#60;BRANCHNAME&#62;</code>
+          <li><strong>Delete a local branch</strong></li>
+          <code>$ git branch -d &#60;BRANCHNAME&#62;</code>
+          <li><strong>Delete a remote branch</strong></li>
+          <code>$ git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
+          <li><strong>Pull from a remote branch</strong></li>
+          <code>$ git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+        </ul>
+      </div>

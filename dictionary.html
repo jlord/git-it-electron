@@ -1,0 +1,141 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Git-it Guide | Dictionary</title>
+        <meta name="description" content="learn git and github">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="assets/imgs/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+    </head>
+  <body>
+
+    <div class="wrapper">
+      <header class="weehero">
+        Git-it
+      </header>
+      <h2>Dictionary</h2>
+
+      <h2>Pre-Git Stuffs</h2>
+      <div id="git-tips">
+        <ul>
+          <li><strong>Make a new folder (aka directory)</strong></li>
+          <code>$ mkdir &#60;FOLDERNAME&#62;</code>
+          <li><strong>Navigate into an existing folder (aka change directory)</strong></li>
+          <code>$ cd &#60;FOLDERNAME&#62;</code>
+          <li><strong>List the items in a folder</strong></li>
+          <code>$ ls </code>
+        </ul>
+      </div>
+
+      <h2>Configuration</h2>
+      <div id="git-tips">
+        <ul>
+          <li><strong>Check Git version</strong></li>
+          <code>git --version</code>
+          <li><strong>Set your name</strong></li>
+          <code>git config --global user.name "Your Name"</code>
+          <li><strong>Set your email</strong></li>
+          <code>git config --global user.email youremail@example.com</code>
+          <li><strong>Set your Github account</strong></li>
+          <code>git config --global user.username "USERNAME"</code>
+        </ul>
+      </div>
+
+      <h2>Git Basics</h2>
+      <div id="git-tips">
+        <ul>
+          <li><strong>Turn Git on for a folder</strong></li>
+          <code>$ git init</code>
+          <li><strong>Check status of changes to a repository</strong></li>
+          <code>$ git status</code>
+          <li><strong>View changes to files</strong></li>
+          <code>$ git diff</code>
+          <li><strong>Add a file's changes to be committed</strong></li>
+          <code>$ git add &#60;FILENAME&#62;</code>
+          <li><strong>To add all files changes</strong></li>
+          <code>$ git add .</code>
+          <li><strong>To commit (aka save) the changes you've added with a short message describing the changes</strong></li>
+          <code>$ git commit -m 'your commit message'</code>
+          <li><strong>Copy a repository to your computer</strong></li>
+          <code>$ git clone &#60;URL&#62;</code>
+        </ul>
+      </div>
+
+      <h2>Branch</h2>
+      <div id="git-tips">
+        <ul>
+          <li><strong>Create a new branch:</strong></li>
+          <code>$ git branch &#60;BRANCHNAME&#62;</code>
+          <li><strong>Move onto a branch:</strong></li>
+          <code>$ git checkout &#60;BRANCHNAME&#62;</code>
+          <li><strong>You can create and switch to a branch in one line:</strong></li>
+          <code>$ git checkout -b &#60;BRANCHNAME&#62;</code>
+          <li><strong>List the branches:</strong></li>
+          <code>$ git branch</code>
+          <li><strong>Rename a branch you're currently on:</strong></li>
+          <code>$ git branch -m &#60;NEWBRANCHNAME&#62;</code>
+        </ul>
+      </div>
+
+      <h2>Remote</h2>
+      <div id="git-tips">
+        <ul>
+          <li><strong>Add remote connections</strong></li>
+          <code>$ git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code>
+          <li><strong>Set a URL to a remote</strong></li>
+          <code>$ git remote set-url &#60;REMOTENAME&#62; <URL></code>
+          <li><strong>View remote connections</strong></li>
+          <code>$ git remote -v</code>
+        </ul>
+      </div>
+
+      <h2>Pull</h2>
+      <div id="git-tips">
+        <ul>
+          <li><strong>Pull in changes</strong></li>
+          <code>$ git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+          <li><strong>Pull in changes from a remote branch</strong></li>
+          <code>$ git pull <REMOTENAME> <REMOTEBRANCH></code>
+          <li><strong>See changes to the remote before you pull in</strong></li>
+          <code>$ git fetch --dry-run</code>
+        </ul>
+      </div>
+
+      <h2>Push &#38; Merge</h2>
+      <div id="git-tips">
+        <ul>
+          <li><strong>Push changes</strong></li>
+          <code>$ git push &#60;REMOTENAME&#62; <BRANCH></code>
+          <li><strong>Merge a branch into current branch</strong></li>
+          <code>$ git merge &#60;BRANCHNAME&#62;</code>
+        </ul>
+      </div>
+
+      <h2>Deletion</h2>
+      <div id="git-tips">
+        <ul>
+          <li><strong>Delete a local branch</strong></li>
+          <code>$ git branch -D &#60;BRANCHNAME&#62;</code>
+          <li><strong>Delete a remote branch</strong></li>
+          <code>$ git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
+        </ul>
+      </div>
+
+      <footer>
+        <ul>
+          <li class="all-caps"><a href="index.html"><strong>Git-it Challenges</strong></a></li>
+          <li class="all-caps"><a href="about.html">About</a></li>
+          <li class="all-caps"><a href="dictionary.html">Dictionary</a></li>
+          <li class="all-caps"><a href="resources.html">Resources</a></li>
+          <li class="all-caps">
+            <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+  </body>
+</html>

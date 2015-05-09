@@ -1,0 +1,144 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Git-it Guide</title>
+        <meta name="description" content="learn git and github">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      <!--[if lt IE 8]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+        <header class="site-header">
+  <div class="nav u-posFixed">
+    <div class="wrap-width u-textCenter">
+      <a href="get_git.html"
+        <span class="u-floatLeft hand">☜</span>
+      </a>
+      <a class="filledblock" href="../index.html">Git-it</a>
+      <a href="commit_to_it.html"
+        <span class="u-floatRight hand">☞</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <div class="u-floatLeft">
+      <span class="all-caps">CHALLENGE</span>
+      <h2 class="challenge-name">repository</h2>
+    </div>
+    <div class="u-floatRight u-textRight">
+      <span class="all-caps">NUMBER</span>
+      <h2 class="challenge-name">2 / 11</h2>
+    </div>
+  </div>
+</header>
+      <div class="wrapper">
+
+            <div class="challenge">
+      <h2>The Challenge:</h2>
+      <p>Create a new repository on your computer.</p>
+    </div>
+
+    <h2>Repositories</h2>
+
+    <p>A <strong>repository</strong> is essentially a project. You can imagine it
+      as a project's folder with all the related files inside of it. In
+      fact, that's what it will look like on your computer anyways.</p>
+
+    <img src="../assets/imgs/repos.png" width="600">
+
+    <p>You tell Git what your project is and Git will start tracking all
+      of the changes to that folder. Files added or subtracted or even
+      a single letter in a single file changed -- all of it's tracked and
+      time stamped by Git. That's <strong>version control</strong>.</p>
+
+    <h2>Using Terminal</h2>
+    <p><strong>Terminal</strong> (or Bash) is a way of using your computer by just typing commands. You can rename files, open files, create new folders, and move between directories (folders) all by typing out commands. You can even run a text editor (such as <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) in your terminal and never have to leave!</p>
+
+    <p>Besides navigating your computer, you can also use programs in Terminal that have a <strong>command-line interface (CLI)</strong>, meaning they can be run with commands in terminal. Git-it is one, you're using terminal to use it! Git is another. You can access and control Git through commands in terminal, as you'll be doing very soon!</p>
+
+    <p>In Git-it you'll learn a few basic command line actions which will be described within the steps.</p>
+
+    <h2>Step: Create a Repository</h2>
+    <p>You're going to create a new folder and initialize it as a Git
+      repository.</p>
+
+    <p>To make things easier, name your folder what you'd name the project. How about 'hello-world'.</p>
+
+    <p>You can type these commands one at a time into your terminal window.</p>
+
+    <p>To make a new folder:</p>
+    <code>$ mkdir hello-world</code>
+
+    <p>To go into that folder:</p>
+    <code>$ cd hello-world</code>
+
+    <p>To create a new Git instance for a project:</p>
+    <code>$ git init</code>
+
+    <p>That's it! It will just return you to a new line. If you want to be double-sure that it's a Git repository, type <code>git status</code> and if it doesn't return 'fatal: Not a git repository...', you're golden!</p>
+
+    <div class="verify">
+      <h3>Verify with </h3> <code>git-it verify </code><br>
+      <h3>Go to the next challenge </h3> <code>git-it</code>
+    </div>
+
+    <div id="git-tips">
+      <h2>Tips</h2>
+      <ul>
+        <li><strong>Make a new folder (aka directory)</strong></li>
+        <code>$ mkdir &#60;FOLDERNAME&#62;</code>
+        <li><strong>Navigate into an existing folder (aka change directory)</strong></li>
+        <code>$ cd &#60;FOLDERNAME&#62;</code>
+        <li><strong>List the items in a folder</strong></li>
+        <code>$ ls </code>
+        <li><strong>Turn Git on for a folder</strong></li>
+        <code>$ git init</code>
+      </ul>
+    </div>
+
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="get_git.html" class="u-inline-block all-caps">get git
+    <div>⤶ </div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="commit_to_it.html" class="u-inlineBlock all-caps">commit to it
+    <div>⤷</div>
+    </a>
+  </div>
+</div>
+<footer>
+  <ul>
+    <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../about.html">About</a></li>
+    <li class="all-caps"><a href="../dictionary.html">Dictionary</a></li>
+    <li class="all-caps"><a href="../resources.html">Resources</a></li>
+    <li class="all-caps">
+      <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
+    </li>
+  </ul>
+</footer>
+
+      </div>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-52690821-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

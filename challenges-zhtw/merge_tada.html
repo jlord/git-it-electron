@@ -1,0 +1,136 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Git-it Guide</title>
+        <meta name="description" content="learn git and github">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      <!--[if lt IE 8]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+        <header class="site-header">
+  <div class="nav u-posFixed">
+    <div class="wrap-width u-textCenter">
+      <a href="requesting_you_pull_please.html"
+        <span class="u-floatLeft hand">☜</span>
+      </a>
+      <a class="filledblock" href="../index-zhtw.html">Git-it</a>
+      <a href="../index-zhtw.html"
+        <span class="u-floatRight hand">☞</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <div class="u-floatLeft">
+      <span class="all-caps">CHALLENGE</span>
+      <h2 class="challenge-name">merge tada</h2>
+    </div>
+    <div class="u-floatRight u-textRight">
+      <span class="all-caps">NUMBER</span>
+      <h2 class="challenge-name">11 / 11</h2>
+    </div>
+  </div>
+</header>
+      <div class="wrapper">
+
+              <div class="challenge">
+        <h2>&#x95DC;&#x5361;&#x5167;&#x5BB9;&#xFF1A;</h2>
+        <p>&#x5728;&#x672C;&#x6A5F;&#x4E0A; <v><span class="superscript">&#x5408;&#x4F75;</span>Merge</v> &#x4F60;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n>&#xFF0C;&#x522A;&#x9664;&#x820A;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n>&#xFF0C;&#x5F9E; <n><span class="superscript">&#x4E0A;&#x6E38;</span>upstream</n> &#x7372;&#x5F97;&#x66F4;&#x65B0;&#x4F86;&#x7372;&#x5F97;&#x6700;&#x7D42;&#x52DD;&#x5229;&#xFF01;</p>
+       </div>
+
+      <h2>&#x6B65;&#x9A5F;&#xFF1A;&#x5F9E;&#x672C;&#x6A5F; <v><span class="superscript">&#x5408;&#x4F75;</span>Merge</v></h2>
+
+      <p>&#x4F60;&#x7684; <n><span class="superscript">&#x6536;&#x53D6;&#x8981;&#x6C42;</span>pull request</n> &#x5DF2;&#x7D93;&#x88AB; <v><span class="superscript">&#x5408;&#x4F75;</span>merged</v> &#x4E86;&#xFF01;&#x73FE;&#x5728;&#x4F86;&#x628A; <adj><span class="superscript">&#x8907;&#x672C;&#x7684;</span>forked</adj> &#x548C;&#x539F;&#x59CB;&#x7684; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x505A;&#x500B;&#x540C;&#x6B65;&#x5427;&#xFF01;&#x56E0;&#x70BA;&#x4F60;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x5167;&#x5BB9;&#x9806;&#x5E8F;&#x6B63;&#x78BA;&#xFF0C;&#x73FE;&#x5728;&#x53EA;&#x8981;&#x628A;&#x4F60;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> <v><span class="superscript">&#x5408;&#x4F75;</span>merge</v> &#x9032;&#x4E3B;&#x8981;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n>&#xFF08;&apos;gh-pages&apos;&#xFF09;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x54E6;&#x3002;</p>
+
+      <p>&#x9996;&#x5148;&#xFF0C;&#x5207;&#x63DB;&#x5230;&#x60F3;&#x8981; <v><span class="superscript">&#x5408;&#x4F75;</span>merge</v> <strong>&#x9032;&#x53BB;</strong>&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n>&#xFF0C;&#x4E5F;&#x5C31;&#x662F; &apos;gh-pages&apos;&#x3002;</p>
+
+      <p><code>$ git checkout gh-pages</code></p>
+
+      <p>&#x544A;&#x8A34; Git &#x4F60;&#x60F3;&#x8981; <v><span class="superscript">&#x5408;&#x4F75;</span>merge</v> &#x90A3;&#x500B; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> <strong>&#x9032;&#x4F86;</strong>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4F60;&#x7684; <n><span class="superscript">&#x529F;&#x80FD;</span>feature</n> <n><span class="superscript">&#x5206;&#x652F;</span>branch</n>&#xFF0C;&#x540D;&#x5B57;&#x662F; &apos;add-username&apos;&#x3002;</p>
+
+      <p><code>$ git merge &lt;BRANCHNAME&gt;</code></p>
+
+      <p>&#x6574;&#x7406;&#x4E00;&#x4E0B;&#x5427;&#xFF0C;&#x73FE;&#x5728;&#x628A;&#x525B;&#x525B;&#x5DF2;&#x7D93; <v><span class="superscript">&#x5408;&#x4F75;</span>merged</v> &#x7684; <n><span class="superscript">&#x529F;&#x80FD;</span>feature</n> <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x522A;&#x6389;&#x3002;</p>
+      <p><code>$ git branch -d &lt;BRANCHNAME&gt;</code></p>
+
+      <p>&#x4E5F;&#x53EF;&#x4EE5;&#x628A; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x5F9E; GitHub &#x4E0A;&#x7684; <adj><span class="superscript">&#x8907;&#x672C;&#x7684;</span>forked</adj> <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x4E2D;&#x522A;&#x9664;&#x54E6;&#xFF1A;</p>
+      <p><code>$ git push &lt;REMOTENAME&gt; --delete &lt;BRANCHNAME&gt;</code></p>
+
+      <h2>&#x6B65;&#x9A5F;&#xFF1A; &#x5F9E; <n><span class="superscript">&#x4E0A;&#x6E38;</span>Upstream</n> <v><span class="superscript">&#x6536;&#x53D6;</span>Pull</v></h2>
+      <p>&#x6700;&#x5F8C;&#x4E00;&#x6B65;&#xFF0C;&#x4F46;&#x4E5F;&#x662F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x6B65;&#xFF0C;&#x82E5;&#x5F9E;&#x539F;&#x5C08;&#x6848;&#xFF08;&#x73FE;&#x5728;&#x9996;&#x9801;&#x5DF2;&#x7D93;&#x6709;&#x4F60;&#x7684;&#x540D;&#x5B57;&#x4E86;&#x54E6;&#xFF09;<v><span class="superscript">&#x6536;&#x53D6;</span>pull</v> &#x56DE;&#x4F86;&#xFF0C;&#x4F60;&#x4E5F;&#x6703;&#x6709;&#x4E00;&#x500B;&#x76F8;&#x540C;&#x7684;&#x7DB2;&#x9801;&#xFF0C;&#x4F4D;&#x7F6E;&#x5728; yourusername.github.io/patchwork&#x3002;</p>
+
+      <p>&#x5F9E;&#x539F;&#x672C;&#x7684; <n><span class="superscript">&#x4E0A;&#x6E38;</span>upstream</n> <v><span class="superscript">&#x6536;&#x53D6;</span>pull</v> &#x56DE;&#x4F86;&#xFF1A;</p>
+
+      <p><code>$ git pull upstream gh-pages</code></p>
+
+      <h2>&#x606D;&#x559C;&#x606D;&#x559C;&#xFF01;</h2>
+      <p>&#x4F60;&#x5728;&#x672C;&#x6A5F;&#x5EFA;&#x7ACB;&#x4E86; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repositories</n>&#xFF0C;&#x8207;&#x4E00;&#x540D; <n><span class="superscript">&#x5925;&#x4F34;</span>collaborator</n> &#x5354;&#x4F5C;&#x3001;<v><span class="superscript">&#x63A8;&#x9001;</span>push</v>&#x3001;<v><span class="superscript">&#x6536;&#x53D6;</span>pull</v>&#xFF0C;&#x52A0;&#x5165;&#x4E86;&#x767E;&#x842C;&#x958B;&#x767C;&#x8005;&#x6240;&#x8655;&#x7684;&#x958B;&#x6E90;&#x4E16;&#x754C;&#xFF0C;&#x662F;&#x4F60;&#xFF0C;&#x8C50;&#x5BCC;&#x4E86;&#x958B;&#x6E90;&#x4E16;&#x754C;&#xFF01;</p>
+      <p>&#x53BB; <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> &#x9019;&#x88E1;&#x770B;&#xFF0C;&#x4F60;&#x7684;&#x540D;&#x5B57;&#x5DF2;&#x7D93;&#x88AB;&#x6536;&#x9304;&#x9032;&#x4F86;&#x4E86;&#x5462;&#xFF01;</p>
+
+      <div class="verify">
+        <h3>&#x78BA;&#x8A8D;&#x4F60;&#x5B8C;&#x6210;&#x4E86;&#x6240;&#x6709;&#x6B65;&#x9A5F;&#xFF1A;</h3><code>git-it verify</code>
+        <h3>&#x524D;&#x5F80;&#x4E0B;&#x4E00;&#x95DC;&#xFF1A;</h3><code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>&#x6487;&#x6B65;</h2>
+        <ul>
+          <li><strong><v><span class="superscript">&#x5408;&#x4F75;</span>Merge</v> <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x5230;&#x76EE;&#x524D;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n></strong></li>
+          <code>$ git merge &lt;BRANCHNAME&gt;</code>
+          <li><strong>&#x5207;&#x63DB;&#x6B63;&#x5728;&#x5DE5;&#x4F5C;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n></strong></li>
+          <code>$ git checkout &lt;BRANCHNAME&gt;</code>
+          <li><strong>&#x522A;&#x9664;&#x672C;&#x6A5F;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n></strong></li>
+          <code>$ git branch -d &lt;BRANCHNAME&gt;</code>
+          <li><strong>&#x522A;&#x9664; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> <n><span class="superscript">&#x5206;&#x652F;</span>branch</n></strong></li>
+          <code>$ git push &lt;REMOTENAME&gt; --delete &lt;BRANCHNAME&gt;</code>
+          <li><strong>&#x5F9E; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> <v><span class="superscript">&#x6536;&#x53D6;</span>Pull</v></strong></li>
+          <code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
+        </ul>
+      </div>
+
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="requesting_you_pull_please.html" class="u-inline-block all-caps">requesting you pull please
+    <div>⤶ </div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="../index-zhtw.html" class="u-inlineBlock all-caps">Done!
+    <div>⤷</div>
+    </a>
+  </div>
+</div>
+<footer>
+  <ul>
+    <li class="all-caps"><a href="../index-zhtw.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../about.html">About</a></li>
+    <li class="all-caps"><a href="../dictionary.html">Dictionary</a></li>
+    <li class="all-caps"><a href="../resources.html">Resources</a></li>
+    <li class="all-caps">
+      <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
+    </li>
+  </ul>
+</footer>
+
+      </div>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-52690821-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

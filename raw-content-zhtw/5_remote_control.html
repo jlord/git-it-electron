@@ -1,0 +1,87 @@
+      <div class="challenge">
+        <h2>關卡內容：</h2>
+        <p>把電腦裡的 <n>repository</n> 和 <adj>remote</adj> 的 <n>repository</n>連結起來，並 <v>push</v> 電腦上的修改。</p>
+        </div>
+
+      <h2><n>Remotes</n></h2>
+
+      <p>當專案傳到 GitHub 上面，它會被儲存在 GitHub 的主機上。這個專案就變成了 <strong><adj>remote</adj></strong> <n>repository</n>，因為專案現在 GitHub 的主機上也有一份了，所以叫做 <n>remote</n>。當你把<strong>電腦上的</strong>程式修改 <strong><v>push</v></strong>到 <n>remote</n>，這就叫做同步。</p>
+
+      <p>其他人可以透過 <v>pull</v> 你的 <adj>remote</adj> <n>repository</n> 來取得專案的最新版本，儲存到他們的電腦上。這樣一來，大家就可以一起修改同一個專案，而不需要用 USB 或 Email 等其他方式來取得專案的最新進度。</p>
+
+        <img src="../assets/imgs/remotes.png" width="600">
+
+      <h2>步驟：建立一個 <adj>Remote</adj> <n>Repository</n></h2>
+
+      <p>你想要把<strong>電腦上的</strong>版本和存在 GitHub.com 上的 <strong><adj>remote</adj></strong> 版本做同步。所以我們先在 GitHub 上開啟一個新的 <adj>remote</adj> <n>repository</n>。</p>
+
+      <ul>
+        <li>到 <a href="http://github.com/" target="_blank">github.com</a> 登入，然後按一下右上角的 '+' 號來新增一個 <n>repository</n>。</li>
+        <li>取一個名字，最好和你電腦上的程式名稱一樣，也就是 'hello-world'，並且給它一個簡短的說明。</li>
+        <li>設定為 public（公開）。</li>
+        <li>不要勾選 'initialize with a README'，因為我們已經在電腦上的版本建立了一個檔案，叫做 'readme.txt'。</li>
+        <li>也不要修改 .gitignore 和 license 的設定，保留原先 'none' 的設定就好。</li>
+        <li>按下 'create repository'！</li>
+      </ul>
+
+      <h2>Readme（讀我檔案）、.gitignore 和 License（著作權聲明）</h2>
+
+      <p>在開源軟體中，這些是你將會常常見到的檔案。</p>
+
+      <p><strong><n>readme</n></strong> 通常是用來解釋一個程式的功用、使用方法以及如何貢獻程式碼（但有時候這部份也會另外用一個 CONTRIBUTING.md 來說明）。</p>
+
+      <p><strong><n>.gitignore</n></strong> 則是要忽略的檔案清單，這是用來告訴 Git，當在做版本控制記錄的時候，<em>不要</em>理會這些檔案。例如，當某個檔案中包含密碼的時候，我們就不希望 Git 記錄它們下來。</p>
+
+      <p><strong>License</strong>（著作權聲明）是用來聲明一個程式可以、或不可以被怎麼樣的使用。你可以到
+      <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a> 參考一些範例。</p>
+      <p>但就現在在做的練習來說，我們暫時不需要著作權聲明。</p>
+
+      <h2>步驟：把電腦上的 <n>repository</n> 和 <adj>remote</adj> <n>repository</n> 連結在一起</h2>
+
+      <p>現在我們已經在 <n>remote</n>（GitHub 上）新建了一個 <n>repository</n>。在 <n>repository</n> 的頁面上你會看到一個 'Quick Setup' 的部份，確認選擇的網址是 'HTTP'，而不是 'SSH'，右邊的欄位就是這個 <adj>remote</adj> <n>repository</n> 在 GitHub 主機上的位址。</p>
+
+      <p>回到終端機，在我們剛剛初始化過 Git 的 'hello-world' 的資料夾裡頭，我們需要告訴 Git 這個 <n>remote</n> 的位址。同一個 Git 專案中，可以有很多不同的 <n>remote</n>，所以每一個 <n>remote</n> 都需要一個名字。而最主要、原始的那一個，通常都是叫做 <code>origin</code>。</p>
+
+      <code>$ git remote add origin &#60;URLFROMGITHUB&#62;</code>
+
+      <p>你電腦上的 <n>repository</n> 現在知道了專案有一個在 GitHub 上的 <strong><n>remote</n></strong>，叫做 'origin'。你可以想像這就好像是把一個電話號碼配上一個名字一樣，這樣當你要打電話的時候，就不用記得號碼了。</p>
+
+      <blockquote>
+        <p><strong>備註：</strong></p>
+        <p>如果你有安裝 <strong>GitHub for Windows</strong>，Git 初始化的時候就會直接設定了一個叫做 'origin' 的 <n>remote</n>，所以你不需要新增，只要設定這個 'origin' <n>remote</n> 的位址就好了：</p>
+
+        <code>$ git remote set-url origin &#60;URLFROMGITHUB&#62;</code>
+      </blockquote>
+
+      <h2>步驟：把你的修改 <v>Push</v> 到 <n>remote</n></h2>
+
+      <p>接下來你需要 <strong><v>push</v></strong>（傳送）所有你在電腦上做的修改到 GitHub 上的 <n>remote</n>。通常你會希望 <n>remote</n> 的程式版和電腦上的程式版本是一樣的。</p>
+
+      <p>Git 有一個 <n>branch</n> 系統，讓你可以同時修改一個程式的不同功能，之後會再深入介紹。系統會預設一個名稱給最初的 <n>branch</n>，通常就會叫做 'master'。當你 <v>push</v>（或之後 <v>pull</v>）一個專案的時候，你必須要告訴 Git 你想要的是哪一個 <n>remote</n> 上的哪一個 <n>branch</n> 的進度。</p>
+
+      <p>也就是說，我們現在想要把 'master' <n>branch</n> 的程式傳送到先前新增的 'origin' <n>remote</n>。</p>
+
+      <code>$ git push origin master</code>
+
+      <p>完成之後，你現在就可以回到 GitHub 的 <n>repository</n> 頁面，重新整理。哇哇哇！程式是不是都同步了呢？恭喜你建立了第一個公開的 <n>repository</n>！</p>
+
+      <div class="verify">
+        <h3>確認你完成了所有步驟：</h3><code>git-it verify</code>
+        <h3>前往下一個關卡：</h3><code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>撇步</h2>
+        <ul>
+          <li><strong>新增 <n>remote</n> 連結</strong></li>
+          <code>$ git remote add &#60;REMOTENAME&#62; <URL></code>
+          <li><strong>幫一個 <n>remote</n> 設定位址</strong></li>
+          <code>$ git remote set-url &#60;REMOTENAME&#62; <URL></code>
+          <li><strong><v>Pull</v> <n>remote</n> 的程式</strong></li>
+          <code>$ git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+          <li><strong>看你有哪些 <n>remote</n> 連結</strong></li>
+          <code>$ git remote -v</code>
+          <li><strong><v>Push</v> 電腦上的程式到 <n>remote</n></strong></li>
+          <code>$ git push &#60;REMOTENAME&#62; <BRANCH></code>
+        </ul>
+      </div>
