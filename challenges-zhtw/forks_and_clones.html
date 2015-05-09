@@ -1,0 +1,137 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Git-it Guide</title>
+        <meta name="description" content="learn git and github">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      <!--[if lt IE 8]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+        <header class="site-header">
+  <div class="nav u-posFixed">
+    <div class="wrap-width u-textCenter">
+      <a href="remote_control.html"
+        <span class="u-floatLeft hand">☜</span>
+      </a>
+      <a class="filledblock" href="../index-zhtw.html">Git-it</a>
+      <a href="branches_arent_just_for_birds.html"
+        <span class="u-floatRight hand">☞</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <div class="u-floatLeft">
+      <span class="all-caps">CHALLENGE</span>
+      <h2 class="challenge-name">forks and clones</h2>
+    </div>
+    <div class="u-floatRight u-textRight">
+      <span class="all-caps">NUMBER</span>
+      <h2 class="challenge-name">6 / 11</h2>
+    </div>
+  </div>
+</header>
+      <div class="wrapper">
+
+              <div class="challenge">
+        <h2>&#x95DC;&#x5361;&#x5167;&#x5BB9;&#xFF1A;</h2>
+        <p>&#x5F9E; GitHub.com &#x5EFA;&#x7ACB;&#x5C08;&#x6848; <n><span class="superscript">&#x8907;&#x672C;</span>fork</n>&#xFF0C;&#x4E26; <v><span class="superscript">&#x4E0B;&#x8F09;</span>clone</v> &#x5230;&#x96FB;&#x8166;&#x4E0A;&#x3002;</p>
+      </div>
+
+      <h2><n><span class="superscript">&#x8907;&#x672C;</span>Forks</n></h2>
+
+      <p>&#x4F60;&#x5DF2;&#x7D93;&#x5728;&#x96FB;&#x8166;&#x4E0A;&#x5EFA;&#x7ACB;&#x4E86;&#x4E00;&#x500B;&#x5C08;&#x6848;&#x4E26;&#x4E14; <v><span class="superscript">&#x63A8;&#x9001;</span>push</v> &#x5230; GitHub &#x4E0A;&#xFF0C;&#x4F46;&#x6709;&#x8DA3;&#x7684;&#x4E0D;&#x50C5;&#x5982;&#x6B64;&#xFF0C;&#x66F4;&#x91CD;&#x8981;&#x7684;&#x662F;&#x8207;&#x4EBA;&#x5011;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x5C08;&#x6848;&#x4E2D;&#x5408;&#x4F5C;&#x3002;</p>
+
+      <p>&#x7576;&#x4F60; <strong><v><span class="superscript">&#x8907;&#x88FD;</span>fork</v></strong> &#x4E00;&#x500B; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x6642;&#xFF0C;&#x5BE6;&#x969B;&#x4E0A;&#x662F;&#x8907;&#x88FD;&#x4E86;&#x4E00;&#x4EFD; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x5230;&#x81EA;&#x5DF1;&#x7684; GitHub &#x5E33;&#x865F;&#x4E0B;&#xFF0C;&#x63DB;&#x53E5;&#x8A71;&#x8AAA;&#xFF0C;&#x4F60;&#x7684; fork &#x6210;&#x70BA;&#x4E86;&#x4E00;&#x500B; <strong><n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n></strong> <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n>&#x3002;&#x901A;&#x5E38;&#x6211;&#x5011;&#x900F;&#x904E; <n><span class="superscript">&#x8907;&#x672C;</span>forks</n> &#x7528;&#x4F86;&#x5EFA;&#x7ACB;&#x81EA;&#x5DF1;&#x6240;&#x9700;&#x4F7F;&#x7528;&#x7684;&#x4FEE;&#x6539;&#x7248;&#x672C;&#xFF0C;&#x6216;&#x662F;&#x5354;&#x52A9;&#x539F;&#x59CB;&#x5C08;&#x6848;&#x4FEE;&#x6B63;&#x932F;&#x8AA4;&#x3001;&#x65B0;&#x589E;&#x529F;&#x80FD;&#x3002;</p>
+
+      <p>&#x7576;&#x4F60;&#x6210;&#x529F; <v><span class="superscript">&#x8907;&#x88FD;</span>forked</v> &#x5C08;&#x6848;&#x5F8C;&#xFF0C;&#x4FBF;&#x53EF;&#x4EE5;&#x5F9E; GitHub &#x5C07;&#x5B83; <strong><v><span class="superscript">&#x4E0B;&#x8F09;</span>clone</v></strong> &#x5230;&#x4F60;&#x7684;&#x96FB;&#x8166;&#x4E0A;&#x3002;&#x9019;&#x6A23;&#x4E00;&#x4F86;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x6C92;&#x6709;&#x7DB2;&#x8DEF;&#x9023;&#x7DDA;&#x72C0;&#x6CC1;&#x4E0B;&#xFF0C;&#x4FEE;&#x6539;&#x96FB;&#x8166;&#x88E1;&#x7684;&#x5C08;&#x6848;&#x5167;&#x5BB9;&#x3002;</p>
+
+      <img src="../assets/imgs/clone.png" width="600">
+
+      <h2>&#x6B65;&#x9A5F;&#xFF1A;<v><span class="superscript">&#x8907;&#x88FD;</span>Fork</v> Patchwork <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>Repository</n></h2>
+
+      <p>&#x6211;&#x5011;&#x63A5;&#x4E0B;&#x4F86;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x5C08;&#x6848;&#x662F; <a href="https://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>&#x3002;&#x5230;&#x9801;&#x9762;&#x4E0A;&#x9EDE;&#x64CA;&#x53F3;&#x4E0A;&#x65B9;&#x7684; <v><span class="superscript">&#x8907;&#x88FD;</span>fork</v> &#x6309;&#x9215;&#xFF0C;&#x7576; <n><span class="superscript">&#x8907;&#x672C;</span>fork</n> &#x7684;&#x52D5;&#x756B;&#x5B8C;&#x6210;&#x6642;&#xFF0C;&#x4F60;&#x7684;&#x5E33;&#x865F;&#x4E2D;&#x5C31;&#x6703;&#x51FA;&#x73FE;&#x4E00;&#x4EFD; Patchwork &#x5C08;&#x6848;&#x7684;&#x8907;&#x672C;&#x3002;&#x63A5;&#x4E0B;&#x4F86;&#xFF0C;&#x628A;&#x5728;&#x53F3;&#x908A;&#x5074;&#x6B04;&#x7684; HTTPS clone URL &#x8907;&#x88FD;&#x8D77;&#x4F86;&#x3002;</p>
+
+      <h2>&#x6B65;&#x9A5F;&#xFF1A;&#x5728;&#x96FB;&#x8166;&#x4E0A; <v><span class="superscript">&#x4E0B;&#x8F09;</span>Clone</v> <n><span class="superscript">&#x8907;&#x672C;</span>Fork</n></h2>
+      <p>&#x73FE;&#x5728;&#xFF0C;&#x5728;&#x7D42;&#x7AEF;&#x6A5F; <v><span class="superscript">&#x4E0B;&#x8F09;</span>clone</v> <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x5230;&#x4F60;&#x7684;&#x96FB;&#x8166;&#x4E0A;&#xFF0C;&#x4ED6;&#x6703;&#x81EA;&#x52D5;&#x66FF; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x65B0;&#x7684;&#x8CC7;&#x6599;&#x593E;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x3002;&#x4F46;&#x8ACB;&#x6CE8;&#x610F;&#x4E0D;&#x8981;&#x5728;&#x53E6;&#x4E00;&#x500B; Git <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x8CC7;&#x6599;&#x593E;&#x4E2D; <v><span class="superscript">&#x4E0B;&#x8F09;</span>clone</v>&#xFF01;&#x6240;&#x4EE5;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x9084;&#x5728;&#x5148;&#x524D;&#x6311;&#x6230;&#x6240;&#x4F7F;&#x7528;&#x7684; &apos;hello-world&apos; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x4E2D;&#xFF0C;&#x8ACB;&#x5148;&#x96E2;&#x958B;&#x90A3;&#x500B;&#x8CC7;&#x6599;&#x593E;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x5207;&#x63DB;&#x8CC7;&#x6599;&#x593E;&#x6307;&#x4EE4;&#x4EE5;&#x53CA;&#x5169;&#x500B;&#x9EDE;&#x4F86;&#x79FB;&#x52D5;&#x5230;&#x8CC7;&#x6599;&#x593E;&#x7684;&#x4E0A;&#x4E00;&#x5C64;&#xFF1A;
+
+      </p><p><code>$ cd ..</code></p>
+
+      &#x7136;&#x5F8C; <v><span class="superscript">&#x4E0B;&#x8F09;</span>clone</v>&#xFF1A;
+
+      <p><code>$ git clone &lt;URLFROMGITHUB&gt;</code></p>
+
+      <p>&#x5207;&#x63DB;&#x5230;&#x525B;&#x525B;&#x5EFA;&#x7ACB;&#x7684; <n><span class="superscript">&#x8907;&#x672C;</span>fork</n> &#x8CC7;&#x6599;&#x593E;&#xFF08;&#x5728;&#x9019;&#x500B;&#x4F8B;&#x5B50;&#x4E2D;&#x53EB;&#x505A; &apos;patchwork&apos;&#xFF09;&#xFF1A;</p>
+      <p><code>$ cd patchwork</code></p>
+
+      <p>&#x73FE;&#x5728;&#x4F60;&#x5DF2;&#x7D93;&#x5728;&#x96FB;&#x8166;&#x4E0A;&#x5F97;&#x5230;&#x4E86;&#x4E00;&#x4EFD; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x7684;&#x526F;&#x672C;&#xFF0C;&#x4E26;&#x4E14;&#x88AB;&#x81EA;&#x52D5;&#x9023;&#x63A5;&#x5230;&#x4F60; GitHub &#x5E33;&#x865F;&#x4E0B;&#x7684; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n>&#xFF08;&#x4F60;&#x7684; <n><span class="superscript">&#x8907;&#x672C;</span>fork</n> &#x526F;&#x672C;&#xFF09;&#x3002;</p>
+
+      <h2>&#x6B65;&#x9A5F;&#xFF1A;&#x9023;&#x7D50;&#x5230;&#x539F;&#x59CB;&#x7684; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>Repository</n></h2>
+
+      <p>&#x4F46;&#x5982;&#x679C;&#x539F;&#x59CB;&#x5C08;&#x6848;&#x7684;&#x5167;&#x5BB9;&#x6709;&#x6539;&#x8B8A;&#x4E86;&#x5462;&#xFF1F;&#x4F60;&#x6703;&#x5E0C;&#x671B;&#x80FD;&#x5920; <strong><v><span class="superscript">&#x6536;&#x53D6;</span>pull</v></strong> &#x9019;&#x4E9B;&#x8B8A;&#x66F4;&#x3002;&#x6240;&#x4EE5;&#x8B93;&#x6211;&#x5011;&#x4F86;&#x65B0;&#x589E;&#x53E6;&#x5916;&#x4E00;&#x500B; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x9023;&#x7D50;&#x5230;&#x539F;&#x59CB;&#x7684;&#x5C08;&#x6848; <a href="https://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>&#xFF0C;<n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x7684; URL &#x53EF;&#x4EE5;&#x5728; GitHub &#x539F;&#x59CB;&#x5C08;&#x6848;&#x7684;&#x5074;&#x908A;&#x6B04;&#x4E0B;&#x65B9;&#x627E;&#x5230;&#x3002;</p>
+
+      <p>&#x4F60;&#x53EF;&#x4EE5;&#x96A8;&#x610F;&#x66FF;&#x9019;&#x500B; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x9023;&#x7D50;&#x547D;&#x540D;&#xFF0C;&#x4F46;&#x5927;&#x5BB6;&#x901A;&#x5E38;&#x7528; &apos;upstream&apos;&#xFF0C;&#x8B93;&#x6211;&#x5011;&#x4E5F;&#x7528;&#x9019;&#x500B;&#x540D;&#x5B57;&#xFF1A;</p>
+
+      <p><code>$ git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+
+      <div class="verify">
+        <h3>&#x78BA;&#x8A8D;&#x4F60;&#x5B8C;&#x6210;&#x4E86;&#x6240;&#x6709;&#x6B65;&#x9A5F;&#xFF1A;</h3><code>git-it verify</code>
+        <h3>&#x524D;&#x5F80;&#x4E0B;&#x4E00;&#x500B;&#x95DC;&#x5361;</h3><code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>&#x6487;&#x6B65;</h2>
+        <ul>
+          <li><strong>&#x65B0;&#x589E; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x9023;&#x7D50;</strong></li>
+          <li><code>$ git remote add &lt;REMOTENAME&gt; &lt;URL&gt;</code></li>
+          <li><strong>&#x6AA2;&#x8996; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x9023;&#x7D50;</strong></li>
+          <li><code>$ git remote -v</code></li>
+        </ul>
+      </div>
+
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="remote_control.html" class="u-inline-block all-caps">remote control
+    <div>⤶ </div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="branches_arent_just_for_birds.html" class="u-inlineBlock all-caps">branches aren&#x27;t just for birds
+    <div>⤷</div>
+    </a>
+  </div>
+</div>
+<footer>
+  <ul>
+    <li class="all-caps"><a href="../index-zhtw.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../about.html">About</a></li>
+    <li class="all-caps"><a href="../dictionary.html">Dictionary</a></li>
+    <li class="all-caps"><a href="../resources.html">Resources</a></li>
+    <li class="all-caps">
+      <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
+    </li>
+  </ul>
+</footer>
+
+      </div>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-52690821-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Git-it Guide</title>
+        <meta name="description" content="learn git and github">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      <!--[if lt IE 8]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+        <header class="site-header">
+  <div class="nav u-posFixed">
+    <div class="wrap-width u-textCenter">
+      <a href="get_git.html"
+        <span class="u-floatLeft hand">☜</span>
+      </a>
+      <a class="filledblock" href="../index-zhtw.html">Git-it</a>
+      <a href="commit_to_it.html"
+        <span class="u-floatRight hand">☞</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <div class="u-floatLeft">
+      <span class="all-caps">CHALLENGE</span>
+      <h2 class="challenge-name">repository</h2>
+    </div>
+    <div class="u-floatRight u-textRight">
+      <span class="all-caps">NUMBER</span>
+      <h2 class="challenge-name">2 / 11</h2>
+    </div>
+  </div>
+</header>
+      <div class="wrapper">
+
+              <div class="challenge">
+        <h2>&#x95DC;&#x5361;&#x5167;&#x5BB9;&#xFF1A;</h2>
+        <p>&#x5728;&#x81EA;&#x5DF1;&#x7684;&#x96FB;&#x8166;&#x4E0A;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x65B0;&#x7684; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n></p>
+      </div>
+
+      <h2><n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>Repository</n></h2>
+
+      <p>&#x4E00;&#x500B; <strong><n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n></strong> &#x5176;&#x5BE6;&#x5C31;&#x662F;&#x4E00;&#x500B;&#x5C08;&#x6848;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5C07;&#x5B83;&#x60F3;&#x50CF;&#x6210;&#x4E00;&#x500B;&#x5C08;&#x6848;&#x8CC7;&#x6599;&#x593E;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709;&#x8DDF;&#x5C08;&#x6848;&#x76F8;&#x95DC;&#x7684;&#x6A94;&#x6848;&#x3002;&#x4E8B;&#x5BE6;&#x4E0A;&#xFF0C;&#x5B83;&#x5728;&#x96FB;&#x8166;&#x88CF;&#x7684;&#x6A23;&#x5B50;&#x5C31;&#x50CF;&#x4E0B;&#x9762;&#x9019;&#x6A23;&#xFF1A;</p>
+
+      <img src="../assets/imgs/repos.png" width="600">
+
+      <p>&#x544A;&#x8A34; Git &#x4F60;&#x8981;&#x6307;&#x5B9A;&#x54EA;&#x500B;&#x8CC7;&#x6599;&#x593E;&#xFF0C;&#x7136;&#x5F8C; Git &#x5C31;&#x6703;&#x958B;&#x59CB;&#x8A18;&#x9304;&#x9019;&#x8CC7;&#x6599;&#x593E;&#x88CF;&#x7684;&#x4E00;&#x5207;&#x66F4;&#x52D5;&#x3002;&#x65B0;&#x589E;&#x3001;&#x522A;&#x9664;&#x6A94;&#x6848;&#xFF0C;&#x751A;&#x81F3;&#x53EA;&#x662F;&#x6539;&#x8B8A;&#x6A94;&#x6848;&#x4E2D;&#x7684;&#x4E00;&#x500B;&#x5B57;&#xFF0C;&#x5168;&#x90FD;&#x6703;&#x88AB; Git &#x8FFD;&#x8E64;&#x4E26;&#x52A0;&#x4E0A;&#x6642;&#x9593;&#x6A19;&#x8A18;&#x3002;&#x9019;&#x5C31;&#x662F;<strong>&#x7248;&#x672C;&#x63A7;&#x5236;</strong>&#x3002;</p>
+
+      <h2>&#x4F7F;&#x7528;&#x7D42;&#x7AEF;&#x6A5F;</h2>
+
+      <p><strong>&#x7D42;&#x7AEF;&#x6A5F;</strong>&#xFF08;&#x6216;&#x662F; Bash&#xFF09;&#x662F;&#x4E00;&#x7A2E;&#x53EA;&#x5229;&#x7528;&#x9375;&#x76E4;&#x8F38;&#x5165;&#x6307;&#x4EE4;&#x4F86;&#x64CD;&#x63A7;&#x96FB;&#x8166;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x547D;&#x540D;&#x6A94;&#x6848;&#x3001;&#x958B;&#x555F;&#x6A94;&#x6848;&#x3001;&#x5EFA;&#x7ACB;&#x65B0;&#x8CC7;&#x6599;&#x593E;&#x3001;&#x4E26;&#x5728;&#x4E0D;&#x540C;&#x76EE;&#x9304;&#xFF08;&#x8CC7;&#x6599;&#x593E;&#xFF09;&#x4E4B;&#x9593;&#x5207;&#x63DB;&#xFF0C;&#x5168;&#x90FD;&#x5229;&#x7528;&#x9375;&#x76E4;&#x8F38;&#x5165;&#x6307;&#x4EE4;&#x5B8C;&#x6210;&#x3002;&#x4F60;&#x751A;&#x81F3;&#x4E0D;&#x9700;&#x96E2;&#x958B;&#x7D42;&#x7AEF;&#x6A5F;&#x4FBF;&#x53EF;&#x4EE5;&#x5728;&#x7D42;&#x7AEF;&#x6A5F;&#x88CF;&#x904B;&#x884C;&#x6587;&#x5B57;&#x7DE8;&#x8F2F;&#x5668;&#xFF08;&#x4F8B;&#x5982; <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>&#xFF09;&#x3002;</p>
+
+      <p>&#x9664;&#x4E86;&#x700F;&#x89BD;&#x4F60;&#x7684;&#x96FB;&#x8166;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x7D42;&#x7AEF;&#x6A5F;&#x88CF;&#x4F7F;&#x7528;&#x5177;&#x6709;<strong>&#x7D42;&#x7AEF;&#x6A5F;&#x754C;&#x9762;&#xFF08;command-line interface&#xFF0C;CLI&#xFF09;</strong>&#x7684;&#x7A0B;&#x5F0F;&#xFF0C;&#x9019;&#x985E;&#x7684;&#x7A0B;&#x5F0F;&#x53EF;&#x85C9;&#x7531;&#x8F38;&#x5165;&#x9375;&#x76E4;&#x6307;&#x4EE4;&#x4F86;&#x904B;&#x884C;&#x3002;Git-it &#x4FBF;&#x662F;&#x5176;&#x4E2D;&#x4E4B;&#x4E00;&#xFF0C;&#x4F60;&#x73FE;&#x5728;&#x6B63;&#x900F;&#x904E;&#x7D42;&#x7AEF;&#x6A5F;&#x4F7F;&#x7528;&#x5B83;&#xFF01;&#x800C; Git &#x4E5F;&#x662F;&#x53E6;&#x4E00;&#x500B;&#x4F8B;&#x5B50;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x7D42;&#x7AEF;&#x6A5F;&#x88CF;&#x85C9;&#x7531;&#x6307;&#x4EE4;&#x4F86;&#x5B58;&#x53D6;&#x8207;&#x64CD;&#x63A7; Git&#xFF0C;&#x4E0D;&#x4E45;&#x5F8C;&#x4F60;&#x4FBF;&#x6703;&#x9019;&#x9EBC;&#x505A;&#x4E86;&#xFF01;</p>
+
+      <p>&#x5728; Git-it &#x88CF;&#x4F60;&#x5C07;&#x5B78;&#x6703;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#x7684;&#x6307;&#x4EE4;&#xFF0C;&#x800C;&#x5728;&#x6BCF;&#x500B;&#x6B65;&#x9A5F;&#x4E2D;&#x5C07;&#x6703;&#x89E3;&#x91CB;&#x9019;&#x4E9B;&#x6307;&#x4EE4;&#x7684;&#x529F;&#x7528;&#x3002;</p>
+
+      <h2>&#x6B65;&#x9A5F;&#xFF1A;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x65B0;&#x7684; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n></h2>
+      <p>&#x4F60;&#x5C07;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x65B0;&#x7684;&#x8CC7;&#x6599;&#x593E;&#xFF0C;&#x4E26;&#x628A;&#x5B83;&#x8A2D;&#x5B9A;&#x6210;&#x4E00;&#x500B; Git <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n>&#x3002;</p>
+
+      <p>&#x70BA;&#x4E86;&#x8B93;&#x6574;&#x4EF6;&#x4E8B;&#x5BB9;&#x6613;&#x4E00;&#x4E9B;&#xFF0C;&#x628A;&#x4F60;&#x7684;&#x8CC7;&#x6599;&#x593E;&#x53D6;&#x540D;&#x70BA;&#x8207;&#x5C08;&#x6848;&#x540C;&#x540D;&#x3002;&#x5C31;&#x53EB; &apos;hello-world&apos; &#x597D;&#x4E86;&#x3002;</p>
+
+      <p>&#x4F60;&#x53EF;&#x4EE5;&#x5C07;&#x4E0B;&#x5217;&#x6307;&#x4EE4;&#x4E00;&#x4E00;&#x8F38;&#x5165;&#x81F3;&#x7D42;&#x7AEF;&#x6A5F;&#x3002;</p>
+
+      <p>&#x5EFA;&#x7ACB;&#x65B0;&#x8CC7;&#x6599;&#x593E;&#xFF1A;</p>
+      <code>$ mkdir hello-world</code>
+
+      <p>&#x9032;&#x5165;&#x9019;&#x500B;&#x8CC7;&#x6599;&#x593E;&#xFF1A;</p>
+      <code>$ cd hello-world</code>
+
+      <p>&#x628A;&#x9019;&#x500B;&#x8CC7;&#x6599;&#x593E;&#x8A2D;&#x5B9A;&#x6210;&#x4E00;&#x500B; Git &#x5C08;&#x6848;&#x8CC7;&#x6599;&#x593E;</p>
+      <code>$ git init</code>
+
+      <p>&#x5C31;&#x662F;&#x9019;&#x6A23;&#xFF01;&#x7D42;&#x7AEF;&#x6A5F;&#x6703;&#x56DE;&#x61C9;&#x4E26;&#x5207;&#x63DB;&#x5230;&#x4E0B;&#x4E00;&#x884C;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x78BA;&#x8A8D;&#x6B64;&#x8CC7;&#x6599;&#x593E;&#x662F;&#x5426;&#x5DF2;&#x7D93;&#x662F;&#x500B; Git <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n>&#xFF0C;&#x8F38;&#x5165; <code>git status</code>&#xFF0C;&#x53EA;&#x8981;&#x4E0D;&#x662F;&#x986F;&#x793A; &apos;fatal: Not a git repository...&apos;&#xFF0C;&#x90A3;&#x5C31;&#x5C0D;&#x4E86;&#xFF01;</p>
+
+      <div class="verify">
+        <h3>&#x78BA;&#x8A8D;&#x4F60;&#x5B8C;&#x6210;&#x4E86;&#x6240;&#x6709;&#x6B65;&#x9A5F;&#xFF1A;</h3><code>git-it verify</code>
+        <h3>&#x524D;&#x5F80;&#x4E0B;&#x4E00;&#x95DC;&#xFF1A;</h3><code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>&#x6487;&#x6B65;</h2>
+        <ul>
+          <li><strong>&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x65B0;&#x8CC7;&#x6599;&#x593E; (&#x6216;&#x7A31;&#x505A;&#x76EE;&#x9304;)</strong></li>
+          <code>$ mkdir &lt;FOLDERNAME&gt;</code>
+          <li><strong>&#x9032;&#x5165;&#x4E00;&#x500B;&#x8CC7;&#x6599;&#x593E; (&#x6216;&#x7A31;&#x505A;&#x5207;&#x63DB;&#x76EE;&#x9304;)</strong></li>
+          <code>$ cd &lt;FOLDERNAME&gt;</code>
+          <li><strong>&#x5217;&#x51FA;&#x8CC7;&#x6599;&#x593E;&#x5167;&#x5BB9;</strong></li>
+          <code>$ ls </code>
+          <li><strong>&#x70BA;&#x4E00;&#x500B;&#x8CC7;&#x6599;&#x593E;&#x52A0;&#x4E0A; Git &#x529F;&#x80FD;</strong></li>
+          <code>$ git init</code>
+        </ul>
+      </div>
+
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="get_git.html" class="u-inline-block all-caps">get git
+    <div>⤶ </div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="commit_to_it.html" class="u-inlineBlock all-caps">commit to it
+    <div>⤷</div>
+    </a>
+  </div>
+</div>
+<footer>
+  <ul>
+    <li class="all-caps"><a href="../index-zhtw.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../about.html">About</a></li>
+    <li class="all-caps"><a href="../dictionary.html">Dictionary</a></li>
+    <li class="all-caps"><a href="../resources.html">Resources</a></li>
+    <li class="all-caps">
+      <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
+    </li>
+  </ul>
+</footer>
+
+      </div>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-52690821-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

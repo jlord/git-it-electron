@@ -1,0 +1,57 @@
+      <div class="challenge">
+        <h2>關卡內容：</h2>
+        <p>在自己的電腦上建立一個新的 <n>repository</n></p>
+      </div>
+
+      <h2><n>Repository</n></h2>
+
+      <p>一個 <strong><n>repository</n></strong> 其實就是一個專案。你可以將它想像成一個專案資料夾，其中包含了所有跟專案相關的檔案。事實上，它在電腦裏的樣子就像下面這樣：</p>
+
+      <img src="../assets/imgs/repos.png" width="600">
+
+      <p>告訴 Git 你要指定哪個資料夾，然後 Git 就會開始記錄這資料夾裏的一切更動。新增、刪除檔案，甚至只是改變檔案中的一個字，全都會被 Git 追蹤並加上時間標記。這就是<strong>版本控制</strong>。</p>
+
+      <h2>使用終端機</h2>
+
+      <p><strong>終端機</strong>（或是 Bash）是一種只利用鍵盤輸入指令來操控電腦的方式。你可以重新命名檔案、開啟檔案、建立新資料夾、並在不同目錄（資料夾）之間切換，全都利用鍵盤輸入指令完成。你甚至不需離開終端機便可以在終端機裏運行文字編輯器（例如 <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>）。</p>
+
+      <p>除了瀏覽你的電腦，你也可以在終端機裏使用具有<strong>終端機界面（command-line interface，CLI）</strong>的程式，這類的程式可藉由輸入鍵盤指令來運行。Git-it 便是其中之一，你現在正透過終端機使用它！而 Git 也是另一個例子。你可以在終端機裏藉由指令來存取與操控 Git，不久後你便會這麼做了！</p>
+
+      <p>在 Git-it 裏你將學會一些基本操作的指令，而在每個步驟中將會解釋這些指令的功用。</p>
+
+      <h2>步驟：建立一個新的 <n>repository</n></h2>
+      <p>你將建立一個新的資料夾，並把它設定成一個 Git <n>repository</n>。</p>
+
+      <p>為了讓整件事容易一些，把你的資料夾取名為與專案同名。就叫 'hello-world' 好了。</p>
+
+      <p>你可以將下列指令一一輸入至終端機。</p>
+
+      <p>建立新資料夾：</p>
+      <code>$ mkdir hello-world</code>
+
+      <p>進入這個資料夾：</p>
+      <code>$ cd hello-world</code>
+
+      <p>把這個資料夾設定成一個 Git 專案資料夾</p>
+      <code>$ git init</code>
+
+      <p>就是這樣！終端機會回應並切換到下一行。如果你想要確認此資料夾是否已經是個 Git <n>repository</n>，輸入 <code>git status</code>，只要不是顯示 'fatal: Not a git repository...'，那就對了！</p>
+
+      <div class="verify">
+        <h3>確認你完成了所有步驟：</h3><code>git-it verify</code>
+        <h3>前往下一關：</h3><code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>撇步</h2>
+        <ul>
+          <li><strong>建立一個新資料夾 (或稱做目錄)</strong></li>
+          <code>$ mkdir &#60;FOLDERNAME&#62;</code>
+          <li><strong>進入一個資料夾 (或稱做切換目錄)</strong></li>
+          <code>$ cd &#60;FOLDERNAME&#62;</code>
+          <li><strong>列出資料夾內容</strong></li>
+          <code>$ ls </code>
+          <li><strong>為一個資料夾加上 Git 功能</strong></li>
+          <code>$ git init</code>
+        </ul>
+      </div>

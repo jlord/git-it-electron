@@ -1,0 +1,54 @@
+      <div class="challenge">
+        <h2>關卡內容：</h2>
+        <p>在本機上 <v>Merge</v> 你的 <n>branch</n>，刪除舊的 <n>branch</n>，從 <n>upstream</n> 獲得更新來獲得最終勝利！</p>
+       </div>
+
+      <h2>步驟：從本機 <v>Merge</v></h2>
+
+      <p>你的 <n>pull request</n> 已經被 <v>merged</v> 了！現在來把 <adj>forked</adj> 和原始的 <n>repository</n> 做個同步吧！因為你的 <n>branch</n> 內容順序正確，現在只要把你的 <n>branch</n> <v>merge</v> 進主要的 <n>branch</n>（'gh-pages'）就可以了哦。</p>
+
+      <p>首先，切換到想要 <v>merge</v> <strong>進去</strong>的 <n>branch</n>，也就是 'gh-pages'。</p>
+
+      <p><code>$ git checkout gh-pages</code></p>
+
+      <p>告訴 Git 你想要 <v>merge</v> 那個 <n>branch</n> <strong>進來</strong>，也就是你的 <n>feature</n> <n>branch</n>，名字是 'add-username'。</p>
+
+      <p><code>$ git merge &#60;BRANCHNAME&#62;</code></p>
+
+      <p>整理一下吧，現在把剛剛已經 <v>merged</v> 的 <n>feature</n> <n>branch</n> 刪掉。</p>
+      <p><code>$ git branch -d &#60;BRANCHNAME&#62;</code></p>
+
+      <p>也可以把 <n>branch</n> 從 GitHub 上的 <adj>forked</adj> <n>repository</n> 中刪除哦：</p>
+      <p><code>$ git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
+
+      <h2>步驟： 從 <n>Upstream</n> <v>Pull</v></h2>
+      <p>最後一步，但也是很重要的一步，若從原專案（現在首頁已經有你的名字了哦）<v>pull</v> 回來，你也會有一個相同的網頁，位置在 yourusername.github.io/patchwork。</p>
+
+      <p>從原本的 <n>upstream</n> <v>pull</v> 回來：</p>
+
+      <p><code>$ git pull upstream gh-pages</code></p>
+
+      <h2>恭喜恭喜！</h2>
+      <p>你在本機建立了 <n>repositories</n>，與一名 <n>collaborator</n> 協作、<v>push</v>、<v>pull</v>，加入了百萬開發者所處的開源世界，是你，豐富了開源世界！</p>
+      <p>去 <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> 這裡看，你的名字已經被收錄進來了呢！</p>
+
+      <div class="verify">
+        <h3>確認你完成了所有步驟：</h3><code>git-it verify</code>
+        <h3>前往下一關：</h3><code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>撇步</h2>
+        <ul>
+          <li><strong><v>Merge</v> <n>branch</n> 到目前的 <n>branch</n></strong></li>
+          <code>$ git merge &#60;BRANCHNAME&#62;</code>
+          <li><strong>切換正在工作的 <n>branch</n></strong></li>
+          <code>$ git checkout &#60;BRANCHNAME&#62;</code>
+          <li><strong>刪除本機的 <n>branch</n></strong></li>
+          <code>$ git branch -d &#60;BRANCHNAME&#62;</code>
+          <li><strong>刪除 <n>remote</n> <n>branch</n></strong></li>
+          <code>$ git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
+          <li><strong>從 <n>remote</n> <n>branch</n> <v>Pull</v></strong></li>
+          <code>$ git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+        </ul>
+      </div>

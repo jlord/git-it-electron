@@ -1,0 +1,169 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Git-it Guide</title>
+        <meta name="description" content="learn git and github">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      <!--[if lt IE 8]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+        <header class="site-header">
+  <div class="nav u-posFixed">
+    <div class="wrap-width u-textCenter">
+      <a href="githubbin.html"
+        <span class="u-floatLeft hand">☜</span>
+      </a>
+      <a class="filledblock" href="../index-zhtw.html">Git-it</a>
+      <a href="forks_and_clones.html"
+        <span class="u-floatRight hand">☞</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <div class="u-floatLeft">
+      <span class="all-caps">CHALLENGE</span>
+      <h2 class="challenge-name">remote control</h2>
+    </div>
+    <div class="u-floatRight u-textRight">
+      <span class="all-caps">NUMBER</span>
+      <h2 class="challenge-name">5 / 11</h2>
+    </div>
+  </div>
+</header>
+      <div class="wrapper">
+
+              <div class="challenge">
+        <h2>&#x95DC;&#x5361;&#x5167;&#x5BB9;&#xFF1A;</h2>
+        <p>&#x628A;&#x96FB;&#x8166;&#x88E1;&#x7684; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x548C; <adj><span class="superscript">&#x9060;&#x7AEF;&#x7684;</span>remote</adj> &#x7684; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n>&#x9023;&#x7D50;&#x8D77;&#x4F86;&#xFF0C;&#x4E26; <v><span class="superscript">&#x63A8;&#x9001;</span>push</v> &#x96FB;&#x8166;&#x4E0A;&#x7684;&#x4FEE;&#x6539;&#x3002;</p>
+        </div>
+
+      <h2><n><span class="superscript">&#x9060;&#x7AEF;</span>Remotes</n></h2>
+
+      <p>&#x7576;&#x5C08;&#x6848;&#x50B3;&#x5230; GitHub &#x4E0A;&#x9762;&#xFF0C;&#x5B83;&#x6703;&#x88AB;&#x5132;&#x5B58;&#x5728; GitHub &#x7684;&#x4E3B;&#x6A5F;&#x4E0A;&#x3002;&#x9019;&#x500B;&#x5C08;&#x6848;&#x5C31;&#x8B8A;&#x6210;&#x4E86; <strong><adj><span class="superscript">&#x9060;&#x7AEF;&#x7684;</span>remote</adj></strong> <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n>&#xFF0C;&#x56E0;&#x70BA;&#x5C08;&#x6848;&#x73FE;&#x5728; GitHub &#x7684;&#x4E3B;&#x6A5F;&#x4E0A;&#x4E5F;&#x6709;&#x4E00;&#x4EFD;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x53EB;&#x505A; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n>&#x3002;&#x7576;&#x4F60;&#x628A;<strong>&#x96FB;&#x8166;&#x4E0A;&#x7684;</strong>&#x7A0B;&#x5F0F;&#x4FEE;&#x6539; <strong><v><span class="superscript">&#x63A8;&#x9001;</span>push</v></strong>&#x5230; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n>&#xFF0C;&#x9019;&#x5C31;&#x53EB;&#x505A;&#x540C;&#x6B65;&#x3002;</p>
+
+      <p>&#x5176;&#x4ED6;&#x4EBA;&#x53EF;&#x4EE5;&#x900F;&#x904E; <v><span class="superscript">&#x6536;&#x53D6;</span>pull</v> &#x4F60;&#x7684; <adj><span class="superscript">&#x9060;&#x7AEF;&#x7684;</span>remote</adj> <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x4F86;&#x53D6;&#x5F97;&#x5C08;&#x6848;&#x7684;&#x6700;&#x65B0;&#x7248;&#x672C;&#xFF0C;&#x5132;&#x5B58;&#x5230;&#x4ED6;&#x5011;&#x7684;&#x96FB;&#x8166;&#x4E0A;&#x3002;&#x9019;&#x6A23;&#x4E00;&#x4F86;&#xFF0C;&#x5927;&#x5BB6;&#x5C31;&#x53EF;&#x4EE5;&#x4E00;&#x8D77;&#x4FEE;&#x6539;&#x540C;&#x4E00;&#x500B;&#x5C08;&#x6848;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x7528; USB &#x6216; Email &#x7B49;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x4F86;&#x53D6;&#x5F97;&#x5C08;&#x6848;&#x7684;&#x6700;&#x65B0;&#x9032;&#x5EA6;&#x3002;</p>
+
+        <img src="../assets/imgs/remotes.png" width="600">
+
+      <h2>&#x6B65;&#x9A5F;&#xFF1A;&#x5EFA;&#x7ACB;&#x4E00;&#x500B; <adj><span class="superscript">&#x9060;&#x7AEF;&#x7684;</span>Remote</adj> <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>Repository</n></h2>
+
+      <p>&#x4F60;&#x60F3;&#x8981;&#x628A;<strong>&#x96FB;&#x8166;&#x4E0A;&#x7684;</strong>&#x7248;&#x672C;&#x548C;&#x5B58;&#x5728; GitHub.com &#x4E0A;&#x7684; <strong><adj><span class="superscript">&#x9060;&#x7AEF;&#x7684;</span>remote</adj></strong> &#x7248;&#x672C;&#x505A;&#x540C;&#x6B65;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x5011;&#x5148;&#x5728; GitHub &#x4E0A;&#x958B;&#x555F;&#x4E00;&#x500B;&#x65B0;&#x7684; <adj><span class="superscript">&#x9060;&#x7AEF;&#x7684;</span>remote</adj> <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n>&#x3002;</p>
+
+      <ul>
+        <li>&#x5230; <a href="http://github.com/" target="_blank">github.com</a> &#x767B;&#x5165;&#xFF0C;&#x7136;&#x5F8C;&#x6309;&#x4E00;&#x4E0B;&#x53F3;&#x4E0A;&#x89D2;&#x7684; &apos;+&apos; &#x865F;&#x4F86;&#x65B0;&#x589E;&#x4E00;&#x500B; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n>&#x3002;</li>
+        <li>&#x53D6;&#x4E00;&#x500B;&#x540D;&#x5B57;&#xFF0C;&#x6700;&#x597D;&#x548C;&#x4F60;&#x96FB;&#x8166;&#x4E0A;&#x7684;&#x7A0B;&#x5F0F;&#x540D;&#x7A31;&#x4E00;&#x6A23;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; &apos;hello-world&apos;&#xFF0C;&#x4E26;&#x4E14;&#x7D66;&#x5B83;&#x4E00;&#x500B;&#x7C21;&#x77ED;&#x7684;&#x8AAA;&#x660E;&#x3002;</li>
+        <li>&#x8A2D;&#x5B9A;&#x70BA; public&#xFF08;&#x516C;&#x958B;&#xFF09;&#x3002;</li>
+        <li>&#x4E0D;&#x8981;&#x52FE;&#x9078; &apos;initialize with a README&apos;&#xFF0C;&#x56E0;&#x70BA;&#x6211;&#x5011;&#x5DF2;&#x7D93;&#x5728;&#x96FB;&#x8166;&#x4E0A;&#x7684;&#x7248;&#x672C;&#x5EFA;&#x7ACB;&#x4E86;&#x4E00;&#x500B;&#x6A94;&#x6848;&#xFF0C;&#x53EB;&#x505A; &apos;readme.txt&apos;&#x3002;</li>
+        <li>&#x4E5F;&#x4E0D;&#x8981;&#x4FEE;&#x6539; .gitignore &#x548C; license &#x7684;&#x8A2D;&#x5B9A;&#xFF0C;&#x4FDD;&#x7559;&#x539F;&#x5148; &apos;none&apos; &#x7684;&#x8A2D;&#x5B9A;&#x5C31;&#x597D;&#x3002;</li>
+        <li>&#x6309;&#x4E0B; &apos;create repository&apos;&#xFF01;</li>
+      </ul>
+
+      <h2>Readme&#xFF08;&#x8B80;&#x6211;&#x6A94;&#x6848;&#xFF09;&#x3001;.gitignore &#x548C; License&#xFF08;&#x8457;&#x4F5C;&#x6B0A;&#x8072;&#x660E;&#xFF09;</h2>
+
+      <p>&#x5728;&#x958B;&#x6E90;&#x8EDF;&#x9AD4;&#x4E2D;&#xFF0C;&#x9019;&#x4E9B;&#x662F;&#x4F60;&#x5C07;&#x6703;&#x5E38;&#x5E38;&#x898B;&#x5230;&#x7684;&#x6A94;&#x6848;&#x3002;</p>
+
+      <p><strong><n><span class="superscript">&#x8B80;&#x6211;&#x6A94;&#x6848;</span>readme</n></strong> &#x901A;&#x5E38;&#x662F;&#x7528;&#x4F86;&#x89E3;&#x91CB;&#x4E00;&#x500B;&#x7A0B;&#x5F0F;&#x7684;&#x529F;&#x7528;&#x3001;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x8CA2;&#x737B;&#x7A0B;&#x5F0F;&#x78BC;&#xFF08;&#x4F46;&#x6709;&#x6642;&#x5019;&#x9019;&#x90E8;&#x4EFD;&#x4E5F;&#x6703;&#x53E6;&#x5916;&#x7528;&#x4E00;&#x500B; CONTRIBUTING.md &#x4F86;&#x8AAA;&#x660E;&#xFF09;&#x3002;</p>
+
+      <p><strong><n><span class="superscript">&#x5FFD;&#x7565;&#x6A94;&#x6848;&#x8868;</span>.gitignore</n></strong> &#x5247;&#x662F;&#x8981;&#x5FFD;&#x7565;&#x7684;&#x6A94;&#x6848;&#x6E05;&#x55AE;&#xFF0C;&#x9019;&#x662F;&#x7528;&#x4F86;&#x544A;&#x8A34; Git&#xFF0C;&#x7576;&#x5728;&#x505A;&#x7248;&#x672C;&#x63A7;&#x5236;&#x8A18;&#x9304;&#x7684;&#x6642;&#x5019;&#xFF0C;<em>&#x4E0D;&#x8981;</em>&#x7406;&#x6703;&#x9019;&#x4E9B;&#x6A94;&#x6848;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x7576;&#x67D0;&#x500B;&#x6A94;&#x6848;&#x4E2D;&#x5305;&#x542B;&#x5BC6;&#x78BC;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x6211;&#x5011;&#x5C31;&#x4E0D;&#x5E0C;&#x671B; Git &#x8A18;&#x9304;&#x5B83;&#x5011;&#x4E0B;&#x4F86;&#x3002;</p>
+
+      <p><strong>License</strong>&#xFF08;&#x8457;&#x4F5C;&#x6B0A;&#x8072;&#x660E;&#xFF09;&#x662F;&#x7528;&#x4F86;&#x8072;&#x660E;&#x4E00;&#x500B;&#x7A0B;&#x5F0F;&#x53EF;&#x4EE5;&#x3001;&#x6216;&#x4E0D;&#x53EF;&#x4EE5;&#x88AB;&#x600E;&#x9EBC;&#x6A23;&#x7684;&#x4F7F;&#x7528;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5230;
+      <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a> &#x53C3;&#x8003;&#x4E00;&#x4E9B;&#x7BC4;&#x4F8B;&#x3002;</p>
+      <p>&#x4F46;&#x5C31;&#x73FE;&#x5728;&#x5728;&#x505A;&#x7684;&#x7DF4;&#x7FD2;&#x4F86;&#x8AAA;&#xFF0C;&#x6211;&#x5011;&#x66AB;&#x6642;&#x4E0D;&#x9700;&#x8981;&#x8457;&#x4F5C;&#x6B0A;&#x8072;&#x660E;&#x3002;</p>
+
+      <h2>&#x6B65;&#x9A5F;&#xFF1A;&#x628A;&#x96FB;&#x8166;&#x4E0A;&#x7684; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x548C; <adj><span class="superscript">&#x9060;&#x7AEF;&#x7684;</span>remote</adj> <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x9023;&#x7D50;&#x5728;&#x4E00;&#x8D77;</h2>
+
+      <p>&#x73FE;&#x5728;&#x6211;&#x5011;&#x5DF2;&#x7D93;&#x5728; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n>&#xFF08;GitHub &#x4E0A;&#xFF09;&#x65B0;&#x5EFA;&#x4E86;&#x4E00;&#x500B; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n>&#x3002;&#x5728; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x7684;&#x9801;&#x9762;&#x4E0A;&#x4F60;&#x6703;&#x770B;&#x5230;&#x4E00;&#x500B; &apos;Quick Setup&apos; &#x7684;&#x90E8;&#x4EFD;&#xFF0C;&#x78BA;&#x8A8D;&#x9078;&#x64C7;&#x7684;&#x7DB2;&#x5740;&#x662F; &apos;HTTP&apos;&#xFF0C;&#x800C;&#x4E0D;&#x662F; &apos;SSH&apos;&#xFF0C;&#x53F3;&#x908A;&#x7684;&#x6B04;&#x4F4D;&#x5C31;&#x662F;&#x9019;&#x500B; <adj><span class="superscript">&#x9060;&#x7AEF;&#x7684;</span>remote</adj> <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x5728; GitHub &#x4E3B;&#x6A5F;&#x4E0A;&#x7684;&#x4F4D;&#x5740;&#x3002;</p>
+
+      <p>&#x56DE;&#x5230;&#x7D42;&#x7AEF;&#x6A5F;&#xFF0C;&#x5728;&#x6211;&#x5011;&#x525B;&#x525B;&#x521D;&#x59CB;&#x5316;&#x904E; Git &#x7684; &apos;hello-world&apos; &#x7684;&#x8CC7;&#x6599;&#x593E;&#x88E1;&#x982D;&#xFF0C;&#x6211;&#x5011;&#x9700;&#x8981;&#x544A;&#x8A34; Git &#x9019;&#x500B; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x7684;&#x4F4D;&#x5740;&#x3002;&#x540C;&#x4E00;&#x500B; Git &#x5C08;&#x6848;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x5F88;&#x591A;&#x4E0D;&#x540C;&#x7684; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n>&#xFF0C;&#x6240;&#x4EE5;&#x6BCF;&#x4E00;&#x500B; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x90FD;&#x9700;&#x8981;&#x4E00;&#x500B;&#x540D;&#x5B57;&#x3002;&#x800C;&#x6700;&#x4E3B;&#x8981;&#x3001;&#x539F;&#x59CB;&#x7684;&#x90A3;&#x4E00;&#x500B;&#xFF0C;&#x901A;&#x5E38;&#x90FD;&#x662F;&#x53EB;&#x505A; <code>origin</code>&#x3002;</p>
+
+      <code>$ git remote add origin &lt;URLFROMGITHUB&gt;</code>
+
+      <p>&#x4F60;&#x96FB;&#x8166;&#x4E0A;&#x7684; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x73FE;&#x5728;&#x77E5;&#x9053;&#x4E86;&#x5C08;&#x6848;&#x6709;&#x4E00;&#x500B;&#x5728; GitHub &#x4E0A;&#x7684; <strong><n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n></strong>&#xFF0C;&#x53EB;&#x505A; &apos;origin&apos;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x60F3;&#x50CF;&#x9019;&#x5C31;&#x597D;&#x50CF;&#x662F;&#x628A;&#x4E00;&#x500B;&#x96FB;&#x8A71;&#x865F;&#x78BC;&#x914D;&#x4E0A;&#x4E00;&#x500B;&#x540D;&#x5B57;&#x4E00;&#x6A23;&#xFF0C;&#x9019;&#x6A23;&#x7576;&#x4F60;&#x8981;&#x6253;&#x96FB;&#x8A71;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x5C31;&#x4E0D;&#x7528;&#x8A18;&#x5F97;&#x865F;&#x78BC;&#x4E86;&#x3002;</p>
+
+      <blockquote>
+        <p><strong>&#x5099;&#x8A3B;&#xFF1A;</strong></p>
+        <p>&#x5982;&#x679C;&#x4F60;&#x6709;&#x5B89;&#x88DD; <strong>GitHub for Windows</strong>&#xFF0C;Git &#x521D;&#x59CB;&#x5316;&#x7684;&#x6642;&#x5019;&#x5C31;&#x6703;&#x76F4;&#x63A5;&#x8A2D;&#x5B9A;&#x4E86;&#x4E00;&#x500B;&#x53EB;&#x505A; &apos;origin&apos; &#x7684; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n>&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x65B0;&#x589E;&#xFF0C;&#x53EA;&#x8981;&#x8A2D;&#x5B9A;&#x9019;&#x500B; &apos;origin&apos; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x7684;&#x4F4D;&#x5740;&#x5C31;&#x597D;&#x4E86;&#xFF1A;</p>
+
+        <code>$ git remote set-url origin &lt;URLFROMGITHUB&gt;</code>
+      </blockquote>
+
+      <h2>&#x6B65;&#x9A5F;&#xFF1A;&#x628A;&#x4F60;&#x7684;&#x4FEE;&#x6539; <v><span class="superscript">&#x63A8;&#x9001;</span>Push</v> &#x5230; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n></h2>
+
+      <p>&#x63A5;&#x4E0B;&#x4F86;&#x4F60;&#x9700;&#x8981; <strong><v><span class="superscript">&#x63A8;&#x9001;</span>push</v></strong>&#xFF08;&#x50B3;&#x9001;&#xFF09;&#x6240;&#x6709;&#x4F60;&#x5728;&#x96FB;&#x8166;&#x4E0A;&#x505A;&#x7684;&#x4FEE;&#x6539;&#x5230; GitHub &#x4E0A;&#x7684; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n>&#x3002;&#x901A;&#x5E38;&#x4F60;&#x6703;&#x5E0C;&#x671B; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x7684;&#x7A0B;&#x5F0F;&#x7248;&#x548C;&#x96FB;&#x8166;&#x4E0A;&#x7684;&#x7A0B;&#x5F0F;&#x7248;&#x672C;&#x662F;&#x4E00;&#x6A23;&#x7684;&#x3002;</p>
+
+      <p>Git &#x6709;&#x4E00;&#x500B; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x7CFB;&#x7D71;&#xFF0C;&#x8B93;&#x4F60;&#x53EF;&#x4EE5;&#x540C;&#x6642;&#x4FEE;&#x6539;&#x4E00;&#x500B;&#x7A0B;&#x5F0F;&#x7684;&#x4E0D;&#x540C;&#x529F;&#x80FD;&#xFF0C;&#x4E4B;&#x5F8C;&#x6703;&#x518D;&#x6DF1;&#x5165;&#x4ECB;&#x7D39;&#x3002;&#x7CFB;&#x7D71;&#x6703;&#x9810;&#x8A2D;&#x4E00;&#x500B;&#x540D;&#x7A31;&#x7D66;&#x6700;&#x521D;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n>&#xFF0C;&#x901A;&#x5E38;&#x5C31;&#x6703;&#x53EB;&#x505A; &apos;master&apos;&#x3002;&#x7576;&#x4F60; <v><span class="superscript">&#x63A8;&#x9001;</span>push</v>&#xFF08;&#x6216;&#x4E4B;&#x5F8C; <v><span class="superscript">&#x6536;&#x53D6;</span>pull</v>&#xFF09;&#x4E00;&#x500B;&#x5C08;&#x6848;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x4F60;&#x5FC5;&#x9808;&#x8981;&#x544A;&#x8A34; Git &#x4F60;&#x60F3;&#x8981;&#x7684;&#x662F;&#x54EA;&#x4E00;&#x500B; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x4E0A;&#x7684;&#x54EA;&#x4E00;&#x500B; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x7684;&#x9032;&#x5EA6;&#x3002;</p>
+
+      <p>&#x4E5F;&#x5C31;&#x662F;&#x8AAA;&#xFF0C;&#x6211;&#x5011;&#x73FE;&#x5728;&#x60F3;&#x8981;&#x628A; &apos;master&apos; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x7684;&#x7A0B;&#x5F0F;&#x50B3;&#x9001;&#x5230;&#x5148;&#x524D;&#x65B0;&#x589E;&#x7684; &apos;origin&apos; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n>&#x3002;</p>
+
+      <code>$ git push origin master</code>
+
+      <p>&#x5B8C;&#x6210;&#x4E4B;&#x5F8C;&#xFF0C;&#x4F60;&#x73FE;&#x5728;&#x5C31;&#x53EF;&#x4EE5;&#x56DE;&#x5230; GitHub &#x7684; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x9801;&#x9762;&#xFF0C;&#x91CD;&#x65B0;&#x6574;&#x7406;&#x3002;&#x54C7;&#x54C7;&#x54C7;&#xFF01;&#x7A0B;&#x5F0F;&#x662F;&#x4E0D;&#x662F;&#x90FD;&#x540C;&#x6B65;&#x4E86;&#x5462;&#xFF1F;&#x606D;&#x559C;&#x4F60;&#x5EFA;&#x7ACB;&#x4E86;&#x7B2C;&#x4E00;&#x500B;&#x516C;&#x958B;&#x7684; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n>&#xFF01;</p>
+
+      <div class="verify">
+        <h3>&#x78BA;&#x8A8D;&#x4F60;&#x5B8C;&#x6210;&#x4E86;&#x6240;&#x6709;&#x6B65;&#x9A5F;&#xFF1A;</h3><code>git-it verify</code>
+        <h3>&#x524D;&#x5F80;&#x4E0B;&#x4E00;&#x500B;&#x95DC;&#x5361;&#xFF1A;</h3><code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>&#x6487;&#x6B65;</h2>
+        <ul>
+          <li><strong>&#x65B0;&#x589E; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x9023;&#x7D50;</strong></li>
+          <code>$ git remote add &lt;REMOTENAME&gt; <url></url></code>
+          <li><strong>&#x5E6B;&#x4E00;&#x500B; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x8A2D;&#x5B9A;&#x4F4D;&#x5740;</strong></li>
+          <code>$ git remote set-url &lt;REMOTENAME&gt; <url></url></code>
+          <li><strong><v><span class="superscript">&#x6536;&#x53D6;</span>Pull</v> <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x7684;&#x7A0B;&#x5F0F;</strong></li>
+          <code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
+          <li><strong>&#x770B;&#x4F60;&#x6709;&#x54EA;&#x4E9B; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> &#x9023;&#x7D50;</strong></li>
+          <code>$ git remote -v</code>
+          <li><strong><v><span class="superscript">&#x63A8;&#x9001;</span>Push</v> &#x96FB;&#x8166;&#x4E0A;&#x7684;&#x7A0B;&#x5F0F;&#x5230; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n></strong></li>
+          <code>$ git push &lt;REMOTENAME&gt; <branch></branch></code>
+        </ul>
+      </div>
+
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="githubbin.html" class="u-inline-block all-caps">GitHubbin
+    <div>⤶ </div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="forks_and_clones.html" class="u-inlineBlock all-caps">forks and clones
+    <div>⤷</div>
+    </a>
+  </div>
+</div>
+<footer>
+  <ul>
+    <li class="all-caps"><a href="../index-zhtw.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../about.html">About</a></li>
+    <li class="all-caps"><a href="../dictionary.html">Dictionary</a></li>
+    <li class="all-caps"><a href="../resources.html">Resources</a></li>
+    <li class="all-caps">
+      <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
+    </li>
+  </ul>
+</footer>
+
+      </div>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-52690821-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>
