@@ -1,0 +1,141 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Git-it Guide</title>
+        <meta name="description" content="learn git and github">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      <!--[if lt IE 8]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+        <header class="site-header">
+  <div class="nav u-posFixed">
+    <div class="wrap-width u-textCenter">
+      <a href="repository.html"
+        <span class="u-floatLeft hand">☜</span>
+      </a>
+      <a class="filledblock" href="../index.html">Git-it</a>
+      <a href="githubbin.html"
+        <span class="u-floatRight hand">☞</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <div class="u-floatLeft">
+      <span class="all-caps">CHALLENGE</span>
+      <h2 class="challenge-name">commit to it</h2>
+    </div>
+    <div class="u-floatRight u-textRight">
+      <span class="all-caps">NUMBER</span>
+      <h2 class="challenge-name">3 / 11</h2>
+    </div>
+  </div>
+</header>
+      <div class="wrapper">
+
+              <div class="challenge">
+        <h2>The Challenge:</h2>
+        <p>Create a file in your new repository, add something to that file and
+          commit those changes to Git.</p>
+      </div>
+
+      <h2>Step: Create a New File</h2>
+
+      <p>Now that you've got a repository started, add a file to it.</p>
+
+      <p>Open a text editor. Now write a couple of lines of text, perhaps
+        say hello, and save the file as <code>readme.txt</code> in the 'hello-world' folder you created in the last challenge.</p>
+
+      <h2>Step: Status, Add and Commit Changes</h2>
+      <p>Next check the <strong>status</strong> of your repository to find out if there have been changes. Below in this terminal,
+        you should still be within the 'hello-world' you created. See if there
+        are changes listed:</p>
+
+      <p><code>$ git status</code></p>
+
+      <p>Then <strong>add</strong> the file you just created to the files you'd
+        like to <strong>commit</strong> (aka save) to change. </p>
+
+      <p><code>$ git add readme.txt</code></p>
+
+      <p>Finally, <strong>commit</strong> those changes to the repository's history with a
+        short description of the updates.</p>
+      <p><code>$ git commit -m "&#60;your commit message&#62;"</code></p>
+
+      <h2>Step: Make More Changes</h2>
+      <p>Now add another line to <code>readme.txt</code> and save.</p>
+
+      <p>In terminal, you can view the <strong>diff</strong>erence between the
+        file now and how it was at your last commit. </p>
+
+      <p><code>$ git diff</code></p>
+
+      <p>Now with what you just learned above, commit this latest change.</p>
+
+      <div class="verify">
+        <h3>Verify with </h3> <code>git-it verify </code><br>
+        <h3>Go to the next challenge </h3> <code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>Tips</h2>
+        <ul>
+          <li><strong>Check status of changes to a repository</strong></li>
+          <li><code>$ git status</code></li>
+          <li><strong>View changes to files</strong></li>
+          <li><code>$ git diff</code></li>
+          <li><strong>Add a file's changes to be committed</strong></li>
+          <li><code>$ git add &#60;FILENAME&#62;</code></li>
+          <li><strong>To add all files changes</strong></li>
+          <li><code>$ git add .</code></li>
+          <li><strong>To commit (aka save) the changes you've added with a short message describing the changes</strong></li>
+          <li><code>$ git commit -m "&#60;your commit message&#62;"</code></li>
+        <ul>
+      </div>
+
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="repository.html" class="u-inline-block all-caps">repository
+    <div>⤶ </div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="githubbin.html" class="u-inlineBlock all-caps">GitHubbin
+    <div>⤷</div>
+    </a>
+  </div>
+</div>
+<footer>
+  <ul>
+    <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../about.html">About</a></li>
+    <li class="all-caps"><a href="../dictionary.html">Dictionary</a></li>
+    <li class="all-caps"><a href="../resources.html">Resources</a></li>
+    <li class="all-caps">
+      <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
+    </li>
+  </ul>
+</footer>
+
+      </div>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-52690821-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

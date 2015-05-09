@@ -1,0 +1,104 @@
+<div class="challenge">
+        <h2>The Challenge:</h2>
+        <p>Create a new branch on your fork for your contribution.</p>
+      </div>
+
+      <h2>Branches</h2>
+
+      <p>Git repositories use branches to isolate work when needed. It's
+        common practice when working on a project or with others on a
+        project to create a <strong>branch</strong> to keep your changes in until they are ready. This
+        way you can do your work while the main, commonly named 'master',
+        branch stays stable. When your branch is ready, you merge it back into 'master'.</p>
+
+      <img src="../assets/imgs/branches.png" width="600">
+
+
+    <p>For a great visualization on how branches work in a project, see this
+      GitHub Guide: <a href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a></p>
+
+      <h2>GitHub Pages</h2>
+      <p>GitHub will automatically serve and host static website files in
+        branches named 'gh-pages'. Since the project you forked creates a
+        website, its main branch is 'gh-pages' instead of 'master'. All sites like this can be
+        found using this pattern for the URL: </p>
+
+      <code>http://githubusername.github.io/repositoryname</code>
+
+      <h2>Step: Create a branch</h2>
+      <p>When you create a branch, Git copies everything from the current
+        branch you're on and places it in the branch you've requested.</p>
+
+      <p>Type <code>git status</code> to see what branch you're currently on (it
+        should be 'gh-pages').</p>
+
+      <p>Create a branch and name it "add-&#60;username&#62;", where 'username' is
+        your username. For instance, "add-jlord". <strong>Branches are case-sensitive so name your branch exactly the way your GitHub name appears</strong>.</p>
+
+      <p><code>$ git branch &#60;BRANCHNAME&#62;</code></p>
+
+      <p>Now you have a branch with a new name identical to 'gh-pages'.</p>
+
+      <p>To go into that branch and work on it, similar to using <code>cd</code> to
+        change directory in terminal, you <strong>checkout</strong> a branch. Go onto your new branch:</p>
+
+      <p><code>$ git checkout &#60;BRANCHNAME&#62;</code></p>
+
+      <h2>Step: Create a new file</h2>
+      <p>Back to the text editor:</p>
+        <ul>
+          <li>Create a new file named <span style="white-space: nowrap;">"add-&#60;USERNAME&#62;.txt"</span>, where 'username' is your username. For instance, "add-jlord.txt".</li>
+          <li>Then, just write your
+        GitHub username in it, that's it and that's all. For instance,
+        I'd type 'jlord'.</li>
+          <li>Save this file in the 'contributors' folder in Patchwork: <strong>Patchwork/contributors/add-yourusername.txt</strong></li>
+          <li>Next, check in your changes!</li>
+        </ul>
+
+      <h2>Step: Check-in</h2>
+      <p>Go through the steps for checking in a project: </p>
+
+      <p><code>$ git status</code></p>
+      <p><code>$ git add &#60;FILENAME&#62;</code></p>
+      <p><code>$ git commit -m "&#60;commit message&#62;"</code></p>
+
+      <p>Now push your update to your fork on GitHub:</p>
+
+      <p><code>$ git push origin &#60;BRANCHNAME&#62;</code></p>
+
+      <div class="verify">
+        <h3>Verify with </h3> <code>git-it verify</code><br>
+        <h3>Go to the next challenge </h3> <code>git-it</code>
+      </div>
+
+      <div class="didnt-pass">
+        <h2>Didn't Pass?</h2>
+
+        <h4>File NOT in contributors folder</h4>
+        <p>The file you create should inside the existing 'contributors' folder in the Patchwork repository. If you put it somewhere else, simply use Finder or Windows Explorer to move your file into the folder. You can check <code>git status</code> again and you'll find it sees your changes. Stage and then commit "all" (-A) of these changes (additions and deletions) with the commands below.</p>
+        <p><code>$ git add -A</code></p>
+        <p><code>$ git commit -m "move file into contributors folder"</code></p>
+
+        <h4>Branch name expected: _____</h4>
+        <p>The branch name should match your user name exactly. To change your branch name:</p>
+        <p><code>$ git branch -M &#60;NEWBRANCHNAME&#62;</code></p>
+        <p>When you've made your updates, verify again!</p>
+      </div>
+
+      <div id="git-tips">
+        <h2>Tips</h2>
+        <ul>
+          <li>You can create and switch to a branch in one line:</li>
+          <li><code>$ git checkout -b &#60;BRANCHNAME&#62;</code></li>
+          <li>Create a new branch:</li>
+          <li><code>$ git branch &#60;BRANCHNAME&#62;</code></li>
+          <li>Move onto a branch:</li>
+          <li><code>$ git checkout &#60;BRANCHNAME&#62;</code></li>
+          <li>List the branches:</li>
+          <li><code>$ git branch</code></li>
+          <li>Rename a branch you're currently on:</li>
+          <li><code>$ git branch -m &#60;NEWBRANCHNAME&#62;</code></li>
+          <li>Verify what branch you're working on</li>
+          <li><code>$ git status</code></li>
+        </ul>
+      </div>

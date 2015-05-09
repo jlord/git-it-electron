@@ -1,0 +1,145 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Git-it Guide</title>
+        <meta name="description" content="learn git and github">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      <!--[if lt IE 8]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+        <header class="site-header">
+  <div class="nav u-posFixed">
+    <div class="wrap-width u-textCenter">
+      <a href="requesting_you_pull_please.html"
+        <span class="u-floatLeft hand">☜</span>
+      </a>
+      <a class="filledblock" href="../index.html">Git-it</a>
+      <a href="../index.html"
+        <span class="u-floatRight hand">☞</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <div class="u-floatLeft">
+      <span class="all-caps">CHALLENGE</span>
+      <h2 class="challenge-name">merge tada</h2>
+    </div>
+    <div class="u-floatRight u-textRight">
+      <span class="all-caps">NUMBER</span>
+      <h2 class="challenge-name">11 / 11</h2>
+    </div>
+  </div>
+</header>
+      <div class="wrapper">
+
+              <div class="challenge">
+        <h2>The Challenge:</h2>
+        <p>Merge your branch locally, delete old branch and pull from upstream for much win!</p>
+       </div>
+
+      <h2>Step: Merge Locally</h2>
+
+      <p>Your pull request has been merged! Now, since you
+        know that you definitely want those updates in your forked version,
+        and your branch is in good working order, merge it into the main
+        branch on your forked repository, in this case, 'gh-pages'.</p>
+
+      <p>First, move into the branch you want to merge <em>into</em> — in this case,
+        branch 'gh-pages'.</p>
+
+      <p><code>$ git checkout gh-pages</code></p>
+
+      <p>Now tell Git what branch you want to merge <em>in</em> — in this case,
+        your feature branch that begins with "add-".</p>
+
+      <p><code>$ git merge &#60;BRANCHNAME&#62;</code></p>
+
+      <p>Tidy up by deleting your feature branch now that it has been merged.</p>
+      <p><code>$ git branch -d &#60;BRANCHNAME&#62;</code></p>
+
+      <p>You can also delete the branch from your fork on GitHub:</p>
+      <p><code>$ git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
+
+      <h2>Step: Pull from Upstream</h2>
+      <p>And last but not least, if you pull in updates from the original
+        (since it now shows you on the home page) you'll be up to date
+        and have a version too, live at: yourusername.github.io/patchwork.</p>
+
+      <p>To pull from the original upstream:</p>
+
+      <p><code>$ git pull upstream gh-pages</code></p>
+
+      <h2>Congratulations!</h2>
+      <p>You've created local repositories, remote repositories, worked with
+        a collaborator, pushed, pulled and joined the millions of others
+        developing and enriching open source!</p>
+      <p>Visit <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> to see your name incorporated!</p>
+
+      <div class="verify">
+        <h3>Verify with </h3> <code>git-it verify</code><br>
+        <h3>Go to the next challenge </h3> <code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>Tips</h2>
+        <ul>
+          <li><strong>Merge a branch into current branch</strong></li>
+          <code>$ git merge &#60;BRANCHNAME&#62;</code>
+          <li><strong>Change the branch you're working on</strong></li>
+          <code>$ git checkout &#60;BRANCHNAME&#62;</code>
+          <li><strong>Delete a local branch</strong></li>
+          <code>$ git branch -d &#60;BRANCHNAME&#62;</code>
+          <li><strong>Delete a remote branch</strong></li>
+          <code>$ git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
+          <li><strong>Pull from a remote branch</strong></li>
+          <code>$ git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+        </ul>
+      </div>
+
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="requesting_you_pull_please.html" class="u-inline-block all-caps">requesting you pull please
+    <div>⤶ </div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="../index.html" class="u-inlineBlock all-caps">Done!
+    <div>⤷</div>
+    </a>
+  </div>
+</div>
+<footer>
+  <ul>
+    <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../about.html">About</a></li>
+    <li class="all-caps"><a href="../dictionary.html">Dictionary</a></li>
+    <li class="all-caps"><a href="../resources.html">Resources</a></li>
+    <li class="all-caps">
+      <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
+    </li>
+  </ul>
+</footer>
+
+      </div>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-52690821-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

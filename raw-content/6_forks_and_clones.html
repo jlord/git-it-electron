@@ -1,0 +1,72 @@
+     <div class="challenge">
+        <h2>The Challenge:</h2>
+        <p>Fork a project from GitHub.com and clone it locally.</p>
+      </div>
+
+      <h2>Forks</h2>
+
+      <p>Now you've made a project locally and pushed it to GitHub, but that's
+        only half the fun. The other half is working with other people and
+        projects.</p>
+
+      <p>When you <strong>fork</strong> a repository, you're creating a copy of it on
+        your GitHub account. Your fork begins its life as a <strong>remote</strong> repository. Forks are used for creating your own
+        version of a project or contributing back fixes or features to the
+        original project. </p>
+
+      <p>Once a project is forked, you then <strong>clone</strong> (aka copy) it from
+        GitHub to your computer to work on locally.</p>
+
+      <img src="../assets/imgs/clone.png" width="600">
+
+      <h2>Step: Fork Patchwork Repository</h2>
+      <p>The project we'll work with is <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>. Go to that site and click the fork button at the top right. Once the
+        fork animation is complete, you've got a copy on your account. Copy
+        your fork's HTTP URL on the right sidebar.</p>
+
+      <h2>Step: Clone Fork Locally</h2>
+      <p>Now, in terminal, clone the repository onto your computer. It will create a new folder
+        for the repository so no need to create one. But make sure you aren't
+        cloning it inside of another Git repository folder! So, if you're still
+        inside of the 'hello-world' repository you worked in on the earlier challenges,
+        back out of that folder. You can leave the folder you're in (and be in the folder that it was inside of) by 'changing directory' with two dots:
+
+      <p><code>$ cd ..</code></p>
+
+      Now clone:
+
+      <p><code>$ git clone &#60;URLFROMGITHUB&#62;</code></p>
+
+      <p>Go into the folder for the fork it created (in this case, named 'patchwork')</p>
+      <p><code>$ cd patchwork</code></p>
+
+      <p>Now you've got a copy of the repository on your computer and it is
+        automatically connected to the remote repository (your forked copy)
+        on your GitHub account.</p>
+
+      <h2>Step: Connect to the Original Repository</h2>
+
+      <p>But what if the original repository you forked from changes? You'll want
+        to be able to <strong>pull</strong> in those changes too. So let's add another remote
+        connection, this time to the original, <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>, repository
+        with its URL, found on the right hand side of the original on GitHub.</p>
+
+      <p>You can name this remote connection anything you want, but often
+        people use 'upstream', let's use that for this.</p>
+
+      <p><code>$ git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+
+      <div class="verify">
+        <h3>Verify with </h3> <code>git-it verify </code><br>
+        <h3>Go to the next challenge </h3> <code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>Tips</h2>
+        <ul>
+          <li><strong>Add remote connections</strong></li>
+          <li><code>$ git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
+          <li><strong>View remote connections</strong></li>
+          <li><code>$ git remote -v</code></li>
+        </ul>
+      </div>

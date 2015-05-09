@@ -1,0 +1,42 @@
+      <div class="challenge">
+        <h2>The Challenge:</h2>
+        <p>Keep your file up to date by pulling in changes from collaborators.</p>
+      </div>
+
+      <h2>Pulling from a Remote</h2>
+      <p>If you're working on something with someone you need to stay up
+        to date with the latest state. So you'll want to <strong>pull</strong> in any
+        changes that may have been made.</p>
+
+      <img src="../assets/imgs/pull.png" width="600">
+
+      <h2>Step: What has Reporobot been up to?</h2>
+      <p>See if Reporobot has made any changes to your 'add-' branch by pulling
+        in from the remote named 'origin' on GitHub:</p>
+
+      <p><code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code></p>
+
+      <p>If nothing's changed, it will tell you 'Already up-to-date'.
+        If there are changes, it will merge those changes into your local
+        version.</p>
+
+      <p>Did Reporobot make changes? Git tells you where changes were made.
+        You can open that file and see Reporobot's updates. Surprise,
+        Reporobot is an artist!</p>
+
+      <div class="verify">
+        <h3>Verify with </h3> <code>git-it verify </code><br>
+        <h3>Go to the next challenge </h3> <code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>TIPS</h2>
+          <ul>
+          <li><strong>Check Git status</strong></li>
+          <code>$ git status</code>
+          <li><strong>Pull in changes from a remote branch</strong></li>
+          <code>$ git pull &lt;REMOTENAME&gt; &lt;REMOTEBRANCH&gt;</code>
+          <li><strong>See changes to the remote before you pull in</strong></li>
+          <code>$ git fetch --dry-run</code>
+        </ul>
+      </div>

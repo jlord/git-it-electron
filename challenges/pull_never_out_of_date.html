@@ -1,0 +1,124 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Git-it Guide</title>
+        <meta name="description" content="learn git and github">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      <!--[if lt IE 8]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+        <header class="site-header">
+  <div class="nav u-posFixed">
+    <div class="wrap-width u-textCenter">
+      <a href="its_a_small_world.html"
+        <span class="u-floatLeft hand">☜</span>
+      </a>
+      <a class="filledblock" href="../index.html">Git-it</a>
+      <a href="requesting_you_pull_please.html"
+        <span class="u-floatRight hand">☞</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <div class="u-floatLeft">
+      <span class="all-caps">CHALLENGE</span>
+      <h2 class="challenge-name">pull never out of date</h2>
+    </div>
+    <div class="u-floatRight u-textRight">
+      <span class="all-caps">NUMBER</span>
+      <h2 class="challenge-name">9 / 11</h2>
+    </div>
+  </div>
+</header>
+      <div class="wrapper">
+
+              <div class="challenge">
+        <h2>The Challenge:</h2>
+        <p>Keep your file up to date by pulling in changes from collaborators.</p>
+      </div>
+
+      <h2>Pulling from a Remote</h2>
+      <p>If you're working on something with someone you need to stay up
+        to date with the latest state. So you'll want to <strong>pull</strong> in any
+        changes that may have been made.</p>
+
+      <img src="../assets/imgs/pull.png" width="600">
+
+      <h2>Step: What has Reporobot been up to?</h2>
+      <p>See if Reporobot has made any changes to your 'add-' branch by pulling
+        in from the remote named 'origin' on GitHub:</p>
+
+      <p><code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code></p>
+
+      <p>If nothing's changed, it will tell you 'Already up-to-date'.
+        If there are changes, it will merge those changes into your local
+        version.</p>
+
+      <p>Did Reporobot make changes? Git tells you where changes were made.
+        You can open that file and see Reporobot's updates. Surprise,
+        Reporobot is an artist!</p>
+
+      <div class="verify">
+        <h3>Verify with </h3> <code>git-it verify </code><br>
+        <h3>Go to the next challenge </h3> <code>git-it</code>
+      </div>
+
+      <div id="git-tips">
+        <h2>TIPS</h2>
+          <ul>
+          <li><strong>Check Git status</strong></li>
+          <code>$ git status</code>
+          <li><strong>Pull in changes from a remote branch</strong></li>
+          <code>$ git pull &lt;REMOTENAME&gt; &lt;REMOTEBRANCH&gt;</code>
+          <li><strong>See changes to the remote before you pull in</strong></li>
+          <code>$ git fetch --dry-run</code>
+        </ul>
+      </div>
+
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="its_a_small_world.html" class="u-inline-block all-caps">it&#x27;s a small world
+    <div>⤶ </div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="requesting_you_pull_please.html" class="u-inlineBlock all-caps">requesting you pull please
+    <div>⤷</div>
+    </a>
+  </div>
+</div>
+<footer>
+  <ul>
+    <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../about.html">About</a></li>
+    <li class="all-caps"><a href="../dictionary.html">Dictionary</a></li>
+    <li class="all-caps"><a href="../resources.html">Resources</a></li>
+    <li class="all-caps">
+      <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
+    </li>
+  </ul>
+</footer>
+
+      </div>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-52690821-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

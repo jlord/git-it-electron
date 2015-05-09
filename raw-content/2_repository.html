@@ -1,0 +1,62 @@
+    <div class="challenge">
+      <h2>The Challenge:</h2>
+      <p>Create a new repository on your computer.</p>
+    </div>
+
+    <h2>Repositories</h2>
+
+    <p>A <strong>repository</strong> is essentially a project. You can imagine it
+      as a project's folder with all the related files inside of it. In
+      fact, that's what it will look like on your computer anyways.</p>
+
+    <img src="../assets/imgs/repos.png" width="600">
+
+    <p>You tell Git what your project is and Git will start tracking all
+      of the changes to that folder. Files added or subtracted or even
+      a single letter in a single file changed -- all of it's tracked and
+      time stamped by Git. That's <strong>version control</strong>.</p>
+
+    <h2>Using Terminal</h2>
+    <p><strong>Terminal</strong> (or Bash) is a way of using your computer by just typing commands. You can rename files, open files, create new folders, and move between directories (folders) all by typing out commands. You can even run a text editor (such as <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) in your terminal and never have to leave!</p>
+
+    <p>Besides navigating your computer, you can also use programs in Terminal that have a <strong>command-line interface (CLI)</strong>, meaning they can be run with commands in terminal. Git-it is one, you're using terminal to use it! Git is another. You can access and control Git through commands in terminal, as you'll be doing very soon!</p>
+
+    <p>In Git-it you'll learn a few basic command line actions which will be described within the steps.</p>
+
+    <h2>Step: Create a Repository</h2>
+    <p>You're going to create a new folder and initialize it as a Git
+      repository.</p>
+
+    <p>To make things easier, name your folder what you'd name the project. How about 'hello-world'.</p>
+
+    <p>You can type these commands one at a time into your terminal window.</p>
+
+    <p>To make a new folder:</p>
+    <code>$ mkdir hello-world</code>
+
+    <p>To go into that folder:</p>
+    <code>$ cd hello-world</code>
+
+    <p>To create a new Git instance for a project:</p>
+    <code>$ git init</code>
+
+    <p>That's it! It will just return you to a new line. If you want to be double-sure that it's a Git repository, type <code>git status</code> and if it doesn't return 'fatal: Not a git repository...', you're golden!</p>
+
+    <div class="verify">
+      <h3>Verify with </h3> <code>git-it verify </code><br>
+      <h3>Go to the next challenge </h3> <code>git-it</code>
+    </div>
+
+    <div id="git-tips">
+      <h2>Tips</h2>
+      <ul>
+        <li><strong>Make a new folder (aka directory)</strong></li>
+        <code>$ mkdir &#60;FOLDERNAME&#62;</code>
+        <li><strong>Navigate into an existing folder (aka change directory)</strong></li>
+        <code>$ cd &#60;FOLDERNAME&#62;</code>
+        <li><strong>List the items in a folder</strong></li>
+        <code>$ ls </code>
+        <li><strong>Turn Git on for a folder</strong></li>
+        <code>$ git init</code>
+      </ul>
+    </div>
