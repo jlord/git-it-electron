@@ -8,8 +8,8 @@ module.exports = function menu (mainWindow) {
           accelerator: 'Ctrl+O'
         },
         {
-          label: '&Close',
-          accelerator: 'Ctrl+W',
+          label: '&Quit',
+          accelerator: 'Ctrl+Q',
           click: function () { mainWindow.close() }
         }
       ]
@@ -29,7 +29,7 @@ module.exports = function menu (mainWindow) {
         },
         {
           label: 'Toggle &Developer Tools',
-          accelerator: 'Alt+Ctrl+I',
+          accelerator: 'Ctrl+Shift+I',
           click: function () { mainWindow.toggleDevTools() }
         }
       ]
