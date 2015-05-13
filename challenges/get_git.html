@@ -27,7 +27,7 @@
       </a>
     </div>
   </div>
-  
+
   <div class="wrapper">
     <div class="u-floatLeft">
       <span class="all-caps">CHALLENGE</span>
@@ -39,9 +39,9 @@
     </div>
   </div>
 </header>
-      <div class="wrapper">
+      <div class="wrapper" id="challenge-body">
 
-                    <div class="challenge">
+                    <div class="challenge" id="challenge-desc">
         <h2>The Challenge:</h2>
         <p>Install Git on your computer and configure your name and email.</p>
       </div>
@@ -95,8 +95,15 @@
       <p><code>$ git config --global user.email "&#60;youremail@example.com&#62;"</code></p>
 
       <div class="verify">
-        <h3>Verify with </h3> <code>git-it verify </code><br>
-        <h3>Go to the next challenge </h3> <code>git-it</code>
+        <button id='verify-challenge'>VERIFY</button>
+        <h5>Results:</h5>
+        <ul id="verify-list">
+        </ul>
+        <!-- <ul class="verify-list">
+          <li class="verify-fail">Email Added!</li>
+          <li class="verify-pass">Name Added!</li>
+          <li class="verify-pass">Found Git installed.</li>
+        </ul> -->
       </div>
 
       <div id="git-tips">
@@ -105,7 +112,6 @@
       to signify that the line is <strong>command line</strong> code (see the code snippets above). You don't actually
       type the <code>$</code> in though, only type what comes after. For instance, to run the verify command above, you're actually going to type <code>git-it verify</code> into terminal.</p>
       </div>
-
 
         <div class="prenext">
   <div class="u-floatLeft">
@@ -131,16 +137,112 @@
   </ul>
 </footer>
 
-      </div>
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  </div>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-52690821-1', 'auto');
-        ga('send', 'pageview');
+    ga('create', 'UA-52690821-1', 'auto');
+    ga('send', 'pageview');
 
-      </script>
-    </body>
+  </script>
+
+  <script>
+  var exec = require('child_process').exec
+  var fs = require('fs')
+
+  var userData = require('../data.json')
+
+  var currentChallenge = 'get_git'
+
+  var verifyButton = document.getElementById("verify-challenge")
+  var ul = document.getElementById('verify-list')
+
+  console.log("dir", __dirname)
+
+  verifyButton.addEventListener('click', function clicked (event) {
+    ul.innerHTML = ''
+
+    var total = 3
+    var counter = 0
+
+    exec('git config user.email', function(err, stdout, stderr) {
+      var email = stdout.trim()
+      if (email === "") {
+        addToList("No email found.", false)
+        console.error("No email found.")
+      }
+      else {
+        counter++
+        addToList("Email Added", true)
+        console.log("Email Added!")
+        exec('git config user.name', function(err, stdout, stderr) {
+          var name = stdout.trim()
+          if (name === "") {
+            addToList("No name found.", false)
+            console.error("No name found.")
+          }
+          else {
+            counter++
+            addToList("Name Added!", true)
+            console.log("Name Added!")
+            exec('git --version', function(err, stdout, stdrr) {
+              var gitOutput = stdout.trim()
+
+              if (gitOutput.match("git version")) {
+                counter++
+                addToList("Found Git installed.", true)
+                console.log("Found Git installed.")
+              }
+              else {
+                addToList("Found no Git installed.", false)
+                console.log("Found no Git installed.")
+              }
+
+              if (counter === total) {
+                markChallengeCompleted()
+                writeData()
+                // if they pass all, write to userData
+              }
+
+            })
+          }
+        })
+      }
+    })
+  })
+
+  function addToList (message, status) {
+    var li = document.createElement("li")
+    var newContent = document.createTextNode(message)
+    li.appendChild(newContent)
+    if (status) {
+      li.classList.add("verify-pass")
+    } else li.classList.add("verify-fail")
+    ul.appendChild(li)
+    // potentially do this with domify and push
+    // into an array and write once
+  }
+
+  function markChallengeCompleted () {
+    var challengeBody = document.getElementById("challenge-body")
+    var challengeDesc = document.getElementById("challenge-desc")
+    var div = document.createElement("h2")
+    var newContent = document.createTextNode("COMPLETED!")
+    div.appendChild(newContent)
+    div.classList.add("completed-challenge")
+    challengeBody.insertBefore(div, challengeDesc)
+  }
+
+  function writeData () {
+    console.log("Data", userData)
+    userData.get_git.completed = true
+    console.log("Current", userData.get_git)
+    fs.writeFileSync('./data.json', JSON.stringify(userData, null, 2))
+  }
+
+  </script>
+  </body>
 </html>
