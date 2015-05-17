@@ -263,3 +263,22 @@ n, v, adj {
 .u-inlineBlock {
   display: inline-block;
 }
+
+.verify-fail:before {
+  content: '😞 ';
+}
+
+.verify-pass:before {
+  content: '😀 ';
+}
+
+
+#verify-list {
+  list-style: none;
+  left-indent: none;
+  padding-left: 0;
+}
+
+.completed-challenge {
+  
+}
