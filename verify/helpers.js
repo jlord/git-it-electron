@@ -21,11 +21,12 @@ var markChallengeCompleted = function () {
   var newContent = document.createTextNode('COMPLETED!')
   div.appendChild(newContent)
   div.classList.add('completed-challenge')
+  // Add ID and make it so that it isn't added over and over to DOM
   challengeBody.insertBefore(div, challengeDesc)
 }
 
 var writeData = function (userData, challenge) {
-  userData.get_git.completed = true
+  userData[challenge].completed = true
   fs.writeFileSync('./data.json', JSON.stringify(userData, null, 2))
 }
 

@@ -2,5 +2,9 @@
   "get_git": {
     "completed": true,
     "current_challenge": true
+  },
+  "repository": {
+    "completed": true,
+    "current_challenge": false
   }
 }
