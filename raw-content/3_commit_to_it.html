@@ -42,18 +42,50 @@
         <h3>Go to the next challenge </h3> <code>git-it</code>
       </div>
 
-      <div id="git-tips">
-        <h2>Tips</h2>
-        <ul>
-          <li><strong>Check status of changes to a repository</strong></li>
-          <li><code>$ git status</code></li>
-          <li><strong>View changes to files</strong></li>
-          <li><code>$ git diff</code></li>
-          <li><strong>Add a file's changes to be committed</strong></li>
-          <li><code>$ git add &#60;FILENAME&#62;</code></li>
-          <li><strong>To add all files changes</strong></li>
-          <li><code>$ git add .</code></li>
-          <li><strong>To commit (aka save) the changes you've added with a short message describing the changes</strong></li>
-          <li><code>$ git commit -m "&#60;your commit message&#62;"</code></li>
-        <ul>
-      </div>
+<div id="git-tips">
+  <h2>Tips</h2>
+  <ul>
+    <li><strong>Check status of changes to a repository</strong></li>
+    <li><code>$ git status</code></li>
+    <li><strong>View changes to files</strong></li>
+    <li><code>$ git diff</code></li>
+    <li><strong>Add a file's changes to be committed</strong></li>
+    <li><code>$ git add &#60;FILENAME&#62;</code></li>
+    <li><strong>To add all files changes</strong></li>
+    <li><code>$ git add .</code></li>
+    <li><strong>To commit (aka save) the changes you've added with a short message describing the changes</strong></li>
+    <li><code>$ git commit -m "&#60;your commit message&#62;"</code></li>
+  <ul>
+</div>
+
+<script>
+  var ipc = require('ipc')
+
+  var verifyChallenge = require('../verify/commit_to_it.js')
+
+  var directoryPath = ''
+
+  var verifyButton = document.getElementById('verify-challenge')
+  var directoryButton = document.getElementById('select-directory')
+  var ul = document.getElementById('verify-list')
+
+  directoryButton.addEventListener('click', function clickedDir (event) {
+    ipc.send('open-file-dialog')
+  })
+
+  ipc.on('selected-directory', function(path) {
+    // TODO style and trim this
+    directoryPath = path
+    document.getElementById('directory-path').innerHTML = path
+  })
+
+  verifyButton.addEventListener('click', function clicked (event) {
+    if (directoryPath === '') {
+      var message = 'Please select your repository directory, then verify.'
+      document.getElementById('directory-path').innerHTML = message
+    } else {
+      ul.innerHTML = ''
+      verifyChallenge(directoryPath[0])
+    }
+  })
+</script>
