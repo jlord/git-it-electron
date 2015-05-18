@@ -23,10 +23,10 @@ app.on('ready', function appReady () {
   mainWindow = new BrowserWindow({width: 800, height: 600})
   mainWindow.loadUrl('file://' + __dirname + '/index.html')
 
-  ipc.on('open-file-dialog', function (event, arg) {
+  ipc.on('open-file-dialog', function () {
    var files = dialog.showOpenDialog({ properties: [ 'openFile', 'openDirectory' ]})
    if (files) event.sender.send('selected-directory', files)
- })
+   })
 
   if (process.platform === 'darwin') {
     menu = Menu.buildFromTemplate(darwinTemplate(app, mainWindow))
