@@ -6,5 +6,9 @@
   "repository": {
     "completed": true,
     "current_challenge": false
+  },
+  "commit_to_it": {
+    "completed": true,
+    "current_challenge": false
   }
 }
