@@ -1,5 +1,51 @@
-module.exports = function menu (app, mainWindow) {
-  var darwinMenu = [
+var Main = module.parent.exports
+module.exports = {
+  other: [
+    {
+      label: '&File',
+      submenu: [
+        {
+          label: '&Open',
+          accelerator: 'Ctrl+O'
+        },
+        {
+          label: '&Quit',
+          accelerator: 'Ctrl+Q',
+          click: function () { Main.browserWindow.close() }
+        }
+      ]
+    },
+    {
+      label: '&View',
+      submenu: [
+        {
+          label: '&Reload',
+          accelerator: 'Ctrl+R',
+          click: function () { Main.browserWindow.restart() }
+        },
+        {
+          label: 'Toggle &Full Screen',
+          accelerator: 'F11',
+          click: function () { Main.browserWindow.setFullScreen(!Main.browserWindow.isFullScreen()) }
+        },
+        {
+          label: 'Toggle &Developer Tools',
+          accelerator: 'Ctrl+Shift+I',
+          click: function () { Main.browserWindow.toggleDevTools() }
+        }
+      ]
+    },
+    {
+      label: 'Help',
+      submenu: [
+        {
+          label: 'Repository',
+          click: function () { require('shell').openExternal('http://github.com/jlord/git-it-electron') }
+        }
+      ]
+    }
+  ],
+  darwin: [
     {
       label: 'Git-it',
       submenu: [
@@ -37,7 +83,7 @@ module.exports = function menu (app, mainWindow) {
         {
           label: 'Quit',
           accelerator: 'Command+Q',
-          click: function () { app.quit() }
+          click: function () { Main.app.quit() }
         }
       ]
     },
@@ -85,17 +131,17 @@ module.exports = function menu (app, mainWindow) {
         {
           label: 'Reload',
           accelerator: 'Command+R',
-          click: function () { mainWindow.restart() }
+          click: function () { Main.browserWindow.restart() }
         },
         {
           label: 'Toggle Full Screen',
           accelerator: 'Ctrl+Command+F',
-          click: function () { mainWindow.setFullScreen(!mainWindow.isFullScreen()) }
+          click: function () { Main.browserWindow.setFullScreen(!Main.browserWindow.isFullScreen()) }
         },
         {
           label: 'Toggle Developer Tools',
           accelerator: 'Alt+Command+I',
-          click: function () { mainWindow.toggleDevTools() }
+          click: function () { Main.browserWindow.toggleDevTools() }
         }
       ]
     },
@@ -131,5 +177,4 @@ module.exports = function menu (app, mainWindow) {
       ]
     }
   ]
-  return darwinMenu
 }

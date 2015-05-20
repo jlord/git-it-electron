@@ -1,42 +1,44 @@
-var app = require('app')
-var BrowserWindow = require('browser-window')
-var crashReporter = require('crash-reporter')
-var Menu = require('menu')
-var ipc = require('ipc')
-var dialog = require('dialog')
+"use strict"; // Required to use classes in v8
+var
+  path = require('path'),
+  app = require('app'),
+  BrowserWindow = require('browser-window'),
+  Menu = require('menu'),
+  appMenu = require('./menu')
 
-var darwinTemplate = require('./darwin-menu.js')
-var otherTemplate = require('./other-menu.js')
+require('crash-reporter').start()
 
-var mainWindow = null
-var menu = null
+class Main{
+  static init(){
+    process.name = 'git-it-electron' // Useful for programs like `ps`
+    app.setName('git-it-electron')
+    app.on('window-all-closed', Main.windowsClosed)
+    app.setPath('userData', path.join(app.getPath('appData'), app.getName()))
+    app.setPath('userCache', path.join(app.getPath('cache'), app.getName()))
 
-crashReporter.start()
-
-app.on('window-all-closed', function appQuit () {
-  if (process.platform !== 'darwin') {
-    app.quit()
+    Main.browserWindow = null
+    Main.app = app
   }
-})
-
-app.on('ready', function appReady () {
-  mainWindow = new BrowserWindow({width: 800, height: 600})
-  mainWindow.loadUrl('file://' + __dirname + '/index.html')
-
-  ipc.on('open-file-dialog', function () {
-   var files = dialog.showOpenDialog({ properties: [ 'openFile', 'openDirectory' ]})
-   if (files) event.sender.send('selected-directory', files)
-   })
-
-  if (process.platform === 'darwin') {
-    menu = Menu.buildFromTemplate(darwinTemplate(app, mainWindow))
-    Menu.setApplicationMenu(menu)
-  } else {
-    menu = Menu.buildFromTemplate(otherTemplate(mainWindow))
-    mainWindow.setMenu(menu)
+  static onReady(){
+    Main.browserWindow = new BrowserWindow({width: 800, height: 600})
+    Main.browserWindow.loadUrl('file://' + __dirname + '/index.html')
+    if(process.platform === 'darwin'){
+      Menu.setApplicationMenu(Menu.buildFromTemplate(appMenu.darwin))
+    } else {
+      Main.browserWindow.setMenu(Menu.buildFromTemplate(appMenu.other))
+    }
+    Main.browserWindow.on('closed', function(){
+      Main.browserWindow = null
+    })
   }
+  static windowsClosed(){
+    if (process.platform !== 'darwin') {
+      app.quit()
+    }
+  }
+}
 
-  mainWindow.on('closed', function winClosed () {
-    mainWindow = null
-  })
-})
+Main.init()
+app.on('ready', Main.onReady)
+
+module.exports = app.gitIt = Main // Creating a reference here so we can use it in other modules and on the renderer side too, in case we want
