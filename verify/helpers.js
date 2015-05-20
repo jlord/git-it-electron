@@ -1,3 +1,4 @@
+"use strict";
 var ul = document.getElementById('verify-list')
 let exec = require('child_process').exec
 class Helpers{
