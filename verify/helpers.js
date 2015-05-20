@@ -2,9 +2,9 @@
 var ul = document.getElementById('verify-list')
 let exec = require('child_process').exec
 class Helpers{
-  static execute(Command){
+  static execute(Command, Arguments){
     return new Promise(function(Resolve, Reject){
-      exec(Command, function(err, stdout, stderr){
+      exec(Command, Arguments, function(err, stdout, stderr){
         if(err) Reject(err)
         else Resolve({stdout: stdout, stderr: stderr}) // O YEE DESTRUCTING WHY U NO IMPLEMENT?! https://code.google.com/p/v8/issues/detail?id=811
       })
