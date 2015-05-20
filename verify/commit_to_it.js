@@ -1,27 +1,20 @@
-var exec = require('child_process').exec
-var fs = require('fs')
+"use strict";
 
-var helper = require('../verify/helpers.js')
-var userData = require('../data.json')
+var helpers = require('./helpers.js')
 
-var addtoList = helper.addtoList
-var markChallengeCompleted = helper.markChallengeCompleted
-var writeData = helper.writeData
-
-var currentChallenge = 'commit_to_it'
-
-// check that they've commited changes
-
-module.exports = function commitVerify (path) {
-  exec('git status', {cwd: path}, function (err, stdout, stdrr) {
-    if (err) return addtoList(err.message, false)
-    var show = stdout.trim()
-
-    if (show.match("nothing to commit")) {
-      addtoList("Changes have been committed!", true)
+module.exports = function commitVerify(Path){
+  helpers.execute('git status', {cwd: Path}).then(function(Output){
+    Output = Output.stdout.trim();
+    if(Output.match("nothing to commit")){
+      helpers.addToList("Changes have been committed!", true)
+    } else if(Output.match("Changes not staged for commit")){
+      return Promise.reject("Seems there are still change to commit.")
+    } else {
+      return Promise.reject("Hmm, can't find committed changes.")
     }
-    else if (show.match("Changes not staged for commit")){
-      addtoList("Seems there are still change to commit.", false)
-    } else addtoList("Hmm, can't find committed changes.", false)
+  }).then(function() {
+    Progress.commit_to_it = true
+  }).catch(function(Error){
+    helpers.addToList(Error, false)
   })
 }
