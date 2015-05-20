@@ -5,7 +5,7 @@ class Helpers{
   static execute(Command, Arguments){
     return new Promise(function(Resolve, Reject){
       exec(Command, Arguments, function(err, stdout, stderr){
-        if(err) Reject(err)
+        if(err && !(stderr && stderr.trim().length)) Reject(err)
         else Resolve({stdout: stdout, stderr: stderr}) // O YEE DESTRUCTING WHY U NO IMPLEMENT?! https://code.google.com/p/v8/issues/detail?id=811
       })
     })
