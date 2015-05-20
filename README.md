@@ -4,7 +4,7 @@
 
 The original [Git-it](http://github.com/jlord/git-it) is nearly 1.5 years of age and it's been awesome.
 
-![](http://i.imgur.com/vwNgtlW.png)
+![Git-it Guide](http://i.imgur.com/vwNgtlW.png)
 
 #### Over 2,778 people have completed Git-it!
 
