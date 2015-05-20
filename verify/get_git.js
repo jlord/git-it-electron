@@ -6,11 +6,15 @@ module.exports = function verifyGetGitChallenge(){
     if (Output.stdout.trim() === '') {
       return Promise.reject('No email found')
     }
-  }).then(helpers.execute('git config user.name')).then(function(Output){
+  }).then(function(){
+    return helpers.execute('git config user.name')
+  }).then(function(Output){
     if (Output.stdout.trim() === '') {
       return Promise.reject("No name found")
     }
-  }).then(helpers.execute('git --version')).then(function(Output){
+  }).then(function(){
+    return helpers.execute('git --version')
+  }).then(function(Output){
     if(!Output.stdout.trim().match('git version')){
       return Promise.reject("Found no Git installed.")
     }
