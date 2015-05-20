@@ -106,6 +106,7 @@
 </div>
 
 <script>
+  "use strict";
   var ipc = require('ipc')
 
   var verifyChallenge = require('../verify/repository.js')
@@ -116,23 +117,22 @@
   var directoryButton = document.getElementById('select-directory')
   var ul = document.getElementById('verify-list')
 
-  directoryButton.addEventListener('click', function clickedDir (event) {
-    ipc.send('open-file-dialog')
-  })
-
-  ipc.on('selected-directory', function(path) {
-    // TODO style and trim this
-    directoryPath = path
-    document.getElementById('directory-path').innerHTML = path
+  directoryButton.addEventListener('click', function clickedDir () {
+    let Dir = MainInst.Dialog.showOpenDialog({properties: ['openDirectory']})
+    if(Dir.length) {
+      directoryPath = Dir[0]
+      document.getElementById('directory-path').textContent = Dir[0]
+    }
   })
 
   verifyButton.addEventListener('click', function clicked (event) {
     if (directoryPath === '') {
       var message = 'Please select your repository directory, then verify.'
-      document.getElementById('directory-path').innerHTML = message
+      document.getElementById('directory-path').textContent = message
     } else {
+      document.getElementById('directory-path').textContent = ''
       ul.innerHTML = ''
-      verifyChallenge(directoryPath[0])
+      verifyChallenge(directoryPath)
     }
   })
 </script>
