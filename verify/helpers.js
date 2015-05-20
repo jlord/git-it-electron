@@ -9,7 +9,7 @@ class Helpers{
       })
     })
   }
-  static addtoList(message, status) {
+  static addToList(message, status) {
     var li = document.createElement('li')
     var newContent = document.createTextNode(message)
     li.appendChild(newContent)
