@@ -3,8 +3,7 @@ var
   path = require('path'),
   app = require('app'),
   BrowserWindow = require('browser-window'),
-  Menu = require('menu'),
-  appMenu = require('./menu')
+  Menu = require('menu');
 
 require('crash-reporter').start()
 
@@ -20,6 +19,8 @@ class Main{
     Main.app = app
   }
   static onReady(){
+    let appMenu = require('./menu')
+
     Main.browserWindow = new BrowserWindow({width: 800, height: 600})
     Main.browserWindow.loadUrl('file://' + __dirname + '/index.html')
     if(process.platform === 'darwin'){
