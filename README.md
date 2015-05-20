@@ -4,6 +4,8 @@
 
 The original [Git-it](http://github.com/jlord/git-it) is nearly 1.5 years of age and it's been awesome.
 
+![Git-it Guide](http://i.imgur.com/vwNgtlW.png)
+
 #### Over 2,778 people have completed Git-it!
 
 One of the improvements I've longed to make was to make a better get-git-it-ing experience. Currently users need to install [Git](http://git-scm.com) and [Node.js](http://nodejs.org) before they can start. Installing Git is fine, that's what you're there to learn but installing Node.js, while it isn't hard, is a bit outside the scope for people who are often entirely new to programming, version control and terminal.
