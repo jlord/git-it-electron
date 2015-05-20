@@ -25,11 +25,5 @@ var markChallengeCompleted = function () {
   challengeBody.insertBefore(div, challengeDesc)
 }
 
-var writeData = function (userData, challenge) {
-  userData[challenge].completed = true
-  fs.writeFileSync('./data.json', JSON.stringify(userData, null, 2))
-}
-
-module.exports.writeData = writeData
 module.exports.markChallengeCompleted = markChallengeCompleted
 module.exports.addtoList = addtoList
