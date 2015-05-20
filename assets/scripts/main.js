@@ -18,6 +18,13 @@ class Main{
     })
   }
 }
+/**
+ * @var Progress
+ * This class Provides us an API to be used in challenges, it uses some getters and setters to wrap localStorage
+ * Progress.active will always point to the first non-completed challenge
+ * Progress.get_git or similar will return booleans
+ * You can update the progress by setting Progress.git_git = true and then calling Progress.active again
+ */
 class Progress {
   constructor(){
     let Me = this
