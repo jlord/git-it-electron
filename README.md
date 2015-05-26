@@ -1,3 +1,7 @@
+_**Issue or Pull Request?** FYI: This project is a **work in progress** and doesn't work right now. If you'd like to contribute with an Issue or Pull Request (yay!), see the [Contributing Doc](/CONTRIBUTING.md)._
+
+---
+
 # git-it-electron
 
 ### A Git-it Desktop App!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
