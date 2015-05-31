@@ -10,5 +10,9 @@
   "commit_to_it": {
     "completed": true,
     "current_challenge": false
+  },
+  "githubbin": {
+    "completed": true,
+    "current_challenge": false
   }
 }
