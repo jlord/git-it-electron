@@ -17,11 +17,12 @@ module.exports = function commitVerify (path) {
     if (err) return addtoList(err.message, false)
     var show = stdout.trim()
 
-    if (show.match("nothing to commit")) {
+    if (show.match("Initial commit")) {
+      addtoList("Hmm, can't find\ncommitted changes.", false)
+    } else if (show.match("nothing to commit")) {
       addtoList("Changes have been committed!", true)
+    } else {
+      addtoList("Seems there are changes\nto commit still.", false)
     }
-    else if (show.match("Changes not staged for commit")){
-      addtoList("Seems there are still change to commit.", false)
-    } else addtoList("Hmm, can't find committed changes.", false)
   })
 }
