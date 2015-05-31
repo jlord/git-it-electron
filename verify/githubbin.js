@@ -20,7 +20,7 @@ var counter = 0
 // verify that user exists on GitHub (not case sensitve)
 // compare the two to make sure cases match
 
-module.exports = function verifyGetGitChallenge () {
+module.exports = function verifyGitHubbinChallenge () {
 
   exec('git config user.username', function (err, stdout, stderr) {
     if (err) return console.log(err)
