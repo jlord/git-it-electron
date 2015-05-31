@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var exec = require('child_process').exec
+var fs = require('fs')
 
 var helper = require('../verify/helpers.js')
 var userData = require('../data.json')
@@ -13,8 +14,9 @@ var currentChallenge = 'remote_control'
 
 // check that they've made a push
 
-module.exports = function verifyRemoteControlChallenge () {
-  exec('git reflog show origin/master', function (err, stdout, stderr) {
+module.exports = function verifyRemoteControlChallenge (path) {
+  if (!fs.lstatSync(path).isDirectory()) return addtoList('Path is not a directory', false)
+  exec('git reflog show origin/master', {cwd: path}, function (err, stdout, stderr) {
     if (err) return addtoList('Error: ' + err.message, false)
     var ref = stdout.trim()
 
