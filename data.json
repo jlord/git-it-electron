@@ -14,5 +14,9 @@
   "githubbin": {
     "completed": true,
     "current_challenge": false
+  },
+  "remote_control": {
+    "completed": true,
+    "current_challenge": false
   }
 }
