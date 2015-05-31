@@ -18,5 +18,9 @@
   "remote_control": {
     "completed": true,
     "current_challenge": false
+  },
+  "forks_and_clones": {
+    "completed": true,
+    "current_challenge": false
   }
 }
