@@ -10,7 +10,7 @@ var addtoList = helper.addtoList
 var markChallengeCompleted = helper.markChallengeCompleted
 var writeData = helper.writeData
 
-var currentChallenge = 'commit_to_it'
+var currentChallenge = 'requesting_you_pull_please'
 
 var url = 'http://reporobot.jlord.us/pr?username='
 
