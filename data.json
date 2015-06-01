@@ -38,5 +38,9 @@
   "requesting_you_pull_please": {
     "completed": false,
     "current_challenge": false
+  },
+  "merge_tada": {
+    "completed": true,
+    "current_challenge": false
   }
 }
