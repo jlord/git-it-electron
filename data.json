@@ -34,5 +34,9 @@
   "pull_never_out_of_date": {
     "completed": true,
     "current_challenge": false
+  },
+  "requesting_you_pull_please": {
+    "completed": false,
+    "current_challenge": false
   }
 }
