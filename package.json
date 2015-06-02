@@ -2,6 +2,7 @@
   "name": "git-it-electron",
   "version": "1.0.0",
   "description": "### A Git-it Desktop App!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+  "productName": "Git-it",
   "main": "main.js",
   "scripts": {
     "build": "node buildpages.js",
