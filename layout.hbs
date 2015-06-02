@@ -14,6 +14,8 @@
     {{{header}}}
 
     <div class="wrapper" id="challenge-body">
+      <div id="challenge-completed" style="display:none;">[ Completed ] 😀</div>
+
 
     {{{body}}}
 
@@ -31,6 +33,12 @@
 
       ga('create', 'UA-52690821-1', 'auto');
       ga('send', 'pageview');
+    </script>
+
+    <script>
+      var challegeCompeleted = require('../challenge-completed.js')
+      var currentChallenge = '{{{shortname}}}'
+      challegeCompeleted(currentChallenge)
     </script>
 
   </body>

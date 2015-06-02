@@ -38,6 +38,8 @@
 
 
     <div class="wrapper" id="challenge-body">
+      <div id="challenge-completed" style="display:none;">[ Completed ] 😀</div>
+
 
     <div id="challenge-desc" class="challenge">
   <h2>The Challenge:</h2>
@@ -217,6 +219,12 @@ GitHub Guide: <a href="http://guides.github.com/overviews/flow/" target="_blank"
 
       ga('create', 'UA-52690821-1', 'auto');
       ga('send', 'pageview');
+    </script>
+
+    <script>
+      var challegeCompeleted = require('../challenge-completed.js')
+      var currentChallenge = 'branches_arent_just_for_birds'
+      challegeCompeleted(currentChallenge)
     </script>
 
   </body>

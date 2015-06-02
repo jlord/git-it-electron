@@ -44,11 +44,11 @@ function buildPage(files) {
     if (lang) {
       content.body = translateLocale(content.body, lang)
     }
-    
-    var shortname = makeShortname(file)
+
+    content.shortname = makeShortname(file).replace('.', '')
     var template = Handlebars.compile(layout)
     var final = template(content)
-    fs.writeFileSync(builtContent + shortname + 'html', final)
+    fs.writeFileSync(builtContent + content.shortname + '.html', final)
   })
   // hard coded right now because, reasons
   console.log("Built!")

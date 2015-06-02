@@ -38,6 +38,8 @@
 
 
     <div class="wrapper" id="challenge-body">
+      <div id="challenge-completed" style="display:none;">[ Completed ] 😀</div>
+
 
     <div id="challenge-desc" class="challenge">
   <h2>The Challenge:</h2>
@@ -155,6 +157,12 @@ type the <code>$</code> in though, only type what comes after. For instance, to 
 
       ga('create', 'UA-52690821-1', 'auto');
       ga('send', 'pageview');
+    </script>
+
+    <script>
+      var challegeCompeleted = require('../challenge-completed.js')
+      var currentChallenge = 'get_git'
+      challegeCompeleted(currentChallenge)
     </script>
 
   </body>
