@@ -20,8 +20,13 @@ app.on('window-all-closed', function appQuit () {
 })
 
 app.on('ready', function appReady () {
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({width: 800, height: 900, title: 'Git-it'})
   mainWindow.loadUrl('file://' + __dirname + '/index.html')
+
+  ipc.on('getUserDataPath', function (event) {
+    var userData = app.getPath('userData')
+    event.sender.send('haveUserDataPath', userData)
+  })
 
   ipc.on('open-file-dialog', function (event) {
     var files = dialog.showOpenDialog({ properties: [ 'openFile', 'openDirectory' ]})
