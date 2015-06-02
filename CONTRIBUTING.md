@@ -2,7 +2,7 @@
 
 Thanks for helping out! Though I haven't had time to go into detail about it, I've got a rough idea of how
 this project will work. You may want to open an issue first to clarify what you'd like to do and what my rough
-plan for that bit was. See the [readme](/readme.md) for background on the project.
+plan for that bit was. See the [readme](/README.md) for background on the project.
 
 Here are general bits and bobs for working on this project:
 
