@@ -9,7 +9,7 @@ Here are general bits and bobs for working on this project:
 **Issues**
 
 - Screenshots or gifs so that what you're seeing can be seen :art:.
-- Please include what operating sytem you're using if you've run into a problem.
+- Please include what operating system you're using if you've run into a problem.
 - Specifying what version of Node and npm you have wouldn't hurt either :arrow_heading_up:. 
 
 **Pull Requets**
