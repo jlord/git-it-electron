@@ -38,6 +38,8 @@
 
 
     <div class="wrapper" id="challenge-body">
+      <div id="challenge-completed" style="display:none;">[ Completed ] 😀</div>
+
 
     <div id="challenge-desc" class="challenge">
   <h2>The Challenge:</h2>
@@ -222,6 +224,12 @@ want to tell Git the location of the remote version on GitHub's servers. You can
 
       ga('create', 'UA-52690821-1', 'auto');
       ga('send', 'pageview');
+    </script>
+
+    <script>
+      var challegeCompeleted = require('../challenge-completed.js')
+      var currentChallenge = 'remote_control'
+      challegeCompeleted(currentChallenge)
     </script>
 
   </body>
