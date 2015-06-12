@@ -1,16 +1,16 @@
 # Contributing to Git-it (on Electron)
 
-Thanks for helping out! Though I haven't had time to go into detail about it, I've got a rough idea of how 
+Thanks for helping out! Though I haven't had time to go into detail about it, I've got a rough idea of how
 this project will work. You may want to open an issue first to clarify what you'd like to do and what my rough
-plan for that bit was. See the [readme](/readme.md) for background on the project. 
+plan for that bit was. See the [readme](/README.md) for background on the project.
 
 Here are general bits and bobs for working on this project:
 
 **Issues**
 
 - Screenshots or gifs so that what you're seeing can be seen :art:.
-- Please include what operating sytem you're using if you've run into a problem.
-- Specifying what version of Node and npm you have wouldn't hurt either :arrow_heading_up:. 
+- Please include what operating system you're using if you've run into a problem.
+- Specifying what version of Node and npm you have wouldn't hurt either :arrow_heading_up:.
 
 **Pull Requets**
 
@@ -25,4 +25,4 @@ Here are general bits and bobs for working on this project:
 - Use screenshots in PR when contributing visual changes. Use gifs too if you can (and if applicable)!
   - _This makes it easier for the reviewer to see changes without pulling down your branch._
 - Add a test.
-  - This makes your code even more desirable. 
+  - This makes your code even more desirable.
