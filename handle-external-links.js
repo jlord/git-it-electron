@@ -2,8 +2,8 @@ var shell = require('shell')
 
 document.addEventListener('DOMContentLoaded', function (event) {
   var links = document.querySelectorAll('a[href]')
-
-  [].forEach.call(links, function (link) {
+  var array = []
+  array.forEach.call(links, function (link) {
     var url = link.getAttribute('href')
     if (url.indexOf('http:') > -1) {
       link.addEventListener('click', function (e) {
@@ -11,5 +11,5 @@ document.addEventListener('DOMContentLoaded', function (event) {
         shell.openExternal(url)
       })
     }
-  }
+  })
 })
