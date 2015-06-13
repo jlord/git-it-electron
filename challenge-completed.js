@@ -14,7 +14,6 @@ var disableVerifyButtons = function (boolean) {
 var clearStatus = function (challenge) {
   var clearStatusButton = document.getElementById('clear-completed-challenge')
   clearStatusButton.addEventListener('click', function clicked (event) {
-    console.log('Clear status')
     userData[challenge].completed = false
     fs.writeFileSync('./data.json', JSON.stringify(userData, null, 2))
     document.getElementById('challenge-completed').style.display = 'none'

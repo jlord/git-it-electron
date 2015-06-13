@@ -43,7 +43,6 @@ module.exports = function verifyGetGitChallenge () {
             } else {
               addToList('Found no Git installed.', false)
             }
-            console.log(counter, total)
             if (counter === total) {
               counter = 0
               markChallengeCompleted(currentChallenge)
