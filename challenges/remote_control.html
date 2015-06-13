@@ -39,7 +39,10 @@
 
 
     <div class="wrapper" id="challenge-body">
-      <div id="challenge-completed" style="display:none;">[ Completed ] 😀</div>
+      <div id="challenge-completed" style="display:none;">
+        <span>[ Completed ] 😀</span>
+        <button id="clear-completed-challenge">Clear completed status</button>
+      </div>
 
 
     <div id="challenge-desc" class="challenge">
@@ -228,9 +231,9 @@ want to tell Git the location of the remote version on GitHub's servers. You can
     </script>
 
     <script>
-      var challegeCompeleted = require('../challenge-completed.js')
+      var challengeStatus = require('../challenge-completed.js')
       var currentChallenge = 'remote_control'
-      challegeCompeleted(currentChallenge)
+      challengeStatus.completed(currentChallenge)
     </script>
 
   </body>
