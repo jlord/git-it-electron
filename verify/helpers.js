@@ -1,4 +1,5 @@
 var fs = require('fs')
+var completed = require('../challenge-completed.js')
 
 var ul = document.getElementById('verify-list')
 
@@ -14,15 +15,11 @@ var addtoList = function (message, status) {
   // into an array and add to dom once
 }
 
-var markChallengeCompleted = function () {
-  var challengeBody = document.getElementById('challenge-body')
-  var challengeDesc = document.getElementById('challenge-desc')
-  var div = document.createElement('h2')
-  var newContent = document.createTextNode('COMPLETED!')
-  div.appendChild(newContent)
-  div.classList.add('completed-challenge')
-  // Add ID and make it so that it isn't added over and over to DOM
-  challengeBody.insertBefore(div, challengeDesc)
+var markChallengeCompleted = function (challenge) {
+  console.log("challenge marked completed")
+  document.getElementById('challenge-completed').style.display = 'inherit'
+  completed.clearStatus(challenge)
+  // clear any verify list that exists
 }
 
 var writeData = function (userData, challenge) {
