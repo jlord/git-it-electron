@@ -20,7 +20,7 @@ module.exports = function verifyPullChallenge (path) {
     var status = stdout.trim()
     if (!err && status === '') {
       addtoList('Up to date!', true)
-      markChallengeCompleted()
+      markChallengeCompleted(currentChallenge)
       writeData(userData, currentChallenge)
     }
     else addtoList('There are changes to pull in.', false)

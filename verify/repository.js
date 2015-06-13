@@ -23,7 +23,7 @@ module.exports = function repositoryVerify (path) {
     var status = stdout.trim()
     if (status.match("On branch")) {
       addtoList("This is a Git repository!", true)
-      markChallengeCompleted()
+      markChallengeCompleted(currentChallenge)
       writeData(userData, currentChallenge)
     }
     else addtoList("This folder isn't being tracked by Git.", false)

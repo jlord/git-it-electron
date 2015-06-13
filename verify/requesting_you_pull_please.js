@@ -30,7 +30,7 @@ module.exports = function verifyPRChallenge () {
         var pr = body.pr
         if (pr) {
           addtoList('Found your pull request!', true)
-          markChallengeCompleted()
+          markChallengeCompleted(currentChallenge)
           writeData(userData, currentChallenge)
         } else {
           addtoList('No merged pull request found for ' + username

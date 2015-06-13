@@ -29,7 +29,7 @@ module.exports = function verifySmallWorldChallenge () {
       if (!err && response.statusCode === 200) {
         if (body.collab === true) {
           addtoList('Reporobot has been added!', true)
-          markChallengeCompleted()
+          markChallengeCompleted(currentChallenge)
           writeData(userData, currentChallenge)
         } else addtoList("Reporobot doesn't have access to the fork", false)
       }

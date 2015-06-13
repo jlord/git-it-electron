@@ -73,7 +73,8 @@ module.exports = function verifyBranchesChallenge (repopath) {
           counter++
           addtoList('File in contributors folder!', true)
           if (counter === total) {
-            markChallengeCompleted()
+            counter = 0
+            markChallengeCompleted(currentChallenge)
             writeData(userData, currentChallenge)
           }
         } else addtoList('File NOT in contribs.. folder!', false)

@@ -45,7 +45,8 @@ module.exports = function verifyMergeTadaChallenge (path) {
           counter++
           addtoList('Branch deleted!', true)
           if (counter === total) {
-            markChallengeCompleted()
+            counter = 0
+            markChallengeCompleted(currentChallenge)
             writeData(userData, currentChallenge)
           }
         }
