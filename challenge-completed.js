@@ -3,7 +3,34 @@
 var ipc = require('ipc')
 var fs = require('fs')
 
-module.exports = function challengeCompleted (challenge) {
+var userData
+
+var disableVerifyButtons = function (boolean) {
+  document.getElementById('verify-challenge').disabled = boolean
+  var directoryButton = document.getElementById('select-directory')
+  if (directoryButton) { document.getElementById('select-directory').disabled = boolean }
+}
+
+var clearStatus = function (challenge) {
+  var clearStatusButton = document.getElementById('clear-completed-challenge')
+  clearStatusButton.addEventListener('click', function clicked (event) {
+    userData[challenge].completed = false
+    fs.writeFileSync('./data.json', JSON.stringify(userData, null, 2))
+    document.getElementById('challenge-completed').style.display = 'none'
+    disableVerifyButtons(false)
+
+    // if there is a list of passed parts of challenge, remove it
+    var element = document.getElementById('verify-list')
+    if (element) {
+      while (element.firstChild) {
+        element.removeChild(element.firstChild)
+      }
+    }
+  })
+}
+
+var completed = function (challenge) {
+  challenge = challenge
   document.addEventListener('DOMContentLoaded', function (event) {
     ipc.send('getUserDataPath')
 
@@ -15,14 +42,16 @@ module.exports = function challengeCompleted (challenge) {
 
   function checkCompletedness (err, contents) {
     if (err) return console.log(err)
-    var userData = JSON.parse(contents)
+    userData = JSON.parse(contents)
     if (userData[challenge].completed) {
       document.getElementById('challenge-completed').style.display = 'inherit'
-      // disable buttons
-      document.getElementById('verify-challenge').setAttribute('disabled', 'true')
-      var directoryButton = document.getElementById('select-directory')
-      if (directoryButton) { document.getElementById('select-directory').setAttribute('disabled', 'true') }
-      // TODO add a 'clear challenge status' button & menu
+
+      clearStatus(challenge)
+      disableVerifyButtons(true)
     }
   }
 }
+
+module.exports.clearStatus = clearStatus
+module.exports.completed = completed
+module.exports.disableVerifyButtons = disableVerifyButtons

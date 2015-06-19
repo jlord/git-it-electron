@@ -23,7 +23,7 @@ module.exports = function verifyForksAndClonesChallenge (path) {
 
     if (show.match('upstream') && show.match('github.com[\:\/]jlord/')) {
       addtoList('Upstream remote set up!', true)
-      markChallengeCompleted()
+      markChallengeCompleted(currentChallenge)
       writeData(userData, currentChallenge)
     } else {
       return addtoList('No upstream remote matching /jlord/Patchwork.', false)

@@ -58,7 +58,8 @@ module.exports = function verifyGitHubbinChallenge () {
       addToList('Username same on GitHub and\nGit config!', true)
     } else addToList('GitHub & Git config usernames\ndo not match', false)
     if (counter === total) {
-      markChallengeCompleted()
+      counter = 0
+      markChallengeCompleted(currentChallenge)
       writeData(userData, currentChallenge)
     }
   }

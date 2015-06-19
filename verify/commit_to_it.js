@@ -22,7 +22,7 @@ module.exports = function commitVerify (path) {
       addtoList("Hmm, can't find committed changes.", false)
     } else if (show.match('nothing to commit')) {
       addtoList('Changes have been committed!', true)
-      markChallengeCompleted()
+      markChallengeCompleted(currentChallenge)
       writeData(userData, currentChallenge)
     } else {
       addtoList('Seems there are changes to commit still.', false)

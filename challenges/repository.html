@@ -15,7 +15,7 @@
     <header class="site-header">
   <div class="nav u-posFixed">
     <div class="wrap-width u-textCenter">
-      <a href="get_git.html"
+      <a href="1merge_tada.html"
         <span class="u-floatLeft hand">☜</span>
       </a>
       <a class="filledblock" href="../index.html">Git-it</a>
@@ -39,7 +39,10 @@
 
 
     <div class="wrapper" id="challenge-body">
-      <div id="challenge-completed" style="display:none;">[ Completed ] 😀</div>
+      <div id="challenge-completed" style="display:none;">
+        <span>[ Completed ] 😀</span>
+        <button id="clear-completed-challenge">Clear completed status</button>
+      </div>
 
 
     <div id="challenge-desc" class="challenge">
@@ -146,7 +149,7 @@
     <div class="wrapper">
       <div class="prenext">
   <div class="u-floatLeft">
-    <a href="get_git.html" class="u-inline-block all-caps">get git
+    <a href="1merge_tada.html" class="u-inline-block all-caps">merge tada
     <div>⤶ </div>
     </a>
   </div>
@@ -181,9 +184,9 @@
     </script>
 
     <script>
-      var challegeCompeleted = require('../challenge-completed.js')
+      var challengeStatus = require('../challenge-completed.js')
       var currentChallenge = 'repository'
-      challegeCompeleted(currentChallenge)
+      challengeStatus.completed(currentChallenge)
     </script>
 
   </body>

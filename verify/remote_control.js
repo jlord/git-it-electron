@@ -22,7 +22,7 @@ module.exports = function verifyRemoteControlChallenge (path) {
 
     if (ref.match('update by push')) {
       addtoList('Bingo! Detected a push.', true)
-      markChallengeCompleted()
+      markChallengeCompleted(currentChallenge)
       writeData(userData, currentChallenge)
     }
     else addtoList('No evidence of push.', false)

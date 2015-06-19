@@ -39,7 +39,10 @@
 
 
     <div class="wrapper" id="challenge-body">
-      <div id="challenge-completed" style="display:none;">[ Completed ] 😀</div>
+      <div id="challenge-completed" style="display:none;">
+        <span>[ Completed ] 😀</span>
+        <button id="clear-completed-challenge">Clear completed status</button>
+      </div>
 
 
     <div id="challenge-desc" class="challenge">
@@ -178,9 +181,9 @@
     </script>
 
     <script>
-      var challegeCompeleted = require('../challenge-completed.js')
+      var challengeStatus = require('../challenge-completed.js')
       var currentChallenge = 'commit_to_it'
-      challegeCompeleted(currentChallenge)
+      challengeStatus.completed(currentChallenge)
     </script>
 
   </body>
