@@ -16,7 +16,6 @@ var addtoList = function (message, status) {
 }
 
 var markChallengeCompleted = function (challenge) {
-  console.log("challenge marked completed")
   document.getElementById('challenge-completed').style.display = 'inherit'
   completed.clearStatus(challenge)
   // clear any verify list that exists
