@@ -35,6 +35,18 @@ app.on('ready', function appReady () {
     }
   })
 
+  ipc.on('confirm-clear', function (event) {
+    var options = {
+      type: 'info',
+      buttons: ['Yes', 'No'],
+      title: 'Confirm Clearing Statuses',
+      message: 'Are you sure you want to clear the status for every challenge?'
+    }
+    dialog.showMessageBox(options, function cb (response) {
+      event.sender.send('confirm-clear-response', response)
+    })
+  })
+
   if (process.platform === 'darwin') {
     menu = Menu.buildFromTemplate(darwinTemplate(app, mainWindow))
     Menu.setApplicationMenu(menu)

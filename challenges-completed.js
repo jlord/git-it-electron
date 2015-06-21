@@ -10,9 +10,18 @@ document.addEventListener('DOMContentLoaded', function (event) {
     updateIndex('./data.json')
   })
 
+  ipc.on('confirm-clear-response', function (response) {
+    if (response === 1) return
+    else clearAllChallenges()
+  })
+
   var clearAllButton = document.getElementById('clear-all-challenges')
 
   clearAllButton.addEventListener('click', function (event) {
+    ipc.send('confirm-clear')
+  })
+
+  function clearAllChallenges () {
     for (var chal in userData) {
       if (userData[chal].completed) {
         userData[chal].completed = false
@@ -23,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     fs.writeFile('./data.json', JSON.stringify(userData, null, ' '), function (err) {
       if (err) return console.log(err)
     })
-  })
+  }
 
   function updateIndex (path) {
     fs.readFile(path, function readFile (err, contents) {
