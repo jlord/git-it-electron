@@ -38,7 +38,7 @@ app.on('ready', function appReady () {
   })
 
   ipc.on('getUserDataPath', function (event) {
-    event.sender.send('haveUserDataPath', userDataPath)
+    event.returnValue = userDataPath
   })
 
   ipc.on('open-file-dialog', function (event) {
