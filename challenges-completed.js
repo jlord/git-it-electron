@@ -2,7 +2,7 @@ var userData = require('./user-data.js')
 
 document.addEventListener('DOMContentLoaded', function (event) {
   var data = userData.getData()
-  updateIndex(data)
+  updateIndex(data.contents)
 
   var clearAllButton = document.getElementById('clear-all-challenges')
 
