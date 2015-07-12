@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-var ipc = require('ipc')
 var fs = require('fs')
 
-var userData
+var userData = require('./user-data.js')
+
+var data
 
 var disableVerifyButtons = function (boolean) {
   document.getElementById('verify-challenge').disabled = boolean
@@ -14,8 +15,8 @@ var disableVerifyButtons = function (boolean) {
 var clearStatus = function (challenge) {
   var clearStatusButton = document.getElementById('clear-completed-challenge')
   clearStatusButton.addEventListener('click', function clicked (event) {
-    userData[challenge].completed = false
-    fs.writeFileSync('./data.json', JSON.stringify(userData, null, 2))
+    data[challenge].completed = false
+    fs.writeFileSync('./data.json', JSON.stringify(data, null, 2))
     document.getElementById('challenge-completed').style.display = 'none'
     disableVerifyButtons(false)
 
@@ -32,18 +33,12 @@ var clearStatus = function (challenge) {
 var completed = function (challenge) {
   challenge = challenge
   document.addEventListener('DOMContentLoaded', function (event) {
-    ipc.send('getUserDataPath')
-
-    ipc.on('haveUserDataPath', function (path) {
-      var tempPath = './data.json'
-      fs.readFile(tempPath, function (err, contents) { checkCompletedness(err, contents) })
-    })
+    checkCompletedness()
   })
 
-  function checkCompletedness (err, contents) {
-    if (err) return console.log(err)
-    userData = JSON.parse(contents)
-    if (userData[challenge].completed) {
+  function checkCompletedness () {
+    var data = userData.getData()
+    if (data.contents[challenge].completed) {
       document.getElementById('challenge-completed').style.display = 'inherit'
 
       clearStatus(challenge)
