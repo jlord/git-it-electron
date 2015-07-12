@@ -1,30 +1,22 @@
 var ipc = require('ipc')
 var fs = require('fs')
 
-// for getting, reading and writing the user data
-// aka the challenge statuses
+var getData = function () {
+  console.log("GET DATA")
+  var data = {}
+  data.path = ipc.sendSync('getUserDataPath', null)
+  data.contents = require(data.path)
+  return data
+}
 
-var getPath = function (cb) {
-  ipc.send('getUserDataPath')
+var updateData = function (challenge) {
+  var data = getData()
+  data.contents[challenge].completed = true
 
-  ipc.on('haveUserDataPath', function (userPath) {
-    cb(userPath)
+  fs.writeFile(data.path, JSON.stringify(data.contents, null, ' '), function (err) {
+    if (err) return console.log(err)
   })
 }
 
-var getData = function (cb) {
-  getPath(function (path) {
-    return fs.readFileSync(path)
-  })
-}
-
-var updateData = function (data, cb) {
-  var path = getPath()
-  fs.writeFile(path, JSON.stringify(data, null, ' '), function (err) {
-    if (err) return cb(err)
-  })
-}
-
-module.exports.getPath = getPath
 module.exports.getData = getData
 module.exports.updateData = updateData
