@@ -1,4 +1,4 @@
-var fs = require('fs')
+// var fs = require('fs')
 var completed = require('../challenge-completed.js')
 
 var ul = document.getElementById('verify-list')
@@ -21,11 +21,5 @@ var markChallengeCompleted = function (challenge) {
   // clear any verify list that exists
 }
 
-var writeData = function (userData, challenge) {
-  userData[challenge].completed = true
-  fs.writeFileSync('./data.json', JSON.stringify(userData, null, 2))
-}
-
-module.exports.writeData = writeData
 module.exports.markChallengeCompleted = markChallengeCompleted
 module.exports.addtoList = addtoList
