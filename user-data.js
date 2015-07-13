@@ -2,7 +2,6 @@ var ipc = require('ipc')
 var fs = require('fs')
 
 var getData = function () {
-  console.log("GET DATA")
   var data = {}
   data.path = ipc.sendSync('getUserDataPath', null)
   data.contents = require(data.path)

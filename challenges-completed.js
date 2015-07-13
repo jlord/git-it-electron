@@ -1,3 +1,4 @@
+var ipc = require('ipc')
 var userData = require('./user-data.js')
 
 document.addEventListener('DOMContentLoaded', function (event) {
@@ -22,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     userData.updateData(data, function (err) {
       if (err) return console.log(err)
     })
-  }
+  })
 
   function updateIndex (data) {
     for (var chal in data) {
