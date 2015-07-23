@@ -15,6 +15,8 @@ var emptyData = require('./empty-data.json')
 var mainWindow = null
 var menu = null
 
+process.env.LANG = 'C'
+
 crashReporter.start()
 
 app.on('window-all-closed', function appQuit () {
