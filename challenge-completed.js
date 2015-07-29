@@ -4,6 +4,7 @@ var fs = require('fs')
 
 var userData = require('./user-data.js')
 
+// TODO what is this doing
 var data
 
 var disableVerifyButtons = function (boolean) {
