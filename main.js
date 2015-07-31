@@ -15,11 +15,6 @@ var emptyData = require('./empty-data.json')
 var mainWindow = null
 var menu = null
 
-// TODO have setTimeout and open devtools
-
-// TODO test that this actually works
-process.env.LANG = 'C'
-
 crashReporter.start()
 
 app.on('window-all-closed', function appQuit () {
@@ -29,11 +24,11 @@ app.on('window-all-closed', function appQuit () {
 })
 
 app.on('ready', function appReady () {
-  mainWindow = new BrowserWindow({width: 800, height: 900, title: 'Git-it'})
+  mainWindow = new BrowserWindow({width: 800, height: 1500, title: 'Git-it'})
   mainWindow.loadUrl('file://' + __dirname + '/index.html')
 
   // open dev tools while developing
-  setTimeout(function() {
+  setTimeout(function () {
     return mainWindow.toggleDevTools()
   }, 5)
 

@@ -4,18 +4,17 @@ var fs = require('fs')
 var getData = function () {
   var data = {}
   data.path = ipc.sendSync('getUserDataPath', null)
-  // console.log(data.path)
   data.contents = JSON.parse(fs.readFileSync(data.path))
-  console.log(data)
   return data
 }
 
+// this could take in a boolean on compelte status
+// and be named better in re: to updating ONE challenge, not all
 var updateData = function (challenge) {
   var data = getData()
-  // console.log("update data", data)
   data.contents[challenge].completed = true
 
-  fs.writeFile(data.path, JSON.stringify(data.contents, null, ' '), function (err) {
+  fs.writeFile(data.path, JSON.stringify(data.contents, null, ' '), function updatedUserData (err) {
     if (err) return console.log(err)
   })
 }
