@@ -14,26 +14,20 @@ var builtContent = __dirname + (lang ? '/challenges-' + lang + '/' : '/challenge
 
 // I can probably use glob better to avoid
 // finding the right files within the files
-glob("*.html", {cwd: rawFiles}, function (err, files) {
+glob('*.html', {cwd: rawFiles}, function (err, files) {
   thefiles = files
   if (err) return console.log(err)
-  // var matches = files.map(function(file) {
-  //   if (file.match('guide/raw-content/')) {
-  //     return file
-  //   }
-  // })
   buildPage(files)
 })
 
-function buildPage(files) {
-  files.forEach(function(file) {
+function buildPage (files) {
+  files.forEach(function (file) {
     // shouldn't have to do this if my
     // mapping were correct
     if (!file) return
 
     // if language, run the noun and verb
     // translations
-
 
     var content = {
       header: buildHeader(file),
@@ -51,23 +45,23 @@ function buildPage(files) {
     fs.writeFileSync(builtContent + content.shortname + '.html', final)
   })
   // hard coded right now because, reasons
-  console.log("Built!")
+  console.log('Built!')
 }
 
-function makeShortname(filename) {
+function makeShortname (filename) {
   // FROM guide/raw-content/10_merge_tada.html
   // TO merge_tada.
-    return filename.split('/').pop().split('_')
+  return filename.split('/').pop().split('_')
       .slice(1).join('_').replace('html', '')
 }
 
-function makeTitleName(filename) {
+function makeTitleName (filename) {
   var short = makeShortname(filename).split('_')
     .join(' ').replace('.', '')
   return grammarize(short)
 }
 
-function buildHeader(filename) {
+function buildHeader (filename) {
   var num = filename.split('/').pop().split('_')[0]
   var data = getPrevious(num)
   var title = makeTitleName(filename)
@@ -83,12 +77,12 @@ function buildHeader(filename) {
   return template(content)
 }
 
-function grammarize(name) {
+function grammarize (name) {
   var correct = name
   var wrongWords = ['arent', 'githubbin', 'its']
-  var rightWords = ["aren't", "GitHubbin", "it's"]
+  var rightWords = ["aren't", 'GitHubbin', "it's"]
 
-  wrongWords.forEach(function(word, i) {
+  wrongWords.forEach(function (word, i) {
     if (name.match(word)) {
       correct = name.replace(word, rightWords[i])
     }
@@ -96,7 +90,7 @@ function grammarize(name) {
   return correct
 }
 
-function buildFooter(file) {
+function buildFooter (file) {
   var num = file.split('/').pop().split('_')[0]
   var data = getPrevious(num)
   data.lang = lang ? '-' + lang : ''
@@ -105,16 +99,16 @@ function buildFooter(file) {
   return template(data)
 }
 
-function getPrevious(num) {
-  var pre = parseInt(num) - 1
-  var next = parseInt(num) + 1
+function getPrevious (num) {
+  var pre = parseInt(num, 10) - 1
+  var next = parseInt(num, 10) + 1
   var preurl = ''
   var prename = ''
   var nexturl = ''
   var nextname = ''
-  thefiles.forEach(function(file) {
+  thefiles.forEach(function (file) {
     if (pre === 0) {
-      prename = "All Challenges"
+      prename = 'All Challenges'
       preurl = lang ? '../index-' + lang + '.html' : '../index.html'
     } else if (file.match(pre)) {
       prename = makeTitleName(file)
@@ -122,11 +116,11 @@ function getPrevious(num) {
       preurl = file.replace(getridof, '')
     }
     if (next === 12) {
-      nextname = "Done!"
+      nextname = 'Done!'
       nexturl = lang ? '../index-' + lang + '.html' : '../index.html'
     } else if (file.match(next)) {
       nextname = makeTitleName(file)
-      var getridof = next + '_'
+      getridof = next + '_'
       nexturl = file.replace(getridof, '')
     }
   })

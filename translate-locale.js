@@ -1,8 +1,7 @@
 var fs = require('fs')
-var cheerio =  require('cheerio')
+var cheerio = require('cheerio')
 
-
-module.exports = function translateLocale(fileContent, lang) {
+module.exports = function translateLocale (fileContent, lang) {
   if (!lang) return
 
   // get translation data
@@ -11,13 +10,13 @@ module.exports = function translateLocale(fileContent, lang) {
   // load file into Cheerio
   var $ = cheerio.load(fileContent)
 
-  var types = ["n", "v", "adj"]
+  var types = ['n', 'v', 'adj']
 
   types.forEach(function (type) {
 
-    $(type).each(function(i, tag) {
+    $(type).each(function (i, tag) {
       var word = $(tag).text().toLowerCase()
-      var translatiion = ""
+      var translation
 
       if (!translations[type][word]) {
         return console.log("Didn't find trasnlation for ", type, word)
@@ -25,10 +24,9 @@ module.exports = function translateLocale(fileContent, lang) {
         translation = translations[type][word]
       }
 
-      var span = "<span class='superscript'>" + translation + "</span>"
+      var span = "<span class='superscript'>" + translation + '</span>'
       $(tag).prepend(span)
     })
   })
-
   return ($.html())
 }
