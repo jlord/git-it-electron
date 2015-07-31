@@ -1,6 +1,10 @@
 // var fs = require('fs')
 var completed = require('../challenge-completed.js')
 
+// Set each challenge verifying process to use
+// English language pack
+process.env.LANG = 'C'
+
 var ul = document.getElementById('verify-list')
 
 var addtoList = function (message, status) {
