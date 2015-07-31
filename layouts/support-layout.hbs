@@ -8,17 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script>require('../handle-external-links.js')</script>
   </head>
   <body>
     {{{header}}}
-
-    <div class="wrapper" id="challenge-body">
-      <div id="challenge-completed" style="display:none;">
-        <span>[ Completed ] 😀</span>
-        <button id="clear-completed-challenge">Clear completed status</button>
-      </div>
-
 
     {{{body}}}
 
@@ -36,12 +28,6 @@
 
       ga('create', 'UA-52690821-1', 'auto');
       ga('send', 'pageview');
-    </script>
-
-    <script>
-      var challengeStatus = require('../challenge-completed.js')
-      var currentChallenge = '{{{shortname}}}'
-      challengeStatus.completed(currentChallenge)
     </script>
 
   </body>

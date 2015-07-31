@@ -5,7 +5,7 @@
   "productName": "Git-it",
   "main": "main.js",
   "scripts": {
-    "build": "node buildpages.js",
+    "build": "node lib/buildpages.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
