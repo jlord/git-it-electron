@@ -1,29 +1,21 @@
 var ipc = require('ipc')
+var fs = require('fs')
+
 var userData = require('./user-data.js')
 
 document.addEventListener('DOMContentLoaded', function (event) {
   var data = userData.getData()
+  var clearAllButton = document.getElementById('clear-all-challenges')
+
   updateIndex(data.contents)
 
   ipc.on('confirm-clear-response', function (response) {
     if (response === 1) return
-    else clearAllChallenges()
+    else clearAllChallenges(data)
   })
 
-  var clearAllButton = document.getElementById('clear-all-challenges')
-
   clearAllButton.addEventListener('click', function () {
-    for (var chal in data) {
-      if (data[chal].completed) {
-        data[chal].completed = false
-        var completedElement = '#' + chal + ' .completed-challenge-list'
-        document.querySelector(completedElement).remove()
-      }
-    }
-    userData.updateData(data, function (err) {
-      // this takes in a challenge, which you're not doing
-      if (err) return console.log(err)
-    })
+    ipc.send('confirm-clear')
   })
 
   function updateIndex (data) {
@@ -36,3 +28,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
   }
 })
+
+function clearAllChallenges (data) {
+  for (var chal in data.contents) {
+    if (data.contents[chal].completed) {
+      data.contents[chal].completed = false
+      var completedElement = '#' + chal + ' .completed-challenge-list'
+      document.querySelector(completedElement).remove()
+    }
+  }
+  fs.writeFileSync(data.path, JSON.stringify(data.contents, null, 2))
+}
