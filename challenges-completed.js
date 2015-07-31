@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       }
     }
     userData.updateData(data, function (err) {
+      // this takes in a challenge, which you're not doing
       if (err) return console.log(err)
     })
   })

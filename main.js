@@ -15,6 +15,8 @@ var emptyData = require('./empty-data.json')
 var mainWindow = null
 var menu = null
 
+// TODO have setTimeout and open devtools
+
 // TODO test that this actually works
 process.env.LANG = 'C'
 
