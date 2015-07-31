@@ -32,6 +32,11 @@ app.on('ready', function appReady () {
   mainWindow = new BrowserWindow({width: 800, height: 900, title: 'Git-it'})
   mainWindow.loadUrl('file://' + __dirname + '/index.html')
 
+  // open dev tools while developing
+  setTimeout(function() {
+    return mainWindow.toggleDevTools()
+  }, 5)
+
   var userDataPath = path.join(app.getPath('userData'), 'user-data.json')
 
   fs.exists(userDataPath, function (exists) {
