@@ -7,8 +7,8 @@ var dialog = require('dialog')
 var fs = require('fs')
 var path = require('path')
 
-var darwinTemplate = require('./darwin-menu.js')
-var otherTemplate = require('./other-menu.js')
+var darwinTemplate = require('./menus/darwin-menu.js')
+var otherTemplate = require('./menus/other-menu.js')
 
 var emptyData = require('./empty-data.json')
 
