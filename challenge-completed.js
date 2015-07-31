@@ -4,7 +4,6 @@ var fs = require('fs')
 
 var userData = require('./user-data.js')
 
-// TODO what is this doing
 var data
 
 var disableVerifyButtons = function (boolean) {
@@ -13,11 +12,13 @@ var disableVerifyButtons = function (boolean) {
   if (directoryButton) { document.getElementById('select-directory').disabled = boolean }
 }
 
-var clearStatus = function (challenge) {
+var enableClearStatus = function (challenge) {
   var clearStatusButton = document.getElementById('clear-completed-challenge')
   clearStatusButton.addEventListener('click', function clicked (event) {
-    data[challenge].completed = false
+    // set challenge to uncomplted and update the user's data file
+    data.contents[challenge].completed = false
     fs.writeFileSync('./data.json', JSON.stringify(data, null, 2))
+    // remove the completed status from the page and renable verify button
     document.getElementById('challenge-completed').style.display = 'none'
     disableVerifyButtons(false)
 
@@ -38,16 +39,16 @@ var completed = function (challenge) {
   })
 
   function checkCompletedness () {
-    var data = userData.getData()
+    data = userData.getData()
     if (data.contents[challenge].completed) {
       document.getElementById('challenge-completed').style.display = 'inherit'
-
-      clearStatus(challenge)
+      // If completed, show clear button and disable verify button
+      enableClearStatus(challenge)
       disableVerifyButtons(true)
     }
   }
 }
 
-module.exports.clearStatus = clearStatus
+module.exports.clearStatus = enableClearStatus
 module.exports.completed = completed
 module.exports.disableVerifyButtons = disableVerifyButtons
