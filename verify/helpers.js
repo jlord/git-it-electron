@@ -1,5 +1,5 @@
 // var fs = require('fs')
-var completed = require('../challenge-completed.js')
+var completed = require('../lib/challenge-completed.js')
 
 // Set each challenge verifying process to use
 // English language pack
