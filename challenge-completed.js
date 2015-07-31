@@ -17,7 +17,7 @@ var enableClearStatus = function (challenge) {
   clearStatusButton.addEventListener('click', function clicked (event) {
     // set challenge to uncomplted and update the user's data file
     data.contents[challenge].completed = false
-    fs.writeFileSync('./data.json', JSON.stringify(data, null, 2))
+    fs.writeFileSync(data.path, JSON.stringify(data, null, 2))
     // remove the completed status from the page and renable verify button
     document.getElementById('challenge-completed').style.display = 'none'
     disableVerifyButtons(false)
