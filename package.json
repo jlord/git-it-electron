@@ -5,7 +5,9 @@
   "productName": "Git-it",
   "main": "main.js",
   "scripts": {
-    "build": "node lib/buildpages.js",
+    "build-chals": "node lib/build-challenges.js",
+    "build-pages": "node lib/build-pages.js",
+    "build-all": "npm run build-chals && npm run build-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
