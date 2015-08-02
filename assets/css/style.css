@@ -292,6 +292,8 @@ n, v, adj {
   display: inline-block;
 }
 
+/* new stuff */
+
 .verify-fail:before {
   content: '😞 ';
 }
@@ -307,6 +309,38 @@ n, v, adj {
   padding-left: 0;
 }
 
-.completed-challenge {
+button {
+  display: inline-block;
+  background-color: #CBCBCB;
+  color: #818181;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  border: 1px solid transparent;
+  font-family: 'Source Sans Pro';
+  text-transform: uppercase;
+}
 
+button:hover {
+  background-color: #e7e7e7;
+}
+
+button.white {
+  background-color: #fff;
+  color: #0087ff;
+}
+
+button.white:hover {
+  background-color: #eeeeee;
+}
+
+button.white:disabled {
+  background-color: #F5F5F5;
+  color: #C8C8C8;
 }
