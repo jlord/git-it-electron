@@ -309,6 +309,20 @@ n, v, adj {
   padding-left: 0;
 }
 
+#challenge-completed {
+  background: #BADFFF;
+  padding: 18px 18px;
+  text-align: center;
+}
+
+#challenge-completed h2 {
+  padding: 0; margin: 0;
+}
+
+#clear-completed-challenge {
+  margin-top: 12px;
+}
+
 button {
   display: inline-block;
   background-color: #CBCBCB;
@@ -343,4 +357,13 @@ button.white:hover {
 button.white:disabled {
   background-color: #F5F5F5;
   color: #C8C8C8;
+}
+
+button.light-blue {
+  background-color: #D2EAFF;
+  color: #86B6E0;
+}
+
+button.light-blue:hover {
+  background-color: #e2effa;
 }
