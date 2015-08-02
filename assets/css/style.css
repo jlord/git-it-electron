@@ -323,6 +323,14 @@ n, v, adj {
   margin-top: 12px;
 }
 
+.completed-challenge-list {
+  background-color: #BADFFF;
+  color: #0087ff;
+  padding: 2px 4px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
 button {
   display: inline-block;
   background-color: #CBCBCB;
