@@ -4,14 +4,12 @@ var exec = require('child_process').exec
 var request = require('request')
 
 var helper = require('../verify/helpers.js')
-var userData = require('../data.json')
+var userData = require('../lib/user-data.js')
 
 var addtoList = helper.addtoList
 var markChallengeCompleted = helper.markChallengeCompleted
-var writeData = helper.writeData
 
 var currentChallenge = 'requesting_you_pull_please'
-
 var url = 'http://reporobot.jlord.us/pr?username='
 
 // check that they've submitted a pull request
@@ -31,11 +29,11 @@ module.exports = function verifyPRChallenge () {
         if (pr) {
           addtoList('Found your pull request!', true)
           markChallengeCompleted(currentChallenge)
-          writeData(userData, currentChallenge)
+          userData.updateData(currentChallenge)
         } else {
-          addtoList('No merged pull request found for ' + username
-                       + '. If you did make a pull request, return to '
-                       + 'its website to see comments.', false)
+          addtoList('No merged pull request found for ' + username +
+                    '. If you did make a pull request, return to ' +
+                    'its website to see comments.', false)
         }
       }
     })

@@ -4,11 +4,10 @@ var exec = require('child_process').exec
 var fs = require('fs')
 
 var helper = require('../verify/helpers.js')
-var userData = require('../data.json')
+var userData = require('../lib/user-data.js')
 
 var addtoList = helper.addtoList
 var markChallengeCompleted = helper.markChallengeCompleted
-var writeData = helper.writeData
 
 var currentChallenge = 'merge_tada'
 var counter = 0
@@ -47,7 +46,7 @@ module.exports = function verifyMergeTadaChallenge (path) {
           if (counter === total) {
             counter = 0
             markChallengeCompleted(currentChallenge)
-            writeData(userData, currentChallenge)
+            userData.updateData(currentChallenge)
           }
         }
       })
