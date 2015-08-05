@@ -4,13 +4,12 @@ var request = require('request')
 var exec = require('child_process').exec
 
 var helper = require('../verify/helpers.js')
-var userData = require('../data.json')
+var userData = require('../lib/user-data.js')
 
 var url = 'http://reporobot.jlord.us/collab?username='
 
 var addtoList = helper.addtoList
 var markChallengeCompleted = helper.markChallengeCompleted
-var writeData = helper.writeData
 
 var currentChallenge = 'its_a_small_world'
 
@@ -30,7 +29,7 @@ module.exports = function verifySmallWorldChallenge () {
         if (body.collab === true) {
           addtoList('Reporobot has been added!', true)
           markChallengeCompleted(currentChallenge)
-          writeData(userData, currentChallenge)
+          userData.updateData(currentChallenge)
         } else addtoList("Reporobot doesn't have access to the fork", false)
       }
     })

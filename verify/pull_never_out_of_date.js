@@ -3,11 +3,10 @@
 var exec = require('child_process').exec
 
 var helper = require('../verify/helpers.js')
-var userData = require('../data.json')
+var userData = require('../lib/user-data.js')
 
 var addtoList = helper.addtoList
 var markChallengeCompleted = helper.markChallengeCompleted
-var writeData = helper.writeData
 
 var currentChallenge = 'pull_never_out_of_date'
 
@@ -21,7 +20,7 @@ module.exports = function verifyPullChallenge (path) {
     if (!err && status === '') {
       addtoList('Up to date!', true)
       markChallengeCompleted(currentChallenge)
-      writeData(userData, currentChallenge)
+      userData.updateData(currentChallenge)
     }
     else addtoList('There are changes to pull in.', false)
   })

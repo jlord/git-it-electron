@@ -3,20 +3,17 @@
 var exec = require('child_process').exec
 var fs = require('fs')
 var path = require('path')
-var fs = require('fs')
 
 var helper = require('../verify/helpers.js')
-var userData = require('../data.json')
+var userData = require('../lib/user-data.js')
 
 var addtoList = helper.addtoList
 var markChallengeCompleted = helper.markChallengeCompleted
-var writeData = helper.writeData
 
 var currentChallenge = 'branches_arent_just_for_birds'
 var total = 3
 var counter = 0
 var username = ''
-var repopath = ''
 
 // get their username
 // verify branch matches username, case too.
@@ -46,7 +43,8 @@ module.exports = function verifyBranchesChallenge (repopath) {
   })
 
   function checkPush (branchname) {
-    // look into this -
+    // look into this, is using reflog the best way? what about origin?
+    // sometimes it seems this doesn't work
     exec('git reflog show origin/' + branchname, {cwd: repopath}, function (err, stdout, stderr) {
       if (err) return addtoList('Error: ' + err.message, false)
       if (stdout.match('update by push')) {
@@ -75,7 +73,7 @@ module.exports = function verifyBranchesChallenge (repopath) {
           if (counter === total) {
             counter = 0
             markChallengeCompleted(currentChallenge)
-            writeData(userData, currentChallenge)
+            userData.updateData(currentChallenge)
           }
         } else addtoList('File NOT in contribs.. folder!', false)
       })
