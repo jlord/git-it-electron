@@ -5,11 +5,10 @@ var request = require('request')
 var user = ''
 
 var helper = require('../verify/helpers.js')
-var userData = require('../data.json')
+var userData = require('../lib/user-data.js')
 
 var addToList = helper.addtoList
 var markChallengeCompleted = helper.markChallengeCompleted
-var writeData = helper.writeData
 
 var currentChallenge = 'githubbin'
 
@@ -35,10 +34,10 @@ module.exports = function verifyGitHubbinChallenge () {
 
   function checkGitHub (user) {
     var options = {
-          url: 'https://api.github.com/users/' + user,
-          json: true,
-          headers: { 'User-Agent': 'jlord'}
-        }
+      url: 'https://api.github.com/users/' + user,
+      json: true,
+      headers: { 'User-Agent': 'jlord'}
+    }
 
     request(options, function (error, response, body) {
       if (error) return console.log(error)
@@ -60,7 +59,7 @@ module.exports = function verifyGitHubbinChallenge () {
     if (counter === total) {
       counter = 0
       markChallengeCompleted(currentChallenge)
-      writeData(userData, currentChallenge)
+      userData.updateData(currentChallenge)
     }
   }
 }

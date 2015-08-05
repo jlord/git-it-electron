@@ -4,11 +4,10 @@ var exec = require('child_process').exec
 var fs = require('fs')
 
 var helper = require('../verify/helpers.js')
-var userData = require('../data.json')
+var userData = require('../lib/user-data.js')
 
 var addtoList = helper.addtoList
 var markChallengeCompleted = helper.markChallengeCompleted
-var writeData = helper.writeData
 
 var currentChallenge = 'forks_and_clones'
 
@@ -24,7 +23,7 @@ module.exports = function verifyForksAndClonesChallenge (path) {
     if (show.match('upstream') && show.match('github.com[\:\/]jlord/')) {
       addtoList('Upstream remote set up!', true)
       markChallengeCompleted(currentChallenge)
-      writeData(userData, currentChallenge)
+      userData.updateData(currentChallenge)
     } else {
       return addtoList('No upstream remote matching /jlord/Patchwork.', false)
     }
