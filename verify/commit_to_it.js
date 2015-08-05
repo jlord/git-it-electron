@@ -2,11 +2,10 @@ var exec = require('child_process').exec
 var fs = require('fs')
 
 var helper = require('../verify/helpers.js')
-var userData = require('../data.json')
+var userData = require('../lib/user-data.js')
 
 var addtoList = helper.addtoList
 var markChallengeCompleted = helper.markChallengeCompleted
-var writeData = helper.writeData
 
 var currentChallenge = 'commit_to_it'
 
@@ -23,7 +22,7 @@ module.exports = function commitVerify (path) {
     } else if (show.match('nothing to commit')) {
       addtoList('Changes have been committed!', true)
       markChallengeCompleted(currentChallenge)
-      writeData(userData, currentChallenge)
+      userData.updateData(currentChallenge)
     } else {
       addtoList('Seems there are changes to commit still.', false)
     }
