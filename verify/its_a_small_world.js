@@ -3,7 +3,7 @@
 var request = require('request')
 var exec = require('child_process').exec
 
-var helper = require('../verify/helpers.js')
+var helper = require('../lib/helpers.js')
 var userData = require('../lib/user-data.js')
 
 var url = 'http://reporobot.jlord.us/collab?username='

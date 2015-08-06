@@ -4,7 +4,7 @@ var exec = require('child_process').exec
 var request = require('request')
 var user = ''
 
-var helper = require('../verify/helpers.js')
+var helper = require('../lib/helpers.js')
 var userData = require('../lib/user-data.js')
 
 var addToList = helper.addtoList
