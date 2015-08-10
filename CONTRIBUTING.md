@@ -12,14 +12,14 @@ Here are general bits and bobs for working on this project:
 - Please include what operating system you're using if you've run into a problem.
 - Specifying what version of Node and npm you have wouldn't hurt either :arrow_heading_up:.
 
-**Pull Requets**
+**Pull Requests**
 
 :raised_hands: Lower the burden on maintainers = Easier, faster merges :sparkles:
 
 - A meaningful title and description.
  - _This lowers the burden on the maintainer to read your code and infer your intent._
 - Keep code in the style/syntax of the project and use [JavaScript Standard Style](https://github.com/feross/standard)
-  - _This makes the whole of the project's code conistent and is easiest on me, the primary maintainer._
+  - _This makes the whole of the project's code consistent and is easiest on me, the primary maintainer._
 - Keep Pull Requests focused and open multiple if need be.
   - _This makes each pull request easier to review and accept (and, if need be, revert later on)._
 - Use screenshots in PR when contributing visual changes. Use gifs too if you can (and if applicable)!
