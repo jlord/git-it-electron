@@ -310,7 +310,7 @@ n, v, adj {
 }
 
 #challenge-completed {
-  background: #BADFFF;
+  background: #DBFFBA;
   padding: 18px 18px;
   text-align: center;
 }
@@ -319,8 +319,13 @@ n, v, adj {
   padding: 0; margin: 0;
 }
 
-#clear-completed-challenge {
+/*#clear-completed-challenge {
+  background: #C1F493;
 }
+
+#clear-completed-challenge:hover {
+  background: #e0f6cc;
+}*/
 
 .completed-challenge-list {
   background-color: #BADFFF;
