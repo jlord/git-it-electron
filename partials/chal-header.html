@@ -1,4 +1,4 @@
-<header class="site-header">
+<header id="challenge-header" class="site-header">
   <div class="nav u-posFixed">
     <div class="wrap-width u-textCenter">
       <a href="{{preurl}}"
@@ -15,7 +15,11 @@
     <div class="u-floatLeft">
       <span class="all-caps">CHALLENGE</span>
       <h2 class="challenge-name">{{challengetitle}}</h2>
+      <div id="challenge-completed" style="display:none;">
+        <span>COMPLETED!</span>
+      </div>
     </div>
+
     <div class="u-floatRight u-textRight">
       <span class="all-caps">NUMBER</span>
       <h2 class="challenge-name">{{challengenumber}} / 11</h2>

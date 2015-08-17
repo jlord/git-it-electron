@@ -26,6 +26,13 @@
   src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(..fonts/SourceSansPro-Black.otf) format('opentype');
 }
 
+@font-face {
+  font-family: 'Nothing You Could Do';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(..fonts/NothingYouCouldDo.tff) format('truetype');
+}
+
 body {
   font-family: 'Source Sans Pro';
   line-height: 1.8em;
@@ -75,6 +82,7 @@ li {
   width: 600px;
   margin: 30px auto;
   padding: 0 20px;
+  overflow: auto;
 }
 
 .site-header {
@@ -310,26 +318,19 @@ n, v, adj {
 }
 
 #challenge-completed {
-  background: #DBFFBA;
-  padding: 18px 18px;
-  text-align: center;
+  color: #2BDA9E;
+  font-size: 24px;
+  font-family: "NothingYouCouldDo";
 }
 
 #challenge-completed h2 {
   padding: 0; margin: 0;
 }
 
-/*#clear-completed-challenge {
-  background: #C1F493;
-}
-
-#clear-completed-challenge:hover {
-  background: #e0f6cc;
-}*/
-
 .completed-challenge-list {
-  background-color: #BADFFF;
-  color: #0087ff;
+  font-family: "NothingYouCouldDo";
+  /*background-color: #BADFFF;*/
+  color: #2BDA9E;
   padding: 2px 4px;
   text-transform: uppercase;
   font-size: 12px;
@@ -378,4 +379,7 @@ button.light-blue {
 
 button.light-blue:hover {
   background-color: #e2effa;
+}
+
+.challenge-is-completed {
 }
