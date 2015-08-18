@@ -116,7 +116,6 @@ li {
 .filledblock:hover {
   background: #4BABFF;
   color: #fff;
-  text-shadow: #fff 0px 0px 5px;
 }
 
 .all-caps {
