@@ -24,7 +24,7 @@ app.on('window-all-closed', function appQuit () {
 })
 
 app.on('ready', function appReady () {
-  mainWindow = new BrowserWindow({width: 800, height: 1500, title: 'Git-it'})
+  mainWindow = new BrowserWindow({width: 800, height: 1500, title: 'Git-it', icon: __dirname + '/assests/git-it.png'})
   mainWindow.loadUrl('file://' + __dirname + '/index.html')
 
   // open dev tools while developing
