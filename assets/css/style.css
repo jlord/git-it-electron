@@ -87,6 +87,12 @@ li {
   margin-top: 60px;
 }
 
+.page-wrapper {
+  max-width: 600px;
+  margin: 60px auto 0;
+  padding: 15px;
+}
+
 .sidebar {
   width: 25%;
   position: fixed;
@@ -254,7 +260,7 @@ h1, h2, h3, h4, .toc {
   font-family: "Source Sans Pro";
 }
 
-h1, h2, h3, h4 {
+.content h1, .content h2, .content h3, .content h4 {
   margin-top: 50px;
 }
 

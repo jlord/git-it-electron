@@ -37,13 +37,10 @@
   var currentLang = "".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
-    if (currentChallenge = document.querySelector('.challenge-item.current')) {
-      var dir = 'challenges' + (selector.value ? '-' + selector.value : '') + '/'
-      var url = currentChallenge.href.replace(/challenges(.+)?\//, dir)
-      location.href = url
-    } else {
-      location.pathname = 'index' + (selector.value ? '-' + selector.value : '') + '.html'
-    }
+    var currentChallenge = document.querySelector('.challenge-item.current')
+    var dir = 'challenges' + (selector.value ? '-' + selector.value : '') + '/'
+    var url = currentChallenge.href.replace(/challenges(.+)?\//, dir)
+    location.href = url
   })
 </script>
 
