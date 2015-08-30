@@ -12,6 +12,12 @@
   </head>
   <body>
     <header id="challenge-header" class="site-header">
+  <div class="lang-select">
+    <select id="lang-select" class="lang-select">
+      <option value="">English</option>
+      <option value="zhtw">正體中文</option>
+    </select>
+  </div>
   <div class="pagination">
     <a href="forks_and_clones.html"
       <span class="hand">☜</span>
@@ -25,6 +31,21 @@
   </a>
   <span class="challenge-title">branches aren&#x27;t just for birds</span>
 </header>
+
+<script type="text/javascript">
+  var selector = document.getElementById('lang-select')
+  var currentLang = "-zhtw".replace(/-/, '')
+  selector.value = currentLang
+  selector.addEventListener('change', function () {
+    if (currentChallenge = document.querySelector('.challenge-item.current')) {
+      var dir = 'challenges' + (selector.value ? '-' + selector.value : '') + '/'
+      var url = currentChallenge.href.replace(/challenges(.+)?\//, dir)
+      location.href = url
+    } else {
+      location.pathname = 'index' + (selector.value ? '-' + selector.value : '') + '.html'
+    }
+  })
+</script>
 
     <div class="wrapper" id="challenge-body">
       <div id="challenge-sidebar" class="sidebar">
