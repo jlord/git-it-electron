@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -23,33 +21,49 @@
     </head>
 
   <body>
-
-
-<div class="wrapper">
-  <header class="weehero">
+    <header id="challenge-header" class="site-header">
+  <div class="lang-select">
+    <select id="lang-select" class="lang-select">
+      <option value="">English</option>
+      <option value="zhtw">正體中文</option>
+    </select>
+  </div>
+  <a class="filledblock" href="../index.html">
     Git-it
-  </header>
-  <h2>Resources</h2>
+  </a>
+  <span class="challenge-title">resources</span>
+</header>
 
-  <p>Coming soon, to this page, near you!</p>
+<script type="text/javascript">
+  var selector = document.getElementById('lang-select')
+  var currentLang = "".replace(/-/, '')
+  selector.value = currentLang
+  selector.addEventListener('change', function () {
+    var index = '/index' + (selector.value ? '-' + selector.value : '') + '.html'
+    var url = location.href.replace(/(\/pages)?\/[\w-]+.html/, index)
+    location.href = url
+  })
+</script>
 
-</div>
 
+    <div class="page-wrapper">
+      <h2>Resources</h2>
 
-    <div class="wrapper">
+<p>Coming soon, to this page, near you!</p>
+
       <footer>
-        <ul>
-          <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
-          <li class="all-caps"><a href="about.html">About</a></li>
-          <li class="all-caps"><a href="dictionary.html">Dictionary</a></li>
-          <li class="all-caps"><a href="resources.html">Resources</a></li>
-          <li class="all-caps">
-            <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
-          </li>
-          <li class="all-caps"><a href="../index-zhtw.html">GIT-IT 關卡</a></li>
-        </ul>
-      </footer>
+  <ul>
+    <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="about.html">About</a></li>
+    <li class="all-caps"><a href="dictionary.html">Dictionary</a></li>
+    <li class="all-caps"><a href="resources.html">Resources</a></li>
+    <li class="all-caps">
+      <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
+    </li>
+  </ul>
+</footer>
+
     </div>
+
   </body>
 </html>
-

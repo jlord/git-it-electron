@@ -39,10 +39,7 @@
 
       <p><code>$ git remote add upstream https://github.com/jlord/patchwork.git</code></p>
 
-      <div class="verify">
-        <h3>確認你完成了所有步驟：</h3><code>git-it verify</code>
-        <h3>前往下一個關卡</h3><code>git-it</code>
-      </div>
+{{{verify_directory_button}}}
 
       <div id="git-tips">
         <h2>撇步</h2>
@@ -53,3 +50,35 @@
           <li><code>$ git remote -v</code></li>
         </ul>
       </div>
+
+<script>
+  var ipc = require('ipc')
+
+  var verifyChallenge = require('../lib/verify/forks_and_clones.js')
+
+  var directoryPath = ''
+
+  var verifyButton = document.getElementById('verify-challenge')
+  var directoryButton = document.getElementById('select-directory')
+  var ul = document.getElementById('verify-list')
+
+  directoryButton.addEventListener('click', function clickedDir (event) {
+    ipc.send('open-file-dialog')
+  })
+
+  ipc.on('selected-directory', function(path) {
+    // TODO style and trim this
+    directoryPath = path
+    document.getElementById('directory-path').innerHTML = path
+  })
+
+  verifyButton.addEventListener('click', function clicked (event) {
+    if (directoryPath === '') {
+      var message = 'Please select your repository directory, then verify.'
+      document.getElementById('directory-path').innerHTML = message
+    } else {
+      ul.innerHTML = ''
+      verifyChallenge(directoryPath[0])
+    }
+  })
+</script>

@@ -18,21 +18,16 @@
       <code>
         github.com/YOURUSERNAME/patchwork/settings/collaboration</code>
 
-      <div class="verify">
-        <h3>確認你完成了所有步驟：</h3><code>git-it verify</code>
-        <h3>前往下一關：</h3><code>git-it</code>
-      </div>
+{{{verify_button}}}
 
-      <div id="git-tips">
-        <h2>撇步</h2>
-        <ul>
-          <li><strong>從 <n>remote</n> <v>pull</v> 更新回來</strong></li>
-          <code>$ git pull &#60;REMOTENAME&#62; &#60;BRANCH&#62;</code>
-          <li><strong>複製 <n>repository</n> 到自己的電腦裡</strong></li>
-          <code>$ git clone &#60;URL&#62;</code>
-          <li><strong>新增 <n>remote</n> <n>connections</n></strong></li>
-          <code>$ git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code>
-          <li><strong>檢視現有的 <n>remote</n> <n>connections</n></strong></li>
-          <code>$ git remote -v</code>
-        </ul>
-      </div>
+<script>
+  var verifyChallenge = require('../lib/verify/its_a_small_world.js')
+
+  var verifyButton = document.getElementById('verify-challenge')
+  var ul = document.getElementById('verify-list')
+
+  verifyButton.addEventListener('click', function clicked (event) {
+    ul.innerHTML = ''
+    verifyChallenge()
+  })
+</script>

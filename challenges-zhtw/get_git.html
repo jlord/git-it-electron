@@ -1,46 +1,122 @@
 <!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Git-it Guide</title>
-        <meta name="description" content="learn git and github">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="../assets/css/style.css">
-        
-    </head>
-    <body>
-      <!--[if lt IE 8]>
-          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
-
-        <header class="site-header">
-  <div class="nav u-posFixed">
-    <div class="wrap-width u-textCenter">
-      <a href="../index-zhtw.html"
-        <span class="u-floatLeft hand">☜</span>
-      </a>
-      <a class="filledblock" href="../index-zhtw.html">Git-it</a>
-      <a href="repository.html"
-        <span class="u-floatRight hand">☞</span>
-      </a>
-    </div>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <title>Git-it</title>
+    <meta name="description" content="learn git and github">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script>require('../lib/handle-external-links.js')</script>
+  </head>
+  <body>
+    <header id="challenge-header" class="site-header">
+  <div class="lang-select">
+    <select id="lang-select" class="lang-select">
+      <option value="">English</option>
+      <option value="zhtw">正體中文</option>
+    </select>
   </div>
-  
-  <div class="wrapper">
-    <div class="u-floatLeft">
-      <span class="all-caps">CHALLENGE</span>
-      <h2 class="challenge-name">get git</h2>
-    </div>
-    <div class="u-floatRight u-textRight">
-      <span class="all-caps">NUMBER</span>
-      <h2 class="challenge-name">1 / 11</h2>
-    </div>
+  <div class="pagination">
+    <a href="../index-zhtw.html"
+      <span class="hand">☜</span>
+    </a>
+    <a href="repository.html"
+      <span class="hand">☞</span>
+    </a>
   </div>
+  <a class="filledblock" href="../index-zhtw.html">
+    Git-it
+  </a>
+  <span class="challenge-title">get git</span>
 </header>
-      <div class="wrapper">
 
+<script type="text/javascript">
+  var selector = document.getElementById('lang-select')
+  var currentLang = "-zhtw".replace(/-/, '')
+  selector.value = currentLang
+  selector.addEventListener('change', function () {
+    var currentChallenge = document.querySelector('.challenge-item.current')
+    var dir = 'challenges' + (selector.value ? '-' + selector.value : '') + '/'
+    var url = currentChallenge.href.replace(/challenges(.+)?\//, dir)
+    location.href = url
+  })
+</script>
+
+    <div class="wrapper" id="challenge-body">
+      <div id="challenge-sidebar" class="sidebar">
+  <ul class="list-of-challenges">
+      <li>
+        <a id="get_git" data-id="0" href="get_git.html" class="challenge-item current">
+          <div class="current-arrow">▶️</div>
+          get git
+        </a>
+      </li>
+      <li>
+        <a id="repository" data-id="1" href="repository.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          repository
+        </a>
+      </li>
+      <li>
+        <a id="commit_to_it" data-id="2" href="commit_to_it.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          commit to it
+        </a>
+      </li>
+      <li>
+        <a id="githubbin" data-id="3" href="githubbin.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          GitHubbin
+        </a>
+      </li>
+      <li>
+        <a id="remote_control" data-id="4" href="remote_control.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          remote control
+        </a>
+      </li>
+      <li>
+        <a id="forks_and_clones" data-id="5" href="forks_and_clones.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          forks and clones
+        </a>
+      </li>
+      <li>
+        <a id="branches_arent_just_for_birds" data-id="6" href="branches_arent_just_for_birds.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          branches aren&#x27;t just for birds
+        </a>
+      </li>
+      <li>
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          it&#x27;s a small world
+        </a>
+      </li>
+      <li>
+        <a id="pull_never_out_of_date" data-id="8" href="pull_never_out_of_date.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          pull never out of date
+        </a>
+      </li>
+      <li>
+        <a id="requesting_you_pull_please" data-id="9" href="requesting_you_pull_please.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          requesting you pull please
+        </a>
+      </li>
+      <li>
+        <a id="merge_tada" data-id="10" href="merge_tada.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          merge tada
+        </a>
+      </li>
+  </ul>
+
+</div>
+      <div class="content">
               <div class="challenge">
         <h2>&#x95DC;&#x5361;&#x5167;&#x5BB9;&#xFF1A;</h2>
         <p>&#x8ACB;&#x5B89;&#x88DD; Git &#x5230;&#x4F60;&#x7684;&#x96FB;&#x8166;&#x4E0A;&#xFF0C;&#x4E26;&#x4E14;&#x8A2D;&#x5B9A;&#x597D; Git &#x5167;&#x90E8;&#x7684;&#x4F7F;&#x7528;&#x8005;&#x540D;&#x7A31;&#x548C;&#x96FB;&#x5B50;&#x4FE1;&#x7BB1;&#x3002;</p>
@@ -87,16 +163,29 @@
       <p>&#x8A2D;&#x5B9A;&#x4F60;&#x7684;&#x96FB;&#x5B50;&#x4FE1;&#x7BB1;&#xFF1A;</p>
       <p><code>$ git config --global user.email &quot;&lt;youremail@example.com&gt;&quot;</code></p>
 
-      <div class="verify">
-        <h3>&#x78BA;&#x8A8D;&#x4F60;&#x5B8C;&#x6210;&#x4E86;&#x6240;&#x6709;&#x6B65;&#x9A5F;&#xFF1A;</h3><code>git-it verify</code>
-        <h3>&#x524D;&#x5F80;&#x4E0B;&#x4E00;&#x95DC;&#xFF1A;</h3><code>git-it</code>
-      </div>
+<div class="verify">
+  <button class="white" id="verify-challenge">VERIFY</button>
+  <button class="white" id="clear-completed-challenge">Clear completed status</button>
+  <ul id="verify-list">
+  </ul>
+</div>
 
       <div id="git-tips">
         <h2>&#x6487;&#x6B65;</h2>
         <p>&#x9019;&#x500B;&#x91D1;&#x9322;&#x7B26;&#x865F; <code>$</code> &#x6703;&#x5E38;&#x5E38;&#x51FA;&#x73FE;&#x5728;&#x7A0B;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x9322;&#x865F;&#x4EE3;&#x8868;&#x9019;&#x500B;&#x6307;&#x4EE4;&#x662F;<strong>&#x7D42;&#x7AEF;&#x6A5F;</strong>&#x7684;&#x6307;&#x4EE4;&#xFF08;&#x53C3;&#x8003;&#x4E0A;&#x9762;&#x7684;&#x6307;&#x4EE4;&#x5BEB;&#x6CD5;&#xFF09;&#x3002;&#x5728;&#x8F38;&#x5165;&#x6307;&#x4EE4;&#x7684;&#x6642;&#x5019;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x8F38;&#x5165; <code>$</code> &#x7684;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x8F38;&#x5165;&#x5B83;&#x5F8C;&#x9762;&#x7684;&#x6307;&#x4EE4;&#x5373;&#x53EF;&#x3002;&#x4F8B;&#x5982;&#x5982;&#x679C;&#x4F60;&#x8981;&#x8F38;&#x5165;&#x6700;&#x5F8C;&#x9762;&#x300C;&#x78BA;&#x8A8D;&#x5B8C;&#x6210;&#x6B65;&#x9A5F;&#x7684;&#x6307;&#x4EE4;&#x300D;&#xFF0C;&#x53EA;&#x8981;&#x5728;&#x7D42;&#x7AEF;&#x6A5F;&#x8F38;&#x5165; <code>git-it verify</code> &#x5C31;&#x597D;&#x4E86;&#x3002;</p>
       </div>
 
+<script>
+  var verifyChallenge = require('../lib/verify/get_git.js')
+
+  var verifyButton = document.getElementById('verify-challenge')
+  var ul = document.getElementById('verify-list')
+
+  verifyButton.addEventListener('click', function clicked (event) {
+    ul.innerHTML = ''
+    verifyChallenge()
+  })
+</script>
 
         <div class="prenext">
   <div class="u-floatLeft">
@@ -113,25 +202,33 @@
 <footer>
   <ul>
     <li class="all-caps"><a href="../index-zhtw.html"><strong>Git-it Challenges</strong></a></li>
-    <li class="all-caps"><a href="../about.html">About</a></li>
-    <li class="all-caps"><a href="../dictionary.html">Dictionary</a></li>
-    <li class="all-caps"><a href="../resources.html">Resources</a></li>
+    <li class="all-caps"><a href="../pages/about.html">About</a></li>
+    <li class="all-caps"><a href="../pages/dictionary.html">Dictionary</a></li>
+    <li class="all-caps"><a href="../pages/resources.html">Resources</a></li>
     <li class="all-caps">
       <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
     </li>
+    <li class="all-caps"><a href="../index-zhtw.html">GIT-IT 關卡</a></li>
   </ul>
 </footer>
-
       </div>
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    </div>
 
-        ga('create', 'UA-52690821-1', 'auto');
-        ga('send', 'pageview');
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      </script>
-    </body>
+      ga('create', 'UA-52690821-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script>
+      var challengeStatus = require('../lib/challenge-completed.js')
+      var currentChallenge = 'get_git'
+      challengeStatus.completed(currentChallenge)
+    </script>
+
+  </body>
 </html>

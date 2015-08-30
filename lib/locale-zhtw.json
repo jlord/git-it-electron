@@ -1,0 +1,46 @@
+{
+  "n": {
+    ".gitignore": "忽略檔案表",
+    "repository": "程式庫",
+    "repositories": "程式庫",
+    "branch": "分支",
+    "branches": "分支",
+    "fork": "複本",
+    "forks": "複本",
+    "request": "要求",
+    "pull request": "收取要求",
+    "pull requests": "收取要求",
+    "commit": "提要",
+    "commits": "提要",
+    "upstream": "上游",
+    "feature": "功能",
+    "status": "現況",
+    "diff": "差異",
+    "readme": "讀我檔案",
+    "collaborator": "夥伴",
+    "collaborators": "夥伴們",
+    "remote": "遠端",
+    "remotes": "遠端",
+    "contributing": "貢獻",
+    "connections": "連結"
+  },
+  "v": {
+    "add": "新增",
+    "fork": "複製",
+    "forked": "複製",
+    "clone": "下載",
+    "push": "推送",
+    "close": "關閉",
+    "pull": "收取",
+    "commit": "提交",
+    "merge": "合併",
+    "merged": "合併",
+    "checkout": "取出",
+    "stage": "預備"
+  },
+  "adj": {
+    "merged": "合併了的",
+    "forked": "複本的",
+    "remote": "遠端的"
+  }
+}

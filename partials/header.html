@@ -5,18 +5,10 @@
       <option value="zhtw">正體中文</option>
     </select>
   </div>
-  <div class="pagination">
-    <a href="{{preurl}}"
-      <span class="hand">☜</span>
-    </a>
-    <a href="{{nexturl}}"
-      <span class="hand">☞</span>
-    </a>
-  </div>
   <a class="filledblock" href="../index{{lang}}.html">
     Git-it
   </a>
-  <span class="challenge-title">{{challengetitle}}</span>
+  <span class="challenge-title">{{pageTitle}}</span>
 </header>
 
 <script type="text/javascript">
@@ -24,9 +16,8 @@
   var currentLang = "{{ lang }}".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
-    var currentChallenge = document.querySelector('.challenge-item.current')
-    var dir = 'challenges' + (selector.value ? '-' + selector.value : '') + '/'
-    var url = currentChallenge.href.replace(/challenges(.+)?\//, dir)
+    var index = '/index' + (selector.value ? '-' + selector.value : '') + '.html'
+    var url = location.href.replace(/(\/pages)?\/[\w-]+.html/, index)
     location.href = url
   })
 </script>

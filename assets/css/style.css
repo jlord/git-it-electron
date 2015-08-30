@@ -42,6 +42,10 @@ body {
   margin: 0;
 }
 
+div, header, select {
+  box-sizing: border-box;
+}
+
 .u-floatRight {
   float: right;
 }
@@ -79,32 +83,157 @@ li {
 }
 
 .wrapper {
-  width: 600px;
-  margin: 30px auto;
-  padding: 0 20px;
-  overflow: auto;
+  min-width: 800px;
+  margin-top: 60px;
+}
+
+.page-wrapper {
+  max-width: 600px;
+  margin: 60px auto 0;
+  padding: 15px;
+}
+
+.sidebar {
+  width: 25%;
+  position: fixed;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.content {
+  padding: 15px;
+  margin-left: 25%;
+  width: 75%;
+  height: 100%;
+  background-color: #fff;
 }
 
 .site-header {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
   font-size: 20px;
+  z-index: 9;
+  text-align: center;
   background: #fafafa;
-  overflow: auto;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.challenge-title {
+  text-transform: capitalize;
+  font-size: 19px;
+  font-weight: 800;
+  color: #4BABFF;
+  line-height: 1;
+  display: inline-block;
+}
+
+.pagination {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+}
+
+.list-of-challenges {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-of-challenges li {
+  padding: 0;
+}
+
+.challenge-item {
+  padding: 8px 10px;
+  display: block;
+  text-transform: capitalize;
+}
+
+.challenge-item:hover,
+.challenge-item.current {
+  background-color: #fff;
+  color: #456;
+}
+
+/* :after instead of :before cause it messes with text-transform */
+.challenge-item:after {
+  content: " ";
+  float: left;
+  width: 20px;
+  display: inline-block;
+}
+
+.challenge-item.completed:after {
+  content: "✔️ ";
+  color: #fff;
+}
+
+.challenge-item.current .current-arrow {
+  display: block;
+}
+
+.current-arrow {
+  float: right;
+  display: none;
+}
+
+.challenge-item.completed {
+  background-color: #22B784;
+  color: #fff;
+  margin-top: -1px;
+}
+
+.hand,
+.lang-select {
+  padding: 4px 13px;
+  border-radius: 3px;
+  color: #0087ff;
+  display: inline-block;
 }
 
 .hand {
-  font-size: 40px;
-  padding: 4px 0;
-  color: #0087ff;
+  border: 1px solid #8cf;
+  font-size: 26px;
+  margin-left: 10px;
+}
+
+.lang-select {
+  border-color: #8cf;
+  position: absolute;
+  height: 36px;
+  width: 100px;
+  margin: 5px 8px;
+  top: 0;
+  left: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.lang-select:after {
+  content: "";
+  border: 5px solid transparent;
+  border-top-color: #8cf;
+  position: relative;
+  left: 40px;
+  top: 5px;
+  pointer-events: none;
+  display: inline-block;
+  z-index: 10;
+}
+
+.hand:hover {
+  border-color: transparent;
+  background-color: #08f;
+  color: #fff;
 }
 
 .challenge-name {
   text-transform: capitalize;
   font-weight: 900;
   color: #0087ff;
-}
-
-.site-header {
-  border-bottom-width: 3px;
 }
 
 .filledblock {
@@ -131,7 +260,7 @@ h1, h2, h3, h4, .toc {
   font-family: "Source Sans Pro";
 }
 
-h1, h2, h3, h4 {
+.content h1, .content h2, .content h3, .content h4 {
   margin-top: 50px;
 }
 
@@ -179,7 +308,7 @@ code, .outof {
 
 footer {
   border-top: 3px solid #0087ff;
-  margin: 20px 0;
+  margin: 20px 0 0;
   padding: 12px 0;
 }
 
@@ -236,7 +365,8 @@ footer ul li {
 }
 
 .verify {
-  margin: 30px 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #git-tips h2,
