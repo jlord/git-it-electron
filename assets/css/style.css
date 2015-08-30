@@ -108,6 +108,7 @@ li {
   top: 0;
   width: 100%;
   font-size: 20px;
+  z-index: 9;
   text-align: center;
   background: #fafafa;
   padding: 10px 0;
