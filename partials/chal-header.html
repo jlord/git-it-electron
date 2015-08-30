@@ -1,28 +1,14 @@
 <header id="challenge-header" class="site-header">
-  <div class="nav u-posFixed">
-    <div class="wrap-width u-textCenter">
-      <a href="{{preurl}}"
-        <span class="u-floatLeft hand">☜</span>
-      </a>
-      <a class="filledblock" href="../index{{lang}}.html">Git-it</a>
-      <a href="{{nexturl}}"
-        <span class="u-floatRight hand">☞</span>
-      </a>
-    </div>
+  <div class="pagination">
+    <a href="{{preurl}}"
+      <span class="hand">☜</span>
+    </a>
+    <a href="{{nexturl}}"
+      <span class="hand">☞</span>
+    </a>
   </div>
-
-  <div class="wrapper">
-    <div class="u-floatLeft">
-      <span class="all-caps">CHALLENGE</span>
-      <h2 class="challenge-name">{{challengetitle}}</h2>
-      <div id="challenge-completed" style="display:none;">
-        <span>COMPLETED!</span>
-      </div>
-    </div>
-
-    <div class="u-floatRight u-textRight">
-      <span class="all-caps">NUMBER</span>
-      <h2 class="challenge-name">{{challengenumber}} / 11</h2>
-    </div>
-  </div>
+  <a class="filledblock" href="../index{{lang}}.html">
+    Git-it
+  </a>
+  <span class="challenge-title">{{challengetitle}}</span>
 </header>
