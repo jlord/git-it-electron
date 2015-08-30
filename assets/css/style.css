@@ -42,7 +42,7 @@ body {
   margin: 0;
 }
 
-div, header {
+div, header, select {
   box-sizing: border-box;
 }
 
@@ -126,7 +126,7 @@ li {
 .pagination {
   position: absolute;
   top: 12px;
-  right: 12px;
+  right: 15px;
 }
 
 .list-of-challenges {
@@ -179,14 +179,42 @@ li {
   margin-top: -1px;
 }
 
-.hand {
-  font-size: 26px;
+.hand,
+.lang-select {
   padding: 4px 13px;
   border-radius: 3px;
-  margin-left: 10px;
   color: #0087ff;
-  border: 1px solid #8cf;
   display: inline-block;
+}
+
+.hand {
+  border: 1px solid #8cf;
+  font-size: 26px;
+  margin-left: 10px;
+}
+
+.lang-select {
+  border-color: #8cf;
+  position: absolute;
+  height: 36px;
+  width: 100px;
+  margin: 5px 8px;
+  top: 0;
+  left: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.lang-select:after {
+  content: "";
+  border: 5px solid transparent;
+  border-top-color: #8cf;
+  position: relative;
+  left: 40px;
+  top: 5px;
+  pointer-events: none;
+  display: inline-block;
+  z-index: 10;
 }
 
 .hand:hover {
