@@ -133,10 +133,14 @@
       <p>&#x4F60;&#x5728;&#x672C;&#x6A5F;&#x5EFA;&#x7ACB;&#x4E86; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repositories</n>&#xFF0C;&#x8207;&#x4E00;&#x540D; <n><span class="superscript">&#x5925;&#x4F34;</span>collaborator</n> &#x5354;&#x4F5C;&#x3001;<v><span class="superscript">&#x63A8;&#x9001;</span>push</v>&#x3001;<v><span class="superscript">&#x6536;&#x53D6;</span>pull</v>&#xFF0C;&#x52A0;&#x5165;&#x4E86;&#x767E;&#x842C;&#x958B;&#x767C;&#x8005;&#x6240;&#x8655;&#x7684;&#x958B;&#x6E90;&#x4E16;&#x754C;&#xFF0C;&#x662F;&#x4F60;&#xFF0C;&#x8C50;&#x5BCC;&#x4E86;&#x958B;&#x6E90;&#x4E16;&#x754C;&#xFF01;</p>
       <p>&#x53BB; <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> &#x9019;&#x88E1;&#x770B;&#xFF0C;&#x4F60;&#x7684;&#x540D;&#x5B57;&#x5DF2;&#x7D93;&#x88AB;&#x6536;&#x9304;&#x9032;&#x4F86;&#x4E86;&#x5462;&#xFF01;</p>
 
-      <div class="verify">
-        <h3>&#x78BA;&#x8A8D;&#x4F60;&#x5B8C;&#x6210;&#x4E86;&#x6240;&#x6709;&#x6B65;&#x9A5F;&#xFF1A;</h3><code>git-it verify</code>
-        <h3>&#x524D;&#x5F80;&#x4E0B;&#x4E00;&#x95DC;&#xFF1A;</h3><code>git-it</code>
-      </div>
+<div class="verify">
+  <button class="white" id="verify-challenge">VERIFY</button>
+  <button class="white" id="select-directory">SELECT DIRECTORY</button>
+  <button class="white" id="clear-completed-challenge">Clear completed status</button>
+  <span id="directory-path"></span>
+  <ul id="verify-list">
+  </ul>
+</div>
 
       <div id="git-tips">
         <h2>&#x6487;&#x6B65;</h2>
@@ -153,6 +157,38 @@
           <code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
         </ul>
       </div>
+
+<script>
+  var ipc = require('ipc')
+
+  var verifyChallenge = require('../lib/verify/merge_tada.js')
+
+  var directoryPath = ''
+
+  var verifyButton = document.getElementById('verify-challenge')
+  var directoryButton = document.getElementById('select-directory')
+  var ul = document.getElementById('verify-list')
+
+  directoryButton.addEventListener('click', function clickedDir (event) {
+    ipc.send('open-file-dialog')
+  })
+
+  ipc.on('selected-directory', function(path) {
+    // TODO style and trim this
+    directoryPath = path
+    document.getElementById('directory-path').innerHTML = path
+  })
+
+  verifyButton.addEventListener('click', function clicked (event) {
+    if (directoryPath === '') {
+      var message = 'Please select your repository directory, then verify.'
+      document.getElementById('directory-path').innerHTML = message
+    } else {
+      ul.innerHTML = ''
+      verifyChallenge(directoryPath[0])
+    }
+  })
+</script>
 
         <div class="prenext">
   <div class="u-floatLeft">

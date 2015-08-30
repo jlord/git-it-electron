@@ -140,10 +140,14 @@
 
       <p><code>$ git remote add upstream https://github.com/jlord/patchwork.git</code></p>
 
-      <div class="verify">
-        <h3>&#x78BA;&#x8A8D;&#x4F60;&#x5B8C;&#x6210;&#x4E86;&#x6240;&#x6709;&#x6B65;&#x9A5F;&#xFF1A;</h3><code>git-it verify</code>
-        <h3>&#x524D;&#x5F80;&#x4E0B;&#x4E00;&#x500B;&#x95DC;&#x5361;</h3><code>git-it</code>
-      </div>
+<div class="verify">
+  <button class="white" id="verify-challenge">VERIFY</button>
+  <button class="white" id="select-directory">SELECT DIRECTORY</button>
+  <button class="white" id="clear-completed-challenge">Clear completed status</button>
+  <span id="directory-path"></span>
+  <ul id="verify-list">
+  </ul>
+</div>
 
       <div id="git-tips">
         <h2>&#x6487;&#x6B65;</h2>
@@ -154,6 +158,38 @@
           <li><code>$ git remote -v</code></li>
         </ul>
       </div>
+
+<script>
+  var ipc = require('ipc')
+
+  var verifyChallenge = require('../lib/verify/forks_and_clones.js')
+
+  var directoryPath = ''
+
+  var verifyButton = document.getElementById('verify-challenge')
+  var directoryButton = document.getElementById('select-directory')
+  var ul = document.getElementById('verify-list')
+
+  directoryButton.addEventListener('click', function clickedDir (event) {
+    ipc.send('open-file-dialog')
+  })
+
+  ipc.on('selected-directory', function(path) {
+    // TODO style and trim this
+    directoryPath = path
+    document.getElementById('directory-path').innerHTML = path
+  })
+
+  verifyButton.addEventListener('click', function clicked (event) {
+    if (directoryPath === '') {
+      var message = 'Please select your repository directory, then verify.'
+      document.getElementById('directory-path').innerHTML = message
+    } else {
+      ul.innerHTML = ''
+      verifyChallenge(directoryPath[0])
+    }
+  })
+</script>
 
         <div class="prenext">
   <div class="u-floatLeft">

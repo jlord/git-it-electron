@@ -138,10 +138,24 @@
 
       </p><p>&#x5982;&#x679C; <n><span class="superscript">&#x6536;&#x53D6;&#x8981;&#x6C42;</span>Pull Request</n> &#x6C92;&#x6709;&#x554F;&#x984C;&#x7684;&#x8A71;&#xFF0C;&#x5F88;&#x5FEB;&#x5C31;&#x6703;&#x88AB;&#x81EA;&#x52D5; <v><span class="superscript">&#x5408;&#x4F75;</span>merged</v> &#x4E86;&#x54E6;&#x3002;&#x82E5;&#x6C92;&#x6709;&#x5F88;&#x5FEB;&#x7684;&#x88AB;&#x81EA;&#x52D5; <v><span class="superscript">&#x5408;&#x4F75;</span>merged</v> &#x7684;&#x8A71;&#xFF0C;Reporobot &#x6703;&#x7559;&#x8A00;&#x544A;&#x8A34;&#x4F60;&#xFF0C;&#x70BA;&#x4EC0;&#x9EBC;&#x4E0D;&#x80FD; <v><span class="superscript">&#x5408;&#x4F75;</span>merge</v>&#x3002;&#x5982;&#x679C;&#x662F;&#x9019;&#x6A23;&#x5B50;&#x5462;&#xFF0C;&#x5148; <v><span class="superscript">&#x95DC;&#x9589;</span>close</v> GitHub &#x4E0A;&#x9762;&#x7684; <n><span class="superscript">&#x6536;&#x53D6;&#x8981;&#x6C42;</span>Pull Request</n>&#xFF0C;&#x5728;&#x4F60;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x505A;&#x9069;&#x7576;&#x7684;&#x4FEE;&#x6539;&#xFF0C;&#x518D;&#x6B21; <v><span class="superscript">&#x63A8;&#x9001;</span>push</v> &#x9019;&#x4E9B;&#x4FEE;&#x6539;&#x4E26;&#x91CD;&#x65B0;&#x767C;&#x9001; <n><span class="superscript">&#x6536;&#x53D6;&#x8981;&#x6C42;</span>Pull Request</n> &#x54E6;&#x3002;</p>
 
-      <div class="verify">
-        <h3>&#x78BA;&#x8A8D;&#x4F60;&#x5B8C;&#x6210;&#x4E86;&#x6240;&#x6709;&#x6B65;&#x9A5F;&#xFF1A;</h3><code>git-it verify</code>
-        <h3>&#x524D;&#x5F80;&#x4E0B;&#x4E00;&#x95DC;&#xFF1A;</h3><code>git-it</code>
-      </div>
+<div class="verify">
+  <button class="white" id="verify-challenge">VERIFY</button>
+  <button class="white" id="clear-completed-challenge">Clear completed status</button>
+  <ul id="verify-list">
+  </ul>
+</div>
+
+<script>
+  var verifyChallenge = require('../lib/verify/requesting_you_pull_please.js')
+
+  var verifyButton = document.getElementById('verify-challenge')
+  var ul = document.getElementById('verify-list')
+
+  verifyButton.addEventListener('click', function clicked (event) {
+    ul.innerHTML = ''
+    verifyChallenge()
+  })
+</script>
 
         <div class="prenext">
   <div class="u-floatLeft">

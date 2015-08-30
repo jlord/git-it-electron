@@ -119,24 +119,24 @@
       <code>
         github.com/YOURUSERNAME/patchwork/settings/collaboration</code>
 
-      <div class="verify">
-        <h3>&#x78BA;&#x8A8D;&#x4F60;&#x5B8C;&#x6210;&#x4E86;&#x6240;&#x6709;&#x6B65;&#x9A5F;&#xFF1A;</h3><code>git-it verify</code>
-        <h3>&#x524D;&#x5F80;&#x4E0B;&#x4E00;&#x95DC;&#xFF1A;</h3><code>git-it</code>
-      </div>
+<div class="verify">
+  <button class="white" id="verify-challenge">VERIFY</button>
+  <button class="white" id="clear-completed-challenge">Clear completed status</button>
+  <ul id="verify-list">
+  </ul>
+</div>
 
-      <div id="git-tips">
-        <h2>&#x6487;&#x6B65;</h2>
-        <ul>
-          <li><strong>&#x5F9E; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> <v><span class="superscript">&#x6536;&#x53D6;</span>pull</v> &#x66F4;&#x65B0;&#x56DE;&#x4F86;</strong></li>
-          <code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCH&gt;</code>
-          <li><strong>&#x8907;&#x88FD; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x5230;&#x81EA;&#x5DF1;&#x7684;&#x96FB;&#x8166;&#x88E1;</strong></li>
-          <code>$ git clone &lt;URL&gt;</code>
-          <li><strong>&#x65B0;&#x589E; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> <n><span class="superscript">&#x9023;&#x7D50;</span>connections</n></strong></li>
-          <code>$ git remote add &lt;REMOTENAME&gt; &lt;URL&gt;</code>
-          <li><strong>&#x6AA2;&#x8996;&#x73FE;&#x6709;&#x7684; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> <n><span class="superscript">&#x9023;&#x7D50;</span>connections</n></strong></li>
-          <code>$ git remote -v</code>
-        </ul>
-      </div>
+<script>
+  var verifyChallenge = require('../lib/verify/its_a_small_world.js')
+
+  var verifyButton = document.getElementById('verify-challenge')
+  var ul = document.getElementById('verify-list')
+
+  verifyButton.addEventListener('click', function clicked (event) {
+    ul.innerHTML = ''
+    verifyChallenge()
+  })
+</script>
 
         <div class="prenext">
   <div class="u-floatLeft">
