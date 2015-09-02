@@ -39,6 +39,10 @@ div, header, select {
   box-sizing: border-box;
 }
 
+.full-width {
+  width: 100%;
+}
+
 .u-floatRight {
   float: right;
 }
@@ -450,7 +454,6 @@ n, v, adj {
 
 #verify-list {
   list-style: none;
-  left-indent: none;
   padding-left: 0;
 }
 
@@ -518,5 +521,6 @@ button.light-blue:hover {
   background-color: #e2effa;
 }
 
-.challenge-is-completed {
+#clear-completed-challenge {
+  margin-bottom: 11px;
 }
