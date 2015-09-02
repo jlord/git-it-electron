@@ -424,6 +424,21 @@ n, v, adj {
 
 /* new stuff */
 
+#directory-path span {
+  font-family: Liberation Mono, Monaco, Courier New, monospace;
+  padding: 6px 12px 6px 10px;
+  vertical-align: middle;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin-left: -3px;
+}
+
 .verify-fail:before {
   content: '😞 ';
 }

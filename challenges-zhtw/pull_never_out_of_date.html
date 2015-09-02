@@ -176,7 +176,8 @@
   ipc.on('selected-directory', function(path) {
     // TODO style and trim this
     directoryPath = path
-    document.getElementById('directory-path').innerHTML = path
+    document.getElementById('directory-path').innerHTML = '<span>' + path + '</span>'
+
   })
 
   verifyButton.addEventListener('click', function clicked (event) {

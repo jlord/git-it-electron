@@ -200,9 +200,9 @@
   })
 
   ipc.on('selected-directory', function(path) {
-    // TODO style and trim this
+    // TODO make this not manually added into each challenge
     directoryPath = path
-    document.getElementById('directory-path').innerHTML = path
+    document.getElementById('directory-path').innerHTML = '<span>' + path + '</span>'
   })
 
   verifyButton.addEventListener('click', function clicked (event) {
