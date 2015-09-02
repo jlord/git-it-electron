@@ -129,7 +129,8 @@ want to tell Git the location of the remote version on GitHub's servers. You can
 
   verifyButton.addEventListener('click', function clicked (event) {
     if (directoryPath === '') {
-      var message = 'Please select your repository directory, then verify.'
+      var message = '<span>Please select your repository directory.</span>'
+
       document.getElementById('directory-path').innerHTML = message
     } else {
       ul.innerHTML = ''

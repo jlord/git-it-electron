@@ -250,7 +250,8 @@ GitHub Guide: <a href="http://guides.github.com/overviews/flow/" target="_blank"
 
   verifyButton.addEventListener('click', function clicked (event) {
     if (directoryPath === '') {
-      var message = 'Please select your repository directory, then verify.'
+      var message = '<span>Please select your repository directory.</span>'
+
       document.getElementById('directory-path').innerHTML = message
     } else {
       ul.innerHTML = ''
