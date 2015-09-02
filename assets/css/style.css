@@ -26,15 +26,8 @@
   src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(fonts/SourceSansPro-Black.otf) format('opentype');
 }
 
-@font-face {
-  font-family: 'Nothing You Could Do';
-  font-style: normal;
-  font-weight: 900;
-  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(fonts/NothingYouCouldDo.tff) format('truetype');
-}
-
 body {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
   line-height: 1.8em;
   color: #333935;
   background-color: #f5f5f5;
@@ -257,7 +250,7 @@ li {
 }
 
 h1, h2, h3, h4, .toc {
-  font-family: "Source Sans Pro";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .content h1, .content h2, .content h3, .content h4 {
@@ -479,7 +472,7 @@ button {
   cursor: pointer;
   -webkit-user-select: none;
   border: 1px solid transparent;
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
   text-transform: uppercase;
 }
 
