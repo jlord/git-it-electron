@@ -494,6 +494,10 @@ button {
   text-transform: uppercase;
 }
 
+button:focus {
+  outline: 0;
+}
+
 button:hover {
   background-color: #e7e7e7;
 }
@@ -523,4 +527,18 @@ button.light-blue:hover {
 
 #clear-completed-challenge {
   margin-bottom: 11px;
+}
+
+.teal {
+  background: #2BDA9E;
+  color: #fff;
+}
+
+.teal:hover {
+  background: #6EE7BD;
+  color: #fff;
+}
+
+.grey-border {
+  border: 1px solid #818181
 }
