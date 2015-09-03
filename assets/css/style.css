@@ -35,7 +35,7 @@ body {
   margin: 0;
 }
 
-div, header, select {
+div, header, select, a {
   box-sizing: border-box;
 }
 
@@ -144,15 +144,12 @@ li {
 }
 
 .challenge-item {
-  padding: 8px 10px;
+  padding: 3px 10px;
   display: block;
   text-transform: capitalize;
-}
-
-.challenge-item:hover,
-.challenge-item.current {
-  background-color: #fff;
-  color: #456;
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 /* :after instead of :before cause it messes with text-transform */
@@ -165,6 +162,9 @@ li {
 
 .challenge-item.completed:after {
   content: "✔️ ";
+  position: absolute;
+  left: 10px;
+  top: 4px;
   color: #fff;
 }
 
@@ -177,11 +177,24 @@ li {
   display: none;
 }
 
+.challenge-item.completed:hover {
+  background-color: #1EA577;
+}
+
+.challenge-item.current {
+  background-color: #ECFCE0;
+  color: #456;
+  margin-right: -3px;
+  border-color: white;
+}
+
 .challenge-item.completed {
+  position: relative;
   background-color: #22B784;
   color: #fff;
-  margin-top: -1px;
+  padding-left: 30px;
 }
+
 
 .hand,
 .lang-select {
@@ -296,6 +309,7 @@ a:hover {
 }
 
 code, .outof {
+  font-size: 0.9em;
   border: 1px solid #9DA6B3;
   padding: 4px 6px;
   border-radius: 2px;
@@ -329,11 +343,36 @@ footer ul li {
   font-style: italic;
 }
 
-#git-tips, .didnt-pass {
-  background: #BADFFF;
+#git-tips,
+.didnt-pass {
+  border: 1px solid #BADFFF;
   padding: 18px;
-  margin: 18px 0;
-  color: #0087ff;
+  margin: 18px 0 36px;
+}
+
+.didnt-pass {
+  border-color: #999;
+}
+
+#git-tips h2 {
+  color: #08f;
+}
+
+#git-tips h2,
+.didnt-pass h2 {
+  margin: -32px -8px 0;
+  float: left;
+  background: #fff;
+  padding: 0 8px;
+}
+
+#git-tips h2 + p {
+  margin-top: 0;
+}
+
+#git-tips p:last-child,
+.didnt-pass p:last-child {
+  margin-bottom: 0;
 }
 
 #git-tips ul {
@@ -347,7 +386,7 @@ footer ul li {
 }
 
 #git-tips li {
-  margin-top: 12px;
+  margin-top: 0px;
 }
 
 .challenge, .verify {
@@ -366,17 +405,19 @@ footer ul li {
   margin-bottom: 30px;
 }
 
-#git-tips h2,
 #git-tips h4,
-.didnt-pass h2,
-.didnt-pass h4,
 .challenge h2,
 .verify h3 {
   margin-top: 0;
 }
 
-.didnt-pass {
-  background: #E3EEF8;
+.didnt-pass h4 {
+  margin: 10px 0 0;
+}
+
+.didnt-pass h4:before {
+  content: '⚠️ ';
+  font-weight: normal;
 }
 
 .didnt-pass p + h4 {
@@ -428,7 +469,12 @@ n, v, adj {
 
 /* new stuff */
 
-#directory-path span {
+#directory-path:empty {
+  display: none;
+}
+
+#path-required-warning,
+#directory-path {
   font-family: Liberation Mono, Monaco, Courier New, monospace;
   padding: 6px 12px 6px 10px;
   vertical-align: middle;
@@ -441,6 +487,19 @@ n, v, adj {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   margin-left: -3px;
+}
+
+#path-required-warning {
+  display: none;
+  color: #ff0;
+}
+
+#path-required-warning.show {
+  display: inline;
+}
+
+#path-required-warning.show + #directory-path {
+  display: none;
 }
 
 .verify-fail:before {

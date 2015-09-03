@@ -1,35 +1,28 @@
-_**Issue or Pull Request?** FYI: This project is a **work in progress** and doesn't work right now. If you'd like to contribute with an Issue or Pull Request (yay!), see the [Contributing Doc](/CONTRIBUTING.md)._
+# Git-it (For your Desktop)
+
+Git-it is an app that teaches you Git and GitHub on the [command line](https://en.wikipedia.org/wiki/Command-line_interface).
+
+Previously it ran _in_ terminal (the command line application) with a guide online but now the guide _is_ the app and it runs on your desktop on its own, thanks to [Electron.js](electron.atom.io).
 
 ---
+## Hello, future Forkers, Branchers and Pull Requesters!
 
-# git-it-electron
+This application contains challenges for learning Git and GitHub—by using _real_ Git and GitHub, not emulators. You'll be learning the awesome (and not so scary) command line and GitHub which means when you finish all of the challenges you'll have _real_ repositories on your GitHub account and green squares on your [contribution chart](https://github.com/blog/1360-introducing-contributions).
 
-### A Git-it Desktop App!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+![contributions](https://raw.githubusercontent.com/jlord/git-it/master/ghcc.png)
 
-The original [Git-it](http://github.com/jlord/git-it) is nearly 1.5 years of age and it's been awesome.
+## What to Install
 
-#### Over 2,778 people have completed Git-it!
+You'll just need Git (since that's what you're learning), a text editor and Git-it. The first two you'll continue to use once you're a Git/GitHub Pro. You'll create a GitHub account in the first challenge but if you already have one, you're already ahead!
 
-One of the improvements I've longed to make was to make a better get-git-it-ing experience. Currently users need to install [Git](http://git-scm.com) and [Node.js](http://nodejs.org) before they can start. Installing Git is fine, that's what you're there to learn but installing Node.js, while it isn't hard, is a bit outside the scope for people who are often entirely new to programming, version control and terminal.
+**Git**
 
-Git-it is one of many [nodeschool.io](http://nodeschool.io) workshoppers that run lessons inside of terminal to teach a skill, but it isn't actually about learning JavaScript/Node.js itself. _An aside, check out those workshops, Node.js is great and what current Git-it is built with and is still what I'll use to build Git-it with Electron._
+We recommend installing [GitHub Desktop](desktop.github.com) (free) because it installs Git in the most consistent way across operating systems (Windows, Mac, Linux).
 
-### Git-it on Electron
+**Text Editor**
 
-If you don't know, [Electron](http:electron.atom.io), is a tool that lets you build desktop apps (ones you download and click icons on your computer's desktop or dock to run) with only web stuff like HTML, CSS and JavaScript. Normally these applications are written in code native  to different operating systems and thus requires knowing more than just web languages.
+<!-- I'm quite partial (I'm on this team) but [Atom](atom.io) is a great text editor (also free) and it is built on [Electron.js](electron.atom.io) just like Git-it. Visit the website and download the version for your operating system. -->
 
-Electron takes the web code you've written and packages it up to run on Windows, Mac and Linux operating systems. This is is awesome.
+**Git-it**
 
-So I'm going to move Git-it to Electron. You'll still use your terminal to do the Git commands you learn yourself (that's the point!) but Git-it will move from also being in your terminal window to being its own app which display [the guide](http://jlord.github.io/git-it) and verify completed challenges.
-
-### Play Along!
-
-If using web skills to build apps interests you, follow along here!
-
-#### Watch this repo and follow the process of creating a desktop app with Electron!
-
-Extra bonus, you'll see how often I mess up and how sloppy my commit messages are. YOLO.
-
-I will go the extra mile to make good Pull Requests to myself and document the process. Maybe even all the ways I paint my nails while building this. Of course contributions will be welcome, too!
-
-### License: [BSD](license.md)
+You can view the [releases](http://github.com/jlord/git-it-electron/releases) section of this repository to find the download for your operating system. Click to download your version and then place it where you keep your other applications.

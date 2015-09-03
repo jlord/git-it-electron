@@ -38,15 +38,3 @@
       <p>如果 <n>Pull Request</n> 沒有問題的話，很快就會被自動 <v>merged</v> 了哦。若沒有很快的被自動 <v>merged</v> 的話，Reporobot 會留言告訴你，為什麼不能 <v>merge</v>。如果是這樣子呢，先 <v>close</v> GitHub 上面的 <n>Pull Request</n>，在你的 <n>branch</n> 做適當的修改，再次 <v>push</v> 這些修改並重新發送 <n>Pull Request</n> 哦。</p>
 
 {{{verify_button}}}
-
-<script>
-  var verifyChallenge = require('../lib/verify/requesting_you_pull_please.js')
-
-  var verifyButton = document.getElementById('verify-challenge')
-  var ul = document.getElementById('verify-list')
-
-  verifyButton.addEventListener('click', function clicked (event) {
-    ul.innerHTML = ''
-    verifyChallenge()
-  })
-</script>

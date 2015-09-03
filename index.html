@@ -33,17 +33,6 @@
       </a>
     </header>
 
-    <script type="text/javascript">
-      var selector = document.getElementById('lang-select')
-      var currentLang = location.href.match(/index(-.+)/) ? location.href.match(/index(-.+)/)[1] : ''
-      selector.value = currentLang
-      selector.addEventListener('change', function () {
-        var index = '/index' + (selector.value ? '-' + selector.value : '') + '.html'
-        var url = location.href.replace(/(\/pages)?\/[\w-]+.html/, index)
-        location.href = url
-      })
-    </script>
-
     <div class="page-wrapper">
       <h2>Welcome to Git-it!</h2>
       <p>Step-by-step instructions for each of the challenges in the <a href="http://github.com/jlord/git-it" target="_blank">Git-it workshop</a>. View the <a href="index-zhtw.html">Traditional Chinese version</a>.</p>
@@ -82,5 +71,6 @@
       </footer>
 
     </div>
+    <script src="./lib/app.js"></script>
   </body>
 </html>
