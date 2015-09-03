@@ -49,38 +49,3 @@
           <li><code>$ git commit -m "&#60;your commit message&#62;"</code></li>
         <ul>
       </div>
-
-
-<script>
-  var ipc = require('ipc')
-
-  var verifyChallenge = require('../lib/verify/commit_to_it.js')
-
-  var directoryPath = ''
-
-  var verifyButton = document.getElementById('verify-challenge')
-  var directoryButton = document.getElementById('select-directory')
-  var ul = document.getElementById('verify-list')
-
-  directoryButton.addEventListener('click', function clickedDir (event) {
-    ipc.send('open-file-dialog')
-  })
-
-  ipc.on('selected-directory', function(path) {
-    // TODO style and trim this
-    directoryPath = path
-    document.getElementById('directory-path').innerHTML = '<span>' + path + '</span>'
-
-  })
-
-  verifyButton.addEventListener('click', function clicked (event) {
-    if (directoryPath === '') {
-      var message = '<span>Please select your repository directory.</span>'
-
-      document.getElementById('directory-path').innerHTML = message
-    } else {
-      ul.innerHTML = ''
-      verifyChallenge(directoryPath[0])
-    }
-  })
-</script>

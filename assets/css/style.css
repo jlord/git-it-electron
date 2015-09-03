@@ -456,7 +456,12 @@ n, v, adj {
 
 /* new stuff */
 
-#directory-path span {
+#directory-path:empty {
+  display: none;
+}
+
+#path-required-warning,
+#directory-path {
   font-family: Liberation Mono, Monaco, Courier New, monospace;
   padding: 6px 12px 6px 10px;
   vertical-align: middle;
@@ -469,6 +474,19 @@ n, v, adj {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   margin-left: -3px;
+}
+
+#path-required-warning {
+  display: none;
+  color: #ff0;
+}
+
+#path-required-warning.show {
+  display: inline;
+}
+
+#path-required-warning.show + #directory-path {
+  display: none;
 }
 
 .verify-fail:before {
