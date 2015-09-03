@@ -19,15 +19,3 @@
         github.com/YOURUSERNAME/patchwork/settings/collaboration</code>
 
 {{{verify_button}}}
-
-<script>
-  var verifyChallenge = require('../lib/verify/its_a_small_world.js')
-
-  var verifyButton = document.getElementById('verify-challenge')
-  var ul = document.getElementById('verify-list')
-
-  verifyButton.addEventListener('click', function clicked (event) {
-    ul.innerHTML = ''
-    verifyChallenge()
-  })
-</script>

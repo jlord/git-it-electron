@@ -33,17 +33,6 @@
       </a>
     </header>
 
-    <script type="text/javascript">
-      var selector = document.getElementById('lang-select')
-      var currentLang = location.href.match(/index-(.+).html/) ? location.href.match(/index-(.+).html/)[1] : ''
-      selector.value = currentLang
-      selector.addEventListener('change', function () {
-        var index = '/index' + (selector.value ? '-' + selector.value : '') + '.html'
-        var url = location.href.replace(/(\/pages)?\/[\w-]+.html/, index)
-        location.href = url
-      })
-    </script>
-
     <div class="page-wrapper">
       <h2>歡迎來到 Git-it 台灣</h2>
       <p>Git-it 是一個教學 Git 和 GitHub 的終端機程式，這個網頁會給你每一個關卡的詳細教學。 <strong>就算沒有網路也是可以使用這份教學文件的唷</strong>！讓我們開始吧。</p>
@@ -79,5 +68,6 @@
       </footer>
 
     </div>
+    <script src="./lib/app.js"></script>
   </body>
 </html>

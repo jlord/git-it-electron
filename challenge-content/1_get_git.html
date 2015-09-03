@@ -59,15 +59,3 @@ You can verify that it's really there by typing:</p>
 to signify that the line is <strong>command line</strong> code (see the code snippets above). You don't actually
 type the <code>$</code> in though, only type what comes after. For instance, to run the verify command above, you're actually going to type <code>git-it verify</code> into terminal.</p>
 </div>
-
-<script>
-  var verifyChallenge = require('../lib/verify/get_git.js')
-
-  var verifyButton = document.getElementById('verify-challenge')
-  var ul = document.getElementById('verify-list')
-
-  verifyButton.addEventListener('click', function clicked (event) {
-    ul.innerHTML = ''
-    verifyChallenge()
-  })
-</script>

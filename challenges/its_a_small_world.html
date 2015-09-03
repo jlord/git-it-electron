@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script>require('../lib/handle-external-links.js')</script>
   </head>
   <body>
     <header id="challenge-header" class="site-header">
@@ -149,18 +148,6 @@
   <button class="white full-width" id="clear-completed-challenge">Clear completed status</button>
 </div>
 
-<script>
-  var verifyChallenge = require('../lib/verify/its_a_small_world.js')
-
-  var verifyButton = document.getElementById('verify-challenge')
-  var ul = document.getElementById('verify-list')
-
-  verifyButton.addEventListener('click', function clicked (event) {
-    ul.innerHTML = ''
-    verifyChallenge()
-  })
-</script>
-
         <div class="prenext">
   <div class="u-floatLeft">
     <a href="branches_arent_just_for_birds.html" class="u-inline-block all-caps">branches aren&#x27;t just for birds
@@ -189,20 +176,13 @@
     </div>
 
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-52690821-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-
-    <script>
       var challengeStatus = require('../lib/challenge-completed.js')
       var currentChallenge = 'its_a_small_world'
       challengeStatus.completed(currentChallenge)
     </script>
 
+    <script>require('../lib/handle-external-links.js')</script>
+    <script>require('../lib/app.js')</script>
+    <script>require('../lib/challenge.js')</script>
   </body>
 </html>

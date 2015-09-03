@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script>require('../lib/handle-external-links.js')</script>
   </head>
   <body>
     <header id="challenge-header" class="site-header">
@@ -159,6 +158,7 @@
 <div class="verify">
   <button class="white" id='verify-challenge'>VERIFY</button>
   <button class="white" id='select-directory'>SELECT DIRECTORY</button>
+  <span id='path-required-warning'>Please select your repository directory.</span>
   <span id='directory-path'></span>
   <ul id="verify-list">
   </ul>
@@ -180,40 +180,6 @@
     <li><code>$ git commit -m "&#60;your commit message&#62;"</code></li>
   <ul>
 </div>
-
-<script>
-  var ipc = require('ipc')
-
-  var verifyChallenge = require('../lib/verify/commit_to_it.js')
-
-  var directoryPath = ''
-
-  var verifyButton = document.getElementById('verify-challenge')
-  var directoryButton = document.getElementById('select-directory')
-  var ul = document.getElementById('verify-list')
-
-  directoryButton.addEventListener('click', function clickedDir (event) {
-    ipc.send('open-file-dialog')
-  })
-
-  ipc.on('selected-directory', function(path) {
-    // TODO style and trim this
-    directoryPath = path
-    document.getElementById('directory-path').innerHTML = '<span>' + path + '</span>'
-
-  })
-
-  verifyButton.addEventListener('click', function clicked (event) {
-    if (directoryPath === '') {
-      var message = '<span>Please select your repository directory.</span>'
-
-      document.getElementById('directory-path').innerHTML = message
-    } else {
-      ul.innerHTML = ''
-      verifyChallenge(directoryPath[0])
-    }
-  })
-</script>
 
         <div class="prenext">
   <div class="u-floatLeft">
@@ -243,20 +209,13 @@
     </div>
 
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-52690821-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-
-    <script>
       var challengeStatus = require('../lib/challenge-completed.js')
       var currentChallenge = 'commit_to_it'
       challengeStatus.completed(currentChallenge)
     </script>
 
+    <script>require('../lib/handle-external-links.js')</script>
+    <script>require('../lib/app.js')</script>
+    <script>require('../lib/challenge.js')</script>
   </body>
 </html>
