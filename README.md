@@ -4,7 +4,7 @@
 
 Git-it is an app that teaches you Git and GitHub on the [command line](https://en.wikipedia.org/wiki/Command-line_interface).
 
-Previously it ran _in_ terminal (the command line application) with a guide online but now the guide _is_ the app and it runs on your desktop on its own, thanks to [Electron.js](electron.atom.io).
+Previously it ran _in_ terminal (the command line application) with a guide online but now the guide _is_ the app and it runs on your desktop on its own, thanks to [Electron.js](http://electron.atom.io).
 
 ---
 ## Hello, future Forkers, Branchers and Pull Requesters!
@@ -19,13 +19,13 @@ You'll just need Git (since that's what you're learning), a text editor and Git-
 
 #### Git
 
-We recommend installing [GitHub Desktop](desktop.github.com) (free) because it installs Git in the most consistent way across operating systems (Windows, Mac, Linux). We won't use the app itself in the challenges, just the Git it installs.
+We recommend installing [GitHub Desktop](http://desktop.github.com) (free) because it installs Git in the most consistent way across operating systems (Windows, Mac, Linux). We won't use the app itself in the challenges, just the Git it installs.
 
 Note—If you're using Windows, you should use the **Git Shell** app as your terminal. In Mac and Linux you can use **Terminal**.
 
 #### Text Editor
 
-I'm quite partial (I'm on the team!) but [Atom](atom.io) is a great text editor (also free) and it is built on [Electron.js](electron.atom.io), just like Git-it. Visit the website and download the version for your operating system.
+I'm quite partial (I'm on the team!) but [Atom](http://atom.io) is a great text editor (also free) and it is built on [Electron.js](http://electron.atom.io), just like Git-it. Visit the website and download the version for your operating system.
 
 #### Git-it
 
