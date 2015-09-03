@@ -529,6 +529,10 @@ button.light-blue:hover {
   margin-bottom: 11px;
 }
 
+#clear-all-challenges:disabled {
+  display: none;
+}
+
 .teal {
   background: #2BDA9E;
   color: #fff;
