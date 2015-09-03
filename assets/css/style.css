@@ -2,39 +2,32 @@
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 400;
-  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(../fonts/SourceSansPro-Regular.otf) format('opentype');
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(fonts/SourceSansPro-Regular.otf) format('opentype');
 }
 
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 600;
-  src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(../fonts/SourceSansPro-Semibold.otf) format('opentype');
+  src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(fonts/SourceSansPro-Semibold.otf) format('opentype');
 }
 
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 700;
-  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(../fonts/SourceSansPro-Bold.otf) format('opentype');
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(fonts/SourceSansPro-Bold.otf) format('opentype');
 }
 
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 900;
-  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(..fonts/SourceSansPro-Black.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'Nothing You Could Do';
-  font-style: normal;
-  font-weight: 900;
-  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(..fonts/NothingYouCouldDo.tff) format('truetype');
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(fonts/SourceSansPro-Black.otf) format('opentype');
 }
 
 body {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
   line-height: 1.8em;
   color: #333935;
   background-color: #f5f5f5;
@@ -42,8 +35,12 @@ body {
   margin: 0;
 }
 
-div, header, select {
+div, header, select, a {
   box-sizing: border-box;
+}
+
+.full-width {
+  width: 100%;
 }
 
 .u-floatRight {
@@ -147,15 +144,12 @@ li {
 }
 
 .challenge-item {
-  padding: 8px 10px;
+  padding: 3px 10px;
   display: block;
   text-transform: capitalize;
-}
-
-.challenge-item:hover,
-.challenge-item.current {
-  background-color: #fff;
-  color: #456;
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 /* :after instead of :before cause it messes with text-transform */
@@ -168,6 +162,9 @@ li {
 
 .challenge-item.completed:after {
   content: "✔️ ";
+  position: absolute;
+  left: 10px;
+  top: 4px;
   color: #fff;
 }
 
@@ -180,11 +177,24 @@ li {
   display: none;
 }
 
+.challenge-item.completed:hover {
+  background-color: #1EA577;
+}
+
+.challenge-item.current {
+  background-color: #ECFCE0;
+  color: #456;
+  margin-right: -3px;
+  border-color: white;
+}
+
 .challenge-item.completed {
+  position: relative;
   background-color: #22B784;
   color: #fff;
-  margin-top: -1px;
+  padding-left: 30px;
 }
+
 
 .hand,
 .lang-select {
@@ -257,7 +267,7 @@ li {
 }
 
 h1, h2, h3, h4, .toc {
-  font-family: "Source Sans Pro";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .content h1, .content h2, .content h3, .content h4 {
@@ -299,6 +309,7 @@ a:hover {
 }
 
 code, .outof {
+  font-size: 0.9em;
   border: 1px solid #9DA6B3;
   padding: 4px 6px;
   border-radius: 2px;
@@ -332,11 +343,36 @@ footer ul li {
   font-style: italic;
 }
 
-#git-tips, .didnt-pass {
-  background: #BADFFF;
+#git-tips,
+.didnt-pass {
+  border: 1px solid #BADFFF;
   padding: 18px;
-  margin: 18px 0;
-  color: #0087ff;
+  margin: 18px 0 36px;
+}
+
+.didnt-pass {
+  border-color: #999;
+}
+
+#git-tips h2 {
+  color: #08f;
+}
+
+#git-tips h2,
+.didnt-pass h2 {
+  margin: -32px -8px 0;
+  float: left;
+  background: #fff;
+  padding: 0 8px;
+}
+
+#git-tips h2 + p {
+  margin-top: 0;
+}
+
+#git-tips p:last-child,
+.didnt-pass p:last-child {
+  margin-bottom: 0;
 }
 
 #git-tips ul {
@@ -350,7 +386,7 @@ footer ul li {
 }
 
 #git-tips li {
-  margin-top: 12px;
+  margin-top: 0px;
 }
 
 .challenge, .verify {
@@ -369,17 +405,19 @@ footer ul li {
   margin-bottom: 30px;
 }
 
-#git-tips h2,
 #git-tips h4,
-.didnt-pass h2,
-.didnt-pass h4,
 .challenge h2,
 .verify h3 {
   margin-top: 0;
 }
 
-.didnt-pass {
-  background: #E3EEF8;
+.didnt-pass h4 {
+  margin: 10px 0 0;
+}
+
+.didnt-pass h4:before {
+  content: '⚠️ ';
+  font-weight: normal;
 }
 
 .didnt-pass p + h4 {
@@ -431,6 +469,39 @@ n, v, adj {
 
 /* new stuff */
 
+#directory-path:empty {
+  display: none;
+}
+
+#path-required-warning,
+#directory-path {
+  font-family: Liberation Mono, Monaco, Courier New, monospace;
+  padding: 6px 12px 6px 10px;
+  vertical-align: middle;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin-left: -3px;
+}
+
+#path-required-warning {
+  display: none;
+  color: #ff0;
+}
+
+#path-required-warning.show {
+  display: inline;
+}
+
+#path-required-warning.show + #directory-path {
+  display: none;
+}
+
 .verify-fail:before {
   content: '😞 ';
 }
@@ -442,7 +513,6 @@ n, v, adj {
 
 #verify-list {
   list-style: none;
-  left-indent: none;
   padding-left: 0;
 }
 
@@ -479,8 +549,12 @@ button {
   cursor: pointer;
   -webkit-user-select: none;
   border: 1px solid transparent;
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
   text-transform: uppercase;
+}
+
+button:focus {
+  outline: 0;
 }
 
 button:hover {
@@ -510,5 +584,25 @@ button.light-blue:hover {
   background-color: #e2effa;
 }
 
-.challenge-is-completed {
+#clear-completed-challenge {
+  margin-bottom: 11px;
+}
+
+#clear-all-challenges:disabled,
+#get-started:disabled {
+  display: none;
+}
+
+.teal {
+  background: #2BDA9E;
+  color: #fff;
+}
+
+.teal:hover {
+  background: #6EE7BD;
+  color: #fff;
+}
+
+.grey-border {
+  border: 1px solid #818181
 }

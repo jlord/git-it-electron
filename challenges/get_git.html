@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script>require('../lib/handle-external-links.js')</script>
   </head>
   <body>
     <header id="challenge-header" class="site-header">
@@ -132,12 +131,12 @@
 <h2>Step: Install Git</h2>
 
 <ul>
-  <li><strong>Windows</strong>: It's recommended to download GitHub for Windows,
+  <li><strong>Windows</strong>: It's recommended to download GitHub Desktop,
   which includes Git and has an easier install:
-  <a href="http://windows.github.com" target="_blank">windows.github.com</a>. Use the <strong>Git Shell</strong> for your terminal.</li>
+  <a href="http://desktop.github.com" target="_blank">desktop.github.com</a>. Use the <strong>Git Shell</strong> for your terminal.</li>
 
-  <li><strong>Mac</strong>: You can also download GitHub for Mac, which includes
-  Git, <a href="http://mac.github.com/" target="_blank">mac.github.com</a> (from Preferences, select
+  <li><strong>Mac</strong>: You can also download GitHub Desktop, which includes
+  Git, <a href="http://desktop.github.com/" target="_blank">desktop.github.com</a> (from Preferences, select
   the command line tools install), or
     <ul>
       <li>download Git by itself at:
@@ -149,7 +148,7 @@
 <p>Git isn't like other programs on your computer. You'll likely not
 see an icon on your desktop, but it will always be available to you
 and you'll be able to access it at anytime from your
-terminal (which you're using in Git-it!) or Git desktop applications (like GitHub for Mac or Windows).</p>
+terminal (which you're using in Git-it!) or Git desktop applications (like GitHub Desktop).</p>
 
 <h2>Step: Configure Git</h2>
 <p>Once it is installed, open <strong>terminal</strong> (aka Bash, aka Shell, aka Prompt).
@@ -172,9 +171,9 @@ You can verify that it's really there by typing:</p>
 
 <div class="verify">
   <button class="white" id='verify-challenge'>VERIFY</button>
-  <button class="white" id="clear-completed-challenge">Clear completed status</button>
   <ul id="verify-list">
   </ul>
+  <button class="white full-width" id="clear-completed-challenge">Clear completed status</button>
 </div>
 
 <div id="git-tips">
@@ -183,18 +182,6 @@ You can verify that it's really there by typing:</p>
 to signify that the line is <strong>command line</strong> code (see the code snippets above). You don't actually
 type the <code>$</code> in though, only type what comes after. For instance, to run the verify command above, you're actually going to type <code>git-it verify</code> into terminal.</p>
 </div>
-
-<script>
-  var verifyChallenge = require('../lib/verify/get_git.js')
-
-  var verifyButton = document.getElementById('verify-challenge')
-  var ul = document.getElementById('verify-list')
-
-  verifyButton.addEventListener('click', function clicked (event) {
-    ul.innerHTML = ''
-    verifyChallenge()
-  })
-</script>
 
         <div class="prenext">
   <div class="u-floatLeft">
@@ -224,20 +211,13 @@ type the <code>$</code> in though, only type what comes after. For instance, to 
     </div>
 
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-52690821-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-
-    <script>
       var challengeStatus = require('../lib/challenge-completed.js')
       var currentChallenge = 'get_git'
       challengeStatus.completed(currentChallenge)
     </script>
 
+    <script>require('../lib/handle-external-links.js')</script>
+    <script>require('../lib/app.js')</script>
+    <script>require('../lib/challenge.js')</script>
   </body>
 </html>
