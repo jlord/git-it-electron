@@ -6,7 +6,6 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "package": "electron-packager . Git-it --platform=win32,darwin --arch=x64 --version=0.30.0 --overwrite --icon=assets/git-it --ignore='node_modules/electron-prebuild'",
     "build-chals": "node lib/build-challenges.js",
     "build-pages": "node lib/build-pages.js",
     "build-all": "npm run build-chals && npm run build-pages",
