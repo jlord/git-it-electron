@@ -529,7 +529,8 @@ button.light-blue:hover {
   margin-bottom: 11px;
 }
 
-#clear-all-challenges:disabled {
+#clear-all-challenges:disabled,
+#get-started:disabled {
   display: none;
 }
 
