@@ -33,14 +33,3 @@
         <p><code>$ git config --global user.username &#60;USerNamE&#62;</code></p>
         <p>更新完之後，再檢查一次看看吧！</p>
       </div>
-<script>
-  var verifyChallenge = require('../lib/verify/githubbin.js')
-
-  var verifyButton = document.getElementById('verify-challenge')
-  var ul = document.getElementById('verify-list')
-
-  verifyButton.addEventListener('click', function clicked (event) {
-    ul.innerHTML = ''
-    verifyChallenge()
-  })
-</script>
