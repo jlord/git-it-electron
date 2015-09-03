@@ -91,6 +91,7 @@ li {
 }
 
 .sidebar {
+  overflow: auto;
   width: 25%;
   position: fixed;
   height: 100%;
