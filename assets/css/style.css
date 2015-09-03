@@ -35,7 +35,7 @@ body {
   margin: 0;
 }
 
-div, header, select {
+div, header, select, a {
   box-sizing: border-box;
 }
 
@@ -91,7 +91,6 @@ li {
 }
 
 .sidebar {
-  overflow: auto;
   width: 25%;
   position: fixed;
   height: 100%;
@@ -145,15 +144,12 @@ li {
 }
 
 .challenge-item {
-  padding: 8px 10px;
+  padding: 3px 10px;
   display: block;
   text-transform: capitalize;
-}
-
-.challenge-item:hover,
-.challenge-item.current {
-  background-color: #fff;
-  color: #456;
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 /* :after instead of :before cause it messes with text-transform */
@@ -166,6 +162,9 @@ li {
 
 .challenge-item.completed:after {
   content: "✔️ ";
+  position: absolute;
+  left: 10px;
+  top: 4px;
   color: #fff;
 }
 
@@ -178,11 +177,24 @@ li {
   display: none;
 }
 
+.challenge-item.completed:hover {
+  background-color: #1EA577;
+}
+
+.challenge-item.current {
+  background-color: #ECFCE0;
+  color: #456;
+  margin-right: -3px;
+  border-color: white;
+}
+
 .challenge-item.completed {
+  position: relative;
   background-color: #22B784;
   color: #fff;
-  margin-top: -1px;
+  padding-left: 30px;
 }
+
 
 .hand,
 .lang-select {
