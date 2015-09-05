@@ -15,6 +15,8 @@ var emptyData = require('./empty-data.json')
 var mainWindow = null
 var menu = null
 
+var iconPath = path.join(__dirname, '/assests/git-it.png')
+
 crashReporter.start()
 
 app.on('window-all-closed', function appQuit () {
@@ -24,7 +26,7 @@ app.on('window-all-closed', function appQuit () {
 })
 
 app.on('ready', function appReady () {
-  mainWindow = new BrowserWindow({"min-width": 800, "min-width": 600, width: 900, height: 600, title: 'Git-it', icon: __dirname + '/assests/git-it.png'})
+  mainWindow = new BrowserWindow({"min-width": 800, "min-width": 600, width: 900, height: 600, title: 'Git-it', icon: iconPath })
   mainWindow.loadUrl('file://' + __dirname + '/index.html')
 
   var userDataPath = path.join(app.getPath('userData'), 'user-data.json')
