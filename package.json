@@ -11,7 +11,7 @@
     "build-pages": "node lib/build-pages.js",
     "build-all": "npm run build-chals && npm run build-pages",
     "build-zhtw": "node lib/build-challenges.js zhtw",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "standard **/*.js",
     "pack-mac": "electron-packager . Git-it --platform=darwin --arch=x64 --version=0.31.2 --icon=assets/git-it.icns --ignore='node_modules/standard'",
     "pack-win": "electron-packager . Git-it --platform=win32 --arch=ia32   --version=0.31.2 --icon=assets/git-it.png --ignore='node_modules/standard'",
     "pack-lin": "electron-packager . Git-it --platform=linux --arch=x64   --version=0.31.2 --icon=assets/git-it.png --ignore='node_modules/standard'"
