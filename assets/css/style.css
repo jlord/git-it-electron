@@ -617,6 +617,7 @@ button.light-blue:hover {
   border-bottom: 1px solid;
   border-left: 1px solid;
   position: relative;
+  right: -51px;
 }
 
 .arrow-right:after {
@@ -640,6 +641,8 @@ button.light-blue:hover {
   border-bottom: 1px solid;
   border-right: 1px solid;
   position: relative;
+  margin-bottom: 8px;
+  margin-left: 1px;
 }
 
 .arrow-left:after {
