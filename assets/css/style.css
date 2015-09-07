@@ -503,11 +503,11 @@ n, v, adj {
 }
 
 .verify-fail:before {
-  content: '😞 ';
+  content: '&#x2717; ';
 }
 
 .verify-pass:before {
-  content: '😀 ';
+  content: '&#x2713; ';
 }
 
 
