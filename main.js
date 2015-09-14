@@ -15,7 +15,7 @@ var emptyData = require('./empty-data.json')
 var mainWindow = null
 var menu = null
 
-var iconPath = path.join(__dirname, '/assests/git-it.png')
+var iconPath = path.join(__dirname, '/assets/git-it.png')
 
 crashReporter.start()
 
