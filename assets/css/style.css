@@ -606,3 +606,54 @@ button.light-blue:hover {
 .grey-border {
   border: 1px solid #818181
 }
+
+/* Mu-An's arrows save the day */
+
+.arrow-right {
+  width: 10px;
+  height: 10px;
+  border-bottom-left-radius: 8px;
+  border-color: #000;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  position: relative;
+  right: -51px;
+}
+
+.arrow-right:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  transform: rotate(-45deg);
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.arrow-left {
+  width: 10px;
+  height: 10px;
+  border-bottom-right-radius: 8px;
+  border-color: #000;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  position: relative;
+  margin-bottom: 8px;
+  margin-left: 1px;
+}
+
+.arrow-left:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  transform: rotate(-45deg);
+  border-left: 1px solid;
+  border-top: 1px solid;
+}
