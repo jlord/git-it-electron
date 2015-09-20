@@ -44,7 +44,7 @@ app.on('ready', function appReady () {
   })
 
   ipc.on('open-file-dialog', function (event) {
-    var files = dialog.showOpenDialog({ properties: [ 'openFile', 'openDirectory' ]})
+    var files = dialog.showOpenDialog(mainWindow, { properties: [ 'openFile', 'openDirectory' ]})
     if (files) {
       event.sender.send('selected-directory', files)
     }
