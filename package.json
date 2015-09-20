@@ -1,7 +1,8 @@
 {
   "name": "git-it-electron",
   "version": "1.0.0",
-  "description": "### A Git-it Desktop App!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+  "description": "An open source desktop app for learning Git and GitHub",
+  "keywords": ["Git", "GitHub", "Git-it", "tutorial", "guide", "learn", "desktop"],
   "productName": "Git-it",
   "main": "main.js",
   "scripts": {
@@ -27,7 +28,7 @@
   },
   "homepage": "https://github.com/jlord/git-it-electron",
   "devDependencies": {
-    "electron-prebuilt": "^0.25.2"
+    "electron-prebuilt": "^0.33.0"
   },
   "dependencies": {
     "cheerio": "^0.19.0",
