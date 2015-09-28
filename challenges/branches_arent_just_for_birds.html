@@ -33,12 +33,15 @@
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
+  // TODO put lang somewhere else that we can get without needing template in JS
+  // Can also remove default '-' with lang
   var currentLang = "".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
     var dir = 'challenges' + (selector.value ? '-' + selector.value : '') + '/'
     var url = currentChallenge.href.replace(/challenges(.+)?\//, dir)
+    // TODO pass to languages.js rather than set global
     location.href = url
   })
 </script>
@@ -254,6 +257,7 @@ GitHub Guide: <a href="http://guides.github.com/overviews/flow/" target="_blank"
 
     <script>
       var challengeStatus = require('../lib/challenge-completed.js')
+      // TODO Get this from the DOM and don't do template in JS
       var currentChallenge = 'branches_arent_just_for_birds'
       challengeStatus.completed(currentChallenge)
     </script>

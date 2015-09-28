@@ -33,12 +33,15 @@
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
+  // TODO put lang somewhere else that we can get without needing template in JS
+  // Can also remove default '-' with lang
   var currentLang = "-zhtw".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
     var dir = 'challenges' + (selector.value ? '-' + selector.value : '') + '/'
     var url = currentChallenge.href.replace(/challenges(.+)?\//, dir)
+    // TODO pass to languages.js rather than set global
     location.href = url
   })
 </script>
@@ -186,6 +189,7 @@
 
     <script>
       var challengeStatus = require('../lib/challenge-completed.js')
+      // TODO Get this from the DOM and don't do template in JS
       var currentChallenge = 'pull_never_out_of_date'
       challengeStatus.completed(currentChallenge)
     </script>
