@@ -7,12 +7,12 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "package": "electron-packager . Git-it --platform=win32,darwin --arch=x64 --version=0.31.2 --icon=assets/git-it --ignore='node_modules/standard'",
+    "test": "standard **/*.js",
     "build-chals": "node lib/build-challenges.js",
     "build-pages": "node lib/build-pages.js",
-    "build-all": "npm run build-chals && npm run build-pages",
     "build-zhtw": "node lib/build-challenges.js zhtw",
-    "test": "standard **/*.js",
+    "build-all": "npm run build-chals && npm run build-pages && npm run build-zhtw",
+    "package": "electron-packager . Git-it --platform=win32,darwin --arch=x64 --version=0.31.2 --icon=assets/git-it --ignore='node_modules/standard'",
     "pack-mac": "electron-packager . Git-it --platform=darwin --arch=x64 --version=0.31.2 --icon=assets/git-it.icns --ignore='node_modules/standard'",
     "pack-win": "electron-packager . Git-it --platform=win32 --arch=ia32   --version=0.31.2 --icon=assets/git-it.ico --ignore='node_modules/standard'",
     "pack-lin": "electron-packager . Git-it --platform=linux --arch=x64   --version=0.31.2 --icon=assets/git-it.png --ignore='node_modules/standard'"
