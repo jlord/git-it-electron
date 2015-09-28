@@ -21,12 +21,14 @@
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
+  // TODO put lang somewhere else that we can get without needing template in JS
   var currentLang = "{{ lang }}".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
     var dir = 'challenges' + (selector.value ? '-' + selector.value : '') + '/'
     var url = currentChallenge.href.replace(/challenges(.+)?\//, dir)
+    // TODO pass to languages.js rather than set global
     location.href = url
   })
 </script>
