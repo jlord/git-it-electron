@@ -10,19 +10,20 @@
     <link rel="stylesheet" href="../assets/css/style.css">
   </head>
   <body>
-    {{{header}}}
+    {{{ header }}}
 
     <div class="wrapper" id="challenge-body">
-      {{{sidebar}}}
+      {{{ sidebar }}}
       <div class="content">
-        {{{body}}}
-        {{{footer}}}
+        {{{ body }}}
+        {{{ footer }}}
       </div>
     </div>
 
     <script>
       var challengeStatus = require('../lib/challenge-completed.js')
-      var currentChallenge = '{{{shortname}}}'
+      // TODO Get this from the DOM and don't do template in JS
+      var currentChallenge = '{{{ shortname }}}'
       challengeStatus.completed(currentChallenge)
     </script>
 

@@ -6,22 +6,23 @@
     </select>
   </div>
   <div class="pagination">
-    <a href="{{preurl}}"
+    <a href="{{ preurl }}"
       <span class="hand">☜</span>
     </a>
-    <a href="{{nexturl}}"
+    <a href="{{ nexturl }}"
       <span class="hand">☞</span>
     </a>
   </div>
-  <a class="filledblock" href="../index{{lang}}.html">
+  <a class="filledblock" href="../index{{ lang }}.html">
     Git-it
   </a>
-  <span class="challenge-title">{{challengetitle}}</span>
+  <span class="challenge-title">{{ challengetitle }}</span>
 </header>
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
   // TODO put lang somewhere else that we can get without needing template in JS
+  // Can also remove default '-' with lang
   var currentLang = "{{ lang }}".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
