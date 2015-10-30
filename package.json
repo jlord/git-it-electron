@@ -22,7 +22,7 @@
     "url": "https://github.com/jlord/git-it-electron.git"
   },
   "author": "Jessica Lord",
-  "license": "BSD",
+  "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/jlord/git-it-electron/issues"
   },
