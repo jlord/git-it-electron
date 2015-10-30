@@ -1,6 +1,6 @@
 {
   "name": "git-it-electron",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "An open source desktop app for learning Git and GitHub",
   "keywords": ["Git", "GitHub", "Git-it", "tutorial", "guide", "learn", "desktop"],
   "productName": "Git-it",
