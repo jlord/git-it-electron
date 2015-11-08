@@ -27,25 +27,32 @@ function wrapper(description, fn) {
             })
     })
 }
-wrapper('application launch', function(t) {
+wrapper('upon application launch', function(t) {
     this.app.client.getWindowCount().then(function(count) {
-        t.equal(count, 1)
+        t.equal(count, 1, 'client window count should equal 1')
     })
     this.app.client.isWindowMinimized().then(function(truth) {
-        t.false(truth)
+        t.false(truth, 'client window should not be minimized')
     })
     this.app.client.isWindowDevToolsOpened().then(function(truth) {
-        t.false(truth)
+        t.false(truth, 'client window\'s dev tools should not be opened')
     })
     this.app.client.isWindowVisible().then(function(truth) {
-        t.true(truth)
+        t.true(truth, 'client window should be visible')
     })
     this.app.client.isWindowFocused().then(function(truth) {
-        t.true(truth)
+        t.true(truth, 'client window should be in focus')
     })
     this.app.client.getWindowDimensions().then(function(dimensions) {
-        t.equal(dimensions.height, 600)
-        t.equal(dimensions.width, 900)
+        t.equal(dimensions.height, 600, 'client window height should equal 600')
     })
+    this.app.client.getWindowDimensions().then(function(dimensions) {
+        t.equal(dimensions.width, 900, 'client window width should equal 900')
+    })
+    // getWindowHeight and getWindowWidth currently fail with Tape
+    // Use ^ instead of getWindowDimensions when issue is resolved
+    //this.app.client.getWindowHeight().then(function(height) {
+    //    t.equal(height, 600)
+    //})
     t.end()
 })
