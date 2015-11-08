@@ -5,15 +5,15 @@ var test = require('tape')
 var path = process.argv[2]
 
 function setup() {
-    this.app = new Application({
+    app = new Application({
         path: path
     })
-    return this.app.start()
+    return app.start()
 }
 
 function teardown() {
-    if (this.app && this.app.isRunning()) {
-        this.app.stop()
+    if (app && app.isRunning()) {
+        app.stop()
     }
 }
 function wrapper(description, fn) {
@@ -25,28 +25,29 @@ function wrapper(description, fn) {
             .then(function() {
                 return teardown()
             })
+
     })
 }
 wrapper('upon application launch', function(t) {
-    this.app.client.getWindowCount().then(function(count) {
+    app.client.getWindowCount().then(function(count) {
         t.equal(count, 1, 'client window count should equal 1')
     })
-    this.app.client.isWindowMinimized().then(function(truth) {
+    app.client.isWindowMinimized().then(function(truth) {
         t.false(truth, 'client window should not be minimized')
     })
-    this.app.client.isWindowDevToolsOpened().then(function(truth) {
+    app.client.isWindowDevToolsOpened().then(function(truth) {
         t.false(truth, 'client window\'s dev tools should not be opened')
     })
-    this.app.client.isWindowVisible().then(function(truth) {
+    app.client.isWindowVisible().then(function(truth) {
         t.true(truth, 'client window should be visible')
     })
-    this.app.client.isWindowFocused().then(function(truth) {
+    app.client.isWindowFocused().then(function(truth) {
         t.true(truth, 'client window should be in focus')
     })
-    this.app.client.getWindowDimensions().then(function(dimensions) {
+    app.client.getWindowDimensions().then(function(dimensions) {
         t.equal(dimensions.height, 600, 'client window height should equal 600')
     })
-    this.app.client.getWindowDimensions().then(function(dimensions) {
+    app.client.getWindowDimensions().then(function(dimensions) {
         t.equal(dimensions.width, 900, 'client window width should equal 900')
     })
     // getWindowHeight and getWindowWidth currently fail with Tape
