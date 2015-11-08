@@ -310,9 +310,7 @@ a:hover {
 
 code, .outof {
   font-size: 0.9em;
-  /*border: 1px solid #e3effa;*/
-  background: #ebf3fb;
-  /* rgb(224, 243, 250); */
+  border: 1px solid #9DA6B3;
   padding: 4px 6px;
   border-radius: 2px;
   font-family: Liberation Mono, Monaco, Courier New, monospace;
