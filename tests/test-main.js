@@ -20,10 +20,10 @@ function wrapper(description, fn) {
     test(description, function(t) {
         setup()
             .then(function() {
-                fn(t)
+                return fn(t)
             })
             .then(function() {
-                teardown()
+                return teardown()
             })
     })
 }
