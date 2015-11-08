@@ -130,24 +130,24 @@
 
       <p>&#x9996;&#x5148;&#xFF0C;&#x5207;&#x63DB;&#x5230;&#x60F3;&#x8981; <v><span class="superscript">&#x5408;&#x4F75;</span>merge</v> <strong>&#x9032;&#x53BB;</strong>&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n>&#xFF0C;&#x4E5F;&#x5C31;&#x662F; &apos;gh-pages&apos;&#x3002;</p>
 
-      <p><code>$ git checkout gh-pages</code></p>
+      <p><code class="shell">git checkout gh-pages</code></p>
 
       <p>&#x544A;&#x8A34; Git &#x4F60;&#x60F3;&#x8981; <v><span class="superscript">&#x5408;&#x4F75;</span>merge</v> &#x90A3;&#x500B; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> <strong>&#x9032;&#x4F86;</strong>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4F60;&#x7684; <n><span class="superscript">&#x529F;&#x80FD;</span>feature</n> <n><span class="superscript">&#x5206;&#x652F;</span>branch</n>&#xFF0C;&#x540D;&#x5B57;&#x662F; &apos;add-username&apos;&#x3002;</p>
 
-      <p><code>$ git merge &lt;BRANCHNAME&gt;</code></p>
+      <p><code class="shell">git merge &lt;BRANCHNAME&gt;</code></p>
 
       <p>&#x6574;&#x7406;&#x4E00;&#x4E0B;&#x5427;&#xFF0C;&#x73FE;&#x5728;&#x628A;&#x525B;&#x525B;&#x5DF2;&#x7D93; <v><span class="superscript">&#x5408;&#x4F75;</span>merged</v> &#x7684; <n><span class="superscript">&#x529F;&#x80FD;</span>feature</n> <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x522A;&#x6389;&#x3002;</p>
-      <p><code>$ git branch -d &lt;BRANCHNAME&gt;</code></p>
+      <p><code class="shell">git branch -d &lt;BRANCHNAME&gt;</code></p>
 
       <p>&#x4E5F;&#x53EF;&#x4EE5;&#x628A; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x5F9E; GitHub &#x4E0A;&#x7684; <adj><span class="superscript">&#x8907;&#x672C;&#x7684;</span>forked</adj> <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x4E2D;&#x522A;&#x9664;&#x54E6;&#xFF1A;</p>
-      <p><code>$ git push &lt;REMOTENAME&gt; --delete &lt;BRANCHNAME&gt;</code></p>
+      <p><code class="shell">git push &lt;REMOTENAME&gt; --delete &lt;BRANCHNAME&gt;</code></p>
 
       <h2>&#x6B65;&#x9A5F;&#xFF1A; &#x5F9E; <n><span class="superscript">&#x4E0A;&#x6E38;</span>Upstream</n> <v><span class="superscript">&#x6536;&#x53D6;</span>Pull</v></h2>
       <p>&#x6700;&#x5F8C;&#x4E00;&#x6B65;&#xFF0C;&#x4F46;&#x4E5F;&#x662F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x6B65;&#xFF0C;&#x82E5;&#x5F9E;&#x539F;&#x5C08;&#x6848;&#xFF08;&#x73FE;&#x5728;&#x9996;&#x9801;&#x5DF2;&#x7D93;&#x6709;&#x4F60;&#x7684;&#x540D;&#x5B57;&#x4E86;&#x54E6;&#xFF09;<v><span class="superscript">&#x6536;&#x53D6;</span>pull</v> &#x56DE;&#x4F86;&#xFF0C;&#x4F60;&#x4E5F;&#x6703;&#x6709;&#x4E00;&#x500B;&#x76F8;&#x540C;&#x7684;&#x7DB2;&#x9801;&#xFF0C;&#x4F4D;&#x7F6E;&#x5728; yourusername.github.io/patchwork&#x3002;</p>
 
       <p>&#x5F9E;&#x539F;&#x672C;&#x7684; <n><span class="superscript">&#x4E0A;&#x6E38;</span>upstream</n> <v><span class="superscript">&#x6536;&#x53D6;</span>pull</v> &#x56DE;&#x4F86;&#xFF1A;</p>
 
-      <p><code>$ git pull upstream gh-pages</code></p>
+      <p><code class="shell">git pull upstream gh-pages</code></p>
 
       <h2>&#x606D;&#x559C;&#x606D;&#x559C;&#xFF01;</h2>
       <p>&#x4F60;&#x5728;&#x672C;&#x6A5F;&#x5EFA;&#x7ACB;&#x4E86; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repositories</n>&#xFF0C;&#x8207;&#x4E00;&#x540D; <n><span class="superscript">&#x5925;&#x4F34;</span>collaborator</n> &#x5354;&#x4F5C;&#x3001;<v><span class="superscript">&#x63A8;&#x9001;</span>push</v>&#x3001;<v><span class="superscript">&#x6536;&#x53D6;</span>pull</v>&#xFF0C;&#x52A0;&#x5165;&#x4E86;&#x767E;&#x842C;&#x958B;&#x767C;&#x8005;&#x6240;&#x8655;&#x7684;&#x958B;&#x6E90;&#x4E16;&#x754C;&#xFF0C;&#x662F;&#x4F60;&#xFF0C;&#x8C50;&#x5BCC;&#x4E86;&#x958B;&#x6E90;&#x4E16;&#x754C;&#xFF01;</p>
@@ -167,15 +167,15 @@
         <h2>&#x6487;&#x6B65;</h2>
         <ul>
           <li><strong><v><span class="superscript">&#x5408;&#x4F75;</span>Merge</v> <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x5230;&#x76EE;&#x524D;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n></strong></li>
-          <code>$ git merge &lt;BRANCHNAME&gt;</code>
+          <code class="shell">git merge &lt;BRANCHNAME&gt;</code>
           <li><strong>&#x5207;&#x63DB;&#x6B63;&#x5728;&#x5DE5;&#x4F5C;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n></strong></li>
-          <code>$ git checkout &lt;BRANCHNAME&gt;</code>
+          <code class="shell">git checkout &lt;BRANCHNAME&gt;</code>
           <li><strong>&#x522A;&#x9664;&#x672C;&#x6A5F;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n></strong></li>
-          <code>$ git branch -d &lt;BRANCHNAME&gt;</code>
+          <code class="shell">git branch -d &lt;BRANCHNAME&gt;</code>
           <li><strong>&#x522A;&#x9664; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> <n><span class="superscript">&#x5206;&#x652F;</span>branch</n></strong></li>
-          <code>$ git push &lt;REMOTENAME&gt; --delete &lt;BRANCHNAME&gt;</code>
+          <code class="shell">git push &lt;REMOTENAME&gt; --delete &lt;BRANCHNAME&gt;</code>
           <li><strong>&#x5F9E; <n><span class="superscript">&#x9060;&#x7AEF;</span>remote</n> <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> <v><span class="superscript">&#x6536;&#x53D6;</span>Pull</v></strong></li>
-          <code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
+          <code class="shell">git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
         </ul>
       </div>
 
