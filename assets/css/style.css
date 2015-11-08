@@ -317,6 +317,11 @@ code, .outof {
   white-space: nowrap;
 }
 
+code.shell:before {
+  content: "$ ";
+  opacity: 0.4;
+}
+
 footer {
   border-top: 3px solid #0087ff;
   margin: 20px 0 0;
