@@ -161,7 +161,7 @@ li {
 }
 
 .challenge-item.completed:after {
-  content: "✔️ ";
+  content: "\2713 ";
   position: absolute;
   left: 10px;
   top: 4px;
@@ -310,7 +310,9 @@ a:hover {
 
 code, .outof {
   font-size: 0.9em;
-  border: 1px solid #9DA6B3;
+  /*border: 1px solid #e3effa;*/
+  background: #ebf3fb;
+  /* rgb(224, 243, 250); */
   padding: 4px 6px;
   border-radius: 2px;
   font-family: Liberation Mono, Monaco, Courier New, monospace;
