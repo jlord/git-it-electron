@@ -12,7 +12,7 @@
 
       <p>把 GitHub 上 'origin' <n>remote</n> 的更新 <v>pull</v> 到你的電腦上，來看 Reporobot 是否有在 'add-' <n>branch</n> 做了任何修改：</p>
 
-      <p><code>$ git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code></p>
+      <p><code class="shell">git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code></p>
 
       <p>如果沒有任何修改，Git 會告訴你 'Already up-to-date'。若有修改的話，Git 會把那些修改 <v>merge</v> 到電腦裡哦。</p>
 
@@ -24,10 +24,10 @@
         <h2>撇步</h2>
           <ul>
           <li><strong>檢查 Git 狀態</strong></li>
-          <code>$ git status</code>
+          <code class="shell">git status</code>
           <li><strong>從遠端分支 <v>pull</v> 更新回來</strong></li>
-          <code>$ git pull <REMOTENAME> <REMOTEBRANCH></code>
+          <code class="shell">git pull <REMOTENAME> <REMOTEBRANCH></code>
           <li><strong>在收取更新前先檢查 <n>remote</n> 是否有變動</strong></li>
-          <code>$ git fetch --dry-run</code>
+          <code class="shell">git fetch --dry-run</code>
         </ul>
       </div>

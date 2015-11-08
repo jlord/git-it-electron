@@ -1074,7 +1074,7 @@ git-subtree repository as a subdirectory of your already existing
 git-extensions repository in ~/git-extensions/:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>$ git subtree add --prefix=git-subtree --squash \
+<pre><code class="shell">git subtree add --prefix=git-subtree --squash \
         git://github.com/apenwarr/git-subtree.git master</code></pre>
 </div></div>
 <div class="paragraph"><p><em>master</em> needs to be a valid remote ref and can be a different branch
@@ -1093,7 +1093,7 @@ in our git-extensions repository.</p></div>
 First, get your own copy of the git.git repository:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>$ git clone git://git.kernel.org/pub/scm/git/git.git test-git
+<pre><code class="shell">git clone git://git.kernel.org/pub/scm/git/git.git test-git
 $ cd test-git</code></pre>
 </div></div>
 <div class="paragraph"><p>gitweb (commit 1130ef3) was merged into git as of commit
@@ -1103,7 +1103,7 @@ extract git&#8217;s changes to gitweb since that time, to share with
 the upstream.  You could do this:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>$ git subtree split --prefix=gitweb --annotate='(split) ' \
+<pre><code class="shell">git subtree split --prefix=gitweb --annotate='(split) ' \
         0a8f4f0^.. --onto=1130ef3 --rejoin \
         --branch gitweb-latest
 $ gitk gitweb-latest
@@ -1117,38 +1117,38 @@ then you can do all your splits without having to remember any
 weird commit ids:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>$ git subtree split --prefix=gitweb --annotate='(split) ' --rejoin \
+<pre><code class="shell">git subtree split --prefix=gitweb --annotate='(split) ' --rejoin \
         --branch gitweb-latest2</code></pre>
 </div></div>
 <div class="paragraph"><p>And you can merge changes back in from the upstream project just
 as easily:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>$ git subtree pull --prefix=gitweb \
+<pre><code class="shell">git subtree pull --prefix=gitweb \
         git@github.com:whatever/gitweb.git master</code></pre>
 </div></div>
 <div class="paragraph"><p>Or, using <em>--squash</em>, you can actually rewind to an earlier
 version of gitweb:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>$ git subtree merge --prefix=gitweb --squash gitweb-latest~10</code></pre>
+<pre><code class="shell">git subtree merge --prefix=gitweb --squash gitweb-latest~10</code></pre>
 </div></div>
 <div class="paragraph"><p>Then make some changes:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>$ date &gt;gitweb/myfile
+<pre><code class="shell">date &gt;gitweb/myfile
 $ git add gitweb/myfile
 $ git commit -m 'created myfile'</code></pre>
 </div></div>
 <div class="paragraph"><p>And fast forward again:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>$ git subtree merge --prefix=gitweb --squash gitweb-latest</code></pre>
+<pre><code class="shell">git subtree merge --prefix=gitweb --squash gitweb-latest</code></pre>
 </div></div>
 <div class="paragraph"><p>And notice that your change is still intact:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>$ ls -l gitweb/myfile</code></pre>
+<pre><code class="shell">ls -l gitweb/myfile</code></pre>
 </div></div>
 <div class="paragraph"><p>And you can split it out and look at your changes versus
 the standard gitweb:</p></div>
@@ -1167,18 +1167,18 @@ git project. Here&#8217;s a short way to do it:</p></div>
 <div class="paragraph"><p>First, make the new repository wherever you want:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>$ &lt;go to the new location&gt;
+<pre><code class="shell">&lt;go to the new location&gt;
 $ git init --bare</code></pre>
 </div></div>
 <div class="paragraph"><p>Back in your original directory:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>$ git subtree split --prefix=lib --annotate="(split)" -b split</code></pre>
+<pre><code class="shell">git subtree split --prefix=lib --annotate="(split)" -b split</code></pre>
 </div></div>
 <div class="paragraph"><p>Then push the new branch onto the new empty repository:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>$ git push &lt;new-repo&gt; split:master</code></pre>
+<pre><code class="shell">git push &lt;new-repo&gt; split:master</code></pre>
 </div></div>
 </div>
 </div>

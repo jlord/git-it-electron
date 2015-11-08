@@ -31,14 +31,14 @@
   inside of the 'hello-world' repository you worked in on the earlier challenges,
   back out of that folder. You can leave the folder you're in (and be in the folder that it was inside of) by 'changing directory' with two dots:
 
-<p><code>$ cd ..</code></p>
+<p><code class="shell">cd ..</code></p>
 
 Now clone:
 
-<p><code>$ git clone &#60;URLFROMGITHUB&#62;</code></p>
+<p><code class="shell">git clone &#60;URLFROMGITHUB&#62;</code></p>
 
 <p>Go into the folder for the fork it created (in this case, named 'patchwork')</p>
-<p><code>$ cd patchwork</code></p>
+<p><code class="shell">cd patchwork</code></p>
 
 <p>Now you've got a copy of the repository on your computer and it is
   automatically connected to the remote repository (your forked copy)
@@ -54,7 +54,7 @@ Now clone:
 <p>You can name this remote connection anything you want, but often
   people use 'upstream', let's use that for this.</p>
 
-<p><code>$ git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+<p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
 
 {{{verify_directory_button}}}
 
@@ -62,8 +62,8 @@ Now clone:
   <h2>Tips</h2>
   <ul>
     <li><strong>Add remote connections</strong></li>
-    <li><code>$ git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
+    <li><code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
     <li><strong>View remote connections</strong></li>
-    <li><code>$ git remote -v</code></li>
+    <li><code class="shell">git remote -v</code></li>
   </ul>
 </div>

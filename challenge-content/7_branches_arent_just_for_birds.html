@@ -35,14 +35,14 @@ GitHub Guide: <a href="http://guides.github.com/overviews/flow/" target="_blank"
 <p>Create a branch and name it "add-&#60;username&#62;", where 'username' is
   your username. For instance, "add-jlord". <strong>Branches are case-sensitive so name your branch exactly the way your GitHub name appears</strong>.</p>
 
-<p><code>$ git branch &#60;BRANCHNAME&#62;</code></p>
+<p><code class="shell">git branch &#60;BRANCHNAME&#62;</code></p>
 
 <p>Now you have a branch with a new name identical to 'gh-pages'.</p>
 
 <p>To go into that branch and work on it, similar to using <code>cd</code> to
   change directory in terminal, you <strong>checkout</strong> a branch. Go onto your new branch:</p>
 
-<p><code>$ git checkout &#60;BRANCHNAME&#62;</code></p>
+<p><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></p>
 
 <h2>Step: Create a new file</h2>
 <p>Back to the text editor:</p>
@@ -58,13 +58,13 @@ GitHub Guide: <a href="http://guides.github.com/overviews/flow/" target="_blank"
 <h2>Step: Check-in</h2>
 <p>Go through the steps for checking in a project: </p>
 
-<p><code>$ git status</code></p>
-<p><code>$ git add &#60;FILENAME&#62;</code></p>
-<p><code>$ git commit -m "&#60;commit message&#62;"</code></p>
+<p><code class="shell">git status</code></p>
+<p><code class="shell">git add &#60;FILENAME&#62;</code></p>
+<p><code class="shell">git commit -m "&#60;commit message&#62;"</code></p>
 
 <p>Now push your update to your fork on GitHub:</p>
 
-<p><code>$ git push origin &#60;BRANCHNAME&#62;</code></p>
+<p><code class="shell">git push origin &#60;BRANCHNAME&#62;</code></p>
 
 {{{verify_directory_button}}}
 
@@ -73,12 +73,12 @@ GitHub Guide: <a href="http://guides.github.com/overviews/flow/" target="_blank"
 
   <h4>File NOT in contributors folder</h4>
   <p>The file you create should inside the existing 'contributors' folder in the Patchwork repository. If you put it somewhere else, simply use Finder or Windows Explorer to move your file into the folder. You can check <code>git status</code> again and you'll find it sees your changes. Stage and then commit "all" (-A) of these changes (additions and deletions) with the commands below.</p>
-  <p><code>$ git add -A</code></p>
-  <p><code>$ git commit -m "move file into contributors folder"</code></p>
+  <p><code class="shell">git add -A</code></p>
+  <p><code class="shell">git commit -m "move file into contributors folder"</code></p>
 
   <h4>Branch name expected: _____</h4>
   <p>The branch name should match your user name exactly. To change your branch name:</p>
-  <p><code>$ git branch -M &#60;NEWBRANCHNAME&#62;</code></p>
+  <p><code class="shell">git branch -M &#60;NEWBRANCHNAME&#62;</code></p>
   <p>When you've made your updates, verify again!</p>
 </div>
 
@@ -86,16 +86,16 @@ GitHub Guide: <a href="http://guides.github.com/overviews/flow/" target="_blank"
   <h2>Tips</h2>
   <ul>
     <li>You can create and switch to a branch in one line:</li>
-    <li><code>$ git checkout -b &#60;BRANCHNAME&#62;</code></li>
+    <li><code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code></li>
     <li>Create a new branch:</li>
-    <li><code>$ git branch &#60;BRANCHNAME&#62;</code></li>
+    <li><code class="shell">git branch &#60;BRANCHNAME&#62;</code></li>
     <li>Move onto a branch:</li>
-    <li><code>$ git checkout &#60;BRANCHNAME&#62;</code></li>
+    <li><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></li>
     <li>List the branches:</li>
-    <li><code>$ git branch</code></li>
+    <li><code class="shell">git branch</code></li>
     <li>Rename a branch you're currently on:</li>
-    <li><code>$ git branch -m &#60;NEWBRANCHNAME&#62;</code></li>
+    <li><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></li>
     <li>Verify what branch you're working on</li>
-    <li><code>$ git status</code></li>
+    <li><code class="shell">git status</code></li>
   </ul>
 </div>

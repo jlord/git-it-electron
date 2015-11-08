@@ -176,7 +176,7 @@ repository on GitHub's servers.</p>
 initialized as a Git repository in the earlier challenge, you
 want to tell Git the location of the remote version on GitHub's servers. You can have multiple remotes so each requires a name. For your main one, this is commonly named <code>origin</code>.</p>
 
-<code>$ git remote add origin &lt;URLFROMGITHUB&gt;</code>
+<code class="shell">git remote add origin &lt;URLFROMGITHUB&gt;</code>
 
 <p>Your <strong>local</strong> repository now knows where your <strong>remote</strong> one named 'origin' lives on GitHub's servers. Think of it as adding a name and address on speed dial — now when you need to send something there, you can.</p>
 
@@ -187,7 +187,7 @@ want to tell Git the location of the remote version on GitHub's servers. You can
   just need to tell it what URL to associate with origin. Use this
   command instead of the 'add' one above:</p>
 
-<code>$ git remote set-url origin &lt;URLFROMGITHUB&gt;</code>
+<code class="shell">git remote set-url origin &lt;URLFROMGITHUB&gt;</code>
 </blockquote>
 
 <h2>Step: Push Work to your Remote</h2>
@@ -202,7 +202,7 @@ want to tell Git the location of the remote version on GitHub's servers. You can
 
 <p>In this case, we'll send our branch named 'master' to our remote on GitHub named 'origin'. </p>
 
-<code>$ git push origin master</code>
+<code class="shell">git push origin master</code>
 
 <p>Now go to GitHub and refresh the page of your repository. WOAH!
   Everything is the same locally and remotely. Congrats on your
@@ -222,15 +222,15 @@ want to tell Git the location of the remote version on GitHub's servers. You can
   <h2>Tips</h2>
   <ul>
     <li><strong>Add remote connections</strong></li>
-    <code>$ git remote add &lt;REMOTENAME&gt; &lt;URL&gt;</code>
+    <code class="shell">git remote add &lt;REMOTENAME&gt; &lt;URL&gt;</code>
     <li><strong>Set a URL to a remote</strong></li>
-    <code>$ git remote set-url &lt;REMOTENAME&gt; &lt;URL&gt;</code>
+    <code class="shell">git remote set-url &lt;REMOTENAME&gt; &lt;URL&gt;</code>
     <li><strong>Pull in changes</strong></li>
-    <code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
+    <code class="shell">git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
     <li><strong>View remote connections</strong></li>
-    <code>$ git remote -v</code>
+    <code class="shell">git remote -v</code>
     <li><strong>Push changes</strong></li>
-    <code>$ git push &lt;REMOTENAME&gt; &lt;BRANCH&gt;</code>
+    <code class="shell">git push &lt;REMOTENAME&gt; &lt;BRANCH&gt;</code>
   </ul>
 </div>
 

@@ -144,14 +144,14 @@
 
       <p>&#x65B0;&#x589E;&#x4E00;&#x500B; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x4E26;&#x547D;&#x540D;&#x70BA;&#x300C;add-&lt;username&gt;&#x300D;&#xFF0C;&#x8ACB;&#x7528;&#x4F60;&#x7684;&#x5E33;&#x865F;&#x540D;&#x7A31;&#x66FF;&#x63DB;&#x6389; &apos;username&apos;&#x3002;&#x4F8B;&#x5982;&#x300C;add-jlord&#x300D;&#x3002;<strong><n><span class="superscript">&#x5206;&#x652F;</span>Branches</n> &#x7684;&#x540D;&#x5B57;&#x6709;&#x5206;&#x5927;&#x5C0F;&#x5BEB;&#xFF0C;&#x6240;&#x4EE5;&#x8ACB;&#x78BA;&#x5B9A;&#x8F38;&#x5165;&#x7684;&#x5E33;&#x865F;&#x540D;&#x7A31;&#x8DDF; GitHub &#x4E0A;&#x986F;&#x793A;&#x7684;&#x4E00;&#x6A21;&#x4E00;&#x6A23;&#x3002;</strong></p>
 
-      <p><code>$ git branch &lt;BRANCHNAME&gt;</code></p>
+      <p><code class="shell">git branch &lt;BRANCHNAME&gt;</code></p>
 
       <p>&#x6C34;&#x5566;&#xFF01;&#x4F60;&#x64C1;&#x6709;&#x4E86;&#x4E00;&#x500B;&#x5168;&#x65B0;&#x3001;&#x5167;&#x5BB9;&#x8DDF; &apos;gh-pages&apos; &#x4E00;&#x6A21;&#x4E00;&#x6A23;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n>&#xFF01;</p>
 
       <p>&#x5C31;&#x50CF;&#x7D42;&#x7AEF;&#x6A5F;&#x53BB;&#x53E6;&#x4E00;&#x500B;&#x8CC7;&#x6599;&#x593E;&#x7684;&#x6307;&#x4EE4; <code>cd</code> &#x4E00;&#x6A23;&#xFF0C;&#x8ACB; <strong><v><span class="superscript">&#x53D6;&#x51FA;</span>checkout</v></strong>
         &#x5230;&#x525B;&#x624D;&#x65B0;&#x589E;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n>&#xFF1A;</p>
 
-      <p><code>$ git checkout &lt;BRANCHNAME&gt;</code></p>
+      <p><code class="shell">git checkout &lt;BRANCHNAME&gt;</code></p>
 
       <h2>&#x6B65;&#x9A5F;&#xFF1A;&#x65B0;&#x589E;&#x6A94;&#x6848;</h2>
       <p>&#x63A5;&#x4E0B;&#x4F86;&#x6211;&#x5011;&#x56DE;&#x5230;&#x6587;&#x5B57;&#x7DE8;&#x8F2F;&#x5668;&#xFF1A;</p>
@@ -165,13 +165,13 @@
       <h2>&#x6B65;&#x9A5F;&#xFF1A;&#x7D00;&#x9304;</h2>
       <p>&#x6309;&#x7167;&#x4EE5;&#x4E0B;&#x7684;&#x6B65;&#x9A5F;&#xFF0C;&#x628A;&#x525B;&#x624D;&#x7684;&#x4FEE;&#x6539;&#x7528; Git &#x8A18;&#x9304;&#x4E0B;&#x4F86;&#xFF1A;</p>
 
-      <p><code>$ git status</code></p>
-      <p><code>$ git add &lt;FILENAME&gt;</code></p>
-      <p><code>$ git commit -m &quot;&lt;commit message&gt;&quot;</code></p>
+      <p><code class="shell">git status</code></p>
+      <p><code class="shell">git add &lt;FILENAME&gt;</code></p>
+      <p><code class="shell">git commit -m &quot;&lt;commit message&gt;&quot;</code></p>
 
       <p><v><span class="superscript">&#x63A8;&#x9001;</span>Push</v> &#x525B;&#x624D;&#x8A18;&#x9304;&#x597D;&#x7684;&#x4FEE;&#x6539;&#x5230; GitHub &#x4E0A;&#xFF0C;&#x4F60; <adj><span class="superscript">&#x8907;&#x672C;&#x7684;</span>forked</adj> &#x7684; <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x88E1;&#x982D;&#xFF1A;</p>
 
-      <p><code>$ git push origin &lt;BRANCHNAME&gt;</code></p>
+      <p><code class="shell">git push origin &lt;BRANCHNAME&gt;</code></p>
 
 <div class="verify">
   <button class="white" id="verify-challenge">VERIFY</button>
@@ -190,12 +190,12 @@
         <p>&#x525B;&#x624D;&#x65B0;&#x589E;&#x7684;&#x6A94;&#x6848;&#x61C9;&#x8A72;&#x8981;&#x653E;&#x5230; Patchwork <n><span class="superscript">&#x7A0B;&#x5F0F;&#x5EAB;</span>repository</n> &#x7684; &apos;contributors&apos;
           &#x8CC7;&#x6599;&#x593E;&#x88E1;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x5C0F;&#x5FC3;&#x653E;&#x5230;&#x5225;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x8ACB;&#x6253;&#x958B; Finder &#x6216;&#x662F; Windows &#x7684;&#x6A94;&#x6848;&#x7E3D;&#x7BA1;&#x5C07;&#x8A72;&#x6A94;&#x6848;&#x79FB;&#x5230;
           &apos;contributors&apos; &#x8CC7;&#x6599;&#x593E;&#xFF0C;&#x7136;&#x5F8C;&#x53EF;&#x4EE5;&#x7528; <code>git status</code> &#x770B;&#x4F60;&#x525B;&#x624D;&#x79FB;&#x52D5;&#x6A94;&#x6848;&#x4E4B;&#x5F8C;&#x6240;&#x9020;&#x6210;&#x7684;&#x7D50;&#x679C;&#x3002;&#x7528;&#x4EE5;&#x4E0B;&#x7684;&#x6307;&#x4EE4; <v><span class="superscript">&#x9810;&#x5099;</span>Stage</v> &#x4E26;&#x4E14; <v><span class="superscript">&#x63D0;&#x4EA4;</span>commit</v> &#x5168;&#x90E8;&#x7684;&#x4FEE;&#x6539;&#xFF08;&#x52A0;&#x4E0A; -A&#xFF0C;&#x6703;&#x5C07;&#x65B0;&#x589E;&#x6A94;&#x6848;&#x8DDF;&#x522A;&#x9664;&#x6A94;&#x6848;&#x7684;&#x52D5;&#x4F5C;&#x4E00;&#x8D77;&#x8A18;&#x9304;&#x4E0B;&#x4F86;&#xFF09;&#xFF1A;</p>
-        <p><code>$ git add -A</code></p>
-        <p><code>$ git commit -m &quot;move file into contributors folder&quot;</code></p>
+        <p><code class="shell">git add -A</code></p>
+        <p><code class="shell">git commit -m &quot;move file into contributors folder&quot;</code></p>
 
         <h4><n><span class="superscript">&#x5206;&#x652F;</span>Branch</n> name expected: _____</h4>
         <p><n><span class="superscript">&#x5206;&#x652F;</span>Branch</n> &#x7684;&#x540D;&#x5B57;&#x61C9;&#x8A72;&#x8981;&#x8DDF;&#x4F60;&#x7684;&#x5E33;&#x865F;&#x540D;&#x7A31;&#x4E00;&#x6A21;&#x4E00;&#x6A23;&#x3002;&#x7528;&#x4EE5;&#x4E0B;&#x7684;&#x6307;&#x4EE4;&#x4FEE;&#x6539; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x7684;&#x540D;&#x5B57;&#xFF1A;</p>
-        <p><code>$ git branch -M &lt;NEWBRANCHNAME&gt;</code></p>
+        <p><code class="shell">git branch -M &lt;NEWBRANCHNAME&gt;</code></p>
         <p>&#x5B8C;&#x6210;&#x4EE5;&#x4E0A;&#x7684;&#x52D5;&#x4F5C;&#x4E4B;&#x5F8C;&#xFF0C;&#x518D;&#x57F7;&#x884C;&#x4E00;&#x6B21; <code>git-it verify</code>&#xFF01;</p>
       </div>
 
@@ -203,17 +203,17 @@
         <h2>&#x6487;&#x6B65;</h2>
         <ul>
           <li>&#x53EA;&#x7528;&#x4E00;&#x500B;&#x6307;&#x4EE4;&#x5C31;&#x65B0;&#x589E;&#x4E26;&#x5207;&#x63DB;&#x5230;&#x65B0;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n></li>
-          <li><code>$ git checkout -b &lt;BRANCHNAME&gt;</code></li>
+          <li><code class="shell">git checkout -b &lt;BRANCHNAME&gt;</code></li>
           <li>&#x65B0;&#x589E; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n></li>
-          <li><code>$ git branch &lt;BRANCHNAME&gt;</code></li>
+          <li><code class="shell">git branch &lt;BRANCHNAME&gt;</code></li>
           <li>&#x5207;&#x63DB;&#x5230;&#x53E6;&#x4E00;&#x500B; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n></li>
-          <li><code>$ git checkout &lt;BRANCHNAME&gt;</code></li>
+          <li><code class="shell">git checkout &lt;BRANCHNAME&gt;</code></li>
           <li>&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branches</n></li>
-          <li><code>$ git branch</code></li>
+          <li><code class="shell">git branch</code></li>
           <li>&#x91CD;&#x65B0;&#x547D;&#x540D;&#x76EE;&#x524D;&#x6240;&#x5728;&#x7684; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n></li>
-          <li><code>$ git branch -m &lt;NEWBRANCHNAME&gt;</code></li>
+          <li><code class="shell">git branch -m &lt;NEWBRANCHNAME&gt;</code></li>
           <li>&#x770B;&#x76EE;&#x524D;&#x6B63;&#x5728;&#x54EA;&#x500B; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n></li>
-          <li><code>$ git status</code></li>
+          <li><code class="shell">git status</code></li>
         </ul>
       </div>
 

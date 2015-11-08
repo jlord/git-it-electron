@@ -42,7 +42,7 @@
 
       <p>回到終端機，在我們剛剛初始化過 Git 的 'hello-world' 的資料夾裡頭，我們需要告訴 Git 這個 <n>remote</n> 的位址。同一個 Git 專案中，可以有很多不同的 <n>remote</n>，所以每一個 <n>remote</n> 都需要一個名字。而最主要、原始的那一個，通常都是叫做 <code>origin</code>。</p>
 
-      <code>$ git remote add origin &#60;URLFROMGITHUB&#62;</code>
+      <code class="shell">git remote add origin &#60;URLFROMGITHUB&#62;</code>
 
       <p>你電腦上的 <n>repository</n> 現在知道了專案有一個在 GitHub 上的 <strong><n>remote</n></strong>，叫做 'origin'。你可以想像這就好像是把一個電話號碼配上一個名字一樣，這樣當你要打電話的時候，就不用記得號碼了。</p>
 
@@ -50,7 +50,7 @@
         <p><strong>備註：</strong></p>
         <p>如果你有安裝 <strong>GitHub for Windows</strong>，Git 初始化的時候就會直接設定了一個叫做 'origin' 的 <n>remote</n>，所以你不需要新增，只要設定這個 'origin' <n>remote</n> 的位址就好了：</p>
 
-        <code>$ git remote set-url origin &#60;URLFROMGITHUB&#62;</code>
+        <code class="shell">git remote set-url origin &#60;URLFROMGITHUB&#62;</code>
       </blockquote>
 
       <h2>步驟：把你的修改 <v>Push</v> 到 <n>remote</n></h2>
@@ -61,7 +61,7 @@
 
       <p>也就是說，我們現在想要把 'master' <n>branch</n> 的程式傳送到先前新增的 'origin' <n>remote</n>。</p>
 
-      <code>$ git push origin master</code>
+      <code class="shell">git push origin master</code>
 
       <p>完成之後，你現在就可以回到 GitHub 的 <n>repository</n> 頁面，重新整理。哇哇哇！程式是不是都同步了呢？恭喜你建立了第一個公開的 <n>repository</n>！</p>
 
@@ -71,14 +71,14 @@
         <h2>撇步</h2>
         <ul>
           <li><strong>新增 <n>remote</n> 連結</strong></li>
-          <code>$ git remote add &#60;REMOTENAME&#62; <URL></code>
+          <code class="shell">git remote add &#60;REMOTENAME&#62; <URL></code>
           <li><strong>幫一個 <n>remote</n> 設定位址</strong></li>
-          <code>$ git remote set-url &#60;REMOTENAME&#62; <URL></code>
+          <code class="shell">git remote set-url &#60;REMOTENAME&#62; <URL></code>
           <li><strong><v>Pull</v> <n>remote</n> 的程式</strong></li>
-          <code>$ git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+          <code class="shell">git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
           <li><strong>看你有哪些 <n>remote</n> 連結</strong></li>
-          <code>$ git remote -v</code>
+          <code class="shell">git remote -v</code>
           <li><strong><v>Push</v> 電腦上的程式到 <n>remote</n></strong></li>
-          <code>$ git push &#60;REMOTENAME&#62; <BRANCH></code>
+          <code class="shell">git push &#60;REMOTENAME&#62; <BRANCH></code>
         </ul>
       </div>
