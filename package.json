@@ -37,7 +37,7 @@
   "homepage": "https://github.com/jlord/git-it-electron",
   "devDependencies": {
     "electron-prebuilt": "^0.33.0",
-    "spectron": "^0.34.0",
+    "spectron": "^0.34.1",
     "tape": "^4.2.2"
   },
   "dependencies": {
