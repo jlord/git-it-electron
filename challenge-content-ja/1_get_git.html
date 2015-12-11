@@ -1,61 +1,52 @@
 <div id="challenge-desc" class="challenge">
   <h2>The Challenge:</h2>
-  <p>Install Git on your computer and configure your name and email.</p>
+  <p>Gitをコンピュータにインストールして、名前とEメールアドレスを設定しましょう。</p>
 </div>
 
 <h2>Git</h2>
 
-<p>日本語のテストGit is <strong>open source software</strong> (free for anyone to use) written
-  by Linus Torvalds who also wrote the Linux operating system. </p>
-<p>It is a program for keeping track of changes over time, known in
-  programming as <strong>version control</strong>.</p>
+<p>Git はLinuxの開発者として有名なリーナス・トーバルズが開発した<strong>オープンソースソフトウェア</strong>です。(無料で利用することができます。)</p>
+<p>変更をずっと記録してくれるプログラムで、プログラミングの世界では<strong>バージョン管理システム</strong>として知られています。</p>
 
-<h2>Step: Install Git</h2>
+<h2>Step: Gitをインストールする</h2>
 
 <ul>
-  <li><strong>Windows</strong>: It's recommended to download GitHub Desktop,
-  which includes Git and has an easier install:
-  <a href="http://desktop.github.com" target="_blank">desktop.github.com</a>. Use the <strong>Git Shell</strong> for your terminal.</li>
+  <li><strong>Windows</strong>: GitHub Desktopをダウンロードしてインストールすることを強くおすすめします。GitHub DesktopをインストールすればGitも含めてインストールしてくれますし、簡単です。:
+  <a href="http://desktop.github.com" target="_blank">desktop.github.com</a>. <strong>Git Shell</strong>というソフトをターミナルとして使ってください。</li>
 
-  <li><strong>Mac</strong>: You can also download GitHub Desktop, which includes
-  Git, <a href="http://desktop.github.com/" target="_blank">desktop.github.com</a> (from Preferences, select
-  the command line tools install), or
+  <li><strong>Mac</strong>: Macの場合もGitHub Desktopをおすすめします。Gitも同じく含まれています。 <a href="http://desktop.github.com/" target="_blank">desktop.github.com</a> (Preferencesから、
+  the command line tools installを選択してください) または、
     <ul>
-      <li>download Git by itself at:
-      <a href="http://git-scm.com/downloads" target="_blank">git-scm.com/downloads</a> and follow the installation instructions.</li>
+      <li>Git自体のダウンロードはここからできます:
+      <a href="http://git-scm.com/downloads" target="_blank">git-scm.com/downloads</a> リンク先の手順に従ってインストールしてください。</li>
     </ul>
   </li>
 </ul>
 
-<p>Git isn't like other programs on your computer. You'll likely not
-see an icon on your desktop, but it will always be available to you
-and you'll be able to access it at anytime from your
-terminal (which you're using in Git-it!) or Git desktop applications (like GitHub Desktop).</p>
+<p>Git はみなさんのコンピュータにある他のプログラムとは違います。デスクトップにアイコンはありません。でもいつでもターミナルの中で使うことができます。またはGitのデスクトップアプリから使うこともできます。(例えばGitHub Desktopみたいに)</p>
 
-<h2>Step: Configure Git</h2>
-<p>Once it is installed, open <strong>terminal</strong> (aka Bash, aka Shell, aka Prompt).
-You can verify that it's really there by typing:</p>
+<h2>Step: Gitの設定をする</h2>
+<p>インストールできたら、<strong>ターミナル</strong>(Bashとか、Shellとか、 Promptとか言った別の名前で呼ばれることも多いです)を開いてください。
+Gitがちゃんとインストールできたか、次のようにして確認できます。:</p>
 
 <p><code>$ git --version </code></p>
 
-<p>This will return the version of Git that you're running and look something like this:</p>
+<p>このコマンドは、みなさんがいま使っているGitのバージョンを返してくれます。こんな風に表示されるはずです:</p>
 
 <p><code>git version 1.9.1</code></p>
 
-<p>(Any version <code>1.7.10</code> or higher is fine.)</p>
+<p>(<code>1.7.10</code>より上のバージョンであれば問題ありません。)</p>
 
-<p>Next, configure Git so it knows who to associate your changes to:</p>
+<p>次に、変更が誰によるものなのかをGitがわかるように設定します:</p>
 
-<p>Set your name:</p>
-<p><code>$ git config --global user.name "&#60;Your Name&#62;"</code></p>
-<p>Now set your email:</p>
-<p><code>$ git config --global user.email "&#60;youremail@example.com&#62;"</code></p>
+<p>名前を設定しましょう:</p>
+<p><code>$ git config --global user.name "&#60;あなたの名前&#62;"</code></p>
+<p>次にEメールアドレスです:</p>
+<p><code>$ git config --global user.email "&#60;youremail@example.com(あなたのEメールアドレス)&#62;"</code></p>
 
 {{{verify_button}}}
 
 <div id="git-tips">
   <h2>Tips</h2>
-  <p>Dollar signs <code>$</code> are often used in programming documentation
-to signify that the line is <strong>command line</strong> code (see the code snippets above). You don't actually
-type the <code>$</code> in though, only type what comes after. For instance, to run the verify command above, you're actually going to type <code>git-it verify</code> into terminal.</p>
+  <p>ドル記号 <code>$</code> はプログラミングのドキュメントでよく見かける記号です。 <strong>コマンドライン</strong> のコードであることを示しています。(上のコード例を見てください。). 実際に<code>$</code>を入力する必要はありません。その後から続く部分だけを入力すればいいです。例えば、上のコマンドを確認する場合には、実際には<code>git-it verify</code> とターミナル上で入力すればいいです。（訳注:皆さんがいま実際にご覧になっているgit-it-electronにおいてはgit-itがインストールされていませんのでgit-it verifyは動きませんのでご了承ください）</p>
 </div>
