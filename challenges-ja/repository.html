@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <title>Git-it</title>
+    <meta name="description" content="learn git and github">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+  <body>
+    <header id="challenge-header" class="site-header">
+  <div class="lang-select">
+    <select id="lang-select" class="lang-select">
+      <option value="">English</option>
+      <option value="zhtw">正體中文</option>
+      <option value="ja">日本語</option>
+    </select>
+  </div>
+  <div class="pagination">
+    <a href="get_git.html"
+      <span class="hand">☜</span>
+    </a>
+    <a href="commit_to_it.html"
+      <span class="hand">☞</span>
+    </a>
+  </div>
+  <a class="filledblock" href="../index-ja.html">
+    Git-it
+  </a>
+  <span class="challenge-title">repository</span>
+</header>
+
+<script type="text/javascript">
+  var selector = document.getElementById('lang-select')
+  // TODO put lang somewhere else that we can get without needing template in JS
+  // Can also remove default '-' with lang
+  var currentLang = "-ja".replace(/-/, '')
+  selector.value = currentLang
+  selector.addEventListener('change', function () {
+    var currentChallenge = document.querySelector('.challenge-item.current')
+    var dir = 'challenges' + (selector.value ? '-' + selector.value : '') + '/'
+    var url = currentChallenge.href.replace(/challenges(.+)?\//, dir)
+    // TODO pass to languages.js rather than set global
+    location.href = url
+  })
+</script>
+
+    <div class="wrapper" id="challenge-body">
+      <div id="challenge-sidebar" class="sidebar">
+  <ul class="list-of-challenges">
+      <li>
+        <a id="get_git" data-id="0" href="get_git.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          get git
+        </a>
+      </li>
+      <li>
+        <a id="repository" data-id="1" href="repository.html" class="challenge-item current">
+          <div class="current-arrow">▶️</div>
+          repository
+        </a>
+      </li>
+      <li>
+        <a id="commit_to_it" data-id="2" href="commit_to_it.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          commit to it
+        </a>
+      </li>
+      <li>
+        <a id="githubbin" data-id="3" href="githubbin.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          GitHubbin
+        </a>
+      </li>
+      <li>
+        <a id="remote_control" data-id="4" href="remote_control.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          remote control
+        </a>
+      </li>
+      <li>
+        <a id="forks_and_clones" data-id="5" href="forks_and_clones.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          forks and clones
+        </a>
+      </li>
+      <li>
+        <a id="branches_arent_just_for_birds" data-id="6" href="branches_arent_just_for_birds.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          branches aren&#x27;t just for birds
+        </a>
+      </li>
+      <li>
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          it&#x27;s a small world
+        </a>
+      </li>
+      <li>
+        <a id="pull_never_out_of_date" data-id="8" href="pull_never_out_of_date.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          pull never out of date
+        </a>
+      </li>
+      <li>
+        <a id="requesting_you_pull_please" data-id="9" href="requesting_you_pull_please.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          requesting you pull please
+        </a>
+      </li>
+      <li>
+        <a id="merge_tada" data-id="10" href="merge_tada.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          merge tada
+        </a>
+      </li>
+  </ul>
+
+</div>
+      <div class="content">
+        <div id="challenge-desc" class="challenge">
+  <h2>The Challenge:</h2>
+  <p>Create a new repository on your computer.</p>
+</div>
+
+<h2>Repositories</h2>
+
+<p>A <strong>repository</strong> is essentially a project. You can imagine it
+  as a project&apos;s folder with all the related files inside of it. In
+  fact, that&apos;s what it will look like on your computer anyways.</p>
+
+<img src="../assets/imgs/repos.png" width="600">
+
+<p>You tell Git what your project is and Git will start tracking all
+  of the changes to that folder. Files added or subtracted or even
+  a single letter in a single file changed -- all of it&apos;s tracked and
+  time stamped by Git. That&apos;s <strong>version control</strong>.</p>
+
+<h2>Using Terminal</h2>
+<p><strong>Terminal</strong> (or Bash) is a way of using your computer by just typing commands. You can rename files, open files, create new folders, and move between directories (folders) all by typing out commands. You can even run a text editor (such as <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) in your terminal and never have to leave!</p>
+
+<p>Besides navigating your computer, you can also use programs in Terminal that have a <strong>command-line interface (CLI)</strong>, meaning they can be run with commands in terminal. Git-it is one, you&apos;re using terminal to use it! Git is another. You can access and control Git through commands in terminal, as you&apos;ll be doing very soon!</p>
+
+<p>In Git-it you&apos;ll learn a few basic command line actions which will be described within the steps.</p>
+
+<h2>Step: Create a Repository</h2>
+<p>You&apos;re going to create a new folder and initialize it as a Git
+  repository.</p>
+
+<p>To make things easier, name your folder what you&apos;d name the project. How about &apos;hello-world&apos;.</p>
+
+<p>You can type these commands one at a time into your terminal window.</p>
+
+<p>To make a new folder:</p>
+<code>$ mkdir hello-world</code>
+
+<p>To go into that folder:</p>
+<code>$ cd hello-world</code>
+
+<p>To create a new Git instance for a project:</p>
+<code>$ git init</code>
+
+<p>That&apos;s it! It will just return you to a new line. If you want to be double-sure that it&apos;s a Git repository, type <code>git status</code> and if it doesn&apos;t return &apos;fatal: Not a git repository...&apos;, you&apos;re golden!</p>
+
+<div class="verify">
+  <button class="white" id="verify-challenge">VERIFY</button>
+  <button class="white" id="select-directory">SELECT DIRECTORY</button>
+  <span id="path-required-warning">Please select your repository directory.</span>
+  <span id="directory-path"></span>
+  <ul id="verify-list">
+  </ul>
+  <button class="white full-width" id="clear-completed-challenge">Clear completed status</button>
+</div>
+
+<div id="git-tips">
+  <h2>Tips</h2>
+  <ul>
+    <li><strong>Make a new folder (aka directory)</strong></li>
+    <code>$ mkdir &lt;FOLDERNAME&gt;</code>
+    <li><strong>Navigate into an existing folder (aka change directory)</strong></li>
+    <code>$ cd &lt;FOLDERNAME&gt;</code>
+    <li><strong>List the items in a folder</strong></li>
+    <code>$ ls </code>
+    <li><strong>Turn Git on for a folder</strong></li>
+    <code>$ git init</code>
+  </ul>
+</div>
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="get_git.html" class="u-inline-block all-caps">get git
+    <div class="arrow-left"></div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="commit_to_it.html" class="u-inlineBlock all-caps">commit to it
+    <div class="arrow-right"></div>
+    </a>
+  </div>
+</div>
+<footer>
+  <ul>
+    <li class="all-caps"><a href="../index-ja.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../pages/about.html">About</a></li>
+    <li class="all-caps"><a href="../pages/dictionary.html">Dictionary</a></li>
+    <li class="all-caps"><a href="../pages/resources.html">Resources</a></li>
+    <li class="all-caps">
+      <a href="http://github.com/jlord/git-it/issues/new" target="_blank">Open an Issue</a>
+    </li>
+  </ul>
+</footer>
+      </div>
+    </div>
+
+    <script>
+      var challengeStatus = require('../lib/challenge-completed.js')
+      // TODO Get this from the DOM and don't do template in JS
+      var currentChallenge = 'repository'
+      challengeStatus.completed(currentChallenge)
+    </script>
+
+    <script>require('../lib/handle-external-links.js')</script>
+    <script>require('../lib/languages.js')</script>
+    <script>require('../lib/challenge.js')</script>
+  </body>
+</html>
