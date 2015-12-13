@@ -122,92 +122,68 @@
       <div class="content">
         <div id="challenge-desc" class="challenge">
   <h2>The Challenge:</h2>
-  <p>Connect your local and remote repositories and push changes.</p>
+  <p>&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3068;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3092;&#x3064;&#x306A;&#x3044;&#x3067;&#x3001;&#x5909;&#x66F4;&#x3092;Push&#x3057;&#x3066;&#x307F;&#x3088;&#x3046;</p>
 </div>
 
-<h2>Remotes</h2>
+<h2>&#x30EA;&#x30E2;&#x30FC;&#x30C8;</h2>
 
-<p>When you put something on GitHub, that copy lives on one of GitHub&apos;s servers. This makes it a <strong>remote</strong> repository because it is not on your computer, but on a server, &quot;remote&quot; and somewhere else. By <strong>pushing</strong> your <strong>local</strong> (on your computer)
-  changes to it, you keep it up to date.</p>
+<p>GitHub&#x306B;&#x4F55;&#x304B;&#x3092;&#x7F6E;&#x304F;&#x3068;&#x3001;&#x305D;&#x308C;&#x306F;GitHub&#x306E;&#x30B5;&#x30FC;&#x30D0;&#x4E0A;&#x306B;&#x5B58;&#x5728;&#x3057;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x304C;
+  <strong>&#x30EA;&#x30E2;&#x30FC;&#x30C8;(remote)</strong> &#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3067;&#x3059;&#x3002;&#x306A;&#x305C;&#x306A;&#x3089;&#x3053;&#x308C;&#x306F;&#x3042;&#x306A;&#x305F;&#x306E;&#x30B3;&#x30F3;&#x30D4;&#x30E5;&#x30FC;&#x30BF;&#x4E0A;&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;&#x30B5;&#x30FC;&#x30D0;&#x4E0A;&#x306B;&#x3042;&#x308B;&#x304B;&#x3089;&#x3067;&#x3059;&#x3002;&#x3042;&#x306A;&#x305F;&#x306E;<strong>&#x30ED;&#x30FC;&#x30AB;&#x30EB;</strong>&#xFF08;&#x3042;&#x306A;&#x305F;&#x306E;&#x30B3;&#x30F3;&#x30D4;&#x30E5;&#x30FC;&#x30BF;&#x4E0A;&#x306E;&#x3053;&#x3068;&#x3067;&#x3059;&#xFF09;&#x306E;&#x5909;&#x66F4;&#x3092;<strong>push</strong>&#x3059;&#x308B;&#x3053;&#x3068;&#x306B;&#x3088;&#x3063;&#x3066;&#x3001;&#x6700;&#x65B0;&#x72B6;&#x614B;&#x3092;&#x4FDD;&#x3064;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;&#x306E;&#x3067;&#x3059;&#x3002;</p>
 
-  <p>Others can always get the
-  latest from your project by <strong>pulling</strong> your changes down from the remote (and onto their computer). This is how everyone can work on a project together without needing
-  access to your computer where your local copy is stored.</p>
+  <p>&#x4ED6;&#x306E;&#x4EBA;&#x306F;&#x3001;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x306B;&#x3042;&#x308B;&#x3042;&#x306A;&#x305F;&#x306E;&#x5909;&#x66F4;&#x3092;<strong>pull</strong>&#x3057;&#x3066;&#x5404;&#x500B;&#x4EBA;&#x306E;&#x30B3;&#x30F3;&#x30D4;&#x30E5;&#x30FC;&#x30BF;&#x306B;&#x53D6;&#x308A;&#x8FBC;&#x3080;&#x3053;&#x3068;&#x306B;&#x3088;&#x3063;&#x3066;&#x3001;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x6700;&#x65B0;&#x306E;&#x72B6;&#x614B;&#x3092;&#x5F97;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x3053;&#x3046;&#x3084;&#x3063;&#x3066;&#x304A;&#x4E92;&#x3044;&#x306E;&#x30B3;&#x30F3;&#x30D4;&#x30E5;&#x30FC;&#x30BF;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3059;&#x308B;&#x3053;&#x3068;&#x306A;&#x304F;&#x3001;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30E1;&#x30F3;&#x30D0;&#x30FC;&#x540C;&#x58EB;&#x3067;&#x30B3;&#x30FC;&#x30C9;&#x3084;&#x60C5;&#x5831;&#x3092;&#x5171;&#x6709;&#x3057;&#x3066;&#x5171;&#x540C;&#x4F5C;&#x696D;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;&#x306E;&#x3067;&#x3059;&#x3002;</p>
 
   <img src="../assets/imgs/remotes.png" width="600">
 
-<h2>Step: Create a Remote Repository</h2>
-<p>You want to sync your <strong>local</strong> version with one stored on GitHub.com
-  called the <strong>remote</strong> version. So first create an empty
-  remote repository on GitHub.com.</p>
+<h2>Step: &#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3092;&#x4F5C;&#x308D;&#x3046;</h2>
+<p><strong>&#x30ED;&#x30FC;&#x30AB;&#x30EB;</strong> &#x306B;&#x3042;&#x308B;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x3092;&#x3001;GitHub.com&#x306B;&#x4FDD;&#x5B58;&#x3057;&#x3066;&#x3042;&#x308B;<strong>&#x30EA;&#x30E2;&#x30FC;&#x30C8;</strong>&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x3068;&#x540C;&#x671F;&#x3057;&#x305F;&#x3044;&#x3068;&#x3057;&#x307E;&#x3059;&#x3002;&#x305D;&#x306E;&#x305F;&#x3081;&#x306B;&#x307E;&#x305A;&#x3001;&#x7A7A;&#x3063;&#x307D;&#x306E;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3092;GitHub.com&#x306B;&#x4F5C;&#x308A;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
 
 <ul>
-  <li>Go to <a href="http://github.com/" target="_blank">github.com</a>, log in, and click the &apos;+&apos; in the top
-right to create a new repository.</li>
-  <li>Give it a name that matches your local repository&apos;s name, &apos;hello-world&apos;, and a short
-description.</li>
-  <li>Make it public.</li>
-  <li>Don&apos;t initialize with a README because we already have a file, locally, named
-&apos;readme.txt&apos;.</li>
-  <li>Leave .gitignore and license on &apos;none&apos;.</li>
-  <li>Click create repository!</li>
+  <li><a href="http://github.com/" target="_blank">github.com</a>&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x3066;&#x3001;&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x3057;&#x305F;&#x72B6;&#x614B;&#x3067;&#x3001;&#x53F3;&#x4E0A;&#x306B;&#x3042;&#x308B;&apos;+&apos;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3001;&#x305D;&#x306E;&#x4E2D;&#x306E;&quot;new repository&quot;&#x3068;&#x3044;&#x3046;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</li>
+  <li>&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x540D;&#x3068;&#x4E00;&#x81F4;&#x3059;&#x308B;&#x540D;&#x524D;&#x3092;&#x3064;&#x3051;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&apos;hello-world&apos;&#x306B;&#x306A;&#x308B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;&#x305D;&#x3057;&#x3066;&#x77ED;&#x3044;&#x8AAC;&#x660E;&#x3092;&#x3064;&#x3051;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</li>
+  <li>public&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</li>
+  <li>README&#x306F;&#x9078;&#x629E;&#x3057;&#x306A;&#x3044;&#x3067;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x306A;&#x305C;&#x306A;&#x3089;&#x79C1;&#x305F;&#x3061;&#x306F;&#x65E2;&#x306B;README&#x3092;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x306B;&#x6301;&#x3063;&#x3066;&#x308B;&#x304B;&#x3089;&#x3067;&#x3059;&#x3002;&apos;readme.txt&apos;&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x3067;&#x3002;</li>
+  <li>.gitignore &#x3068; license &#x306F; &apos;none&apos; &#x306E;&#x307E;&#x307E;&#x3067;&#x3059;&#x3002;</li>
+  <li>create repository&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;!</li>
 </ul>
 
-<h2>Readmes, .gitignores and Licenses</h2>
-<p>These are common files in open source projects.</p>
+<h2>Readme, .gitignore, License</h2>
+<p>&#x3053;&#x308C;&#x3089;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;&#x30AA;&#x30FC;&#x30D7;&#x30F3;&#x30BD;&#x30FC;&#x30B9;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x306F;&#x3088;&#x304F;&#x898B;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3067;&#x3059;&#x3002;</p>
 
-<p>A <strong>readme</strong> explains what the project is, how to use it, and often
-times, how to contribute (though sometimes there is an extra file,
-CONTRIBUTING.md, for those details).</p>
+<p><strong>readme</strong> &#x306F;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x95A2;&#x3059;&#x308B;&#x8AAC;&#x660E;&#x3068;&#x3001;&#x3069;&#x3046;&#x4F7F;&#x3048;&#x3070;&#x3044;&#x3044;&#x306E;&#x304B;&#x3001;&#x305D;&#x3057;&#x3066;&#x3069;&#x3046;&#x3084;&#x3063;&#x3066;&#x8CA2;&#x732E;&#x3057;&#x305F;&#x3089;&#x3044;&#x3044;&#x304B;&#x3092;&#x66F8;&#x304F;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;(&#x8CA2;&#x732E;&#x65B9;&#x6CD5;&#x306B;&#x3064;&#x3044;&#x3066;&#x306F;&#x3001;&#x5225;&#x9014;CONTRIBUTING.md&#x3068;&#x3044;&#x3046;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x5206;&#x3051;&#x3066;&#x66F8;&#x304F;&#x3053;&#x3068;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;)</p>
 
-<p>A <strong>.gitignore</strong> is a list of files that Git should <em>not</em> track, for instance, files with passwords!</p>
+<p><strong>.gitignore</strong> &#x306F;Git&#x306B;&#x8FFD;&#x8DE1; <em>&#x3057;&#x306A;&#x3044;</em> &#x3067;&#x307B;&#x3057;&#x3044;&#x3082;&#x306E;&#x306E;&#x4E00;&#x89A7;&#x3067;&#x3059;&#x3002;&#x305F;&#x3068;&#x3048;&#x3070;&#x3001;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x306E;&#x5165;&#x3063;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306A;&#x3069;&#x3067;&#x3059;&#xFF01;</p>
 
-<p>A <strong>license</strong> file is the type of license you put on your project,
-information on the types is here:
+<p><strong>license</strong> &#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;&#x3001;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x5BFE;&#x3059;&#x308B;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x307E;&#x3059;&#x3002;&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x306E;&#x5F62;&#x614B;&#x306B;&#x3064;&#x3044;&#x3066;&#x306E;&#x60C5;&#x5831;&#x306F;&#x3053;&#x3061;&#x3089;&#x3067;&#x3059;:
 <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a>.</p>
-<p>We don&apos;t need any of them, however, for this example.</p>
+<p>&#x3067;&#x3082;&#x4ECA;&#x56DE;&#x306E;&#x5834;&#x5408;&#x306F;&#x7279;&#x306B;&#x5FC5;&#x8981;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;</p>
 
-<h2>Step: Connect your Local to your Remote</h2>
-<p>Now you&apos;ve got an empty repository started on GitHub.com. At the
-top you&apos;ll see &apos;Quick Setup&apos;, make sure the &apos;HTTP&apos; button is
-selected and copy the address &#x2014; this is the location (address) of your
-repository on GitHub&apos;s servers.</p>
+<h2>Step: &#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x3068;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x3092;&#x3064;&#x306A;&#x3054;&#x3046;</h2>
+<p>&#x3053;&#x308C;&#x3067;GitHub.com&#x4E0A;&#x306B;&#x7A7A;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3092;&#x4F5C;&#x6210;&#x3067;&#x304D;&#x307E;&#x3057;&#x305F;&#x3002;&#x753B;&#x9762;&#x306E;&#x4E00;&#x756A;&#x4E0A;&#x306B;&apos;Quick Setup&apos;&#x304C;&#x3042;&#x308B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;&#x305D;&#x3053;&#x3067;&apos;HTTPS&apos;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#xFF08;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x306F;SSH&#x62C5;&#x3063;&#x3066;&#x3044;&#x308B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#xFF09;&#x305D;&#x3046;&#x3057;&#x305F;&#x3089;&#x3001;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3092;&#x30B3;&#x30D4;&#x30FC;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x3053;&#x308C;&#x306F;GitHub&#x30B5;&#x30FC;&#x30D0;&#x4E0A;&#x306B;&#x304A;&#x3051;&#x308B;&#x3042;&#x306A;&#x305F;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3092;&#x8868;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
 
-<p>Back in your terminal, and inside of the &apos;hello-world&apos; folder that you
-initialized as a Git repository in the earlier challenge, you
-want to tell Git the location of the remote version on GitHub&apos;s servers. You can have multiple remotes so each requires a name. For your main one, this is commonly named <code>origin</code>.</p>
+<p>&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x306B;&#x623B;&#x3063;&#x3066;&#x3001;&#x524D;&#x306E;&#x7AE0;&#x3067;Git&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3068;&#x3057;&#x3066;&#x521D;&#x671F;&#x5316;&#x3057;&#x305F;&apos;hello-world&apos;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306E;&#x4E2D;&#x304B;&#x3089;&#x3001;GitHub&#x30B5;&#x30FC;&#x30D0;&#x4E0A;&#x306B;&#x3042;&#x308B;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x306E;&#x5834;&#x6240;&#x3092;Git&#x306B;&#x77E5;&#x3089;&#x305B;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x305D;&#x308C;&#x305E;&#x308C;&#x306B;&#x5225;&#x306E;&#x540D;&#x524D;&#x3092;&#x3064;&#x3051;&#x308B;&#x3053;&#x3068;&#x3067;&#x3001;&#x8907;&#x6570;&#x306E;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x3092;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x30E1;&#x30A4;&#x30F3;&#x306E;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x30B5;&#x30FC;&#x30D0;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x306F;&#x3001;&#x901A;&#x5E38;<code>origin</code>&#x3068;&#x540D;&#x4ED8;&#x3051;&#x308B;&#x3053;&#x3068;&#x304C;&#x6163;&#x7FD2;&#x3068;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
 
 <code>$ git remote add origin &lt;URLFROMGITHUB&gt;</code>
 
-<p>Your <strong>local</strong> repository now knows where your <strong>remote</strong> one named &apos;origin&apos; lives on GitHub&apos;s servers. Think of it as adding a name and address on speed dial &#x2014; now when you need to send something there, you can.</p>
+<p>&#x3053;&#x308C;&#x3067;&#x3001;&#x3042;&#x306A;&#x305F;&#x306E; <strong>&#x30ED;&#x30FC;&#x30AB;&#x30EB;(local)</strong> &#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306F;&#x3044;&#x307E; &apos;origin&apos; &#x3068;&#x540D;&#x3065;&#x3051;&#x3089;&#x308C;&#x305F;GitHub&#x306E;&#x30B5;&#x30FC;&#x30D0;&#x4E0A;&#x306B;&#x3042;&#x308B;<strong>&#x30EA;&#x30E2;&#x30FC;&#x30C8;(remote)</strong> &#x304C;&#x3069;&#x3053;&#x306B;&#x3042;&#x308B;&#x304B;&#x3092;&#x77E5;&#x3063;&#x3066;&#x3044;&#x308B;&#x72B6;&#x614B;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x306F;&#x3061;&#x3087;&#x3046;&#x3069;&#x96FB;&#x8A71;&#x756A;&#x53F7;&#x306B;&#x540D;&#x524D;&#x3092;&#x3064;&#x3051;&#x3066;&#x77ED;&#x7E2E;&#x30C0;&#x30A4;&#x30E4;&#x30EB;&#x3068;&#x3057;&#x3066;&#x767B;&#x9332;&#x3059;&#x308B;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;&#x3055;&#x3066;&#x3001;&#x3053;&#x308C;&#x3067;&#x8A2D;&#x5B9A;&#x3067;&#x304D;&#x305F;&#x306E;&#x3067;&#x3001;&#x4F55;&#x304B;&#x3092;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x306B;&#x9001;&#x308A;&#x305F;&#x3044;&#x3068;&#x601D;&#x3063;&#x305F;&#x6642;&#x306B;&#x306F;&#x3044;&#x3064;&#x3067;&#x3082;&#x9001;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;</p>
 
 <blockquote>
-<p><strong>A note:</strong></p>
-<p>If you have <strong>GitHub for Windows</strong> on your computer, a remote
-  named &apos;origin&apos; is automatically created. In that case, you&apos;ll
-  just need to tell it what URL to associate with origin. Use this
-  command instead of the &apos;add&apos; one above:</p>
+<p><strong>&#x6CE8;&#x610F;:</strong></p>
+<p>&#x3082;&#x3057;<strong>GitHub for Windows</strong>&#x3092;&#x30B3;&#x30F3;&#x30D4;&#x30E5;&#x30FC;&#x30BF;&#x306B;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x3042;&#x308C;&#x3070;&#x3001;&apos;origin&apos;&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x306E;remote&#x306F;&#x65E2;&#x306B;&#x81EA;&#x52D5;&#x7684;&#x306B;&#x4F5C;&#x3089;&#x308C;&#x3066;&#x3044;&#x308B;&#x304B;&#x3082;&#x3057;&#x308C;&#x307E;&#x305B;&#x3093;&#x3002;&#x305D;&#x306E;&#x5834;&#x5408;&#x306B;&#x306F;&#x3001;&#x305F;&#x3060;origin&#x304C;&#x3069;&#x306E;URL&#x3092;&#x6307;&#x3059;&#x306E;&#x304B;&#x3092;&#x8A2D;&#x5B9A;&#x3059;&#x308C;&#x3070;&#x3044;&#x3044;&#x306E;&#x3067;&#x3059;&#x3002;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&apos;add&apos;&#x306E;&#x4EE3;&#x308F;&#x308A;&#x306B;&#x3053;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5165;&#x529B;&#x3057;&#x307E;&#x3059;&#x3002;:</p>
 
 <code>$ git remote set-url origin &lt;URLFROMGITHUB&gt;</code>
 </blockquote>
 
-<h2>Step: Push Work to your Remote</h2>
-<p>Next you want to <strong>push</strong> (send) everything you&apos;ve done locally
-  to GitHub. Ideally you want to stay in sync, meaning your local and remote versions match.</p>
+<h2>Step: &#x4F5C;&#x696D;&#x5185;&#x5BB9;&#x3092;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x306B;Push&#x3057;&#x3088;&#x3046;</h2>
+<p>&#x6B21;&#x306B;&#x3001;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x3067;&#x4F5C;&#x696D;&#x3057;&#x305F;&#x5185;&#x5BB9;&#x3092;GitHub&#x306B; <strong>push</strong> (&#x9001;&#x4FE1;) &#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002; &#x7406;&#x60F3;&#x7684;&#x306B;&#x306F;&#x3001;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x3068;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x304C;&#x4E00;&#x81F4;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x3001;&#x305A;&#x3063;&#x3068;&#x540C;&#x671F;&#x3057;&#x3066;&#x3044;&#x305F;&#x3044;&#x3067;&#x3059;&#x3088;&#x306D;&#x3002;</p>
 
-<p>Git has a branching system so that you can work on different
-  parts of a project at different times. We&apos;ll learn more about that later, but by default the first
-  branch is named &apos;master&apos;. When you push (and later pull) from
-  a project, you tell Git the <strong>branch name</strong> you want and the
-  name of the <strong>remote</strong> that it lives on.
+<p>Git&#x306B;&#x306F;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3068;&#x3044;&#x3046;&#x4ED5;&#x7D44;&#x307F;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x306F;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x5225;&#x3005;&#x306E;&#x7B87;&#x6240;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x5225;&#x3005;&#x306E;&#x30BF;&#x30A4;&#x30DF;&#x30F3;&#x30B0;&#x3067;&#x4F5C;&#x696D;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;&#x3053;&#x306E;&#x3042;&#x305F;&#x308A;&#x306B;&#x3064;&#x3044;&#x3066;&#x8A73;&#x3057;&#x304F;&#x306F;&#x3042;&#x3068;&#x3067;&#x5B66;&#x3073;&#x307E;&#x3059;&#x304C;&#x3001;&#x6700;&#x521D;&#x306E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306F;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x306F;&apos;master&apos;&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x304C;&#x3064;&#x3051;&#x3089;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;Push&#x3059;&#x308B;&#x3068;&#x304D;&#x306B;&#x306F;(&#x307E;&#x305F;&#x3042;&#x3068;&#x3067;pull&#x3059;&#x308B;&#x3068;&#x304D;&#x306B;&#x306F;)&#x3001;Git&#x306B;&#x5BFE;&#x8C61;&#x3068;&#x306A;&#x308B;<strong>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x540D;</strong>&#x3068;<strong>remote</strong>&#x306E;&#x540D;&#x524D;&#x3092;&#x4F1D;&#x3048;&#x3066;&#x3084;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;
 
-</p><p>In this case, we&apos;ll send our branch named &apos;master&apos; to our remote on GitHub named &apos;origin&apos;. </p>
+</p><p>&#x4ECA;&#x56DE;&#x306E;&#x30B1;&#x30FC;&#x30B9;&#x3067;&#x306F;&#x3001;&apos;master&apos;&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x306E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;GitHub&#x4E0A;&#x306B;&#x3042;&#x308B;&apos;origin&apos;&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x306E;remote&#x306B;&#x9001;&#x308A;&#x307E;&#x3059;&#x3002;</p>
 
 <code>$ git push origin master</code>
 
-<p>Now go to GitHub and refresh the page of your repository. WOAH!
-  Everything is the same locally and remotely. Congrats on your
-  first public repository!</p>
+<p>&#x3055;&#x3066;GitHub&#x306B;&#x884C;&#x3063;&#x3066;&#x307F;&#x3066;&#x3001;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3092;&#x8AAD;&#x307F;&#x8FBC;&#x307F;&#x306A;&#x304A;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x304A;&#x304A;&#xFF01;
+  &#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x3068;&#x540C;&#x3058;&#x3082;&#x306E;&#x304C;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x3067;&#x3082;&#x898B;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x306D;&#x3002;&#x3053;&#x308C;&#x304C;&#x3042;&#x306A;&#x305F;&#x306E;&#x6700;&#x521D;&#x306E;public&#x306A; &#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3067;&#x3059;&#xFF01; &#x304A;&#x3081;&#x3067;&#x3068;&#x3046;&#xFF01;</p>
 
 <div class="verify">
   <button class="white" id="verify-challenge">VERIFY</button>
@@ -222,15 +198,15 @@ want to tell Git the location of the remote version on GitHub&apos;s servers. Yo
 <div id="git-tips">
   <h2>Tips</h2>
   <ul>
-    <li><strong>Add remote connections</strong></li>
+    <li><strong>remote&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;</strong></li>
     <code>$ git remote add &lt;REMOTENAME&gt; &lt;URL&gt;</code>
-    <li><strong>Set a URL to a remote</strong></li>
+    <li><strong>&#x3059;&#x3067;&#x306B;&#x3042;&#x308B;remote&#x306B;URL&#x3092;&#x8A2D;&#x5B9A;&#x3059;&#x308B;</strong></li>
     <code>$ git remote set-url &lt;REMOTENAME&gt; &lt;URL&gt;</code>
-    <li><strong>Pull in changes</strong></li>
+    <li><strong>&#x5909;&#x66F4;&#x3092;Pull&#x3059;&#x308B;</strong></li>
     <code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
-    <li><strong>View remote connections</strong></li>
+    <li><strong>remote&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x78BA;&#x8A8D;&#x3059;&#x308B;</strong></li>
     <code>$ git remote -v</code>
-    <li><strong>Push changes</strong></li>
+    <li><strong>&#x5909;&#x66F4;&#x3092;Push&#x3059;&#x308B;</strong></li>
     <code>$ git push &lt;REMOTENAME&gt; &lt;BRANCH&gt;</code>
   </ul>
 </div>
