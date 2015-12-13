@@ -122,46 +122,39 @@
       <div class="content">
         <div id="challenge-desc" class="challenge">
   <h2>The Challenge:</h2>
-  <p>Merge your branch locally, delete old branch and pull from upstream for much win!</p>
+  <p>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x3067;&#x30DE;&#x30FC;&#x30B8;&#x3057;&#x3066;&#x3001;&#x53E4;&#x3044;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x6D88;&#x3057;&#x3001;upstream&#x304B;&#x3089;&#x5909;&#x66F4;&#x3092;Pull&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;</p>
  </div>
 
-<h2>Step: Merge Locally</h2>
+<h2>Step: &#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x3067;&#x30DE;&#x30FC;&#x30B8;&#x3059;&#x308B;</h2>
 
-<p>Your pull request has been merged! Now, since you
-  know that you definitely want those updates in your forked version,
-  and your branch is in good working order, merge it into the main
-  branch on your forked repository, in this case, &apos;gh-pages&apos;.</p>
+<p>&#x3042;&#x306A;&#x305F;&#x306E;Pull Request&#x306F;&#x30DE;&#x30FC;&#x30B8;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;! &#x3042;&#x306A;&#x305F;&#x306F;&#x3053;&#x306E;&#x5909;&#x66F4;&#x3092;&#x81EA;&#x5206;&#x306E;&#x30D5;&#x30A9;&#x30FC;&#x30AF;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x306B;&#x3082;&#x30A2;&#x30C3;&#x30D7;&#x30C7;&#x30FC;&#x30C8;&#x3057;&#x3066;&#x304A;&#x304D;&#x305F;&#x3044;&#x3067;&#x3059;&#x3088;&#x306D;&#xFF1F; &#x3042;&#x306A;&#x305F;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x30E1;&#x30A4;&#x30F3;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x30DE;&#x30FC;&#x30B8;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x3053;&#x306E;&#x5834;&#x5408;&#x3001;&apos;gh-pages&apos;&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x306E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3067;&#x3059;&#x3002;</p>
 
-<p>First, move into the branch you want to merge <em>into</em> &#x2014; in this case,
-  branch &apos;gh-pages&apos;.</p>
+<p>&#x307E;&#x305A;&#x30DE;&#x30FC;&#x30B8;&#x3057;&#x305F;&#x3044;<em>&#x5148;</em>&#x306E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x79FB;&#x52D5;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x3053;&#x306E;&#x5834;&#x5408;&#x3001;&apos;gh-pages&apos;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3067;&#x3059;&#x3002;</p>
 
 <p><code>$ git checkout gh-pages</code></p>
 
-<p>Now tell Git what branch you want to merge <em>in</em> &#x2014; in this case,
-  your feature branch that begins with &quot;add-&quot;.</p>
+<p>&#x6B21;&#x306B;Git&#x306B;&#x3001;&#x30DE;&#x30FC;&#x30B8;&#x3057;&#x3066;<em>&#x53D6;&#x308A;&#x8FBC;&#x307F;&#x305F;&#x3044;</em>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x5834;&#x5408;&#x3001;&#x3042;&#x306A;&#x305F;&#x306E;&#x30D5;&#x30A3;&#x30FC;&#x30C1;&#x30E3;&#x30FC;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306E;&#x3053;&#x3068;&#x3067;&#x3001;&quot;add-&quot;&#x304B;&#x3089;&#x59CB;&#x307E;&#x308B;&#x540D;&#x524D;&#x306E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3067;&#x3059;&#x3002;</p>
 
 <p><code>$ git merge &lt;BRANCHNAME&gt;</code></p>
 
-<p>Tidy up by deleting your feature branch now that it has been merged.</p>
+<p>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x30DE;&#x30FC;&#x30B8;&#x3067;&#x304D;&#x305F;&#x3089;&#x3001;&#x6574;&#x7406;&#x6574;&#x9813;&#x306E;&#x305F;&#x3081;&#x306B;&#x30D5;&#x30A3;&#x30FC;&#x30C1;&#x30E3;&#x30FC;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x6D88;&#x3057;&#x3066;&#x3057;&#x307E;&#x3044;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
 <p><code>$ git branch -d &lt;BRANCHNAME&gt;</code></p>
 
-<p>You can also delete the branch from your fork on GitHub:</p>
+<p>GitHub&#x4E0A;&#x306B;&#x3042;&#x308B;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x304B;&#x3089;&#x3082;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x6D88;&#x3059;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;:</p>
 <p><code>$ git push &lt;REMOTENAME&gt; --delete &lt;BRANCHNAME&gt;</code></p>
 
-<h2>Step: Pull from Upstream</h2>
-<p>And last but not least, if you pull in updates from the original
-  (since it now shows you on the home page) you&apos;ll be up to date
-  and have a version too, live at: yourusername.github.io/patchwork.</p>
+<h2>Step: Upstream&#x304B;&#x3089;Pull&#x3057;&#x3066;&#x307F;&#x3088;&#x3046;</h2>
+<p>&#x6700;&#x5F8C;&#x3060;&#x3051;&#x3069;&#x5927;&#x4E8B;&#x306A;&#x3053;&#x3068;&#x3068;&#x3057;&#x3066;&#x3001;&#x5143;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x5909;&#x66F4;&#x3092;Pull&#x3059;&#x308B;&#x3068;&#x3001;
+  (&#x30DB;&#x30FC;&#x30E0;&#x30DA;&#x30FC;&#x30B8;&#x306B;&#x3042;&#x306A;&#x305F;&#x306E;&#x540D;&#x524D;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x307E;&#x3059;&#x3088;) &#x6700;&#x65B0;&#x306B;&#x30A2;&#x30C3;&#x30D7;&#x30C7;&#x30FC;&#x30C8;&#x3055;&#x308C;&#x3066;&#x3001;&#x540C;&#x3058;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x3092;&#x6301;&#x3064;&#x3053;&#x3068;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;
+  &#x7D50;&#x679C;&#x306F;&#x3053;&#x3053;&#x3067;&#x898B;&#x308C;&#x307E;&#x3059;&#x3088;: yourusername.github.io/patchwork.</p>
 
-<p>To pull from the original upstream:</p>
+<p>upstream&#x304B;&#x3089;pull&#x3059;&#x308B;&#x306B;&#x306F;:</p>
 
 <p><code>$ git pull upstream gh-pages</code></p>
 
-<h2>Congratulations!</h2>
-<p>You&apos;ve created local repositories, remote repositories, worked with
-  a collaborator, pushed, pulled and joined the millions of others
-  developing and enriching open source!</p>
-<p>Visit <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> to see your name incorporated!</p>
+<h2>&#x304A;&#x3081;&#x3067;&#x3068;&#x3046;&#x3054;&#x3056;&#x3044;&#x307E;&#x3059;!</h2>
+<p>&#x3042;&#x306A;&#x305F;&#x306F;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x3001;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3082;&#x4F5C;&#x3063;&#x3066;&#x3001;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3068;&#x5171;&#x540C;&#x4F5C;&#x696D;&#x3092;&#x3057;&#x3066;&#x3001;Push, Pull&#x3092;&#x3057;&#x3066;&#x3001;&#x305D;&#x306E;&#x4ED6;&#x306E;&#x30AA;&#x30FC;&#x30D7;&#x30F3;&#x30BD;&#x30FC;&#x30B9;&#x3092;&#x958B;&#x767A;&#x3057;&#x8C4A;&#x304B;&#x306B;&#x3059;&#x308B;&#x3055;&#x307E;&#x3056;&#x307E;&#x306A;&#x3053;&#x3068;&#x3092;&#x3084;&#x308A;&#x307E;&#x3057;&#x305F;!</p>
+<p><a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a>&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x3066;&#x3001;&#x3042;&#x306A;&#x305F;&#x306E;&#x540D;&#x524D;&#x304C;&#x4E00;&#x89A7;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x306E;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#xFF01;&#xFF01;</p>
 
 <div class="verify">
   <button class="white" id="verify-challenge">VERIFY</button>
@@ -176,15 +169,15 @@
 <div id="git-tips">
   <h2>Tips</h2>
   <ul>
-    <li><strong>Merge a branch into current branch</strong></li>
+    <li><strong>&#x3042;&#x308B;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x4ECA;&#x3044;&#x308B;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x30DE;&#x30FC;&#x30B8;&#x3059;&#x308B;</strong></li>
     <code>$ git merge &lt;BRANCHNAME&gt;</code>
-    <li><strong>Change the branch you&apos;re working on</strong></li>
+    <li><strong>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x5207;&#x308A;&#x66FF;&#x3048;&#x308B;</strong></li>
     <code>$ git checkout &lt;BRANCHNAME&gt;</code>
-    <li><strong>Delete a local branch</strong></li>
+    <li><strong>&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x306E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x6D88;&#x3059;</strong></li>
     <code>$ git branch -d &lt;BRANCHNAME&gt;</code>
-    <li><strong>Delete a remote branch</strong></li>
+    <li><strong>&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x306E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x6D88;&#x3059;</strong></li>
     <code>$ git push &lt;REMOTENAME&gt; --delete &lt;BRANCHNAME&gt;</code>
-    <li><strong>Pull from a remote branch</strong></li>
+    <li><strong>&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;Pull&#x3059;&#x308B;</strong></li>
     <code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
   </ul>
 </div>

@@ -1,58 +1,42 @@
 <div id="challenge-desc" class="challenge">
   <h2>The Challenge:</h2>
-  <p>Submit a Pull Request on the original Patchwork repository.</p>
+  <p>元のPatchworkリポジトリに対してPull Requestを送ってみよう</p>
 </div>
 
-<h2>Pull Requests</h2>
+<h2>Pull Request</h2>
 
-<p>When you make changes and improvements to a project you've forked,
-  often you'll want to send
-  those changes to the maintainer of the original and <strong>request</strong> that
-  they <strong>pull</strong> the changes into the original so that everyone can
-  benefit from the updates - that's a <strong>pull request</strong>.</p>
+<p>フォークしたリポジトリに変更や改善を加えたら、それらの変更を元のリポジトリのメンテナーに対して、変更を元のリポジトリに<strong>pull</strong>して欲しいという<strong>request</strong> を送りましょう。そうすることによってみんなが変更による利益を享受することができます。これが<strong>pull request</strong>です。</p>
 
-<p>We want to add you to the list of workshop finishers, so make
-  a <strong>pull request</strong> to the original: <a href="https://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.</p>
+<p>私たちは、あなたがこのワークショップを修了した証拠として、あなたの名前をリストに追加したいと考えています。元のリポジトリ(<a href="https://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>)に対する<strong>pull request</strong>を作ってください。 </p>
 
 <img src="../assets/imgs/pullrequest.png" width="600">
 
-<h2>Step: Create a pull request</h2>
-<p>Visit the original repository you forked on GitHub, in this case
-<a href="https://github.com/jlord/patchwork">http://github.com/jlord/patchwork</a>.</p>
+<h2>Step: pull requestを作ろう</h2>
+<p>GitHub上で元のリポジトリにアクセスしてください。今回のケースでは、
+<a href="https://github.com/jlord/patchwork">http://github.com/jlord/patchwork</a>になります。</p>
 
-<p>Often GitHub will detect if you've pushed a branch to a fork and
-display it at the top of the original's website. If you see that with your 'add-username' branch,
-you can click Create Pull Request from there. If not:</p>
+<p>GitHubは通常、あなたがフォークしたリポジトリに変更をPushしたことを検知して、元のページのトップにそのように表示します。もし'add-username'ブランチが見えているなら、そこにあるCreate Pull Requestボタンを押してください。見えない場合は:</p>
 
 <ul>
-  <li>Click 'Pull request' on the right-side menu, then 'New pull request'.</li>
-  <li>Select the branch with the changes you want to submit. <strong>It should be
-the one with 'add-yourusername'</strong>.</li>
+  <li>メニューにある'Pull request'をクリックして、'New pull request'を押します。</li>
+  <li>あなたの変更が入っているブランチを選択してください。<strong>'add-yourusername'という名前のブランチのはずです。</strong></li>
 </ul>
 
-<p>You'll now see a page with the details of the pull request you're
-in the process of submitting. The page shows the commits and changes
-associated with your pull request as compared to the 'gh-pages' branch of the original.</p>
+<p>次にあなたがこれから作ろうとしているpull request作成の詳細画面が表示されます。このページでは作ろうとしているPull Requestに関連するコミットや変更内容が元のリポジトリの'gh-pages'ブランチとの差分の形で表示されています。</p>
 
-<p>If the original repository has a
-<strong>contribution documentation</strong>, GitHub will link to it. This is documentation from repository owners on how to best make contributions to that project. </p>
+<p>もし元のリポジトリに
+<strong>contribution documentation</strong>があれば、GitHubはそのリンクも表示します。これはリポジトリのオーナーからコントリビュートする際に守ってほしいことなどが書かれたドキュメントになります。</p>
 
-<p>If everything is good, and as you expect it:</p>
+<p>確認してみてすべてがOKなら:</p>
 
 <ul>
-  <li>Click 'Create pull request'</li>
-  <li>Add a title and description to the changes you're suggesting the
-  original author pull in.</li>
-  <li>Click 'Send pull request'!</li>
+  <li>'Create pull request'を押します</li>
+  <li>元リポジトリのオーナーにPullしてもらうために、変更の内容がわかりやすいようにtitleとdescriptionを書きます</li>
+  <li>'Send pull request'をクリックしましょう!</li>
 </ul>
 
-<p><strong>High five! You've submitted your pull request, take a few
-seconds to bask in the moment.</strong>
+<p><strong>やったね! Pull Requestを送りました! すこしだけ待ってみてください。</strong>
 
-<p>If all is well with your pull request, it will be merged within moments. If it's not merged automatically within a few moments, you'll then
-likely have some comments from Reporobot on why it couldn't merge
-it. If so, close your pull request on GitHub, make the necessary
-changes to your branch, push those changes and resubmit your pull
-request.</p>
+<p>もしあなたのPull Requestがすべて良くできていれば、少し待つとすぐにマージされるはずです。もし少し待っても自動的にマージされない場合には、おそらくReporobotからなぜマージできないのかコメントが書き込まれているはずです。もしそうだったなら、GitHub上でPull RequestをCloseして、必要な変更を自分のブランチに加えて、もう一回Pushして、再度Pull Requestを作りなおしてみてください。</p>
 
 {{{verify_button}}}
