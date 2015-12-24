@@ -1,0 +1,35 @@
+<div id="challenge-desc" class="challenge">
+  <h2>The Challenge:</h2>
+  <p>GitHub のアカウントを作って、ユーザー名をGitに設定しよう</p>
+</div>
+
+<h2>Better, together</h2>
+
+<p>ここまで作ってきたリポジトリは、まだあなたのコンピュータ上にしかありません。すごく手軽ではありますが、他の人と作業内容を共有するのにはこのままでは難しいです。
+  でも心配しないで。そのためにGitHubがあるんです！</p>
+
+<h2>Step: GitHub のアカウントを作ろう</h2>
+<p>GitHub は、Gitの上で行った作業内容をどこからでもアップロードして誰とでも簡単に共同作業ができるウェブサイトです。</p>
+
+<p><a href="http://github.com" target="_blank">github.com</a> にアクセスし、サインアップしてください。無料です。
+<strong>やったね！ ようこそGitHubへ!!</strong></p>
+
+<h2>Step: Gitにユーザー名を追加する</h2>
+<p>あなたのGitHubアカウントのユーザー名をGitに設定しましょう。この設定はこの後の章で必要になります。GitHubに作成した名前と全く同じ名前で設定してください。<strong>大文字は大文字で、小文字は小文字で、別々の文字として認識されるので注意してください。</strong>また、例の中の "&#60;" と "&#62;" は入力する必要ありませんので注意してください。</p>
+
+<p>GitHub のユーザー名をGitの設定に追加しよう:</p>
+
+<code>$ git config --global user.username &#60;USerNamE&#62;</code>
+<br><br>
+
+{{{verify_button}}}
+
+<div class="didnt-pass">
+  <h2>うまくいかない?</h2>
+
+  <h4>GitHub のユーザー名と Git config のユーザー名が一致しない</h4>
+  <p>よくあるのはGitHubのユーザー名の大文字小文字と、<code>git config</code>に設定した大文字小文字が一致しないというケースです。たとえば、'JLord' と'jlord'は違う名前として認識されることに注意してください。</p>
+  <p>Gitに設定したユーザー名を変更するには、先ほど実行したコマンドと同じコマンドをもう一回内容を変えて実行すればいいです。大文字小文字に注意してください:</p>
+  <p><code>$ git config --global user.username &#60;USerNamE&#62;</code></p>
+  <p>設定を変更できたら、もう一回 verify してみましょう！</p>
+</div>

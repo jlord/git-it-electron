@@ -1,0 +1,46 @@
+{
+  "n": {
+    ".gitignore": ".gitignore",
+    "repository": "リポジトリ",
+    "repositories": "リポジトリ",
+    "branch": "ブランチ",
+    "branches": "ブランチ",
+    "fork": "フォーク",
+    "forks": "フォーク",
+    "request": "リクエスト",
+    "pull request": "プルリクエスト",
+    "pull requests": "プルリクエスト",
+    "commit": "コミット",
+    "commits": "コミット",
+    "upstream": "アップストリーム",
+    "feature": "フィーチャー",
+    "status": "ステータス",
+    "diff": "差分",
+    "readme": "README",
+    "collaborator": "コラボレータ",
+    "collaborators": "コラボレータ",
+    "remote": "リモート",
+    "remotes": "リモート",
+    "contributing": "コントリビュート",
+    "connections": "コネクション"
+  },
+  "v": {
+    "add": "追加",
+    "fork": "フォークする",
+    "forked": "フォークした",
+    "clone": "クローンする",
+    "push": "プッシュする",
+    "close": "クローズする",
+    "pull": "プルする",
+    "commit": "コミットする",
+    "merge": "マージする",
+    "merged": "マージした",
+    "checkout": "チェックアウトする",
+    "stage": "ステージ"
+  },
+  "adj": {
+    "merged": "マージした",
+    "forked": "フォークした",
+    "remote": "リモートの"
+  }
+}

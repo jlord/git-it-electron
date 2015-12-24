@@ -1,0 +1,42 @@
+<div id="challenge-desc" class="challenge">
+  <h2>The Challenge:</h2>
+  <p>元のPatchworkリポジトリに対してPull Requestを送ってみよう</p>
+</div>
+
+<h2>Pull Request</h2>
+
+<p>フォークしたリポジトリに変更や改善を加えたら、元のリポジトリのメンテナーに対して、変更を元のリポジトリに<strong>pull</strong>して欲しいという<strong>request</strong> を送りましょう。そうすることによってみんなが変更による利益を享受することができます。これが<strong>pull request</strong>です。</p>
+
+<p>私たちは、あなたがこのワークショップを修了した証拠として、あなたの名前をリストに追加したいと考えています。元のリポジトリ(<a href="https://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>)に対する<strong>pull request</strong>を作ってください。 </p>
+
+<img src="../assets/imgs/pullrequest.png" width="600">
+
+<h2>Step: pull requestを作ろう</h2>
+<p>GitHub上で元のリポジトリにアクセスしてください。今回のケースでは、
+<a href="https://github.com/jlord/patchwork">http://github.com/jlord/patchwork</a>になります。</p>
+
+<p>GitHubは通常、あなたがフォークしたリポジトリに変更をPushしたことを検知して、元のページのトップにそのように表示します。もし'add-username'ブランチが見えているなら、そこにあるCreate Pull Requestボタンを押してください。見えない場合は:</p>
+
+<ul>
+  <li>メニューにある'Pull request'をクリックして、'New pull request'を押します。</li>
+  <li>あなたの変更が入っているブランチを選択してください。<strong>'add-yourusername'という名前のブランチのはずです。</strong></li>
+</ul>
+
+<p>次にあなたがこれから作ろうとしているpull request作成の詳細画面が表示されます。このページでは作ろうとしているPull Requestに関連するコミットや変更内容が元のリポジトリの'gh-pages'ブランチとの差分の形で表示されています。</p>
+
+<p>もし元のリポジトリに
+<strong>contribution documentation</strong>があれば、GitHubはそのリンクも表示します。これはリポジトリのオーナーからコントリビュートする際に守ってほしいことなどが書かれたドキュメントになります。</p>
+
+<p>確認してみてすべてがOKなら:</p>
+
+<ul>
+  <li>'Create pull request'を押します</li>
+  <li>元リポジトリのオーナーにPullしてもらうために、変更の内容がわかりやすいようにtitleとdescriptionを書きます</li>
+  <li>'Send pull request'をクリックしましょう!</li>
+</ul>
+
+<p><strong>やったね! Pull Requestを送りました! すこしだけ待ってみてください。</strong>
+
+<p>もしあなたのPull Requestがすべて良くできていれば、少し待つとすぐにマージされるはずです。もし少し待っても自動的にマージされない場合には、おそらくReporobotからなぜマージできないのかコメントが書き込まれているはずです。もしそうだったなら、GitHub上でPull RequestをCloseして、必要な変更を自分のブランチに加えて、もう一回Pushして、再度Pull Requestを作りなおしてみてください。</p>
+
+{{{verify_button}}}
