@@ -1,8 +1,7 @@
 var app = require('app')
 var BrowserWindow = require('browser-window')
-var crashReporter = require('crash-reporter')
 var Menu = require('menu')
-var ipc = require('ipc')
+var ipc = require('electron').ipcMain
 var dialog = require('dialog')
 var fs = require('fs')
 var path = require('path')
@@ -17,8 +16,6 @@ var menu = null
 
 var iconPath = path.join(__dirname, '/assets/git-it.png')
 
-crashReporter.start()
-
 app.on('window-all-closed', function appQuit () {
   if (process.platform !== 'darwin') {
     app.quit()
@@ -27,7 +24,7 @@ app.on('window-all-closed', function appQuit () {
 
 app.on('ready', function appReady () {
   mainWindow = new BrowserWindow({"min-width": 800, "min-height": 600, width: 900, height: 600, title: 'Git-it', icon: iconPath })
-  mainWindow.loadUrl('file://' + __dirname + '/index.html')
+  mainWindow.loadURL('file://' + __dirname + '/index.html')
 
   var userDataPath = path.join(app.getPath('userData'), 'user-data.json')
 
