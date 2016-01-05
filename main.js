@@ -1,6 +1,5 @@
 var app = require('app')
 var BrowserWindow = require('browser-window')
-var crashReporter = require('crash-reporter')
 var Menu = require('menu')
 var ipc = require('ipc')
 var dialog = require('dialog')
@@ -16,8 +15,6 @@ var mainWindow = null
 var menu = null
 
 var iconPath = path.join(__dirname, '/assets/git-it.png')
-
-crashReporter.start()
 
 app.on('window-all-closed', function appQuit () {
   if (process.platform !== 'darwin') {
