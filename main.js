@@ -24,7 +24,7 @@ app.on('window-all-closed', function appQuit () {
 
 app.on('ready', function appReady () {
   mainWindow = new BrowserWindow({"min-width": 800, "min-height": 600, width: 900, height: 600, title: 'Git-it', icon: iconPath })
-  mainWindow.loadUrl('file://' + __dirname + '/index.html')
+  mainWindow.loadURL('file://' + __dirname + '/index.html')
 
   var userDataPath = path.join(app.getPath('userData'), 'user-data.json')
 
