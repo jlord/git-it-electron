@@ -602,6 +602,10 @@ button.light-blue:hover {
   display: none;
 }
 
+#done-clear {
+  display: none;
+}
+
 .teal {
   background: #2BDA9E;
   color: #fff;
