@@ -598,6 +598,10 @@ button.light-blue:hover {
   display: none;
 }
 
+#left-off-from {
+  display: none;
+}
+
 .teal {
   background: #2BDA9E;
   color: #fff;
