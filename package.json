@@ -21,10 +21,9 @@
     "build-zhtw": "node lib/build-challenges.js zhtw",
     "build-ja": "node lib/build-challenges.js ja",
     "build-all": "npm run build-chals && npm run build-pages && npm run build-zhtw && npm run build-ja",
-    "package": "electron-packager . Git-it --platform=win32,darwin --arch=x64 --version=0.31.2 --icon=assets/git-it --ignore='node_modules/standard'",
-    "pack-mac": "electron-packager . Git-it --platform=darwin --arch=x64 --version=0.31.2 --icon=assets/git-it.icns --ignore='node_modules/standard'",
-    "pack-win": "electron-packager . Git-it --platform=win32 --arch=ia32   --version=0.31.2 --icon=assets/git-it.ico --ignore='node_modules/standard'",
-    "pack-lin": "electron-packager . Git-it --platform=linux --arch=x64   --version=0.31.2 --icon=assets/git-it.png --ignore='node_modules/standard'"
+    "pack-mac": "electron-packager . Git-it --platform=darwin --arch=x64 --version=0.31.2 --icon=assets/git-it.icns --ignore='assets/PortableGit'",
+    "pack-win": "electron-packager . Git-it --platform=win32 --arch=ia32   --version=0.31.2 --icon=assets/git-it.ico",
+    "pack-lin": "electron-packager . Git-it --platform=linux --arch=x64   --version=0.31.2 --icon=assets/git-it.png --ignore='assets/PortableGit'"
   },
   "repository": {
     "type": "git",
@@ -37,8 +36,7 @@
   },
   "homepage": "https://github.com/jlord/git-it-electron",
   "devDependencies": {
-    "electron-prebuilt": "^0.36.0",
-    "standard": "^3.7.3"
+    "electron-prebuilt": "^0.36.0"
   },
   "dependencies": {
     "cheerio": "^0.19.0",
