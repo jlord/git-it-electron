@@ -705,12 +705,6 @@ button.light-blue:hover {
   border-top: 1px solid;
 }
 
-.progress-circles {
-  /*border: 1px solid #0087ff;
-  border-radius: 2px;
-  padding: 10px 14px;*/
-}
-
 .border-group-left {
   border: 1px solid #0087ff;
   border-radius: 2px 0 0 2px;
@@ -741,7 +735,6 @@ button.light-blue:hover {
   color: #0087ff;
   cursor: pointer;
 }
-
 
 .border-group-container {
   color: #0087ff;
