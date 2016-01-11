@@ -92,10 +92,10 @@ li {
 }
 
 .sidebar {
-  width: 25%;
+  width: 26%;
   position: fixed;
   height: 100%;
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 
 .content {
@@ -145,28 +145,41 @@ li {
 }
 
 .challenge-item {
-  padding: 3px 10px;
+  padding: 3px 10px 3px 20px;
   display: block;
   text-transform: capitalize;
-  border-top: 3px solid transparent;
+  /*border-top: 3px solid transparent;
   border-left: 3px solid transparent;
-  border-bottom: 3px solid transparent;
+  border-bottom: 3px solid transparent;*/
 }
 
 /* :after instead of :before cause it messes with text-transform */
 .challenge-item:after {
   content: " ";
   float: left;
-  width: 20px;
+  /*width: 20px;*/
   display: inline-block;
+  position: relative;
+  left: -9px;
+  top: 9px;
+  height: 6px;
+  width: 6px;
+  border: 0.15em solid #0087ff;
+  /*background-color: #0087ff;*/
+  border-radius: 50px;
 }
 
 .challenge-item.completed:after {
-  content: "\2713 ";
+  /*content: "\2713 ";
+  color: #fff;*/
   position: absolute;
   left: 10px;
-  top: 4px;
-  color: #fff;
+  top: 12px;
+  height: 6px;
+  width: 6px;
+  border: 0.15em solid #0087ff;
+  background-color: #0087ff;
+  border-radius: 50px;
 }
 
 .challenge-item.current .current-arrow {
@@ -191,8 +204,8 @@ li {
 
 .challenge-item.completed {
   position: relative;
-  background-color: #22B784;
-  color: #fff;
+  /*background-color: #22B784;*/
+  /*color: #fff;*/
   padding-left: 30px;
 }
 
