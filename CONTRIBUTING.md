@@ -61,16 +61,13 @@ one you created isn't included inside of the second one.
 $ npm run pack-mac
 ```
 
-This will output the contents of the application to a folder `Git-it-Packaged-Apps/Git-it-darwin-x64`
-at the root of the repository.
+This will output the contents of the application to a folder at `../Git-it-Packaged-Apps/Git-it-darwin-x64`.
 
 ```bash
 $ npm run pack-lin
 ```
 
-This will output the contents of the application to a folder `Git-it-Packaged-Apps/Git-it-linux-x64`
-at the root of the repository.
-
+This will output the contents of the application to a folder at `../Git-it-Packaged-Apps/Git-it-linux-x64`.
 ```bash
 $ npm run pack-win
 ```
@@ -86,5 +83,4 @@ needs to be run in order for this functionality to work, so on non-Windows
 platforms, [Wine](https://www.winehq.org/) needs to be installed. On OS X, it is
 installable via [Homebrew](http://brew.sh/).
 
-This will output the contents of the application to a folder `Git-it-Packaged-Apps/Git-it-win32-ia32`
-at the root of the repository.
+This will output the contents of the application to a folder at `../Git-it-Packaged-Apps/Git-it-win32-ia32`.
