@@ -11,12 +11,12 @@ clone this repository and run:
 $ git clone https://github.com/jlord/git-it-electron
 $ cd git-it-electron
 $ npm install
-$ npm start .
+$ npm start
 ```
 
 ## Packaging for OS X, Windows or Linux
 
-Here's how to create a Git-it executable for Windows, OS X and Linux. You'll need [Node.js](https://nodejs.org) on your computer and [Wine](https://www.winehq.org/) if you're packaging Windows from a non Windows machine (more on this below).
+Here's how to create a Git-it executable for Windows, OS X and Linux. You'll need [Node.js](https://nodejs.org) on your computer and [Wine](https://www.winehq.org/) if you're packaging for Windows from a non Windows machine (more on this below).
 
 #### Use npm 3
 
@@ -32,7 +32,7 @@ This is because the newer version of npm flattens the dependency tree. This is
 essential for creating a version of Git-it that runs on Windows, which has
 limits to file path lengths.
 
-## Clone and install dependencies
+## Clone and Install Dependencies
 
 Clone this repository and install the dependencies:
 
