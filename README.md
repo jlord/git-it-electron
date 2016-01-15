@@ -41,7 +41,7 @@ When you've completed the steps in a challenge click 'Verify'. Depending on the 
 
 **Questions?** [Open an issue](http://github.com/jlord/git-it-electron/issues/new) on this repository.
 
-**Want to contribute?** See the [contributing documentation](CONTRIBUTING.md)
+**Want to contribute or build locally?** See the [contributing documentation](CONTRIBUTING.md)
 
 ---
 

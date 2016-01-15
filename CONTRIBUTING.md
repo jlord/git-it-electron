@@ -1,17 +1,27 @@
 # Contributing to Git-it (on Electron)
 
-Contributions are more than welcome! Will fill out this doc soon.
+Contributions are more than welcome! Will fill out more about that soon.
 
+## Building Locally
 
-## Packaging a release
+If you want to build this locally you'll need [Node.js](https://nodejs.org) on your computer. Then
+clone this repository and run:
 
-Here's how to create a Git-it executable for Windows, OS X and Linux.
+```bash
+$ git clone https://github.com/jlord/git-it-electron
+$ cd git-it-electron
+$ npm install
+$ npm start .
+```
 
-** :grey_exclamation: Requires Node.js and npm 3**
+## Packaging for OS X, Windows or Linux
 
-### Use npm 3
+Here's how to create a Git-it executable for Windows, OS X and Linux. You'll need [Node.js](https://nodejs.org) on your computer and [Wine](https://www.winehq.org/) if you're packaging Windows from a non Windows machine (more on this below).
+
+#### Use npm 3
 
 To package a release you'll need **atleast npm version 3** on your computer.
+
 To check this:
 
 ```bash
@@ -67,7 +77,7 @@ $ npm run pack-win
 
 A note from `electron-packager`, the module we use to package these apps:
 
-> ## Building Windows apps from non-Windows platforms
+> **Building Windows apps from non-Windows platforms**
 
 > Building an Electron app for the Windows platform with a custom icon requires
 editing the `Electron.exe` file. Currently, electron-packager uses [node-rcedit](https://github.com/atom/node-rcedit)
