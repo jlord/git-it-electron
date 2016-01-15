@@ -144,6 +144,10 @@ li {
   padding: 0;
 }
 
+.list-of-challenges h3 {
+  padding-left: 10px;
+}
+
 .challenge-item {
   padding: 3px 10px 3px 20px;
   display: block;
@@ -196,7 +200,7 @@ li {
 }
 
 .challenge-item.current {
-  background-color: #ECFCE0;
+  background-color: #8cf;
   color: #456;
   margin-right: -3px;
   border-color: white;
