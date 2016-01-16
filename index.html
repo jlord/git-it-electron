@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="assets/imgs/favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/octicons.css">
         <script src="./lib/challenges-completed.js"></script>
         <script src="./lib/handle-external-links.js"></script>
     </head>
@@ -26,29 +27,61 @@
     </header>
 
     <div class="page-wrapper">
-      <h2>Welcome to Git-it!</h2>
-      <p>Step-by-step instructions for each of the challenges in the <a href="http://github.com/jlord/git-it" target="_blank">Git-it workshop</a>. View the <a href="index-zhtw.html">Traditional Chinese version</a>.</p>
-      <p>This guide comes with Git-it when you install it so it works offline and you can use it as a resource at anytime (see the instructions when you select a challenge in terminal). Have fun!</p>
 
-      <a href="challenges/get_git.html" id="get-started"><button class="teal full-width">Get Started!</button></a>
+      <div id="show-first-run">
+        <h1>Welcome!</h1>
+        <p>Git-it teaches the basics of using Git and GitHub. These basics aren't merely benginner Git and GitHub skills but they are the commands and steps you'll use over and over as you use Git everyday in your awesome future coding.</p>
 
-      <h2>Git-it Challenges</h2>
+        <p>You can also complete Git-it in <strong>Traditional Chinese</strong> and <strong>Japanese</strong>, just select the langauge you want from the menu in the upper left.</p>
 
-      <ol class="toc">
-        <li id="get_git"><a href="challenges/get_git.html">Get Git</a> Install and configure Git</li>
-        <li id='repository'><a href="challenges/repository.html">Repository</a> Create a local repository</li>
-        <li id='commit_to_it'><a href="challenges/commit_to_it.html">Commit to it</a> Check status, add and commit changes</li>
-        <li id='githubbin'><a href="challenges/githubbin.html">GitHubbin</a> Get a GitHub account</li>
-        <li id='remote_control'><a href="challenges/remote_control.html">Remote Control</a> Connect local repositories to remote ones on GitHub.com</a></li>
-        <li id='forks_and_clones'><a href="challenges/forks_and_clones.html">Forks and Clones</a> Fork and clone an open source repository</li>
-        <li id='branches_arent_just_for_birds'><a href="challenges/branches_arent_just_for_birds.html">Branches aren't just for Birds</a> Create a branch for features/changes</li>
-        <li id='its_a_small_world'><a href="challenges/its_a_small_world.html">It's a Small World</a> Add and sync with a collaborator (Hi, @reporobot!)</li>
-        <li id='pull_never_out_of_date'><a href="challenges/pull_never_out_of_date.html">Pull, Never Out of Date</a> Push and pull to sync changes to GitHub.com</li>
-        <li id='requesting_you_pull_please'><a href="challenges/requesting_you_pull_please.html">Requesting You Pull Please</a> Create a pull request</li>
-        <li id='merge_tada'><a href="challenges/merge_tada.html">Merge Tada</a> Merge and delete branches</li>
-      </ol>
+        <a href="challenges/get_git.html" id="get-started"><button class="btn-primary">Start challenge one!</button></a>
+      </div>
 
-      <button id="clear-all-challenges">Clear all challenge statues</button>
+      <div id="show-wip-run">
+        <div class="progress-circles border-group-container full-width">
+          <span class="border-group-left">Challenges completed:</span>
+          <span class="border-group-middle">
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+          </span>
+          <span class="border-group-right btn js-clear-all-challenges" title="Clear status"><span class="octicon octicon-trashcan"></span></span>
+        </div>
+        <h1>On your way!</h2>
+        <p>You're making progress, keep going and pick up where you left off.</p>
+        <a id="left-off-from"><button class="btn-primary">Pick up where you left off!</button></a>
+      </div>
+
+      <div id="show-finished-run">
+        <div class="progress-circles border-group-container full-width">
+          <span class="border-group-left">Challenges completed:</span>
+          <span class="border-group-middle">
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-circle"></div>
+          </span>
+          <span class="border-group-right btn js-clear-all-challenges" title="Clear status"><span class="octicon octicon-trashcan"></span></span>
+        </div>
+        <h1>You did it!</h2>
+        <p>You're finished with all the challenges! You're primed for social coding, so what's next?</p>
+        <button class="btn-primary js-clear-all-challenges">You're done! Clear and start over?</button>
+      </div>
 
       <footer>
         <ul>

@@ -29,8 +29,9 @@
 body {
   font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
   line-height: 1.8em;
-  color: #333935;
+  color: rgba(51, 57, 53, 0.83);
   background-color: #f5f5f5;
+  /*background-color: #F8F6F0;*/
   font-size: 15px;
   margin: 0;
 }
@@ -91,10 +92,10 @@ li {
 }
 
 .sidebar {
-  width: 25%;
+  width: 26%;
   position: fixed;
   height: 100%;
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 
 .content {
@@ -143,29 +144,46 @@ li {
   padding: 0;
 }
 
+.list-of-challenges h3 {
+  padding-left: 10px;
+}
+
 .challenge-item {
-  padding: 3px 10px;
+  padding: 3px 10px 3px 20px;
   display: block;
   text-transform: capitalize;
-  border-top: 3px solid transparent;
+  /*border-top: 3px solid transparent;
   border-left: 3px solid transparent;
-  border-bottom: 3px solid transparent;
+  border-bottom: 3px solid transparent;*/
 }
 
 /* :after instead of :before cause it messes with text-transform */
 .challenge-item:after {
   content: " ";
   float: left;
-  width: 20px;
+  /*width: 20px;*/
   display: inline-block;
+  position: relative;
+  left: -9px;
+  top: 9px;
+  height: 6px;
+  width: 6px;
+  border: 0.15em solid #0087ff;
+  /*background-color: #0087ff;*/
+  border-radius: 50px;
 }
 
 .challenge-item.completed:after {
-  content: "\2713 ";
+  /*content: "\2713 ";
+  color: #fff;*/
   position: absolute;
   left: 10px;
-  top: 4px;
-  color: #fff;
+  top: 12px;
+  height: 6px;
+  width: 6px;
+  border: 0.15em solid #0087ff;
+  background-color: #0087ff;
+  border-radius: 50px;
 }
 
 .challenge-item.current .current-arrow {
@@ -182,7 +200,7 @@ li {
 }
 
 .challenge-item.current {
-  background-color: #ECFCE0;
+  background-color: #8cf;
   color: #456;
   margin-right: -3px;
   border-color: white;
@@ -190,8 +208,8 @@ li {
 
 .challenge-item.completed {
   position: relative;
-  background-color: #22B784;
-  color: #fff;
+  /*background-color: #22B784;*/
+  /*color: #fff;*/
   padding-left: 30px;
 }
 
@@ -593,19 +611,60 @@ button.light-blue:hover {
   margin-bottom: 11px;
 }
 
-#clear-all-challenges:disabled,
+/*#clear-all-challenges:disabled,
 #get-started:disabled {
   display: none;
+}*/
+
+/*#left-off-from {
+  display: none;
+}*/
+
+/*#done-clear {
+  display: none;
+}*/
+
+.btn-primary {
+  margin: 9px 0;
+  background: #0087ff;
+  color: #fff;
+  border-radius: 2px;
+  box-shadow: 1px 0px 8px 2px #E8E8E7;
+  padding: 12px 17px;
+  font-size: 16px;
+  text-transform: inherit;
 }
 
-.teal {
-  background: #2BDA9E;
+.btn-primary:hover {
+  background: #0087ff;
   color: #fff;
+  box-shadow: 1px 0px 8px 2px #cfd9f4;
+
 }
 
-.teal:hover {
-  background: #6EE7BD;
-  color: #fff;
+.btn-secondary {
+  margin: 9px 0;
+  background: none;
+  color: #0087FF;
+  border-radius: 2px;
+  border-color: #8cf;
+  /* box-shadow: 1px 0px 8px 2px #E8E8E7; */
+  padding: 12px 17px;
+  font-size: 16px;
+  text-transform: inherit;
+}
+
+.btn-secondary:hover {
+  background: #c7dbec;
+  color: #7aa5c9;
+  border-color: #7aa5c9;
+  /*box-shadow: 1px 0px 8px 2px #cfd9f4;*/
+
+}
+
+.btn-sml {
+  padding: 8px 10px;
+  font-size: 12px;
 }
 
 .grey-border {
@@ -661,4 +720,75 @@ button.light-blue:hover {
   transform: rotate(-45deg);
   border-left: 1px solid;
   border-top: 1px solid;
+}
+
+.border-group-left {
+  border: 1px solid #0087ff;
+  border-radius: 2px 0 0 2px;
+  padding: 10px 14px;
+}
+
+.border-group-middle {
+  border-top: 1px solid #0087ff;
+  border-bottom: 1px solid #0087ff;
+  padding: 10px 14px;
+  margin-left: -3px;
+}
+
+.border-group-right {
+  border: 1px solid #0087ff;
+  border-radius: 0 2px 2px 0;
+  padding: 10px 14px;
+}
+
+.border-group-right.btn {
+  border: 1px solid #88CCFF;
+  color: #88CCFF;
+  border-left-color: #0087FF;
+}
+
+.border-group-right.btn:hover {
+  border: 1px solid #0087ff;
+  color: #0087ff;
+  cursor: pointer;
+}
+
+.border-group-container {
+  color: #0087ff;
+  padding: 20px 0;
+}
+
+.progress-circles .border-left {
+  border-left: 1px solid #0087ff;
+}
+
+.progress-circle {
+  display: inline-block;
+  width: 10px;
+	height: 10px;
+  border: 0.15em solid #0087ff;
+	border-radius: 50px;
+}
+
+.progress-circle.completed {
+  background: #0087ff;
+}
+
+.progress-circle.completed + .progress-circle:not(.completed) {
+  background: #8cf;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    background: none;
+  }
+}
+
+.btn-no-style {
+  background: none;
+  padding: 0;
+  text-transform: inherit;
+  color: #333;
+  font-size: inherit;
 }
