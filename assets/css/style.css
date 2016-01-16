@@ -197,7 +197,7 @@ li {
 }
 
 .challenge-item.completed:hover {
-  background-color: #1EA577;
+  /*background-color: #1EA577;*/
 }
 
 .challenge-item.current {
@@ -793,4 +793,11 @@ button.light-blue:hover {
   text-transform: inherit;
   color: #333;
   font-size: inherit;
+}
+
+.line-meta {
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  font-size: 10px;
+  font-weight: 200;
 }
