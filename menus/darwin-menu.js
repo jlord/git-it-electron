@@ -103,6 +103,46 @@ module.exports = function menu (app, mainWindow) {
       label: 'Window',
       submenu: [
         {
+          label: 'Home',
+          click: function (item, focusedWindow) {
+            if (focusedWindow)
+              // TODO Add logic for language specific pages
+              var path = require('path').join('file://', __dirname, '../index.html')
+              focusedWindow.loadURL(path)
+          }
+        },
+        {
+          label: 'Dictionary',
+          click: function (item, focusedWindow) {
+            if (focusedWindow)
+              var path = require('path').join('file://', __dirname, '../pages/dictionary.html')
+              focusedWindow.loadURL(path)
+          }
+        },
+        {
+          label: 'Resources',
+          click: function (item, focusedWindow) {
+            if (focusedWindow)
+              var path = require('path').join('file://', __dirname, '../pages/resources.html')
+              focusedWindow.loadURL(path)
+          }
+        },
+        {
+          label: 'About App',
+          click: function (item, focusedWindow) {
+            if (focusedWindow)
+              var path = require('path').join('file://', __dirname, '../pages/about.html')
+              focusedWindow.loadURL(path)
+          }
+        },
+        {
+          label: 'Open Issue',
+          click: function() { require('electron').shell.openExternal('https://github.com/jlord/git-it-electron/issues/new') }
+        },
+        {
+          type: 'separator'
+        },
+        {
           label: 'Minimize',
           accelerator: 'Command+M',
           selector: 'performMiniaturize:'
