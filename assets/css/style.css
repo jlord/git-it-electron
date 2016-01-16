@@ -639,7 +639,10 @@ button.light-blue:hover {
   background: #0087ff;
   color: #fff;
   box-shadow: 1px 0px 8px 2px #cfd9f4;
+}
 
+.btn-primary .octicon {
+  padding-left: 6px;
 }
 
 .btn-secondary {
