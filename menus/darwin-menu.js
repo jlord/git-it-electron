@@ -100,6 +100,58 @@ module.exports = function menu (app, mainWindow) {
       ]
     },
     {
+    label: 'Language',
+    submenu: [
+      {
+        label: 'English',
+        click: function (item, focusedWindow) {
+          if (focusedWindow) {
+            var path = ''
+            var currentPage = focusedWindow.webContents.getURL().split('/').pop().replace('.html', '')
+            if (currentPage.match('zhtw') || currentPage.match('ja')) currentPage = currentPage.split('-')[0]
+            var langPage = currentPage + '.html'
+            if (langPage.indexOf('index') < 0) {
+              path = require('path').join('file://', __dirname, '../challenges', langPage)
+            } else path = require('path').join('file://', __dirname, '../', langPage)
+            focusedWindow.loadURL(path)
+          }
+        }
+      },
+      {
+        label: '正體中文',
+        click: function (item, focusedWindow) {
+          if (focusedWindow) {
+            var path = ''
+            var lang = '-zhtw'
+            var currentPage = focusedWindow.webContents.getURL().split('/').pop().replace('.html', '')
+            if (currentPage.match('zhtw') || currentPage.match('ja')) currentPage = currentPage.split('-')[0]
+            var langPage = currentPage + lang + '.html'
+            if (langPage.indexOf('index') < 0) {
+              path = require('path').join('file://', __dirname, '../challenges', langPage)
+            } else path = require('path').join('file://', __dirname, '../', langPage)
+            focusedWindow.loadURL(path)
+          }
+        }
+      },
+      {
+        label: '日本語',
+        click: function (item, focusedWindow) {
+          if (focusedWindow) {
+            var path = ''
+            var lang = '-ja'
+            var currentPage = focusedWindow.webContents.getURL().split('/').pop().replace('.html', '')
+            if (currentPage.match('zhtw') || currentPage.match('ja')) currentPage = currentPage.split('-')[0]
+            var langPage = currentPage + lang + '.html'
+            if (langPage.indexOf('index') < 0) {
+              path = require('path').join('file://', __dirname, '../challenges', langPage)
+            } else path = require('path').join('file://', __dirname, '../', langPage)
+            focusedWindow.loadURL(path)
+          }
+        }
+      }
+    ]
+    },
+    {
       label: 'Window',
       submenu: [
         {
