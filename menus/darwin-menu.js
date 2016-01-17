@@ -158,8 +158,14 @@ module.exports = function menu (app, mainWindow) {
           label: 'Home',
           click: function (item, focusedWindow) {
             if (focusedWindow)
-              // TODO Add logic for language specific pages
-              var path = require('path').join('file://', __dirname, '../index.html')
+              var lang, regexp
+              var location = focusedWindow.webContents.getURL()
+              var currentPage = location.split('/').pop().replace('.html', '')
+              if (currentPage.match('index')) regexp = /index(-\w+).html/
+              else regexp = /challenges(-\w+)\//
+              lang = location.match(regexp) ? '-' + location.match(regexp)[1].substr(1) : ''
+              var page = '../index' + lang + '.html'
+              var path = require('path').join('file://', __dirname, page)
               focusedWindow.loadURL(path)
           }
         },
