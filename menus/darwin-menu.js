@@ -106,14 +106,16 @@ module.exports = function menu (app, mainWindow) {
         label: 'English',
         click: function (item, focusedWindow) {
           if (focusedWindow) {
-            var path = ''
-            var currentPage = focusedWindow.webContents.getURL().split('/').pop().replace('.html', '')
-            if (currentPage.match('zhtw') || currentPage.match('ja')) currentPage = currentPage.split('-')[0]
-            var langPage = currentPage + '.html'
-            if (langPage.indexOf('index') < 0) {
-              path = require('path').join('file://', __dirname, '../challenges', langPage)
-            } else path = require('path').join('file://', __dirname, '../', langPage)
-            focusedWindow.loadURL(path)
+            var goToPath
+            var location = focusedWindow.webContents.getURL()
+            var currentPage = location.split('/').pop().replace('.html', '')
+            if (currentPage.indexOf('index') < 0) {
+              if (location.match('/pages/')) return goToPath = location
+              goToPath = require('path').join('file://', __dirname, '../challenges', currentPage + '.html')
+            } else {
+              goToPath = require('path').join('file://', __dirname, '../index.html')
+            }
+            focusedWindow.loadURL(goToPath)
           }
         }
       },
@@ -121,15 +123,19 @@ module.exports = function menu (app, mainWindow) {
         label: '正體中文',
         click: function (item, focusedWindow) {
           if (focusedWindow) {
-            var path = ''
+            var goToPath
             var lang = '-zhtw'
-            var currentPage = focusedWindow.webContents.getURL().split('/').pop().replace('.html', '')
-            if (currentPage.match('zhtw') || currentPage.match('ja')) currentPage = currentPage.split('-')[0]
-            var langPage = currentPage + lang + '.html'
-            if (langPage.indexOf('index') < 0) {
-              path = require('path').join('file://', __dirname, '../challenges', langPage)
-            } else path = require('path').join('file://', __dirname, '../', langPage)
-            focusedWindow.loadURL(path)
+            var location = focusedWindow.webContents.getURL()
+            var currentPage = location.split('/').pop().replace('.html', '')
+            if (currentPage.indexOf('index') < 0) {
+              if (location.match('/pages/')) return goToPath = location
+              var chalPath = '../challenges' + lang
+              goToPath = require('path').join('file://', __dirname, chalPath, currentPage + '.html')
+            } else {
+              var indexPath = '../index' + lang + '.html'
+              goToPath = require('path').join('file://', __dirname, indexPath)
+            }
+            focusedWindow.loadURL(goToPath)
           }
         }
       },
@@ -137,15 +143,19 @@ module.exports = function menu (app, mainWindow) {
         label: '日本語',
         click: function (item, focusedWindow) {
           if (focusedWindow) {
-            var path = ''
+            var goToPath
             var lang = '-ja'
-            var currentPage = focusedWindow.webContents.getURL().split('/').pop().replace('.html', '')
-            if (currentPage.match('zhtw') || currentPage.match('ja')) currentPage = currentPage.split('-')[0]
-            var langPage = currentPage + lang + '.html'
-            if (langPage.indexOf('index') < 0) {
-              path = require('path').join('file://', __dirname, '../challenges', langPage)
-            } else path = require('path').join('file://', __dirname, '../', langPage)
-            focusedWindow.loadURL(path)
+            var location = focusedWindow.webContents.getURL()
+            var currentPage = location.split('/').pop().replace('.html', '')
+            if (currentPage.indexOf('index') < 0) {
+              if (location.match('/pages/')) return goToPath = location
+              var chalPath = '../challenges' + lang
+              goToPath = require('path').join('file://', __dirname, chalPath, currentPage + '.html')
+            } else {
+              var indexPath = '../index' + lang + '.html'
+              goToPath = require('path').join('file://', __dirname, indexPath)
+            }
+            focusedWindow.loadURL(goToPath)
           }
         }
       }
