@@ -64,10 +64,10 @@ a:hover {
 }
 
 blockquote {
-  border-left: 2px solid #acacac;
-  padding-left: 30px;
+  border-left: 2px solid rgba(51, 57, 53, 0.83);
+  padding-left: 18px;
   margin: 30px 0;
-  color: #acacac;
+  color: rgba(51, 57, 53, 0.83);
 }
 
 img {
@@ -272,18 +272,14 @@ img {
 /* CHALLENGES
    -------------------------------------------------------------------------- */
 
- .challenge-desc {
-  color: #777;
-  font-style: italic;
- }
-
 .content h1, .content h2, .content h3, .content h4 {
   margin-top: 50px;
 }
 
 code, .outof {
   font-size: 0.9em;
-  border: 1px solid #9DA6B3;
+  /*border: 1px solid #9DA6B3;*/
+  background: rgba(157, 166, 179, 0.16);
   padding: 4px 6px;
   border-radius: 2px;
   font-family: 'Liberation Mono', Monaco, Courier New, monospace;
@@ -299,16 +295,12 @@ code.shell:before {
   overflow: auto;
 }
 
-.challenge-desc {
-  color: #777;
-  font-style: italic;
-}
-
 /* CHALLENGE SECTIONS
    -------------------------------------------------------------------------- */
 
 #git-tips,
-.didnt-pass {
+.didnt-pass,
+.challenge {
   border: 1px solid #BADFFF;
   padding: 18px;
   margin: 18px 0 36px;
@@ -319,12 +311,14 @@ code.shell:before {
   border-color: #999;
 }
 
-#git-tips h2 {
+#git-tips h2,
+.challenge h2 {
   color: #08f;
 }
 
 #git-tips h2,
-.didnt-pass h2 {
+.didnt-pass h2,
+.challenge h2 {
   margin: -32px -8px 0;
   float: left;
   background: #fff;
@@ -346,8 +340,9 @@ code.shell:before {
   padding: 0;
 }
 
-#git-tips code, .didnt-pass code {
-  border-color: #0087ff;
+#git-tips code {
+  border: none;
+  background: rgba(136, 204, 255, 0.15);
 }
 
 #git-tips li {
@@ -362,13 +357,19 @@ code.shell:before {
   padding-top: 30px;
 }
 
+.challenge p {
+  margin: 0;
+  color: #0087ff;
+}
+
 /* VERIFY
    -------------------------------------------------------------------------- */
 
-.challenge, .verify {
+.verify {
   background-color: #0087ff;
   color: #fff;
-  padding: 18px 18px 5px;
+  padding: 18px;
+  border-radius: 2px;
 }
 
 .verify code {
@@ -382,7 +383,6 @@ code.shell:before {
 }
 
 #git-tips h4,
-.challenge h2,
 .verify h3 {
   margin-top: 0;
 }
@@ -470,7 +470,11 @@ button:focus {
 }
 
 button:hover {
-background-color: rgba(227, 220, 220, 0.38);
+  background-color: rgba(227, 220, 220, 0.38);
+}
+
+button:disabled {
+  background-color: rgba(167, 164, 164, 0.68);
 }
 
 .btn-primary {
@@ -586,10 +590,6 @@ button .octicon {
   pointer-events: none;
   display: inline-block;
   z-index: 10;
-}
-
-.grey-border {
-  border: 1px solid #818181
 }
 
 /* FOOTER
