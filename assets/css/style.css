@@ -373,6 +373,7 @@ footer ul li {
   border: 1px solid #BADFFF;
   padding: 18px;
   margin: 18px 0 36px;
+  border-radius: 2px;
 }
 
 .didnt-pass {
@@ -440,10 +441,10 @@ footer ul li {
   margin: 10px 0 0;
 }
 
-.didnt-pass h4:before {
+/*.didnt-pass h4:before {
   content: '⚠️ ';
   font-weight: normal;
-}
+}*/
 
 .didnt-pass p + h4 {
   padding-top: 30px;
