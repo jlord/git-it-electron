@@ -627,10 +627,6 @@ button .octicon {
 
 .lang-select {
   padding: 4px 13px;
-  border-radius: 3px;
-  color: #0087ff;
-  display: inline-block;
-  border-color: #8cf;
   position: absolute;
   height: 36px;
   width: 100px;
