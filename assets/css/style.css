@@ -691,8 +691,8 @@ button .octicon {
   border-color: #000;
   border-bottom: 1px solid;
   border-left: 1px solid;
-  position: relative;
-  right: -51px;
+  position: absolute;
+  right: 28px;
 }
 
 .arrow-right:after {
