@@ -398,7 +398,6 @@ code.shell:before {
 
 #path-required-warning,
 #directory-path {
-  font-family: Liberation Mono, Monaco, Courier New, monospace;
   padding: 6px 12px 6px 10px;
   vertical-align: middle;
   margin-bottom: 0;
@@ -406,15 +405,12 @@ code.shell:before {
   font-weight: 400;
   text-align: center;
   white-space: nowrap;
-  border-right: 1px solid #fff;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
   margin-left: -3px;
+  color: #8cf;
 }
 
 #path-required-warning {
   display: none;
-  color: #ff0;
 }
 
 #path-required-warning.show {
