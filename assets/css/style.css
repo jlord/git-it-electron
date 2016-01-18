@@ -560,22 +560,21 @@ n, v, adj {
   font-size: 12px;
 }
 
+/* BUTTONS
+   -------------------- */
+
 button {
   display: inline-block;
-  background-color: #CBCBCB;
-  color: #818181;
+  background-color: rgba(203, 203, 203, 0.38);
+  color: #FFFFFF;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 12px;
-  font-weight: 400;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  cursor: pointer;
   -webkit-user-select: none;
   border: 1px solid transparent;
   font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
-  text-transform: uppercase;
 }
 
 button:focus {
@@ -583,94 +582,101 @@ button:focus {
 }
 
 button:hover {
-  background-color: #e7e7e7;
+background-color: rgba(227, 220, 220, 0.38);
 }
-
-button.white {
-  background-color: #fff;
-  color: #0087ff;
-}
-
-button.white:hover {
-  background-color: #eeeeee;
-}
-
-button.white:disabled {
-  background-color: #F5F5F5;
-  color: #C8C8C8;
-}
-
-button.light-blue {
-  background-color: #D2EAFF;
-  color: #86B6E0;
-}
-
-button.light-blue:hover {
-  background-color: #e2effa;
-}
-
-#clear-completed-challenge {
-  margin-bottom: 11px;
-}
-
-/*#clear-all-challenges:disabled,
-#get-started:disabled {
-  display: none;
-}*/
-
-/*#left-off-from {
-  display: none;
-}*/
-
-/*#done-clear {
-  display: none;
-}*/
 
 .btn-primary {
   margin: 9px 0;
   background: #0087ff;
   color: #fff;
   border-radius: 2px;
-  box-shadow: 1px 0px 8px 2px #E8E8E7;
-  padding: 12px 17px;
-  font-size: 16px;
   text-transform: inherit;
-}
-
-.btn-primary:hover {
-  background: #0087ff;
-  color: #fff;
-  box-shadow: 1px 0px 8px 2px #cfd9f4;
-}
-
-.btn-primary .octicon {
-  padding-left: 6px;
 }
 
 .btn-secondary {
-  margin: 9px 0;
-  background: none;
-  color: #0087FF;
+  background: #8cf;
+  color: #fff;
   border-radius: 2px;
+}
+
+.btn-white {
+  background: #fff;
+  color: #0087ff;
+  border-radius: 2px;
+}
+
+.btn-outline {
   border-color: #8cf;
-  /* box-shadow: 1px 0px 8px 2px #E8E8E7; */
+  background: none;
+  padding: 4px 13px;
+  border-radius: 3px;
+  color: #0087ff;
+  display: inline-block;
+}
+
+.btn-light {
+  background: #fff;
+}
+
+.btn-cta {
+  box-shadow: 0 4px 60px rgba(0, 0, 0, .2);
+}
+
+.btn-primary:hover {
+  background: #057ce7;
+}
+
+button .octicon {
+  padding-left: 6px;
+}
+
+.btn-large {
   padding: 12px 17px;
   font-size: 16px;
-  text-transform: inherit;
 }
 
-.btn-secondary:hover {
-  background: #c7dbec;
-  color: #7aa5c9;
-  border-color: #7aa5c9;
-  /*box-shadow: 1px 0px 8px 2px #cfd9f4;*/
-
-}
-
-.btn-sml {
+.btn-small {
   padding: 8px 10px;
   font-size: 12px;
 }
+
+.border-group-left {
+  border: 1px solid #0087ff;
+  border-radius: 2px 0 0 2px;
+  padding: 10px 14px;
+}
+
+.border-group-middle {
+  border-top: 1px solid #0087ff;
+  border-bottom: 1px solid #0087ff;
+  padding: 10px 14px;
+  margin-left: -3px;
+}
+
+.border-group-right {
+  border: 1px solid #0087ff;
+  border-radius: 0 2px 2px 0;
+  padding: 10px 14px;
+}
+
+.border-group-right.btn {
+  border: 1px solid #88CCFF;
+  color: #88CCFF;
+  border-left-color: #0087FF;
+}
+
+.border-group-right.btn:hover {
+  border: 1px solid #0087ff;
+  color: #0087ff;
+  cursor: pointer;
+}
+
+.border-group-container {
+  color: #0087ff;
+  padding: 20px 0;
+}
+
+/* ---------------------- */
 
 .grey-border {
   border: 1px solid #818181
@@ -727,41 +733,7 @@ button.light-blue:hover {
   border-top: 1px solid;
 }
 
-.border-group-left {
-  border: 1px solid #0087ff;
-  border-radius: 2px 0 0 2px;
-  padding: 10px 14px;
-}
 
-.border-group-middle {
-  border-top: 1px solid #0087ff;
-  border-bottom: 1px solid #0087ff;
-  padding: 10px 14px;
-  margin-left: -3px;
-}
-
-.border-group-right {
-  border: 1px solid #0087ff;
-  border-radius: 0 2px 2px 0;
-  padding: 10px 14px;
-}
-
-.border-group-right.btn {
-  border: 1px solid #88CCFF;
-  color: #88CCFF;
-  border-left-color: #0087FF;
-}
-
-.border-group-right.btn:hover {
-  border: 1px solid #0087ff;
-  color: #0087ff;
-  cursor: pointer;
-}
-
-.border-group-container {
-  color: #0087ff;
-  padding: 20px 0;
-}
 
 .progress-circles .border-left {
   border-left: 1px solid #0087ff;
