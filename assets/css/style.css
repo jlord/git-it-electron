@@ -40,6 +40,9 @@ div, header, select, a {
   box-sizing: border-box;
 }
 
+/* UTILITIES
+   -------------------------------------------------------------------------- */
+
 .full-width {
   width: 100%;
 }
@@ -134,6 +137,9 @@ li {
   right: 15px;
 }
 
+/* SIDEBAR
+   -------------------------------------------------------------------------- */
+
 .list-of-challenges {
   list-style-type: none;
   margin: 0;
@@ -153,16 +159,12 @@ li {
   padding: 3px 10px 3px 20px;
   display: block;
   text-transform: capitalize;
-  /*border-top: 3px solid transparent;
-  border-left: 3px solid transparent;
-  border-bottom: 3px solid transparent;*/
 }
 
 /* :after instead of :before cause it messes with text-transform */
 .challenge-item:after {
   content: " ";
   float: left;
-  /*width: 20px;*/
   display: inline-block;
   position: relative;
   left: -9px;
@@ -170,13 +172,10 @@ li {
   height: 6px;
   width: 6px;
   border: 0.15em solid #0087ff;
-  /*background-color: #0087ff;*/
   border-radius: 50px;
 }
 
 .challenge-item.completed:after {
-  /*content: "\2713 ";
-  color: #fff;*/
   position: absolute;
   left: 10px;
   top: 12px;
@@ -196,10 +195,6 @@ li {
   display: none;
 }
 
-.challenge-item.completed:hover {
-  /*background-color: #1EA577;*/
-}
-
 .challenge-item.current {
   background-color: #8cf;
   color: #0087FF;
@@ -210,54 +205,7 @@ li {
 
 .challenge-item.completed {
   position: relative;
-  /*background-color: #22B784;*/
-  /*color: #fff;*/
   padding-left: 30px;
-}
-
-
-.hand,
-.lang-select {
-  padding: 4px 13px;
-  border-radius: 3px;
-  color: #0087ff;
-  display: inline-block;
-}
-
-.hand {
-  border: 1px solid #8cf;
-  font-size: 26px;
-  margin-left: 10px;
-}
-
-.lang-select {
-  border-color: #8cf;
-  position: absolute;
-  height: 36px;
-  width: 100px;
-  margin: 5px 8px;
-  top: 0;
-  left: 0;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-.lang-select:after {
-  content: "";
-  border: 5px solid transparent;
-  border-top-color: #8cf;
-  position: relative;
-  left: 40px;
-  top: 5px;
-  pointer-events: none;
-  display: inline-block;
-  z-index: 10;
-}
-
-.hand:hover {
-  border-color: transparent;
-  background-color: #08f;
-  color: #fff;
 }
 
 .challenge-name {
@@ -607,7 +555,7 @@ background-color: rgba(227, 220, 220, 0.38);
 }
 
 .btn-outline {
-  border-color: #8cf;
+  border: 1px solid #8cf;
   background: none;
   padding: 4px 13px;
   border-radius: 3px;
@@ -675,6 +623,34 @@ button .octicon {
 .border-group-container {
   color: #0087ff;
   padding: 20px 0;
+}
+
+.lang-select {
+  padding: 4px 13px;
+  border-radius: 3px;
+  color: #0087ff;
+  display: inline-block;
+  border-color: #8cf;
+  position: absolute;
+  height: 36px;
+  width: 100px;
+  margin: 5px 8px;
+  top: 0;
+  left: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.lang-select:after {
+  content: "";
+  border: 5px solid transparent;
+  border-top-color: #8cf;
+  position: relative;
+  left: 40px;
+  top: 5px;
+  pointer-events: none;
+  display: inline-block;
+  z-index: 10;
 }
 
 /* ---------------------- */
