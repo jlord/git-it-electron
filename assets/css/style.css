@@ -430,6 +430,7 @@ code.shell:before {
 }
 
 #verify-list {
+  display: none;
   list-style: none;
   padding-left: 0;
 }
