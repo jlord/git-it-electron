@@ -1,3 +1,6 @@
+/* FONTS
+   -------------------------------------------------------------------------- */
+
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
@@ -26,6 +29,9 @@
   src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(fonts/SourceSansPro-Black.otf) format('opentype');
 }
 
+/* GENERAL
+   -------------------------------------------------------------------------- */
+
 body {
   font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
   line-height: 1.8em;
@@ -40,8 +46,41 @@ div, header, select, a {
   box-sizing: border-box;
 }
 
+li {
+  padding-bottom: 4px;
+}
+
+h1, h2, h3, h4, .toc {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+a {
+  color: #0087ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4BABFF;
+}
+
+blockquote {
+  border-left: 2px solid #acacac;
+  padding-left: 30px;
+  margin: 30px 0;
+  color: #acacac;
+}
+
+img {
+  margin: 30px 0 18px;
+}
+
 /* UTILITIES
    -------------------------------------------------------------------------- */
+
+.all-caps {
+  font-size: 12px;
+  text-transform: uppercase;
+}
 
 .full-width {
   width: 100%;
@@ -67,9 +106,12 @@ div, header, select, a {
   position: fixed;
 }
 
-li {
-  padding-bottom: 4px;
+.u-inlineBlock {
+  display: inline-block;
 }
+
+/* LAYOUT
+   -------------------------------------------------------------------------- */
 
 .nav {
   width: 100%;
@@ -94,13 +136,6 @@ li {
   padding: 15px;
 }
 
-.sidebar {
-  width: 26%;
-  position: fixed;
-  height: 100%;
-  background-color: #fff;
-}
-
 .content {
   padding: 26px;
   margin-left: 26%;
@@ -108,6 +143,9 @@ li {
   height: 100%;
   background-color: #fff;
 }
+
+/* FIXED HEADER
+   -------------------------------------------------------------------------- */
 
 .site-header {
   height: 60px;
@@ -122,6 +160,10 @@ li {
   border-bottom: 1px solid #e0e0e0;
 }
 
+.site-header h2 {
+  margin-top: 12px;
+}
+
 .challenge-title {
   text-transform: capitalize;
   font-size: 19px;
@@ -131,14 +173,26 @@ li {
   display: inline-block;
 }
 
-.pagination {
-  position: absolute;
-  top: 12px;
-  right: 15px;
+.filledblock {
+  display: inline-block;
+  padding: 4px 10px;
+  font-weight: 900;
+}
+
+.filledblock:hover {
+  background: #4BABFF;
+  color: #fff;
 }
 
 /* SIDEBAR
    -------------------------------------------------------------------------- */
+
+ .sidebar {
+   width: 26%;
+   position: fixed;
+   height: 100%;
+   background-color: #fff;
+ }
 
 .list-of-challenges {
   list-style-type: none;
@@ -161,7 +215,8 @@ li {
   text-transform: capitalize;
 }
 
-/* :after instead of :before cause it messes with text-transform */
+/* :after instead of :before cause
+   it messes with text-transform */
 .challenge-item:after {
   content: " ";
   float: left;
@@ -214,66 +269,16 @@ li {
   color: #0087ff;
 }
 
-.filledblock {
-  display: inline-block;
-  padding: 4px 10px;
-  font-weight: 900;
-}
+/* CHALLENGES
+   -------------------------------------------------------------------------- */
 
-.filledblock:hover {
-  background: #4BABFF;
-  color: #fff;
-}
-
-.all-caps {
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.site-header h2 {
-  margin-top: 12px;
-}
-
-h1, h2, h3, h4, .toc {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
-}
+ .challenge-desc {
+  color: #777;
+  font-style: italic;
+ }
 
 .content h1, .content h2, .content h3, .content h4 {
   margin-top: 50px;
-}
-
-a {
-  color: #0087ff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #4BABFF;
-}
-
-.toc li {
-  margin-bottom: 10px;
-}
-
-.toc li a {
-  font-weight: 700;
-}
-
-.toc {
-  padding-left: 0;
-  text-align: left;
-  list-style-position: inside;
-}
-
-.toc .done:before {
-  content: 'done!';
-  float: right;
-  color: #aaa;
-  text-decoration: none !important;
-}
-
-.toc .done a {
-  text-decoration: line-through;
 }
 
 code, .outof {
@@ -281,30 +286,13 @@ code, .outof {
   border: 1px solid #9DA6B3;
   padding: 4px 6px;
   border-radius: 2px;
-  font-family: Liberation Mono, Monaco, Courier New, monospace;
+  font-family: 'Liberation Mono', Monaco, Courier New, monospace;
   white-space: nowrap;
 }
 
 code.shell:before {
   content: "$ ";
   opacity: 0.4;
-}
-
-footer {
-  border-top: 3px solid #0087ff;
-  margin: 20px 0 0;
-  padding: 12px 0;
-}
-
-footer ul {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-footer ul li {
-  display: inline-block;
-  padding: 0 6px;
 }
 
 .prenext {
@@ -315,6 +303,9 @@ footer ul li {
   color: #777;
   font-style: italic;
 }
+
+/* CHALLENGE SECTIONS
+   -------------------------------------------------------------------------- */
 
 #git-tips,
 .didnt-pass {
@@ -363,6 +354,17 @@ footer ul li {
   margin-top: 0px;
 }
 
+.didnt-pass h4 {
+  margin: 10px 0 0;
+}
+
+.didnt-pass p + h4 {
+  padding-top: 30px;
+}
+
+/* VERIFY
+   -------------------------------------------------------------------------- */
+
 .challenge, .verify {
   background-color: #0087ff;
   color: #fff;
@@ -385,63 +387,10 @@ footer ul li {
   margin-top: 0;
 }
 
-.didnt-pass h4 {
-  margin: 10px 0 0;
-}
-
-/*.didnt-pass h4:before {
-  content: '⚠️ ';
-  font-weight: normal;
-}*/
-
-.didnt-pass p + h4 {
-  padding-top: 30px;
-}
-
 .verify h3 {
   display: inline-block;
   padding-right: 12px;
 }
-
-blockquote {
-  border-left: 2px solid #acacac;
-  padding-left: 30px;
-  margin: 30px 0;
-  color: #acacac;
-}
-
-.weehero {
-  background-color: #0087ff;
-  padding: 30px;
-  text-align: center;
-  color: #fff;
-  font-size: 50px;
-  font-weight: 900;
-}
-
-img {
-  margin: 30px 0 18px;
-}
-
-n, v, adj {
-  position: relative;
-}
-
-.superscript {
-  font-size: 0.6em;
-  position: absolute;
-  top: -20%;
-  line-height: 0.6em;
-  font-weight: normal;
-  white-space: nowrap;
-  opacity: 0.8;
-}
-
-.u-inlineBlock {
-  display: inline-block;
-}
-
-/* new stuff */
 
 #directory-path:empty {
   display: none;
@@ -484,7 +433,6 @@ n, v, adj {
   content: '✔︎ ';
 }
 
-
 #verify-list {
   list-style: none;
   padding-left: 0;
@@ -500,17 +448,8 @@ n, v, adj {
   padding: 0; margin: 0;
 }
 
-.completed-challenge-list {
-  font-family: "NothingYouCouldDo";
-  /*background-color: #BADFFF;*/
-  color: #2BDA9E;
-  padding: 2px 4px;
-  text-transform: uppercase;
-  font-size: 12px;
-}
-
 /* BUTTONS
-   -------------------- */
+   -------------------------------------------------------------------------- */
 
 button {
   display: inline-block;
@@ -649,14 +588,15 @@ button .octicon {
   z-index: 10;
 }
 
-/* ---------------------- */
-
 .grey-border {
   border: 1px solid #818181
 }
 
-/* Mu-An's arrows save the day */
+/* FOOTER
+   -------------------------------------------------------------------------- */
 
+/* Mu-An's arrows
+   save the day */
 .arrow-right {
   width: 10px;
   height: 10px;
@@ -706,7 +646,8 @@ button .octicon {
   border-top: 1px solid;
 }
 
-
+/* HOME PAGE
+   -------------------------------------------------------------------------- */
 
 .progress-circles .border-left {
   border-left: 1px solid #0087ff;
@@ -735,17 +676,19 @@ button .octicon {
   }
 }
 
-.btn-no-style {
-  background: none;
-  padding: 0;
-  text-transform: inherit;
-  color: #333;
-  font-size: inherit;
+/* LANGUAGES, TRANSLATIONS
+   -------------------------------------------------------------------------- */
+
+n, v, adj {
+  position: relative;
 }
 
-.line-meta {
-  text-transform: uppercase;
-  letter-spacing: .02em;
-  font-size: 10px;
-  font-weight: 200;
+.superscript {
+  font-size: 0.6em;
+  position: absolute;
+  top: -20%;
+  line-height: 0.6em;
+  font-weight: normal;
+  white-space: nowrap;
+  opacity: 0.8;
 }
