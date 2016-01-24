@@ -298,6 +298,8 @@ code.shell:before {
 /* CHALLENGE SECTIONS
    -------------------------------------------------------------------------- */
 
+/* TODO Make these generic for dictionary
+   and resources page */
 #git-tips,
 .didnt-pass,
 .challenge {
