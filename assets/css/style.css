@@ -576,7 +576,8 @@ button .octicon {
 .lang-select:after {
   content: "";
   border: 5px solid transparent;
-  border-top-color: #8cf;
+  /*border-top-color: #8cf;*/
+  border-top-color: #A6A6A6;
   position: relative;
   left: 40px;
   top: 5px;
