@@ -1,6 +1,6 @@
 # Git-it (Desktop Version)
 
-[![Build Status](https://travis-ci.org/maxogden/electron-packager.svg?branch=master)](https://travis-ci.org/maxogden/electron-packager)
+[![Build Status](https://travis-ci.org/jlord/git-it-electron.svg?branch=master)](https://travis-ci.org/jlord/git-it-electron)
 
 [![screenshot](https://cloud.githubusercontent.com/assets/1305617/9652620/fce0cc46-51d1-11e5-9cb6-d2d71535dfc5.png)](https://github.com/jlord/git-it-electron/releases)
 
