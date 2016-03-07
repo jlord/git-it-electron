@@ -441,6 +441,19 @@ code.shell:before {
   padding: 0; margin: 0;
 }
 
+#verify-spinner.sk-double-bounce {
+  display: none;
+  width: 26px;
+  height: 26px;
+  position: relative;
+  margin: 0 auto 0 14px;
+  vertical-align: middle;
+}
+
+#verify-spinner.sk-double-bounce .sk-child {
+  background-color: #E0E0E0;
+}
+
 /* BUTTONS
    -------------------------------------------------------------------------- */
 
