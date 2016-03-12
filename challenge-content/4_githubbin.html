@@ -3,29 +3,35 @@
   <p>Create a GitHub account, add username to your Git config.</p>
 </div>
 
-<h2>Better, together</h2>
+<h2>Background: Working better, together</h2>
 
 <p>The repository you've created so far is just on your computer, which
-  is handy, but makes it pretty hard to share and work with others on.
+  is handy, but makes it pretty hard to share and work on with others.
   No worries, that's what GitHub is for!</p>
 
-<h2>Step: Create a GitHub Account</h2>
 <p>GitHub is a website that allows people everywhere to upload what
-  they're working on with Git and to easily work together.</p>
+  they're working on with Git so that everyone can easily work together on the same project. Instead of having your project just on you computer, you'd also sync it to GitHub which acts as the central repository for you and everyone else to share.</p>
+
+<h2>Step: Create a GitHub Account</h2>
 
 <p>Visit <a href="http://github.com" target="_blank">github.com</a> and sign up for a free account.
 <strong>High five, welcome!</strong></p>
 
-<h2>Step: Add username to Git</h2>
-<p>Add your GitHub username to your Git configuration,
-which will be needed in order to verify the upcoming challenges. Save it exactly as you created it on GitHub — <strong>capitalize where capitalized</strong>, and remember you don't need to enter the "&#60;" and "&#62;" .</p>
+<h2>Step: Add GitHub username to Git</h2>
+<p>Add your GitHub username to your Git configuration. We'll do this just for the sake of the Git-it, it makes it easier to verify the upcoming challenges. Save it exactly as you created it on GitHub — <strong>capitalize where capitalized</strong>, and remember you don't need to enter the "&#60;" and "&#62;" .</p>
 
 <p>Add your GitHub username to your configuration:</p>
 
 <code class="shell">git config --global user.username &#60;USerNamE&#62;</code>
-<br><br>
+
+<p>You can double check what you have set in your Git config by typing: <code>git config --global user.username</code> in terminal.</p>
 
 {{{verify_button}}}
+
+<div id="git-tips">
+  <h2>Tips</h2>
+  <p>Make sure you type "<strong>user.username</strong>" above and not "user.name", which would override the name you set in the first challenge and leave you with no username property! If you found you did that, it's ok, just repeat the step in the first challenge to add your name and then complete the step above.</p>
+</div>
 
 <div class="didnt-pass">
   <h2>Didn't Pass?</h2>
