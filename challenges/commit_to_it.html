@@ -116,38 +116,39 @@
         <div id="challenge-desc" class="challenge">
   <h2>Goal</h2>
   <p>Create a file in your new repository, add something to that file and
-    commit those changes to Git.</p>
+    commit those changes with Git.</p>
 </div>
 
 <h2>Step: Create a New File</h2>
 
-<p>Now that you've got a repository started, add a file to it.</p>
+<p>Now that you've got a repository started let's add a file to it.</p>
 
-<p>Open a text editor. Now write a couple of lines of text, perhaps
-  say hello, and save the file as <code>readme.txt</code> in the 'hello-world' folder you created in the last challenge.</p>
+<p>Open your text editor and create a new empty file. Now write a little bit of text, perhaps
+  type "Hello!", and save the file as 'readme.txt' in the 'hello-world' folder you created in the last challenge.</p>
 
 <h2>Step: Status, Add and Commit Changes</h2>
-<p>Next check the <strong>status</strong> of your repository to find out if there have been changes. Below in this terminal,
-  you should still be within the 'hello-world' you created. See if there
-  are changes listed:</p>
+<p>Next check the <strong>status</strong> of your repository to find out if there have been changes. You know you have changed something, but does Git?</p>
 
+<p>Make sure you're still within your <code>hello-world</code> directory when you're running these commands. Use Git to see what changed in your repository:</p>
+
+<p>First, check the status:</p>
 <p><code class="shell">git status</code></p>
+<p>Git should tell you that a file has been added.</p>
 
-<p>Then <strong>add</strong> the file you just created to the files you'd
-  like to <strong>commit</strong> (aka save) to change. </p>
-
+<p>Then <strong>add</strong> the file you just created so that it becomes a part of the changes you will <strong>commit</strong> (aka save) with Git:</p>
 <p><code class="shell">git add readme.txt</code></p>
 
 <p>Finally, <strong>commit</strong> those changes to the repository's history with a
-  short description of the updates.</p>
-<p><code class="shell">git commit -m "&#60;your commit message&#62;"</code></p>
+  short (m) message describing the updates.</p>
+<p><code class="shell">git commit -m "Created readme"</code></p>
 
 <h2>Step: Make More Changes</h2>
-<p>Now add another line to <code>readme.txt</code> and save.</p>
+<p>Now add another line to 'readme.txt' and save the file again.</p>
 
 <p>In terminal, you can view the <strong>diff</strong>erence between the
   file now and how it was at your last commit. </p>
 
+<p>Tell Git to show you the <strong>diff</strong>:</p>
 <p><code class="shell">git diff</code></p>
 
 <p>Now with what you just learned above, commit this latest change.</p>
@@ -174,7 +175,7 @@
     <li><strong>To add all files changes</strong></li>
     <li><code class="shell">git add .</code></li>
     <li><strong>To commit (aka save) the changes you've added with a short message describing the changes</strong></li>
-    <li><code class="shell">git commit -m "&#60;your commit message&#62;"</code></li>
+    <li><code class="shell">git commit -m "your commit message"</code></li>
   <ul>
 </div>
 
