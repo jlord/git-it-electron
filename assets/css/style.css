@@ -63,6 +63,11 @@ a:hover {
   color: #4BABFF;
 }
 
+p {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
 blockquote {
   border-left: 2px solid rgba(51, 57, 53, 0.83);
   padding-left: 18px;
@@ -266,15 +271,28 @@ img {
 /* CHALLENGES
    -------------------------------------------------------------------------- */
 
-.content h1, .content h2, .content h3, .content h4 {
-  margin-top: 50px;
+ .content h1, .content h2, .content h3, .content h4 {
+   margin-top: 50px;
+ }
+
+.chal-background {
+  color: #6F879C;
+  background: rgba(136, 204, 255, 0.18);
+  border-radius: 2px;
+  padding: 3px 24px;
 }
+
+.chal-background h2 {
+  margin-top: 18px;
+}
+
+
 
 code, .outof {
   font-size: 0.9em;
   /*border: 1px solid #9DA6B3;*/
   background: rgba(157, 166, 179, 0.16);
-  padding: 4px 6px;
+  padding: 2px 6px;
   border-radius: 2px;
   font-family: 'Liberation Mono', Monaco, Courier New, monospace;
   white-space: nowrap;
@@ -294,7 +312,7 @@ code.shell:before {
 
 /* TODO Make these generic for dictionary
    and resources page */
-#git-tips,
+.blue-border-box,
 .didnt-pass,
 .challenge {
   border: 1px solid #BADFFF;
@@ -307,12 +325,12 @@ code.shell:before {
   border-color: #999;
 }
 
-#git-tips h2,
+.blue-border-box h2,
 .challenge h2 {
   color: #08f;
 }
 
-#git-tips h2,
+.blue-border-box h2,
 .didnt-pass h2,
 .challenge h2 {
   margin: -32px -8px 0;
@@ -321,27 +339,27 @@ code.shell:before {
   padding: 0 8px;
 }
 
-#git-tips h2 + p {
+.blue-border-box h2 + p {
   margin-top: 0;
 }
 
-#git-tips p:last-child,
+.blue-border-box p:last-child,
 .didnt-pass p:last-child {
   margin-bottom: 0;
 }
 
-#git-tips ul {
+.blue-border-box ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#git-tips code {
+.blue-border-box code {
   border: none;
   background: rgba(136, 204, 255, 0.15);
 }
 
-#git-tips li {
+.blue-border-box li {
   margin-top: 0px;
 }
 
@@ -378,7 +396,7 @@ code.shell:before {
   margin-bottom: 30px;
 }
 
-#git-tips h4,
+.blue-border-box h4,
 .verify h3 {
   margin-top: 0;
 }
