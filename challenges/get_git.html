@@ -119,37 +119,33 @@
   <p>Install Git on your computer and configure your name and email.</p>
 </div>
 
-<h2>Git</h2>
+<h2>Background: Git</h2>
 
-<p>Git is <strong>open source software</strong> (free for anyone to use) written
+<p>Git is free <strong>open source software</strong> (the <a href="https://github.com/git/git">source code is public</a>) written
   by Linus Torvalds who also wrote the Linux operating system. </p>
-<p>It is a program for keeping track of changes over time, known in
-  programming as <strong>version control</strong>.</p>
+<p>Git is a program for keeping track of changes over time, known in
+  programming as <strong>version control</strong>. If you've used a track changes feature in a text document then you're already familiar with the concept!</p>
 
 <h2>Step: Install Git</h2>
 
-<ul>
-  <li><strong>Windows</strong>: It's recommended to download GitHub Desktop,
-  which includes Git and has an easier install:
-  <a href="http://desktop.github.com" target="_blank">desktop.github.com</a>. Use the <strong>Git Shell</strong> for your terminal.</li>
+We recommend installing Git on your computer by downloading the <a href="https://desktop.github.com">GitHub Desktop</a> app. We'll not use the desktop app in Git-it (we're learning terminal!) but it includes Git and is the easiest way to install Git on all platforms in the same way.
 
-  <li><strong>Mac</strong>: You can also download GitHub Desktop, which includes
-  Git, <a href="http://desktop.github.com/" target="_blank">desktop.github.com</a> (from Preferences, select
-  the command line tools install), or
-    <ul>
-      <li>download Git by itself at:
-      <a href="http://git-scm.com/downloads" target="_blank">git-scm.com/downloads</a> and follow the installation instructions.</li>
-    </ul>
-  </li>
+<ul>
+  <li><strong>Windows</strong>: Use the <strong>Git Shell</strong> for your terminal.</li>
+  <li><strong>Mac</strong>: Open GitHub Desktop and from Preferences, select the command line tools install. Use the <strong>terminal</strong> app as your terminal.</li>
 </ul>
+
+<p>Already have Git or not sure? Type <code>git --version</code> in your terminal and if it returns a version number higher than <code>1.7.10</code>, you're set! For more information, visit the <a href="http://git-scm.com">Git website</a>.</p>
+
+</p>
 
 <p>Git isn't like other programs on your computer. You'll likely not
 see an icon on your desktop, but it will always be available to you
 and you'll be able to access it at anytime from your
-terminal (which you're using in Git-it!) or Git desktop applications (like GitHub Desktop).</p>
+terminal or Git desktop applications.</p>
 
 <h2>Step: Configure Git</h2>
-<p>Once it is installed, open <strong>terminal</strong> (aka Bash, aka Shell, aka Prompt).
+<p>Once Git is installed, open your <strong>terminal</strong>.
 You can verify that it's really there by typing:</p>
 
 <p><code class="shell">git --version </code></p>
@@ -158,14 +154,13 @@ You can verify that it's really there by typing:</p>
 
 <p><code>git version 1.9.1</code></p>
 
-<p>(Any version <code>1.7.10</code> or higher is fine.)</p>
 
-<p>Next, configure Git so it knows who to associate your changes to:</p>
+<p>Next, configure Git so it knows to associate your work to you:</p>
 
 <p>Set your name:</p>
-<p><code class="shell">git config --global user.name "&#60;Your Name&#62;"</code></p>
+<p><code class="shell">git config --global user.name "Your Name"</code></p>
 <p>Now set your email:</p>
-<p><code class="shell">git config --global user.email "&#60;youremail@example.com&#62;"</code></p>
+<p><code class="shell">git config --global user.email "youremail@example.com"</code></p>
 
 <div class="verify">
   <button class="btn-white" id='verify-challenge'>VERIFY</button>
@@ -182,7 +177,7 @@ You can verify that it's really there by typing:</p>
   <h2>Tips</h2>
   <p>Dollar signs <code>$</code> are often used in programming documentation
 to signify that the line is <strong>command line</strong> code (see the code snippets above). You don't actually
-type the <code>$</code> in though, only type what comes after. For instance, to run the verify command above, you're actually going to type <code>git-it verify</code> into terminal.</p>
+type the <code>$</code> in though, only type what comes after.</p>
 </div>
 
         <div class="prenext">

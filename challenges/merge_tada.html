@@ -116,39 +116,35 @@
       <div class="content">
         <div id="challenge-desc" class="challenge">
   <h2>Goal</h2>
-  <p>Merge your branch locally, delete old branch and pull from upstream for much win!</p>
+  <p>Merge your branch locally, delete the branch and pull from upstream for much win!</p>
  </div>
+
+ <h2>Background: Cleaning up</h2>
+
+ <p>Once you don't need branches anymore you can delete them locally and remotely. This is helpful so that you don't end up with a pile of old branches.</p>
 
 <h2>Step: Merge Locally</h2>
 
-<p>Your pull request has been merged! Now, since you
-  know that you definitely want those updates in your forked version,
-  and your branch is in good working order, merge it into the main
-  branch on your forked repository, in this case, 'gh-pages'.</p>
+<p>Your pull request has been merged! Your branch was merged into the 'gh-pages' branch of the original on GitHub. You can merge your branch locally, too.</p>
 
-<p>First, move into the branch you want to merge <em>into</em> — in this case,
-  branch 'gh-pages'.</p>
-
+<p>First, move into the branch you want to merge into—in this case, the branch 'gh-pages'.</p>
 <p><code class="shell">git checkout gh-pages</code></p>
 
-<p>Now tell Git what branch you want to merge <em>in</em> — in this case,
+<p>Now tell Git what branch you want to merge in— in this case,
   your feature branch that begins with "add-".</p>
-
 <p><code class="shell">git merge &#60;BRANCHNAME&#62;</code></p>
 
-<p>Tidy up by deleting your feature branch now that it has been merged.</p>
+<p>Tidy up by deleting your feature branch. Now that it has been merged you don't really need it around.</p>
 <p><code class="shell">git branch -d &#60;BRANCHNAME&#62;</code></p>
 
 <p>You can also delete the branch from your fork on GitHub:</p>
 <p><code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
 
 <h2>Step: Pull from Upstream</h2>
-<p>And last but not least, if you pull in updates from the original
-  (since it now shows you on the home page) you'll be up to date
-  and have a version too, live at: yourusername.github.io/patchwork.</p>
+<p>And last but not least, the original has changed since your pull request was merged—Reporobot added your name to the website! If you pull in these changes from upstream you'll be up to date
+  and have that version too. You can actually see it live as well at: yourusername.github.io/patchwork.</p>
 
 <p>To pull from the original upstream:</p>
-
 <p><code class="shell">git pull upstream gh-pages</code></p>
 
 <h2>Congratulations!</h2>
