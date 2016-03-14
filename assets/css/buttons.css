@@ -1,0 +1,149 @@
+/* BUTTONS
+   -------------------------------------------------------------------------- */
+
+button {
+  display: inline-block;
+  background-color: rgba(203, 203, 203, 0.38);
+  color: #FFFFFF;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  border: 1px solid transparent;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  background-color: rgba(227, 220, 220, 0.38);
+}
+
+button:disabled {
+  background-color: rgba(24,105,177,1);
+}
+
+button .octicon {
+  padding-left: 6px;
+}
+
+.index-page .btn-primary {
+  padding: 10px;
+  font-size: .8em;
+}
+
+.btn-primary {
+  margin: 9px 0;
+  background: #0087ff;
+  color: #fff;
+  border-radius: 2px;
+  text-transform: inherit;
+}
+
+.btn-secondary {
+  background: #8cf;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.btn-white {
+  background: #fff;
+  color: #0087ff;
+  border-radius: 2px;
+}
+
+.btn-outline {
+  border: 1px solid #8cf;
+  background: none;
+  padding: 4px 13px;
+  border-radius: 3px;
+  color: #0087ff;
+  display: inline-block;
+}
+
+.btn-light {
+  background: #fff;
+}
+
+.btn-cta {
+  box-shadow: 0 4px 60px rgba(0, 0, 0, .2);
+}
+
+.btn-primary:hover {
+  background: #057ce7;
+}
+
+.btn-large {
+  padding: 12px 17px;
+  font-size: 16px;
+}
+
+.btn-small {
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+.border-group-left {
+  border: 1px solid #0087ff;
+  border-radius: 2px 0 0 2px;
+  padding: 10px 14px;
+}
+
+.border-group-middle {
+  border-top: 1px solid #0087ff;
+  border-bottom: 1px solid #0087ff;
+  padding: 10px 14px;
+  margin-left: -3px;
+}
+
+.border-group-right {
+  border: 1px solid #0087ff;
+  border-radius: 0 2px 2px 0;
+  padding: 10px 14px;
+}
+
+.border-group-right.btn {
+  border: 1px solid #88CCFF;
+  color: #88CCFF;
+  border-left-color: #0087FF;
+}
+
+.border-group-right.btn:hover {
+  border: 1px solid #0087ff;
+  color: #0087ff;
+  cursor: pointer;
+}
+
+.border-group-container {
+  color: #0087ff;
+  padding: 20px 0;
+}
+
+.lang-select {
+  padding: 4px 13px;
+  position: absolute;
+  height: 36px;
+  width: 100px;
+  margin: 5px 8px;
+  top: 0;
+  left: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.lang-select:after {
+  content: "";
+  border: 5px solid transparent;
+  /*border-top-color: #8cf;*/
+  border-top-color: #A6A6A6;
+  position: relative;
+  left: 40px;
+  top: 5px;
+  pointer-events: none;
+  display: inline-block;
+  z-index: 10;
+}

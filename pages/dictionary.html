@@ -1,20 +1,18 @@
 <!doctype html>
-<html class="no-js" lang="">
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Git-it Guide | Dictionary</title>
-      <meta name="description" content="learn git and github">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
-      <link rel="stylesheet" href="../assets/css/style.css">
-      <script>require('../lib/handle-external-links.js')</script>
-    </head>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Git-it</title>
+    <link rel="stylesheet" href="../assets/css/new-style.css">
+    <link rel="stylesheet" href="../assets/css/new-challenge.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css">
+    <script>require('../lib/handle-external-links.js')</script>
+  </head>
 
   <body>
     <header id="challenge-header" class="site-header">
   <div class="lang-select">
-    <select id="lang-select" class="lang-select">
+    <select id="lang-select" class="btn-outline lang-select">
       <option value="">English</option>
       <option value="zhtw">正體中文</option>
       <option value="ja">日本語</option>
@@ -39,11 +37,12 @@
 
 
     <div class="page-wrapper">
-      <h2>Dictionary</h2>
+      <h1>Dictionary</h1>
+<p>Below is a collection of the terminal and Git commands used when completing the Git-it challenges.</p>
 
 <h2>Bash/Terminal Basics</h2>
-<div id="git-tips">
-  <ul>
+<div class="blue-border-box">
+  <ul class="no-list-style">
     <li><strong>Make a new folder (aka directory)</strong></li>
     <code class="shell">mkdir &#60;FOLDERNAME&#62;</code>
     <li><strong>Navigate into an existing folder (aka change directory)</strong></li>
@@ -54,8 +53,8 @@
 </div>
 
 <h2>Configuring Git</h2>
-<div id="git-tips">
-  <ul>
+<div class="blue-border-box">
+  <ul class="no-list-style">
     <li><strong>Check Git version</strong></li>
     <code>git --version</code>
     <li><strong>Set your name</strong></li>
@@ -68,8 +67,8 @@
 </div>
 
 <h2>Git Basics</h2>
-<div id="git-tips">
-  <ul>
+<div class="blue-border-box">
+  <ul class="no-list-style">
     <li><strong>Turn Git on for a folder</strong></li>
     <code class="shell">git init</code>
     <li><strong>Check status of changes to a repository</strong></li>
@@ -88,36 +87,36 @@
 </div>
 
 <h2>Git Branches</h2>
-<div id="git-tips">
-  <ul>
-    <li><strong>Create a new branch:</strong></li>
+<div class="blue-border-box">
+  <ul class="no-list-style">
+    <li><strong>Create a new branch</strong></li>
     <code class="shell">git branch &#60;BRANCHNAME&#62;</code>
-    <li><strong>Move onto a branch:</strong></li>
+    <li><strong>Move onto a branch</strong></li>
     <code class="shell">git checkout &#60;BRANCHNAME&#62;</code>
-    <li><strong>You can create and switch to a branch in one line:</strong></li>
+    <li><strong>You can create and switch to a branch in one line</strong></li>
     <code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code>
-    <li><strong>List the branches:</strong></li>
+    <li><strong>List the branches</strong></li>
     <code class="shell">git branch</code>
-    <li><strong>Rename a branch you're currently on:</strong></li>
+    <li><strong>Rename a branch you're currently on</strong></li>
     <code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code>
   </ul>
 </div>
 
 <h2>Git Remotes</h2>
-<div id="git-tips">
-  <ul>
+<div class="blue-border-box">
+  <ul class="no-list-style">
     <li><strong>Add remote connections</strong></li>
     <code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code>
     <li><strong>Set a URL to a remote</strong></li>
-    <code class="shell">git remote set-url &#60;REMOTENAME&#62; &#60;URL&#62;</code>
+    <code class="shell">git remote set-url &#60;REMOTENAME&#62; <URL></code>
     <li><strong>View remote connections</strong></li>
     <code class="shell">git remote -v</code>
   </ul>
 </div>
 
 <h2>Pulling in Git</h2>
-<div id="git-tips">
-  <ul>
+<div class="blue-border-box">
+  <ul class="no-list-style">
     <li><strong>Pull in changes</strong></li>
     <code class="shell">git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
     <li><strong>Pull in changes from a remote branch</strong></li>
@@ -128,8 +127,8 @@
 </div>
 
 <h2>Push &#38; Merge in Git</h2>
-<div id="git-tips">
-  <ul>
+<div class="blue-border-box">
+  <ul class="no-list-style">
     <li><strong>Push changes</strong></li>
     <code class="shell">git push &#60;REMOTENAME&#62; <BRANCH></code>
     <li><strong>Merge a branch into current branch</strong></li>
@@ -138,8 +137,8 @@
 </div>
 
 <h2>Deleting Remotes and Branches in Git</h2>
-<div id="git-tips">
-  <ul>
+<div class="blue-border-box">
+  <ul class="no-list-style">
     <li><strong>Delete a local branch</strong></li>
     <code class="shell">git branch -D &#60;BRANCHNAME&#62;</code>
     <li><strong>Delete a remote branch</strong></li>
