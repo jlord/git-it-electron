@@ -323,6 +323,11 @@ ul.no-list-style {
 /* HOME PAGE
    -------------------------------------------------------------------------- */
 
+
+.chal-background h3 {
+  margin: 0;
+}
+
 .progress-circles .border-left {
   border-left: 1px solid #0087ff;
 }
