@@ -228,3 +228,19 @@ code.shell:before {
 .prenext {
   overflow: auto;
 }
+
+/* PAGES STYLES
+   -------------------------------------------------------------------------- */
+
+.blue-border-box {
+  border: 1px solid #BADFFF;
+  padding: 18px;
+  margin: 18px 0 36px;
+  border-radius: 2px;
+}
+
+.blue-border-box code {
+  border: none;
+  color: #4F6375;
+  background: rgba(136, 204, 255, 0.15);
+}
