@@ -8,7 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/2-double-bounce.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/new-style.css">
+    <link rel="stylesheet" href="../assets/css/new-challenge.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css">
   </head>
   <body>
     <header id="challenge-header" class="site-header">
@@ -114,49 +116,50 @@
 
 </div>
       <div class="content">
-        <div id="challenge-desc" class="challenge">
-  <h2>Goal</h2>
+        <div id="challenge-desc" class="chal-goal blue-border border-box">
   <p>Create a new repository on your computer.</p>
 </div>
 
-<h2>Background: Repositories</h2>
-
-<p>A <strong>repository</strong> is a collection of related items. In our case, when writing software, it is a collection of files related to a software project. You can imagine it
-  as a project folder with all the relevant files inside of it. In
+<div class="chal-background light-blue solid-box">
+  <h2> Repositories</h2>
+  <p>A <strong>repository</strong> is a collection of related items. In our case, when writing software, it is a collection of files related to a software project. You can imagine it as a project folder with all the relevant files inside of it. In
   fact, that's what it will look like on your computer anyways. Sometimes they're called "repos" for short.</p>
 
-<img src="../assets/imgs/repos.png" width="600">
+  <img src="../assets/imgs/repos.png" width="600">
 
-<p>You tell Git what your project is and Git will start tracking all
+  <p>You tell Git what your project is and Git will start tracking all
   of the changes to that folder. This makes it a Git repository—a folder of items being tracked by Git. Git tracks when files are added, subtracted or even a single letter in a single file is changed. All of this plus who did it and when is tracked by Git. In software that's called <strong>version control</strong>.</p>
 
-<h2>Using Terminal</h2>
-<p><strong>Terminal</strong> (or Bash) is a way to instruct your computer to do things by typing commands rather than clicking applications with your mouse. You can rename files, open files, create new folders, move between directories (folders) and more all by running typed commands. You can even run a text editor (such as <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) in your terminal and never have to leave!</p>
+  <h2>Using Terminal</h2>
+  <p><strong>Terminal</strong> (or Bash) is a way to instruct your computer to do things by typing commands rather than clicking applications with your mouse. You can rename files, open files, create new folders, move between directories (folders) and more all by running typed commands. You can even run a text editor (such as <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) in your terminal and never have to leave!</p>
 
-<p>Besides navigating your computer, you can also use programs in Terminal that have a <strong>command-line interface (CLI)</strong>, meaning they can be run with commands in terminal. Git is one of these. You can access and control Git through commands in terminal, as you'll be doing very soon!</p>
+  <p>Besides navigating your computer, you can also use programs in Terminal that have a <strong>command-line interface (CLI)</strong>, meaning they can be run with commands in terminal. Git is one of these. You can access and control Git through commands in terminal, as you'll be doing very soon!</p>
 
-<p>In Git-it you'll learn a few basic command line actions (in addition to Git commands) which will be described within the steps.</p>
+  <p>In Git-it you'll learn a few basic command line actions (in addition to Git commands) which will be described within the steps.</p>
+</div>
 
-<h2>Step: Create a Repository</h2>
-<p>You're going to create a new project folder and then initialize it as a Git
+<div class="chal-step blue-border border-box">
+  <h3>Create a Repository</h3>
+  <p>You're going to create a new project folder and then initialize it as a Git
   repository. To make things easy, name your folder what you'd name the project, like 'hello-world'.</p>
 
-<p>Open your terminal! In your terminal window, type these commands, one at a time, pressing press enter/return after each.</p>
+  <p>Open your terminal! In your terminal window, type these commands, one at a time, pressing press enter/return after each.</p>
 
-<p>First, make a new folder:<br><span class="inline-tip">Tip: mkdir stands for <em>make directory</em></span></p>
-<code class="shell">mkdir hello-world</code>
+  <p>First, make a new folder:<br><span class="inline-tip">Tip: mkdir stands for <em>make directory</em></span></p>
+  <code class="shell">mkdir hello-world</code>
 
-<p>Then go into that folder:<br><span class="inline-tip">Tip: cd stands for <em>change directory</em></span></p>
-<code class="shell">cd hello-world</code>
+  <p>Then go into that folder:<br><span class="inline-tip">Tip: cd stands for <em>change directory</em></span></p>
+  <code class="shell">cd hello-world</code>
 
-<p>Finally, tell Git to initialize (start tracking) this folder:</p>
-<code class="shell">git init</code>
+  <p>Finally, tell Git to initialize (start tracking) this folder:</p>
+  <code class="shell">git init</code>
 
-<p>The last command should return something starting with "Initialized empty Git repository". The others commands do not return anything.</p>
+  <p>The last command should return something starting with "Initialized empty Git repository". The others commands do not return anything.</p>
 
-<p>You did it! If you want to be double-sure that it's a Git repository, type <code>git status</code> and if it doesn't return 'fatal: Not a git repository...', you're golden!</p>
+  <p>You did it! If you want to be double-sure that it's a Git repository, type <code>git status</code> and if it doesn't return 'fatal: Not a git repository...', you're golden!</p>
+</div>
 
-<div class="verify">
+<div class="verify bold-blue solid-box">
   <button class="btn-white" id='verify-challenge'>VERIFY</button>
   <button class="btn-white" id='select-directory'>SELECT DIRECTORY</button>
   <div id="verify-spinner" class="sk-double-bounce">
@@ -170,9 +173,8 @@
   <button class="btn-white" id="clear-completed-challenge">Clear completed status</button>
 </div>
 
-<div class="blue-border-box">
-  <h2>Tips</h2>
-  <ul>
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
     <li><strong>Make a new folder (aka make directory)</strong></li>
     <code class="shell">mkdir &#60;FOLDERNAME&#62;</code>
     <li><strong>Navigate into an existing folder (aka change directory)</strong></li>

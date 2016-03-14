@@ -69,9 +69,14 @@ gre7-border.border-box code {
   margin-bottom: 0;
 }
 
-.solid-box h2 {
+.solid-box h2:first-child {
   margin-top: 0;
 }
+
+.solid-box h2 {
+  margin-top: 40px;
+}
+
 
 /* CHALLENGE SOLID BOX STYLES
    -------------------------------------------------------------------------- */
@@ -204,7 +209,7 @@ gre7-border.border-box code {
 code {
   font-size: 0.9em;
   background: rgba(157, 166, 179, 0.16);
-  padding: 2px 6px;
+  padding: 6px 6px 3px 6px;
   border-radius: 2px;
   font-family: 'Liberation Mono', Monaco, Courier New, monospace;
   white-space: nowrap;

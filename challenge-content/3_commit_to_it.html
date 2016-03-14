@@ -1,48 +1,48 @@
-<div id="challenge-desc" class="challenge">
-  <h2>Goal</h2>
-  <p>Create a file in your new repository, add something to that file and
-    commit those changes with Git.</p>
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Create a file in your new repository, add something to that file and commit those changes with Git.</p>
 </div>
 
-<h2>Step: Create a New File</h2>
+<div class="chal-step blue-border border-box">
+  <h3>Create a New File</h3>
 
-<p>Now that you've got a repository started let's add a file to it.</p>
+  <p>Now that you've got a repository started let's add a file to it.</p>
+  <p>Open your text editor and create a new empty file. Now write a little bit of text, perhaps type "Hello!", and save the file as 'readme.txt' in the 'hello-world' folder you created in the last challenge.</p>
+</div>
 
-<p>Open your text editor and create a new empty file. Now write a little bit of text, perhaps
-  type "Hello!", and save the file as 'readme.txt' in the 'hello-world' folder you created in the last challenge.</p>
+<div class="chal-step blue-border border-box">
+  <h3>Status, Add and Commit Changes</h3>
+  <p>Next check the <strong>status</strong> of your repository to find out if there have been changes. You know you have changed something, but does Git?</p>
 
-<h2>Step: Status, Add and Commit Changes</h2>
-<p>Next check the <strong>status</strong> of your repository to find out if there have been changes. You know you have changed something, but does Git?</p>
+  <p>Make sure you're still within your <code>hello-world</code> directory when you're running these commands. Use Git to see what changed in your repository:</p>
 
-<p>Make sure you're still within your <code>hello-world</code> directory when you're running these commands. Use Git to see what changed in your repository:</p>
+  <p>First, check the status:</p>
+  <p><code class="shell">git status</code></p>
+  <p>Git should tell you that a file has been added.</p>
 
-<p>First, check the status:</p>
-<p><code class="shell">git status</code></p>
-<p>Git should tell you that a file has been added.</p>
+  <p>Then <strong>add</strong> the file you just created so that it becomes a part of the changes you will <strong>commit</strong> (aka save) with Git:</p>
+  <p><code class="shell">git add readme.txt</code></p>
 
-<p>Then <strong>add</strong> the file you just created so that it becomes a part of the changes you will <strong>commit</strong> (aka save) with Git:</p>
-<p><code class="shell">git add readme.txt</code></p>
+  <p>Finally, <strong>commit</strong> those changes to the repository's history with a
+    short (m) message describing the updates.</p>
+  <p><code class="shell">git commit -m "Created readme"</code></p>
+</div>
 
-<p>Finally, <strong>commit</strong> those changes to the repository's history with a
-  short (m) message describing the updates.</p>
-<p><code class="shell">git commit -m "Created readme"</code></p>
+<div class="chal-step blue-border border-box">
+  <h3>Step: Make More Changes</h3>
+  <p>Now add another line to 'readme.txt' and save the file again.</p>
 
-<h2>Step: Make More Changes</h2>
-<p>Now add another line to 'readme.txt' and save the file again.</p>
+  <p>In terminal, you can view the <strong>diff</strong>erence between the file now and how it was at your last commit. </p>
 
-<p>In terminal, you can view the <strong>diff</strong>erence between the
-  file now and how it was at your last commit. </p>
+  <p>Tell Git to show you the <strong>diff</strong>:</p>
+  <p><code class="shell">git diff</code></p>
 
-<p>Tell Git to show you the <strong>diff</strong>:</p>
-<p><code class="shell">git diff</code></p>
+  <p>Now with what you just learned above, commit this latest change.</p>
+</div>
 
-<p>Now with what you just learned above, commit this latest change.</p>
+{{{ verify_directory_button }}}
 
-{{{verify_directory_button}}}
-
-<div class="blue-border-box">
-  <h2>Tips</h2>
-  <ul>
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
     <li><strong>Check status of changes to a repository</strong></li>
     <li><code class="shell">git status</code></li>
     <li><strong>View changes to files</strong></li>
