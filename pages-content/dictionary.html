@@ -69,7 +69,7 @@
     <li><strong>Add remote connections</strong></li>
     <code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code>
     <li><strong>Set a URL to a remote</strong></li>
-    <code class="shell">git remote set-url &#60;REMOTENAME&#62; <URL></code>
+    <code class="shell">git remote set-url &#60;REMOTENAME&#62; &#60;URL&#62;</code>
     <li><strong>View remote connections</strong></li>
     <code class="shell">git remote -v</code>
   </ul>
@@ -79,9 +79,9 @@
 <div class="blue-border-box">
   <ul class="no-list-style">
     <li><strong>Pull in changes</strong></li>
-    <code class="shell">git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+    <code class="shell">git pull</code>
     <li><strong>Pull in changes from a remote branch</strong></li>
-    <code class="shell">git pull <REMOTENAME> <REMOTEBRANCH></code>
+    <code class="shell">git pull &#60;REMOTENAME&#62; &#60;REMOTEBRANCH&#62;</code>
     <li><strong>See changes to the remote before you pull in</strong></li>
     <code class="shell">git fetch --dry-run</code>
   </ul>
@@ -91,7 +91,7 @@
 <div class="blue-border-box">
   <ul class="no-list-style">
     <li><strong>Push changes</strong></li>
-    <code class="shell">git push &#60;REMOTENAME&#62; <BRANCH></code>
+    <code class="shell">git push &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
     <li><strong>Merge a branch into current branch</strong></li>
     <code class="shell">git merge &#60;BRANCHNAME&#62;</code>
   </ul>
