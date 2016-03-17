@@ -68,6 +68,7 @@ blockquote {
 
 img {
   margin: 30px 0 18px;
+  border-radius: 2px;
 }
 
 /* UTILITIES

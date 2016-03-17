@@ -230,11 +230,9 @@ code.shell:before {
 }
 
 .inline-tip {
-  text-transform: uppercase; */
-  font-size: 12px;
   font-style: normal;
   font-family: 'Liberation Mono', Monaco, Courier New, monospace;
-  margin-top: -25px;
+  font-size: .7em;
 }
 
 /* PAGES STYLES
