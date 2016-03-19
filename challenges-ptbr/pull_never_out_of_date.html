@@ -18,17 +18,17 @@
       <option value="ja">日本語</option>
     </select>
   </div>
-  <a class="filledblock" href="../index-ja.html">
+  <a class="filledblock" href="../index-ptbr.html">
     Git-it
   </a>
-  <span class="challenge-title">it&#x27;s a small world</span>
+  <span class="challenge-title">pull never out of date</span>
 </header>
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
   // TODO put lang somewhere else that we can get without needing template in JS
   // Can also remove default '-' with lang
-  var currentLang = "-ja".replace(/-/, '')
+  var currentLang = "-ptbr".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
@@ -86,13 +86,13 @@
         </a>
       </li>
       <li>
-        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item current">
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
           <div class="current-arrow">▶️</div>
           it&#x27;s a small world
         </a>
       </li>
       <li>
-        <a id="pull_never_out_of_date" data-id="8" href="pull_never_out_of_date.html" class="challenge-item">
+        <a id="pull_never_out_of_date" data-id="8" href="pull_never_out_of_date.html" class="challenge-item current">
           <div class="current-arrow">▶️</div>
           pull never out of date
         </a>
@@ -113,55 +113,90 @@
 
 </div>
       <div class="content">
-        <div id="challenge-desc" class="challenge">
-  <h2>The Challenge:</h2>
-  <p>&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3088;&#x3046;</p>
+        <div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Deixe seus arquivos atualizados por receber atualiza&#xE7;&#xF5;es dos colaboradores.</p>
 </div>
 
-<h2>&#x30BD;&#x30FC;&#x30B7;&#x30E3;&#x30EB;&#x30B3;&#x30FC;&#x30C7;&#x30A3;&#x30F3;&#x30B0;</h2>
+<div class="chal-background light-blue solid-box">
+  <h3>Fazendo Pull de um Remoto</h3>
+  <p>Se voc&#xEA; est&#xE1; trabalhando junto com outras pessoas, voc&#xEA; precisa sempre estar atualizado com as modifica&#xE7;&#xF5;es mais recentes. Portanto voc&#xEA; deve fazer <strong>pull</strong> de todas as mudan&#xE7;as que foram enviadas ao reposit&#xF3;rio central no GitHub.</p>
 
-<p>&#x4ED6;&#x306E;&#x4EBA;&#x3068;&#x5171;&#x540C;&#x4F5C;&#x696D;&#x304C;&#x7C21;&#x5358;&#x306B;&#x3067;&#x304D;&#x308B;&#x70B9;&#x304C;&#x3001;GitHub&#x306E;&#x3044;&#x3044;&#x3068;&#x3053;&#x308D;&#x306E;1&#x3064;&#x3067;&#x3059;&#x3002;&#x306A;&#x305C;&#x306A;&#x3089;&#x3001;&#x3053;&#x308C;&#x306B;&#x3088;&#x3063;&#x3066;&#x4E16;&#x754C;&#x4E2D;&#x3044;&#x3064;&#x3067;&#x3082;&#x3069;&#x3053;&#x3067;&#x3082;&#x7C21;&#x5358;&#x306B;&#x50CD;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x304B;&#x3089;&#x3067;&#x3059;&#x3002;</p>
+  <img src="../assets/imgs/pull.png" width="100%">
+</div>
 
-<p><strong>&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;(Collaborators)</strong>&#x3068;&#x3044;&#x3046;&#x306E;&#x306F;&#x3001;GitHub&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x3067;&#x304B;&#x3064;&#x8AB0;&#x304B;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x3066;&#x7DE8;&#x96C6;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x8A31;&#x3055;&#x308C;&#x305F;&#x6A29;&#x9650;&#x3092;&#x6301;&#x3064;&#x4EBA;&#x305F;&#x3061;&#x306E;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x306B;&#x306F;&#x3001;GitHub&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x306B;&#x884C;&#x3063;&#x3066;&#x3001;&apos;Settings&apos;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x305D;&#x306E;&#x5F8C;&apos;Collaborators&apos;&#x30BF;&#x30D6;&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;&#x8FFD;&#x52A0;&#x3057;&#x305F;&#x3044;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x540D;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x3001;&apos;Add&apos;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<div class="chal-step blue-border border-box">
+  <h3>O que o Reporobot tem feito?</h3>
+  <p>Veja se o Reporobot fez alguma mudan&#xE7;a no seu branch por fazer pull das poss&#xED;veis mudan&#xE7;as do remoto chamado &quot;origin&quot; no GitHub:</p>
 
-  <img src="../assets/imgs/reporobot.png" width="600">
+  <p><code class="shell">git pull &lt;NOMEDOREMOTO&gt; &lt;NOMEDOBRANCH&gt;</code></p>
 
-<h2>Step: Hello, Repo Robot!</h2>
-<p>GitHub&#x4E0A;&#x306E;&#x3042;&#x306A;&#x305F;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x884C;&#x3063;&#x3066;&#x3001;&apos;reporobot&apos;&#x3092;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3068;&#x3057;&#x3066;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;URL&#x306F;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306A;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x306B;&#x306A;&#x308B;&#x306F;&#x305A;&#x3067;&#x3059;&#x3002;&#x305F;&#x3060;&#x3057;YOURUSERNAME&#x306F;&#x3042;&#x306A;&#x305F;&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x540D;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+  <p>Se  nada mudou, ele ir&#xE1; dizer &apos;Already up-to-date&apos; (j&#xE1; est&#xE1; atualizado). Se houverem mudan&#xE7;as, o Git ir&#xE1; fazer o merge (uni&#xE3;o) destas com a sua vers&#xE3;o local.</p>
 
-<code>
-  github.com/YOURUSERNAME/patchwork/settings/collaboration</code>
+  <p>O Reporobot fez alguma mudan&#xE7;a? O Git avisa quando h&#xE1; mudan&#xE7;as. Voc&#xEA; pode abrir este arquivo e ver a mudan&#xE7;a que o Reporobot fez. Surpresa, Reporobot &#xE9; um artista!</p>
+</div>
 
 <div class="verify bold-blue solid-box">
   <button class="btn-white" id="verify-challenge">VERIFY</button>
+  <button class="btn-white" id="select-directory">SELECT DIRECTORY</button>
   <div id="verify-spinner" class="sk-double-bounce">
     <div class="sk-child sk-double-bounce1"></div>
     <div class="sk-child sk-double-bounce2"></div>
   </div>
+  <span id="path-required-warning">Please select your repository directory.</span>
+  <span id="directory-path"></span>
   <ul id="verify-list">
   </ul>
   <button class="btn-white" id="clear-completed-challenge">Clear completed status</button>
 </div>
 
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>Checa o estado do Git</strong></li>
+    <code class="shell">git status</code>
+    <li><strong>Recebe altera&#xE7;&#xF5;es (pull) de um branch remoto</strong></li>
+    <code class="shell">git pull &lt;NOMEDOREMOTO&gt; &lt;NOMEDOBRANCH&gt;</code>
+    <li><strong>V&#xEA; as mudan&#xE7;as de um remoto antes de receb&#xEA;-las</strong></li>
+    <code class="shell">git fetch --dry-run</code>
+  </ul>
+</div>
+
         <div class="prenext">
   <div class="u-floatLeft">
-    <a href="branches_arent_just_for_birds.html" class="u-inline-block all-caps">branches aren&#x27;t just for birds
+    <a href="its_a_small_world.html" class="u-inline-block all-caps">it&#x27;s a small world
     <div class="arrow-left"></div>
     </a>
   </div>
   <div class="u-textRight u-floatRight">
-    <a href="pull_never_out_of_date.html" class="u-inlineBlock all-caps">pull never out of date
+    <a href="requesting_you_pull_please.html" class="u-inlineBlock all-caps">requesting you pull please
     <div class="arrow-right"></div>
     </a>
   </div>
 </div>
+
+<style>
+  .chal-no-pass.border-box::before {
+    content: "Não Passou?";
+  }
+
+  .chal-tip.border-box::before {
+    content: "Dicas";
+  }
+
+  .chal-step.border-box::before {
+    content: "Passo";
+  }
+
+  .chal-goal.border-box::before {
+    content: "Meta";
+  }
+</style>
       </div>
     </div>
 
     <script>
       var challengeStatus = require('../lib/challenge-completed.js')
       // TODO Get this from the DOM and don't do template in JS
-      var currentChallenge = 'its_a_small_world'
+      var currentChallenge = 'pull_never_out_of_date'
       challengeStatus.completed(currentChallenge)
     </script>
 

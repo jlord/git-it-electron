@@ -2,18 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible">
     <title>Git-it</title>
-    <meta name="description" content="learn git and github">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/2-double-bounce.css">
+    <link rel="stylesheet" href="../assets/css/new-style.css">
+    <link rel="stylesheet" href="../assets/css/new-challenge.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css">
   </head>
   <body>
     <header id="challenge-header" class="site-header">
   <div class="lang-select">
     <select id="lang-select" class="btn-outline lang-select">
       <option value="">English</option>
+      <option value="ptbr">Português Brasileiro</option>
       <option value="zhtw">正體中文</option>
       <option value="ja">日本語</option>
     </select>
@@ -149,9 +149,13 @@
 <p>&#x3042;&#x306A;&#x305F;&#x306F;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x3001;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3082;&#x4F5C;&#x3063;&#x3066;&#x3001;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3068;&#x5171;&#x540C;&#x4F5C;&#x696D;&#x3092;&#x3057;&#x3066;&#x3001;Push, Pull&#x3092;&#x3057;&#x3066;&#x3001;&#x305D;&#x306E;&#x4ED6;&#x306E;&#x30AA;&#x30FC;&#x30D7;&#x30F3;&#x30BD;&#x30FC;&#x30B9;&#x3092;&#x958B;&#x767A;&#x3057;&#x8C4A;&#x304B;&#x306B;&#x3059;&#x308B;&#x3055;&#x307E;&#x3056;&#x307E;&#x306A;&#x3053;&#x3068;&#x3092;&#x3084;&#x308A;&#x307E;&#x3057;&#x305F;!</p>
 <p><a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a>&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x3066;&#x3001;&#x3042;&#x306A;&#x305F;&#x306E;&#x540D;&#x524D;&#x304C;&#x4E00;&#x89A7;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x306E;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#xFF01;&#xFF01;</p>
 
-<div class="verify">
+<div class="verify bold-blue solid-box">
   <button class="btn-white" id="verify-challenge">VERIFY</button>
   <button class="btn-white" id="select-directory">SELECT DIRECTORY</button>
+  <div id="verify-spinner" class="sk-double-bounce">
+    <div class="sk-child sk-double-bounce1"></div>
+    <div class="sk-child sk-double-bounce2"></div>
+  </div>
   <span id="path-required-warning">Please select your repository directory.</span>
   <span id="directory-path"></span>
   <ul id="verify-list">

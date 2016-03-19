@@ -18,17 +18,17 @@
       <option value="ja">日本語</option>
     </select>
   </div>
-  <a class="filledblock" href="../index-ja.html">
+  <a class="filledblock" href="../index-ptbr.html">
     Git-it
   </a>
-  <span class="challenge-title">it&#x27;s a small world</span>
+  <span class="challenge-title">requesting you pull please</span>
 </header>
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
   // TODO put lang somewhere else that we can get without needing template in JS
   // Can also remove default '-' with lang
-  var currentLang = "-ja".replace(/-/, '')
+  var currentLang = "-ptbr".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
@@ -86,7 +86,7 @@
         </a>
       </li>
       <li>
-        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item current">
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
           <div class="current-arrow">▶️</div>
           it&#x27;s a small world
         </a>
@@ -98,7 +98,7 @@
         </a>
       </li>
       <li>
-        <a id="requesting_you_pull_please" data-id="9" href="requesting_you_pull_please.html" class="challenge-item">
+        <a id="requesting_you_pull_please" data-id="9" href="requesting_you_pull_please.html" class="challenge-item current">
           <div class="current-arrow">▶️</div>
           requesting you pull please
         </a>
@@ -113,24 +113,46 @@
 
 </div>
       <div class="content">
-        <div id="challenge-desc" class="challenge">
-  <h2>The Challenge:</h2>
-  <p>&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3088;&#x3046;</p>
+        <div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Envie uma Pull Request no reposit&#xF3;rio original Patchwork .</p>
 </div>
 
-<h2>&#x30BD;&#x30FC;&#x30B7;&#x30E3;&#x30EB;&#x30B3;&#x30FC;&#x30C7;&#x30A3;&#x30F3;&#x30B0;</h2>
+<div class="chal-background light-blue solid-box">
+  <h2>Pull Requests</h2>
+  <p>Quando voc&#xEA; faz mudan&#xE7;as e melhorias para um projeto que voc&#xEA; forked, frequentemente voc&#xEA; vai querer enviar essas altera&#xE7;&#xF5;es para o maintainer do original e <strong>solicitar</strong> que eles <strong>extraim</strong> as altera&#xE7;&#xF5;es do original, de modo que todos possam beneficiar das atualiza&#xE7;&#xF5;es em que &#xE9; um <strong>pull request</strong>.</p>
 
-<p>&#x4ED6;&#x306E;&#x4EBA;&#x3068;&#x5171;&#x540C;&#x4F5C;&#x696D;&#x304C;&#x7C21;&#x5358;&#x306B;&#x3067;&#x304D;&#x308B;&#x70B9;&#x304C;&#x3001;GitHub&#x306E;&#x3044;&#x3044;&#x3068;&#x3053;&#x308D;&#x306E;1&#x3064;&#x3067;&#x3059;&#x3002;&#x306A;&#x305C;&#x306A;&#x3089;&#x3001;&#x3053;&#x308C;&#x306B;&#x3088;&#x3063;&#x3066;&#x4E16;&#x754C;&#x4E2D;&#x3044;&#x3064;&#x3067;&#x3082;&#x3069;&#x3053;&#x3067;&#x3082;&#x7C21;&#x5358;&#x306B;&#x50CD;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x304B;&#x3089;&#x3067;&#x3059;&#x3002;</p>
+  <p>Queremos adicionar voc&#xEA; &#xE0; lista de finalistas da oficina, ent&#xE3;o fa&#xE7;a uma <strong>pull request</strong> para o original: <a href="https://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.</p>
 
-<p><strong>&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;(Collaborators)</strong>&#x3068;&#x3044;&#x3046;&#x306E;&#x306F;&#x3001;GitHub&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x3067;&#x304B;&#x3064;&#x8AB0;&#x304B;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x3066;&#x7DE8;&#x96C6;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x8A31;&#x3055;&#x308C;&#x305F;&#x6A29;&#x9650;&#x3092;&#x6301;&#x3064;&#x4EBA;&#x305F;&#x3061;&#x306E;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x306B;&#x306F;&#x3001;GitHub&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x306B;&#x884C;&#x3063;&#x3066;&#x3001;&apos;Settings&apos;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x305D;&#x306E;&#x5F8C;&apos;Collaborators&apos;&#x30BF;&#x30D6;&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;&#x8FFD;&#x52A0;&#x3057;&#x305F;&#x3044;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x540D;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x3001;&apos;Add&apos;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+  <img src="../assets/imgs/pullrequest.png" width="100%">
+</div>
 
-  <img src="../assets/imgs/reporobot.png" width="600">
+<div class="chal-step blue-border border-box">
+  <h3>Crie uma pull request</h3>
+  <p>Visite o reposit&#xF3;rio original que voc&#xEA; forked no GitHub, neste caso <a href="https://github.com/jlord/patchwork">http://github.com/jlord/patchwork</a>.</p>
 
-<h2>Step: Hello, Repo Robot!</h2>
-<p>GitHub&#x4E0A;&#x306E;&#x3042;&#x306A;&#x305F;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x884C;&#x3063;&#x3066;&#x3001;&apos;reporobot&apos;&#x3092;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3068;&#x3057;&#x3066;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;URL&#x306F;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306A;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x306B;&#x306A;&#x308B;&#x306F;&#x305A;&#x3067;&#x3059;&#x3002;&#x305F;&#x3060;&#x3057;YOURUSERNAME&#x306F;&#x3042;&#x306A;&#x305F;&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x540D;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+  <p>Frequentemente GitHub vai detectar se voc&#xEA; empurrou um branch para um fork e exibe no topo do site original.Se voc&#xEA; ver que com o seu &apos;add-username&apos; branch, voc&#xEA; pode clicar para criar uma Pull Request de l&#xE1;. Se n&#xE3;o:</p>
 
-<code>
-  github.com/YOURUSERNAME/patchwork/settings/collaboration</code>
+  <ul>
+    <li>Clique no but&#xE3;o verde &apos;New pull request&apos; .</li>
+    <li>Selecione o branch com as mudan&#xE7;as que deseja enviar. Ele deve ser o &#xFA;nico com &apos;add-yourusername&apos;.</li>
+  </ul>
+
+  <p>Voc&#xEA; vai ver agora uma p&#xE1;gina com os detalhes do pull request voc&#xEA; est&#xE1; no processo de apresenta&#xE7;&#xE3;o. Esta p&#xE1;gina mostra os commits e mudan&#xE7;as, sob a forma de um diff, associado &#xE0; sua pull request em compara&#xE7;&#xE3;o com &apos;gh-pages&apos; branch do original.</p>
+
+  <p>Se o reposit&#xF3;rio original tem uma <strong>documenta&#xE7;&#xE3;o de contribui&#xE7;&#xE3;o</strong>, GitHub vai ligar a isso. Esta &#xE9; a documenta&#xE7;&#xE3;o dos propriet&#xE1;rios de reposit&#xF3;rios de como fazer contribui&#xE7;&#xF5;es melhores para esse projeto&#x2014;muito &#xFA;til para ler se voc&#xEA; quiser ver suas altera&#xE7;&#xF5;es adotadas!</p>
+
+  <p>Se tudo na p&#xE1;gina parece bom e como voc&#xEA; espera:</p>
+
+  <ul>
+    <li>Clique &apos;Criar pull request&apos;</li>
+    <li>Adicione um t&#xED;tulo e uma descri&#xE7;&#xE3;o das altera&#xE7;&#xF5;es que voc&#xEA; est&#xE1; segerindo ao autor original adiciona-las.</li>
+    <li>Clique &apos;Enviar pull request&apos;!</li>
+  </ul>
+
+  <p><strong>Toca aqui! Voc&#xEA; enviou o seu pull request, demorar alguns segundos para aquecer no momento..</strong>
+
+  </p><p>Se est&#xE1; tudo bem com o seu pull request, ele vai ser fundido dentro de momentos. Se ele n&#xE3;o fundir automaticamente em alguns momentos, ent&#xE3;o voc&#xEA; vai provavelmente ter alguns coment&#xE1;rios de Reporobot sobre por que n&#xE3;o poderia fundir. Se este for o caso, feche o seu pull request no GitHub, fa&#xE7;a as mudan&#xE7;as necess&#xE1;rias para o seu branch, empurre essas altera&#xE7;&#xF5;es de volta para o seu fork e reenvie o seu pull request.</p>
+</div>
 
 <div class="verify bold-blue solid-box">
   <button class="btn-white" id="verify-challenge">VERIFY</button>
@@ -145,23 +167,41 @@
 
         <div class="prenext">
   <div class="u-floatLeft">
-    <a href="branches_arent_just_for_birds.html" class="u-inline-block all-caps">branches aren&#x27;t just for birds
+    <a href="pull_never_out_of_date.html" class="u-inline-block all-caps">pull never out of date
     <div class="arrow-left"></div>
     </a>
   </div>
   <div class="u-textRight u-floatRight">
-    <a href="pull_never_out_of_date.html" class="u-inlineBlock all-caps">pull never out of date
+    <a href="merge_tada.html" class="u-inlineBlock all-caps">merge tada
     <div class="arrow-right"></div>
     </a>
   </div>
 </div>
+
+<style>
+  .chal-no-pass.border-box::before {
+    content: "Não Passou?";
+  }
+
+  .chal-tip.border-box::before {
+    content: "Dicas";
+  }
+
+  .chal-step.border-box::before {
+    content: "Passo";
+  }
+
+  .chal-goal.border-box::before {
+    content: "Meta";
+  }
+</style>
       </div>
     </div>
 
     <script>
       var challengeStatus = require('../lib/challenge-completed.js')
       // TODO Get this from the DOM and don't do template in JS
-      var currentChallenge = 'its_a_small_world'
+      var currentChallenge = 'requesting_you_pull_please'
       challengeStatus.completed(currentChallenge)
     </script>
 

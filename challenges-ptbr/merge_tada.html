@@ -18,17 +18,17 @@
       <option value="ja">日本語</option>
     </select>
   </div>
-  <a class="filledblock" href="../index-ja.html">
+  <a class="filledblock" href="../index-ptbr.html">
     Git-it
   </a>
-  <span class="challenge-title">it&#x27;s a small world</span>
+  <span class="challenge-title">merge tada</span>
 </header>
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
   // TODO put lang somewhere else that we can get without needing template in JS
   // Can also remove default '-' with lang
-  var currentLang = "-ja".replace(/-/, '')
+  var currentLang = "-ptbr".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
@@ -86,7 +86,7 @@
         </a>
       </li>
       <li>
-        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item current">
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
           <div class="current-arrow">▶️</div>
           it&#x27;s a small world
         </a>
@@ -104,7 +104,7 @@
         </a>
       </li>
       <li>
-        <a id="merge_tada" data-id="10" href="merge_tada.html" class="challenge-item">
+        <a id="merge_tada" data-id="10" href="merge_tada.html" class="challenge-item current">
           <div class="current-arrow">▶️</div>
           merge tada
         </a>
@@ -113,55 +113,114 @@
 
 </div>
       <div class="content">
-        <div id="challenge-desc" class="challenge">
-  <h2>The Challenge:</h2>
-  <p>&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3088;&#x3046;</p>
+        <div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Fazendo merge local, deletando um branch e fazendo pull da upstream.</p>
+ </div>
+
+ <div class="chal-background light-blue solid-box">
+   <h2>Limpando</h2>
+
+   <p>Uma vez que voc&#xEA; n&#xE3;o precise mais de branches, voc&#xEA; pode deletar eles localmente e remotamente. Isto &#xE9; &#xF3;timo para evitar acumular branches antigos e sem uso.</p>
 </div>
 
-<h2>&#x30BD;&#x30FC;&#x30B7;&#x30E3;&#x30EB;&#x30B3;&#x30FC;&#x30C7;&#x30A3;&#x30F3;&#x30B0;</h2>
+<div class="chal-step blue-border border-box">
+  <h3>Merge Local</h3>
+  <p>Sua pull request foi unida! Seu branch foi mesclado com o branch &quot;gh-pages&quot; do original no GitHub. Voc&#xEA; pode fazer merge do seu branch localmente, tamb&#xE9;m.</p>
 
-<p>&#x4ED6;&#x306E;&#x4EBA;&#x3068;&#x5171;&#x540C;&#x4F5C;&#x696D;&#x304C;&#x7C21;&#x5358;&#x306B;&#x3067;&#x304D;&#x308B;&#x70B9;&#x304C;&#x3001;GitHub&#x306E;&#x3044;&#x3044;&#x3068;&#x3053;&#x308D;&#x306E;1&#x3064;&#x3067;&#x3059;&#x3002;&#x306A;&#x305C;&#x306A;&#x3089;&#x3001;&#x3053;&#x308C;&#x306B;&#x3088;&#x3063;&#x3066;&#x4E16;&#x754C;&#x4E2D;&#x3044;&#x3064;&#x3067;&#x3082;&#x3069;&#x3053;&#x3067;&#x3082;&#x7C21;&#x5358;&#x306B;&#x50CD;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x304B;&#x3089;&#x3067;&#x3059;&#x3002;</p>
+  <p>Primeiramente, v&#xE1; at&#xE9; o branch em que voc&#xEA; deseja que receba as altera&#xE7;&#xF5;es. Neste caso, o branch &quot;gh-pages&quot;.</p>
+  <p><code class="shell">git checkout gh-pages</code></p>
 
-<p><strong>&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;(Collaborators)</strong>&#x3068;&#x3044;&#x3046;&#x306E;&#x306F;&#x3001;GitHub&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x3067;&#x304B;&#x3064;&#x8AB0;&#x304B;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x3066;&#x7DE8;&#x96C6;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x8A31;&#x3055;&#x308C;&#x305F;&#x6A29;&#x9650;&#x3092;&#x6301;&#x3064;&#x4EBA;&#x305F;&#x3061;&#x306E;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x306B;&#x306F;&#x3001;GitHub&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x306B;&#x884C;&#x3063;&#x3066;&#x3001;&apos;Settings&apos;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x305D;&#x306E;&#x5F8C;&apos;Collaborators&apos;&#x30BF;&#x30D6;&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;&#x8FFD;&#x52A0;&#x3057;&#x305F;&#x3044;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x540D;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x3001;&apos;Add&apos;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+  <p>Agora diga para o Git qual branch ter&#xE1; suas modifica&#xE7;&#xF5;es adicionadas aqui &#x2014; neste caso, o seu branch que come&#xE7;a com &quot;add-&quot;.</p>
+  <p><code class="shell">git merge &lt;NOMEDOBRANCH&gt;</code></p>
 
-  <img src="../assets/imgs/reporobot.png" width="600">
+  <p>Finalizamos por deletar o branch que n&#xE3;o mais nos serve.</p>
+  <p><code class="shell">git branch -d &lt;NOMEDOBRANCH&gt;</code></p>
 
-<h2>Step: Hello, Repo Robot!</h2>
-<p>GitHub&#x4E0A;&#x306E;&#x3042;&#x306A;&#x305F;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x884C;&#x3063;&#x3066;&#x3001;&apos;reporobot&apos;&#x3092;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3068;&#x3057;&#x3066;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;URL&#x306F;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306A;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x306B;&#x306A;&#x308B;&#x306F;&#x305A;&#x3067;&#x3059;&#x3002;&#x305F;&#x3060;&#x3057;YOURUSERNAME&#x306F;&#x3042;&#x306A;&#x305F;&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x540D;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+  <p>Voc&#xEA; tamb&#xE9;m pode deletar o branch no seu fork do GitHub:</p>
+  <p><code class="shell">git push &lt;NOMEDOREMOTO&gt; --delete &lt;NOMEDOBRANCH&gt;</code></p>
+</div>
 
-<code>
-  github.com/YOURUSERNAME/patchwork/settings/collaboration</code>
+<div class="chal-step blue-border border-box">
+  <h3>Pull da Upstream</h3>
+  <p>Por &#xFA;ltimo, mas n&#xE3;o menos importante, o original foi alterado desde que voc&#xEA; teve sua pull request aceita &#x2014; o Reporobot adicionou seu nome ao website! Se voc&#xEA; fizer pull destas mudan&#xE7;as pela upstream voc&#xEA; ficar&#xE1; atualizado e ter&#xE1; esta vers&#xE3;o, tamb&#xE9;m. Voc&#xEA; pode ver isto ao vivo por entrar em: seuusuario.github.io/patchwork.</p>
+
+  <p>Para fazer pull da upstream original:</p>
+  <p><code class="shell">git pull upstream gh-pages</code></p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Parab&#xE9;ns!</h2>
+  <p>Voc&#xEA; criou reposit&#xF3;rios locais e remotos, trabalhou com colaboradores, fez push, fez pull e se uniu a milh&#xF5;es de outros desenvolvedores, al&#xE9;m de enriquecer o open source!</p>
+
+  <p>Visite <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> para ver seu nome incorporado! Querendo continuar? D&#xEA; uma olhada na se&#xE7;&#xE3;o <a href="../pages/resources.html#what-next">Depois do Guia</a> na p&#xE1;gina de recursos deste app.</p>
+</div>
 
 <div class="verify bold-blue solid-box">
   <button class="btn-white" id="verify-challenge">VERIFY</button>
+  <button class="btn-white" id="select-directory">SELECT DIRECTORY</button>
   <div id="verify-spinner" class="sk-double-bounce">
     <div class="sk-child sk-double-bounce1"></div>
     <div class="sk-child sk-double-bounce2"></div>
   </div>
+  <span id="path-required-warning">Please select your repository directory.</span>
+  <span id="directory-path"></span>
   <ul id="verify-list">
   </ul>
   <button class="btn-white" id="clear-completed-challenge">Clear completed status</button>
 </div>
 
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>Fazer merge de um branch com o branch atual</strong></li>
+    <code class="shell">git merge &lt;NOMEDOBRANCH&gt;</code>
+    <li><strong>Mudar para outro branch</strong></li>
+    <code class="shell">git checkout &lt;NOMEDOBRANCH&gt;</code>
+    <li><strong>Deletar um branch local</strong></li>
+    <code class="shell">git branch -d &lt;NOMEDOBRANCH&gt;</code>
+    <li><strong>Deletar um branch remoro</strong></li>
+    <code class="shell">git push &lt;NOMEDOREMOTO&gt; --delete &lt;NOMEDOBRANCH&gt;</code>
+    <li><strong>Fazer pull por um branch remoto</strong></li>
+    <code class="shell">git pull &lt;NOMEDOREMOTO&gt; &lt;NOMEDOBRANCH&gt;</code>
+  </ul>
+</div>
+
         <div class="prenext">
   <div class="u-floatLeft">
-    <a href="branches_arent_just_for_birds.html" class="u-inline-block all-caps">branches aren&#x27;t just for birds
+    <a href="requesting_you_pull_please.html" class="u-inline-block all-caps">requesting you pull please
     <div class="arrow-left"></div>
     </a>
   </div>
   <div class="u-textRight u-floatRight">
-    <a href="pull_never_out_of_date.html" class="u-inlineBlock all-caps">pull never out of date
+    <a href="../index-ptbr.html" class="u-inlineBlock all-caps">Done!
     <div class="arrow-right"></div>
     </a>
   </div>
 </div>
+
+<style>
+  .chal-no-pass.border-box::before {
+    content: "Não Passou?";
+  }
+
+  .chal-tip.border-box::before {
+    content: "Dicas";
+  }
+
+  .chal-step.border-box::before {
+    content: "Passo";
+  }
+
+  .chal-goal.border-box::before {
+    content: "Meta";
+  }
+</style>
       </div>
     </div>
 
     <script>
       var challengeStatus = require('../lib/challenge-completed.js')
       // TODO Get this from the DOM and don't do template in JS
-      var currentChallenge = 'its_a_small_world'
+      var currentChallenge = 'merge_tada'
       challengeStatus.completed(currentChallenge)
     </script>
 

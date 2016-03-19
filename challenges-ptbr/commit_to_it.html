@@ -18,17 +18,17 @@
       <option value="ja">日本語</option>
     </select>
   </div>
-  <a class="filledblock" href="../index-ja.html">
+  <a class="filledblock" href="../index-ptbr.html">
     Git-it
   </a>
-  <span class="challenge-title">it&#x27;s a small world</span>
+  <span class="challenge-title">commit to it</span>
 </header>
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
   // TODO put lang somewhere else that we can get without needing template in JS
   // Can also remove default '-' with lang
-  var currentLang = "-ja".replace(/-/, '')
+  var currentLang = "-ptbr".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
@@ -56,7 +56,7 @@
         </a>
       </li>
       <li>
-        <a id="commit_to_it" data-id="2" href="commit_to_it.html" class="challenge-item">
+        <a id="commit_to_it" data-id="2" href="commit_to_it.html" class="challenge-item current">
           <div class="current-arrow">▶️</div>
           commit to it
         </a>
@@ -86,7 +86,7 @@
         </a>
       </li>
       <li>
-        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item current">
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
           <div class="current-arrow">▶️</div>
           it&#x27;s a small world
         </a>
@@ -113,55 +113,116 @@
 
 </div>
       <div class="content">
-        <div id="challenge-desc" class="challenge">
-  <h2>The Challenge:</h2>
-  <p>&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3088;&#x3046;</p>
+        <div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Crie um arquivo em seu novo reposit&#xF3;rio, adicione algo a este arquivo e salve as mudan&#xE7;as usando Git.</p>
 </div>
 
-<h2>&#x30BD;&#x30FC;&#x30B7;&#x30E3;&#x30EB;&#x30B3;&#x30FC;&#x30C7;&#x30A3;&#x30F3;&#x30B0;</h2>
+<div class="chal-background light-blue solid-box">
+  <h2>Commits</h2>
+  <p>Commits (cometimentos, &quot;envios&quot;) s&#xE3;o o n&#xFA;cleo do uso de Git. S&#xE3;o os momentos em que voc&#xEA; salva e descreve o que voc&#xEA; fez. Pense neles como instantes na linha do tempo da hist&#xF3;ria do seu projeto.</p>
+</div>
 
-<p>&#x4ED6;&#x306E;&#x4EBA;&#x3068;&#x5171;&#x540C;&#x4F5C;&#x696D;&#x304C;&#x7C21;&#x5358;&#x306B;&#x3067;&#x304D;&#x308B;&#x70B9;&#x304C;&#x3001;GitHub&#x306E;&#x3044;&#x3044;&#x3068;&#x3053;&#x308D;&#x306E;1&#x3064;&#x3067;&#x3059;&#x3002;&#x306A;&#x305C;&#x306A;&#x3089;&#x3001;&#x3053;&#x308C;&#x306B;&#x3088;&#x3063;&#x3066;&#x4E16;&#x754C;&#x4E2D;&#x3044;&#x3064;&#x3067;&#x3082;&#x3069;&#x3053;&#x3067;&#x3082;&#x7C21;&#x5358;&#x306B;&#x50CD;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x304B;&#x3089;&#x3067;&#x3059;&#x3002;</p>
+<div class="chal-step blue-border border-box">
+  <h3>Criando um Novo Arquivo</h3>
+  <p>Agora que voc&#xEA; tem um novo reposit&#xF3;rio inicializado, vamos adicionar um arquivo a ele.</p>
+  <p>Abra seu editor de texto e crie um arquivo vazio. Agora, escreva um pequeno texto, talvez um simples &quot;Ol&#xE1;!&quot;, e salve o arquivo como &quot;readme.txt&quot; na pasta &quot;hello-world&quot; que voc&#xEA; criou no &#xFA;ltimo desafio.</p>
+</div>
 
-<p><strong>&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;(Collaborators)</strong>&#x3068;&#x3044;&#x3046;&#x306E;&#x306F;&#x3001;GitHub&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x3067;&#x304B;&#x3064;&#x8AB0;&#x304B;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x3066;&#x7DE8;&#x96C6;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x8A31;&#x3055;&#x308C;&#x305F;&#x6A29;&#x9650;&#x3092;&#x6301;&#x3064;&#x4EBA;&#x305F;&#x3061;&#x306E;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x306B;&#x306F;&#x3001;GitHub&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x306B;&#x884C;&#x3063;&#x3066;&#x3001;&apos;Settings&apos;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x305D;&#x306E;&#x5F8C;&apos;Collaborators&apos;&#x30BF;&#x30D6;&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;&#x8FFD;&#x52A0;&#x3057;&#x305F;&#x3044;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x540D;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x3001;&apos;Add&apos;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<div class="chal-step blue-border border-box">
+  <h3>Estado, Adicionar e Cometer Mudan&#xE7;as</h3>
+  <p>A seguir, cheque o <strong>estado</strong> (status) do seu reposit&#xF3;rio para confirmar se houveram mudan&#xE7;as. Voc&#xEA; sabe que algo mudou, mas ser&#xE1; que o Git sabe disso?</p>
 
-  <img src="../assets/imgs/reporobot.png" width="600">
+  <p>Certifique-se de que voc&#xEA; est&#xE1; na sua pasta <code>hello-world</code> enquanto voc&#xEA; est&#xE1; executando estes comandos. Use o Git para verificar mudan&#xE7;as no seu reposit&#xF3;rio:</p>
 
-<h2>Step: Hello, Repo Robot!</h2>
-<p>GitHub&#x4E0A;&#x306E;&#x3042;&#x306A;&#x305F;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x884C;&#x3063;&#x3066;&#x3001;&apos;reporobot&apos;&#x3092;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3068;&#x3057;&#x3066;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;URL&#x306F;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306A;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x306B;&#x306A;&#x308B;&#x306F;&#x305A;&#x3067;&#x3059;&#x3002;&#x305F;&#x3060;&#x3057;YOURUSERNAME&#x306F;&#x3042;&#x306A;&#x305F;&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x540D;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+  <p>Primeiramente, cheque o estado:</p>
+  <p><code class="shell">git status</code></p>
+  <p>O Git dever&#xE1; lhe dizer que um arquivo foi adicionado.</p>
 
-<code>
-  github.com/YOURUSERNAME/patchwork/settings/collaboration</code>
+  <p>Ent&#xE3;o, <strong>adicione</strong> o arquivo que voc&#xEA; acabou de criar para que ele se torne parte das mudan&#xE7;as que voc&#xEA; far&#xE1; no <strong>commit</strong> (em outras palavras, salvar) com o Git:</p>
+  <p><code class="shell">git add readme.txt</code></p>
+
+  <p>Finalmente, fa&#xE7;a o <strong>commit</strong> destas mudan&#xE7;as para o hist&#xF3;rico do reposit&#xF3;rio com uma curta mensagem (m) descrevendo as altera&#xE7;&#xF5;es.</p>
+  <p><code class="shell">git commit -m &quot;Created readme&quot;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Passo: Fa&#xE7;a Mais Mudan&#xE7;as</h3>
+  <p>Agora, adicione outra linha em &apos;readme.txt&apos; e salve o arquivo novamente.</p>
+
+  <p>No terminal, voc&#xEA; pode ver a <strong>diff</strong>eren&#xE7;a entre o arquivo atual e como ele estava durante o seu &#xFA;ltimo commit. </p>
+
+  <p>Diga ao Git que voc&#xEA; quer ver as <strong>diferen&#xE7;as</strong>:</p>
+  <p><code class="shell">git diff</code></p>
+
+  <p>Agora, com o conhecimento que voc&#xEA; acabou de obter, fa&#xE7;a o commit das mais recentes mudan&#xE7;as.</p>
+</div>
 
 <div class="verify bold-blue solid-box">
   <button class="btn-white" id="verify-challenge">VERIFY</button>
+  <button class="btn-white" id="select-directory">SELECT DIRECTORY</button>
   <div id="verify-spinner" class="sk-double-bounce">
     <div class="sk-child sk-double-bounce1"></div>
     <div class="sk-child sk-double-bounce2"></div>
   </div>
+  <span id="path-required-warning">Please select your repository directory.</span>
+  <span id="directory-path"></span>
   <ul id="verify-list">
   </ul>
   <button class="btn-white" id="clear-completed-challenge">Clear completed status</button>
 </div>
 
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>Checar o estado das mudan&#xE7;as em um reposit&#xF3;rio</strong></li>
+    <li><code class="shell">git status</code></li>
+    <li><strong>Ver mudan&#xE7;as em arquivos</strong></li>
+    <li><code class="shell">git diff</code></li>
+    <li><strong>Preparar um arquivo para ser commitado</strong></li>
+    <li><code class="shell">git add &lt;NOMEDOARQUIVO&gt;</code></li>
+    <li><strong>Preparar para commit todos os arquivos que foram modificados</strong></li>
+    <li><code class="shell">git add .</code></li>
+    <li><strong>Para fazer commit (&quot;salvar&quot;) as mudan&#xE7;as que voc&#xEA; fez com uma curta mensagem de descri&#xE7;&#xE3;o</strong></li>
+    <li><code class="shell">git commit -m &quot;sua mensagem de commit&quot;</code></li>
+  <ul>
+</ul></ul></div>
+
         <div class="prenext">
   <div class="u-floatLeft">
-    <a href="branches_arent_just_for_birds.html" class="u-inline-block all-caps">branches aren&#x27;t just for birds
+    <a href="repository.html" class="u-inline-block all-caps">repository
     <div class="arrow-left"></div>
     </a>
   </div>
   <div class="u-textRight u-floatRight">
-    <a href="pull_never_out_of_date.html" class="u-inlineBlock all-caps">pull never out of date
+    <a href="githubbin.html" class="u-inlineBlock all-caps">GitHubbin
     <div class="arrow-right"></div>
     </a>
   </div>
 </div>
+
+<style>
+  .chal-no-pass.border-box::before {
+    content: "Não Passou?";
+  }
+
+  .chal-tip.border-box::before {
+    content: "Dicas";
+  }
+
+  .chal-step.border-box::before {
+    content: "Passo";
+  }
+
+  .chal-goal.border-box::before {
+    content: "Meta";
+  }
+</style>
       </div>
     </div>
 
     <script>
       var challengeStatus = require('../lib/challenge-completed.js')
       // TODO Get this from the DOM and don't do template in JS
-      var currentChallenge = 'its_a_small_world'
+      var currentChallenge = 'commit_to_it'
       challengeStatus.completed(currentChallenge)
     </script>
 

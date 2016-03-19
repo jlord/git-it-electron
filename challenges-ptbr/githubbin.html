@@ -18,17 +18,17 @@
       <option value="ja">日本語</option>
     </select>
   </div>
-  <a class="filledblock" href="../index-ja.html">
+  <a class="filledblock" href="../index-ptbr.html">
     Git-it
   </a>
-  <span class="challenge-title">it&#x27;s a small world</span>
+  <span class="challenge-title">GitHubbin</span>
 </header>
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
   // TODO put lang somewhere else that we can get without needing template in JS
   // Can also remove default '-' with lang
-  var currentLang = "-ja".replace(/-/, '')
+  var currentLang = "-ptbr".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
@@ -62,7 +62,7 @@
         </a>
       </li>
       <li>
-        <a id="githubbin" data-id="3" href="githubbin.html" class="challenge-item">
+        <a id="githubbin" data-id="3" href="githubbin.html" class="challenge-item current">
           <div class="current-arrow">▶️</div>
           GitHubbin
         </a>
@@ -86,7 +86,7 @@
         </a>
       </li>
       <li>
-        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item current">
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
           <div class="current-arrow">▶️</div>
           it&#x27;s a small world
         </a>
@@ -113,24 +113,33 @@
 
 </div>
       <div class="content">
-        <div id="challenge-desc" class="challenge">
-  <h2>The Challenge:</h2>
-  <p>&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3088;&#x3046;</p>
+        <div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Crie uma conta GitHub, adicione um nome de usu&#xE1;rio para sua configura&#xE7;&#xE3;o Git.</p>
 </div>
 
-<h2>&#x30BD;&#x30FC;&#x30B7;&#x30E3;&#x30EB;&#x30B3;&#x30FC;&#x30C7;&#x30A3;&#x30F3;&#x30B0;</h2>
+<div class="chal-background light-blue solid-box">
+  <h2>Trabalhando melhor, junto</h2>
 
-<p>&#x4ED6;&#x306E;&#x4EBA;&#x3068;&#x5171;&#x540C;&#x4F5C;&#x696D;&#x304C;&#x7C21;&#x5358;&#x306B;&#x3067;&#x304D;&#x308B;&#x70B9;&#x304C;&#x3001;GitHub&#x306E;&#x3044;&#x3044;&#x3068;&#x3053;&#x308D;&#x306E;1&#x3064;&#x3067;&#x3059;&#x3002;&#x306A;&#x305C;&#x306A;&#x3089;&#x3001;&#x3053;&#x308C;&#x306B;&#x3088;&#x3063;&#x3066;&#x4E16;&#x754C;&#x4E2D;&#x3044;&#x3064;&#x3067;&#x3082;&#x3069;&#x3053;&#x3067;&#x3082;&#x7C21;&#x5358;&#x306B;&#x50CD;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x304B;&#x3089;&#x3067;&#x3059;&#x3002;</p>
+  <p>O reposit&#xF3;rio que voc&#xEA; criou at&#xE9; agora &#xE9; apenas no seu computador, o qual &#xE9; &#xFA;til, mas torna-se dificil de compartilhar e trabalhar com outros. N&#xE3;o se preocupe, &#xE9; para isso que &#xE9; o GitHub!</p>
 
-<p><strong>&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;(Collaborators)</strong>&#x3068;&#x3044;&#x3046;&#x306E;&#x306F;&#x3001;GitHub&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x3067;&#x304B;&#x3064;&#x8AB0;&#x304B;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x3066;&#x7DE8;&#x96C6;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x8A31;&#x3055;&#x308C;&#x305F;&#x6A29;&#x9650;&#x3092;&#x6301;&#x3064;&#x4EBA;&#x305F;&#x3061;&#x306E;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x306B;&#x306F;&#x3001;GitHub&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x306B;&#x884C;&#x3063;&#x3066;&#x3001;&apos;Settings&apos;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x305D;&#x306E;&#x5F8C;&apos;Collaborators&apos;&#x30BF;&#x30D6;&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;&#x8FFD;&#x52A0;&#x3057;&#x305F;&#x3044;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x540D;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x3001;&apos;Add&apos;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+  <p>GitHub &#xE9; um website que permite que pessoas de qualquer lugar fazer o upload do que eles est&#xE3;o trabalhando com Git de modo que todos possam facilmente trabalhar juntos no mesmo projeto. Em vez de ter seus projetos s&#xF3; no seu computador, voc&#xEA; tamb&#xE9;m iria sincronizar o GitHub o qual atua como reposit&#xF3;rio central para voc&#xEA; e todos que compartilharem.</p>
+</div>
 
-  <img src="../assets/imgs/reporobot.png" width="600">
+<div class="chal-step blue-border border-box">
+  <h3>Crie um conta GitHub</h3>
 
-<h2>Step: Hello, Repo Robot!</h2>
-<p>GitHub&#x4E0A;&#x306E;&#x3042;&#x306A;&#x305F;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x884C;&#x3063;&#x3066;&#x3001;&apos;reporobot&apos;&#x3092;&#x30B3;&#x30E9;&#x30DC;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3068;&#x3057;&#x3066;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;URL&#x306F;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306A;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x306B;&#x306A;&#x308B;&#x306F;&#x305A;&#x3067;&#x3059;&#x3002;&#x305F;&#x3060;&#x3057;YOURUSERNAME&#x306F;&#x3042;&#x306A;&#x305F;&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x540D;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+  <p>Visite <a href="http://github.com" target="_blank">github.com</a> e inscreva-se por uma conta gratuita. <strong>Toca aqui, bem vindo!</strong></p>
+</div>
 
-<code>
-  github.com/YOURUSERNAME/patchwork/settings/collaboration</code>
+<div class="chal-step blue-border border-box">
+  <h3>Adicione nome de usu&#xE1;rio GitHub para Git</h3>
+  <p>Adicione seu nome de usu&#xE1;rio GitHub para suas configura&#xE7;&#xF5;es Git. N&#xF3;s vamos fazer isso s&#xF3; por causa do Git-it, isso torna mais f&#xE1;cil verificar os pr&#xF3;ximos desafios. Save exatamente como voc&#xEA; criou no GitHub &#x2014; <strong>capitalize where capitalized</strong>, e lembre-se que voc&#xEA; n&#xE3;o precisa entrar o &quot;&lt;&quot; e &quot;&gt;&quot;.</p>
+
+  <p>Adicione seu nome de usu&#xE1;rio GitHub &#xE0; sua configura&#xE7;&#xE3;o:</p>
+  <code class="shell">git config --global user.username &lt;USerNamE&gt;</code>
+
+  <p>Voc&#xEA; pode checar novamente o que voc&#xEA; colocou na sua configura&#xE7;&#xE3;o Git digitando: <code>git config --global user.username</code> in terminal.</p>
+</div>
 
 <div class="verify bold-blue solid-box">
   <button class="btn-white" id="verify-challenge">VERIFY</button>
@@ -143,25 +152,56 @@
   <button class="btn-white" id="clear-completed-challenge">Clear completed status</button>
 </div>
 
+<div class="chal-tip grey-border border-box">
+  <p>Tenha certeza que voc&#xEA; digitou &quot;<strong>user.username</strong>&quot; acima e n&#xE3;o &quot;user.name&quot;, o qual iria substituir o nome que voc&#xEA; definiu no primeiro desafio e deixa voc&#xEA; sem propriedade de nome de usu&#xE1;rio! Se voc&#xEA; passou por isso, tudo bem, basta repetir o passo no primeiro desafio para adicionar seu nome e ent&#xE3;o completar o passo acima.</p>
+</div>
+
+<div class="chal-no-pass grey-border border-box">
+  <h4>configura&#xE7;&#xE3;o do nome de usu&#xE1;rio GitHub &amp; Git n&#xE3;o coincidem</h4>
+
+  <p>Um erro comum &#xE9; ter seu nome de usu&#xE1;rio GitHub n&#xE3;o conincidir com o caso de algu&#xE9;m que voc&#xEA; definiu com <code>git config</code>. Por exemplo, &apos;JLord&apos; n&#xE3;o &#xE9; o mesmo que &apos;jlord&apos;</p>
+  <p>Para mudar seu nome de usu&#xE1;rio definido com Git, basta fazer o mesmo comando que voc&#xEA; fez anteriormente, mas com a capitaliza&#xE7;&#xE3;o correta:</p>
+  <p><code class="shell">git config --global user.username &lt;USerNamE&gt;</code></p>
+  <p>Quando voc&#xEA; fizer suas atualiza&#xE7;&#xF5;es, verifique novamente!</p>
+</div>
+
         <div class="prenext">
   <div class="u-floatLeft">
-    <a href="branches_arent_just_for_birds.html" class="u-inline-block all-caps">branches aren&#x27;t just for birds
+    <a href="commit_to_it.html" class="u-inline-block all-caps">commit to it
     <div class="arrow-left"></div>
     </a>
   </div>
   <div class="u-textRight u-floatRight">
-    <a href="pull_never_out_of_date.html" class="u-inlineBlock all-caps">pull never out of date
+    <a href="remote_control.html" class="u-inlineBlock all-caps">remote control
     <div class="arrow-right"></div>
     </a>
   </div>
 </div>
+
+<style>
+  .chal-no-pass.border-box::before {
+    content: "Não Passou?";
+  }
+
+  .chal-tip.border-box::before {
+    content: "Dicas";
+  }
+
+  .chal-step.border-box::before {
+    content: "Passo";
+  }
+
+  .chal-goal.border-box::before {
+    content: "Meta";
+  }
+</style>
       </div>
     </div>
 
     <script>
       var challengeStatus = require('../lib/challenge-completed.js')
       // TODO Get this from the DOM and don't do template in JS
-      var currentChallenge = 'its_a_small_world'
+      var currentChallenge = 'githubbin'
       challengeStatus.completed(currentChallenge)
     </script>
 

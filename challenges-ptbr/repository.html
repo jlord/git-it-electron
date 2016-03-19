@@ -18,7 +18,7 @@
       <option value="ja">日本語</option>
     </select>
   </div>
-  <a class="filledblock" href="../index.html">
+  <a class="filledblock" href="../index-ptbr.html">
     Git-it
   </a>
   <span class="challenge-title">repository</span>
@@ -28,7 +28,7 @@
   var selector = document.getElementById('lang-select')
   // TODO put lang somewhere else that we can get without needing template in JS
   // Can also remove default '-' with lang
-  var currentLang = "".replace(/-/, '')
+  var currentLang = "-ptbr".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
@@ -114,57 +114,54 @@
 </div>
       <div class="content">
         <div id="challenge-desc" class="chal-goal blue-border border-box">
-  <p>Create a new repository on your computer.</p>
+  <p>Crie um novo reposit&#xF3;rio no seu computador.</p> 
 </div>
 
-<div class="chal-background light-blue solid-box">
-  <h2> Repositories</h2>
-  <p>A <strong>repository</strong> is a collection of related items. In our case, when writing software, it is a collection of files related to a software project. You can imagine it as a project folder with all the relevant files inside of it. In
-  fact, that's what it will look like on your computer anyways. Sometimes they're called "repos" for short.</p>
+<div class="chal-background light-blue solid-box"> 
+  <h2> Reposit&#xF3;rios</h2>
+  <p>Um <strong>reposit&#xF3;rio</strong> &#xE9; uma cole&#xE7;&#xE3;o de itens relacionados. No nosso caso, quando escrevemos software, &#xE9; uma cole&#xE7;&#xE3;o de arquivos relacionados a projetos de software. Voc&#xEA; pode imagina-l&#xE1; como uma pasta de projeto com todos os arquivos relevantes dentro dela. Na verdade, isso &#xE9; o que vai parecer no seu computador de qualquer maneira. Algumas vezes eles s&#xE3;o chamados de &quot;repos&quot; para abreviar.</p>
 
   <img src="../assets/imgs/repos.png" width="600">
 
-  <p>You tell Git what your project is and Git will start tracking all
-  of the changes to that folder. This makes it a Git repository—a folder of items being tracked by Git. Git tracks when files are added, subtracted or even a single letter in a single file is changed. All of this plus who did it and when is tracked by Git. In software that's called <strong>version control</strong>.</p>
+  <p>Voc&#xEA; diz ao Git o que seu projeto &#xE9; o Git vai come&#xE7;ar a monitorar todas as mudan&#xE7;as dessa pasta. Isto torna-o um reposit&#xF3;rio Git - uma pasta de itens que est&#xE3;o sendo monitoradas pelo Git. Git monitora quando arquivos s&#xE3;o adicionados, subtra&#xED;dos ou mesmo se uma &#xFA;nica letra em um &#xFA;nico arquivo &#xE9; alterada. Tudo isso mais quem o fez e quando fez &#xE9; monitorado pelo Git. No software isso &#xE9; chamado <strong>controle de vers&#xE3;o</strong>.</p>
 
-  <h2>Using Terminal</h2>
-  <p><strong>Terminal</strong> (or Bash) is a way to instruct your computer to do things by typing commands rather than clicking applications with your mouse. You can rename files, open files, create new folders, move between directories (folders) and more all by running typed commands. You can even run a text editor (such as <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) in your terminal and never have to leave!</p>
+  <h2>Usando Terminal</h2>
+  <p><strong>Terminal</strong> (or Bash) &#xE9; uma maneira de instruir seu computador a fazer coisas digitando comandos em vez de clicar com seu mouse. Voc&#xEA; pode renomear arquivos, abrir arquivos, criar novas pastas, mover entre diret&#xF3;rios (pastas) e mais tudo executando digitando comandos. Voc&#xEA; pode at&#xE9; mesmo executar um editor de texto (tal como <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) no seu terminal and e nunca ter que sair!</p>
 
-  <p>Besides navigating your computer, you can also use programs in Terminal that have a <strong>command-line interface (CLI)</strong>, meaning they can be run with commands in terminal. Git is one of these. You can access and control Git through commands in terminal, as you'll be doing very soon!</p>
+  <p>Al&#xE9;m de navegar no seu computador, voc&#xEA; pode tamb&#xE9;m usar programas no Terminal que tem uma <strong>command-line interface (CLI)</strong>, que significa que eles podem ser exexutados com comandos no terminal . Git &#xE9; um desses. Voc&#xEA; pode acessar e controlar Git atrav&#xE9;s de comandos no terminal, como voc&#xEA; vai estar fazendo muito em breve!</p>
 
-  <p>In Git-it you'll learn a few basic command line actions (in addition to Git commands) which will be described within the steps.</p>
+  <p>Em Git-it voc&#xEA; vai aprender algumas a&#xE7;&#xF5;es basicas de linhas de comando (al&#xE9;m dos comandos Git) o qual vai ser descrito nos passos.</p>
 </div>
 
 <div class="chal-step blue-border border-box">
-  <h3>Create a Repository</h3>
-  <p>You're going to create a new project folder and then initialize it as a Git
-  repository. To make things easy, name your folder what you'd name the project, like 'hello-world'.</p>
+  <h3>Criar um reposit&#xF3;rio</h3>  
+  <p>Voc&#xEA; vai criar uma nova pasta do projeto e ent&#xE3;o inicializa-a como um reposit&#xF3;rio Git. Para facilitar as coisas, nomeie sua pasta que voc&#xEA; nomearia o projeto, como &apos;hello-world&apos;.</p>
 
-  <p>Open your terminal! In your terminal window, type these commands, one at a time, pressing press enter/return after each.</p>
+  <p>Abra seu terminal! Na sua janela de terminal, digite esses comandos, um por vez, pressione enter/return ap&#xF3;s cada comando.</p>
 
-  <p>First, make a new folder:<br><span class="inline-tip">Tip: mkdir stands for <em>make directory</em></span></p>
+  <p>Primeiro, crie uma nova pasta:<br><span class="inline-tip">Dica: mkdir significa <em>criar diret&#xF3;rio</em></span></p>
   <code class="shell">mkdir hello-world</code>
 
-  <p>Then go into that folder:<br><span class="inline-tip">Tip: cd stands for <em>change directory</em></span></p>
+  <p>Em seguida ir dentro dessa pasta:<br><span class="inline-tip">Dica: cd significa <em>mudar diret&#xF3;rio</em></span></p>
   <code class="shell">cd hello-world</code>
 
-  <p>Finally, tell Git to initialize (start tracking) this folder:</p>
+  <p>Finalmente, diga ao Git para iniciar (come&#xE7;ar a monitorar) esta pasta:</p>
   <code class="shell">git init</code>
 
-  <p>The last command should return something starting with "Initialized empty Git repository". The others commands do not return anything.</p>
+  <p>O &#xFA;ltimo comando deve retornar algo come&#xE7;ando com &quot;Initialized empty Git repository (Inicializado reposit&#xF3;rio vazio Git)&quot;. Os outros comandos n&#xE3;o retornam nada.</p>
 
-  <p>You did it! If you want to be double-sure that it's a Git repository, type <code>git status</code> and if it doesn't return 'fatal: Not a git repository...', you're golden!</p>
+  <p>Voc&#xEA; terminou! Se voc&#xEA; quiser ter duplamente certeza que &#xE9; um reposit&#xF3;rio Git, digite <code>git status</code> e se n&#xE3;o retornar &apos;fatal: N&#xE3;o &#xE9; um reposit&#xF3;rio git...&apos;, voc&#xEA; &#xE9; dourado!</p>
 </div>
 
 <div class="verify bold-blue solid-box">
-  <button class="btn-white" id='verify-challenge'>VERIFY</button>
-  <button class="btn-white" id='select-directory'>SELECT DIRECTORY</button>
+  <button class="btn-white" id="verify-challenge">VERIFY</button>
+  <button class="btn-white" id="select-directory">SELECT DIRECTORY</button>
   <div id="verify-spinner" class="sk-double-bounce">
     <div class="sk-child sk-double-bounce1"></div>
     <div class="sk-child sk-double-bounce2"></div>
   </div>
-  <span id='path-required-warning'>Please select your repository directory.</span>
-  <span id='directory-path'></span>
+  <span id="path-required-warning">Please select your repository directory.</span>
+  <span id="directory-path"></span>
   <ul id="verify-list">
   </ul>
   <button class="btn-white" id="clear-completed-challenge">Clear completed status</button>
@@ -172,16 +169,16 @@
 
 <div class="chal-tip grey-border border-box">
   <ul class="no-list-style">
-    <li><strong>Make a new folder (aka make directory)</strong></li>
-    <code class="shell">mkdir &#60;FOLDERNAME&#62;</code>
-    <li><strong>Navigate into an existing folder (aka change directory)</strong></li>
-    <code class="shell">cd &#60;FOLDERNAME&#62;</code>
-    <li><strong>List the items in a folder</strong></li>
+    <li><strong>Crie uma nova pasta (aka make directory)</strong></li>
+    <code class="shell">mkdir &lt;FOLDERNAME&gt;</code>
+    <li><strong>Navege dentro de uma pasta existente (aka change directory)</strong></li>
+    <code class="shell">cd &lt;FOLDERNAME&gt;</code>
+    <li><strong>Lista dos itens dentro de uma pasta</strong></li>
     <code class="shell">ls </code>
-    <li><strong>Turn Git on for a folder</strong></li>
+    <li><strong>Torna Git em uma pasta</strong></li>
     <code class="shell">git init</code>
   </ul>
-</div>
+</div> 
 
         <div class="prenext">
   <div class="u-floatLeft">
@@ -195,6 +192,24 @@
     </a>
   </div>
 </div>
+
+<style>
+  .chal-no-pass.border-box::before {
+    content: "Não Passou?";
+  }
+
+  .chal-tip.border-box::before {
+    content: "Dicas";
+  }
+
+  .chal-step.border-box::before {
+    content: "Passo";
+  }
+
+  .chal-goal.border-box::before {
+    content: "Meta";
+  }
+</style>
       </div>
     </div>
 
