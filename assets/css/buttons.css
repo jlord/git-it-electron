@@ -31,7 +31,8 @@ button .octicon {
   padding-left: 6px;
 }
 
-.index-page .btn-primary {
+.index-page .btn-primary,
+.index-page .btn-secondary {
   padding: 10px;
   font-size: .8em;
 }
