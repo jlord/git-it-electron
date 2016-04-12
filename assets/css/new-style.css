@@ -179,6 +179,7 @@ ul.no-list-style {
 .filledblock:hover {
   background: #4BABFF;
   color: #fff;
+  border-radius: 2px;
 }
 
 /* SIDEBAR
