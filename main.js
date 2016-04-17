@@ -24,9 +24,16 @@ app.on('window-all-closed', function appQuit () {
 
 app.on('ready', function appReady () {
   mainWindow = new BrowserWindow({"minWidth": 800, "minHeight": 600, width: 980, height: 760, title: 'Git-it', icon: iconPath })
-  mainWindow.loadURL('file://' + __dirname + '/index.html')
 
   var userDataPath = path.join(app.getPath('userData'), 'user-data.json')
+
+  // tools for development to prefill challenge completion
+  // usage: electron . --none
+  //        electron . --some
+  //        electron . --all
+  if (process.argv[2] === '--none') { setAllChallengesUncomplete(userDataPath) }
+  if (process.argv[2] === '--some') { setSomeChallengesComplete(userDataPath) }
+  if (process.argv[2] === '--all')  { setAllChallengesComplete(userDataPath) }
 
   fs.exists(userDataPath, function (exists) {
     if (!exists) {
@@ -35,6 +42,8 @@ app.on('ready', function appReady () {
       })
     }
   })
+
+  mainWindow.loadURL('file://' + __dirname + '/index.html')
 
   ipc.on('getUserDataPath', function (event) {
     event.returnValue = userDataPath
@@ -71,3 +80,30 @@ app.on('ready', function appReady () {
     mainWindow = null
   })
 })
+
+function setAllChallengesComplete (path) {
+  var challenges = JSON.parse(fs.readFileSync(path))
+  for (var key in challenges) {
+    challenges[key].completed = true
+  }
+  fs.writeFileSync(path, JSON.stringify(challenges), '', null)
+}
+
+function setAllChallengesUncomplete (path) {
+  var challenges = JSON.parse(fs.readFileSync(path))
+  for (var key in challenges) {
+    challenges[key].completed = false
+  }
+  fs.writeFileSync(path, JSON.stringify(challenges), '', null)
+}
+
+function setSomeChallengesComplete (path) {
+  var counter = 0
+  var challenges = JSON.parse(fs.readFileSync(path))
+  for (var key in challenges) {
+    counter++
+    if (counter < 6) challenges[key].completed = true
+    else challenges[key].completed = false
+  }
+  fs.writeFileSync(path, JSON.stringify(challenges), '', null)
+}
