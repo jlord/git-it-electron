@@ -60,7 +60,7 @@ a:hover {
 }
 
 blockquote {
-  border-left: 2px solid rgba(51, 57, 53, 0.83);
+  border-left: 1px solid rgb(186, 223, 255);
   padding-left: 18px;
   margin: 30px 0;
   color: rgba(51, 57, 53, 0.83);
