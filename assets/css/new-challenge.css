@@ -57,6 +57,11 @@
   color: #4F6375;
 }
 
+.blue-border.border-box code.comment {
+  background: none;
+  padding-left: 0;
+}
+
 gre7-border.border-box code {
   background: rgba(157, 166, 179, 0.16);
 }
