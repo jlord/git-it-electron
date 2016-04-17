@@ -129,14 +129,13 @@
   <p>First, move into the branch you want to merge into—in this case, the branch 'gh-pages'.</p>
   <p><code class="shell">git checkout gh-pages</code></p>
 
-  <p>Now tell Git what branch you want to merge in— in this case,
-    your feature branch that begins with "add-".</p>
+  <p>Now tell Git what branch you want to merge in—in this case, your feature branch that begins with "add-".</p>
   <p><code class="shell">git merge &#60;BRANCHNAME&#62;</code></p>
 
   <p>Tidy up by deleting your feature branch. Now that it has been merged you don't really need it around.</p>
   <p><code class="shell">git branch -d &#60;BRANCHNAME&#62;</code></p>
 
-  <p>You can also delete the branch from your fork on GitHub:</p>
+  <p>You can also delete the branch from your remote on GitHub:</p>
   <p><code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
 </div>
 
