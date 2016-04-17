@@ -113,7 +113,7 @@
 </div>
       <div class="content">
         <div id="challenge-desc" class="chal-goal blue-border border-box">
-  <p>Add a branch to your forked repository to work on your changes.</p>
+  <p>Add a branch, locally, to your forked repository to work on your changes.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
@@ -127,7 +127,7 @@
   <p>For a great visualization on how branches work in a project, see this GitHub Guide: <a href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a></p>
 
   <h2>GitHub Pages</h2>
-  <p>GitHub will automatically serve and host static website files in branches named 'gh-pages'. This free service i called <a href="http://pages.github.com">GitHub Pages</a>. Since the project you forked creates a website, its main branch is named 'gh-pages' instead of 'master'. All repositories that have a 'gh-pages' branch with website files can be found, in their hosted version, using this pattern for the URL:</p>
+  <p>GitHub will automatically serve and host static website files in branches named 'gh-pages'. This free service is called <a href="http://pages.github.com">GitHub Pages</a>. Since the project you forked creates a website, its main branch is named 'gh-pages' instead of 'master'. All repositories that have a 'gh-pages' branch with website files can be found, live online, using this pattern for the URL:</p>
 
   <code>http://githubusername.github.io/repositoryname</code>
 </div>
@@ -138,15 +138,13 @@
 
   <p>While still inside of your local 'patchwork' repository, type <code>git status</code> to see what branch you're currently on. Git should reply that you're on the 'gh-pages' branch.</p>
 
-  <p>Now create a new branch and name it "add-&#60;username&#62;", where 'username' is
-  your username. For instance, "add-jlord". <strong>Branches are case-sensitive so name your branch exactly the way your GitHub name appears</strong>.</p>
+  <p>Now create a new branch and name it "add-&#60;username&#62;", where 'username' is your username. For instance, "add-jlord". <strong>Branches are case-sensitive so name your branch exactly the way your GitHub name appears</strong>.</p>
 
   <p><code class="shell">git branch &#60;BRANCHNAME&#62;</code></p>
 
   <p>Now you have a branch with a new name that is identical to 'gh-pages'.</p>
 
-  <p>To go into that branch and work on it, similar to using <code>cd</code> to
-  change directory in terminal, you <strong>checkout</strong> a branch. To go on your new branch:</p>
+  <p>To go into that branch and work on it you <strong>checkout</strong> a branch. Go on your new branch:</p>
 
   <p><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></p>
 </div>
@@ -157,7 +155,7 @@
   <ul>
     <li>Create a new file named <span style="white-space: nowrap;">"add-&#60;USERNAME&#62;.txt"</span>, where 'username' is your username. For instance, "add-jlord.txt".</li>
     <li>Then, just write your GitHub username in it, that's it and that's all. For instance, I'd type 'jlord'.</li>
-    <li>Save this file in the 'contributors' folder in Patchwork <strong>Patchwork/contributors/add-yourusername.txt</strong></li>
+    <li>Save this file in the 'contributors' folder in Patchwork: <strong>Patchwork/contributors/add-yourusername.txt</strong></li>
     <li>Next, check in your changes (see below).</li>
   </ul>
 </div>
