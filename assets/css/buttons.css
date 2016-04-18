@@ -20,7 +20,7 @@ button:focus {
 }
 
 button:hover {
-  background-color: rgba(227, 220, 220, 0.38);
+  background-color: #badfff;
 }
 
 button:disabled {
