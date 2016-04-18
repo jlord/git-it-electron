@@ -1,15 +1,14 @@
-# Git-it (Desktop Version)
+# Git-it (Desktop App)
 
 [![Build Status](https://travis-ci.org/jlord/git-it-electron.svg?branch=master)](https://travis-ci.org/jlord/git-it-electron)
 
-[![screenshot](https://cloud.githubusercontent.com/assets/1305617/9652620/fce0cc46-51d1-11e5-9cb6-d2d71535dfc5.png)](https://github.com/jlord/git-it-electron/releases)
+![screen shot 2016-04-17 at 10 37 55 pm](https://cloud.githubusercontent.com/assets/1305617/14594613/23873f64-04ed-11e6-9d3b-72f424dd0842.png)
+Git-it is a desktop (Mac, Windows and Linux) app that teaches you how to use Git and GitHub on the [command line](https://en.wikipedia.org/wiki/Command-line_interface).
 
-Git-it is an app that teaches you Git and GitHub on the [command line](https://en.wikipedia.org/wiki/Command-line_interface).
-
-Previously it ran _in_ terminal (the command line application) with a guide online but now the guide _is_ the app and it runs on your desktop on its own, thanks to [Electron.js](http://electron.atom.io).
+Previously it ran _in_ terminal (the command line application) with a guide online but now the guide _is_ the app and it runs on your desktop on its own :sparkles: **This will be the only maintained version going forward** :arrow_right:
 
 ---
-## Hello, future Forkers, Branchers and Pull Requesters!
+## Hello future Forkers, Branchers and Pull Requesters!
 
 This application contains challenges for learning Git and GitHub—by using _real_ Git and GitHub, not emulators. You'll be learning the awesome (and not so scary) command line and GitHub which means when you finish all of the challenges you'll have _real_ repositories on your GitHub account and green squares on your [contribution chart](https://github.com/blog/1360-introducing-contributions).
 
@@ -17,21 +16,23 @@ This application contains challenges for learning Git and GitHub—by using _rea
 
 ## What to Install
 
-You'll just need Git (since that's what you're learning), a text editor and Git-it. The first two you'll continue to use once you're a Git/GitHub Pro. You'll create a GitHub account in the first challenge but if you already have one, you're already ahead!
+You will need this app, Git-it as well as a text editor. You'll also of course need Git and the first challenge in Git-it helps you get that set up. But if you want to get a head start, go for it! You'll continue to use Git and your text editor throughout your bright social coding future.
+
+As a part of the challenges you'll also create a (free) account on GitHub. If you've already got one, high-five!
 
 #### Git
 
-We recommend installing [GitHub Desktop](http://desktop.github.com) (free) because it installs Git in the most consistent way across operating systems (Windows, Mac, Linux). We won't use the app itself in the challenges, just the Git it installs.
+We recommend installing [GitHub Desktop](http://desktop.github.com) (free) because it installs Git in the most consistent way across operating systems (Windows, Mac, Linux). We won't use the app itself in the challenges (but it is really useful once you get going in Git!), just the Git that it install for you.
 
-Note—If you're using Windows, you should use the **Git Shell** app as your terminal. In Mac and Linux you can use **Terminal**.
+Note—If you're using Windows, you should use the **Git Shell** app as your terminal—it is installed with GitHub Desktop. In Mac and Linux you can use the app **Terminal**, which is already on your computer.
 
 #### Text Editor
 
-I'm quite partial (I'm on the team!) but [Atom](http://atom.io) is a great text editor (also free) and it is built on [Electron.js](http://electron.atom.io), just like Git-it. Visit the website and download the version for your operating system.
+I'm quite partial (I'm on the team!) but [Atom](http://atom.io) is a great text editor (also free) and it is built on [Electron.js](http://electron.atom.io), just like Git-it. Visit the website and download the version for your operating system. [Sublime](https://www.sublimetext.com), [Microsoft VS Code](https://code.visualstudio.com) and [Adobe Brackets](http://brackets.io) are other options.
 
 #### Git-it
 
-You can view the [releases](http://github.com/jlord/git-it-electron/releases) section of this repository to find the download for your operating system. Click to download your version and then place it where you keep your other applications.
+You can view the [releases](http://github.com/jlord/git-it-electron/releases) section of this repository to find the download for your operating system. Click to download your version. Once it has downloaded, unzip the folder and run the Git-it executable.
 
 ## Get Started!
 
