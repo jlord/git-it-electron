@@ -1,6 +1,8 @@
 # Contributing to Git-it (on Electron)
 
-Contributions are more than welcome! Will fill out more about that soon.
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
+Contributions are more than welcome!
 
 ## Building Locally
 
@@ -22,7 +24,7 @@ Here's how to create a Git-it executable for Windows, OS X and Linux. You'll nee
 
 To package a release you'll need **atleast npm version 3** on your computer.
 
-To check this:
+To check your version of npm:
 
 ```bash
 $ npm -v
@@ -53,21 +55,19 @@ $ npm run build-all
 
 ### OS X, Linux, Windows
 
-**Each package is put into a folder named Git-it-Packaged-Apps which will be
-just outside of your `git-it-electron` directory.** This is so that the first
-one you created isn't included inside of the second one.
+Each generated folder is put in the `/out` directory.
 
 ```bash
 $ npm run pack-mac
 ```
 
-This will output the contents of the application to a folder at `../Git-it-Packaged-Apps/Git-it-darwin-x64`.
+This will output the contents of the application to a folder at `../out/Git-it-darwin-x64`.
 
 ```bash
 $ npm run pack-lin
 ```
 
-This will output the contents of the application to a folder at `../Git-it-Packaged-Apps/Git-it-linux-x64`.
+This will output the contents of the application to a folder at `../out/Git-it-linux-x64`.
 ```bash
 $ npm run pack-win
 ```
@@ -83,4 +83,4 @@ needs to be run in order for this functionality to work, so on non-Windows
 platforms, [Wine](https://www.winehq.org/) needs to be installed. On OS X, it is
 installable via [Homebrew](http://brew.sh/).
 
-This will output the contents of the application to a folder at `../Git-it-Packaged-Apps/Git-it-win32-ia32`.
+This will output the contents of the application to a folder at `../out/Git-it-win32-ia32`.
