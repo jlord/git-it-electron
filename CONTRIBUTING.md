@@ -1,13 +1,15 @@
-# Contributing to Git-it (on Electron)
+# Contributing to Git-it
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-Contributions are more than welcome!
+Contributions are more than welcome! Checkout the [help wanted](https://github.com/jlord/git-it-electron/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted+✍%22) labels for ideas!
+
+For information on how the app works, see the [documentation](docs.md).
 
 ## Building Locally
 
 If you want to build this locally you'll need [Node.js](https://nodejs.org) on your computer. Then
-clone this repository and run:
+clone this repository, install dependencies and launch:
 
 ```bash
 $ git clone https://github.com/jlord/git-it-electron
