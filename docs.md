@@ -1,4 +1,4 @@
-# Docs
+# Documentation
 
 How does this thing work? Below are general descriptions of directories and content. Inside of each file comments describe what that file's job is.
 
