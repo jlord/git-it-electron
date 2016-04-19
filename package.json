@@ -36,8 +36,8 @@
   },
   "homepage": "https://github.com/jlord/git-it-electron",
   "devDependencies": {
-    "electron-packager": "^5.2.0",
-    "electron-prebuilt": "^0.37.5",
+    "electron-packager": "^7.0.0",
+    "electron-prebuilt": "^0.37.6",
     "standard": "^5.4.1"
   },
   "dependencies": {
