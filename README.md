@@ -32,7 +32,12 @@ I'm quite partial (I'm on the team!) but [Atom](http://atom.io) is a great text 
 
 #### Git-it
 
-You can view the [releases](http://github.com/jlord/git-it-electron/releases) section of this repository to find the download for your operating system. Click to download your version. Once it has downloaded, unzip the folder and run the Git-it executable.
+You can view the [releases](http://github.com/jlord/git-it-electron/releases) section of this repository to find the download for your operating system. Click to download your version. Once it has downloaded to your default Downloads directory, unzip the folder and run the Git-it executable. The executables for Mac, Windows and Linux:
+
+![executables](https://cloud.githubusercontent.com/assets/1305617/14696588/2b10abf8-0731-11e6-945e-f3d57114bce9.png)
+
+- **Mac** Right (control) click the Git-it icon, select Open and then Open again. You can drag the icon into your Applications directory if you want, but it's not required. If needed, more [detailed installation instructions](https://github.com/jlord/git-it-electron/issues/121#issue-149747488) can be found in this issue.
+- **Windows and Linux** Double-click the executable.
 
 ## Get Started!
 
