@@ -48,7 +48,7 @@ app.on('ready', function appReady () {
 
   fs.exists(userSavedDir, function (exists) {
     if (!exists) {
-      fs.writeFile(userSavedDir, JSON.stringify(emptyData, null, ' '), function (err) {
+      fs.writeFile(userSavedDir, JSON.stringify(emptySavedDir, null, ' '), function (err) {
         if (err) return console.log(err)
       })
     }
