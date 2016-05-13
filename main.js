@@ -10,6 +10,7 @@ var darwinTemplate = require('./menus/darwin-menu.js')
 var otherTemplate = require('./menus/other-menu.js')
 
 var emptyData = require('./empty-data.json')
+var emptySavedDir = require('./empty-saved-dir.json')
 
 var mainWindow = null
 var menu = null
@@ -25,7 +26,9 @@ app.on('window-all-closed', function appQuit () {
 app.on('ready', function appReady () {
   mainWindow = new BrowserWindow({"minWidth": 800, "minHeight": 600, width: 980, height: 760, title: 'Git-it', icon: iconPath })
 
-  var userDataPath = path.join(app.getPath('userData'), 'user-data.json')
+  var appPath = app.getPath('userData')
+  var userDataPath = path.join(appPath, 'user-data.json')
+  var userSavedDir = path.join(appPath, 'saved-dir.json')
 
   // tools for development to prefill challenge completion
   // usage: electron . --none
@@ -43,10 +46,22 @@ app.on('ready', function appReady () {
     }
   })
 
+  fs.exists(userSavedDir, function (exists) {
+    if (!exists) {
+      fs.writeFile(userSavedDir, JSON.stringify(emptyData, null, ' '), function (err) {
+        if (err) return console.log(err)
+      })
+    }
+  })
+
   mainWindow.loadURL('file://' + __dirname + '/index.html')
 
   ipc.on('getUserDataPath', function (event) {
     event.returnValue = userDataPath
+  })
+
+  ipc.on('getUserSavedDir', function (event) {
+    event.returnValue = userSavedDir
   })
 
   ipc.on('open-file-dialog', function (event) {
