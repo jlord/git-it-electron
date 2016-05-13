@@ -146,6 +146,10 @@ gre7-border.border-box code {
    display: none;
  }
 
+ #directory-path:before {
+   content: 'Verifying: ';
+ }
+
  #path-required-warning,
  #directory-path {
    padding: 6px 12px 6px 10px;

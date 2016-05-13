@@ -27,6 +27,4 @@ build/Release
 node_modules
 
 # Packaged Builds
-Git-it-win32*/
-Git-it-darwin*/
-Git-it-linux*/
+out/
