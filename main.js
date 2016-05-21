@@ -1,8 +1,8 @@
-var app = require('app')
-var BrowserWindow = require('browser-window')
+var {app} = require('electron')
+var {BrowserWindow} = require('electron')
 var Menu = require('menu')
-var ipc = require('electron').ipcMain
-var dialog = require('dialog')
+var {ipcMain} = require('electron')
+var {dialog} = require('electron')
 var fs = require('fs')
 var path = require('path')
 
@@ -56,22 +56,22 @@ app.on('ready', function appReady () {
 
   mainWindow.loadURL('file://' + __dirname + '/index.html')
 
-  ipc.on('getUserDataPath', function (event) {
+  ipcMain.on('getUserDataPath', function (event) {
     event.returnValue = userDataPath
   })
 
-  ipc.on('getUserSavedDir', function (event) {
+  ipcMain.on('getUserSavedDir', function (event) {
     event.returnValue = userSavedDir
   })
 
-  ipc.on('open-file-dialog', function (event) {
+  ipcMain.on('open-file-dialog', function (event) {
     var files = dialog.showOpenDialog(mainWindow, { properties: [ 'openFile', 'openDirectory' ]})
     if (files) {
       event.sender.send('selected-directory', files)
     }
   })
 
-  ipc.on('confirm-clear', function (event) {
+  ipcMain.on('confirm-clear', function (event) {
     var options = {
       type: 'info',
       buttons: ['Yes', 'No'],
