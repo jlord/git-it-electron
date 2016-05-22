@@ -1,8 +1,10 @@
-var {app} = require('electron')
-var {BrowserWindow} = require('electron')
-var Menu = require('menu')
-var {ipcMain} = require('electron')
-var {dialog} = require('electron')
+var electron = require('electron')
+var app = electron.app
+var BrowserWindow = electron.BrowserWindow
+var Menu = electron.Menu
+var ipcMain = electron.ipcMain
+var dialog = electron.dialog
+
 var fs = require('fs')
 var path = require('path')
 
