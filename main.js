@@ -1,12 +1,12 @@
+var fs = require('fs')
+var path = require('path')
+
 var electron = require('electron')
 var app = electron.app
 var BrowserWindow = electron.BrowserWindow
 var Menu = electron.Menu
 var ipcMain = electron.ipcMain
 var dialog = electron.dialog
-
-var fs = require('fs')
-var path = require('path')
 
 var darwinTemplate = require('./menus/darwin-menu.js')
 var otherTemplate = require('./menus/other-menu.js')
