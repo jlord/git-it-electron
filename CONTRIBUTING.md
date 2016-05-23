@@ -4,6 +4,8 @@
 
 Contributions are more than welcome! Checkout the [help wanted](https://github.com/jlord/git-it-electron/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted+✍%22) labels for ideas!
 
+Code style is [standard](http://standardjs.com) and no ES6 styanx :tada: but open to relevant new methods.
+
 For information on how the app works, see the [documentation](docs.md).
 
 ## Building Locally
