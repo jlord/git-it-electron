@@ -1,3 +1,11 @@
+:rotating_light: **Notice** :rotating_light:
+
+Changes to repository invites on GitHub.com has broken _part_ of @reporobot's role in the Git-it challenges. You can stil complete Git-it without completing this challenge in particular, however. See the [issue on this](https://github.com/jlord/git-it-electron/issues/137) for more details. 
+
+_Also, please don't email GitHub support, this is not a GitHub project, open issues here instead :pray:_
+
+---
+
 # Git-it (Desktop App)
 
 [![Build Status](https://travis-ci.org/jlord/git-it-electron.svg?branch=master)](https://travis-ci.org/jlord/git-it-electron) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
