@@ -1,6 +1,6 @@
 :rotating_light: **Notice** :rotating_light:
 
-Changes to repository invites on GitHub.com has broken _part_ of @reporobot's role in the Git-it challenges. You can stil complete Git-it without completing this challenge in particular, however. See the [issue on this](https://github.com/jlord/git-it-electron/issues/137) for more details. 
+Changes to repository invites on GitHub.com has broken _part_ of @reporobot's role in the Git-it challenges. You can stil complete Git-it without completing this challenge in particular, however. See the [issue on this](https://github.com/jlord/git-it-electron/issues/137) for more details.
 
 _Also, please don't email GitHub support, this is not a GitHub project, open issues here instead :pray:_
 
@@ -63,7 +63,7 @@ When you've completed the steps in a challenge click 'Verify'. Depending on the 
 
 **Code snippets** often times look like `$ some code-stuff --here`. The dollar sign identifies the line as one a user would enter into the command line, but you don't actually include it when you type it into terminal. In this case, you'd actually just type `some code-stuff --here`.
 
-**Variables** are indicated by `<VARIABLENAME>` in code snippets. When you actually use the line of code, replace it, including the `<>`, with your variable. For instance to make a new folder in terminal the format is, `mkdir <FOLDERNAME>`, so if you wanted to make a folder named 'octocat', you'd type: `mkdir octocat`.
+**Variables** are indicated by `<VARIABLENAME>` in code snippets. When you actually use the line of code, replace `<VARIABLENAME>`, with your variable. For instance to make a new folder in terminal the format is, `mkdir <FOLDERNAME>`, so if you wanted to make a folder named 'octocat', you'd type: `mkdir octocat`.
 
 **Command line, terminal and bash** all basically mean the same thing: the MS-DOS, Doogie Howser looking screen full of words and numbers. It's awesomely powerful and allows you to control your computer with text commands.
 
