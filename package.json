@@ -1,6 +1,6 @@
 {
   "name": "git-it-electron",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "description": "An open source desktop app for learning Git and GitHub",
   "keywords": [
     "Git",
@@ -37,7 +37,7 @@
   "homepage": "https://github.com/jlord/git-it-electron",
   "devDependencies": {
     "electron-packager": "^7.0.0",
-    "electron-prebuilt": "^1.1.1",
+    "electron-prebuilt": "^1.2.6",
     "standard": "^5.4.1"
   },
   "dependencies": {
