@@ -160,7 +160,7 @@
 
   <p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
 
-  <p>To be sure you have the correct remotes set up, type <code>git remote -v</code> to list out the addresses you have stored. You should have an 'origin' remote with <em>your fork's</em> address and then an 'upstream' remote with the address to the original, with the URL noted above in this step.</p>
+  <p>To be sure you have the correct remotes set up, type <code>git remote -v</code> to list out the addresses you have stored. <b>You should have an 'origin' remote with your fork's address and then an 'upstream' remote with the address to the original, the URL noted above in this step.</b></p>
 </div>
 
 <div class="verify bold-blue solid-box">
@@ -179,8 +179,10 @@
 
 <div class="chal-tip grey-border border-box">
   <ul class="no-list-style">
-    <li><strong>Add remote connections</strong></li>
+    <li><strong>Add a remote</strong></li>
     <li><code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
+    <li><strong>Change a remote URL</strong></li>
+    <li><code class="shell">git remote set-url &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
     <li><strong>View remote connections</strong></li>
     <li><code class="shell">git remote -v</code></li>
   </ul>
