@@ -54,15 +54,18 @@
   <p><code class="shell">git add &#60;FILENAME&#62;</code></p>
   <p><code class="shell">git commit -m "commit message"</code></p>
 
-  <p>Now push your update to your fork on GitHub:</p>
+  <p>Now push your update to <b>your fork</b>, 'origin', on GitHub:</p>
   <p><code class="shell">git push origin &#60;BRANCHNAME&#62;</code></p>
-
-  <p>Make sure that you're pushing to 'origin', which is your fork's address on GitHub. If you get an error check to make sure you have your remotes set up correctly with 'origin' pointing to your fork and 'upstream' pointing to the original repository: <code>git remote -v</code>
 </div>
 
 {{{ verify_directory_button }}}
 
 <div class="chal-no-pass grey-border border-box">
+  <h4>Permission denied...error: 403</h4>
+  <p>You are pushing changes to a repository you don't have write access to. In this case, you're likely pushing ot the original 'jlord/patchwork'. Make sure that you're pushing to 'origin' and that it points to your fork's address on GitHub. To check and see what your remotes are and where they point run <code>git remote -v</code>. You should have 'upstream' pointing to 'jlord/patchwork' and 'origin' pointing to 'yourusername/patchwork'.
+
+  <p>To fix a remote that is pointing to the wrong place you can re-set its url: <code>git remote set-url origin <URLTOYOURFORK></code>.
+
   <h4>File NOT in contributors folder</h4>
   <p>The file you create should be placed inside the existing 'contributors' folder in the Patchwork repository. If you put it somewhere else, simply use Finder or Windows Explorer to move your file into the folder. You can check <code>git status</code> again and you'll find it sees your changes. Stage and then commit "all" (-A) of these changes (additions and deletions) with the commands below.</p>
   <p><code class="shell">git add -A</code></p>
