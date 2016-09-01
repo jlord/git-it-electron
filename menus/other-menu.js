@@ -20,7 +20,9 @@ module.exports = function menu (mainWindow) {
         {
           label: '&Reload',
           accelerator: 'Ctrl+R',
-          click: function () { mainWindow.restart() }
+          click (item, focusedWindow) {
+            if (focusedWindow) focusedWindow.reload()
+          }
         },
         {
           label: 'Toggle &Full Screen',
