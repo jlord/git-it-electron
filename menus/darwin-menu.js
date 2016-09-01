@@ -84,8 +84,10 @@ module.exports = function menu (app, mainWindow) {
       submenu: [
         {
           label: 'Reload',
-          accelerator: 'Command+R',
-          click: function () { mainWindow.restart() }
+          accelerator: 'CmdOrCtrl+R',
+          click (item, focusedWindow) {
+            if (focusedWindow) focusedWindow.reload()
+          }
         },
         {
           label: 'Toggle Full Screen',
