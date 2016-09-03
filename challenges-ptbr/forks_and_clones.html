@@ -119,49 +119,49 @@
 
 <div class="chal-background light-blue solid-box">
   <h2>Forks</h2>
-  <p>At&#xE9; agora voc&#xEA; fez um projeto localmente e e o empurrou para o GitHub, mas isso &#xE9; s&#xF3; metade da divers&#xE3;o! A outra metade est&#xE1; trabalhando com outras pessoas e outros projetos.</p>
+  <p>At&#xE9; agora voc&#xEA; fez um projeto localmente e fez pull para o GitHub, mas isso &#xE9; s&#xF3; metade da divers&#xE3;o! A outra metade est&#xE1; trabalhando com outras pessoas e outros projetos.</p>
 
   <p>Quando voc&#xEA; <strong>fork</strong> um reposit&#xF3;rio, voc&#xEA; est&#xE1; criando uma c&#xF3;pia dele na sua conta GitHub. Sua forked c&#xF3;pia come&#xE7;a sua vida como um <strong>remote</strong> repository&#x2014;it existe apenas na sua conta GitHub, n&#xE3;o no seu computador. Forks s&#xE3;o usados para criar sua pr&#xF3;pria vers&#xE3;o de um projeto (este desvio do original &#xE9; como fazer uma fork na estrada) ou contribuir de volta suas mudan&#xE7;as (tais como corre&#xE7;&#xF5;es de bugs ou novos recursos) para o projeto original. </p>
 
   <p>Para obter um reposit&#xF3;rio forked da sua conta GitHub para seu computador voc&#xEA; <strong>clone</strong> isso. Essa a&#xE7;&#xE3;o clonagem copia o reposit&#xF3;rio remoto para seu computador para que voc&#xEA; posso trabalhar localmente.</p>
 
-  <img src="../assets/imgs/clone.png" width="100%">
+  <img src="../assets/imgs/clone-ptbr.png" width="100%">
 </div>
 
 <div class="chal-step blue-border border-box">
-  <h3>Fork o reposit&#xF3;rio Patchwork</h3>
-  <p>O projeto que n&#xF3;s vamos trabalhar est&#xE1; em <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.V&#xE1; nesse site e click no bot&#xE3;o fork no canto superior direito. Um vez que a anima&#xE7;&#xE3;o fork est&#xE1; completa, voc&#xEA; obtem uma c&#xF3;pia na sua conta. Copie seu fork&apos;s HTTP URL na barra de endere&#xE7;os do seu navegador, este &#xE9; o endere&#xE7;o da sua fork no GitHub&apos;s servidores.</p>
+  <h3>Fazer Fork do reposit&#xF3;rio Patchwork</h3>
+  <p>O projeto que n&#xF3;s vamos trabalhar est&#xE1; em <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.V&#xE1; nesse site e clique no bot&#xE3;o fork, no canto superior direito. Um vez que a anima&#xE7;&#xE3;o de fork est&#xE1; completa, voc&#xEA; obtem uma c&#xF3;pia na sua conta. Copie seu o URL do seu fork na barra de endere&#xE7;os do seu navegador, este &#xE9; o endere&#xE7;o da sua fork nos servidores do GitHub.</p>
   <!-- TODO write address for user here -->
 </div>
 
 <div class="chal-step blue-border border-box">
   <h3>Clone seu Fork Localmente</h3>
-  <p>Agora, no terminal, voc&#xEA; vai clonar o repositorio para o seu computador. Vai autom&#xE1;ticamente criar uma nova pasta para o reposit&#xF3;rio de modo que n&#xE3;o h&#xE1; necessidade de criar um voc&#xEA; mesmo. Mas certifique-se que voc&#xEA; n&#xE3;o est&#xE1; clonando dentro de outra pasta do reposit&#xF3;rio Git!</p>
+  <p>Agora, no terminal, voc&#xEA; vai clonar o repositorio para o seu computador. Ir&#xE1; ser criada autom&#xE1;ticamente uma nova pasta para o reposit&#xF3;rio de modo que n&#xE3;o h&#xE1; necessidade de criar um voc&#xEA; mesmo. Mas certifique-se que voc&#xEA; n&#xE3;o est&#xE1; clonando dentro de outra pasta de reposit&#xF3;rio Git!</p>
 
-  <p>Ent&#xE3;o n&#xE3;o se esque&#xE7;a que voc&#xEA; n&#xE3;o est&#xE1; dentro do diret&#xF3;rio &apos;hello-world&apos; dos desafios anteriores. Para voltar atr&#xE1;s e deixar esta pasta para que voc&#xEA; possa clonar siga esses passos:</p>
+  <p>Ent&#xE3;o, n&#xE3;o se esque&#xE7;a que voc&#xEA; n&#xE3;o est&#xE1; dentro do diret&#xF3;rio &apos;hello-world&apos; dos desafios anteriores. Para voltar atr&#xE1;s e deixar esta pasta para que voc&#xEA; possa clonar siga esses passos:</p>
 
   <p>Retorne &#xE0; sua pasta &apos;hello-world&apos; :<br><span class="inline-tip">Dica: cd significa <em>mudar diret&#xF3;rio</em> e os dois pontos significam sair de um diret&#xF3;rio <em>um n&#xED;vel</em></span></p>
   <p><code class="shell">cd ..</code></p>
 
   <p>Clone agora:</p>
-  <p><code class="shell">git clone &lt;URLFROMGITHUB&gt;</code></p>
+  <p><code class="shell">git clone &lt;URLDOGITHUB&gt;</code></p>
 
-  <p>V&#xE1; para a pasta que criou para a sua c&#xF3;pia local do reposit&#xF3;rio forked (nesse caso, nameada &apos;patchwork&apos;).</p>
+  <p>V&#xE1; para a pasta que criou para a sua c&#xF3;pia local do reposit&#xF3;rio que voc&#xEA; fez fork (nesse caso, nomeada &apos;patchwork&apos;).</p>
   <p><code class="shell">cd patchwork</code></p>
 
-  <p>Agora voc&#xEA; obteve uma c&#xF3;pia do reposit&#xF3;rio no seu computador e ele &#xE9; conectado automaticamente ao reposit&#xF3;rio remoto (sua c&#xF3;pia forked ) na sua conta GitHub.</p>
+  <p>Agora voc&#xEA; obteve uma c&#xF3;pia do reposit&#xF3;rio no seu computador e ele &#xE9; conectado automaticamente ao reposit&#xF3;rio remoto (sua c&#xF3;pia feita o fork) na sua conta GitHub.</p>
 </div>
 
 <div class="chal-step blue-border border-box">
   <h3>Conecte-se ao Reposit&#xF3;rio Original</h3>
 
-  <p>E se o reposit&#xF3;rio original que voc&#xEA; forked muda? Voc&#xEA; vai querer ser capaz de <strong>pull</strong> (pull = extrair) essas mudan&#xE7;as tamb&#xE9;m.. Ent&#xE3;o vamos adicionar outra conex&#xE3;o remota, desta vez para o original, <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>, reposit&#xF3;rio com essa URL.</p>
+  <p>E se o reposit&#xF3;rio original que voc&#xEA; fez fork mudar? Voc&#xEA; vai querer ser capaz de fazer <strong>pull</strong> (receber) essas mudan&#xE7;as tamb&#xE9;m... Ent&#xE3;o, vamos adicionar outra conex&#xE3;o remota, desta vez para o original, do reposit&#xF3;rio com o URL <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.</p>
 
   <p>Voc&#xEA; pode renomear essa conex&#xE3;o remota como voc&#xEA; quiser, mas normalmente as pessoas usam o nome &apos;upstream&apos;, vamos usar isso para isto.</p>
 
   <p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
 
-  <p>Para ter certeza que voc&#xEA; configurou corretamente o controle remoto, digite <code>git remote -v</code> para listar os endere&#xE7;os que voc&#xEA; armazenou. Voc~e deve ter um remoto &apos;origin&apos; com <em>seu fork&apos;s</em> endere&#xE7;o e depois uma &apos;upstream&apos; remota com o endere&#xE7;o do original, com a URL observado acima nesta etapa.</p>
+  <p>Para ter certeza que voc&#xEA; configurou corretamente o remoto, digite <code>git remote -v</code> para listar os endere&#xE7;os que voc&#xEA; armazenou. Voc&#xEA; deve ter um remoto &apos;origin&apos; com o endere&#xE7;o do <em>seu fork</em> e depois uma &apos;upstream&apos; remota com o endere&#xE7;o do original, com o URL observado acima nesta etapa.</p>
 </div>
 
 <div class="verify bold-blue solid-box">
@@ -181,7 +181,7 @@
 <div class="chal-tip grey-border border-box">
   <ul class="no-list-style">
     <li><strong>Adiciona conex&#xF5;es remotas</strong></li>
-    <li><code class="shell">git remoto e &lt;REMOTENAME&gt; &lt;URL&gt;</code></li>
+    <li><code class="shell">git remote add &lt;NOMEDOREMOTO&gt; &lt;URL&gt;</code></li>
     <li><strong>Ver conex&#xF5;es remotas</strong></li>
     <li><code class="shell">git remote -v</code></li>
   </ul>
