@@ -1,0 +1,83 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Connect your local repository to a remote one and push changes to it.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Remotes</h2>
+
+  <p>When you put something on GitHub that copy lives on one of GitHub's servers. This makes it a <strong>remote</strong> repository because it is not on your computer, but on a server, "remote" and somewhere else. By <strong>pushing</strong> your <strong>local</strong> (on your computer) changes to it, you keep it up to date.</p>
+
+  <p>Others can always then get the latest from your project by <strong>pulling</strong> your changes down from the remote (and onto their computer). This is how everyone can work on a project together without needing access to your computer where your local copy is stored.</p>
+
+  <img src="../assets/imgs/remotes.png" alt="A diagram showing GitHub as a central server which creates the GitHub.com website. Two computers, on either side, are pushing and pulling from GitHub." width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Create a Remote Repository</h3>
+  <p>You want to sync your <strong>local</strong> version with one stored on GitHub.com. First create a new <strong>remote</strong> repository on GitHub.com.</p>
+
+  <ul>
+    <li>Go to <a href="http://github.com " target="_blank">github.com</a>, log in, and click the '+' in the top right and then click 'New repository'.</li>
+    <li>Give it a name that matches your local repository's name, 'hello-world', and a short description.</li>
+    <li>Make it public. This means it'll be listed on your public profile.</li>
+    <li>Don't initialize with a README because we already have a file, locally, named 'readme.txt'. This is a helper option from GitHub if you hadn't already made it.</li>
+    <li>Leave '.gitignore' and 'license' set to 'none'. We won't use them this tutorial.</li>
+    <li>Click create repository!</li>
+  </ul>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Readmes, .gitignores and Licenses</h2>
+  <p>These are common files in open source projects so to make starting a new project easier, GitHub provides an option for creating them for you.</p>
+  <p>A <strong>readme</strong> explains what the project is, how to use it, and often times, how to contribute (though sometimes there is an extra file, 'CONTRIBUTING.md', for those details).</p>
+  <p>A <strong>.gitignore</strong> is a list of files that Git should <em>not</em> track, for instance, files with passwords!</p>
+  <p>A <strong>license</strong> file is the type of license you put on your project. This lets others know how they can use it. Information on the types is here: <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a>.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Connect your Local to your Remote</h3>
+  <p>Now you've got an empty repository started on GitHub.com. At the top you'll see 'Quick Setup', make sure the 'HTTPS' button is selected and copy the address—this is the address of your repository on GitHub's servers.</p>
+
+  <p>Back in your terminal, and inside of the 'hello-world' folder that you initialized as a Git repository in the earlier challenge, you want to tell Git to remember the address of the remote version on GitHub's servers. You can have multiple remotes so each requires a name. The primary remote is typically named <code>origin</code>.</p>
+
+  <p>To add a remote named 'origin' to your repository:</p>
+  <code class="shell">git remote add origin &lt;URLFROMGITHUB&gt;</code>
+
+  <p>Your <strong>local</strong> repository now knows where your <strong>remote</strong> repository, named 'origin', lives on GitHub's servers. Think of it as adding a name and address on speed dial—now when you need to send something there, you can.</p>
+
+  <blockquote>
+  <p><strong>Windows Users:</strong></p>
+  <p>If you have <strong>GitHub Desktop</strong> on your computer, a remote named 'origin' is automatically created in your local repository. In that case, you'll just need to tell it what URL to associate with 'origin'. Use this command instead of the 'add' one above:</p>
+
+  <code class="shell">git remote set-url origin &lt;URLFROMGITHUB&gt;</code>
+  </blockquote>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Push Work to your Remote</h3>
+  <p>Next you want to <strong>push</strong> (send) everything you've done locally to your remote repository on GitHub. This is something you'll do often so that your remote version is up to date and matching the state of your local version.</p>
+
+  <p>Git has a branching system so that you can work on different parts of a project at different times. We'll learn more about that later, but by default the first branch is named 'master'. When you push (and later pull) from a project, you tell Git the <strong>branch name</strong> you want and the name of the <strong>remote</strong> that it lives on.</p>
+
+  <p>In this case, we'll send our branch named 'master' to our remote on GitHub named 'origin'. </p>
+  <code class="shell">git push origin master</code>
+
+  <p>Now go to your remote repository's page on GitHub.com and refresh the page. <strong>Wow!</strong> Everything is now the same locally as it is remotely. Congrats on your first public repository!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>Add remote connections</strong></li>
+    <code class="shell">git remote add &lt;REMOTENAME&gt; &lt;URL&gt;</code>
+    <li><strong>Set a URL to a remote</strong></li>
+    <code class="shell">git remote set-url &lt;REMOTENAME&gt; &lt;URL&gt;</code>
+    <li><strong>Pull in changes</strong></li>
+    <code class="shell">git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
+    <li><strong>View remote addresses</strong></li>
+    <code class="shell">git remote -v</code>
+    <li><strong>Push changes</strong></li>
+    <code class="shell">git push &lt;REMOTENAME&gt; &lt;BRANCH&gt;</code>
+  </ul>
+</div>

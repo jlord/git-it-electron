@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Git-it</title>
+    <link rel="stylesheet" href="../assets/css/2-double-bounce.css">
+    <link rel="stylesheet" href="../assets/css/new-style.css">
+    <link rel="stylesheet" href="../assets/css/new-challenge.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css">
+  </head>
+  <body>
+    <header id="challenge-header" class="site-header">
+  <div class="lang-select">
+    <select id="lang-select" class="btn-outline lang-select">
+      <option value="">English</option>
+      <option value="zhtw">正體中文</option>
+      <option value="ja">日本語</option>
+      <option value="kr">한국어</option>
+    </select>
+  </div>
+  <a class="filledblock" href="../index-kr.html">
+    Git-it
+  </a>
+  <span class="challenge-title">branches aren&#x27;t just for birds</span>
+</header>
+
+<script type="text/javascript">
+  var selector = document.getElementById('lang-select')
+  // TODO put lang somewhere else that we can get without needing template in JS
+  // Can also remove default '-' with lang
+  var currentLang = "-kr".replace(/-/, '')
+  selector.value = currentLang
+  selector.addEventListener('change', function () {
+    var currentChallenge = document.querySelector('.challenge-item.current')
+    var dir = 'challenges' + (selector.value ? '-' + selector.value : '') + '/'
+    var url = currentChallenge.href.replace(/challenges(.+)?\//, dir)
+    // TODO pass to languages.js rather than set global
+    location.href = url
+  })
+</script>
+
+    <div class="wrapper" id="challenge-body">
+      <div id="challenge-sidebar" class="sidebar">
+  <ul class="list-of-challenges">
+    <h3>Challenges</h3>
+      <li>
+        <a id="get_git" data-id="0" href="get_git.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          get git
+        </a>
+      </li>
+      <li>
+        <a id="repository" data-id="1" href="repository.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          repository
+        </a>
+      </li>
+      <li>
+        <a id="commit_to_it" data-id="2" href="commit_to_it.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          commit to it
+        </a>
+      </li>
+      <li>
+        <a id="githubbin" data-id="3" href="githubbin.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          GitHubbin
+        </a>
+      </li>
+      <li>
+        <a id="remote_control" data-id="4" href="remote_control.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          remote control
+        </a>
+      </li>
+      <li>
+        <a id="forks_and_clones" data-id="5" href="forks_and_clones.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          forks and clones
+        </a>
+      </li>
+      <li>
+        <a id="branches_arent_just_for_birds" data-id="6" href="branches_arent_just_for_birds.html" class="challenge-item current">
+          <div class="current-arrow">▶️</div>
+          branches aren&#x27;t just for birds
+        </a>
+      </li>
+      <li>
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          it&#x27;s a small world
+        </a>
+      </li>
+      <li>
+        <a id="pull_never_out_of_date" data-id="8" href="pull_never_out_of_date.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          pull never out of date
+        </a>
+      </li>
+      <li>
+        <a id="requesting_you_pull_please" data-id="9" href="requesting_you_pull_please.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          requesting you pull please
+        </a>
+      </li>
+      <li>
+        <a id="merge_tada" data-id="10" href="merge_tada.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          merge tada
+        </a>
+      </li>
+  </ul>
+
+</div>
+      <div class="content">
+        <div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Add a branch, locally, to your forked repository to work on your changes.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Branches</h2>
+  <p>Git repositories use branches to isolate work when needed. It&apos;s common practice when working on a project or with others on a project to create a <strong>branch</strong> to keep your working changes in. This way you can do your work while the main, commonly named &apos;master&apos;, branch stays stable. When the work on your branch is finished you merge it back into the &apos;master&apos; master branch.</p>
+
+  <p>The diagram below shows how you can branch off of your &apos;master&apos; branch, do work and the merge those changes back into &apos;master&apos;. You can even branch off of a branch if you need to, the &apos;master&apos; branch doesn&apos;t have to be the base.</p>
+
+  <img src="../assets/imgs/branches.png" alt="A diagram showing a horizontal line, representing the master branch, with another line branching off the top and later re-joining the original. Another line branches off the master branch line from below and yet another branch branches off of that. Both of these meet back up with the original master line, too." width="100%">
+
+  <p>For a great visualization on how branches work in a project, see this GitHub Guide: <a href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a></p>
+
+  <h2>GitHub Pages</h2>
+  <p>GitHub will automatically serve and host static website files in branches named &apos;gh-pages&apos;. This free service is called <a href="http://pages.github.com">GitHub Pages</a>. Since the project you forked creates a website, its main branch is named &apos;gh-pages&apos; instead of &apos;master&apos;. All repositories that have a &apos;gh-pages&apos; branch with website files can be found, live online, using this pattern for the URL:</p>
+
+  <code>http://githubusername.github.io/repositoryname</code>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Create a branch</h3>
+  <p>When you create a branch, Git copies everything from the current branch you&apos;re on and places it in the branch you&apos;ve requested be made.</p>
+
+  <p>While still inside of your local &apos;patchwork&apos; repository, type <code>git status</code> to see what branch you&apos;re currently on. Git should reply that you&apos;re on the &apos;gh-pages&apos; branch.</p>
+
+  <p>Now create a new branch and name it &quot;add-&lt;username&gt;&quot;, where &apos;username&apos; is your username. For instance, &quot;add-jlord&quot;. <strong>Branches are case-sensitive so name your branch exactly the way your GitHub name appears</strong>.</p>
+
+  <p><code class="shell">git branch &lt;BRANCHNAME&gt;</code></p>
+
+  <p>Now you have a branch with a new name that is identical to &apos;gh-pages&apos;.</p>
+
+  <p>To go into that branch and work on it you <strong>checkout</strong> a branch. Go on your new branch:</p>
+
+  <p><code class="shell">git checkout &lt;BRANCHNAME&gt;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Step: Create a new file</h3>
+  <p>Back in your text editor:</p>
+  <ul>
+    <li>Create a new file named <span style="white-space: nowrap;">&quot;add-&lt;USERNAME&gt;.txt&quot;</span>, where &apos;username&apos; is your username. For instance, &quot;add-jlord.txt&quot;.</li>
+    <li>Then, just write your GitHub username in it, that&apos;s it and that&apos;s all. For instance, I&apos;d type &apos;jlord&apos;.</li>
+    <li>Save this file in the &apos;contributors&apos; folder in Patchwork: <strong>Patchwork/contributors/add-yourusername.txt</strong></li>
+    <li>Next, check in your changes (see below).</li>
+  </ul>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Check-in</h3>
+  <p>Go through the steps for checking in a project: </p>
+
+  <p><code class="shell">git status</code></p>
+  <p><code class="shell">git add &lt;contributors/FILENAME&gt;</code></p>
+  <p><code class="shell">git commit -m &quot;commit message&quot;</code></p>
+
+  <p>Now push your update to <b>your fork</b>, &apos;origin&apos;, on GitHub:</p>
+  <p><code class="shell">git push origin &lt;BRANCHNAME&gt;</code></p>
+</div>
+
+<div class="verify bold-blue solid-box">
+  <button class="btn-white" id="select-directory">SELECT DIRECTORY</button>
+  <button class="btn-white" id="verify-challenge">VERIFY</button>
+  <div id="verify-spinner" class="sk-double-bounce">
+    <div class="sk-child sk-double-bounce1"></div>
+    <div class="sk-child sk-double-bounce2"></div>
+  </div>
+  <span id="path-required-warning">Please select your repository directory.</span>
+  <span id="directory-path"></span>
+  <ul id="verify-list">
+  </ul>
+  <button class="btn-white" id="clear-completed-challenge">Clear completed status</button>
+</div>
+
+<div class="chal-no-pass grey-border border-box">
+  <h4>Permission denied...error: 403</h4>
+  <p>You are pushing changes to a repository you don&apos;t have write access to. In this case, you&apos;re likely pushing ot the original &apos;jlord/patchwork&apos;. Make sure that you&apos;re pushing to &apos;origin&apos; and that it points to your fork&apos;s address on GitHub. To check and see what your remotes are and where they point run <code>git remote -v</code>. You should have &apos;upstream&apos; pointing to &apos;jlord/patchwork&apos; and &apos;origin&apos; pointing to &apos;yourusername/patchwork&apos;.
+
+  </p><p>To fix a remote that is pointing to the wrong place you can re-set its url: <code>git remote set-url origin <urltoyourfork></urltoyourfork></code>.
+
+  </p><h4>File NOT in contributors folder</h4>
+  <p>The file you create should be placed inside the existing &apos;contributors&apos; folder in the Patchwork repository. If you put it somewhere else, simply use Finder or Windows Explorer to move your file into the folder. You can check <code>git status</code> again and you&apos;ll find it sees your changes. Stage and then commit &quot;all&quot; (-A) of these changes (additions and deletions) with the commands below.</p>
+  <p><code class="shell">git add -A</code></p>
+  <p><code class="shell">git commit -m &quot;move file into contributors folder&quot;</code></p>
+
+  <h4>Branch name expected: _____</h4>
+  <p>The branch name should match your user name exactly. To change your branch name:</p>
+  <p><code class="shell">git branch -m &lt;NEWBRANCHNAME&gt;</code></p>
+  <p>When you&apos;ve made your updates, verify again!</p>
+</div>
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>You can create and switch to a branch in one line</strong></li>
+    <li><code class="shell">git checkout -b &lt;BRANCHNAME&gt;</code></li>
+    <li><strong>Create a new branch</strong></li>
+    <li><code class="shell">git branch &lt;BRANCHNAME&gt;</code></li>
+    <li><strong>Move onto a branch</strong></li>
+    <li><code class="shell">git checkout &lt;BRANCHNAME&gt;</code></li>
+    <li><strong>List the branches</strong></li>
+    <li><code class="shell">git branch</code></li>
+    <li><strong>Rename a branch you&apos;re currently on</strong></li>
+    <li><code class="shell">git branch -m &lt;NEWBRANCHNAME&gt;</code></li>
+    <li><strong>Verify what branch you&apos;re working on</strong></li>
+    <li><code class="shell">git status</code></li>
+  </ul>
+</div>
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="forks_and_clones.html" class="u-inline-block all-caps">forks and clones
+    <div class="arrow-left"></div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="its_a_small_world.html" class="u-inlineBlock all-caps">it&#x27;s a small world
+    <div class="arrow-right"></div>
+    </a>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <script>
+      var challengeStatus = require('../lib/challenge-completed.js')
+      // TODO Get this from the DOM and don't do template in JS
+      var currentChallenge = 'branches_arent_just_for_birds'
+      challengeStatus.completed(currentChallenge)
+    </script>
+
+    <script>require('../lib/handle-external-links.js')</script>
+    <script>require('../lib/languages.js')</script>
+    <script>require('../lib/challenge.js')</script>
+  </body>
+</html>

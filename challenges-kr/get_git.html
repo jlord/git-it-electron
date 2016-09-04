@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Git-it</title>
+    <link rel="stylesheet" href="../assets/css/2-double-bounce.css">
+    <link rel="stylesheet" href="../assets/css/new-style.css">
+    <link rel="stylesheet" href="../assets/css/new-challenge.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css">
+  </head>
+  <body>
+    <header id="challenge-header" class="site-header">
+  <div class="lang-select">
+    <select id="lang-select" class="btn-outline lang-select">
+      <option value="">English</option>
+      <option value="zhtw">正體中文</option>
+      <option value="ja">日本語</option>
+      <option value="kr">한국어</option>
+    </select>
+  </div>
+  <a class="filledblock" href="../index-kr.html">
+    Git-it
+  </a>
+  <span class="challenge-title">get git</span>
+</header>
+
+<script type="text/javascript">
+  var selector = document.getElementById('lang-select')
+  // TODO put lang somewhere else that we can get without needing template in JS
+  // Can also remove default '-' with lang
+  var currentLang = "-kr".replace(/-/, '')
+  selector.value = currentLang
+  selector.addEventListener('change', function () {
+    var currentChallenge = document.querySelector('.challenge-item.current')
+    var dir = 'challenges' + (selector.value ? '-' + selector.value : '') + '/'
+    var url = currentChallenge.href.replace(/challenges(.+)?\//, dir)
+    // TODO pass to languages.js rather than set global
+    location.href = url
+  })
+</script>
+
+    <div class="wrapper" id="challenge-body">
+      <div id="challenge-sidebar" class="sidebar">
+  <ul class="list-of-challenges">
+    <h3>Challenges</h3>
+      <li>
+        <a id="get_git" data-id="0" href="get_git.html" class="challenge-item current">
+          <div class="current-arrow">▶️</div>
+          get git
+        </a>
+      </li>
+      <li>
+        <a id="repository" data-id="1" href="repository.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          repository
+        </a>
+      </li>
+      <li>
+        <a id="commit_to_it" data-id="2" href="commit_to_it.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          commit to it
+        </a>
+      </li>
+      <li>
+        <a id="githubbin" data-id="3" href="githubbin.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          GitHubbin
+        </a>
+      </li>
+      <li>
+        <a id="remote_control" data-id="4" href="remote_control.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          remote control
+        </a>
+      </li>
+      <li>
+        <a id="forks_and_clones" data-id="5" href="forks_and_clones.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          forks and clones
+        </a>
+      </li>
+      <li>
+        <a id="branches_arent_just_for_birds" data-id="6" href="branches_arent_just_for_birds.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          branches aren&#x27;t just for birds
+        </a>
+      </li>
+      <li>
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          it&#x27;s a small world
+        </a>
+      </li>
+      <li>
+        <a id="pull_never_out_of_date" data-id="8" href="pull_never_out_of_date.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          pull never out of date
+        </a>
+      </li>
+      <li>
+        <a id="requesting_you_pull_please" data-id="9" href="requesting_you_pull_please.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          requesting you pull please
+        </a>
+      </li>
+      <li>
+        <a id="merge_tada" data-id="10" href="merge_tada.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          merge tada
+        </a>
+      </li>
+  </ul>
+
+</div>
+      <div class="content">
+        <div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>&#xCEF4;&#xD4E8;&#xD130;&#xC5D0; Git &#xC124;&#xCE58;&#xD558;&#xACE0; &#xC774;&#xB984;&#xACFC; &#xC774;&#xBA54;&#xC77C;&#xC744; &#xC124;&#xC815;&#xD558;&#xC138;&#xC694;.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Git</h2>
+  <p>Git &#xC740; &#xBB34;&#xB8CC; <strong>&#xC624;&#xD508;&#xC18C;&#xC2A4; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;</strong> (<a href="https://github.com/git/git">&#xC18C;&#xC2A4; &#xCF54;&#xB4DC;&#xB294; &#xACF5;&#xAC1C;&#xB418;&#xC5B4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;</a>) &#xB85C; Linux &#xC6B4;&#xC601; &#xCCB4;&#xC81C;&#xB97C; &#xB9CC;&#xB4E4;&#xAE30;&#xB3C4; &#xD55C; Linus Tovalds &#xC5D0; &#xC758;&#xD574; &#xC791;&#xC131;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+  <p>Git &#xC740; &#xC2DC;&#xAC04;&#xC5D0; &#xB530;&#xB978; &#xBCC0;&#xACBD;&#xC744; &#xC9C0;&#xC18D;&#xC801;&#xC73C;&#xB85C; &#xCD94;&#xC801;&#xD574;&#xC8FC;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC73C;&#xB85C;, &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xBD84;&#xC57C;&#xC5D0;&#xC11C;&#xB294; &#xC774;&#xB7EC;&#xD55C; &#xB3D9;&#xC791;&#xC744; <strong>&#xBC84;&#xC804; &#xCEE8;&#xD2B8;&#xB864;(version control)</strong> &#xC774;&#xB77C;&#xACE0; &#xD569;&#xB2C8;&#xB2E4;. &#xB9CC;&#xC57D; &#xB2F9;&#xC2E0;&#xC774; &#xD14D;&#xC2A4;&#xD2B8; &#xC791;&#xC131; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;&#xC5D0;&#xC11C; &#xBCC0;&#xACBD; &#xCD94;&#xC801; &#xAE30;&#xB2A5;&#xC744; &#xC0AC;&#xC6A9;&#xD588;&#xC5C8;&#xB2E4;&#xBA74;, &#xC774;&#xBBF8; &#xC774;&#xB7EC;&#xD55C; &#xCEE8;&#xC149;&#xC5D0; &#xB300;&#xD574; &#xC775;&#xC219;&#xD55C; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;!</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Git &#xC124;&#xCE58;&#xD558;&#xAE30;</h3>
+  <p><a href="https://desktop.github.com">GitHub Desktop</a> &#xC571;&#xC744; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;&#xD558;&#xC5EC; &#xCEF4;&#xD4E8;&#xD130;&#xC5D0; Git &#xC744; &#xC124;&#xCE58;&#xD558;&#xB294; &#xAC83;&#xC744; &#xCD94;&#xCC9C;&#xD569;&#xB2C8;&#xB2E4;. &#xC6B0;&#xB9AC;&#xB294; &#xC774; &#xB370;&#xC2A4;&#xD06C;&#xD0D1; &#xC571;&#xC744; Git-it &#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0;&#xB294; &#xC54A;&#xC744; &#xAC83;&#xC774;&#xC9C0;&#xB9CC;(&#xD130;&#xBBF8;&#xB110;(terminal)&#xC744; &#xC774;&#xC6A9;&#xD560;&#xAEBC;&#xC5D0;&#xC694;!), &#xC774;&#xAC83;&#xC740; Git &#xC744; &#xD3EC;&#xD568;&#xD558;&#xACE0; &#xC788;&#xACE0; &#xBAA8;&#xB4E0; &#xD50C;&#xB7AB;&#xD3FC;&#xC5D0;&#xC11C; &#xAC19;&#xC740; &#xBC29;&#xBC95;&#xC73C;&#xB85C; Git &#xC744; &#xC124;&#xCE58;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xAC00;&#xC7A5; &#xC26C;&#xC6B4; &#xBC29;&#xBC95;&#xC785;&#xB2C8;&#xB2E4;.</p>
+
+  <ul>
+    <li><strong>Windows</strong>: <strong>Git Shell</strong> &#xC744; &#xD130;&#xBBF8;&#xB110;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xC138;&#xC694;.</li>
+    <li><strong>Mac</strong>: GitHub Desktop &#xC744; &#xC5F4;&#xACE0; Preferences &#xC5D0;&#xC11C; &#xCEE4;&#xB9E8;&#xB4DC; &#xB77C;&#xC778;&#xD234; &#xC124;&#xCE58;(command line tools install)&#xB97C; &#xC120;&#xD0DD;&#xD558;&#xC138;&#xC694;. <strong>&#xD130;&#xBBF8;&#xB110;</strong> &#xC571;&#xC744; &#xD130;&#xBBF8;&#xB110;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xC138;&#xC694;.</li>
+  </ul>
+
+  <p>&#xC774;&#xBBF8; Git &#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xAC70;&#xB098; &#xC798; &#xBAA8;&#xB974;&#xC2DC;&#xACA0;&#xB098;&#xC694;? &#xD130;&#xBBF8;&#xB110;&#xC5D0;&#xC11C; <code>git --version</code> &#xC744; &#xC785;&#xB825;&#xD588;&#xC744; &#xB54C; <code>1.7.10</code> &#xBCF4;&#xB2E4; &#xB192;&#xC740; &#xBC84;&#xC804;&#xC774; &#xB72C;&#xB2E4;&#xBA74; &#xC124;&#xCE58;&#xB418;&#xC5B4;&#xC788;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;! &#xB354; &#xC790;&#xC138;&#xD55C; &#xC815;&#xBCF4;&#xB294; <a href="http://git-scm.com">Git &#xC6F9;&#xC0AC;&#xC774;&#xD2B8;</a>&#xB97C; &#xBC29;&#xBB38;&#xD574;&#xBCF4;&#xC138;&#xC694;.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Git &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;</h2>
+  <p>GitHub Desktop &#xC571;&#xC740; Git &#xACFC; &#xB9E4;&#xC6B0; &#xB9CE;&#xC740; &#xAC83;&#xB4E4;&#xC744; &#xD560; &#xC218; &#xC788;&#xC9C0;&#xB9CC; &#xBAA8;&#xB4E0; &#xAC83;&#xC744; &#xD560; &#xC218;&#xB294; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xAC83;&#xC774; &#xD130;&#xBBF8;&#xB110;&#xC5D0;&#xC11C; Git &#xC744; &#xC775;&#xD600;&#xC57C; &#xD558;&#xB294; &#xC911;&#xC694;&#xD55C; &#xC774;&#xC720;&#xC785;&#xB2C8;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xC77C;&#xB2E8; &#xD130;&#xBBF8;&#xB110;&#xC744; &#xC815;&#xBCF5;&#xD558;&#xACE0; &#xB098;&#xBA74;, &#xB2F9;&#xC2E0;&#xC758; &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC815;&#xBCF4;&#xB97C; GitHub &#xC6F9;&#xC0AC;&#xC774;&#xD2B8;&#xC640; &#xAC19;&#xC774; &#xB354;&#xC6B1; &#xC2DC;&#xAC01;&#xC801;&#xC73C;&#xB85C; &#xAD6C;&#xC131;&#xD574;&#xC8FC;&#xB294; &#xB370;&#xC2A4;&#xD06C;&#xD0D1; &#xC571;&#xC774; &#xC788;&#xB2E4;&#xB294; &#xAC83;&#xC5D0; &#xAE30;&#xC060; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+
+  <p>Git &#xC790;&#xCCB4;&#xB294; &#xB2F9;&#xC2E0;&#xC758; &#xCEF4;&#xD4E8;&#xD130;&#xC5D0; &#xC788;&#xB294; &#xB2E4;&#xB978; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xB4E4;&#xACFC; &#xC870;&#xAE08; &#xB2E4;&#xB985;&#xB2C8;&#xB2E4;. &#xB370;&#xC2A4;&#xD06C;&#xD0D1;&#xC5D0;&#xC11C; &#xC544;&#xC774;&#xCF58;&#xC744; &#xCC3E;&#xC744; &#xC218; &#xC5C6;&#xACA0;&#xC9C0;&#xB9CC;, &#xD56D;&#xC0C1; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;&#xD55C; &#xC0C1;&#xD0DC;&#xB85C; &#xC788;&#xC5B4;&#xC11C; &#xC5B8;&#xC81C;&#xB098; &#xD130;&#xBBF8;&#xB110;&#xC774;&#xB098; Git &#xB370;&#xC2A4;&#xD06C;&#xD0D1; &#xC571;&#xB4E4;&#xC5D0;&#xC11C; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+<h3>Git &#xC124;&#xC815;&#xD558;&#xAE30;</h3>
+  <p>GitHub Desktop(&#xADF8;&#xB9AC;&#xACE0; &#xB530;&#xB77C;&#xC11C; Git&#xB3C4;)&#xC774; &#xC124;&#xCE58;&#xB418;&#xBA74;, <strong>&#xD130;&#xBBF8;&#xB110;</strong> &#xC744; &#xC5F4;&#xC5B4;&#xBCF4;&#xC138;&#xC694;.
+  Git &#xC774; &#xC2E4;&#xC81C;&#xB85C; &#xC124;&#xCE58;&#xB41C; &#xAC83;&#xC744; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xC785;&#xB825;&#xD558;&#xC5EC; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;:</p>
+
+  <p><code class="shell">git --version </code></p>
+
+  <p>&#xC774;&#xAC83;&#xC740; &#xB2F9;&#xC2E0;&#xC758; &#xCEF4;&#xD4E8;&#xD130;&#xC5D0; &#xC788;&#xB294; Git &#xC758; &#xBC84;&#xC804;&#xC744; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xBAA8;&#xC2B5;&#xC73C;&#xB85C; &#xBC18;&#xD658;&#xD569;&#xB2C8;&#xB2E4;:</p>
+
+  <p><code class="comment">git version 1.9.1</code></p>
+
+  <p>&#xB2E4;&#xC74C;&#xC73C;&#xB85C; Git &#xC744; &#xC124;&#xC815;&#xD558;&#xC5EC; &#xB2F9;&#xC2E0;&#xC758; &#xC791;&#xC5C5;&#xC744; &#xB2F9;&#xC2E0;&#xACFC; &#xC5F0;&#xACB0;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xD569;&#xB2C8;&#xB2E4;:</p>
+  <p>&#xC774;&#xB984; &#xC124;&#xC815;&#xD558;&#xAE30;:</p>
+  <p><code class="shell">git config --global user.name &quot;&#xC774;&#xB984;&quot;</code></p>
+  <p>&#xC774;&#xBA54;&#xC77C; &#xC124;&#xC815;&#xD558;&#xAE30;:</p>
+  <p><code class="shell">git config --global user.email &quot;youremail@example.com&quot;</code></p>
+
+  <p>&#xCCAB;&#xBC88;&#xC9F8; &#xCC4C;&#xB9B0;&#xC9C0;&#xB97C; &#xB9C8;&#xCCE4;&#xC2B5;&#xB2C8;&#xB2E4;!! &apos;Verify&apos; &#xBC84;&#xD2BC;&#xC744; &#xD074;&#xB9AD;&#xD574;&#xC11C; &#xCC4C;&#xB9B0;&#xC9C0;&#xB97C; &#xD655;&#xC778;&#xD574;&#xBCF4;&#xC138;&#xC694;.</p>
+</div>
+
+<div class="verify bold-blue solid-box">
+  <button class="btn-white" id="verify-challenge">VERIFY</button>
+  <div id="verify-spinner" class="sk-double-bounce">
+    <div class="sk-child sk-double-bounce1"></div>
+    <div class="sk-child sk-double-bounce2"></div>
+  </div>
+  <ul id="verify-list">
+  </ul>
+  <button class="btn-white" id="clear-completed-challenge">Clear completed status</button>
+</div>
+
+<div class="chal-tip grey-border border-box">
+  <h3>&#xCF54;&#xB4DC; &#xBB38;&#xC11C;&#xC758; &#xB2EC;&#xB7EC; &#xD45C;&#xC2DC;</h3>
+  <p>&#xB2EC;&#xB7EC; &#xD45C;&#xC2DC; <code>$</code> &#xB294; &#xADF8; &#xC904;&#xC774; <strong>&#xCEE4;&#xB9E8;&#xB4DC; &#xB77C;&#xC778;</strong> &#xCF54;&#xB4DC; (&#xC704;&#xC758; &#xCF54;&#xB4DC; &#xC870;&#xAC01;&#xB4E4;&#xACFC; &#xAC19;&#xC740;)&#xC784;&#xC744; &#xB098;&#xD0C0;&#xB0B4;&#xAE30; &#xC704;&#xD574; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xBB38;&#xC11C;&#xC5D0;&#xC11C; &#xC885;&#xC885; &#xC0AC;&#xC6A9;&#xB429;&#xB2C8;&#xB2E4;. <code>$</code> &#xB97C; &#xC2E4;&#xC81C;&#xB85C; &#xC785;&#xB825;&#xD558;&#xC9C0; &#xB9D0;&#xACE0;, &#xADF8; &#xB2E4;&#xC74C;&#xC5D0; &#xC624;&#xB294; &#xAC83;&#xB9CC; &#xC785;&#xB825;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</p>
+</div>
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="../index-kr.html" class="u-inline-block all-caps">All Challenges
+    <div class="arrow-left"></div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="repository.html" class="u-inlineBlock all-caps">repository
+    <div class="arrow-right"></div>
+    </a>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <script>
+      var challengeStatus = require('../lib/challenge-completed.js')
+      // TODO Get this from the DOM and don't do template in JS
+      var currentChallenge = 'get_git'
+      challengeStatus.completed(currentChallenge)
+    </script>
+
+    <script>require('../lib/handle-external-links.js')</script>
+    <script>require('../lib/languages.js')</script>
+    <script>require('../lib/challenge.js')</script>
+  </body>
+</html>

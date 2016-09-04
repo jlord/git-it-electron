@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible">
     <title>Git-it</title>
-    <meta name="description" content="learn git and github">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/2-double-bounce.css">
+    <link rel="stylesheet" href="../assets/css/new-style.css">
+    <link rel="stylesheet" href="../assets/css/new-challenge.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css">
   </head>
   <body>
     <header id="challenge-header" class="site-header">
@@ -16,6 +15,7 @@
       <option value="">English</option>
       <option value="zhtw">正體中文</option>
       <option value="ja">日本語</option>
+      <option value="kr">한국어</option>
     </select>
   </div>
   <a class="filledblock" href="../index-ja.html">
@@ -178,9 +178,13 @@
 <p>&#x3055;&#x3066;GitHub&#x306B;&#x884C;&#x3063;&#x3066;&#x307F;&#x3066;&#x3001;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3092;&#x8AAD;&#x307F;&#x8FBC;&#x307F;&#x306A;&#x304A;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x304A;&#x304A;&#xFF01;
   &#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x3068;&#x540C;&#x3058;&#x3082;&#x306E;&#x304C;&#x30EA;&#x30E2;&#x30FC;&#x30C8;&#x3067;&#x3082;&#x898B;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x306D;&#x3002;&#x3053;&#x308C;&#x304C;&#x3042;&#x306A;&#x305F;&#x306E;&#x6700;&#x521D;&#x306E;public&#x306A; &#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3067;&#x3059;&#xFF01; &#x304A;&#x3081;&#x3067;&#x3068;&#x3046;&#xFF01;</p>
 
-<div class="verify">
-  <button class="btn-white" id="verify-challenge">VERIFY</button>
+<div class="verify bold-blue solid-box">
   <button class="btn-white" id="select-directory">SELECT DIRECTORY</button>
+  <button class="btn-white" id="verify-challenge">VERIFY</button>
+  <div id="verify-spinner" class="sk-double-bounce">
+    <div class="sk-child sk-double-bounce1"></div>
+    <div class="sk-child sk-double-bounce2"></div>
+  </div>
   <span id="path-required-warning">Please select your repository directory.</span>
   <span id="directory-path"></span>
   <ul id="verify-list">

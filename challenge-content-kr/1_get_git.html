@@ -1,0 +1,55 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>컴퓨터에 Git 설치하고 이름과 이메일을 설정하세요.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Git</h2>
+  <p>Git 은 무료 <strong>오픈소스 소프트웨어</strong> (<a href="https://github.com/git/git">소스 코드는 공개되어 있습니다</a>) 로 Linux 운영 체제를 만들기도 한 Linus Tovalds 에 의해 작성되었습니다.</p>
+  <p>Git 은 시간에 따른 변경을 지속적으로 추적해주는 프로그램으로, 프로그래밍 분야에서는 이러한 동작을 <strong>버전 컨트롤(version control)</strong> 이라고 합니다. 만약 당신이 텍스트 작성 소프트웨어에서 변경 추적 기능을 사용했었다면, 이미 이러한 컨셉에 대해 익숙한 것입니다!</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Git 설치하기</h3>
+  <p><a href="https://desktop.github.com">GitHub Desktop</a> 앱을 다운로드하여 컴퓨터에 Git 을 설치하는 것을 추천합니다. 우리는 이 데스크탑 앱을 Git-it 에서 사용하지는 않을 것이지만(터미널(terminal)을 이용할꺼에요!), 이것은 Git 을 포함하고 있고 모든 플랫폼에서 같은 방법으로 Git 을 설치하기 위한 가장 쉬운 방법입니다.</p>
+
+  <ul>
+    <li><strong>Windows</strong>: <strong>Git Shell</strong> 을 터미널로 사용하세요.</li>
+    <li><strong>Mac</strong>: GitHub Desktop 을 열고 Preferences 에서 커맨드 라인툴 설치(command line tools install)를 선택하세요. <strong>터미널</strong> 앱을 터미널로 사용하세요.</li>
+  </ul>
+
+  <p>이미 Git 을 가지고 있거나 잘 모르시겠나요? 터미널에서 <code>git --version</code> 을 입력했을 때 <code>1.7.10</code> 보다 높은 버전이 뜬다면 설치되어있는 것입니다! 더 자세한 정보는 <a href="http://git-scm.com">Git 웹사이트</a>를 방문해보세요.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Git 소프트웨어</h2>
+  <p>GitHub Desktop 앱은 Git 과 매우 많은 것들을 할 수 있지만 모든 것을 할 수는 없습니다. 이것이 터미널에서 Git 을 익혀야 하는 중요한 이유입니다. 하지만 일단 터미널을 정복하고 나면, 당신의 프로젝트 정보를 GitHub 웹사이트와 같이 더욱 시각적으로 구성해주는 데스크탑 앱이 있다는 것에 기쁠 것입니다.</p>
+
+  <p>Git 자체는 당신의 컴퓨터에 있는 다른 프로그램들과 조금 다릅니다. 데스크탑에서 아이콘을 찾을 수 없겠지만, 항상 사용 가능한 상태로 있어서 언제나 터미널이나 Git 데스크탑 앱들에서 접근할 수 있습니다.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+<h3>Git 설정하기</h3>
+  <p>GitHub Desktop(그리고 따라서 Git도)이 설치되면, <strong>터미널</strong> 을 열어보세요.
+  Git 이 실제로 설치된 것을 아래와 같이 입력하여 확인할 수 있습니다:</p>
+
+  <p><code class="shell">git --version </code></p>
+
+  <p>이것은 당신의 컴퓨터에 있는 Git 의 버전을 아래와 같은 모습으로 반환합니다:</p>
+
+  <p><code class="comment">git version 1.9.1</code></p>
+
+  <p>다음으로 Git 을 설정하여 당신의 작업을 당신과 연결할 수 있게 합니다:</p>
+  <p>이름 설정하기:</p>
+  <p><code class="shell">git config --global user.name "이름"</code></p>
+  <p>이메일 설정하기:</p>
+  <p><code class="shell">git config --global user.email "youremail@example.com"</code></p>
+
+  <p>첫번째 챌린지를 마쳤습니다!! 'Verify' 버튼을 클릭해서 챌린지를 확인해보세요.</p>
+</div>
+
+{{{ verify_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <h3>코드 문서의 달러 표시</h3>
+  <p>달러 표시 <code>$</code> 는 그 줄이 <strong>커맨드 라인</strong> 코드 (위의 코드 조각들과 같은)임을 나타내기 위해 프로그래밍 문서에서 종종 사용됩니다. <code>$</code> 를 실제로 입력하지 말고, 그 다음에 오는 것만 입력하면 됩니다.</p>
+</div>

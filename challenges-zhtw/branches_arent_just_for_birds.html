@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible">
     <title>Git-it</title>
-    <meta name="description" content="learn git and github">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../assets/imgs/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/2-double-bounce.css">
+    <link rel="stylesheet" href="../assets/css/new-style.css">
+    <link rel="stylesheet" href="../assets/css/new-challenge.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css">
   </head>
   <body>
     <header id="challenge-header" class="site-header">
@@ -16,6 +15,7 @@
       <option value="">English</option>
       <option value="zhtw">正體中文</option>
       <option value="ja">日本語</option>
+      <option value="kr">한국어</option>
     </select>
   </div>
   <a class="filledblock" href="../index-zhtw.html">
@@ -167,9 +167,13 @@
 
       <p><code class="shell">git push origin &lt;BRANCHNAME&gt;</code></p>
 
-<div class="verify">
-  <button class="btn-white" id="verify-challenge">VERIFY</button>
+<div class="verify bold-blue solid-box">
   <button class="btn-white" id="select-directory">SELECT DIRECTORY</button>
+  <button class="btn-white" id="verify-challenge">VERIFY</button>
+  <div id="verify-spinner" class="sk-double-bounce">
+    <div class="sk-child sk-double-bounce1"></div>
+    <div class="sk-child sk-double-bounce2"></div>
+  </div>
   <span id="path-required-warning">Please select your repository directory.</span>
   <span id="directory-path"></span>
   <ul id="verify-list">
@@ -189,7 +193,7 @@
 
         <h4><n><span class="superscript">&#x5206;&#x652F;</span>Branch</n> name expected: _____</h4>
         <p><n><span class="superscript">&#x5206;&#x652F;</span>Branch</n> &#x7684;&#x540D;&#x5B57;&#x61C9;&#x8A72;&#x8981;&#x8DDF;&#x4F60;&#x7684;&#x5E33;&#x865F;&#x540D;&#x7A31;&#x4E00;&#x6A21;&#x4E00;&#x6A23;&#x3002;&#x7528;&#x4EE5;&#x4E0B;&#x7684;&#x6307;&#x4EE4;&#x4FEE;&#x6539; <n><span class="superscript">&#x5206;&#x652F;</span>branch</n> &#x7684;&#x540D;&#x5B57;&#xFF1A;</p>
-        <p><code class="shell">git branch -M &lt;NEWBRANCHNAME&gt;</code></p>
+        <p><code class="shell">git branch -m &lt;NEWBRANCHNAME&gt;</code></p>
         <p>&#x5B8C;&#x6210;&#x4EE5;&#x4E0A;&#x7684;&#x52D5;&#x4F5C;&#x4E4B;&#x5F8C;&#xFF0C;&#x518D;&#x57F7;&#x884C;&#x4E00;&#x6B21; <code>git-it verify</code>&#xFF01;</p>
       </div>
 

@@ -1,0 +1,43 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Create a GitHub account and add your username to your Git config.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Working Better, Together</h2>
+
+  <p>The repository you've created so far is just on your computer, which is handy, but makes it pretty hard to share and work on with others. No worries, that's what GitHub is for!</p>
+
+  <p>GitHub is a website that allows people everywhere to upload what they're working on with Git so that everyone can easily work together on the same project. GitHub which acts as the central repository for you and everyone else to share. You push your changes to it and pull down changes from others.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Create a GitHub Account</h3>
+
+  <p>Visit <a href="http://github.com" target="_blank">github.com</a> and sign up for a free account. <strong>High five, welcome!</strong></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Add GitHub username to Git</h3>
+  <p>Add your GitHub username to your Git configuration. We'll do this just for the sake of Git-it; it makes it easier to verify the upcoming challenges. Save it exactly as you created it on GitHub and <strong>capitalize where capitalized</strong>. Note, you don't need to enter the "&#60;" and "&#62;".</p>
+
+  <p>Add your GitHub username to your Git configuration:</p>
+  <code class="shell">git config --global user.username &#60;USerNamE&#62;</code>
+
+  <p>You can double check what you have set in your Git config by typing:</p>
+  <code>git config --global user.username</code>
+</div>
+
+{{{ verify_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <p>Make sure you type "<strong>user.username</strong>" above and not "user.name", which would override the name you set in the first challenge and leave you with no username property! If you found you did that, it's ok, just repeat the step in the first challenge to add your name and then complete the step above.</p>
+</div>
+
+<div class="chal-no-pass grey-border border-box">
+  <h4>GitHub & Git config usernames do not match</h4>
+
+  <p>A common error is not having your GitHub username match the case of the one you set with <code>git config</code>. For instance, 'JLord' isn't the same as 'jlord'</p>
+  <p>To change your username set with Git, just do the same command you did earlier, but with the correct capitalization:</p>
+  <p><code class="shell">git config --global user.username &#60;USerNamE&#62;</code></p>
+  <p>When you've made your updates, verify again!</p>
+</div>

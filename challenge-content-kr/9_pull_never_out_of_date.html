@@ -1,0 +1,34 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Keep your file up to date by pulling in changes from collaborators.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h3>Pulling from a Remote</h3>
+  <p>If you're working on something with someone else you need to stay up to date with the latest changes. So you'll want to <strong>pull</strong> in any changes that may have been pushed to the central GitHub repository.</p>
+
+  <img src="../assets/imgs/pull.png" alt="A diagram shows a computer pulling information down from a repository's website" width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>What has Reporobot been up to?</h3>
+  <p>See if Reporobot has made any changes to your branch by pulling in any changes from the remote named 'origin' on GitHub:</p>
+
+  <p><code class="shell">git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code></p>
+
+  <p>If nothing's changed, it will tell you 'Already up-to-date'. If there are changes, Git will merge those changes into your local version.</p>
+
+  <p>Did Reporobot make changes? Git tells you where changes were made. You can open that file and see Reporobot's updates. Surprise, Reporobot is an artist!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>Check Git status</strong></li>
+    <code class="shell">git status</code>
+    <li><strong>Pull in changes from a remote branch</strong></li>
+    <code class="shell">git pull &lt;REMOTENAME&gt; &lt;REMOTEBRANCH&gt;</code>
+    <li><strong>See changes to the remote before you pull in</strong></li>
+    <code class="shell">git fetch --dry-run</code>
+  </ul>
+</div>

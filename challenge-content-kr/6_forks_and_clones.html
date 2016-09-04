@@ -1,0 +1,63 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Fork a project from GitHub.com and clone it locally.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Forks</h2>
+  <p>So far you have made a project locally and pushed it to GitHub, but that's only half the fun! The other half is working with other people and other projects.</p>
+
+  <p>When you <strong>fork</strong> a repository, you're creating a copy of it on your GitHub account. Your forked copy begins its life as a <strong>remote</strong> repository—it exists just on your GitHub account, not on your computer. Forks are used for creating your own version of a project (this diversion from the original is like taking a fork in the road) or contributing back your changes (such as bug fixes or new features) to the original project. </p>
+
+  <p>To get a forked repository from your GitHub account onto your computer you <strong>clone</strong> it. This cloning action copies the remote repository onto your computer so that you can work on it locally.</p>
+
+  <img src="../assets/imgs/clone.png" alt="A diagram showing a repository from GitHub copied onto your GitHub account and then copied onto your local computer from there." width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Fork the Patchwork Repository</h3>
+  <p>The project we'll work with is at <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>. Go to that page and click the 'Fork' button at the top right. Once the forking animation is complete, you have a copy on your account. Copy your fork's HTTP URL from the address bar in your browser, this is the address of your fork on GitHub's servers.</p>
+  <!-- TODO write address for user here -->
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Clone Your Fork Locally</h3>
+  <p>Now, in terminal, you'll clone the repository onto your computer. It will automatically create a new folder for the repository so there is no need to create one yourself. But make sure you aren't cloning it inside of another Git repository folder!</p>
+
+  <p>So be sure you're not inside of the 'hello-world' directory from the previous challenges. To back out and leave this folder so that you can clone, follow these steps:</p>
+
+  <p>Back out of your 'hello-world' folder:<br><span class="inline-tip">Tip: the two dots mean step out of a directory one level</span></p>
+  <p><code class="shell">cd ..</code></p>
+
+  <p>Now that you're no longer in another Git repository, clone your fork:</p>
+  <p><code class="shell">git clone &#60;URLFROMGITHUB&#62;</code></p>
+
+  <p>Go into the folder it created for your local copy of the fork (in this case, named 'patchwork').</p>
+  <p><code class="shell">cd patchwork</code></p>
+
+  <p>Now you've got a copy of the repository on your computer and it is automatically connected to the remote repository (your forked copy) on your GitHub account. Type <code>git remote -v</code> to see that the address to the fork is already set up.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Connect to the Original Repository</h3>
+
+  <p>What if the original repository you forked happens to change? You'll want to be able to <strong>pull</strong> in those changes too. So let's add another remote connection, this time to the original, <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>, repository with its URL.</p>
+
+  <p>You can name this remote connection anything you want, but typically people use the name 'upstream'; let's use that for this.</p>
+
+  <p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+
+  <p>To be sure you have the correct remotes set up, type <code>git remote -v</code> to list out the addresses you have stored. <b>You should have an 'origin' remote with your fork's address and then an 'upstream' remote with the address to the original, the URL noted above in this step.</b></p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>Add a remote</strong></li>
+    <li><code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
+    <li><strong>Change a remote URL</strong></li>
+    <li><code class="shell">git remote set-url &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
+    <li><strong>View remote connections</strong></li>
+    <li><code class="shell">git remote -v</code></li>
+  </ul>
+</div>
