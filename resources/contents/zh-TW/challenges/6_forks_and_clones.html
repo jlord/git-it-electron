@@ -1,0 +1,67 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>在 GitHub 上 fork 一個專案，並將它 clone 到本地。</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Forks</h2>
+    <p>你已經在電腦上建立了一個專案並且 push 到 GitHub 上，但有趣的不僅如此，更重要的是與人們在不同的專案中合作。</p>
+    <p>當你 <strong>fork</strong> 一個 repository 時，實際上是複製了一份 repository 到自己的 GitHub 帳號下，換句話說，你的 fork 成為了一個
+        <strong>remote</strong> repository。通常我們透過 forks 用來建立自己所需使用的修改版本，或是協助原始專案修正錯誤、新增功能。</p>
+    <p>當你成功 forked 專案後，便可以從 GitHub 將它 <strong>clone</strong> 到你的電腦上。這樣一來就可以在沒有網路連線狀況下，修改本地的專案內容。</p>
+    <img src="../../../assets/imgs/clone.png"
+         alt="A diagram showing a repository from GitHub copied onto your GitHub account and then copied onto your local computer from there."
+         width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Fork 「Patchwork」 repository</h3>
+    <p>我們接下來要使用的專案是 <a href="https://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>。到頁面上點擊右上方的
+        fork 按鈕，當 fork 的動畫完成時，你的帳號中就會出現一份 Patchwork 專案的複本。接下來，把在右邊側欄的 HTTPS clone URL 複製起來，這就是你 fork 專案的 GitHub 網址。</p>
+    <!-- TODO write address for user here -->
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>將 fork 的專案 clone 到本地</h3>
+    <p>現在，在終端機把 repository clone 到本地，他會自動替 repository 建立一個新的資料夾，所以你不需要自己建立一個。但請注意不要在另一個 Git repository 資料夾中 clone！</p>
+    <p>所以，如果你還在先前挑戰所使用的「hello-world」 repository 中，請先離開那個資料夾。</p>
+    <p>回「hello-world」的上層資料夾：<br><span class="inline-tip">提示：兩個點代表上一層資料夾</span></p>
+    <p><code class="shell">cd ..</code></p>
+    <p>現在，你不在任何一個 repository 中了，可以開始 clone 你 fork 的專案：</p>
+    <p><code class="shell">git clone
+        <URLFROMGITHUB>
+    </code></p>
+    <p>切換到剛剛建立的 fork 資料夾（在這裡，資料夾叫做「patchwork」）：</p>
+    <p><code class="shell">cd patchwork</code></p>
+    <p>現在你已經在電腦上得到了一份 repository 的副本，並且被自動連結到你 GitHub 帳號下的 remote repository（你 fork 的副本）。</p>
+
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>連結原始 Repository</h3>
+    <p>但如果原始專案的內容有改變了呢？你會希望能夠 <strong>pull</strong> 這些變更。所以讓我們來新增另外一個 remote 連結到原始的專案 <a
+            href="https://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>，repository 的 URL
+        可以在 GitHub 原始專案的右邊找到。</p>
+    <p>你可以隨意替這個 remote 命名，不過大家通常都命名為「upstream」，讓我們也用這個名字：</p>
+    <p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+    <p>如果要檢查所有 remotes 是否都設定正確，你可以輸入 <code>git remote -v</code> 來列出所有儲存的網址。你應該要有一個「origin」的遠端指向你 GitHub 上 fork
+        的專案，以及一個「upstream」的遠端指向 GitHub 上的原始專案。</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>新增 remote 網址</strong></li>
+        <li><code class="shell">git remote add
+            <REMOTE_NAME>
+                <URL>
+        </code></li>
+        <li><strong>修改 remote 網址</strong></li>
+        <li><code class="shell">git remote set-url
+            <REMOTE_NAME>
+                <URL>
+        </code></li>
+        <li><strong>檢視 remote 網址</strong></li>
+        <li><code class="shell">git remote -v</code></li>
+    </ul>
+</div>

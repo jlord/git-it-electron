@@ -1,0 +1,94 @@
+<div id="challenge-desc" class="challenge">
+    <h2>The Challenge:</h2>
+    <p>ローカルのリポジトリとリモートのリポジトリをつないで、変更をPushしてみよう</p>
+</div>
+
+<h2>リモート</h2>
+
+<p>GitHubに何かを置くと、それはGitHubのサーバ上に存在していることになります。これが
+    <strong>リモート(remote)</strong> リポジトリです。なぜならこれはあなたのコンピュータ上ではなく、サーバ上にあるからです。あなたの<strong>ローカル</strong>（あなたのコンピュータ上のことです）の変更を<strong>push</strong>することによって、最新状態を保つことができるのです。
+</p>
+
+<p>他の人は、リモートにあるあなたの変更を<strong>pull</strong>して各個人のコンピュータに取り込むことによって、プロジェクトの最新の状態を得ることができます。こうやってお互いのコンピュータにアクセスすることなく、プロジェクトのメンバー同士でコードや情報を共有して共同作業することができるのです。
+</p>
+
+<img src="../../../assets/imgs/remotes.png" width="600">
+
+<h2>Step: リモートリポジトリを作ろう</h2>
+<p><strong>ローカル</strong> にあるバージョンを、GitHub.comに保存してある<strong>リモート</strong>のバージョンと同期したいとします。そのためにまず、空っぽのリモートリポジトリをGitHub.comに作りましょう。
+</p>
+
+<ul>
+    <li><a href="http://github.com/" target="_blank">github.com</a>にアクセスして、ログインした状態で、右上にある'+'メニューをクリックし、その中の"new
+        repository"というメニューを選択してクリックしてください。
+    </li>
+    <li>ローカルのリポジトリ名と一致する名前をつけてください。'hello-world'になると思います。そして短い説明をつけてください。</li>
+    <li>publicを選択してください。</li>
+    <li>READMEは選択しないでください。なぜなら私たちは既にREADMEをローカルに持ってるからです。'readme.txt'という名前で。</li>
+    <li>.gitignore と license は 'none' のままです。</li>
+    <li>create repositoryをクリックしてください!</li>
+</ul>
+
+<h2>Readme, .gitignore, License</h2>
+<p>これらのファイルはオープンソースプロジェクトではよく見るファイルです。</p>
+
+<p><strong>readme</strong>
+    はプロジェクトに関する説明と、どう使えばいいのか、そしてどうやって貢献したらいいかを書くものです。(貢献方法については、別途CONTRIBUTING.mdというファイルに分けて書くこともあります。)</p>
+
+<p><strong>.gitignore</strong> はGitに追跡 <em>しない</em> でほしいものの一覧です。たとえば、パスワードの入ったファイルなどです！</p>
+
+<p><strong>license</strong> ファイルは、プロジェクトに対するライセンスを定義します。ライセンスの形態についての情報はこちらです:
+    <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a>.</p>
+<p>でも今回の場合は特に必要ありません。</p>
+
+<h2>Step: ローカルとリモートをつなごう</h2>
+<p>これでGitHub.com上に空のリポジトリを作成できました。画面の一番上に'Quick
+    Setup'があると思います。そこで'HTTPS'ボタンを選択してください。（デフォルトはSSHになっていると思います）そうしたら、アドレスをコピーしてください。これはGitHubサーバ上におけるあなたのリポジトリのアドレスを表しています。</p>
+
+<p>
+    ターミナルに戻って、前の章でGitリポジトリとして初期化した'hello-world'フォルダの中から、GitHubサーバ上にあるリモートバージョンの場所をGitに知らせましょう。それぞれに別の名前をつけることで、複数のリモートを設定することもできます。メインのリモートサーバに対しては、通常<code>origin</code>と名付けることが慣習となっています。
+</p>
+
+<code>$ git remote add origin &lt;URLFROMGITHUB&gt;</code>
+
+<p>これで、あなたの <strong>ローカル(local)</strong> リポジトリはいま 'origin' と名づけられたGitHubのサーバ上にある<strong>リモート(remote)</strong>
+    がどこにあるかを知っている状態になります。これはちょうど電話番号に名前をつけて短縮ダイヤルとして登録するようなものです。さて、これで設定できたので、何かをリモートに送りたいと思った時にはいつでも送れるようになりました。</p>
+
+<blockquote>
+    <p><strong>注意:</strong></p>
+    <p>もし<strong>GitHub for Windows</strong>をコンピュータにインストールしているのであれば、'origin'という名前のremoteは既に自動的に作られているかもしれません。その場合には、ただoriginがどのURLを指すのかを設定すればいいのです。次のように'add'の代わりにこのコマンドを入力します。:
+    </p>
+
+    <code>$ git remote set-url origin &lt;URLFROMGITHUB&gt;</code>
+</blockquote>
+
+<h2>Step: 作業内容をリモートにPushしよう</h2>
+<p>次に、ローカルで作業した内容をGitHubに <strong>push</strong> (送信) しましょう。 理想的には、ローカルとリモートのバージョンが一致するように、ずっと同期していたいですよね。</p>
+
+<p>
+    Gitにはブランチという仕組みがあります。これはプロジェクトの別々の箇所に対して別々のタイミングで作業できるようにするためのものです。このあたりについて詳しくはあとで学びますが、最初のブランチはデフォルトでは'master'という名前がつけられています。プロジェクトをPushするときには(またあとでpullするときには)、Gitに対象となる<strong>ブランチ名</strong>と<strong>remote</strong>の名前を伝えてやる必要があります。
+
+<p>今回のケースでは、'master'という名前のブランチをGitHub上にある'origin'という名前のremoteに送ります。</p>
+
+<code>$ git push origin master</code>
+
+<p>さてGitHubに行ってみて、リポジトリのページを読み込みなおしてみてください。おお！
+    ローカルと同じものがリモートでも見れるようになりましたね。これがあなたの最初のpublicな リポジトリです！ おめでとう！</p>
+
+{{{verify_directory_button}}}
+
+<div class="blue-border-box">
+    <h2>Tips</h2>
+    <ul>
+        <li><strong>remoteの設定を追加する</strong></li>
+        <code>$ git remote add &lt;REMOTENAME&gt; &lt;URL&gt;</code>
+        <li><strong>すでにあるremoteにURLを設定する</strong></li>
+        <code>$ git remote set-url &lt;REMOTENAME&gt; &lt;URL&gt;</code>
+        <li><strong>変更をPullする</strong></li>
+        <code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
+        <li><strong>remoteの設定を確認する</strong></li>
+        <code>$ git remote -v</code>
+        <li><strong>変更をPushする</strong></li>
+        <code>$ git push &lt;REMOTENAME&gt; &lt;BRANCH&gt;</code>
+    </ul>
+</div>
