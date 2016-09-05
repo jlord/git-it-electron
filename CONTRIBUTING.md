@@ -50,7 +50,7 @@ $ npm install
 
 ## Package
 
-If you have made any changes to the code or you just cloned this project from github, 
+If you have made any changes to the code or you just cloned this project from github,
 you'll need to rebuild all of the challenges and/or pages.
 If you haven't, skip to the next step!
 
@@ -89,3 +89,57 @@ platforms, [Wine](https://www.winehq.org/) needs to be installed. On OS X, it is
 installable via [Homebrew](http://brew.sh/).
 
 This will output the contents of the application to a folder at `../out/Git-it-win32-ia32`.
+
+
+## Translations to other languages
+If you want to add a new language to this project, here are some step you need to do.
+
+### Add locale code
+First, edit `locale.js` and add locale code in it. You can use any editor you like.
+
+```bash
+$ vim lib/locale.js
+```
+
+In `locale.js`, there must have a variable called 'available', and add your language in it.  
+For example, we have already had three languages, and wanted to add German(Germany):
+
+```javascript
+var available = {
+  'en-US': 'English',
+  'ja-JP': '日本語',
+  'zh-TW': '中文(臺灣)',
+  'de-DE': 'Deutsch'
+}
+```
+
+Before colon is your language code, it must look like '\<lang\>-\<location\>'. '\<lang\>' is your language, in this case, 'de' is the language code of 'German'. '\<location\>' is your location code, in this case, 'DE' is the location code of 'Germany'.The location code *MUST* be capitalization.  
+If you don't know what your language/location code, you can find it [here](http://www.lingoes.net/en/translator/langcode.htm).  
+
+If there are lots of locations using same language, you could add your language in variable 'aliases'.  App will auto-redirect to target language. For example, There are five locations using 'German' as their language (de-AT, de-CH, de-DE, de-LI and de-LU),  you can add 'de' into 'aliases' and let app using 'de-DE' for default 'de' language.
+
+```javascript
+var aliases = {
+  'en': 'en-US',
+  'ja': 'ja-JP',
+  'zh': 'zh-TW',
+  'de': 'de-DE'
+}
+```
+> **Locale in aliases *MUST* point to a locale existed in available.**
+
+### Translate files
+All files that translator should edit is in `resources/contents`. We suggest translator using 'en-US' as original language to translate.  
+
+```bash
+cd resources/contents
+cp en-US '<your-lang>-<your-location>'
+```
+> **Folder name in resources/contents *MUST* be the same as the locale you added in locale.js.**
+
+### Build
+Don't forget to build to generate built file.
+
+```bash
+npm run build-all
+```
