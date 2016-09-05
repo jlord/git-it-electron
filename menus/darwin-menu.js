@@ -1,3 +1,4 @@
+var locale = require('../lib/locale.js')
 module.exports = function menu (app, mainWindow) {
   var darwinMenu = [
     {
@@ -92,34 +93,31 @@ module.exports = function menu (app, mainWindow) {
       label: 'Window',
       submenu: [
         {
-          label: 'Home(en)',
+          label: 'Home',
           click: function (item, focusedWindow) {
             if (focusedWindow) {
-              var path = require('path').join('file://', __dirname, '..', 'built', 'en-US', 'pages', 'index.html')
+              var path = require('path').join(locale.getLocaleBuiltPath(locale.getCurrentLocale(focusedWindow)), 'pages', 'index.html')
               focusedWindow.loadURL(path)
             }
           }
         },
         {
-          label: 'Dictionary(en)',
+          label: 'Dictionary',
           click: function (item, focusedWindow) {
             if (focusedWindow) {
-              var path = require('path').join('file://', __dirname, '..', 'built', 'en-US', 'pages', 'dictionary.html')
+              var path = require('path').join(locale.getLocaleBuiltPath(locale.getCurrentLocale(focusedWindow)), 'pages', 'dictionary.html')
               focusedWindow.loadURL(path)
             }
           }
         },
         {
-          label: 'Resources(en)',
+          label: 'Resources',
           click: function (item, focusedWindow) {
             if (focusedWindow) {
-              var path = require('path').join('file://', __dirname, '..', 'built', 'en-US', 'pages', 'resources.html')
+              var path = require('path').join(locale.getLocaleBuiltPath(locale.getCurrentLocale(focusedWindow)), 'pages', 'resources.html')
               focusedWindow.loadURL(path)
             }
           }
-        },
-        {
-          type: 'separator'
         }
       ]
     },
@@ -142,7 +140,7 @@ module.exports = function menu (app, mainWindow) {
           label: 'About App',
           click: function (item, focusedWindow) {
             if (focusedWindow) {
-              var path = require('path').join('file://', __dirname, '..', 'built', 'en-US', 'pages', 'about.html')
+              var path = require('path').join(locale.getLocaleBuiltPath(locale.getCurrentLocale(focusedWindow)), 'pages', 'about.html')
               focusedWindow.loadURL(path)
             }
           }
