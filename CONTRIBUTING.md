@@ -113,8 +113,10 @@ var available = {
 }
 ```
 
-Before colon is your language code, it must look like '\<lang\>-\<location\>'. '\<lang\>' is your language, in this case, 'de' is the language code of 'German'. '\<location\>' is your location code, in this case, 'DE' is the location code of 'Germany'.The location code *MUST* be capitalization.  
-If you don't know what your language/location code, you can find it [here](http://www.lingoes.net/en/translator/langcode.htm).  
+Before colon is your language code, it must look like '\<lang\>-\<location\>'. '\<lang\>' is your language, in this case, 'de' is the language code of 'German'. '\<location\>' is your location code, in this case, 'DE' is the location code of 'Germany'. If you don't know what your language/location code, you can find it [here](http://www.lingoes.net/en/translator/langcode.htm).  
+
+> **The language code *MUST* be all lowercase, and location code *MUST* be all uppercase.**  
+
 
 If there are lots of locations using same language, you could add your language in variable 'aliases'.  App will auto-redirect to target language. For example, There are five locations using 'German' as their language (de-AT, de-CH, de-DE, de-LI and de-LU),  you can add 'de' into 'aliases' and let app using 'de-DE' for default 'de' language.
 
