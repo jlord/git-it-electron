@@ -1,61 +1,63 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-  <p>Create a file in your new repository, add something to that file and commit that change with Git.</p>
+  <p>당신의 새 저장소(repository)에 파일을 만들어보세요. Git을 이용하여 파일을 추가하고(add) 변경사항들을 커밋(commit)하세요.</p>
+
 </div>
 
 <div class="chal-background light-blue solid-box">
-  <h2>Commits</h2>
-  <p>Commits are core to using Git. They are the moments in which you save and describe the work you've done. They are the ticks in the timeline of your project's history.</p>
+  <h2>커밋(commit)</h2>
+  <p>커밋은 Git을 사용하는 데 있어 가장 중요합니다. 커밋들은 당신이 작업했던 것들을 저장하고 설명하는 순간들입니다. 커밋들은 당신의 프로젝트 이력의 체크표입니다.</p>
 </div>
 
 <div class="chal-step blue-border border-box">
-  <h3>Create a New File</h3>
-  <p>Now that you've got a repository started let's add a file to it.</p>
-  <p>Open your text editor and create a new empty file. Now write a little bit of text, perhaps type "Hello!", and save the file as 'readme.txt' in the 'hello-world' folder you created in the last challenge.</p>
+  <h3>새 파일 만들기</h3>
+
+  <p>이제 당신은 저장소를 가지고 있습니다. 이 저장소에 파일을 추가해봅시다.</p>
+  <p>텍스트 편집기를 열고 새로운 빈 파일을 만드세요. "Hello!" 같은 텍스트를 적어보고 지난 챌린지에서 만들었던 'hello-world'폴더에 'readme.txt'라는 이름의 파일로 저장하세요.</p>
 </div>
 
 <div class="chal-step blue-border border-box">
-  <h3>Check Status + Add and Commit Changes</h3>
-  <p>Next check the <strong>status</strong> of your repository to find out if there have been changes. You know you have changed something, but does Git?</p>
+  <h3>상태(status) 확인하기 + 변경사항들을 추가하고(add) 커밋하기(commit)</h3>
+  <p>다음으로 변경사항이 있는지 아닌지를 알아보기 위해 당신의 저장소의 <strong>상태</strong> 를 확인해봅시다. 당신은 어떤 것들이 바뀌었는지 알고 있지만 Git도 알고 있을까요?</p>
 
-  <p>Make sure you're still within your 'hello-world' directory when you're running these commands. Use Git to see what changed in your repository:</p>
+  <p>이 명령어들을 실행할 때 'hello-world' 폴더 내에서 실행하고 있는지 확인하세요. 당신의 저장소에서 변경된 것들을 보기 위해 Git을 사용해봅시다:</p>
 
-  <p>First, check the status:</p>
+  <p>먼저, 상태를 확인하세요:</p>
   <p><code class="shell">git status</code></p>
-  <p>Git should tell you that a file has been added.</p>
+  <p>Git은 당신에게 추가된 파일을 알려줄 것입니다.</p>
 
-  <p>Then <strong>add</strong> the file you just created so that it becomes a part of the changes you will <strong>commit</strong> (aka save) with Git:</p>
+  <p>그 다음에 Git을 사용하여 <strong>커밋</strong> (aka save)할 변경사항들의 일부로 만들기 위해, 방금 만든 파일을 <strong>추가</strong> 해주세요:</p>
   <p><code class="shell">git add readme.txt</code></p>
 
-  <p>Finally, <strong>commit</strong> those changes to the repository's history with a
-    short (m) message describing the updates.</p>
+  <p>마지막으로, 업데이트된 내용에 대해 설명한 짧은 메시지를 포함하여 변경사항들을 저장소의 이력에 <strong>커밋</strong>하세요:</p>
   <p><code class="shell">git commit -m "Created readme"</code></p>
 </div>
 
 <div class="chal-step blue-border border-box">
-  <h3>Step: Make More Changes</h3>
-  <p>Now add another line to 'readme.txt' and save the file again.</p>
+  <h3>더 많은 변경사항 만들기</h3>
+  <p>'readme.txt'에 다른 라인을 추가하고 파일을 다시 저장하세요.</p>
 
-  <p>In terminal, you can view the <strong>diff</strong>erence between the file now and how it was at your last commit. </p>
+  <p>터미널에서 지금의 파일과 마지막 커밋 간의 <strong>차이점(diff)</strong> 을 볼 수 있습니다.</p>
 
-  <p>Tell Git to show you the <strong>diff</strong>:</p>
+  <p>Git에서 <strong>차이점(diff)</strong> 보기:
+
   <p><code class="shell">git diff</code></p>
 
-  <p>Now with what you just learned above, commit this latest change.</p>
+  <p>이제 지금 배운 것들들을 이용하여 최종 변경사항을 커밋해보세요.</p>
 </div>
 
 {{{ verify_directory_button }}}
 
 <div class="chal-tip grey-border border-box">
   <ul class="no-list-style">
-    <li><strong>Check status of changes to a repository</strong></li>
+    <li><strong>저장소에서 변경사항의 상태 확인하기</strong></li>
     <li><code class="shell">git status</code></li>
-    <li><strong>View changes to files</strong></li>
+    <li><strong>파일들의 변경사항 보기</strong></li>
     <li><code class="shell">git diff</code></li>
-    <li><strong>Add a file's changes to be committed</strong></li>
-    <li><code class="shell">git add &#60;FILENAME&#62;</code></li>
-    <li><strong>To add all files changes</strong></li>
+    <li><strong>커밋하려는 파일의 변경사항을 추가하기</strong></li>
+    <li><code class="shell">git add &#60;파일이름&#62;</code></li>
+    <li><strong>모든 파일들의 변경사항을 추가하기</strong></li>
     <li><code class="shell">git add .</code></li>
-    <li><strong>To commit (aka save) the changes you've added with a short message describing the changes</strong></li>
-    <li><code class="shell">git commit -m "your commit message"</code></li>
+    <li><strong>변경사항을 설명한 짧은 메시지를 포함하여 변경사항을 커밋하기(aka save)</strong></li>
+    <li><code class="shell">git commit -m "&#60;커밋 메시지&#62;"</code></li>
   <ul>
 </div>
