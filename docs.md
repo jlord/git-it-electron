@@ -1,9 +1,9 @@
 # Documentation
 
-How does this thing work? Below are general descriptions of directories and content. Inside of each file comments describe what that file's job is.
+How does this thing work? Below are general descriptions of directories and content. Inside of each file, comments describe what that file's job is.
 
 ## Directories & Files
-- **assets** Project asses like css, fonts and images.
+- **assets** Project assets like css, fonts and images.
 - **challenge-content** & **challenge-content-*** Main content of the challenges to be used in generating the final full HTML for each challenge page (English and other languages).
 - **challenges** & **challenges-*** Full HTML for each challenge (English and other languages)
 - **layouts** Handlebars templates for the challenges and basic pages.
