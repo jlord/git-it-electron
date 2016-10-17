@@ -164,7 +164,7 @@ module.exports = function menu (mainWindow) {
       submenu: [
         {
           label: 'Repository',
-          click: function () { require('shell').openExternal('http://github.com/jlord/git-it-electron') }
+          click: function () { require('electron').shell.openExternal('http://github.com/jlord/git-it-electron') }
         }
       ]
     }
