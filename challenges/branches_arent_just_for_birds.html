@@ -192,6 +192,9 @@
 
   <p>To fix a remote that is pointing to the wrong place you can re-set its url: <code>git remote set-url origin <URLTOYOURFORK></code>.
 
+  <h4>Authentication failed...error: 401</h4>
+  <p>Your identity could not be verified. You may have 2FA turned on in which case you must use a personal access token or push through the GitHub for Mac or GitHub for Windows which handles 2FA for you.</p>  
+ 
   <h4>File NOT in contributors folder</h4>
   <p>The file you create should be placed inside the existing 'contributors' folder in the Patchwork repository. If you put it somewhere else, simply use Finder or Windows Explorer to move your file into the folder. You can check <code>git status</code> again and you'll find it sees your changes. Stage and then commit "all" (-A) of these changes (additions and deletions) with the commands below.</p>
   <p><code class="shell">git add -A</code></p>
