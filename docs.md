@@ -1,9 +1,9 @@
 # Documentation
 
-How does this thing work? Below are general descriptions of directories and content. Inside of each file comments describe what that file's job is.
+How does this thing work? Below are general descriptions of directories and content. Inside of each file, comments describe what that file's job is.
 
 ## Directories & Files
-- **assets** Project asses like css, fonts and images.
+- **assets** Project assets like css, fonts and images.
 - **challenge-content** & **challenge-content-*** Main content of the challenges to be used in generating the final full HTML for each challenge page (English and other languages).
 - **challenges** & **challenges-*** Full HTML for each challenge (English and other languages)
 - **layouts** Handlebars templates for the challenges and basic pages.
@@ -26,7 +26,7 @@ Files and directories grouped by their relationship in the app. Electron apps ha
 `main.js` controls the life of the app (start, quit) and the browser windows that make up the main app experience (what HTML files to show and what size). It is the app's **main process**. The `lib` and `lib/verify` directories contain all the code that the browser views, the app's **browser process**, use. Some of these communicate with the main process by sending and receiving messages.
 
 **Browser Process: Pages & Assets**
-The pages that the app displays are HTML, just like a website. The `assests` directory contains the CSS, images and fonts used in each view. Each page starts with it's main content (`pages`, `challenge-content-zhtw`, `challenge-content`) and drops that into a template (`layouts`) along with the shared HTML elements (`partials`) like headers and footers.
+The pages that the app displays are HTML, just like a website. The `assets` directory contains the CSS, images and fonts used in each view. Each page starts with it's main content (`pages`, `challenge-content-zhtw`, `challenge-content`) and drops that into a template (`layouts`) along with the shared HTML elements (`partials`) like headers and footers.
 
 **Browser Process: Scripts**
 The `lib` directory contains scripts that each page uses. Inside of `lib/verify` are scripts for each challenge that tell it how to verify that challenge. The scripts `helpers.js` and `user-data.js` are shared between scripts, instructions below on [how these are used]().
