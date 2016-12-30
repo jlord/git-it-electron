@@ -58,8 +58,9 @@ $ npm install
 
 ## Package
 
-If you have made any changes to the code you'll need to rebuild all of the
-challenges and/or pages. If you haven't, skip to the next step!
+If you have made any changes to the code or you just cloned this project from github, 
+you'll need to rebuild all of the challenges and/or pages.
+If you haven't, skip to the next step!
 
 ```bash
 $ npm run build-all
