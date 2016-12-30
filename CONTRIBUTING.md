@@ -6,7 +6,7 @@ Contributions are more than welcome! Checkout the [help wanted](https://github.c
 
 ---
 
-**📣 Provide a description in your Issue/Pull Request.** In your pull request please explain what the problem was (with gifs or screenshots would be fantastic!) and how your changes fix it. 
+**📣 Provide a description in your Issue/Pull Request.** In your pull request please explain what the problem was (with gifs or screenshots would be fantastic!) and how your changes fix it.
 
 🚫 🙀 :fire: _No description provided._ :fire: 🙀 🚫
 
@@ -99,18 +99,11 @@ installable via [Homebrew](http://brew.sh/).
 This will output the contents of the application to a folder at `../out/Git-it-win32-ia32`.
 
 
-## Translations to other languages
-If you want to add a new language to this project, here are some step you need to do.
+## Translations
+If you want to add a new language to this project, here are the steps to follow.
 
-### Add locale code
-First, edit `locale.js` and add locale code in it. You can use any editor you like.
-
-```bash
-$ vim lib/locale.js
-```
-
-In `locale.js`, there must have a variable called 'available', and add your language in it.  
-For example, we have already had three languages, and wanted to add German(Germany):
+### Add locale
+First, edit `locale.js` and add the locale code to it. Add it to the `available` object, like this:
 
 ```javascript
 var available = {
@@ -121,12 +114,11 @@ var available = {
 }
 ```
 
-Before colon is your language code, it must look like '\<lang\>-\<location\>'. '\<lang\>' is your language, in this case, 'de' is the language code of 'German'. '\<location\>' is your location code, in this case, 'DE' is the location code of 'Germany'. If you don't know what your language/location code, you can find it [here](http://www.lingoes.net/en/translator/langcode.htm).  
+Before the colon (the object key) is the language code, it must look like `\<lang\>-\<location\>`. If you were adding Germany, 'de' is the language code of German and `\<location\>` is the location code, in this case, 'DE' for the location code of Germany. If you don't know the language/location code, you can find it [in this language list](http://www.lingoes.net/en/translator/langcode.htm).  
 
 > **The language code *MUST* be all lowercase, and location code *MUST* be all uppercase.**  
 
-
-If there are lots of locations using same language, you could add your language in variable 'aliases'.  App will auto-redirect to target language. For example, There are five locations using 'German' as their language (de-AT, de-CH, de-DE, de-LI and de-LU),  you can add 'de' into 'aliases' and let app using 'de-DE' for default 'de' language.
+If there are multiple locations using same language, you could add your language in the variable `aliases`. Git-it will auto-redirect to target language. For example, There are five locations using 'German' as their language (de-AT, de-CH, de-DE, de-LI and de-LU),  you can add 'de' into 'aliases' and let app using 'de-DE' for default 'de' language.
 
 ```javascript
 var aliases = {
@@ -136,19 +128,19 @@ var aliases = {
   'de': 'de-DE'
 }
 ```
-> **Locale in aliases *MUST* point to a locale existed in available.**
+> **Locale in aliases *MUST* point to a locale key/value in `available`.**
 
 ### Translate files
-All files that translator should edit is in `resources/contents`. We suggest translator using 'en-US' as original language to translate.  
+Next, duplicate the `resources/contents/en-US` directory and rename it according to the language/location code you set in `locale.js`. Then begin translating the files! Most translations do not translate everything within the `partials` directory.
 
 ```bash
 cd resources/contents
 cp en-US '<your-lang>-<your-location>'
 ```
-> **Folder name in resources/contents *MUST* be the same as the locale you added in locale.js.**
+> **Folder name in resources/contents *MUST* be the same as the locale you added in `locale.js`.**
 
 ### Build
-Don't forget to build to generate built file.
+Finally, don't forget to build to generate the final files. They will be placed in the `built` directory.
 
 ```bash
 npm run build-all
