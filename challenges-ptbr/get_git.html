@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Git-it</title>
+    <link rel="stylesheet" href="../assets/css/2-double-bounce.css">
+    <link rel="stylesheet" href="../assets/css/new-style.css">
+    <link rel="stylesheet" href="../assets/css/new-challenge.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css">
+  </head>
+  <body>
+    <header id="challenge-header" class="site-header">
+  <div class="lang-select">
+    <select id="lang-select" class="btn-outline lang-select">
+      <option value="">English</option>
+      <option value="ptbr">Português Brasileiro</option>
+      <option value="zhtw">正體中文</option>
+      <option value="ja">日本語</option>
+      <option value="kr">한국어</option>
+    </select>
+  </div>
+  <a class="filledblock" href="../index-ptbr.html">
+    Git-it
+  </a>
+  <span class="challenge-title">get git</span>
+</header>
+
+<script type="text/javascript">
+  var selector = document.getElementById('lang-select')
+  // TODO put lang somewhere else that we can get without needing template in JS
+  // Can also remove default '-' with lang
+  var currentLang = "-ptbr".replace(/-/, '')
+  selector.value = currentLang
+  selector.addEventListener('change', function () {
+    var currentChallenge = document.querySelector('.challenge-item.current')
+    var dir = 'challenges' + (selector.value ? '-' + selector.value : '') + '/'
+    var url = currentChallenge.href.replace(/challenges(.+)?\//, dir)
+    // TODO pass to languages.js rather than set global
+    location.href = url
+  })
+</script>
+
+    <div class="wrapper" id="challenge-body">
+      <div id="challenge-sidebar" class="sidebar">
+  <ul class="list-of-challenges">
+    <h3>Challenges</h3>
+      <li>
+        <a id="get_git" data-id="0" href="get_git.html" class="challenge-item current">
+          <div class="current-arrow">▶️</div>
+          get git
+        </a>
+      </li>
+      <li>
+        <a id="repository" data-id="1" href="repository.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          repository
+        </a>
+      </li>
+      <li>
+        <a id="commit_to_it" data-id="2" href="commit_to_it.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          commit to it
+        </a>
+      </li>
+      <li>
+        <a id="githubbin" data-id="3" href="githubbin.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          GitHubbin
+        </a>
+      </li>
+      <li>
+        <a id="remote_control" data-id="4" href="remote_control.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          remote control
+        </a>
+      </li>
+      <li>
+        <a id="forks_and_clones" data-id="5" href="forks_and_clones.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          forks and clones
+        </a>
+      </li>
+      <li>
+        <a id="branches_arent_just_for_birds" data-id="6" href="branches_arent_just_for_birds.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          branches aren&#x27;t just for birds
+        </a>
+      </li>
+      <li>
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          it&#x27;s a small world
+        </a>
+      </li>
+      <li>
+        <a id="pull_never_out_of_date" data-id="8" href="pull_never_out_of_date.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          pull never out of date
+        </a>
+      </li>
+      <li>
+        <a id="requesting_you_pull_please" data-id="9" href="requesting_you_pull_please.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          requesting you pull please
+        </a>
+      </li>
+      <li>
+        <a id="merge_tada" data-id="10" href="merge_tada.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          merge tada
+        </a>
+      </li>
+  </ul>
+
+</div>
+      <div class="content">
+        <div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Instale Git no seu computador e configure seu nome e email.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Git</h2>
+  <p>Git &#xE9; um <strong>software open source</strong> (o seu <a href="https://github.com/git/git">c&#xF3;digo fonte &#xE9; p&#xFA;blico</a>) escrito por Linus Torvalds, quem tamb&#xE9;m criou o sistema operacional Linux. </p>
+  <p>Git &#xE9; um programa para observar mudan&#xE7;as em arquivos ao decorrer do tempo, conhecido na programa&#xE7;&#xE3;o como <strong>controle de vers&#xE3;o</strong>. Se voc&#xEA; j&#xE1; usou documentos de texto que salvavam as altera&#xE7;&#xF5;es durante a escrita, ent&#xE3;o voc&#xEA; j&#xE1; est&#xE1; familiarizado com o conceito!</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Instalar Git</h3>
+  <p>N&#xF3;s recomendamos instalar o Git no seu computador baixando o programa <a href="https://desktop.github.com">GitHub Desktop</a>. N&#xE3;o iremos usar este programa durante os desafios do Git-it (n&#xF3;s estamos aprendendo a usar via terminal!) mas ele inclui o Git e &#xE9; a forma mais f&#xE1;cil de instalar Git ele em todas as plataformas.</p>
+
+  <ul>
+    <li><strong>Windows</strong>: Use o <strong>Git Shell</strong> como terminal.</li>
+    <li><strong>Mac</strong>: Abra o GitHub Desktop e, em Prefer&#xEA;ncias, selecione a instala&#xE7;&#xE3;o das ferramentas de linha de comando. Use o aplicativo do <strong>terminal</strong> como o seu terminal.</li>
+  </ul>
+
+  <p>J&#xE1; tem Git ou n&#xE3;o tem certeza? Escreva <code>git --version</code> no seu terminal e, se ele retornar um n&#xFA;mero de vers&#xE3;o maior que <code>1.7.10</code>, voc&#xEA; est&#xE1; pronto! Para maiores informa&#xE7;&#xF5;es, visite o  <a href="http://git-scm.com">website do Git</a>.</p>
+
+  <p>Git n&#xE3;o &#xE9; como outros programas no seu computador. Voc&#xEA; n&#xE3;o ir&#xE1; ver um &#xED;cone na sua &#xE1;rea de trabalho, mas sempre estar&#xE1; dispon&#xED;vel para voc&#xEA; e voc&#xEA; poder&#xE1; acessar ele a qualquer momento no seu terminal ou em aplica&#xE7;&#xF5;es que o utilizam.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+<h3>Configurando o Git</h3>
+  <p>Uma vez que o Git estiver instalado, abra o seu <strong>terminal</strong>.
+  Voc&#xEA; pode verificar que ele est&#xE1; l&#xE1; por digitar:</p>
+
+  <p><code class="shell">git --version</code></p>
+
+  <p>Isso vai retornar a vers&#xE3;o do Git que voc&#xEA; est&#xE1; usando e aparecer&#xE1; algo assim:</p>
+
+  <p><code>git version 1.9.1</code></p>
+
+  <p>A seguir, configure o Git de forma que ele saiba quem voc&#xEA; &#xE9;:</p>
+  <p>Defina seu nome:</p>
+  <p><code class="shell">git config --global user.name &quot;Seu nome&quot;</code></p>
+  <p>Defina seu email:</p>
+  <p><code class="shell">git config --global user.email &quot;seu.email@example.com&quot;</code></p>
+</div>
+
+<div class="verify bold-blue solid-box">
+  <button class="btn-white" id="verify-challenge">VERIFY</button>
+  <div id="verify-spinner" class="sk-double-bounce">
+    <div class="sk-child sk-double-bounce1"></div>
+    <div class="sk-child sk-double-bounce2"></div>
+  </div>
+  <ul id="verify-list">
+  </ul>
+  <button class="btn-white" id="clear-completed-challenge">Clear completed status</button>
+</div>
+
+<div class="chal-tip grey-border border-box">
+  <h3>S&#xED;mbolo de D&#xF3;lar em Documenta&#xE7;&#xF5;es de C&#xF3;digos</h3>
+  <p>S&#xED;mbolos de d&#xF3;lar <code>$</code> s&#xE3;o usados com frequ&#xEA;ncia em documenta&#xE7;&#xE3;o de programa&#xE7;&#xE3;o para representar que uma linha &#xE9; um c&#xF3;digo da <strong>linha de comando</strong> (veja os trechos acima). Voc&#xEA; n&#xE3;o precisa realmente escrever o <code>$</code>, s&#xF3; o que vier ap&#xF3;s ele.</p>
+</div>
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="../index-ptbr.html" class="u-inline-block all-caps">All Challenges
+    <div class="arrow-left"></div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="repository.html" class="u-inlineBlock all-caps">repository
+    <div class="arrow-right"></div>
+    </a>
+  </div>
+</div>
+
+<style>
+  .chal-no-pass.border-box::before {
+    content: "Não Passou?";
+  }
+
+  .chal-tip.border-box::before {
+    content: "Dicas";
+  }
+
+  .chal-step.border-box::before {
+    content: "Passo";
+  }
+
+  .chal-goal.border-box::before {
+    content: "Meta";
+  }
+</style>
+      </div>
+    </div>
+
+    <script>
+      var challengeStatus = require('../lib/challenge-completed.js')
+      // TODO Get this from the DOM and don't do template in JS
+      var currentChallenge = 'get_git'
+      challengeStatus.completed(currentChallenge)
+    </script>
+
+    <script>require('../lib/handle-external-links.js')</script>
+    <script>require('../lib/languages.js')</script>
+    <script>require('../lib/challenge.js')</script>
+  </body>
+</html>

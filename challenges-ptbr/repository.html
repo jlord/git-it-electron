@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Git-it</title>
+    <link rel="stylesheet" href="../assets/css/2-double-bounce.css">
+    <link rel="stylesheet" href="../assets/css/new-style.css">
+    <link rel="stylesheet" href="../assets/css/new-challenge.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css">
+  </head>
+  <body>
+    <header id="challenge-header" class="site-header">
+  <div class="lang-select">
+    <select id="lang-select" class="btn-outline lang-select">
+      <option value="">English</option>
+      <option value="ptbr">Português Brasileiro</option>
+      <option value="zhtw">正體中文</option>
+      <option value="ja">日本語</option>
+      <option value="kr">한국어</option>
+    </select>
+  </div>
+  <a class="filledblock" href="../index-ptbr.html">
+    Git-it
+  </a>
+  <span class="challenge-title">repository</span>
+</header>
+
+<script type="text/javascript">
+  var selector = document.getElementById('lang-select')
+  // TODO put lang somewhere else that we can get without needing template in JS
+  // Can also remove default '-' with lang
+  var currentLang = "-ptbr".replace(/-/, '')
+  selector.value = currentLang
+  selector.addEventListener('change', function () {
+    var currentChallenge = document.querySelector('.challenge-item.current')
+    var dir = 'challenges' + (selector.value ? '-' + selector.value : '') + '/'
+    var url = currentChallenge.href.replace(/challenges(.+)?\//, dir)
+    // TODO pass to languages.js rather than set global
+    location.href = url
+  })
+</script>
+
+    <div class="wrapper" id="challenge-body">
+      <div id="challenge-sidebar" class="sidebar">
+  <ul class="list-of-challenges">
+    <h3>Challenges</h3>
+      <li>
+        <a id="get_git" data-id="0" href="get_git.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          get git
+        </a>
+      </li>
+      <li>
+        <a id="repository" data-id="1" href="repository.html" class="challenge-item current">
+          <div class="current-arrow">▶️</div>
+          repository
+        </a>
+      </li>
+      <li>
+        <a id="commit_to_it" data-id="2" href="commit_to_it.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          commit to it
+        </a>
+      </li>
+      <li>
+        <a id="githubbin" data-id="3" href="githubbin.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          GitHubbin
+        </a>
+      </li>
+      <li>
+        <a id="remote_control" data-id="4" href="remote_control.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          remote control
+        </a>
+      </li>
+      <li>
+        <a id="forks_and_clones" data-id="5" href="forks_and_clones.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          forks and clones
+        </a>
+      </li>
+      <li>
+        <a id="branches_arent_just_for_birds" data-id="6" href="branches_arent_just_for_birds.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          branches aren&#x27;t just for birds
+        </a>
+      </li>
+      <li>
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          it&#x27;s a small world
+        </a>
+      </li>
+      <li>
+        <a id="pull_never_out_of_date" data-id="8" href="pull_never_out_of_date.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          pull never out of date
+        </a>
+      </li>
+      <li>
+        <a id="requesting_you_pull_please" data-id="9" href="requesting_you_pull_please.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          requesting you pull please
+        </a>
+      </li>
+      <li>
+        <a id="merge_tada" data-id="10" href="merge_tada.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          merge tada
+        </a>
+      </li>
+  </ul>
+
+</div>
+      <div class="content">
+        <div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Crie um novo reposit&#xF3;rio no seu computador.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Reposit&#xF3;rios</h2>
+  <p>Um <strong>reposit&#xF3;rio</strong> &#xE9; uma cole&#xE7;&#xE3;o de itens relacionados. No nosso caso, quando escrevemos softwares, &#xE9; uma cole&#xE7;&#xE3;o de arquivos relacionados a projetos dos softwares. Voc&#xEA; pode imagina-l&#xE1; como uma pasta de projeto com todos os arquivos relevantes dentro dela. Na verdade, isso &#xE9; o que vai parecer no seu computador de qualquer maneira. Algumas vezes eles s&#xE3;o chamados de &quot;repos&quot; para abreviar.</p>
+
+  <img src="../assets/imgs/repos-ptbr.png" width="600">
+
+  <p>Voc&#xEA; diz ao Git o que seu projeto &#xE9; e o Git vai come&#xE7;ar a monitorar todas as mudan&#xE7;as dessa pasta. Isto torna-o um reposit&#xF3;rio Git - uma pasta de itens que est&#xE3;o sendo monitoradas pelo Git. O Git monitora quando arquivos s&#xE3;o adicionados, removidos ou at&#xE9; mesmo se uma &#xFA;nica letra em um &#xFA;nico arquivo &#xE9; alterada. Tudo isso mais quem o fez e quando fez &#xE9; monitorado pelo Git. Nos software isso &#xE9; chamado <strong>controle de vers&#xE3;o</strong>.</p>
+
+  <h2>Usando o Terminal</h2>
+  <p>O <strong>Terminal</strong> (ou Bash) &#xE9; uma maneira de instruir seu computador a fazer coisas digitando comandos em vez de clicar com seu mouse. Voc&#xEA; pode renomear arquivos, abrir arquivos, criar novas pastas, mover-se entre diret&#xF3;rios (pastas) e mais tudo executando digitando comandos. Voc&#xEA; pode at&#xE9; mesmo executar um editor de texto (tal como o <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank">Vim</a>) no seu terminal e nunca ter que sair dele!</p>
+
+  <p>Al&#xE9;m de navegar no seu computador, voc&#xEA; pode tamb&#xE9;m usar programas no Terminal que tem uma <strong>command-line interface (CLI)</strong>, que significa que eles podem ser exexutados com comandos no terminal. Git &#xE9; um desses. Voc&#xEA; pode acessar e controlar Git atrav&#xE9;s de comandos no terminal, como voc&#xEA; vai estar fazendo muito em breve!</p>
+
+  <p>Em Git-it, voc&#xEA; vai aprender algumas a&#xE7;&#xF5;es basicas de linhas de comando (al&#xE9;m dos comandos Git) o qual ser&#xE3;o descritos nos passos a seguir.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Criar um reposit&#xF3;rio</h3>
+  <p>Voc&#xEA; vai criar uma nova pasta do projeto e ent&#xE3;o inicializa-a como um reposit&#xF3;rio Git. Para facilitar as coisas, nomeie sua pasta com o nome do projeto, como &apos;hello-world&apos;.</p>
+
+  <p>Abra seu terminal! Na sua janela de terminal, digite esses comandos, um por vez, pressione enter/return ap&#xF3;s cada comando.</p>
+
+  <p>Primeiro, crie uma nova pasta:<br><span class="inline-tip">Dica: mkdir significa <em>criar diret&#xF3;rio</em></span></p>
+  <code class="shell">mkdir hello-world</code>
+
+  <p>Em seguida ir dentro dessa pasta:<br><span class="inline-tip">Dica: cd significa <em>mudar diret&#xF3;rio</em></span></p>
+  <code class="shell">cd hello-world</code>
+
+  <p>Finalmente, diga ao Git para iniciar (come&#xE7;ar a monitorar) esta pasta:</p>
+  <code class="shell">git init</code>
+
+  <p>O &#xFA;ltimo comando deve retornar algo come&#xE7;ando com &quot;Initialized empty Git repository&quot; (Inicializado reposit&#xF3;rio vazio do Git). Os outros comandos n&#xE3;o retornam nada.</p>
+
+  <p>Voc&#xEA; terminou! Se voc&#xEA; quiser ter duplamente certeza que &#xE9; um reposit&#xF3;rio Git, digite <code>git status</code> e se n&#xE3;o retornar &apos;fatal: Not a git repository...&apos; (N&#xE3;o &#xE9; um reposit&#xF3;rio git), est&#xE1; tudo certo!</p>
+</div>
+
+<div class="verify bold-blue solid-box">
+  <button class="btn-white" id="select-directory">SELECT DIRECTORY</button>
+  <button class="btn-white" id="verify-challenge">VERIFY</button>
+  <div id="verify-spinner" class="sk-double-bounce">
+    <div class="sk-child sk-double-bounce1"></div>
+    <div class="sk-child sk-double-bounce2"></div>
+  </div>
+  <span id="path-required-warning">Please select your repository directory.</span>
+  <span id="directory-path"></span>
+  <ul id="verify-list">
+  </ul>
+  <button class="btn-white" id="clear-completed-challenge">Clear completed status</button>
+</div>
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>Crie uma nova pasta (criar um diret&#xF3;rio)</strong></li>
+    <code class="shell">mkdir &lt;NOMEDAPASTA&gt;</code>
+    <li><strong>Navegar para dentro desta pasta (mudar de diret&#xF3;rio)</strong></li>
+    <code class="shell">cd &lt;NOMEDAPASTA&gt;</code>
+    <li><strong>Lista dos itens dentro de uma pasta</strong></li>
+    <code class="shell">ls</code>
+    <li><strong>Inicializa o Git em uma pasta</strong></li>
+    <code class="shell">git init</code>
+  </ul>
+</div>
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="get_git.html" class="u-inline-block all-caps">get git
+    <div class="arrow-left"></div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="commit_to_it.html" class="u-inlineBlock all-caps">commit to it
+    <div class="arrow-right"></div>
+    </a>
+  </div>
+</div>
+
+<style>
+  .chal-no-pass.border-box::before {
+    content: "Não Passou?";
+  }
+
+  .chal-tip.border-box::before {
+    content: "Dicas";
+  }
+
+  .chal-step.border-box::before {
+    content: "Passo";
+  }
+
+  .chal-goal.border-box::before {
+    content: "Meta";
+  }
+</style>
+      </div>
+    </div>
+
+    <script>
+      var challengeStatus = require('../lib/challenge-completed.js')
+      // TODO Get this from the DOM and don't do template in JS
+      var currentChallenge = 'repository'
+      challengeStatus.completed(currentChallenge)
+    </script>
+
+    <script>require('../lib/handle-external-links.js')</script>
+    <script>require('../lib/languages.js')</script>
+    <script>require('../lib/challenge.js')</script>
+  </body>
+</html>
