@@ -20,8 +20,9 @@
     "build-pages": "node lib/build-pages.js",
     "build-zhtw": "node lib/build-challenges.js zhtw",
     "build-ja": "node lib/build-challenges.js ja",
+    "build:dmg" : "electron-installer-dmg ./out/Git-it-darwin-x64/Git-it.app ./out/Git-it-Mac-x64 --overwrite",
     "build-all": "npm run build-chals && npm run build-pages && npm run build-zhtw && npm run build-ja",
-    "pack-mac": "electron-packager . Git-it --platform=darwin --arch=x64   --icon=assets/git-it.icns --overwrite --ignore=/out/ --ignore=assets/PortableGit --prune=true --out=out",
+    "pack-mac": "electron-packager . Git-it --platform=darwin --arch=x64   --icon=assets/git-it.icns --overwrite --ignore=/out/ --ignore=assets/PortableGit --prune=true --out=out && npm run build:dmg",
     "pack-lin": "electron-packager . Git-it --platform=linux  --arch=x64   --icon=assets/git-it.png  --overwrite --ignore=/out/ --ignore=assets/PortableGit --prune=true --out=out",
     "pack-win": "electron-packager . Git-it --platform=win32  --arch=ia32  --icon=assets/git-it.ico  --overwrite --ignore=/out/ --prune=true --out=out "
   },
@@ -38,6 +39,7 @@
   "devDependencies": {
     "electron": "^1.4.3",
     "electron-packager": "^8.0.0",
+    "electron-installer-dmg":"0.1.2",
     "standard": "^5.4.1"
   },
   "dependencies": {
