@@ -1,0 +1,46 @@
+{
+  "n": {
+    ".gitignore": ".gitignore",
+    "repository": "저장소",
+    "repositories": "저장소",
+    "branch": "브랜치",
+    "branches": "브랜치",
+    "fork": "포크",
+    "forks": "포크",
+    "request": "리퀘스트",
+    "pull request": "풀 리퀘스트",
+    "pull requests": "풀 리퀘스트",
+    "commit": "커밋",
+    "commits": "커밋",
+    "upstream": "업스트림",
+    "feature": "피쳐",
+    "status": "status",
+    "diff": "diff",
+    "readme": "README",
+    "collaborator": "협업자",
+    "collaborators": "협업자",
+    "remote": "원격",
+    "remotes": "원격",
+    "contributing": "기여",
+    "connections": "연결"
+  },
+  "v": {
+    "add": "추가",
+    "fork": "포크하다",
+    "forked": "포크되다",
+    "clone": "클론하다",
+    "push": "푸시하다",
+    "close": "닫다",
+    "pull": "풀하다",
+    "commit": "커밋하다",
+    "merge": "머지하다",
+    "merged": "머지되다",
+    "checkout": "체크아웃하다",
+    "stage": "스테이지"
+  },
+  "adj": {
+    "merged": "머지된",
+    "forked": "포크된",
+    "remote": "원격의"
+  }
+}
