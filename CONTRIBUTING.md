@@ -19,13 +19,24 @@ Changes to the content of the pages must be made in the `challenge-content` dire
 ## Building Locally
 
 If you want to build this locally you'll need [Node.js](https://nodejs.org) on your computer. Then
-clone this repository, install dependencies and launch:
+clone this repository, go into the directory, install dependencies, build the content and launch:
 
 ```bash
 $ git clone https://github.com/jlord/git-it-electron
 $ cd git-it-electron
 $ npm install
+$ npm run build-all
 $ npm start
+```
+
+### Helpers
+
+You can pass a few arguments into Git-it when launching from the command line that will change the number of completed challenges it starts up with. Usage:
+
+```bash
+electron . --none
+electron . --some
+electron . --all
 ```
 
 ## Packaging for OS X, Windows or Linux
@@ -45,16 +56,6 @@ $ npm -v
 This is because the newer version of npm flattens the dependency tree. This is
 essential for creating a version of Git-it that runs on Windows, which has
 limits to file path lengths.
-
-## Clone and Install Dependencies
-
-Clone this repository and install the dependencies:
-
-```bash
-$ git clone https://github.com/jlord/git-it-electron
-$ cd git-it-electron
-$ npm install
-```
 
 ## Package
 
