@@ -140,6 +140,19 @@ cp en-US '<your-lang>-<your-location>'
 ```
 > **Folder name in resources/contents *MUST* be the same as the locale you added in `locale.js`.**
 
+### Headers
+
+Optionally, you can override the section headers by changing `content` in these classes and adding it to the `chal-footer` file for the language:
+
+```HTML
+<style>
+  .chal-no-pass.border-box::before { content: "Didn't Pass?"; }
+  .chal-tip.border-box::before     { content: "Tips"; }
+  .chal-step.border-box::before    { content: "Step"; }
+  .chal-goal.border-box::before    { content: "Goal"; }
+</style>
+```
+
 ### Build
 Finally, don't forget to build to generate the final files. They will be placed in the `built` directory.
 
