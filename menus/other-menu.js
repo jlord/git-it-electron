@@ -60,6 +60,29 @@ module.exports = function menu (mainWindow) {
           }
         },
         {
+          label: 'Português Brasileiro',
+          click: function (item, focusedWindow) {
+            if (focusedWindow) {
+              var goToPath
+              var lang = '-ptbr'
+              var location = focusedWindow.webContents.getURL()
+              var currentPage = location.split('/').pop().replace('.html', '')
+              if (currentPage.indexOf('index') < 0) {
+                if (location.match('/pages/')) {
+                  goToPath = location
+                  return
+                }
+                var chalPath = '../challenges' + lang
+                goToPath = require('path').join('file://', __dirname, chalPath, currentPage + '.html')
+              } else {
+                var indexPath = '../index' + lang + '.html'
+                goToPath = require('path').join('file://', __dirname, indexPath)
+              }
+              focusedWindow.loadURL(goToPath)
+            }
+          }
+        },
+        {
           label: '正體中文',
           click: function (item, focusedWindow) {
             if (focusedWindow) {

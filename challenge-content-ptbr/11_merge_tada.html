@@ -1,0 +1,58 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Fazendo merge local, deletando um branch e fazendo pull da upstream.</p>
+ </div>
+
+ <div class="chal-background light-blue solid-box">
+   <h2>Limpando</h2>
+
+   <p>Uma vez que você não precise mais de branches, você pode deletar eles localmente e remotamente. Isto é ótimo para evitar acumular branches antigos e sem uso.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Merge Local</h3>
+  <p>Sua pull request foi unida! Seu branch foi mesclado com o branch "gh-pages" do original no GitHub. Você pode fazer merge do seu branch localmente, também.</p>
+
+  <p>Primeiramente, vá até o branch em que você deseja que receba as alterações. Neste caso, o branch "gh-pages".</p>
+  <p><code class="shell">git checkout gh-pages</code></p>
+
+  <p>Agora diga para o Git qual branch terá suas modificações adicionadas aqui — neste caso, o seu branch que começa com "add-".</p>
+  <p><code class="shell">git merge &#60;NOMEDOBRANCH&#62;</code></p>
+
+  <p>Finalizamos por deletar o branch que não mais nos serve.</p>
+  <p><code class="shell">git branch -d &#60;NOMEDOBRANCH&#62;</code></p>
+
+  <p>Você também pode deletar o branch no seu fork do GitHub:</p>
+  <p><code class="shell">git push &#60;NOMEDOREMOTO&#62; --delete &#60;NOMEDOBRANCH&#62;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Pull da Upstream</h3>
+  <p>Por último, mas não menos importante, o original foi alterado desde que você teve sua pull request aceita — o Reporobot adicionou seu nome ao website! Se você fizer pull destas mudanças pela upstream você ficará atualizado e terá esta versão, também. Você pode ver isto ao vivo por entrar em: seuusuario.github.io/patchwork.</p>
+
+  <p>Para fazer pull da upstream original:</p>
+  <p><code class="shell">git pull upstream gh-pages</code></p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Parabéns!</h2>
+  <p>Você criou repositórios locais e remotos, trabalhou com colaboradores, fez push, fez pull e se uniu a milhões de outros desenvolvedores, além de enriquecer o open source!</p>
+
+  <p>Visite <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> para ver seu nome incorporado! Querendo continuar? Dê uma olhada na seção <a href="../pages/resources.html#what-next">Depois do Guia</a> na página de recursos deste app.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>Fazer merge de um branch com o branch atual</strong></li>
+    <code class="shell">git merge &#60;NOMEDOBRANCH&#62;</code>
+    <li><strong>Mudar para outro branch</strong></li>
+    <code class="shell">git checkout &#60;NOMEDOBRANCH&#62;</code>
+    <li><strong>Deletar um branch local</strong></li>
+    <code class="shell">git branch -d &#60;NOMEDOBRANCH&#62;</code>
+    <li><strong>Deletar um branch remoro</strong></li>
+    <code class="shell">git push &#60;NOMEDOREMOTO&#62; --delete &#60;NOMEDOBRANCH&#62;</code>
+    <li><strong>Fazer pull por um branch remoto</strong></li>
+    <code class="shell">git pull &#60;NOMEDOREMOTO&#62; &#60;NOMEDOBRANCH&#62;</code>
+  </ul>
+</div>

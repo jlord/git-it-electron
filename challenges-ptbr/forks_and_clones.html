@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Git-it</title>
+    <link rel="stylesheet" href="../assets/css/2-double-bounce.css">
+    <link rel="stylesheet" href="../assets/css/new-style.css">
+    <link rel="stylesheet" href="../assets/css/new-challenge.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css">
+  </head>
+  <body>
+    <header id="challenge-header" class="site-header">
+  <div class="lang-select">
+    <select id="lang-select" class="btn-outline lang-select">
+      <option value="">English</option>
+      <option value="ptbr">Português Brasileiro</option>
+      <option value="zhtw">正體中文</option>
+      <option value="ja">日本語</option>
+      <option value="kr">한국어</option>
+    </select>
+  </div>
+  <a class="filledblock" href="../index-ptbr.html">
+    Git-it
+  </a>
+  <span class="challenge-title">forks and clones</span>
+</header>
+
+<script type="text/javascript">
+  var selector = document.getElementById('lang-select')
+  // TODO put lang somewhere else that we can get without needing template in JS
+  // Can also remove default '-' with lang
+  var currentLang = "-ptbr".replace(/-/, '')
+  selector.value = currentLang
+  selector.addEventListener('change', function () {
+    var currentChallenge = document.querySelector('.challenge-item.current')
+    var dir = 'challenges' + (selector.value ? '-' + selector.value : '') + '/'
+    var url = currentChallenge.href.replace(/challenges(.+)?\//, dir)
+    // TODO pass to languages.js rather than set global
+    location.href = url
+  })
+</script>
+
+    <div class="wrapper" id="challenge-body">
+      <div id="challenge-sidebar" class="sidebar">
+  <ul class="list-of-challenges">
+    <h3>Challenges</h3>
+      <li>
+        <a id="get_git" data-id="0" href="get_git.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          get git
+        </a>
+      </li>
+      <li>
+        <a id="repository" data-id="1" href="repository.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          repository
+        </a>
+      </li>
+      <li>
+        <a id="commit_to_it" data-id="2" href="commit_to_it.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          commit to it
+        </a>
+      </li>
+      <li>
+        <a id="githubbin" data-id="3" href="githubbin.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          GitHubbin
+        </a>
+      </li>
+      <li>
+        <a id="remote_control" data-id="4" href="remote_control.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          remote control
+        </a>
+      </li>
+      <li>
+        <a id="forks_and_clones" data-id="5" href="forks_and_clones.html" class="challenge-item current">
+          <div class="current-arrow">▶️</div>
+          forks and clones
+        </a>
+      </li>
+      <li>
+        <a id="branches_arent_just_for_birds" data-id="6" href="branches_arent_just_for_birds.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          branches aren&#x27;t just for birds
+        </a>
+      </li>
+      <li>
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          it&#x27;s a small world
+        </a>
+      </li>
+      <li>
+        <a id="pull_never_out_of_date" data-id="8" href="pull_never_out_of_date.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          pull never out of date
+        </a>
+      </li>
+      <li>
+        <a id="requesting_you_pull_please" data-id="9" href="requesting_you_pull_please.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          requesting you pull please
+        </a>
+      </li>
+      <li>
+        <a id="merge_tada" data-id="10" href="merge_tada.html" class="challenge-item">
+          <div class="current-arrow">▶️</div>
+          merge tada
+        </a>
+      </li>
+  </ul>
+
+</div>
+      <div class="content">
+        <div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Fork (Bifurcar) um projeto do GitHub.com e clona-lo localmente.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Forks</h2>
+  <p>At&#xE9; agora voc&#xEA; fez um projeto localmente e fez pull para o GitHub, mas isso &#xE9; s&#xF3; metade da divers&#xE3;o! A outra metade est&#xE1; trabalhando com outras pessoas e outros projetos.</p>
+
+  <p>Quando voc&#xEA; <strong>fork</strong> um reposit&#xF3;rio, voc&#xEA; est&#xE1; criando uma c&#xF3;pia dele na sua conta GitHub. Sua forked c&#xF3;pia come&#xE7;a sua vida como um <strong>remote</strong> repository&#x2014;it existe apenas na sua conta GitHub, n&#xE3;o no seu computador. Forks s&#xE3;o usados para criar sua pr&#xF3;pria vers&#xE3;o de um projeto (este desvio do original &#xE9; como fazer uma fork na estrada) ou contribuir de volta suas mudan&#xE7;as (tais como corre&#xE7;&#xF5;es de bugs ou novos recursos) para o projeto original. </p>
+
+  <p>Para obter um reposit&#xF3;rio forked da sua conta GitHub para seu computador voc&#xEA; <strong>clone</strong> isso. Essa a&#xE7;&#xE3;o clonagem copia o reposit&#xF3;rio remoto para seu computador para que voc&#xEA; posso trabalhar localmente.</p>
+
+  <img src="../assets/imgs/clone-ptbr.png" width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Fazer Fork do reposit&#xF3;rio Patchwork</h3>
+  <p>O projeto que n&#xF3;s vamos trabalhar est&#xE1; em <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.V&#xE1; nesse site e clique no bot&#xE3;o fork, no canto superior direito. Um vez que a anima&#xE7;&#xE3;o de fork est&#xE1; completa, voc&#xEA; obtem uma c&#xF3;pia na sua conta. Copie seu o URL do seu fork na barra de endere&#xE7;os do seu navegador, este &#xE9; o endere&#xE7;o da sua fork nos servidores do GitHub.</p>
+  <!-- TODO write address for user here -->
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Clone seu Fork Localmente</h3>
+  <p>Agora, no terminal, voc&#xEA; vai clonar o repositorio para o seu computador. Ir&#xE1; ser criada autom&#xE1;ticamente uma nova pasta para o reposit&#xF3;rio de modo que n&#xE3;o h&#xE1; necessidade de criar um voc&#xEA; mesmo. Mas certifique-se que voc&#xEA; n&#xE3;o est&#xE1; clonando dentro de outra pasta de reposit&#xF3;rio Git!</p>
+
+  <p>Ent&#xE3;o, n&#xE3;o se esque&#xE7;a que voc&#xEA; n&#xE3;o est&#xE1; dentro do diret&#xF3;rio &apos;hello-world&apos; dos desafios anteriores. Para voltar atr&#xE1;s e deixar esta pasta para que voc&#xEA; possa clonar siga esses passos:</p>
+
+  <p>Retorne &#xE0; sua pasta &apos;hello-world&apos; :<br><span class="inline-tip">Dica: cd significa <em>mudar diret&#xF3;rio</em> e os dois pontos significam sair de um diret&#xF3;rio <em>um n&#xED;vel</em></span></p>
+  <p><code class="shell">cd ..</code></p>
+
+  <p>Clone agora:</p>
+  <p><code class="shell">git clone &lt;URLDOGITHUB&gt;</code></p>
+
+  <p>V&#xE1; para a pasta que criou para a sua c&#xF3;pia local do reposit&#xF3;rio que voc&#xEA; fez fork (nesse caso, nomeada &apos;patchwork&apos;).</p>
+  <p><code class="shell">cd patchwork</code></p>
+
+  <p>Agora voc&#xEA; obteve uma c&#xF3;pia do reposit&#xF3;rio no seu computador e ele &#xE9; conectado automaticamente ao reposit&#xF3;rio remoto (sua c&#xF3;pia feita o fork) na sua conta GitHub.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Conecte-se ao Reposit&#xF3;rio Original</h3>
+
+  <p>E se o reposit&#xF3;rio original que voc&#xEA; fez fork mudar? Voc&#xEA; vai querer ser capaz de fazer <strong>pull</strong> (receber) essas mudan&#xE7;as tamb&#xE9;m... Ent&#xE3;o, vamos adicionar outra conex&#xE3;o remota, desta vez para o original, do reposit&#xF3;rio com o URL <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.</p>
+
+  <p>Voc&#xEA; pode renomear essa conex&#xE3;o remota como voc&#xEA; quiser, mas normalmente as pessoas usam o nome &apos;upstream&apos;, vamos usar isso para isto.</p>
+
+  <p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+
+  <p>Para ter certeza que voc&#xEA; configurou corretamente o remoto, digite <code>git remote -v</code> para listar os endere&#xE7;os que voc&#xEA; armazenou. Voc&#xEA; deve ter um remoto &apos;origin&apos; com o endere&#xE7;o do <em>seu fork</em> e depois uma &apos;upstream&apos; remota com o endere&#xE7;o do original, com o URL observado acima nesta etapa.</p>
+</div>
+
+<div class="verify bold-blue solid-box">
+  <button class="btn-white" id="select-directory">SELECT DIRECTORY</button>
+  <button class="btn-white" id="verify-challenge">VERIFY</button>
+  <div id="verify-spinner" class="sk-double-bounce">
+    <div class="sk-child sk-double-bounce1"></div>
+    <div class="sk-child sk-double-bounce2"></div>
+  </div>
+  <span id="path-required-warning">Please select your repository directory.</span>
+  <span id="directory-path"></span>
+  <ul id="verify-list">
+  </ul>
+  <button class="btn-white" id="clear-completed-challenge">Clear completed status</button>
+</div>
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>Adiciona conex&#xF5;es remotas</strong></li>
+    <li><code class="shell">git remote add &lt;NOMEDOREMOTO&gt; &lt;URL&gt;</code></li>
+    <li><strong>Ver conex&#xF5;es remotas</strong></li>
+    <li><code class="shell">git remote -v</code></li>
+  </ul>
+</div>
+
+        <div class="prenext">
+  <div class="u-floatLeft">
+    <a href="remote_control.html" class="u-inline-block all-caps">remote control
+    <div class="arrow-left"></div>
+    </a>
+  </div>
+  <div class="u-textRight u-floatRight">
+    <a href="branches_arent_just_for_birds.html" class="u-inlineBlock all-caps">branches aren&#x27;t just for birds
+    <div class="arrow-right"></div>
+    </a>
+  </div>
+</div>
+
+<style>
+  .chal-no-pass.border-box::before {
+    content: "Não Passou?";
+  }
+
+  .chal-tip.border-box::before {
+    content: "Dicas";
+  }
+
+  .chal-step.border-box::before {
+    content: "Passo";
+  }
+
+  .chal-goal.border-box::before {
+    content: "Meta";
+  }
+</style>
+      </div>
+    </div>
+
+    <script>
+      var challengeStatus = require('../lib/challenge-completed.js')
+      // TODO Get this from the DOM and don't do template in JS
+      var currentChallenge = 'forks_and_clones'
+      challengeStatus.completed(currentChallenge)
+    </script>
+
+    <script>require('../lib/handle-external-links.js')</script>
+    <script>require('../lib/languages.js')</script>
+    <script>require('../lib/challenge.js')</script>
+  </body>
+</html>
