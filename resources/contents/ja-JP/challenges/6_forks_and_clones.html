@@ -1,0 +1,58 @@
+<div id="challenge-desc" class="challenge">
+    <h2>The Challenge:</h2>
+    <p>GitHub.comにあるプロジェクトをフォークして、ローカルにクローンしてみよう</p>
+</div>
+
+<h2>フォーク</h2>
+
+<p>さてここまでであなたはローカルにプロジェクトを作ってそれをGitHubにPushするところまで出来ました。でも実はまだまだ楽しい部分の半分をやっただけです。もう半分は他の人と他のプロジェクトで一緒に作業することです。</p>
+
+<p>リポジトリを<strong>フォーク(fork)</strong>すると、そのリポジトリのコピーをあなたのGitHubアカウントの下に作ることになります。フォークしたリポジトリはあなたの <strong>remote</strong>リポジトリの1つとして使えるようになります。フォークは、あるプロジェクトのあなた自身のバージョンを作るために使ったり、元のプロジェクトに対してバグ修正や機能追加を送り返してあげるために使います。
+</p>
+
+<p>プロジェクトがフォークできたら、次にそれを <strong>clone</strong> (コピーとも言います) してGitHubからあなたのコンピュータに持ってきましょう。ローカルで作業できるように。</p>
+
+<img src="../../../assets/imgs/clone.png" width="600">
+
+<h2>Step: Patchwork リポジトリをフォークしよう</h2>
+<p>これから使うリポジトリは <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>
+    です。リンク先からリポジトリにアクセスして、右上にあるforkボタンをクリックしましょう。フォークのアニメーションが終わると、あなたのアカウントの下にコピーができています。そうしたらフォークしたあなたのリポジトリのHTTPS
+    URLをコピーしましょう。上の方にあります。</p>
+
+<h2>Step: フォークをローカルにクローンしよう</h2>
+<p>
+    次に、ターミナルで、リポジトリをコンピュータにクローンしましょう。クローンすると新しいフォルダを作ってくれますので、改めてフォルダを作ってやる必要はありません。でも、くれぐれも別のGitリポジトリのフォルダの中にこのリポジトリをクローンしないように注意してください！
+    つまり、もしあなたがまだ'hello-world'リポジトリの中にいるのであれば、そこから出てください。今いるフォルダを離れるには(そしてそのフォルダが属しているフォルダに移動するには)、ドット2つに向かって 'changing
+    directory' すればいいです:
+
+<p><code>$ cd ..</code></p>
+
+ではクローンしましょう:
+
+<p><code>$ git clone &#60;URLFROMGITHUB&#62;</code></p>
+
+<p>作成されたフォルダに移動しましょう。 (今回のケースでは'patchwork'という名前です)</p>
+<p><code>$ cd patchwork</code></p>
+
+<p>さてこれであなたはリポジトリのコピーを自分のコンピュータ上に持ってくることができました。そしてリモートリポジトリ（フォークした結果できたあなたのリポジトリ）の設定は既に自動的に行われています。</p>
+
+<h2>Step: 元のリポジトリともつなごう</h2>
+
+<p>でももし、元のリポジトリに変更が加わったらどうすれば？ その変更も<strong>pull</strong>できるようにしたいですよね？　そのためにもう一つ別のremoteを設定しましょう。このケースでは <a
+        href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>です。</p>
+
+<p>このremoteについては好きな名前をつけても問題ありません。でも、元のリポジトリに対しては'upstream'という名前をつけることが多いです。今回はそうしてみましょう。</p>
+
+<p><code>$ git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+
+{{{verify_directory_button}}}
+
+<div class="blue-border-box">
+    <h2>Tips</h2>
+    <ul>
+        <li><strong>remoteの設定を追加する</strong></li>
+        <li><code>$ git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
+        <li><strong>remoteの設定を確認する</strong></li>
+        <li><code>$ git remote -v</code></li>
+    </ul>
+</div>

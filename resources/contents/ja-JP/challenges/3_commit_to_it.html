@@ -1,0 +1,50 @@
+<div id="challenge-desc" class="challenge">
+    <h2>The Challenge:</h2>
+    <p>ファイルを作って、何か変更を追加してみよう。その変更をGitにコミットしてみよう。</p>
+</div>
+
+<h2>Step: 新しいファイルを作る</h2>
+
+<p>リポジトリを作ることができたので、ファイルを追加してみましょう。</p>
+
+<p>テキストエディタを開いて、何行か文章を書いてみましょう。例えばHelloと書いてみて、ファイルを<code>readme.txt</code>という名前にして、前の章で作った'hello-world'フォルダに保存しましょう。</p>
+
+<h2>Step: Statusを確認し、変更をAddしてCommitしてみよう</h2>
+<p>次にリポジトリの<strong>status</strong>を使って、ファイルに変更が加わってないかどうかチェックしてみましょう。ターミナルを使って、'hello-world'フォルダの中で次のコマンドを入力してみましょう。ファイルの変更が表示されると思います。:
+</p>
+
+<p><code>$ git status</code></p>
+
+<p>次に今作ったファイルを<strong>add</strong> して、変更を<strong>commit</strong> (保存とほとんど同じ意味です) できるようにします。</p>
+
+<p><code>$ git add readme.txt</code></p>
+
+<p>最後に、これらの変更を短い説明文（commit message）と一緒に<strong>commit</strong>してリポジトリの履歴として保存しましょう。</p>
+<p><code>$ git commit -m "&#60;your commit message&#62;"</code></p>
+
+<h2>Step: さらに変更してみよう</h2>
+<p>さらに別の行を一行、<code>readme.txt</code>に追加して保存してみましょう。</p>
+
+<p>ターミナルの中で、最後にcommitした内容といまのファイルの内容との差分を確認することができます。これを<strong>diff</strong>といいます。</p>
+
+<p><code>$ git diff</code></p>
+
+<p>さて、そうしたら、先ほど学んだように、この変更もcommitしましょう。</p>
+
+{{{verify_directory_button}}}
+
+<div class="blue-border-box">
+    <h2>Tips</h2>
+    <ul>
+        <li><strong>リポジトリの変更ステータスを確認する</strong></li>
+        <li><code>$ git status</code></li>
+        <li><strong>ファイルの変更を確認する</strong></li>
+        <li><code>$ git diff</code></li>
+        <li><strong>ファイルの変更をコミットできるようにAddする</strong></li>
+        <li><code>$ git add &#60;FILENAME&#62;</code></li>
+        <li><strong>変更すべてをいっぺんにAddする</strong></li>
+        <li><code>$ git add .</code></li>
+        <li><strong>Addした変更を変更内容の説明文と一緒にcommit (保存) する</strong></li>
+        <li><code>$ git commit -m "&#60;your commit message&#62;"</code></li>
+        <ul>
+</div>

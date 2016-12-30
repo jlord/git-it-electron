@@ -1,0 +1,34 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>협업자(collaborator)로부터 변경들을 풀(pull)해와서 파일을 최신으로 유지해보세요.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h3>리모트(remote)로부터 풀(pull)해오기</h3>
+  <p>무엇인가를 누군가와 같이 작업한다면, 마지막 변경에 대한 최신 상태를 유지해야만 합니다. 따라서 GitHub 저장소에 푸시된 모든 변경들을 <strong>풀</strong>해오고 싶을 것입니다.</p>
+
+  <img src="../../../assets/imgs/pull.png" alt="A diagram shows a computer pulling information down from a repository's website" width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Reporobot 이 무엇을 했을까요?</h3>
+  <p>GitHub 에서 'origin' 이라는 이름의 리모트로부터 모든 변경을 풀해서 Reporobot 이 당신의 브랜치에서 무언가 변경했는지 확인해봅시다:</p>
+
+  <p><code class="shell">git pull &lt;리모트이름&gt; &lt;브랜치이름&gt;</code></p>
+
+  <p>바뀐 것이 아무것도 없다면 'Already up-to-date' 라고 알려줄 것입니다. 바뀐 것이 있다면 Git 이 당신의 로컬 버전에 그 변경들을 머지할 것입니다.</p>
+
+  <p>Reporobot 이 뭔가 변경했나요? Git 이 어디가 바뀌었는지 말해줄 것입니다. 그 파일들을 열어 Reporobot 이 업데이트한 것들을 볼 수 있습니다. 와우, Reporobot 대단하네요!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>Git 상태 체크하기</strong></li>
+    <code class="shell">git status</code>
+    <li><strong>리모트 브랜치로부터 변경 풀해오기</strong></li>
+    <code class="shell">git pull &lt;리모트이름&gt; &lt;브랜치이름&gt;</code>
+    <li><strong>풀해오기 전에 리모트의 변경들 보기</strong></li>
+    <code class="shell">git fetch --dry-run</code>
+  </ul>
+</div>

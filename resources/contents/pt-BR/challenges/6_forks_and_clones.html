@@ -1,0 +1,61 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Fork (Bifurcar) um projeto do GitHub.com e clona-lo localmente.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Forks</h2>
+  <p>Até agora você fez um projeto localmente e fez pull para o GitHub, mas isso é só metade da diversão! A outra metade está trabalhando com outras pessoas e outros projetos.</p>
+
+  <p>Quando você <strong>fork</strong> um repositório, você está criando uma cópia dele na sua conta GitHub. Sua forked cópia começa sua vida como um <strong>remote</strong> repository—it existe apenas na sua conta GitHub, não no seu computador. Forks são usados para criar sua própria versão de um projeto (este desvio do original é como fazer uma fork na estrada) ou contribuir de volta suas mudanças (tais como correções de bugs ou novos recursos) para o projeto original. </p>
+
+  <p>Para obter um repositório forked da sua conta GitHub para seu computador você <strong>clone</strong> isso. Essa ação clonagem copia o repositório remoto para seu computador para que você posso trabalhar localmente.</p>
+
+  <img src="../../../assets/imgs/clone-ptbr.png" width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Fazer Fork do repositório Patchwork</h3>
+  <p>O projeto que nós vamos trabalhar está em <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.Vá nesse site e clique no botão fork, no canto superior direito. Um vez que a animação de fork está completa, você obtem uma cópia na sua conta. Copie seu o URL do seu fork na barra de endereços do seu navegador, este é o endereço da sua fork nos servidores do GitHub.</p>
+  <!-- TODO write address for user here -->
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Clone seu Fork Localmente</h3>
+  <p>Agora, no terminal, você vai clonar o repositorio para o seu computador. Irá ser criada automáticamente uma nova pasta para o repositório de modo que não há necessidade de criar um você mesmo. Mas certifique-se que você não está clonando dentro de outra pasta de repositório Git!</p>
+
+  <p>Então, não se esqueça que você não está dentro do diretório 'hello-world' dos desafios anteriores. Para voltar atrás e deixar esta pasta para que você possa clonar siga esses passos:</p>
+
+  <p>Retorne à sua pasta 'hello-world' :<br><span class="inline-tip">Dica: cd significa <em>mudar diretório</em> e os dois pontos significam sair de um diretório <em>um nível</em></span></p>
+  <p><code class="shell">cd ..</code></p>
+
+  <p>Clone agora:</p>
+  <p><code class="shell">git clone &#60;URLDOGITHUB&#62;</code></p>
+
+  <p>Vá para a pasta que criou para a sua cópia local do repositório que você fez fork (nesse caso, nomeada 'patchwork').</p>
+  <p><code class="shell">cd patchwork</code></p>
+
+  <p>Agora você obteve uma cópia do repositório no seu computador e ele é conectado automaticamente ao repositório remoto (sua cópia feita o fork) na sua conta GitHub.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Conecte-se ao Repositório Original</h3>
+
+  <p>E se o repositório original que você fez fork mudar? Você vai querer ser capaz de fazer <strong>pull</strong> (receber) essas mudanças também... Então, vamos adicionar outra conexão remota, desta vez para o original, do repositório com o URL <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.</p>
+
+  <p>Você pode renomear essa conexão remota como você quiser, mas normalmente as pessoas usam o nome 'upstream', vamos usar isso para isto.</p>
+
+  <p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+
+  <p>Para ter certeza que você configurou corretamente o remoto, digite <code>git remote -v</code> para listar os endereços que você armazenou. Você deve ter um remoto 'origin' com o endereço do <em>seu fork</em> e depois uma 'upstream' remota com o endereço do original, com o URL observado acima nesta etapa.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>Adiciona conexões remotas</strong></li>
+    <li><code class="shell">git remote add &#60;NOMEDOREMOTO&#62; &#60;URL&#62;</code></li>
+    <li><strong>Ver conexões remotas</strong></li>
+    <li><code class="shell">git remote -v</code></li>
+  </ul>
+</div>
