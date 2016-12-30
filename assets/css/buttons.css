@@ -128,7 +128,7 @@ button .octicon {
   padding: 4px 13px;
   position: absolute;
   height: 36px;
-  width: 100px;
+  width: 160px;
   margin: 5px 8px;
   top: 0;
   left: 0;
@@ -142,7 +142,7 @@ button .octicon {
   /*border-top-color: #8cf;*/
   border-top-color: #A6A6A6;
   position: relative;
-  left: 40px;
+  left: 65px;
   top: 5px;
   pointer-events: none;
   display: inline-block;
