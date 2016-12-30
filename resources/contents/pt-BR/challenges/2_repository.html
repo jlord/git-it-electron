@@ -1,0 +1,54 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Crie um novo repositório no seu computador.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Repositórios</h2>
+  <p>Um <strong>repositório</strong> é uma coleção de itens relacionados. No nosso caso, quando escrevemos softwares, é uma coleção de arquivos relacionados a projetos dos softwares. Você pode imagina-lá como uma pasta de projeto com todos os arquivos relevantes dentro dela. Na verdade, isso é o que vai parecer no seu computador de qualquer maneira. Algumas vezes eles são chamados de "repos" para abreviar.</p>
+
+  <img src="../../../assets/imgs/repos-ptbr.png" width="600">
+
+  <p>Você diz ao Git o que seu projeto é e o Git vai começar a monitorar todas as mudanças dessa pasta. Isto torna-o um repositório Git - uma pasta de itens que estão sendo monitoradas pelo Git. O Git monitora quando arquivos são adicionados, removidos ou até mesmo se uma única letra em um único arquivo é alterada. Tudo isso mais quem o fez e quando fez é monitorado pelo Git. Nos software isso é chamado <strong>controle de versão</strong>.</p>
+
+  <h2>Usando o Terminal</h2>
+  <p>O <strong>Terminal</strong> (ou Bash) é uma maneira de instruir seu computador a fazer coisas digitando comandos em vez de clicar com seu mouse. Você pode renomear arquivos, abrir arquivos, criar novas pastas, mover-se entre diretórios (pastas) e mais tudo executando digitando comandos. Você pode até mesmo executar um editor de texto (tal como o <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank">Vim</a>) no seu terminal e nunca ter que sair dele!</p>
+
+  <p>Além de navegar no seu computador, você pode também usar programas no Terminal que tem uma <strong>command-line interface (CLI)</strong>, que significa que eles podem ser exexutados com comandos no terminal. Git é um desses. Você pode acessar e controlar Git através de comandos no terminal, como você vai estar fazendo muito em breve!</p>
+
+  <p>Em Git-it, você vai aprender algumas ações basicas de linhas de comando (além dos comandos Git) o qual serão descritos nos passos a seguir.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Criar um repositório</h3>
+  <p>Você vai criar uma nova pasta do projeto e então inicializa-a como um repositório Git. Para facilitar as coisas, nomeie sua pasta com o nome do projeto, como 'hello-world'.</p>
+
+  <p>Abra seu terminal! Na sua janela de terminal, digite esses comandos, um por vez, pressione enter/return após cada comando.</p>
+
+  <p>Primeiro, crie uma nova pasta:<br><span class="inline-tip">Dica: mkdir significa <em>criar diretório</em></span></p>
+  <code class="shell">mkdir hello-world</code>
+
+  <p>Em seguida ir dentro dessa pasta:<br><span class="inline-tip">Dica: cd significa <em>mudar diretório</em></span></p>
+  <code class="shell">cd hello-world</code>
+
+  <p>Finalmente, diga ao Git para iniciar (começar a monitorar) esta pasta:</p>
+  <code class="shell">git init</code>
+
+  <p>O último comando deve retornar algo começando com "Initialized empty Git repository" (Inicializado repositório vazio do Git). Os outros comandos não retornam nada.</p>
+
+  <p>Você terminou! Se você quiser ter duplamente certeza que é um repositório Git, digite <code>git status</code> e se não retornar 'fatal: Not a git repository...' (Não é um repositório git), está tudo certo!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>Crie uma nova pasta (criar um diretório)</strong></li>
+    <code class="shell">mkdir &#60;NOMEDAPASTA&#62;</code>
+    <li><strong>Navegar para dentro desta pasta (mudar de diretório)</strong></li>
+    <code class="shell">cd &#60;NOMEDAPASTA&#62;</code>
+    <li><strong>Lista dos itens dentro de uma pasta</strong></li>
+    <code class="shell">ls</code>
+    <li><strong>Inicializa o Git em uma pasta</strong></li>
+    <code class="shell">git init</code>
+  </ul>
+</div>

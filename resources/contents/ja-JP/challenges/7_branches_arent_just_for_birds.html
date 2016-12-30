@@ -1,0 +1,100 @@
+<div id="challenge-desc" class="challenge">
+    <h2>The Challenge:</h2>
+    <p>フォークしたリポジトリの上でブランチを作り、貢献の準備をしよう</p>
+</div>
+
+<h2>ブランチ</h2>
+
+<p>Git リポジトリは必要に応じてブランチを使って隔離された作業環境を作ることができます。プロジェクトで作業するとき、または他の人と作業をするときに<strong>ブランチ(branch)</strong>を作って変更を保存しておくというのはよくやることです。こうすることによって、メインのブランチ（通常は'master'という名前ですが）を安全な状態に保ちつつ（壊したり消したりしないで、ということです）作業をすることができます。作業が終わって準備が整ったら、ブランチを
+    'master'にマージすればいいのです。</p>
+
+<img src="../../../assets/imgs/branches.png" width="600">
+
+
+<p>ブランチがどんな風に役に立つのかについては、次を見てみてください。
+    GitHub Guide: <a href="http://guides.github.com/overviews/flow/"
+                     target="_blank">guides.github.com/overviews/flow</a></p>
+
+<h2>GitHub Pages</h2>
+<p>
+    GitHubは'gh-pages'という名前のブランチにあるファイルを自動的に静的なWebサイトとしてホストしてくれる機能があります。あなたがフォークしたプロジェクトはWebサイトを作るためのものでした、ですので、メインブランチ名が'master'の代わりに'gh-pages'になっています。こういうタイプのサイトは、次のようなパターンのURLになっています。: </p>
+
+<code>http://githubusername.github.io/repositoryname</code>
+
+<h2>Step: ブランチを作ろう</h2>
+<p>ブランチを作ると、Gitは今いるブランチのものをすべてコピーして、新しく作ったブランチに持ってきてくれます。</p>
+
+<p><code>git status</code>と入力して、いま自分がなんという名前のブランチにいるか確認しましょう。('gh-pages'になっているはずです)</p>
+
+<p>ブランチを作って、名前を"add-&#60;username&#62;"にしてみましょう。 'username' をあなたのユーザー名で入れ替えてください。たとえば、"add-jlord"みたいに。 <strong>ブランチ名は大文字小文字を区別します。ですので、GitHubのユーザー名と正確に同じ名称になるようにつけてください。</strong>.
+</p>
+
+<p><code>$ git branch &#60;BRANCHNAME&#62;</code></p>
+
+<p>これで'gh-pages'と全く同じ内容だけど名前の違うブランチを作ることができました。</p>
+
+<p>このブランチに行ってその上で作業をするためには、ターミナルで使った<code>cd</code>コマンドに似た物を使います。<strong>checkout</strong> というコマンドを使って、新しいブランチに行きましょう。:
+</p>
+
+<p><code>$ git checkout &#60;BRANCHNAME&#62;</code></p>
+
+<h2>Step: 新しいファイルを作ろう</h2>
+<p>テキストエディタに戻って:</p>
+<ul>
+    <li><span style="white-space: nowrap;">"add-&#60;USERNAME&#62;.txt"</span>という名前のファイルを作りましょう。'username'はあなたのユーザー名です。たとえば"add-jlord.txt"みたいな。
+    </li>
+    <li>そうしたら、その中にあなた自身の
+        GitHub ユーザー名を書き込んでください。たとえば、
+        わたしなら、'jlord'と書きます。
+    </li>
+    <li>このファイルをPatchworkリポジトリの中の'contributors'フォルダに保存してください。:
+        <strong>Patchwork/contributors/add-yourusername.txt</strong></li>
+    <li>次に変更をチェックインしましょう。</li>
+</ul>
+
+<h2>Step: チェックイン</h2>
+<p>プロジェクトに変更をチェックインするために次の手順を実行してください。: </p>
+
+<p><code>$ git status</code></p>
+<p><code>$ git add &#60;FILENAME&#62;</code></p>
+<p><code>$ git commit -m "&#60;commit message&#62;"</code></p>
+
+<p>次にこの変更をGitHub上のあなたのリポジトリにPushしましょう。:</p>
+
+<p><code>$ git push origin &#60;BRANCHNAME&#62;</code></p>
+
+{{{verify_directory_button}}}
+
+<div class="didnt-pass">
+    <h2>うまくいかない?</h2>
+
+    <h4>ファイルがcontributorsの中にない</h4>
+    <p>あなたが作ったファイルは、Patchworkリポジトリの'contributors'フォルダの中にないといけません。もし他のところに置いてしまっていたら、FinderかWindows
+        Explorerを使ってファイルを'contributors'フォルダに移動しましょう。その後<code>git status</code>コマンドでもう一回確認してみてください。変更が見えるはずです。この変更をすべてAddして(-A)Commitするには、次のコマンドが使えます。
+    </p>
+    <p><code>$ git add -A</code></p>
+    <p><code>$ git commit -m "move file into contributors folder"</code></p>
+
+    <h4>Branch name expected: _____</h4>
+    <p>ブランチ名はあなたのユーザー名と完全に一致していないといけません。ブランチ名を変更するには:</p>
+    <p><code>$ git branch -m &#60;NEWBRANCHNAME&#62;</code></p>
+    <p>うまくできたら、もう一回 verify してみましょう!</p>
+</div>
+
+<div class="blue-border-box">
+    <h2>Tips</h2>
+    <ul>
+        <li>ブランチを作るのと同時にブランチを切り替えすることが一行でできる:</li>
+        <li><code>$ git checkout -b &#60;BRANCHNAME&#62;</code></li>
+        <li>ブランチの新規作成:</li>
+        <li><code>$ git branch &#60;BRANCHNAME&#62;</code></li>
+        <li>ブランチの切り替え:</li>
+        <li><code>$ git checkout &#60;BRANCHNAME&#62;</code></li>
+        <li>ブランチを一覧する:</li>
+        <li><code>$ git branch</code></li>
+        <li>いまいるブランチの名前を変更する:</li>
+        <li><code>$ git branch -m &#60;NEWBRANCHNAME&#62;</code></li>
+        <li>いまいるブランチを確認する</li>
+        <li><code>$ git status</code></li>
+    </ul>
+</div>

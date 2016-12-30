@@ -1,6 +1,5 @@
 node_modules
 out
 .DS_Store
-challenges*/*
-pages/*
+built
 .idea

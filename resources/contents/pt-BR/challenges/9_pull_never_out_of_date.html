@@ -1,0 +1,34 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Deixe seus arquivos atualizados por receber atualizações dos colaboradores.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h3>Fazendo Pull de um Remoto</h3>
+  <p>Se você está trabalhando junto com outras pessoas, você precisa sempre estar atualizado com as modificações mais recentes. Portanto você deve fazer <strong>pull</strong> de todas as mudanças que foram enviadas ao repositório central no GitHub.</p>
+
+  <img src="../../../assets/imgs/pull-ptbr.png" width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>O que o Reporobot tem feito?</h3>
+  <p>Veja se o Reporobot fez alguma mudança no seu branch por fazer pull das possíveis mudanças do remoto chamado "origin" no GitHub:</p>
+
+  <p><code class="shell">git pull &lt;NOMEDOREMOTO&gt; &lt;NOMEDOBRANCH&gt;</code></p>
+
+  <p>Se  nada mudou, ele irá dizer 'Already up-to-date' (já está atualizado). Se houverem mudanças, o Git irá fazer o merge (união) destas com a sua versão local.</p>
+
+  <p>O Reporobot fez alguma mudança? O Git avisa quando há mudanças. Você pode abrir este arquivo e ver a mudança que o Reporobot fez. Surpresa, Reporobot é um artista!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>Checa o estado do Git</strong></li>
+    <code class="shell">git status</code>
+    <li><strong>Recebe alterações (pull) de um branch remoto</strong></li>
+    <code class="shell">git pull &lt;NOMEDOREMOTO&gt; &lt;NOMEDOBRANCH&gt;</code>
+    <li><strong>Vê as mudanças de um remoto antes de recebê-las</strong></li>
+    <code class="shell">git fetch --dry-run</code>
+  </ul>
+</div>

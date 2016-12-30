@@ -2,6 +2,7 @@ var fs = require('fs')
 var path = require('path')
 
 var electron = require('electron')
+var locale = require('./lib/locale.js')
 var app = electron.app
 var BrowserWindow = electron.BrowserWindow
 var Menu = electron.Menu
@@ -26,19 +27,32 @@ app.on('window-all-closed', function appQuit () {
 })
 
 app.on('ready', function appReady () {
-  mainWindow = new BrowserWindow({"minWidth": 800, "minHeight": 600, width: 980, height: 760, title: 'Git-it', icon: iconPath })
+  mainWindow = new BrowserWindow({
+    'minWidth': 800,
+    'minHeight': 600,
+    width: 980,
+    height: 760,
+    title: 'Git-it',
+    icon: iconPath
+  })
 
   var appPath = app.getPath('userData')
   var userDataPath = path.join(appPath, 'user-data.json')
   var userSavedDir = path.join(appPath, 'saved-dir.json')
-
+  var language = locale.getLocale(app.getLocale())
   // tools for development to prefill challenge completion
   // usage: electron . --none
   //        electron . --some
   //        electron . --all
-  if (process.argv[2] === '--none') { setAllChallengesUncomplete(userDataPath) }
-  if (process.argv[2] === '--some') { setSomeChallengesComplete(userDataPath) }
-  if (process.argv[2] === '--all')  { setAllChallengesComplete(userDataPath) }
+  if (process.argv[ 2 ] === '--none') {
+    setAllChallengesUncomplete(userDataPath)
+  }
+  if (process.argv[ 2 ] === '--some') {
+    setSomeChallengesComplete(userDataPath)
+  }
+  if (process.argv[ 2 ] === '--all') {
+    setAllChallengesComplete(userDataPath)
+  }
 
   fs.exists(userDataPath, function (exists) {
     if (!exists) {
@@ -55,8 +69,7 @@ app.on('ready', function appReady () {
       })
     }
   })
-
-  mainWindow.loadURL('file://' + __dirname + '/index.html')
+  mainWindow.loadURL('file://' + locale.getLocaleBuiltPath(language) + '/pages/index.html')
 
   ipcMain.on('getUserDataPath', function (event) {
     event.returnValue = userDataPath
@@ -67,7 +80,7 @@ app.on('ready', function appReady () {
   })
 
   ipcMain.on('open-file-dialog', function (event) {
-    var files = dialog.showOpenDialog(mainWindow, { properties: [ 'openFile', 'openDirectory' ]})
+    var files = dialog.showOpenDialog(mainWindow, { properties: [ 'openFile', 'openDirectory' ] })
     if (files) {
       event.sender.send('selected-directory', files)
     }
@@ -76,7 +89,7 @@ app.on('ready', function appReady () {
   ipcMain.on('confirm-clear', function (event) {
     var options = {
       type: 'info',
-      buttons: ['Yes', 'No'],
+      buttons: [ 'Yes', 'No' ],
       title: 'Confirm Clearing Statuses',
       message: 'Are you sure you want to clear the status for every challenge?'
     }
@@ -89,7 +102,7 @@ app.on('ready', function appReady () {
     menu = Menu.buildFromTemplate(darwinTemplate(app, mainWindow))
     Menu.setApplicationMenu(menu)
   } else {
-    menu = Menu.buildFromTemplate(otherTemplate(mainWindow))
+    menu = Menu.buildFromTemplate(otherTemplate(app, mainWindow))
     mainWindow.setMenu(menu)
   }
 
@@ -101,7 +114,7 @@ app.on('ready', function appReady () {
 function setAllChallengesComplete (path) {
   var challenges = JSON.parse(fs.readFileSync(path))
   for (var key in challenges) {
-    challenges[key].completed = true
+    challenges[ key ].completed = true
   }
   fs.writeFileSync(path, JSON.stringify(challenges), '', null)
 }
@@ -109,7 +122,7 @@ function setAllChallengesComplete (path) {
 function setAllChallengesUncomplete (path) {
   var challenges = JSON.parse(fs.readFileSync(path))
   for (var key in challenges) {
-    challenges[key].completed = false
+    challenges[ key ].completed = false
   }
   fs.writeFileSync(path, JSON.stringify(challenges), '', null)
 }
@@ -119,8 +132,7 @@ function setSomeChallengesComplete (path) {
   var challenges = JSON.parse(fs.readFileSync(path))
   for (var key in challenges) {
     counter++
-    if (counter < 6) challenges[key].completed = true
-    else challenges[key].completed = false
+    challenges[ key ].completed = counter < 6
   }
   fs.writeFileSync(path, JSON.stringify(challenges), '', null)
 }

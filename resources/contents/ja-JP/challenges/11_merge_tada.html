@@ -1,0 +1,55 @@
+<div id="challenge-desc" class="challenge">
+    <h2>The Challenge:</h2>
+    <p>ブランチをローカルでマージして、古いブランチを消し、upstreamから変更をPullしましょう</p>
+</div>
+
+<h2>Step: ローカルでマージする</h2>
+
+<p>あなたのPull Requestはマージされました! あなたはこの変更を自分のフォークバージョンにもアップデートしておきたいですよね？
+    あなたのリポジトリのメインブランチにマージしましょう。この場合、'gh-pages'という名前のブランチです。</p>
+
+<p>まずマージしたい<em>先</em>のブランチに移動しましょう。この場合、'gh-pages'ブランチです。</p>
+
+<p><code>$ git checkout gh-pages</code></p>
+
+<p>次にGitに、マージして<em>取り込みたい</em>ブランチを指定します。この場合、あなたのフィーチャーブランチのことで、"add-"から始まる名前のブランチです。</p>
+
+<p><code>$ git merge &#60;BRANCHNAME&#62;</code></p>
+
+<p>ブランチをマージできたら、整理整頓のためにフィーチャーブランチを消してしまいましょう。</p>
+<p><code>$ git branch -d &#60;BRANCHNAME&#62;</code></p>
+
+<p>GitHub上にあるリポジトリからもブランチを消すことができます。:</p>
+<p><code>$ git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
+
+<h2>Step: UpstreamからPullしてみよう</h2>
+<p>最後だけど大事なこととして、元のリポジトリの変更をPullすると、
+    (ホームページにあなたの名前が表示されてますよ) 最新にアップデートされて、同じバージョンを持つことになります。
+    結果はここで見れますよ: yourusername.github.io/patchwork.</p>
+
+<p>upstreamからpullするには:</p>
+
+<p><code>$ git pull upstream gh-pages</code></p>
+
+<h2>おめでとうございます!</h2>
+<p>あなたはローカルリポジトリを作って、リモートリポジトリも作って、コラボレーターと共同作業をして、Push, Pullをして、その他のオープンソースを開発し豊かにするさまざまなことをやりました!</p>
+<p><a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a>にアクセスして、あなたの名前が一覧に表示されているのを確認してみてください！！
+</p>
+
+{{{verify_directory_button}}}
+
+<div class="blue-border-box">
+    <h2>Tips</h2>
+    <ul>
+        <li><strong>あるブランチを今いるブランチにマージする</strong></li>
+        <code>$ git merge &#60;BRANCHNAME&#62;</code>
+        <li><strong>ブランチを切り替える</strong></li>
+        <code>$ git checkout &#60;BRANCHNAME&#62;</code>
+        <li><strong>ローカルのブランチを消す</strong></li>
+        <code>$ git branch -d &#60;BRANCHNAME&#62;</code>
+        <li><strong>リモートのブランチを消す</strong></li>
+        <code>$ git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
+        <li><strong>リモートブランチをPullする</strong></li>
+        <code>$ git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+    </ul>
+</div>
