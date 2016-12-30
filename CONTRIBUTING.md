@@ -8,6 +8,8 @@ Contributions are more than welcome! Checkout the [help wanted](https://github.c
 
 **📣 Provide a description in your Issue/Pull Request.** In your pull request please explain what the problem was (with gifs or screenshots would be fantastic!) and how your changes fix it. 
 
+🚫 🙀 :fire: _No description provided._ :fire: 🙀 🚫
+
 ---
 
 **Code style is [JS Standard](http://standardjs.com) and no ES6 syntax** :tada: but open to relevant new methods.
