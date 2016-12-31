@@ -10,7 +10,7 @@
         <script src="../../../lib/challenges-completed.js"></script>
         <script src="../../../lib/handle-external-links.js"></script>
     </head>
-    <body class="tableofcontents">
+    <body class="index-page">
         <header class="site-header">
             <div class="lang-select">
                 <select id="lang-select" class="btn-outline lang-select">
@@ -41,6 +41,7 @@
               <span class="border-group-right btn js-clear-all-challenges" title="Clear status"><span class="octicon octicon-trashcan"></span></span>
           </div>
 
+          <div id="show-first-run">
             <h2>Git-itにようこそ!</h2>
             <p><a href="http://github.com/jlord/git-it" target="_blank">Git-it workshop</a> チャレンジの各ステップの説明です。</p>
             <p>Git-itをインストールすればオフラインでも教材として利用できます（ターミナルでチャレンジするときはターミナルの説明を見てください）。楽しんでください!</p>
@@ -48,8 +49,24 @@
             <a href="../challenges/get_git.html" id="get-started">
                 <button class="btn-primary">Get started!</button>
             </a>
-            <!-- TODO Update this copy with en-US new front page and sections -->
+          </div>
 
+          <!-- TODO Update this copy with en-US new front page and sections -->
+          <div id="show-wip-run">
+            <h2>Git-itにようこそ!</h2>
+            <p><a href="http://github.com/jlord/git-it" target="_blank">Git-it workshop</a> チャレンジの各ステップの説明です。</p>
+            <p>Git-itをインストールすればオフラインでも教材として利用できます（ターミナルでチャレンジするときはターミナルの説明を見てください）。楽しんでください!</p>
+
+            <a id="left-off-from"><button class="btn-primary">Keep going!</button></a>
+          </div>
+          <div id="show-finished-run">
+            <h2>Git-itにようこそ!</h2>
+            <p><a href="http://github.com/jlord/git-it" target="_blank">Git-it workshop</a> チャレンジの各ステップの説明です。</p>
+            <p>Git-itをインストールすればオフラインでも教材として利用できます（ターミナルでチャレンジするときはターミナルの説明を見てください）。楽しんでください!</p>
+
+            <a href="../pages/resources.html"><button class="btn-primary">View Resources</button></a>
+            <button class="btn-secondary js-clear-all-challenges">Clear all completions</button>
+          </div>
 
         </div>
         <script src="../../../lib/languages.js"></script>
