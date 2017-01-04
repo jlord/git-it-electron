@@ -12,7 +12,7 @@
     "desktop"
   ],
   "productName": "Git-it",
-  "main": "main.js",
+  "main": "init.js",
   "scripts": {
     "start": "electron .",
     "test": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
@@ -39,6 +39,7 @@
     "babel-plugin-transform-flow-strip-types": "^6.21.0",
     "babel-preset-env": "^1.1.4",
     "electron": "^1.4.3",
+    "electron-compilers": "^5.2.2",
     "electron-packager": "^8.0.0",
     "rimraf": "^2.5.4",
     "flow-bin": "^0.37.4",
@@ -46,6 +47,7 @@
   },
   "dependencies": {
     "cheerio": "^0.19.0",
+    "electron-compile": "^5.1.2",
     "glob": "^5.0.5",
     "handlebars": "^3.0.3",
     "request": "^2.57.0"
