@@ -35,6 +35,9 @@
   },
   "homepage": "https://github.com/jlord/git-it-electron",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-flow-strip-types": "^6.21.0",
+    "babel-preset-env": "^1.1.4",
     "electron": "^1.4.3",
     "electron-packager": "^8.0.0",
     "rimraf": "^2.5.4",
