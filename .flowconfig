@@ -1,2 +1,4 @@
 [ignore]
 .*/node_modules/.*\.json
+# oh god, i hate everything
+.*/node_modules/typechecker/es2015/index.js
