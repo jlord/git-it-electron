@@ -118,7 +118,7 @@ module.exports = function menu (app, mainWindow) {
               focusedWindow.loadURL(path)
             }
           }
-        },
+        }
       ]
     },
     {

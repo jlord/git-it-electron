@@ -55,7 +55,7 @@ module.exports = function menu (app, mainWindow) {
           click: function (item, focusedWindow) {
             focusedWindow.webContents.toggleDevTools()
           }
-        },
+        }
       ]
     },
     {

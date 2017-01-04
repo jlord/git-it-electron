@@ -15,7 +15,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "standard lib/*.js lib/verify/*.js menu/*.js main.js",
+    "test": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
     "clean": "rm -Rf built/*",
     "build-chals": "node lib/build-challenges.js",
     "build-pages": "node lib/build-pages.js",
