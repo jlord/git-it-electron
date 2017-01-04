@@ -1,3 +1,2 @@
-// ...and that your main app is called ./src/main.js. This is written as if
-// you were going to `require` the file from here.
+// load the module and then initialize it with the main script
 require('electron-compile').init(__dirname, './main');
