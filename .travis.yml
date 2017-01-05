@@ -1,3 +1,11 @@
 language: node_js
 node_js:
-  - '0.12'
+  - '5.10'
+before_install:
+ - curl -u${ARTIFACTORY_USERNAME}:${ARTIFACTORY_PASSWORD} https://github.jfrog.io/github/api/npm/auth > ~/.npmrc
+ - npm config set registry https://github.jfrog.io/github/api/npm/npm
+script:
+ - npm run-script pack-mac
+ - cd out/Git-it-darwin-x64
+ - zip -r git-it-darwin-x64-${TRAVIS_BUILD_NUMBER}.zip .
+ - curl -u${ARTIFACTORY_USERNAME}:${ARTIFACTORY_PASSWORD} -T git-it-darwin-x64-${TRAVIS_BUILD_NUMBER}.zip "https://github.jfrog.io/github/git-it-electron-staging/${TRAVIS_BUILD_NUMBER}/git-it-darwin-x64.zip"
