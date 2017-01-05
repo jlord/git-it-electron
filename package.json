@@ -15,7 +15,9 @@
   "main": "init.js",
   "scripts": {
     "start": "electron .",
-    "test": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
+    "test": "npm run test-flow && npm run test-style",
+    "test-style": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
+    "test-flow": "flow",
     "clean": "rimraf built/*",
     "build-chals": "node lib/build-challenges.js",
     "build-pages": "node lib/build-pages.js",
