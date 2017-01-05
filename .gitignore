@@ -3,3 +3,5 @@ out
 .DS_Store
 built
 .idea
+
+npm-debug.log
