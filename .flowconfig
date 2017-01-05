@@ -1,5 +1,5 @@
 [ignore]
 .*/node_modules/.*\.json
 # oh god, i hate everything
-.*/node_modules/typechecker/es2015/index.js
-.*/node_modules/babel-eslint/babylon-to-espree/toToken.js
+.*/node_modules/typechecker/.*
+.*/node_modules/babel-eslint/.*
