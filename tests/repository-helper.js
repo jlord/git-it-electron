@@ -1,4 +1,4 @@
-var temp = require('temp')
+var temp = require('temp').track()
 var fs = require('fs-extra')
 var path = require('path')
 
