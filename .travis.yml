@@ -1,3 +1,10 @@
 language: node_js
+
 node_js:
-  - '0.12'
+  - '6'
+
+cache:
+  timeout: 600
+  directories:
+    - node_modules
+    - $HOME/.electron
