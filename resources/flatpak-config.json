@@ -1,0 +1,24 @@
+{
+    "bin": "Git-it",
+    "modules": [
+        {
+            "name": "git",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/git/git.git",
+                    "branch": "v2.11.0"
+                },
+                {
+                    "type": "shell",
+                    "commands": [
+                        "make configure",
+                        "./configure --prefix=/app/",
+                        "make all",
+                        "make install"
+                    ]
+                }
+            ]
+        }
+    ]
+}
