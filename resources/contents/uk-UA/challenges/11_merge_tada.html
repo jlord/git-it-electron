@@ -1,65 +1,66 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Merge your branch locally, delete the branch and pull from upstream.</p>
+    <p>Мердж гілки локально, видалення гілки зтягнення з upstream.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2>Cleaning up</h2>
+    <h2>Очищення</h2>
 
-    <p>Once you don't need branches anymore you can delete them locally and remotely. This is helpful so that you don't
-        end up with a pile of old branches.</p>
+    <p>Якщо гілки більше не потрібні, ви можете видалити їх локально і віддалено. Вчасне видалення -
+        зручний спосіб підтримання чистоти і зручної структурованості репозиторію.</p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Merge Locally</h3>
-    <p>Your pull request has been merged! Your branch was merged into the 'gh-pages' branch of the original on GitHub.
-        You can merge your branch locally, too.</p>
+    <h3>Локальний мердж</h3>
+    <p> Ваш pull request був злитий. Ваша гілка була злита в гілку 'gh-pages' оригінального репозиторію на GitHub.
+        Ви можете злити вашу гілку також локально.</p>
 
-    <p>First, move into the branch you want to merge into—in this case, the branch 'gh-pages'.</p>
+    <p>Для початку, перемістіться у гілку в яку ви хочете змерджити, в нашому випадку це буде гілка 'gh-pages'.</p>
     <p><code class="shell">git checkout gh-pages</code></p>
 
-    <p>Now tell Git what branch you want to merge in—in this case, your feature branch that begins with "add-".</p>
+    <p> Тепер вкажіть яку саме гілку ви хочете сюди змерджити. В цьому випадку, ваша гілку яка починається з "add-".</p>
     <p><code class="shell">git merge &#60;BRANCHNAME&#62;</code></p>
 
-    <p>Tidy up by deleting your feature branch. Now that it has been merged you don't really need it around.</p>
+    <p> Очистіть репозиторій за рахунок видалення цієї гілки. Тепер коли вона вже була злита вам вона вже не потрібна тут.</p>
     <p><code class="shell">git branch -d &#60;BRANCHNAME&#62;</code></p>
 
-    <p>You can also delete the branch from your remote on GitHub:</p>
+    <p> Ви також можете видалити цю гілку з віддаленого репозиторію на GitHub:</p>
     <p><code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Pull from Upstream</h3>
-    <p>And last but not least, the original has changed since your pull request was merged—Reporobot added your name to
-        the website! If you pull in these changes from upstream you'll be up to date and have that version too. You can
-        actually see it live as well at: yourusername.github.io/patchwork.</p>
+    <h3>Затягнення з Upstream</h3>
+    <p> І останній пункт, який також є дуже важливим, початковий репозиторій був змінений коли ваш pull request був злитий.
+        Reporobot додав ваше імя на веб-сайті. Якщо ви затягнете ці зміни з upstream, ви отримаєте зміни які є в тій версії також.
+        Ви можете переглянути їх в: yourusername.github.io/patchwork.</p>
 
-    <p>To pull from the original upstream:</p>
+    <p> Щоб затягнути з original upstream:</p>
     <p><code class="shell">git pull upstream gh-pages</code></p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2>Congratulations!</h2>
-    <p>You've created local repositories, remote repositories, worked with a collaborator, pushed, pulled and joined the
-        millions of others developing and enriching open source!</p>
+    <h2> Вітаємо!</h2>
+    <p> Ви створили локальний репозиторій, віддалений репозиторій, попрацювали в парі, викладали, затягували і долучились
+        до міліонів інших розробників який розвивають та насичують open source!</p>
 
-    <p>Visit <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> to see your name
-        incorporated! Looking to keep going? Checkout the <a href="../pages/resources.html#what-next">What Next</a>
-        section on the resources page in this app.</p>
+    <p>Відвідайте <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> щоб побачити своє ім'я! Думаєте що далі? Гляньте <a href="../pages/resources.html#what-next">сюди</a>.</p>
 </div>
 
 {{{ verify_directory_button }}}
 
 <div class="chal-tip grey-border border-box">
     <ul class="no-list-style">
-        <li><strong>Merge a branch into current branch</strong></li>
+        <li><strong> Злити в поточну гілку</strong></li>
         <code class="shell">git merge &#60;BRANCHNAME&#62;</code>
-        <li><strong>Change the branch you're working on</strong></li>
+        <li><strong> Змінити гілку в якій ви працюєте</strong></li>
         <code class="shell">git checkout &#60;BRANCHNAME&#62;</code>
-        <li><strong>Delete a local branch</strong></li>
+        <li><strong> Видалити локальну гілку</strong></li>
         <code class="shell">git branch -d &#60;BRANCHNAME&#62;</code>
-        <li><strong>Delete a remote branch</strong></li>
+        <li><strong> Видалити віддалену гілку</strong></li>
         <code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
-        <li><strong>Pull from a remote branch</strong></li>
+        <li><strong> Затягнути с віддаленого репозиторію</strong></li>
         <code class="shell">git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
     </ul>
 </div>
+
+
+

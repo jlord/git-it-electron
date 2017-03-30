@@ -1,74 +1,65 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Create a new repository on your computer.</p>
+    <p>Створити новий репозиторій на вашому комп'ютері.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2> Repositories</h2>
-    <p>A <strong>repository</strong> is a collection of related items. In our case, when writing software, it is a
-        collection of files related to a software project. You can imagine it as a project folder with all the relevant
-        files inside of it. In fact, that's what it will look like on your computer anyways. Sometimes they're called
-        "repos" for short.</p>
+    <h2> Репозиторії</h2>
+    <p><strong>Репозиторій</strong> це колекція схожих матеріалів. У нашому випадку, при написанні програмного забезпечення, це колекція файлів які відносяться до проекту. Ви можете уявити це як папку із  файлами. Насправді, це так і виглядатиме на вашому комп'ютері. Інколи їх називають
+        "repos", так коротше.</p>
 
     <img src="../../../assets/imgs/repos.png" alt="A drawing of four file folders" width="600">
 
-    <p>You tell Git what your project is and Git will start tracking all of the changes to that folder. This makes it a
-        Git repository: a folder of items being tracked by Git. Git tracks when files are added, subtracted or even a
-        single letter in a single file is changed. All of this plus who did it and when is tracked by Git. In software,
-        tracking changes like this is called <strong>version control</strong>.</p>
+    <p>Ви кажете Git де знаходиться ваш проект та Git почне відслідковувати всі зміни всередині неї. Це зробить
+        Git репозиторій: папка, зміни в якій відслідковує Git. Git відслідковує коли файли були додані, видалені, або були внесені зміни всередині. Все це, а також те, хто вносив зміни, відслідковує Git. У розробці програмного забезпечення,
+        подібні відслідковування називається <strong>контролем версій</strong>.</p>
 
-    <h2>Using Terminal</h2>
-    <p><strong>Terminal</strong> (or Bash) is a way to instruct your computer to do things by typing commands rather
-        than clicking applications with your mouse. You can rename files, open files, create new folders, move between
-        directories (folders) and more all by running typed commands. You can even use a text editor for code (like <a
-                href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) in your terminal and
-        never have to leave!</p>
+    <h2>Використання терміналу</h2>
+    <p><strong>Термінал</strong> (або Bash) спосіб задання команд вашому комп'ютеру, швидше ніж кліки мишкою. Ви можете перейменувати файли, відкрити, створити нові папки,
+       переміщатися між папками та багато іншого за допомогою введення команд. Ви можете навіть використовувати текстовий редактор в терміналі! (наприклад <a
+                href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>)</p>
 
-    <p>Besides navigating your computer, you can also use programs in Terminal that have a <strong>command-line
-        interface (CLI)</strong>, meaning they can be run with commands in terminal. Git is one of these. The first part
-        of the command lets your computer know you're talking to Git. The parts following that are the commands and the
-        different options you want Git to act on.</p>
+    <p>Окрім навігації по комп'ютеру, ви можете використовувати у терміналі програми які мають <strong>command-line
+        interface (CLI)</strong>, що означає, що вони мають можливість керуватися командами із терміналу. Git — одна із них. Перша частина
+        команди дає знати що ви звертаєтеся саме до Git. Все те що слідує за нею - різні команди і опції які повинен виконати Git.</p>
 
-    <p>In Git-it you'll learn a few basic command-line actions (in addition to Git commands) for navigating your
-        computer; they're described within the steps.</p>
+    <p>У Git-it ви навчитеся деяким базовим діям використовуючи командний рядок для навігації по вашиму комп'ютері;</p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Create a Repository</h3>
-    <p>You're going to create a new project folder and then initialize it as a Git repository. We'll name the folder 'hello-world'
-      in this challenge, but you can choose a different name if you already have a folder named this (it's a common first project name).</p>
+    <h3>Створення репозиторія</h3>
+    <p>Ви збираєтеся творити нову папку проекта та ініціалізувати у ній Git репозиторій. Назвемо папку 'hello-world', але ви можете вибрати будь-яке інше ім'я, якщо у вас уже є папка із такою назвою.</p>
 
-    <p>Time to open your terminal!
+    <p>Час відкрити ваш термінал!
     <p>
 
-    <p>In your terminal window, type these commands, one at a time, pressing enter/return after each.</p>
+    <p>У вікні вашого терміналу, введіть ці команди, по одній за раз, натисніть enter/return після кожної.</p>
 
-    <p>First, make a new folder:<br><span class="inline-tip">Tip: mkdir stands for <em>make directory</em></span></p>
+    <p>Перше, створимо нову папку:<br><span class="inline-tip">Підказка: mkdir використовується для <em>створення папки</em></span></p>
     <code class="shell">mkdir hello-world</code>
 
-    <p>Then go into that folder:<br><span class="inline-tip">Tip: cd stands for <em>change directory</em></span></p>
+    <p>Далі, перейдіть до цієї папки:<br><span class="inline-tip">Підказка: cd використовується для <em>зміни папки</em></span></p>
     <code class="shell">cd hello-world</code>
 
-    <p>Finally, tell Git to initialize (start tracking) the folder you are now in:</p>
+    <p>Останнє, скажіть Git щоб він ініціалізувався (почав відслідковувати) у папці де ви зараз знаходитеся:</p>
     <code class="shell">git init</code>
 
-    <p>The last command should return something starting with "Initialized empty Git repository". The others commands do
-        not return anything.</p>
+    <p>Остання команда повинна повернути повідомлення що починається із "Initialized empty Git repository". Інші команди не повертають нічогою</p>
 
-    <p>You did it! If you want to be double-sure that it's a Git repository, type <code>git status</code> and if it
-        doesn't return 'fatal: Not a git repository...', you're golden!</p>
+    <p>Ви зробили це! Якщо ви хочете ще раз перевірити чи це Git репозиторій, введіть <code>git status</code>
+        і якщо ви не побачите 'fatal: Not a git repository...', у вас все вийшло!</p>
 </div>
 
 {{{ verify_directory_button }}}
 
 <div class="chal-tip grey-border border-box">
     <ul class="no-list-style">
-        <li><strong>Make a new folder (aka make directory)</strong></li>
+        <li><strong>Створити нову папку (aka створити директоріюy)</strong></li>
         <code class="shell">mkdir &#60;FOLDERNAME&#62;</code>
-        <li><strong>Navigate into an existing folder (aka change directory)</strong></li>
+        <li><strong>Перейти до існуючої папкиr (aka змінити директорію)</strong></li>
         <code class="shell">cd &#60;FOLDERNAME&#62;</code>
-        <li><strong>List the items in a folder</strong></li>
+        <li><strong>Показати вміст папки</strong></li>
         <code class="shell">ls </code>
-        <li><strong>Turn Git on for a folder</strong></li>
+        <li><strong>Ініціалізувати Git для папки</strong></li>
         <code class="shell">git init</code>
     </ul>
 </div>
