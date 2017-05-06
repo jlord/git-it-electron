@@ -1,0 +1,52 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Créez un compte GitHub et ajoutez votre nom d'utilisateur à votre configuration Git.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Working Better, Together</h2>
+
+    <p>Le dépôt que vous avez créé jusqu'à présent est juste sur votre ordinateur, ce qui est pratique, mais il est 
+    très difficile de le partager pour travailler avec d'autres. Pas de soucis, c'est ce à quoi GitHub est destiné!</p>
+
+    <p>GitHub est un site Web qui permet aux personnes de partager leur travail grâce à Git. Tout le monde pourra ainsi
+        travailler ensemble sur le même projet. GitHub est un dépôt central pour vous et tous vos potentiels collaborateurs. 
+        Dans ce dépôt vous pourrez y pousser vos modifications et aussi y récupérer celles des autres.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Créer un compte GitHub</h3>
+
+    <p>Visitez <a href="http://github.com" target="_blank"> github.com </a> et inscrivez-vous pour un compte gratuit. <strong> Félicitation et bienvenue chez les githubers! </strong></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Ajouter le nom d'utilisateur GitHub à Git</h3>
+    <p>Ajoutez votre nom d'utilisateur GitHub à votre configuration Git. Nous le faisons pour l'amour de Git-it; Cela facilite
+       la vérification des défis à venir. Enregistrez-le exactement comme vous l'avez créé sur GitHub <strong>avec les 
+       mêmes majuscules et minuscules</strong>. Notez que vous n'avez pas besoin d'entrer le "& # 60;" et "& # 62;".</p>
+
+    <p> Ajoutez votre nom d'utilisateur GitHub à votre configuration Git:</p>
+    <code class="shell">git config --global user.username &#60;USerNamE&#62;</code>
+
+    <p>Vous pouvez vérifier ce que vous avez configuré dans Git en tapant: :</p>
+    <code>git config --global user.username</code>
+</div>
+
+{{{ verify_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <p>Assurez-vous de taper "<strong> user.username </ strong>" et non "user.name", qui remplacerait le nom que vous
+        configuré dans le premier défi et vous laisserait sans une attribution correcte de vos contributions! Si vous 
+        vous êtes trompé, rien de grave, il faudra simplement répéter la configuration du premier premier défi pour 
+        ajouter votre nom.</p>
+</div>
+
+<div class="chal-no-pass grey-border border-box">
+    <h4>Les noms d'utilisateur GitHub & Git ne correspondent pas.</h4>
+    <p>Une erreur de capitalisation peut faire que votre nom d'utilisateur GitHub correspond au cas de celui que vous 
+    avez défini avec la commande <code> git config </ code>. Par exemple, 'JLord' n'est pas le même que 'jlord'</p>
+    <p>Pour changer votre nom d'utilisateur Git, il suffit de faire la même commande que précédemment, mais avec la 
+    bonne capitalisation:</p>
+    <p><code class="shell">git config --global user.username &#60;USerNamE&#62;</code></p>
+    <p>Lorsque vous avez effectué la mises à jour de votre configuration, vérifiez à nouveau!</p>
+</div>
