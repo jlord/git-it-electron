@@ -10,7 +10,7 @@ button {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  -webkit-user-select: none;
+  user-select: none;
   border: 1px solid transparent;
   font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
 }
@@ -122,6 +122,7 @@ button .octicon {
 .border-group-container {
   color: #0087ff;
   padding: 20px 0;
+  user-select: none;
 }
 
 .lang-select {
