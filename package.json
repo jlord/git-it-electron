@@ -12,10 +12,12 @@
     "desktop"
   ],
   "productName": "Git-it",
-  "main": "main.js",
+  "main": "init.js",
   "scripts": {
     "start": "electron .",
-    "test": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
+    "test": "npm run test-flow && npm run test-style",
+    "test-style": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
+    "test-flow": "flow",
     "clean": "rimraf built/*",
     "build-chals": "node lib/build-challenges.js",
     "build-pages": "node lib/build-pages.js",
@@ -23,6 +25,12 @@
     "pack-mac": "electron-packager . Git-it --platform=darwin --arch=x64   --icon=assets/git-it.icns --overwrite --ignore=/out/ --ignore=assets/PortableGit --ignore=resources --prune=true --out=out",
     "pack-lin": "electron-packager . Git-it --platform=linux  --arch=x64   --icon=assets/git-it.png  --overwrite --ignore=/out/ --ignore=assets/PortableGit --ignore=resources --prune=true --out=out",
     "pack-win": "electron-packager . Git-it --platform=win32  --arch=ia32  --icon=assets/git-it.ico  --overwrite --ignore=/out/ --ignore=resources --prune=true --out=out "
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype"
+    ]
   },
   "repository": {
     "type": "git",
@@ -35,13 +43,22 @@
   },
   "homepage": "https://github.com/jlord/git-it-electron",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-transform-flow-strip-types": "^6.21.0",
+    "babel-preset-env": "^1.1.4",
     "electron": "^1.4.3",
+    "electron-compilers": "^5.2.2",
     "electron-packager": "^8.0.0",
+    "eslint": "^3.12.2",
+    "eslint-plugin-flowtype": "^2.29.2",
+    "flow-bin": "^0.37.4",
     "rimraf": "^2.5.4",
     "standard": "^5.4.1"
   },
   "dependencies": {
     "cheerio": "^0.19.0",
+    "electron-compile": "^5.1.2",
     "glob": "^5.0.5",
     "handlebars": "^3.0.3",
     "request": "^2.57.0"

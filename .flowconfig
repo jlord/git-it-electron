@@ -1,0 +1,5 @@
+[ignore]
+.*/node_modules/.*\.json
+# oh god, i hate everything
+.*/node_modules/typechecker/.*
+.*/node_modules/babel-eslint/.*

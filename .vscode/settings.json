@@ -1,0 +1,8 @@
+{
+  "javascript.validate.enable": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/built": true
+  }
+}
