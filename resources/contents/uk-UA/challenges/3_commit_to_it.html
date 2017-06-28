@@ -1,0 +1,70 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Створіть файл у вашому новому репозиторії, додайте щось у файл та закомітьте за допомогою Git.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Коміти</h2>
+    <p>Коміти - це основа роботи із Git. Це моменти у які ви зберігаєте та описуєте повідомленням, те що зробили. Це
+        точки у таймлайні історії вашого проекту.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Створення нового файлу</h3>
+    <p>Тепер, коли у вас є репозиторій, додамо у нього файл.</p>
+    <p>Відкрийте свій текстовий редактор та створіть навий порожній файл. Тепер напишіть щось у ньому, наприклад
+        "Hello!", та
+        збережіть цей файл як 'readme.txt' у папці 'hello-world', яку ви створили у попередньому завданні.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Первірка статусу + Додавання та Фіксація змін</h3>
+    <p>Далі, перевірте <strong>статус</strong> вашого репозиторія, щоб дізнатися які були внесені зміни. Ви знаєте що
+        внесли зміни, але чи знає Git?</p>
+
+    <p>Переконайтесь що ви знаходитесь всередині папки 'hello-world' коли виконуєте команди. Використайте Git щоб
+        побачити які зміни були здійснені у репозиторії:</p>
+
+    <p>Спершу, перевірте статус:</p>
+    <p><code class="shell">git status</code></p>
+    <p>Git повинен показати що був доданий новий файл.</p>
+
+    <p>Далі <strong>додайте</strong> щойно створений файл, щоб він був частиною змін, які ви зараз
+        <strong>зафіксуєте</strong>
+        (aka закомітите) використовуючи Git:</p>
+    <p><code class="shell">git add readme.txt</code></p>
+
+    <p>І останнє, <strong>зафіксуйте</strong> зміни в історії репозиторія, додавши короткий опис того, що ви зробили.
+    </p>
+    <p><code class="shell">git commit -m "Created readme"</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Step: Зробіть більше змін</h3>
+    <p>Тепер додайте ще одлин рядок до файлу 'readme.txt' і збережіть файл знову.</p>
+
+    <p>У терміналі ви зможете побачити <strong>різницю</strong> між станом файлу зараз, та станом із попереднього
+        коміту.</p>
+
+    <p>Введіть команду, щоб Git показав <strong>різницю</strong>:</p>
+    <p><code class="shell">git diff</code></p>
+
+    <p>Тепер ви можете закомітити свої нові зміни.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Перевірити статус репозиторія</strong></li>
+        <li><code class="shell">git status</code></li>
+        <li><strong>Переглянути зміни у файлах</strong></li>
+        <li><code class="shell">git diff</code></li>
+        <li><strong>Додати зміни у файлі, для того щоб закомітити</strong></li>
+        <li><code class="shell">git add &#60;FILENAME&#62;</code></li>
+        <li><strong>Щоб додати усі файли</strong></li>
+        <li><code class="shell">git add .</code></li>
+        <li><strong>Для фіксації змін (aka коміту) що ви зробили, із коротким повідомленням що їх описує</strong>
+        </li>
+        <li><code class="shell">git commit -m "your commit message"</code></li>
+    </ul>
+</div>

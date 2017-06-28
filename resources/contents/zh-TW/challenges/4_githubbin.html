@@ -1,0 +1,44 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>建立一個 GitHub 帳號，並在 Git 設定中加入使用者帳號。</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>團結力量大</h2>
+    <p>目前為止你建立的 repository 只存在你自己的電腦上，雖然方便，但若想要與別人分享或合作時就顯得困難許多了。別擔心，這就是為什麼我們需要 GitHub！</p>
+    <p>GitHub 是一個允許使用者在任何地方用 Git 上傳他們進行中專案的網站，因此任何人都可以簡單地和其他人一起協作同一個專案。GitHub 扮演著中央 repository 的角色，你可以 push 你的修改，也可以
+        pull 別人的修改。</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>建立一個 GitHub 帳號</h3>
+    <p>前往 <a href="http://github.com" target="_blank">github.com</a> 註冊一個免費帳號！</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>告訴 Git 你的 GitHub 帳號</h3>
+    <p>告訴 Git 你的 GitHub 帳號，這個 GitHub 帳號將會在之後的關卡中用到。注意輸入時必須與你在 GitHub 上建立的完全一致————<strong>大小寫必須一致</strong>。請注意：你不用輸入 < 和
+        > 。</p>
+    <p>告訴 Git 你的 GitHub 帳號：</p>
+    <code class="shell">git config --global user.username
+        <USerNamE>
+    </code>
+    <p>如果你想檢查設定，你可以輸入：</p>
+    <code class="shell">git config --global user.username</code>
+</div>
+
+{{{ verify_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <p>請確定你輸入的是 "<strong>user.username</strong>" 而不是
+        "user.name"，如果你輸入的是後者，那麼他會覆蓋掉你在第一個挑戰中所設定的名字。如果你發現你打錯了，只要重新跟著第一個挑戰的步驟做一次，再重新輸入上面的指令完成本次挑戰即可。
+</div>
+
+<div class="chal-no-pass grey-border border-box">
+    <h4>GitHub 及 Git 設定中的使用者名稱不符</h4>
+    <p>常見的錯誤是 GitHub 帳號跟 <code>git config</code> 設定的帳號沒有一致。例如：'jlord' 跟 'JLord' 是不一樣的哦。</p>
+    <p>要修改 Git 設定的帳號，只要再用一次上面教的指令，大小寫打對就可以了：</p>
+    <p><code class="shell">git config --global user.username
+        <USerNamE>
+    </code></p>
+    <p>更新完之後，再檢查一次看看吧！</p>
+</div>

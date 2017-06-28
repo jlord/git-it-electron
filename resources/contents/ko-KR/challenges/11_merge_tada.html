@@ -1,0 +1,58 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>브랜치(branch)를 로컬(local)에서 머지(merge)하고 브랜치를 지운 후 업스트림(upstream)으로부터 풀(pull)해오세요.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>정리하기</h2>
+
+  <p>더 이상 브랜치가 필요하지 않다면 로컬과 리모트에서 삭제할 수 있습니다. 이러한 작업은 수 많은 오래된 브랜치들로 인해 고생하지 않아도 되도록 해줍니다.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>로컬(local)에서 머지(merge)하기</h3>
+  <p>당신의 풀 리퀘스트가 머지 되었습니다! 당신의 브랜치는 GitHub 에 있는 원본 저장소의 'gh-pages' 에 머지되었습니다. 로컬에서도 이 브랜치를 머지할 수 있습니다.</p>
+
+  <p>먼저, 머지의 목표가 될 브랜치로 이동합니다 - 지금의 경우에는 'gh-pages' 브랜치.</p>
+  <p><code class="shell">git checkout gh-pages</code></p>
+
+  <p>Git 에게 머지될 브랜치 이름을 알려줍니다 - 지금의 경우에는 "add-" 로 시작하는 당신의 피쳐 브랜치.</p>
+  <p><code class="shell">git merge &#60;브랜치이름&#62;</code></p>
+
+  <p>당신의 피쳐 브랜치를 삭제하여 정리합니다. 이것으로 당신에게 필요없는 브랜치가 머지되었습니다.</p>
+  <p><code class="shell">git branch -d &#60;브랜치이름&#62;</code></p>
+
+  <p>GitHub 에 있는 당신의 리모트에 있는 브랜치도 지울 수 있습니다.:</p>
+  <p><code class="shell">git push &#60;리모트이름&#62; --delete &#60;브랜치이름&#62;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>업스트림(upstream)으로부터 풀(pull)해오기</h3>
+  <p>마지막이지만 중요한 내용입니다. 당신의 풀 리퀘스트로 인해 원본 저장소가 변경되었습니다-Reporobot 이 당신의 이름을 웹사이트에 추가하였습니다! 이 변경들을 업스트림으로부터 풀하면, 최신 상태가 되어 그 버전을 가지게 될 것입니다. 이것을 실제로 다음 웹사이트에서 확인할 수 있습니다: &#60;유저이름&#62;.github.io/patchwork.</p>
+
+  <p>원본 업스트림으로부터 풀 하기 위해서는 아래 명령을 실행하세요:</p>
+  <p><code class="shell">git pull upstream gh-pages</code></p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>축하합니다!</h2>
+  <p>당신은 로컬 저장소와 리모트 저장소를 만들고, 협업자들과 함께 일하고, 푸시/풀을 하고, 수많은 다른 개발자들과 함께 오픈 소스를 더 발전시켰습니다!</p>
+
+  <p><a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> 에 방문하여 당신의 이름이 포함된 것을 확인하세요! 계속 해나갈 것을 찾으시나요? 이 앱의 resource 페이지에 있는 <a href="../pages/resources.html#what-next">What Next</a> 섹션을 확인하세요.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>어떤 브랜치를 현재 브랜치에 머지하기</strong></li>
+    <code class="shell">git merge &#60;브랜치이름&#62;</code>
+    <li><strong>작업하고 있는 브랜치 변경하기</strong></li>
+    <code class="shell">git checkout &#60;브랜치이름&#62;</code>
+    <li><strong>로컬 브랜치 삭제하기</strong></li>
+    <code class="shell">git branch -d &#60;브랜치이름&#62;</code>
+    <li><strong>리모트 브랜치 삭제하기</strong></li>
+    <code class="shell">git push &#60;리모트이름&#62; --delete &#60;브랜치이름&#62;</code>
+    <li><strong>리모트 브랜치로부터 풀하기</strong></li>
+    <code class="shell">git pull &#60;리모트이름&#62; &#60;브랜치이름&#62;</code>
+  </ul>
+</div>

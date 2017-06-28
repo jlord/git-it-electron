@@ -1,0 +1,815 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 927650371 (0x374ad243)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, O=Entrust.net, OU=www.entrust.net/CPS incorp. by ref. (limits liab.), OU=(c) 1999 Entrust.net Limited, CN=Entrust.net Secure Server Certification Authority
+        Validity
+            Not Before: May 25 16:09:40 1999 GMT
+            Not After : May 25 16:39:40 2019 GMT
+        Subject: C=US, O=Entrust.net, OU=www.entrust.net/CPS incorp. by ref. (limits liab.), OU=(c) 1999 Entrust.net Limited, CN=Entrust.net Secure Server Certification Authority
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:cd:28:83:34:54:1b:89:f3:0f:af:37:91:31:ff:
+                    af:31:60:c9:a8:e8:b2:10:68:ed:9f:e7:93:36:f1:
+                    0a:64:bb:47:f5:04:17:3f:23:47:4d:c5:27:19:81:
+                    26:0c:54:72:0d:88:2d:d9:1f:9a:12:9f:bc:b3:71:
+                    d3:80:19:3f:47:66:7b:8c:35:28:d2:b9:0a:df:24:
+                    da:9c:d6:50:79:81:7a:5a:d3:37:f7:c2:4a:d8:29:
+                    92:26:64:d1:e4:98:6c:3a:00:8a:f5:34:9b:65:f8:
+                    ed:e3:10:ff:fd:b8:49:58:dc:a0:de:82:39:6b:81:
+                    b1:16:19:61:b9:54:b6:e6:43
+                Exponent: 3 (0x3)
+        X509v3 extensions:
+            Netscape Cert Type: 
+                SSL CA, S/MIME CA, Object Signing CA
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  DirName: C = US, O = Entrust.net, OU = www.entrust.net/CPS incorp. by ref. (limits liab.), OU = (c) 1999 Entrust.net Limited, CN = Entrust.net Secure Server Certification Authority, CN = CRL1
+
+                Full Name:
+                  URI:http://www.entrust.net/CRL/net1.crl
+
+            X509v3 Private Key Usage Period: 
+                Not Before: May 25 16:09:40 1999 GMT, Not After: May 25 16:09:40 2019 GMT
+            X509v3 Key Usage: 
+                Certificate Sign, CRL Sign
+            X509v3 Authority Key Identifier: 
+                keyid:F0:17:62:13:55:3D:B3:FF:0A:00:6B:FB:50:84:97:F3:ED:62:D0:1A
+
+            X509v3 Subject Key Identifier: 
+                F0:17:62:13:55:3D:B3:FF:0A:00:6B:FB:50:84:97:F3:ED:62:D0:1A
+            X509v3 Basic Constraints: 
+                CA:TRUE
+            1.2.840.113533.7.65.0: 
+                0
+..V4.0....
+    Signature Algorithm: sha1WithRSAEncryption
+         90:dc:30:02:fa:64:74:c2:a7:0a:a5:7c:21:8d:34:17:a8:fb:
+         47:0e:ff:25:7c:8d:13:0a:fb:e4:98:b5:ef:8c:f8:c5:10:0d:
+         f7:92:be:f1:c3:d5:d5:95:6a:04:bb:2c:ce:26:36:65:c8:31:
+         c6:e7:ee:3f:e3:57:75:84:7a:11:ef:46:4f:18:f4:d3:98:bb:
+         a8:87:32:ba:72:f6:3c:e2:3d:9f:d7:1d:d9:c3:60:43:8c:58:
+         0e:22:96:2f:62:a3:2c:1f:ba:ad:05:ef:ab:32:78:87:a0:54:
+         73:19:b5:5c:05:f9:52:3e:6d:2d:45:0b:f7:0a:93:ea:ed:06:
+         f9:b2
+No Trusted Uses.
+No Rejected Uses.
+Alias: Entrust.net Secure Server CA
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIE2DCCBEGgAwIBAgIEN0rSQzANBgkqhkiG9w0BAQUFADCBwzELMAkGA1UEBhMC
+VVMxFDASBgNVBAoTC0VudHJ1c3QubmV0MTswOQYDVQQLEzJ3d3cuZW50cnVzdC5u
+ZXQvQ1BTIGluY29ycC4gYnkgcmVmLiAobGltaXRzIGxpYWIuKTElMCMGA1UECxMc
+KGMpIDE5OTkgRW50cnVzdC5uZXQgTGltaXRlZDE6MDgGA1UEAxMxRW50cnVzdC5u
+ZXQgU2VjdXJlIFNlcnZlciBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAeFw05OTA1
+MjUxNjA5NDBaFw0xOTA1MjUxNjM5NDBaMIHDMQswCQYDVQQGEwJVUzEUMBIGA1UE
+ChMLRW50cnVzdC5uZXQxOzA5BgNVBAsTMnd3dy5lbnRydXN0Lm5ldC9DUFMgaW5j
+b3JwLiBieSByZWYuIChsaW1pdHMgbGlhYi4pMSUwIwYDVQQLExwoYykgMTk5OSBF
+bnRydXN0Lm5ldCBMaW1pdGVkMTowOAYDVQQDEzFFbnRydXN0Lm5ldCBTZWN1cmUg
+U2VydmVyIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MIGdMA0GCSqGSIb3DQEBAQUA
+A4GLADCBhwKBgQDNKIM0VBuJ8w+vN5Ex/68xYMmo6LIQaO2f55M28Qpku0f1BBc/
+I0dNxScZgSYMVHINiC3ZH5oSn7yzcdOAGT9HZnuMNSjSuQrfJNqc1lB5gXpa0zf3
+wkrYKZImZNHkmGw6AIr1NJtl+O3jEP/9uElY3KDegjlrgbEWGWG5VLbmQwIBA6OC
+AdcwggHTMBEGCWCGSAGG+EIBAQQEAwIABzCCARkGA1UdHwSCARAwggEMMIHeoIHb
+oIHYpIHVMIHSMQswCQYDVQQGEwJVUzEUMBIGA1UEChMLRW50cnVzdC5uZXQxOzA5
+BgNVBAsTMnd3dy5lbnRydXN0Lm5ldC9DUFMgaW5jb3JwLiBieSByZWYuIChsaW1p
+dHMgbGlhYi4pMSUwIwYDVQQLExwoYykgMTk5OSBFbnRydXN0Lm5ldCBMaW1pdGVk
+MTowOAYDVQQDEzFFbnRydXN0Lm5ldCBTZWN1cmUgU2VydmVyIENlcnRpZmljYXRp
+b24gQXV0aG9yaXR5MQ0wCwYDVQQDEwRDUkwxMCmgJ6AlhiNodHRwOi8vd3d3LmVu
+dHJ1c3QubmV0L0NSTC9uZXQxLmNybDArBgNVHRAEJDAigA8xOTk5MDUyNTE2MDk0
+MFqBDzIwMTkwNTI1MTYwOTQwWjALBgNVHQ8EBAMCAQYwHwYDVR0jBBgwFoAU8Bdi
+E1U9s/8KAGv7UISX8+1i0BowHQYDVR0OBBYEFPAXYhNVPbP/CgBr+1CEl/PtYtAa
+MAwGA1UdEwQFMAMBAf8wGQYJKoZIhvZ9B0EABAwwChsEVjQuMAMCBJAwDQYJKoZI
+hvcNAQEFBQADgYEAkNwwAvpkdMKnCqV8IY00F6j7Rw7/JXyNEwr75Ji174z4xRAN
+95K+8cPV1ZVqBLssziY2ZcgxxufuP+NXdYR6Ee9GTxj005i7qIcyunL2POI9n9cd
+2cNgQ4xYDiKWL2KjLB+6rQXvqzJ4h6BUcxm1XAX5Uj5tLUUL9wqT6u0G+bIwHgwc
+RW50cnVzdC5uZXQgU2VjdXJlIFNlcnZlciBDQQ==
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number: 421 (0x1a5)
+    Signature Algorithm: md5WithRSAEncryption
+        Issuer: C=US, O=GTE Corporation, OU=GTE CyberTrust Solutions, Inc., CN=GTE CyberTrust Global Root
+        Validity
+            Not Before: Aug 13 00:29:00 1998 GMT
+            Not After : Aug 13 23:59:00 2018 GMT
+        Subject: C=US, O=GTE Corporation, OU=GTE CyberTrust Solutions, Inc., CN=GTE CyberTrust Global Root
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:95:0f:a0:b6:f0:50:9c:e8:7a:c7:88:cd:dd:17:
+                    0e:2e:b0:94:d0:1b:3d:0e:f6:94:c0:8a:94:c7:06:
+                    c8:90:97:c8:b8:64:1a:7a:7e:6c:3c:53:e1:37:28:
+                    73:60:7f:b2:97:53:07:9f:53:f9:6d:58:94:d2:af:
+                    8d:6d:88:67:80:e6:ed:b2:95:cf:72:31:ca:a5:1c:
+                    72:ba:5c:02:e7:64:42:e7:f9:a9:2c:d6:3a:0d:ac:
+                    8d:42:aa:24:01:39:e6:9c:3f:01:85:57:0d:58:87:
+                    45:f8:d3:85:aa:93:69:26:85:70:48:80:3f:12:15:
+                    c7:79:b4:1f:05:2f:3b:62:99
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: md5WithRSAEncryption
+         6d:eb:1b:09:e9:5e:d9:51:db:67:22:61:a4:2a:3c:48:77:e3:
+         a0:7c:a6:de:73:a2:14:03:85:3d:fb:ab:0e:30:c5:83:16:33:
+         81:13:08:9e:7b:34:4e:df:40:c8:74:d7:b9:7d:dc:f4:76:55:
+         7d:9b:63:54:18:e9:f0:ea:f3:5c:b1:d9:8b:42:1e:b9:c0:95:
+         4e:ba:fa:d5:e2:7c:f5:68:61:bf:8e:ec:05:97:5f:5b:b0:d7:
+         a3:85:34:c4:24:a7:0d:0f:95:93:ef:cb:94:d8:9e:1f:9d:5c:
+         85:6d:c7:aa:ae:4f:1f:22:b5:cd:95:ad:ba:a7:cc:f9:ab:0b:
+         7a:7f
+No Trusted Uses.
+No Rejected Uses.
+Alias: GTE CyberTrust Global Root
+-----BEGIN TRUSTED CERTIFICATE-----
+MIICWjCCAcMCAgGlMA0GCSqGSIb3DQEBBAUAMHUxCzAJBgNVBAYTAlVTMRgwFgYD
+VQQKEw9HVEUgQ29ycG9yYXRpb24xJzAlBgNVBAsTHkdURSBDeWJlclRydXN0IFNv
+bHV0aW9ucywgSW5jLjEjMCEGA1UEAxMaR1RFIEN5YmVyVHJ1c3QgR2xvYmFsIFJv
+b3QwHhcNOTgwODEzMDAyOTAwWhcNMTgwODEzMjM1OTAwWjB1MQswCQYDVQQGEwJV
+UzEYMBYGA1UEChMPR1RFIENvcnBvcmF0aW9uMScwJQYDVQQLEx5HVEUgQ3liZXJU
+cnVzdCBTb2x1dGlvbnMsIEluYy4xIzAhBgNVBAMTGkdURSBDeWJlclRydXN0IEds
+b2JhbCBSb290MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCVD6C28FCc6HrH
+iM3dFw4usJTQGz0O9pTAipTHBsiQl8i4ZBp6fmw8U+E3KHNgf7KXUwefU/ltWJTS
+r41tiGeA5u2ylc9yMcqlHHK6XALnZELn+aks1joNrI1CqiQBOeacPwGFVw1Yh0X4
+04Wqk2kmhXBIgD8SFcd5tB8FLztimQIDAQABMA0GCSqGSIb3DQEBBAUAA4GBAG3r
+GwnpXtlR22ciYaQqPEh346B8pt5zohQDhT37qw4wxYMWM4ETCJ57NE7fQMh017l9
+3PR2VX2bY1QY6fDq81yx2YtCHrnAlU66+tXifPVoYb+O7AWXX1uw16OFNMQkpw0P
+lZPvy5TYnh+dXIVtx6quTx8itc2VrbqnzPmrC3p/MBwMGkdURSBDeWJlclRydXN0
+IEdsb2JhbCBSb290
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number: 1 (0x1)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: L=ValiCert Validation Network, O=ValiCert, Inc., OU=ValiCert Class 3 Policy Validation Authority, CN=http://www.valicert.com//emailAddress=info@valicert.com
+        Validity
+            Not Before: Jun 26 00:22:33 1999 GMT
+            Not After : Jun 26 00:22:33 2019 GMT
+        Subject: L=ValiCert Validation Network, O=ValiCert, Inc., OU=ValiCert Class 3 Policy Validation Authority, CN=http://www.valicert.com//emailAddress=info@valicert.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:e3:98:51:96:1c:e8:d5:b1:06:81:6a:57:c3:72:
+                    75:93:ab:cf:9e:a6:fc:f3:16:52:d6:2d:4d:9f:35:
+                    44:a8:2e:04:4d:07:49:8a:38:29:f5:77:37:e7:b7:
+                    ab:5d:df:36:71:14:99:8f:dc:c2:92:f1:e7:60:92:
+                    97:ec:d8:48:dc:bf:c1:02:20:c6:24:a4:28:4c:30:
+                    5a:76:6d:b1:5c:f3:dd:de:9e:10:71:a1:88:c7:5b:
+                    9b:41:6d:ca:b0:b8:8e:15:ee:ad:33:2b:cf:47:04:
+                    5c:75:71:0a:98:24:98:29:a7:49:59:a5:dd:f8:b7:
+                    43:62:61:f3:d3:e2:d0:55:3f
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha1WithRSAEncryption
+         56:bb:02:58:84:67:08:2c:df:1f:db:7b:49:33:f5:d3:67:9d:
+         f4:b4:0a:10:b3:c9:c5:2c:e2:92:6a:71:78:27:f2:70:83:42:
+         d3:3e:cf:a9:54:f4:f1:d8:92:16:8c:d1:04:cb:4b:ab:c9:9f:
+         45:ae:3c:8a:a9:b0:71:33:5d:c8:c5:57:df:af:a8:35:b3:7f:
+         89:87:e9:e8:25:92:b8:7f:85:7a:ae:d6:bc:1e:37:58:2a:67:
+         c9:91:cf:2a:81:3e:ed:c6:39:df:c0:3e:19:9c:19:cc:13:4d:
+         82:41:b5:8c:de:e0:3d:60:08:20:0f:45:7e:6b:a2:7f:a3:8c:
+         15:ee
+No Trusted Uses.
+No Rejected Uses.
+Alias: RSA Root Certificate 1
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIC5zCCAlACAQEwDQYJKoZIhvcNAQEFBQAwgbsxJDAiBgNVBAcTG1ZhbGlDZXJ0
+IFZhbGlkYXRpb24gTmV0d29yazEXMBUGA1UEChMOVmFsaUNlcnQsIEluYy4xNTAz
+BgNVBAsTLFZhbGlDZXJ0IENsYXNzIDMgUG9saWN5IFZhbGlkYXRpb24gQXV0aG9y
+aXR5MSEwHwYDVQQDExhodHRwOi8vd3d3LnZhbGljZXJ0LmNvbS8xIDAeBgkqhkiG
+9w0BCQEWEWluZm9AdmFsaWNlcnQuY29tMB4XDTk5MDYyNjAwMjIzM1oXDTE5MDYy
+NjAwMjIzM1owgbsxJDAiBgNVBAcTG1ZhbGlDZXJ0IFZhbGlkYXRpb24gTmV0d29y
+azEXMBUGA1UEChMOVmFsaUNlcnQsIEluYy4xNTAzBgNVBAsTLFZhbGlDZXJ0IENs
+YXNzIDMgUG9saWN5IFZhbGlkYXRpb24gQXV0aG9yaXR5MSEwHwYDVQQDExhodHRw
+Oi8vd3d3LnZhbGljZXJ0LmNvbS8xIDAeBgkqhkiG9w0BCQEWEWluZm9AdmFsaWNl
+cnQuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDjmFGWHOjVsQaBalfD
+cnWTq8+epvzzFlLWLU2fNUSoLgRNB0mKOCn1dzfnt6td3zZxFJmP3MKS8edgkpfs
+2Ejcv8ECIMYkpChMMFp2bbFc893enhBxoYjHW5tBbcqwuI4V7q0zK89HBFx1cQqY
+JJgpp0lZpd34t0NiYfPT4tBVPwIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAFa7AliE
+Zwgs3x/be0kz9dNnnfS0ChCzycUs4pJqcXgn8nCDQtM+z6lU9PHYkhaM0QTLS6vJ
+n0WuPIqpsHEzXcjFV9+vqDWzf4mH6eglkrh/hXqu1rweN1gqZ8mRzyqBPu3GOd/A
+PhmcGcwTTYJBtYze4D1gCCAPRX5ron+jjBXuMBgMFlJTQSBSb290IENlcnRpZmlj
+YXRlIDE=
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            63:25:00:01:00:02:14:8d:33:15:02:e4:6c:f4
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=DE, O=TC TrustCenter GmbH, OU=TC TrustCenter Universal CA, CN=TC TrustCenter Universal CA III
+        Validity
+            Not Before: Sep  9 08:15:27 2009 GMT
+            Not After : Dec 31 23:59:59 2029 GMT
+        Subject: C=DE, O=TC TrustCenter GmbH, OU=TC TrustCenter Universal CA, CN=TC TrustCenter Universal CA III
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:c2:da:9c:62:b0:b9:71:12:b0:0b:c8:1a:57:b2:
+                    ae:83:14:99:b3:34:4b:9b:90:a2:c5:e7:e7:2f:02:
+                    a0:4d:2d:a4:fa:85:da:9b:25:85:2d:40:28:20:6d:
+                    ea:e0:bd:b1:48:83:22:29:44:9f:4e:83:ee:35:51:
+                    13:73:74:d5:bc:f2:30:66:94:53:c0:40:36:2f:0c:
+                    84:65:ce:0f:6e:c2:58:93:e8:2c:0b:3a:e9:c1:8e:
+                    fb:f2:6b:ca:3c:e2:9c:4e:8e:e4:f9:7d:d3:27:9f:
+                    1b:d5:67:78:87:2d:7f:0b:47:b3:c7:e8:c9:48:7c:
+                    af:2f:cc:0a:d9:41:ef:9f:fe:9a:e1:b2:ae:f9:53:
+                    b5:e5:e9:46:9f:60:e3:df:8d:d3:7f:fb:96:7e:b3:
+                    b5:72:f8:4b:ad:08:79:cd:69:89:40:27:f5:2a:c1:
+                    ad:43:ec:a4:53:c8:61:b6:f7:d2:79:2a:67:18:76:
+                    48:6d:5b:25:01:d1:26:c5:b7:57:69:23:15:5b:61:
+                    8a:ad:f0:1b:2d:d9:af:5c:f1:26:90:69:a9:d5:0c:
+                    40:f5:33:80:43:8f:9c:a3:76:2a:45:b4:af:bf:7f:
+                    3e:87:3f:76:c5:cd:2a:de:20:c5:16:58:cb:f9:1b:
+                    f5:0f:cb:0d:11:52:64:b8:d2:76:62:77:83:f1:58:
+                    9f:ff
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:56:E7:E1:5B:25:43:80:E0:F6:8C:E1:71:BC:8E:E5:80:2F:C4:48:E2
+
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Subject Key Identifier: 
+                56:E7:E1:5B:25:43:80:E0:F6:8C:E1:71:BC:8E:E5:80:2F:C4:48:E2
+    Signature Algorithm: sha1WithRSAEncryption
+         83:c7:af:ea:7f:4d:0a:3c:39:b1:68:be:7b:6d:89:2e:e9:b3:
+         09:e7:18:57:8d:85:9a:17:f3:76:42:50:13:0f:c7:90:6f:33:
+         ad:c5:49:60:2b:6c:49:58:19:d4:e2:be:b7:bf:ab:49:bc:94:
+         c8:ab:be:28:6c:16:68:e0:c8:97:46:20:a0:68:67:60:88:39:
+         20:51:d8:68:01:11:ce:a7:f6:11:07:f6:ec:ec:ac:1a:1f:b2:
+         66:6e:56:67:60:7a:74:5e:c0:6d:97:36:ae:b5:0d:5d:66:73:
+         c0:25:32:45:d8:4a:06:07:8f:c4:b7:07:b1:4d:06:0d:e1:a5:
+         eb:f4:75:ca:ba:9c:d0:bd:b3:d3:32:24:4c:ee:7e:e2:76:04:
+         4b:49:53:d8:f2:e9:54:33:fc:e5:71:1f:3d:14:5c:96:4b:f1:
+         3a:f2:00:bb:6c:b4:fa:96:55:08:88:09:c1:cc:91:19:29:b0:
+         20:2d:ff:cb:38:a4:40:e1:17:be:79:61:80:ff:07:03:86:4c:
+         4e:7b:06:9f:11:86:8d:89:ee:27:c4:db:e2:bc:19:8e:0b:c3:
+         c3:13:c7:2d:03:63:3b:d3:e8:e4:a2:2a:c2:82:08:94:16:54:
+         f0:ef:1f:27:90:25:b8:0d:0e:28:1b:47:77:47:bd:1c:a8:25:
+         f1:94:b4:66
+No Trusted Uses.
+No Rejected Uses.
+Alias: TC TrustCenter Universal CA III
+-----BEGIN TRUSTED CERTIFICATE-----
+MIID4TCCAsmgAwIBAgIOYyUAAQACFI0zFQLkbPQwDQYJKoZIhvcNAQEFBQAwezEL
+MAkGA1UEBhMCREUxHDAaBgNVBAoTE1RDIFRydXN0Q2VudGVyIEdtYkgxJDAiBgNV
+BAsTG1RDIFRydXN0Q2VudGVyIFVuaXZlcnNhbCBDQTEoMCYGA1UEAxMfVEMgVHJ1
+c3RDZW50ZXIgVW5pdmVyc2FsIENBIElJSTAeFw0wOTA5MDkwODE1MjdaFw0yOTEy
+MzEyMzU5NTlaMHsxCzAJBgNVBAYTAkRFMRwwGgYDVQQKExNUQyBUcnVzdENlbnRl
+ciBHbWJIMSQwIgYDVQQLExtUQyBUcnVzdENlbnRlciBVbml2ZXJzYWwgQ0ExKDAm
+BgNVBAMTH1RDIFRydXN0Q2VudGVyIFVuaXZlcnNhbCBDQSBJSUkwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDC2pxisLlxErALyBpXsq6DFJmzNEubkKLF
+5+cvAqBNLaT6hdqbJYUtQCggbergvbFIgyIpRJ9Og+41URNzdNW88jBmlFPAQDYv
+DIRlzg9uwliT6CwLOunBjvvya8o84pxOjuT5fdMnnxvVZ3iHLX8LR7PH6MlIfK8v
+zArZQe+f/prhsq75U7Xl6UafYOPfjdN/+5Z+s7Vy+EutCHnNaYlAJ/Uqwa1D7KRT
+yGG299J5KmcYdkhtWyUB0SbFt1dpIxVbYYqt8Bst2a9c8SaQaanVDED1M4BDj5yj
+dipFtK+/fz6HP3bFzSreIMUWWMv5G/UPyw0RUmS40nZid4PxWJ//AgMBAAGjYzBh
+MB8GA1UdIwQYMBaAFFbn4VslQ4Dg9ozhcbyO5YAvxEjiMA8GA1UdEwEB/wQFMAMB
+Af8wDgYDVR0PAQH/BAQDAgEGMB0GA1UdDgQWBBRW5+FbJUOA4PaM4XG8juWAL8RI
+4jANBgkqhkiG9w0BAQUFAAOCAQEAg8ev6n9NCjw5sWi+e22JLumzCecYV42Fmhfz
+dkJQEw/HkG8zrcVJYCtsSVgZ1OK+t7+rSbyUyKu+KGwWaODIl0YgoGhnYIg5IFHY
+aAERzqf2EQf27OysGh+yZm5WZ2B6dF7AbZc2rrUNXWZzwCUyRdhKBgePxLcHsU0G
+DeGl6/R1yrqc0L2z0zIkTO5+4nYES0lT2PLpVDP85XEfPRRclkvxOvIAu2y0+pZV
+CIgJwcyRGSmwIC3/yzikQOEXvnlhgP8HA4ZMTnsGnxGGjYnuJ8Tb4rwZjgvDwxPH
+LQNjO9Po5KIqwoIIlBZU8O8fJ5AluA0OKBtHd0e9HKgl8ZS0ZjAhDB9UQyBUcnVz
+dENlbnRlciBVbml2ZXJzYWwgQ0EgSUlJ
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+    Signature Algorithm: md5WithRSAEncryption
+        Issuer: C=ZA, ST=Western Cape, L=Cape Town, O=Thawte Consulting cc, OU=Certification Services Division, CN=Thawte Premium Server CA/emailAddress=premium-server@thawte.com
+        Validity
+            Not Before: Aug  1 00:00:00 1996 GMT
+            Not After : Dec 31 23:59:59 2020 GMT
+        Subject: C=ZA, ST=Western Cape, L=Cape Town, O=Thawte Consulting cc, OU=Certification Services Division, CN=Thawte Premium Server CA/emailAddress=premium-server@thawte.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:d2:36:36:6a:8b:d7:c2:5b:9e:da:81:41:62:8f:
+                    38:ee:49:04:55:d6:d0:ef:1c:1b:95:16:47:ef:18:
+                    48:35:3a:52:f4:2b:6a:06:8f:3b:2f:ea:56:e3:af:
+                    86:8d:9e:17:f7:9e:b4:65:75:02:4d:ef:cb:09:a2:
+                    21:51:d8:9b:d0:67:d0:ba:0d:92:06:14:73:d4:93:
+                    cb:97:2a:00:9c:5c:4e:0c:bc:fa:15:52:fc:f2:44:
+                    6e:da:11:4a:6e:08:9f:2f:2d:e3:f9:aa:3a:86:73:
+                    b6:46:53:58:c8:89:05:bd:83:11:b8:73:3f:aa:07:
+                    8d:f4:42:4d:e7:40:9d:1c:37
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+    Signature Algorithm: md5WithRSAEncryption
+         26:48:2c:16:c2:58:fa:e8:16:74:0c:aa:aa:5f:54:3f:f2:d7:
+         c9:78:60:5e:5e:6e:37:63:22:77:36:7e:b2:17:c4:34:b9:f5:
+         08:85:fc:c9:01:38:ff:4d:be:f2:16:42:43:e7:bb:5a:46:fb:
+         c1:c6:11:1f:f1:4a:b0:28:46:c9:c3:c4:42:7d:bc:fa:ab:59:
+         6e:d5:b7:51:88:11:e3:a4:85:19:6b:82:4c:a4:0c:12:ad:e9:
+         a4:ae:3f:f1:c3:49:65:9a:8c:c5:c8:3e:25:b7:94:99:bb:92:
+         32:71:07:f0:86:5e:ed:50:27:a6:0d:a6:23:f9:bb:cb:a6:07:
+         14:42
+No Trusted Uses.
+No Rejected Uses.
+Alias: Thawte Premium Server CA
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIDJzCCApCgAwIBAgIBATANBgkqhkiG9w0BAQQFADCBzjELMAkGA1UEBhMCWkEx
+FTATBgNVBAgTDFdlc3Rlcm4gQ2FwZTESMBAGA1UEBxMJQ2FwZSBUb3duMR0wGwYD
+VQQKExRUaGF3dGUgQ29uc3VsdGluZyBjYzEoMCYGA1UECxMfQ2VydGlmaWNhdGlv
+biBTZXJ2aWNlcyBEaXZpc2lvbjEhMB8GA1UEAxMYVGhhd3RlIFByZW1pdW0gU2Vy
+dmVyIENBMSgwJgYJKoZIhvcNAQkBFhlwcmVtaXVtLXNlcnZlckB0aGF3dGUuY29t
+MB4XDTk2MDgwMTAwMDAwMFoXDTIwMTIzMTIzNTk1OVowgc4xCzAJBgNVBAYTAlpB
+MRUwEwYDVQQIEwxXZXN0ZXJuIENhcGUxEjAQBgNVBAcTCUNhcGUgVG93bjEdMBsG
+A1UEChMUVGhhd3RlIENvbnN1bHRpbmcgY2MxKDAmBgNVBAsTH0NlcnRpZmljYXRp
+b24gU2VydmljZXMgRGl2aXNpb24xITAfBgNVBAMTGFRoYXd0ZSBQcmVtaXVtIFNl
+cnZlciBDQTEoMCYGCSqGSIb3DQEJARYZcHJlbWl1bS1zZXJ2ZXJAdGhhd3RlLmNv
+bTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA0jY2aovXwlue2oFBYo847kkE
+VdbQ7xwblRZH7xhINTpS9CtqBo87L+pW46+GjZ4X9560ZXUCTe/LCaIhUdib0GfQ
+ug2SBhRz1JPLlyoAnFxODLz6FVL88kRu2hFKbgifLy3j+ao6hnO2RlNYyIkFvYMR
+uHM/qgeN9EJN50CdHDcCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG
+9w0BAQQFAAOBgQAmSCwWwlj66BZ0DKqqX1Q/8tfJeGBeXm43YyJ3Nn6yF8Q0ufUI
+hfzJATj/Tb7yFkJD57taRvvBxhEf8UqwKEbJw8RCfbz6q1lu1bdRiBHjpIUZa4JM
+pAwSremkrj/xw0llmozFyD4lt5SZu5IycQfwhl7tUCemDaYj+bvLpgcUQjAaDBhU
+aGF3dGUgUHJlbWl1bSBTZXJ2ZXIgQ0E=
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+    Signature Algorithm: md5WithRSAEncryption
+        Issuer: C=ZA, ST=Western Cape, L=Cape Town, O=Thawte Consulting cc, OU=Certification Services Division, CN=Thawte Server CA/emailAddress=server-certs@thawte.com
+        Validity
+            Not Before: Aug  1 00:00:00 1996 GMT
+            Not After : Dec 31 23:59:59 2020 GMT
+        Subject: C=ZA, ST=Western Cape, L=Cape Town, O=Thawte Consulting cc, OU=Certification Services Division, CN=Thawte Server CA/emailAddress=server-certs@thawte.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:d3:a4:50:6e:c8:ff:56:6b:e6:cf:5d:b6:ea:0c:
+                    68:75:47:a2:aa:c2:da:84:25:fc:a8:f4:47:51:da:
+                    85:b5:20:74:94:86:1e:0f:75:c9:e9:08:61:f5:06:
+                    6d:30:6e:15:19:02:e9:52:c0:62:db:4d:99:9e:e2:
+                    6a:0c:44:38:cd:fe:be:e3:64:09:70:c5:fe:b1:6b:
+                    29:b6:2f:49:c8:3b:d4:27:04:25:10:97:2f:e7:90:
+                    6d:c0:28:42:99:d7:4c:43:de:c3:f5:21:6d:54:9f:
+                    5d:c3:58:e1:c0:e4:d9:5b:b0:b8:dc:b4:7b:df:36:
+                    3a:c2:b5:66:22:12:d6:87:0d
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+    Signature Algorithm: md5WithRSAEncryption
+         07:fa:4c:69:5c:fb:95:cc:46:ee:85:83:4d:21:30:8e:ca:d9:
+         a8:6f:49:1a:e6:da:51:e3:60:70:6c:84:61:11:a1:1a:c8:48:
+         3e:59:43:7d:4f:95:3d:a1:8b:b7:0b:62:98:7a:75:8a:dd:88:
+         4e:4e:9e:40:db:a8:cc:32:74:b9:6f:0d:c6:e3:b3:44:0b:d9:
+         8a:6f:9a:29:9b:99:18:28:3b:d1:e3:40:28:9a:5a:3c:d5:b5:
+         e7:20:1b:8b:ca:a4:ab:8d:e9:51:d9:e2:4c:2c:59:a9:da:b9:
+         b2:75:1b:f6:42:f2:ef:c7:f2:18:f9:89:bc:a3:ff:8a:23:2e:
+         70:47
+No Trusted Uses.
+No Rejected Uses.
+Alias: Thawte Server CA
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIDEzCCAnygAwIBAgIBATANBgkqhkiG9w0BAQQFADCBxDELMAkGA1UEBhMCWkEx
+FTATBgNVBAgTDFdlc3Rlcm4gQ2FwZTESMBAGA1UEBxMJQ2FwZSBUb3duMR0wGwYD
+VQQKExRUaGF3dGUgQ29uc3VsdGluZyBjYzEoMCYGA1UECxMfQ2VydGlmaWNhdGlv
+biBTZXJ2aWNlcyBEaXZpc2lvbjEZMBcGA1UEAxMQVGhhd3RlIFNlcnZlciBDQTEm
+MCQGCSqGSIb3DQEJARYXc2VydmVyLWNlcnRzQHRoYXd0ZS5jb20wHhcNOTYwODAx
+MDAwMDAwWhcNMjAxMjMxMjM1OTU5WjCBxDELMAkGA1UEBhMCWkExFTATBgNVBAgT
+DFdlc3Rlcm4gQ2FwZTESMBAGA1UEBxMJQ2FwZSBUb3duMR0wGwYDVQQKExRUaGF3
+dGUgQ29uc3VsdGluZyBjYzEoMCYGA1UECxMfQ2VydGlmaWNhdGlvbiBTZXJ2aWNl
+cyBEaXZpc2lvbjEZMBcGA1UEAxMQVGhhd3RlIFNlcnZlciBDQTEmMCQGCSqGSIb3
+DQEJARYXc2VydmVyLWNlcnRzQHRoYXd0ZS5jb20wgZ8wDQYJKoZIhvcNAQEBBQAD
+gY0AMIGJAoGBANOkUG7I/1Zr5s9dtuoMaHVHoqrC2oQl/Kj0R1HahbUgdJSGHg91
+yekIYfUGbTBuFRkC6VLAYttNmZ7iagxEOM3+vuNkCXDF/rFrKbYvScg71CcEJRCX
+L+eQbcAoQpnXTEPew/UhbVSfXcNY4cDk2VuwuNy0e982OsK1ZiIS1ocNAgMBAAGj
+EzARMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQEEBQADgYEAB/pMaVz7lcxG
+7oWDTSEwjsrZqG9JGubaUeNgcGyEYRGhGshIPllDfU+VPaGLtwtimHp1it2ITk6e
+QNuozDJ0uW8NxuOzRAvZim+aKZuZGCg70eNAKJpaPNW15yAbi8qkq43pUdniTCxZ
+qdq5snUb9kLy78fyGPmJvKP/iiMucEcwEgwQVGhhd3RlIFNlcnZlciBDQQ==
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            5d:20:61:8e:8c:0e:b9:34:40:93:b9:b1:d8:63:95:b6
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=SE, O=AddTrust AB, OU=AddTrust External TTP Network, CN=AddTrust External CA Root
+        Validity
+            Not Before: Aug  5 00:00:00 2014 GMT
+            Not After : Nov  1 23:59:59 2015 GMT
+        Subject: C=US, ST=UT, L=Salt Lake City, O=The USERTRUST Network, CN=USERTrust Legacy Secure Server CA
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:d9:4d:20:3a:e6:29:30:86:f2:e9:86:89:76:34:
+                    4e:68:1f:96:44:f7:d1:f9:d6:82:4e:a6:38:9e:ee:
+                    cb:5b:e1:8e:2e:bd:f2:57:80:fd:c9:3f:fc:90:73:
+                    44:bc:8f:bb:57:5b:e5:2d:1f:14:30:75:36:f5:7f:
+                    bc:cf:56:f4:7f:81:ff:ae:91:cd:d8:d2:6a:cb:97:
+                    f9:f7:cd:90:6a:45:2d:c4:bb:a4:85:13:68:57:5f:
+                    ef:29:ba:2a:ca:ea:f5:cc:a4:04:9b:63:cd:00:eb:
+                    fd:ed:8d:dd:23:c6:7b:1e:57:1d:36:7f:1f:08:9a:
+                    0d:61:db:5a:6c:71:02:53:28:c2:fa:8d:fd:ab:bb:
+                    b3:f1:8d:74:4b:df:bd:bd:cc:06:93:63:09:95:c2:
+                    10:7a:9d:25:90:32:9d:01:c2:39:53:b0:e0:15:6b:
+                    c7:d7:74:e5:a4:22:9b:e4:94:ff:84:91:fb:2d:b3:
+                    19:43:2d:93:0f:9c:12:09:e4:67:b9:27:7a:32:ad:
+                    7a:2a:cc:41:58:c0:6e:59:5f:ee:38:2b:17:22:9c:
+                    89:fa:6e:e7:e5:57:35:f4:5a:ed:92:95:93:2d:f9:
+                    cc:24:3f:a5:1c:3d:27:bd:22:03:73:cc:f5:ca:f3:
+                    a9:f4:dc:fe:cf:e9:d0:5c:d0:0f:ab:87:fc:83:fd:
+                    c8:a9
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:AD:BD:98:7A:34:B4:26:F7:FA:C4:26:54:EF:03:BD:E0:24:CB:54:1A
+
+            X509v3 Subject Key Identifier: 
+                AF:A4:40:AF:9F:16:FE:AB:31:FD:FB:D5:97:8B:F5:91:A3:24:86:16
+            X509v3 Key Usage: critical
+                Digital Signature, Certificate Sign, CRL Sign
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:0
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Certificate Policies: 
+                Policy: 1.3.6.1.4.1.6449.1.2.1.3.4
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://crl.usertrust.com/AddTrustExternalCARoot.crl
+
+            Authority Information Access: 
+                OCSP - URI:http://ocsp.usertrust.com
+
+    Signature Algorithm: sha1WithRSAEncryption
+         84:ae:2d:68:38:11:6c:83:51:62:c0:91:c2:98:bc:c6:3b:fa:
+         a5:c5:bd:3b:09:e6:6e:60:6f:30:03:86:22:1a:b2:8b:f3:c6:
+         ce:1e:bb:1b:79:e0:16:14:4d:d2:9a:05:4b:ff:8f:ec:f0:28:
+         29:ea:2a:04:1d:3d:af:11:12:d5:49:98:50:42:9f:61:66:3a:
+         b6:40:99:04:0c:6b:10:32:e9:f7:cf:86:58:4f:2d:cd:d3:ac:
+         7e:e8:5b:6a:83:7c:0d:a0:9c:5c:50:36:75:0d:6d:7e:42:b7:
+         df:a6:dc:90:5c:6f:23:4e:97:1d:f3:22:75:bf:03:35:e6:5d:
+         7f:c7:f9:9b:2c:87:f6:8e:d6:25:96:59:9d:cf:ea:10:1e:ef:
+         6e:ea:5a:9b:77:18:34:cc:81:77:af:9a:87:c2:0a:e5:e5:9e:
+         13:95:53:bd:bd:49:1a:a5:76:12:f6:dc:f2:91:b7:e9:1a:e1:
+         bc:4d:3d:95:71:7d:f8:8d:7c:3e:03:4f:53:ed:fe:52:fd:ca:
+         5f:93:e1:1a:01:1b:02:b7:73:4e:ba:66:e9:78:8b:50:fe:11:
+         cb:d1:67:d0:22:4f:77:ea:cd:14:15:40:ae:66:5d:e8:2e:7f:
+         1e:88:6f:55:79:d6:b9:7e:e3:b5:fd:91:a0:c0:f2:26:87:4b:
+         2f:9d:f5:a0
+No Trusted Uses.
+No Rejected Uses.
+Alias: USERTrust-temporary-intermediate-after-1024bit-removal
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIEmTCCA4GgAwIBAgIQXSBhjowOuTRAk7mx2GOVtjANBgkqhkiG9w0BAQUFADBv
+MQswCQYDVQQGEwJTRTEUMBIGA1UEChMLQWRkVHJ1c3QgQUIxJjAkBgNVBAsTHUFk
+ZFRydXN0IEV4dGVybmFsIFRUUCBOZXR3b3JrMSIwIAYDVQQDExlBZGRUcnVzdCBF
+eHRlcm5hbCBDQSBSb290MB4XDTE0MDgwNTAwMDAwMFoXDTE1MTEwMTIzNTk1OVow
+fzELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAlVUMRcwFQYDVQQHEw5TYWx0IExha2Ug
+Q2l0eTEeMBwGA1UEChMVVGhlIFVTRVJUUlVTVCBOZXR3b3JrMSowKAYDVQQDEyFV
+U0VSVHJ1c3QgTGVnYWN5IFNlY3VyZSBTZXJ2ZXIgQ0EwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQDZTSA65ikwhvLphol2NE5oH5ZE99H51oJOpjie7stb
+4Y4uvfJXgP3JP/yQc0S8j7tXW+UtHxQwdTb1f7zPVvR/gf+ukc3Y0mrLl/n3zZBq
+RS3Eu6SFE2hXX+8puirK6vXMpASbY80A6/3tjd0jxnseVx02fx8Img1h21pscQJT
+KML6jf2ru7PxjXRL3729zAaTYwmVwhB6nSWQMp0BwjlTsOAVa8fXdOWkIpvklP+E
+kfstsxlDLZMPnBIJ5Ge5J3oyrXoqzEFYwG5ZX+44KxcinIn6buflVzX0Wu2SlZMt
++cwkP6UcPSe9IgNzzPXK86n03P7P6dBc0A+rh/yD/cipAgMBAAGjggEfMIIBGzAf
+BgNVHSMEGDAWgBStvZh6NLQm9/rEJlTvA73gJMtUGjAdBgNVHQ4EFgQUr6RAr58W
+/qsx/fvVl4v1kaMkhhYwDgYDVR0PAQH/BAQDAgGGMBIGA1UdEwEB/wQIMAYBAf8C
+AQAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMBkGA1UdIAQSMBAwDgYM
+KwYBBAGyMQECAQMEMEQGA1UdHwQ9MDswOaA3oDWGM2h0dHA6Ly9jcmwudXNlcnRy
+dXN0LmNvbS9BZGRUcnVzdEV4dGVybmFsQ0FSb290LmNybDA1BggrBgEFBQcBAQQp
+MCcwJQYIKwYBBQUHMAGGGWh0dHA6Ly9vY3NwLnVzZXJ0cnVzdC5jb20wDQYJKoZI
+hvcNAQEFBQADggEBAISuLWg4EWyDUWLAkcKYvMY7+qXFvTsJ5m5gbzADhiIasovz
+xs4euxt54BYUTdKaBUv/j+zwKCnqKgQdPa8REtVJmFBCn2FmOrZAmQQMaxAy6ffP
+hlhPLc3TrH7oW2qDfA2gnFxQNnUNbX5Ct9+m3JBcbyNOlx3zInW/AzXmXX/H+Zss
+h/aO1iWWWZ3P6hAe727qWpt3GDTMgXevmofCCuXlnhOVU729SRqldhL23PKRt+ka
+4bxNPZVxffiNfD4DT1Pt/lL9yl+T4RoBGwK3c066Zul4i1D+EcvRZ9AiT3fqzRQV
+QK5mXegufx6Ib1V51rl+47X9kaDA8iaHSy+d9aAwOAw2VVNFUlRydXN0LXRlbXBv
+cmFyeS1pbnRlcm1lZGlhdGUtYWZ0ZXItMTAyNGJpdC1yZW1vdmFs
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            44:be:0c:8b:50:00:24:b4:11:d3:36:30:4b:c0:33:77
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, ST=UT, L=Salt Lake City, O=The USERTRUST Network, OU=http://www.usertrust.com, CN=UTN-USERFirst-Network Applications
+        Validity
+            Not Before: Jul  9 18:48:39 1999 GMT
+            Not After : Jul  9 18:57:49 2019 GMT
+        Subject: C=US, ST=UT, L=Salt Lake City, O=The USERTRUST Network, OU=http://www.usertrust.com, CN=UTN-USERFirst-Network Applications
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:b3:fb:91:a1:e4:36:55:85:ac:06:34:5b:a0:9a:
+                    58:b2:f8:b5:0f:05:77:83:ae:32:b1:76:92:68:ec:
+                    23:4a:c9:76:3f:e3:9c:b6:37:79:03:b9:ab:69:8d:
+                    07:25:b6:19:67:e4:b0:1b:18:73:61:4a:e8:7e:cd:
+                    d3:2f:64:e3:a6:7c:0c:fa:17:80:a3:0d:47:89:4f:
+                    51:71:2f:ee:fc:3f:f9:b8:16:80:87:89:93:25:20:
+                    9a:43:82:69:24:76:28:59:35:a1:1d:c0:7f:83:06:
+                    64:16:20:2c:d3:49:a4:85:b4:c0:61:7f:51:08:f8:
+                    68:15:91:80:cb:a5:d5:ee:3b:3a:f4:84:04:5e:60:
+                    59:a7:8c:34:72:ee:b8:78:c5:d1:3b:12:4a:6f:7e:
+                    65:27:b9:a4:55:c5:b9:6f:43:a4:c5:1d:2c:99:c0:
+                    52:a4:78:4c:15:b3:40:98:08:6b:43:c6:01:b0:7a:
+                    7b:f5:6b:1c:22:3f:cb:ef:ff:a8:d0:3a:4b:76:15:
+                    9e:d2:d1:c6:2e:e3:db:57:1b:32:a2:b8:6f:e8:86:
+                    a6:3f:70:ab:e5:70:92:ab:44:1e:40:50:fb:9c:a3:
+                    62:e4:6c:6e:a0:c8:de:e2:80:42:fa:e9:2f:e8:ce:
+                    32:04:8f:7c:8d:b7:1c:a3:35:3c:15:dd:9e:c3:ae:
+                    97:a5
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Key Usage: 
+                Digital Signature, Non Repudiation, Certificate Sign, CRL Sign
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Subject Key Identifier: 
+                FA:86:C9:DB:E0:BA:E9:78:F5:4B:A8:D6:15:DF:F0:D3:E1:6A:14:3C
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://crl.usertrust.com/UTN-USERFirst-NetworkApplications.crl
+
+    Signature Algorithm: sha1WithRSAEncryption
+         a4:f3:25:cc:d1:d4:91:83:22:d0:cc:32:ab:9b:96:4e:34:91:
+         54:20:25:34:61:5f:2a:02:15:e1:8b:aa:ff:7d:64:51:cf:0a:
+         ff:bc:7d:d8:21:6a:78:cb:2f:51:6f:f8:42:1d:33:bd:eb:b5:
+         7b:94:c3:c3:a9:a0:2d:df:d1:29:1f:1d:fe:8f:3f:bb:a8:45:
+         2a:7f:d1:6e:55:24:e2:bb:02:fb:31:3f:be:e8:bc:ec:40:2b:
+         f8:01:d4:56:38:e4:ca:44:82:b5:61:20:21:67:65:f6:f0:0b:
+         e7:34:f8:a5:c2:9c:a3:5c:40:1f:85:93:95:06:de:4f:d4:27:
+         a9:b6:a5:fc:16:cd:73:31:3f:b8:65:27:cf:d4:53:1a:f0:ac:
+         6e:9f:4f:05:0c:03:81:a7:84:29:c4:5a:bd:64:57:72:ad:3b:
+         cf:37:18:a6:98:c6:ad:06:b4:dc:08:a3:04:d5:29:a4:96:9a:
+         12:67:4a:8c:60:45:9d:f1:23:9a:b0:00:9c:68:b5:98:50:d3:
+         ef:8e:2e:92:65:b1:48:3e:21:be:15:30:2a:0d:b5:0c:a3:6b:
+         3f:ae:7f:57:f5:1f:96:7c:df:6f:dd:82:30:2c:65:1b:40:4a:
+         cd:68:b9:72:ec:71:76:ec:54:8e:1f:85:0c:01:6a:fa:a6:38:
+         ac:1f:c4:84
+No Trusted Uses.
+No Rejected Uses.
+Alias: UTN-USER First-Network Applications
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIEZDCCA0ygAwIBAgIQRL4Mi1AAJLQR0zYwS8AzdzANBgkqhkiG9w0BAQUFADCB
+ozELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAlVUMRcwFQYDVQQHEw5TYWx0IExha2Ug
+Q2l0eTEeMBwGA1UEChMVVGhlIFVTRVJUUlVTVCBOZXR3b3JrMSEwHwYDVQQLExho
+dHRwOi8vd3d3LnVzZXJ0cnVzdC5jb20xKzApBgNVBAMTIlVUTi1VU0VSRmlyc3Qt
+TmV0d29yayBBcHBsaWNhdGlvbnMwHhcNOTkwNzA5MTg0ODM5WhcNMTkwNzA5MTg1
+NzQ5WjCBozELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAlVUMRcwFQYDVQQHEw5TYWx0
+IExha2UgQ2l0eTEeMBwGA1UEChMVVGhlIFVTRVJUUlVTVCBOZXR3b3JrMSEwHwYD
+VQQLExhodHRwOi8vd3d3LnVzZXJ0cnVzdC5jb20xKzApBgNVBAMTIlVUTi1VU0VS
+Rmlyc3QtTmV0d29yayBBcHBsaWNhdGlvbnMwggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQCz+5Gh5DZVhawGNFugmliy+LUPBXeDrjKxdpJo7CNKyXY/45y2
+N3kDuatpjQclthln5LAbGHNhSuh+zdMvZOOmfAz6F4CjDUeJT1FxL+78P/m4FoCH
+iZMlIJpDgmkkdihZNaEdwH+DBmQWICzTSaSFtMBhf1EI+GgVkYDLpdXuOzr0hARe
+YFmnjDRy7rh4xdE7EkpvfmUnuaRVxblvQ6TFHSyZwFKkeEwVs0CYCGtDxgGwenv1
+axwiP8vv/6jQOkt2FZ7S0cYu49tXGzKiuG/ohqY/cKvlcJKrRB5AUPuco2LkbG6g
+yN7igEL66S/ozjIEj3yNtxyjNTwV3Z7DrpelAgMBAAGjgZEwgY4wCwYDVR0PBAQD
+AgHGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFPqGydvguul49Uuo1hXf8NPh
+ahQ8ME8GA1UdHwRIMEYwRKBCoECGPmh0dHA6Ly9jcmwudXNlcnRydXN0LmNvbS9V
+VE4tVVNFUkZpcnN0LU5ldHdvcmtBcHBsaWNhdGlvbnMuY3JsMA0GCSqGSIb3DQEB
+BQUAA4IBAQCk8yXM0dSRgyLQzDKrm5ZONJFUICU0YV8qAhXhi6r/fWRRzwr/vH3Y
+IWp4yy9Rb/hCHTO967V7lMPDqaAt39EpHx3+jz+7qEUqf9FuVSTiuwL7MT++6Lzs
+QCv4AdRWOOTKRIK1YSAhZ2X28AvnNPilwpyjXEAfhZOVBt5P1CeptqX8Fs1zMT+4
+ZSfP1FMa8Kxun08FDAOBp4QpxFq9ZFdyrTvPNximmMatBrTcCKME1SmklpoSZ0qM
+YEWd8SOasACcaLWYUNPvji6SZbFIPiG+FTAqDbUMo2s/rn9X9R+WfN9v3YIwLGUb
+QErNaLly7HF27FSOH4UMAWr6pjisH8SEMCUMI1VUTi1VU0VSIEZpcnN0LU5ldHdv
+cmsgQXBwbGljYXRpb25z
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number: 1 (0x1)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: L=ValiCert Validation Network, O=ValiCert, Inc., OU=ValiCert Class 1 Policy Validation Authority, CN=http://www.valicert.com//emailAddress=info@valicert.com
+        Validity
+            Not Before: Jun 25 22:23:48 1999 GMT
+            Not After : Jun 25 22:23:48 2019 GMT
+        Subject: L=ValiCert Validation Network, O=ValiCert, Inc., OU=ValiCert Class 1 Policy Validation Authority, CN=http://www.valicert.com//emailAddress=info@valicert.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:d8:59:82:7a:89:b8:96:ba:a6:2f:68:6f:58:2e:
+                    a7:54:1c:06:6e:f4:ea:8d:48:bc:31:94:17:f0:f3:
+                    4e:bc:b2:b8:35:92:76:b0:d0:a5:a5:01:d7:00:03:
+                    12:22:19:08:f8:ff:11:23:9b:ce:07:f5:bf:69:1a:
+                    26:fe:4e:e9:d1:7f:9d:2c:40:1d:59:68:6e:a6:f8:
+                    58:b0:9d:1a:8f:d3:3f:f1:dc:19:06:81:a8:0e:e0:
+                    3a:dd:c8:53:45:09:06:e6:0f:70:c3:fa:40:a6:0e:
+                    e2:56:05:0f:18:4d:fc:20:82:d1:73:55:74:8d:76:
+                    72:a0:1d:9d:1d:c0:dd:3f:71
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha1WithRSAEncryption
+         50:68:3d:49:f4:2c:1c:06:94:df:95:60:7f:96:7b:17:fe:4f:
+         71:ad:64:c8:dd:77:d2:ef:59:55:e8:3f:e8:8e:05:2a:21:f2:
+         07:d2:b5:a7:52:fe:9c:b1:b6:e2:5b:77:17:40:ea:72:d6:23:
+         cb:28:81:32:c3:00:79:18:ec:59:17:89:c9:c6:6a:1e:71:c9:
+         fd:b7:74:a5:25:45:69:c5:48:ab:19:e1:45:8a:25:6b:19:ee:
+         e5:bb:12:f5:7f:f7:a6:8d:51:c3:f0:9d:74:b7:a9:3e:a0:a5:
+         ff:b6:49:03:13:da:22:cc:ed:71:82:2b:99:cf:3a:b7:f5:2d:
+         72:c8
+No Trusted Uses.
+No Rejected Uses.
+Alias: ValiCert Class 1 VA
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIC5zCCAlACAQEwDQYJKoZIhvcNAQEFBQAwgbsxJDAiBgNVBAcTG1ZhbGlDZXJ0
+IFZhbGlkYXRpb24gTmV0d29yazEXMBUGA1UEChMOVmFsaUNlcnQsIEluYy4xNTAz
+BgNVBAsTLFZhbGlDZXJ0IENsYXNzIDEgUG9saWN5IFZhbGlkYXRpb24gQXV0aG9y
+aXR5MSEwHwYDVQQDExhodHRwOi8vd3d3LnZhbGljZXJ0LmNvbS8xIDAeBgkqhkiG
+9w0BCQEWEWluZm9AdmFsaWNlcnQuY29tMB4XDTk5MDYyNTIyMjM0OFoXDTE5MDYy
+NTIyMjM0OFowgbsxJDAiBgNVBAcTG1ZhbGlDZXJ0IFZhbGlkYXRpb24gTmV0d29y
+azEXMBUGA1UEChMOVmFsaUNlcnQsIEluYy4xNTAzBgNVBAsTLFZhbGlDZXJ0IENs
+YXNzIDEgUG9saWN5IFZhbGlkYXRpb24gQXV0aG9yaXR5MSEwHwYDVQQDExhodHRw
+Oi8vd3d3LnZhbGljZXJ0LmNvbS8xIDAeBgkqhkiG9w0BCQEWEWluZm9AdmFsaWNl
+cnQuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDYWYJ6ibiWuqYvaG9Y
+LqdUHAZu9OqNSLwxlBfw8068srg1knaw0KWlAdcAAxIiGQj4/xEjm84H9b9pGib+
+TunRf50sQB1ZaG6m+FiwnRqP0z/x3BkGgagO4DrdyFNFCQbmD3DD+kCmDuJWBQ8Y
+TfwggtFzVXSNdnKgHZ0dwN0/cQIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAFBoPUn0
+LBwGlN+VYH+Wexf+T3GtZMjdd9LvWVXoP+iOBSoh8gfStadS/pyxtuJbdxdA6nLW
+I8sogTLDAHkY7FkXicnGah5xyf23dKUlRWnFSKsZ4UWKJWsZ7uW7EvV/96aNUcPw
+nXS3qT6gpf+2SQMT2iLM7XGCK5nPOrf1LXLIMBUME1ZhbGlDZXJ0IENsYXNzIDEg
+VkE=
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number: 1 (0x1)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: L=ValiCert Validation Network, O=ValiCert, Inc., OU=ValiCert Class 2 Policy Validation Authority, CN=http://www.valicert.com//emailAddress=info@valicert.com
+        Validity
+            Not Before: Jun 26 00:19:54 1999 GMT
+            Not After : Jun 26 00:19:54 2019 GMT
+        Subject: L=ValiCert Validation Network, O=ValiCert, Inc., OU=ValiCert Class 2 Policy Validation Authority, CN=http://www.valicert.com//emailAddress=info@valicert.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:ce:3a:71:ca:e5:ab:c8:59:92:55:d7:ab:d8:74:
+                    0e:f9:ee:d9:f6:55:47:59:65:47:0e:05:55:dc:eb:
+                    98:36:3c:5c:53:5d:d3:30:cf:38:ec:bd:41:89:ed:
+                    25:42:09:24:6b:0a:5e:b3:7c:dd:52:2d:4c:e6:d4:
+                    d6:7d:5a:59:a9:65:d4:49:13:2d:24:4d:1c:50:6f:
+                    b5:c1:85:54:3b:fe:71:e4:d3:5c:42:f9:80:e0:91:
+                    1a:0a:5b:39:36:67:f3:3f:55:7c:1b:3f:b4:5f:64:
+                    73:34:e3:b4:12:bf:87:64:f8:da:12:ff:37:27:c1:
+                    b3:43:bb:ef:7b:6e:2e:69:f7
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha1WithRSAEncryption
+         3b:7f:50:6f:6f:50:94:99:49:62:38:38:1f:4b:f8:a5:c8:3e:
+         a7:82:81:f6:2b:c7:e8:c5:ce:e8:3a:10:82:cb:18:00:8e:4d:
+         bd:a8:58:7f:a1:79:00:b5:bb:e9:8d:af:41:d9:0f:34:ee:21:
+         81:19:a0:32:49:28:f4:c4:8e:56:d5:52:33:fd:50:d5:7e:99:
+         6c:03:e4:c9:4c:fc:cb:6c:ab:66:b3:4a:21:8c:e5:b5:0c:32:
+         3e:10:b2:cc:6c:a1:dc:9a:98:4c:02:5b:f3:ce:b9:9e:a5:72:
+         0e:4a:b7:3f:3c:e6:16:68:f8:be:ed:74:4c:bc:5b:d5:62:1f:
+         43:dd
+No Trusted Uses.
+No Rejected Uses.
+Alias: ValiCert Class 2 VA
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIC5zCCAlACAQEwDQYJKoZIhvcNAQEFBQAwgbsxJDAiBgNVBAcTG1ZhbGlDZXJ0
+IFZhbGlkYXRpb24gTmV0d29yazEXMBUGA1UEChMOVmFsaUNlcnQsIEluYy4xNTAz
+BgNVBAsTLFZhbGlDZXJ0IENsYXNzIDIgUG9saWN5IFZhbGlkYXRpb24gQXV0aG9y
+aXR5MSEwHwYDVQQDExhodHRwOi8vd3d3LnZhbGljZXJ0LmNvbS8xIDAeBgkqhkiG
+9w0BCQEWEWluZm9AdmFsaWNlcnQuY29tMB4XDTk5MDYyNjAwMTk1NFoXDTE5MDYy
+NjAwMTk1NFowgbsxJDAiBgNVBAcTG1ZhbGlDZXJ0IFZhbGlkYXRpb24gTmV0d29y
+azEXMBUGA1UEChMOVmFsaUNlcnQsIEluYy4xNTAzBgNVBAsTLFZhbGlDZXJ0IENs
+YXNzIDIgUG9saWN5IFZhbGlkYXRpb24gQXV0aG9yaXR5MSEwHwYDVQQDExhodHRw
+Oi8vd3d3LnZhbGljZXJ0LmNvbS8xIDAeBgkqhkiG9w0BCQEWEWluZm9AdmFsaWNl
+cnQuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDOOnHK5avIWZJV16vY
+dA757tn2VUdZZUcOBVXc65g2PFxTXdMwzzjsvUGJ7SVCCSRrCl6zfN1SLUzm1NZ9
+WlmpZdRJEy0kTRxQb7XBhVQ7/nHk01xC+YDgkRoKWzk2Z/M/VXwbP7RfZHM047QS
+v4dk+NoS/zcnwbNDu+97bi5p9wIDAQABMA0GCSqGSIb3DQEBBQUAA4GBADt/UG9v
+UJSZSWI4OB9L+KXIPqeCgfYrx+jFzug6EILLGACOTb2oWH+heQC1u+mNr0HZDzTu
+IYEZoDJJKPTEjlbVUjP9UNV+mWwD5MlM/Mtsq2azSiGM5bUMMj4QssxsodyamEwC
+W/POuZ6lcg5Ktz885hZo+L7tdEy8W9ViH0PdMBUME1ZhbGlDZXJ0IENsYXNzIDIg
+VkE=
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            2f:00:6e:cd:17:70:66:e7:5f:a3:82:0a:79:1f:05:ae
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign, Inc. - For authorized use only, CN=VeriSign Class 3 Public Primary Certification Authority - G5
+        Validity
+            Not Before: Mar 26 00:00:00 2009 GMT
+            Not After : Mar 24 23:59:59 2019 GMT
+        Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Secure Server CA - G2
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:d4:56:8f:57:3b:37:28:a6:40:63:d2:95:d5:05:
+                    74:da:b5:19:6a:96:d6:71:57:2f:e2:c0:34:8c:a0:
+                    95:b3:8c:e1:37:24:f3:2e:ed:43:45:05:8e:89:d7:
+                    fa:da:4a:b5:f8:3e:8d:4e:c7:f9:49:50:45:37:40:
+                    9f:74:aa:a0:51:55:61:f1:60:84:89:a5:9e:80:8d:
+                    2f:b0:21:aa:45:82:c4:cf:b4:14:7f:47:15:20:28:
+                    82:b0:68:12:c0:ae:5c:07:d7:f6:59:cc:cb:62:56:
+                    5c:4d:49:ff:26:88:ab:54:51:3a:2f:4a:da:0e:98:
+                    e2:89:72:b9:fc:f7:68:3c:c4:1f:39:7a:cb:17:81:
+                    f3:0c:ad:0f:dc:61:62:1b:10:0b:04:1e:29:18:71:
+                    5e:62:cb:43:de:be:31:ba:71:02:19:4e:26:a9:51:
+                    da:8c:64:69:03:de:9c:fd:7d:fd:7b:61:bc:fc:84:
+                    7c:88:5c:b4:c3:7b:ed:5f:2b:46:12:f1:fd:00:01:
+                    9a:8b:5b:e9:a3:05:2e:8f:2e:5b:de:f3:1b:78:f8:
+                    66:91:08:c0:5e:ce:d5:b0:36:ca:d4:a8:7b:a0:7d:
+                    f9:30:7a:bf:f8:dd:19:51:2b:20:ba:fe:a7:cf:a1:
+                    4e:b0:67:f5:80:aa:2b:83:2e:d2:8e:54:89:8e:1e:
+                    29:0b
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:0
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Subject Alternative Name: 
+                DirName:/CN=Class3CA2048-1-52
+            X509v3 Subject Key Identifier: 
+                A5:EF:0B:11:CE:C0:41:03:A3:4A:65:90:48:B2:1C:E0:57:2D:7D:47
+            X509v3 Certificate Policies: 
+                Policy: 2.16.840.1.113733.1.7.23.3
+                  CPS: https://d.symcb.com/cps
+                  User Notice:
+                    Explicit Text: https://d.symcb.com/rpa
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://s.symcb.com/pca3-g5.crl
+
+            X509v3 Authority Key Identifier: 
+                keyid:7F:D3:65:A7:C2:DD:EC:BB:F0:30:09:F3:43:39:FA:02:AF:33:31:33
+
+    Signature Algorithm: sha1WithRSAEncryption
+         2b:8e:14:cc:ec:86:08:60:37:8b:6c:65:89:25:21:de:2f:52:
+         a2:07:9e:58:d3:b3:16:78:01:99:51:95:b4:13:77:cc:77:dd:
+         0b:5c:81:37:d6:be:f6:62:d6:04:37:0b:18:73:9a:d3:f6:c1:
+         a2:1e:6d:9c:bb:8c:11:e6:3e:12:5e:07:5f:0b:83:5c:74:02:
+         e0:50:f4:b1:26:1b:6d:c6:e8:e9:bf:4d:b9:01:15:19:ec:50:
+         9a:f9:11:f0:81:58:43:2c:4d:11:40:b3:5a:46:08:a6:5e:73:
+         a1:88:12:35:8c:ff:03:3a:bd:d6:9d:fa:e7:dc:96:b9:1a:64:
+         3e:c4:fd:d9:0a:b6:65:9e:ba:a5:a8:58:fc:3b:22:f0:a2:57:
+         ee:8a:57:47:9c:77:c7:25:e1:ac:34:05:4d:f3:82:7e:41:23:
+         ba:b4:57:f3:e7:c6:01:65:d7:4d:89:99:1c:69:4d:5e:78:f6:
+         eb:72:71:3d:b2:c4:95:01:9f:5d:0c:b7:2f:25:a6:5c:79:41:
+         ef:9e:c4:67:3c:a1:9d:7f:71:3a:d0:95:97:ec:78:42:74:98:
+         6e:be:3e:68:4c:57:3c:a8:93:41:87:0b:e4:b9:af:91:fb:50:
+         4c:0c:ba:c0:24:27:d1:15:db:65:48:21:0a:2f:d7:dc:7e:a0:
+         cc:65:7e:79
+No Trusted Uses.
+No Rejected Uses.
+Alias: VeriSign-C3SSA-G2-temporary-intermediate-after-1024bit-removal
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIFOTCCBCGgAwIBAgIQLwBuzRdwZudfo4IKeR8FrjANBgkqhkiG9w0BAQUFADCB
+yjELMAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQL
+ExZWZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTowOAYDVQQLEzEoYykgMjAwNiBWZXJp
+U2lnbiwgSW5jLiAtIEZvciBhdXRob3JpemVkIHVzZSBvbmx5MUUwQwYDVQQDEzxW
+ZXJpU2lnbiBDbGFzcyAzIFB1YmxpYyBQcmltYXJ5IENlcnRpZmljYXRpb24gQXV0
+aG9yaXR5IC0gRzUwHhcNMDkwMzI2MDAwMDAwWhcNMTkwMzI0MjM1OTU5WjCBtTEL
+MAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQLExZW
+ZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTswOQYDVQQLEzJUZXJtcyBvZiB1c2UgYXQg
+aHR0cHM6Ly93d3cudmVyaXNpZ24uY29tL3JwYSAoYykwOTEvMC0GA1UEAxMmVmVy
+aVNpZ24gQ2xhc3MgMyBTZWN1cmUgU2VydmVyIENBIC0gRzIwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQDUVo9XOzcopkBj0pXVBXTatRlqltZxVy/iwDSM
+oJWzjOE3JPMu7UNFBY6J1/raSrX4Po1Ox/lJUEU3QJ90qqBRVWHxYISJpZ6AjS+w
+IapFgsTPtBR/RxUgKIKwaBLArlwH1/ZZzMtiVlxNSf8miKtUUTovStoOmOKJcrn8
+92g8xB85essXgfMMrQ/cYWIbEAsEHikYcV5iy0PevjG6cQIZTiapUdqMZGkD3pz9
+ff17Ybz8hHyIXLTDe+1fK0YS8f0AAZqLW+mjBS6PLlve8xt4+GaRCMBeztWwNsrU
+qHugffkwer/43RlRKyC6/qfPoU6wZ/WAqiuDLtKOVImOHikLAgMBAAGjggEsMIIB
+KDASBgNVHRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBBjApBgNVHREEIjAg
+pB4wHDEaMBgGA1UEAxMRQ2xhc3MzQ0EyMDQ4LTEtNTIwHQYDVR0OBBYEFKXvCxHO
+wEEDo0plkEiyHOBXLX1HMGYGA1UdIARfMF0wWwYLYIZIAYb4RQEHFwMwTDAjBggr
+BgEFBQcCARYXaHR0cHM6Ly9kLnN5bWNiLmNvbS9jcHMwJQYIKwYBBQUHAgIwGRoX
+aHR0cHM6Ly9kLnN5bWNiLmNvbS9ycGEwLwYDVR0fBCgwJjAkoCKgIIYeaHR0cDov
+L3Muc3ltY2IuY29tL3BjYTMtZzUuY3JsMB8GA1UdIwQYMBaAFH/TZafC3ey78DAJ
+80M5+gKvMzEzMA0GCSqGSIb3DQEBBQUAA4IBAQArjhTM7IYIYDeLbGWJJSHeL1Ki
+B55Y07MWeAGZUZW0E3fMd90LXIE31r72YtYENwsYc5rT9sGiHm2cu4wR5j4SXgdf
+C4NcdALgUPSxJhttxujpv025ARUZ7FCa+RHwgVhDLE0RQLNaRgimXnOhiBI1jP8D
+Or3Wnfrn3Ja5GmQ+xP3ZCrZlnrqlqFj8OyLwolfuildHnHfHJeGsNAVN84J+QSO6
+tFfz58YBZddNiZkcaU1eePbrcnE9ssSVAZ9dDLcvJaZceUHvnsRnPKGdf3E60JWX
+7HhCdJhuvj5oTFc8qJNBhwvkua+R+1BMDLrAJCfRFdtlSCEKL9fcfqDMZX55MEAM
+PlZlcmlTaWduLUMzU1NBLUcyLXRlbXBvcmFyeS1pbnRlcm1lZGlhdGUtYWZ0ZXIt
+MTAyNGJpdC1yZW1vdmFs
+-----END TRUSTED CERTIFICATE-----

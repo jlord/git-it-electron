@@ -1,0 +1,724 @@
+/* KEEP THIS AROUND UNTIL TRANSLATIONS ARE UPDATED */
+
+
+
+
+/* FONTS
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(fonts/SourceSansPro-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(fonts/SourceSansPro-Semibold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(fonts/SourceSansPro-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(fonts/SourceSansPro-Black.otf) format('opentype');
+}
+
+/* GENERAL
+   -------------------------------------------------------------------------- */
+
+body {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+  line-height: 1.8em;
+  color: rgba(51, 57, 53, 0.83);
+  background-color: #f5f5f5;
+  background-color: #fff;
+  font-size: 15px;
+  margin: 0;
+}
+
+div, header, select, a {
+  box-sizing: border-box;
+}
+
+li {
+  padding-bottom: 4px;
+}
+
+h1, h2, h3, h4, .toc {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+a {
+  color: #0087ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4BABFF;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+blockquote {
+  border-left: 2px solid rgba(51, 57, 53, 0.83);
+  padding-left: 18px;
+  margin: 30px 0;
+  color: rgba(51, 57, 53, 0.83);
+}
+
+img {
+  margin: 30px 0 18px;
+}
+
+/* UTILITIES
+   -------------------------------------------------------------------------- */
+
+.all-caps {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.u-floatRight {
+  float: right;
+}
+
+.u-floatLeft {
+  float: left;
+}
+
+.u-textCenter {
+  text-align: center;
+}
+
+.u-textRight {
+  text-align: right;
+}
+
+.u-posFixed {
+  position: fixed;
+}
+
+.u-inlineBlock {
+  display: inline-block;
+}
+
+/* LAYOUT
+   -------------------------------------------------------------------------- */
+
+.nav {
+  width: 100%;
+  background-color: #fafafa;
+  top: 0;
+}
+
+.wrapper {
+  min-width: 800px;
+  margin-top: 60px;
+}
+
+.page-wrapper {
+  max-width: 600px;
+  margin: 60px auto 0;
+  padding: 15px;
+}
+
+.content {
+  padding: 26px;
+  margin-left: 26%;
+  width: 74%;
+  height: 100%;
+  background-color: #fff;
+}
+
+/* FIXED HEADER
+   -------------------------------------------------------------------------- */
+
+.site-header {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 20px;
+  z-index: 9;
+  text-align: center;
+  background: #fafafa;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.site-header h2 {
+  margin-top: 12px;
+}
+
+.challenge-title {
+  text-transform: capitalize;
+  font-size: 19px;
+  font-weight: 800;
+  color: #4BABFF;
+  line-height: 1;
+  display: inline-block;
+}
+
+.filledblock {
+  display: inline-block;
+  padding: 4px 10px;
+  font-weight: 900;
+}
+
+.filledblock:hover {
+  background: #4BABFF;
+  color: #fff;
+}
+
+/* SIDEBAR
+   -------------------------------------------------------------------------- */
+
+ .sidebar {
+   width: 26%;
+   position: fixed;
+   height: 100%;
+   background-color: #fff;
+ }
+
+.list-of-challenges {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-of-challenges li {
+  padding: 0;
+}
+
+.list-of-challenges h3 {
+  padding-left: 10px;
+  margin-bottom: 4px;
+}
+
+.challenge-item {
+  padding: 3px 10px 3px 20px;
+  display: block;
+  text-transform: capitalize;
+}
+
+/* :after instead of :before cause
+   it messes with text-transform */
+.challenge-item:after {
+  content: " ";
+  float: left;
+  display: inline-block;
+  position: relative;
+  left: -9px;
+  top: 9px;
+  height: 6px;
+  width: 6px;
+  border: 0.15em solid #0087ff;
+  border-radius: 50px;
+}
+
+.challenge-item.completed:after {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  height: 6px;
+  width: 6px;
+  border: 0.15em solid #0087ff;
+  background-color: #0087ff;
+  border-radius: 50px;
+}
+
+.challenge-item.current .current-arrow {
+  display: block;
+}
+
+.current-arrow {
+  float: right;
+  display: none;
+}
+
+.challenge-item.current {
+  background-color: #8cf;
+  color: #0087FF;
+  margin-right: -3px;
+  border-color: white;
+  border-radius: 0 2px 2px 0;
+}
+
+.challenge-item.completed {
+  position: relative;
+  padding-left: 30px;
+}
+
+.challenge-name {
+  text-transform: capitalize;
+  font-weight: 900;
+  color: #0087ff;
+}
+
+/* CHALLENGES
+   -------------------------------------------------------------------------- */
+
+ .content h1, .content h2, .content h3, .content h4 {
+   margin-top: 50px;
+ }
+
+.chal-background {
+  color: #6F879C;
+  background: rgba(136, 204, 255, 0.18);
+  border-radius: 2px;
+  padding: 3px 24px;
+}
+
+.chal-background h2 {
+  margin-top: 18px;
+}
+
+
+
+code, .outof {
+  font-size: 0.9em;
+  /*border: 1px solid #9DA6B3;*/
+  background: rgba(157, 166, 179, 0.16);
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-family: 'Liberation Mono', Monaco, Courier New, monospace;
+  white-space: nowrap;
+}
+
+code.shell:before {
+  content: "$ ";
+  opacity: 0.4;
+}
+
+.prenext {
+  overflow: auto;
+}
+
+/* CHALLENGE SECTIONS
+   -------------------------------------------------------------------------- */
+
+/* TODO Make these generic for dictionary
+   and resources page */
+.blue-border-box,
+.didnt-pass,
+.challenge {
+  border: 1px solid #BADFFF;
+  padding: 18px;
+  margin: 18px 0 36px;
+  border-radius: 2px;
+}
+
+.didnt-pass {
+  border-color: #999;
+}
+
+.blue-border-box h2,
+.challenge h2 {
+  color: #08f;
+}
+
+.blue-border-box h2,
+.didnt-pass h2,
+.challenge h2 {
+  margin: -32px -8px 0;
+  float: left;
+  background: #fff;
+  padding: 0 8px;
+}
+
+.blue-border-box h2 + p {
+  margin-top: 0;
+}
+
+.blue-border-box p:last-child,
+.didnt-pass p:last-child {
+  margin-bottom: 0;
+}
+
+.blue-border-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blue-border-box code {
+  border: none;
+  background: rgba(136, 204, 255, 0.15);
+}
+
+.blue-border-box li {
+  margin-top: 0px;
+}
+
+.didnt-pass h4 {
+  margin: 10px 0 0;
+}
+
+.didnt-pass p + h4 {
+  padding-top: 30px;
+}
+
+.challenge p {
+  margin: 0;
+  color: #0087ff;
+}
+
+/* VERIFY
+   -------------------------------------------------------------------------- */
+
+.verify {
+  background-color: #0087ff;
+  color: #fff;
+  padding: 18px;
+  border-radius: 2px;
+}
+
+.verify code {
+  border-color: #fff;
+  display: inline-block;
+}
+
+.verify {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.blue-border-box h4,
+.verify h3 {
+  margin-top: 0;
+}
+
+.verify h3 {
+  display: inline-block;
+  padding-right: 12px;
+}
+
+#directory-path:empty {
+  display: none;
+}
+
+#path-required-warning,
+#directory-path {
+  padding: 6px 12px 6px 10px;
+  vertical-align: middle;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: -3px;
+  color: #8cf;
+}
+
+#path-required-warning {
+  display: none;
+}
+
+#path-required-warning.show {
+  display: inline;
+}
+
+#path-required-warning.show + #directory-path {
+  display: none;
+}
+
+.verify-fail:before {
+  content: '✗ ';
+}
+
+.verify-pass:before {
+  content: '✔︎ ';
+}
+
+#verify-list {
+  display: none;
+  list-style: none;
+  padding-left: 0;
+}
+
+#challenge-completed {
+  color: #2BDA9E;
+  font-size: 24px;
+  font-family: "NothingYouCouldDo";
+}
+
+#challenge-completed h2 {
+  padding: 0; margin: 0;
+}
+
+#verify-spinner.sk-double-bounce {
+  display: none;
+  width: 26px;
+  height: 26px;
+  position: relative;
+  margin: 0 auto 0 14px;
+  vertical-align: middle;
+}
+
+#verify-spinner.sk-double-bounce .sk-child {
+  background-color: #E0E0E0;
+}
+
+/* BUTTONS
+   -------------------------------------------------------------------------- */
+
+button {
+  display: inline-block;
+  background-color: rgba(203, 203, 203, 0.38);
+  color: #FFFFFF;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  background-color: rgba(227, 220, 220, 0.38);
+}
+
+button:disabled {
+  background-color: rgba(167, 164, 164, 0.68);
+}
+
+button .octicon {
+  padding-left: 6px;
+}
+
+.btn-primary {
+  margin: 9px 0;
+  background: #0087ff;
+  color: #fff;
+  border-radius: 2px;
+  text-transform: inherit;
+}
+
+.btn-secondary {
+  background: #8cf;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.btn-white {
+  background: #fff;
+  color: #0087ff;
+  border-radius: 2px;
+}
+
+.btn-outline {
+  border: 1px solid #8cf;
+  background: none;
+  padding: 4px 13px;
+  border-radius: 3px;
+  color: #0087ff;
+  display: inline-block;
+}
+
+.btn-light {
+  background: #fff;
+}
+
+.btn-cta {
+  box-shadow: 0 4px 60px rgba(0, 0, 0, .2);
+}
+
+.btn-primary:hover {
+  background: #057ce7;
+}
+
+.btn-large {
+  padding: 12px 17px;
+  font-size: 16px;
+}
+
+.btn-small {
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+.border-group-left {
+  border: 1px solid #0087ff;
+  border-radius: 2px 0 0 2px;
+  padding: 10px 14px;
+}
+
+.border-group-middle {
+  border-top: 1px solid #0087ff;
+  border-bottom: 1px solid #0087ff;
+  padding: 10px 14px;
+  margin-left: -4px;
+}
+
+.border-group-right {
+  border: 1px solid #0087ff;
+  border-radius: 0 2px 2px 0;
+  padding: 10px 14px;
+}
+
+.border-group-right.btn {
+  border: 1px solid #88CCFF;
+  color: #88CCFF;
+  border-left-color: #0087FF;
+}
+
+.border-group-right.btn:hover {
+  border: 1px solid #0087ff;
+  color: #0087ff;
+  cursor: pointer;
+}
+
+.border-group-container {
+  color: #0087ff;
+  padding: 20px 0;
+}
+
+.lang-select {
+  padding: 4px 13px;
+  position: absolute;
+  height: 36px;
+  width: 100px;
+  margin: 5px 8px;
+  top: 0;
+  left: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.lang-select:after {
+  content: "";
+  border: 5px solid transparent;
+  /*border-top-color: #8cf;*/
+  border-top-color: #A6A6A6;
+  position: relative;
+  left: 40px;
+  top: 5px;
+  pointer-events: none;
+  display: inline-block;
+  z-index: 10;
+}
+
+/* FOOTER
+   -------------------------------------------------------------------------- */
+
+/* Mu-An's arrows
+   save the day */
+.arrow-right {
+  width: 10px;
+  height: 10px;
+  border-bottom-left-radius: 8px;
+  border-color: #000;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  position: absolute;
+  right: 28px;
+}
+
+.arrow-right:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  transform: rotate(-45deg);
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.arrow-left {
+  width: 10px;
+  height: 10px;
+  border-bottom-right-radius: 8px;
+  border-color: #000;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  position: relative;
+  margin-bottom: 8px;
+  margin-left: 1px;
+}
+
+.arrow-left:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  transform: rotate(-45deg);
+  border-left: 1px solid;
+  border-top: 1px solid;
+}
+
+/* HOME PAGE
+   -------------------------------------------------------------------------- */
+
+.progress-circles .border-left {
+  border-left: 1px solid #0087ff;
+}
+
+.progress-circle {
+  display: inline-block;
+  width: 10px;
+	height: 10px;
+  border: 0.15em solid #0087ff;
+	border-radius: 50px;
+}
+
+.progress-circle.completed {
+  background: #0087ff;
+}
+
+.progress-circle.completed + .progress-circle:not(.completed) {
+  background: #8cf;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    background: none;
+  }
+}
+
+/* LANGUAGES, TRANSLATIONS
+   -------------------------------------------------------------------------- */
+
+n, v, adj {
+  position: relative;
+}
+
+.superscript {
+  font-size: 0.6em;
+  position: absolute;
+  top: -20%;
+  line-height: 0.6em;
+  font-weight: normal;
+  white-space: nowrap;
+  opacity: 0.8;
+}

@@ -1,0 +1,375 @@
+/* FONTS
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(fonts/SourceSansPro-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(fonts/SourceSansPro-Semibold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(fonts/SourceSansPro-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(fonts/SourceSansPro-Black.otf) format('opentype');
+}
+
+/* GENERAL
+   -------------------------------------------------------------------------- */
+
+body {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+  line-height: 1.8em;
+  color: rgba(51, 57, 53, 0.83);
+  background-color: #f5f5f5;
+  background-color: #fff;
+  font-size: 1.1em;
+  margin: 0;
+}
+
+div, header, select, a {
+  box-sizing: border-box;
+}
+
+li {
+  padding-bottom: 4px;
+}
+
+a {
+  color: #0087ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4BABFF;
+}
+
+blockquote {
+  border-left: 1px solid rgb(186, 223, 255);
+  padding-left: 18px;
+  margin: 30px 0;
+  color: rgba(51, 57, 53, 0.83);
+}
+
+img {
+  margin: 30px 0 18px;
+  border-radius: 2px;
+}
+
+/* UTILITIES
+   -------------------------------------------------------------------------- */
+
+.all-caps {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.u-floatRight {
+  float: right;
+}
+
+.u-floatLeft {
+  float: left;
+}
+
+.u-textCenter {
+  text-align: center;
+}
+
+.u-textRight {
+  text-align: right;
+}
+
+.u-posFixed {
+  position: fixed;
+}
+
+.u-inlineBlock {
+  display: inline-block;
+}
+
+ul.no-list-style {
+  list-style: none;
+  margin: 0;
+  padding: 12px 0;
+}
+
+/* LAYOUT
+   -------------------------------------------------------------------------- */
+
+.nav {
+  width: 100%;
+  background-color: #fafafa;
+  top: 0;
+}
+
+.wrapper {
+  min-width: 800px;
+  margin-top: 60px;
+}
+
+.page-wrapper {
+  max-width: 600px;
+  margin: 60px auto 0;
+  padding: 15px;
+}
+
+.content {
+  padding: 26px;
+  margin-left: 26%;
+  width: 74%;
+  height: 100%;
+  background-color: #fff;
+}
+
+/* FIXED HEADER
+   -------------------------------------------------------------------------- */
+
+.site-header {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 20px;
+  z-index: 9;
+  text-align: center;
+  background: #fafafa;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.site-header h2 {
+  margin-top: 12px;
+}
+
+.challenge-title {
+  text-transform: capitalize;
+  font-size: 19px;
+  font-weight: 800;
+  color: #4BABFF;
+  line-height: 1;
+  display: inline-block;
+}
+
+.filledblock {
+  display: inline-block;
+  padding: 4px 10px;
+  font-weight: 900;
+}
+
+.filledblock:hover {
+  background: #4BABFF;
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* SIDEBAR
+   -------------------------------------------------------------------------- */
+
+ .sidebar {
+   width: 26%;
+   position: fixed;
+   height: 100%;
+   background-color: #fff;
+ }
+
+.list-of-challenges {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-of-challenges li {
+  padding: 0;
+}
+
+.list-of-challenges h3 {
+  padding-left: 10px;
+  margin-bottom: 4px;
+}
+
+.challenge-item {
+  padding: 3px 10px 3px 20px;
+  display: block;
+  text-transform: capitalize;
+  font-size: .8em;
+}
+
+/* :after instead of :before cause
+   it messes with text-transform */
+.challenge-item:after {
+  content: " ";
+  float: left;
+  display: inline-block;
+  position: relative;
+  left: -9px;
+  top: 9px;
+  height: 6px;
+  width: 6px;
+  border: 0.15em solid #0087ff;
+  border-radius: 50px;
+}
+
+.challenge-item.completed:after {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  height: 6px;
+  width: 6px;
+  border: 0.15em solid #0087ff;
+  background-color: #0087ff;
+  border-radius: 50px;
+}
+
+.challenge-item.current .current-arrow {
+  display: block;
+}
+
+.current-arrow {
+  float: right;
+  display: none;
+}
+
+.challenge-item.current {
+  background-color: #8cf;
+  color: #fff;
+  margin-right: -3px;
+  border-color: white;
+  border-radius: 0 2px 2px 0;
+}
+
+.challenge-item.completed {
+  position: relative;
+  padding-left: 30px;
+}
+
+.challenge-name {
+  text-transform: capitalize;
+  font-weight: 900;
+  color: #0087ff;
+}
+
+/* FOOTER
+   -------------------------------------------------------------------------- */
+
+/* Mu-An's arrows
+   save the day */
+.arrow-right {
+  width: 10px;
+  height: 10px;
+  border-bottom-left-radius: 8px;
+  border-color: #000;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  position: absolute;
+  right: 28px;
+}
+
+.arrow-right:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  transform: rotate(-45deg);
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.arrow-left {
+  width: 10px;
+  height: 10px;
+  border-bottom-right-radius: 8px;
+  border-color: #000;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  position: relative;
+  margin-bottom: 8px;
+  margin-left: 1px;
+}
+
+.arrow-left:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  transform: rotate(-45deg);
+  border-left: 1px solid;
+  border-top: 1px solid;
+}
+
+/* HOME PAGE
+   -------------------------------------------------------------------------- */
+
+
+.chal-background h3 {
+  margin: 0;
+}
+
+.progress-circles .border-left {
+  border-left: 1px solid #0087ff;
+}
+
+.progress-circle {
+  display: inline-block;
+  width: 10px;
+	height: 10px;
+  border: 0.15em solid #0087ff;
+	border-radius: 50px;
+}
+
+.progress-circle.completed {
+  background: #0087ff;
+}
+
+.progress-circle.completed + .progress-circle:not(.completed) {
+  background: #8cf;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    background: none;
+  }
+}
+
+/* LANGUAGES, TRANSLATIONS
+   -------------------------------------------------------------------------- */
+
+n, v, adj {
+  position: relative;
+}
+
+.superscript {
+  font-size: 0.6em;
+  position: absolute;
+  top: -20%;
+  line-height: 0.6em;
+  font-weight: normal;
+  white-space: nowrap;
+  opacity: 0.8;
+}

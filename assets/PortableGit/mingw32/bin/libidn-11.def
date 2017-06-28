@@ -1,0 +1,77 @@
+EXPORTS
+    idn_free @1
+    idna_strerror @2
+    idna_to_ascii_4i @3
+    idna_to_ascii_4z @4
+    idna_to_ascii_8z @5
+    idna_to_ascii_lz @6
+    idna_to_unicode_44i @7
+    idna_to_unicode_4z4z @8
+    idna_to_unicode_8z4z @9
+    idna_to_unicode_8z8z @10
+    idna_to_unicode_8zlz @11
+    idna_to_unicode_lzlz @12
+    pr29_4 @13
+    pr29_4z @14
+    pr29_8z @15
+    pr29_strerror @16
+    punycode_decode @17
+    punycode_encode @18
+    punycode_strerror @19
+    stringprep @20
+    stringprep_4i @21
+    stringprep_4zi @22
+    stringprep_check_version @23
+    stringprep_convert @24
+    stringprep_iscsi @25 DATA
+    stringprep_iscsi_prohibit @26 DATA
+    stringprep_kerberos5 @27 DATA
+    stringprep_locale_charset @28
+    stringprep_locale_to_utf8 @29
+    stringprep_nameprep @30 DATA
+    stringprep_plain @31 DATA
+    stringprep_profile @32
+    stringprep_profiles @33 DATA
+    stringprep_rfc3454_A_1 @34 DATA
+    stringprep_rfc3454_B_1 @35 DATA
+    stringprep_rfc3454_B_2 @36 DATA
+    stringprep_rfc3454_B_3 @37 DATA
+    stringprep_rfc3454_C_1_1 @38 DATA
+    stringprep_rfc3454_C_1_2 @39 DATA
+    stringprep_rfc3454_C_2_1 @40 DATA
+    stringprep_rfc3454_C_2_2 @41 DATA
+    stringprep_rfc3454_C_3 @42 DATA
+    stringprep_rfc3454_C_4 @43 DATA
+    stringprep_rfc3454_C_5 @44 DATA
+    stringprep_rfc3454_C_6 @45 DATA
+    stringprep_rfc3454_C_7 @46 DATA
+    stringprep_rfc3454_C_8 @47 DATA
+    stringprep_rfc3454_C_9 @48 DATA
+    stringprep_rfc3454_D_1 @49 DATA
+    stringprep_rfc3454_D_2 @50 DATA
+    stringprep_saslprep @51 DATA
+    stringprep_saslprep_space_map @52 DATA
+    stringprep_strerror @53
+    stringprep_trace @54 DATA
+    stringprep_ucs4_nfkc_normalize @55
+    stringprep_ucs4_to_utf8 @56
+    stringprep_unichar_to_utf8 @57
+    stringprep_utf8_nfkc_normalize @58
+    stringprep_utf8_to_locale @59
+    stringprep_utf8_to_ucs4 @60
+    stringprep_utf8_to_unichar @61
+    stringprep_xmpp_nodeprep @62 DATA
+    stringprep_xmpp_nodeprep_prohibit @63 DATA
+    stringprep_xmpp_resourceprep @64 DATA
+    tld_check_4 @65
+    tld_check_4t @66
+    tld_check_4tz @67
+    tld_check_4z @68
+    tld_check_8z @69
+    tld_check_lz @70
+    tld_default_table @71
+    tld_get_4 @72
+    tld_get_4z @73
+    tld_get_table @74
+    tld_get_z @75
+    tld_strerror @76

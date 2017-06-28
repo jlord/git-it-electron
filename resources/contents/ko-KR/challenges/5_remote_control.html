@@ -1,0 +1,83 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>로컬(local) 저장소(repository)를 리모트(remote)에 연결하고 변경을 푸시(push)하세요.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>리모트(remote)</h2>
+
+  <p>뭔가 GitHub 에 올렸을 때, 그 것은 GitHub 서버 어딘가에 존재합니다. 이것은 당신의 컴퓨터에 있지 않고 서버에 있기 때문에 <strong>원격(리모트)</strong> 저장소를 만든 것입니다. 당신의 <strong>로컬</strong> 변경을 리모트 저장소에 <strong>푸시</strong> 하여 그곳을 최신 상태로 유지할 수 있습니다.</p>
+
+  <p>다른 사람들은 리모트로부터 당신의 변경들을 <strong>풀(pull)</strong> 해와서 항상 프로젝트의 최신 버전을 가져올 수 있습니다. 이것이 다른 사람들이 당신의 로컬 복사본이 저장되어 있는 컴퓨터에 접근하지 않고도 프로젝트에서 같이 작업할 수 있는 이유입니다.</p>
+
+  <img src="../../../assets/imgs/remotes.png" alt="A diagram showing GitHub as a central server which creates the GitHub.com website. Two computers, on either side, are pushing and pulling from GitHub." width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>리모트 저장소(remote repository) 생성하기</h3>
+  <p>당신은 GitHub 에 저장된 버전과 <strong>로컬</strong> 버전을 동기화 하고 싶을 것입니다. 먼저 GitHub 에 새 <strong>리모트</strong> 저장소를 생성해 봅시다.</p>
+
+  <ul>
+    <li><a href="http://github.com " target="_blank">github.com</a> 에 가서 로그인을 하고, 오른쪽 위에 있는 '+' 을 눌러 'New repository' 를 선택합니다.</li>
+    <li>'Repository name'에 당신의 로컬 저장소 이름과 같은 이름인 'hello-world' 를 적고 아래 간단한 설명을 적습니다.</li>
+    <li>퍼블릭(public) 으로 설정합니다. 이것은 당신의 공개 프로필에 이 저장소가 보여질 것을 의미합니다.</li>
+    <li>이미 로컬에 'readme.txt' 라는 파일을 작성했기 때문에 'Initialize this repository with a README' 를 선택하지 않습니다. 이것은 아무것도 만든 것이 없을 때 GitHub 에서 돕기 위한 옵션입니다.</li>
+    <li>'.gitignore' 와 'license' 를 'none' 으로 둡니다. 이 챌린지에서는 저것들을 사용하지 않습니다.</li>
+    <li>'Create repository' 를 클릭합니다!</li>
+  </ul>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>README, .gitignore, LICENSE</h2>
+  <p>오픈 소스 프로젝트들에는 새로운 프로젝트를 시작하기 쉽게 해주는 일반적인 파일들이 있는데, GitHub 에서는 이것을 만들 수 있는 옵션을 제공합니다.</p>
+  <p><strong>README</strong> 는 이 프로젝트가 무엇인지, 어떻게 사용하는지, 그리고 종종 어떻게 기여(contribute)하는지(때로는 'CONTRIBUTING.md' 라는 파일로 따로 빠져있기도 합니다) 를 설명합니다.</p>
+  <p><strong>.gitignore</strong> 는 비밀번호를 저장한 파일 처럼 Git 이 추적하지 <em>말아야</em> 할 파일들의 리스트입니다.</p>
+  <p><strong>LICENSE</strong> 파일은 프로젝트에 부여된 라이센스의 종류를 나타냅니다. 이것은 다른 사람들이 이 프로젝트를 어떻게 이용할 수 있는지 알려줍니다. 라이센스의 종류는 이 링크를 참조하세요: <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>로컬(local)을 리모트(remote)에 연결하기</h3>
+  <p>이제 GitHub 에 빈 저장소를 가지게 되었습니다. 위쪽에 'Clone or Download' 라는 버튼을 누르고 주소칸 옆의 복사 아이콘을 눌러 주소를 복사합니다-이것은 GitHub 서버에 있는 당신의 저장소 주소입니다.</p>
+
+  <p>터미널로 돌아와 앞의 챌린지에서 만든 Git 저장소인 'hello-world' 폴더에서, Git 에게 GitHub 서버에 있는 리모트 저장소의 주소를 기억하도록 해봅시다. 여러개의 리모트들를 가질 수 있으므로 각각은 이름을 필요로 합니다. 주 리모트의 이름은 일반적으로 <code>origin</code> 으로 합니다.</p>
+
+  <p>당신의 저장소에 'origin' 이라는 이름의 리모트를 추가하려면:</p>
+  <code class="shell">git remote add origin &lt;GITHUB에서복사한URL&gt;</code>
+
+  <p>당신의 <strong>로컬</strong> 저장소는 이제 GitHub 서버에 있는 당신의 'origin' <strong>리모트</strong> 저장소가 어디있는지 알게 되었습니다. 단축 번호에 이름과 주소를 저장하는 것과 비슷하죠? 이제 무언가 그곳에 보낼 차례입니다.</p>
+
+  <blockquote>
+  <p><strong>Windows 사용자:</strong></p>
+  <p>만약 컴퓨터에 <strong>GitHub Desktop</strong> 이 있다면 'origin' 리모트가 자동으로 당신의 로컬 저장소에 추가되었을 것입니다. 이러한 경우, 'origin' 과 어떤 URL 이 관계되어있는지만 알려주면 됩니다. 위에서 배운 'add' 대신 아래 명령어를 사용하세요:</p>
+
+  <code class="shell">git remote set-url origin &lt;GITHUB에서복사한URL&gt;</code>
+  </blockquote>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>작업한 것을 리모트에 푸시하기</h3>
+  <p>다음으로 당신이 로컬에서 작업한 모든 것을 GitHub 리모트 저장소에 <strong>푸시</strong> 하고 싶을 것입니다. 이 작업은 앞으로 자주하게 될 것으로, 리모트 버전이 최신을 유지하고 당신의 로컬 버전과 같은 상태이도록 합니다.</p>
+
+  <p>Git 은 브랜치 시스템이 있기 때문에 매번 프로젝트의 다른 부분을 작업할 수 있습니다. 이것에 대해서는 다음에 배우겠지만, 기본적으로 첫번째 브랜치는 'master' 라고 이름지어집니다. 당신이 프로젝트를 푸시할 때 (나중에는 풀도 마찬가지로), Git 에 당신이 원하는 <strong>브랜치 이름</strong> 과 그 브랜치가 있는 <strong>리모트 이름</strong> 을 알려줘야 합니다.</p>
+
+  <p>지금의 경우에는, 'master' 라는 브랜치를 GitHub 의 'origin' 리모트에 보낼 것입니다.</p>
+  <code class="shell">git push origin master</code>
+
+  <p>이제 GitHub 의 리모트 저장소 페이지에 가서 새로고침을 해보세요. <strong>와우!</strong> 이제 리모트에 있는 전부가 로컬과 같아졌습니다. 당신의 첫번째 공개 저장소를 축하합니다!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>리모트 연결 추가하기</strong></li>
+    <code class="shell">git remote add &lt;리모트이름&gt; &lt;URL&gt;</code>
+    <li><strong>리모트에 URL 설정하기</strong></li>
+    <code class="shell">git remote set-url &lt;리모트이름&gt; &lt;URL&gt;</code>
+    <li><strong>변경 풀해오기</strong></li>
+    <code class="shell">git pull &lt;리모트이름&gt; &lt;브랜치이름&gt;</code>
+    <li><strong>리모트 주소 보기</strong></li>
+    <code class="shell">git remote -v</code>
+    <li><strong>변경 푸시하기</strong></li>
+    <code class="shell">git push &lt;리모트이름&gt; &lt;브랜치이름&gt;</code>
+  </ul>
+</div>
