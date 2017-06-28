@@ -1,0 +1,42 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Crie uma conta GitHub, adicione o nome de usuário para sua configuração Git.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Trabalhando melhor, junto</h2>
+
+  <p>O repositório que você criou até agora é apenas no seu computador, o qual é útil, mas torna-se dificil de compartilhar e trabalhar com outros. Não se preocupe, é para isso que existe o GitHub!</p>
+
+  <p>GitHub é um website que permite que pessoas de qualquer lugar façam o upload do que eles estão trabalhando com Git de modo que todos possam facilmente trabalhar juntos no mesmo projeto. Em vez de ter seus projetos só no seu computador, você também iria sincronizar com o GitHub, que atua como repositório central para você e todos que compartilham o projeto.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Crie um conta GitHub</h3>
+
+  <p>Visite <a href="http://github.com" target="_blank">github.com</a> e inscreva-se com uma conta gratuita. <strong>Toca aqui, bem vindo!</strong></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Adicione nome de usuário GitHub para o Git</h3>
+  <p>Adicione seu nome de usuário GitHub para suas configurações Git. Nós vamos fazer isso só por causa do Git-it, isso torna mais fácil verificar os próximos desafios. Salve exatamente como você criou no GitHub — <strong>letras maiúsculas e minúsculas se diferenciam</strong>, e lembre-se que você não precisa escrever o "&#60;" e "&#62;".</p>
+
+  <p>Adicione seu nome de usuário GitHub à sua configuração:</p>
+  <code class="shell">git config --global user.username &#60;USUARIO&#62;</code>
+
+  <p>Você pode checar novamente o que você colocou na sua configuração Git digitando: <code>git config --global user.username</code> no terminal.</p>
+</div>
+
+{{{ verify_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <p>Tenha certeza que você digitou "<strong>user.username</strong>" acima e não "user.name", o qual iria substituir o nome que você definiu no primeiro desafio e deixa você sem propriedade de nome de usuário! Se você passou por isso, tudo bem, basta repetir o passo no primeiro desafio para adicionar seu nome e então completar o passo acima.</p>
+</div>
+
+<div class="chal-no-pass grey-border border-box">
+  <h4>Configuração do nome de usuário GitHub & Git não coincidem</h4>
+
+  <p>Um erro comum é ter seu nome de usuário GitHub não coincidir com o caso de alguém que você definiu com <code>git config</code>. Por exemplo, 'DioBrando' não é o mesmo que 'diobrando'</p>
+  <p>Para mudar seu nome de usuário definido no Git, basta fazer o mesmo comando que você fez anteriormente, mas com a capitalização correta:</p>
+  <p><code class="shell">git config --global user.username &#60;USUARIO&#62;</code></p>
+  <p>Quando você fizer suas atualizações, verifique novamente!</p>
+</div>

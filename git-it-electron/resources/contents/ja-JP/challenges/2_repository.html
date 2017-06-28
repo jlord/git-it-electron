@@ -1,0 +1,60 @@
+<div id="challenge-desc" class="challenge">
+    <h2>The Challenge:</h2>
+    <p>リポジトリを作ってみよう</p>
+</div>
+
+<h2>Repositories</h2>
+
+<p><strong>リポジトリ</strong> とは本質的にはプロジェクトのことです。プロジェクトに関係するファイルが全部入ったフォルダのようなものを想像してください。実際、あなたのコンピュータ上ではそのように見えます。</p>
+
+<img src="../../../assets/imgs/repos.png" width="600">
+
+<p>
+    Gitにどれがあなたのプロジェクトなのかを伝えることで、Gitはそのフォルダの中のすべての変更を追跡してくれるようになります。ファイルを追加したり、削除したり、ファイルの中に一行足しただけであったとしても、そういったすべての変更はGitによって追跡され、いつそれを行ったか記録してくれます。これが<strong>バージョン管理システム</strong>です。
+</p>
+
+<h2>ターミナルを使おう</h2>
+<p><strong>ターミナル</strong> (またはBash)
+    はただコマンドを入力するだけの方法でコンピュータを操作する方法です。ファイル名の変更もできますし、ファイルを開いたり、新しいファイルを作ったり、新しいフォルダを作ったり、ディレクトリ（フォルダ）間を移動したりもできます。テキストエディタ（例えば
+    <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>
+    みたいな）をターミナルの中で実行することさえできます。ターミナルを離れることなく！</p>
+
+<p>コンピュータを操作することに加えて、ターミナルの中で、<strong>command-line interface (CLI)</strong>を持つ別のプログラムを実行することもできます。Git-itがそうですし、Gitもそうです。ターミナルの中でコマンドを入力することによってGitを操作することができます。あなたもすぐにできるようになりますよ！
+</p>
+
+<p>Git-itでは、これからいくつかの基本的なコマンドを学んでいきます。これから手順を示していきます。</p>
+
+<h2>Step: リポジトリを作ろう</h2>
+<p>新しいフォルダを作って、Gitリポジトリとして使えるように初期化しよう。</p>
+
+<p>簡単にするために、フォルダ名をこれから始めたいプロジェクトの名前としてつけましょう。 'hello-world'はどうでしょうか？</p>
+
+<p>ターミナルの中で次のコマンドを1つずつ実行してみましょう。</p>
+
+<p>新しいフォルダを作る:</p>
+<code>$ mkdir hello-world</code>
+
+<p>作ったフォルダに移動する:</p>
+<code>$ cd hello-world</code>
+
+<p>プロジェクトを初期化して新しいGitインスタンスを作る:</p>
+<code>$ git init</code>
+
+<p>以上です！ コマンド実行の結果はたった一行返ってくるだけです。もしGitリポジトリとしてきちんとできているかどうか再確認したいのであれば、 <code>git status</code> と入力してみてください。結果、'fatal:
+    Not a git repository...'と返ってこなければ、成功です。おめでとうございます！</p>
+
+{{{verify_directory_button}}}
+
+<div class="blue-border-box">
+    <h2>Tips</h2>
+    <ul>
+        <li><strong>新しいフォルダを作る (directory ディレクトリともいいます)</strong></li>
+        <code>$ mkdir &#60;FOLDERNAME&#62;</code>
+        <li><strong>フォルダに移動する (change directoryともいいます)</strong></li>
+        <code>$ cd &#60;FOLDERNAME&#62;</code>
+        <li><strong>フォルダの中のファイルを一覧する</strong></li>
+        <code>$ ls </code>
+        <li><strong>フォルダをGitリポジトリとして初期化する</strong></li>
+        <code>$ git init</code>
+    </ul>
+</div>

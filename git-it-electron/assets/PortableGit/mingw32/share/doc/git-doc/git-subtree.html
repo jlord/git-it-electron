@@ -1,0 +1,1205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>git-subtree(1)</title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+pre {
+  white-space: pre-wrap;
+}
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; vertical-align: text-bottom; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="manpage">
+<div id="header">
+<h1>
+git-subtree(1) Manual Page
+</h1>
+<h2>NAME</h2>
+<div class="sectionbody">
+<p>git-subtree -
+   Merge subtrees together and split repository into subtrees
+</p>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_synopsis">SYNOPSIS</h2>
+<div class="sectionbody">
+<div class="verseblock">
+<pre class="content"><em>git subtree</em> add   -P &lt;prefix&gt; &lt;commit&gt;
+<em>git subtree</em> add   -P &lt;prefix&gt; &lt;repository&gt; &lt;ref&gt;
+<em>git subtree</em> pull  -P &lt;prefix&gt; &lt;repository&gt; &lt;ref&gt;
+<em>git subtree</em> push  -P &lt;prefix&gt; &lt;repository&gt; &lt;ref&gt;
+<em>git subtree</em> merge -P &lt;prefix&gt; &lt;commit&gt;
+<em>git subtree</em> split -P &lt;prefix&gt; [OPTIONS] [&lt;commit&gt;]</pre>
+<div class="attribution">
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_description">DESCRIPTION</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Subtrees allow subprojects to be included within a subdirectory
+of the main project, optionally including the subproject&#8217;s
+entire history.</p></div>
+<div class="paragraph"><p>For example, you could include the source code for a library
+as a subdirectory of your application.</p></div>
+<div class="paragraph"><p>Subtrees are not to be confused with submodules, which are meant for
+the same task. Unlike submodules, subtrees do not need any special
+constructions (like .gitmodule files or gitlinks) be present in
+your repository, and do not force end-users of your
+repository to do anything special or to understand how subtrees
+work. A subtree is just a subdirectory that can be
+committed to, branched, and merged along with your project in
+any way you want.</p></div>
+<div class="paragraph"><p>They are also not to be confused with using the subtree merge
+strategy. The main difference is that, besides merging
+the other project as a subdirectory, you can also extract the
+entire history of a subdirectory from your project and make it
+into a standalone project. Unlike the subtree merge strategy
+you can alternate back and forth between these
+two operations. If the standalone library gets updated, you can
+automatically merge the changes into your project; if you
+update the library inside your project, you can "split" the
+changes back out again and merge them back into the library
+project.</p></div>
+<div class="paragraph"><p>For example, if a library you made for one application ends up being
+useful elsewhere, you can extract its entire history and publish
+that as its own git repository, without accidentally
+intermingling the history of your application project.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">In order to keep your commit messages clean, we recommend that
+people split their commits between the subtrees and the main
+project as much as possible.  That is, if you make a change that
+affects both the library and the main application, commit it in
+two pieces.  That way, when you split the library commits out
+later, their descriptions will still make sense.  But if this
+isn&#8217;t important to you, it&#8217;s not <strong>necessary</strong>.  git subtree will
+simply leave out the non-library-related parts of the commit
+when it splits it out into the subproject later.</td>
+</tr></table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_commands">COMMANDS</h2>
+<div class="sectionbody">
+<div class="dlist"><dl>
+<dt class="hdlist1">
+add
+</dt>
+<dd>
+<p>
+        Create the &lt;prefix&gt; subtree by importing its contents
+        from the given &lt;commit&gt; or &lt;repository&gt; and remote &lt;ref&gt;.
+        A new commit is created automatically, joining the imported
+        project&#8217;s history with your own.  With <em>--squash</em>, imports
+        only a single commit from the subproject, rather than its
+        entire history.
+</p>
+</dd>
+<dt class="hdlist1">
+merge
+</dt>
+<dd>
+<p>
+        Merge recent changes up to &lt;commit&gt; into the &lt;prefix&gt;
+        subtree.  As with normal <em>git merge</em>, this doesn&#8217;t
+        remove your own local changes; it just merges those
+        changes into the latest &lt;commit&gt;.  With <em>--squash</em>,
+        creates only one commit that contains all the changes,
+        rather than merging in the entire history.
+</p>
+<div class="paragraph"><p>If you use <em>--squash</em>, the merge direction doesn&#8217;t always have to be
+forward; you can use this command to go back in time from v2.5 to v2.4,
+for example.  If your merge introduces a conflict, you can resolve it in
+the usual ways.</p></div>
+</dd>
+<dt class="hdlist1">
+pull
+</dt>
+<dd>
+<p>
+        Exactly like <em>merge</em>, but parallels <em>git pull</em> in that
+        it fetches the given ref from the specified remote
+        repository.
+</p>
+</dd>
+<dt class="hdlist1">
+push
+</dt>
+<dd>
+<p>
+        Does a <em>split</em> (see below) using the &lt;prefix&gt; supplied
+        and then does a <em>git push</em> to push the result to the
+        repository and ref. This can be used to push your
+        subtree to different branches of the remote repository.
+</p>
+</dd>
+<dt class="hdlist1">
+split
+</dt>
+<dd>
+<p>
+        Extract a new, synthetic project history from the
+        history of the &lt;prefix&gt; subtree.  The new history
+        includes only the commits (including merges) that
+        affected &lt;prefix&gt;, and each of those commits now has the
+        contents of &lt;prefix&gt; at the root of the project instead
+        of in a subdirectory.  Thus, the newly created history
+        is suitable for export as a separate git repository.
+</p>
+<div class="paragraph"><p>After splitting successfully, a single commit id is printed to stdout.
+This corresponds to the HEAD of the newly created tree, which you can
+manipulate however you want.</p></div>
+<div class="paragraph"><p>Repeated splits of exactly the same history are guaranteed to be
+identical (i.e. to produce the same commit ids).  Because of this, if
+you add new commits and then re-split, the new commits will be attached
+as commits on top of the history you generated last time, so <em>git merge</em>
+and friends will work as expected.</p></div>
+<div class="paragraph"><p>Note that if you use <em>--squash</em> when you merge, you should usually not
+just <em>--rejoin</em> when you split.</p></div>
+</dd>
+</dl></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_options">OPTIONS</h2>
+<div class="sectionbody">
+<div class="dlist"><dl>
+<dt class="hdlist1">
+-q
+</dt>
+<dt class="hdlist1">
+--quiet
+</dt>
+<dd>
+<p>
+        Suppress unnecessary output messages on stderr.
+</p>
+</dd>
+<dt class="hdlist1">
+-d
+</dt>
+<dt class="hdlist1">
+--debug
+</dt>
+<dd>
+<p>
+        Produce even more unnecessary output messages on stderr.
+</p>
+</dd>
+<dt class="hdlist1">
+-P &lt;prefix&gt;
+</dt>
+<dt class="hdlist1">
+--prefix=&lt;prefix&gt;
+</dt>
+<dd>
+<p>
+        Specify the path in the repository to the subtree you
+        want to manipulate.  This option is mandatory
+        for all commands.
+</p>
+</dd>
+<dt class="hdlist1">
+-m &lt;message&gt;
+</dt>
+<dt class="hdlist1">
+--message=&lt;message&gt;
+</dt>
+<dd>
+<p>
+        This option is only valid for add, merge and pull (unsure).
+        Specify &lt;message&gt; as the commit message for the merge commit.
+</p>
+</dd>
+</dl></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_options_for_add_merge_push_pull">OPTIONS FOR add, merge, push, pull</h2>
+<div class="sectionbody">
+<div class="dlist"><dl>
+<dt class="hdlist1">
+--squash
+</dt>
+<dd>
+<p>
+        This option is only valid for add, merge, and pull
+        commands.
+</p>
+<div class="paragraph"><p>Instead of merging the entire history from the subtree project, produce
+only a single commit that contains all the differences you want to
+merge, and then merge that new commit into your project.</p></div>
+<div class="paragraph"><p>Using this option helps to reduce log clutter. People rarely want to see
+every change that happened between v1.0 and v1.1 of the library they&#8217;re
+using, since none of the interim versions were ever included in their
+application.</p></div>
+<div class="paragraph"><p>Using <em>--squash</em> also helps avoid problems when the same subproject is
+included multiple times in the same project, or is removed and then
+re-added.  In such a case, it doesn&#8217;t make sense to combine the
+histories anyway, since it&#8217;s unclear which part of the history belongs
+to which subtree.</p></div>
+<div class="paragraph"><p>Furthermore, with <em>--squash</em>, you can switch back and forth between
+different versions of a subtree, rather than strictly forward.  <em>git
+subtree merge --squash</em> always adjusts the subtree to match the exactly
+specified commit, even if getting to that commit would require undoing
+some changes that were added earlier.</p></div>
+<div class="paragraph"><p>Whether or not you use <em>--squash</em>, changes made in your local repository
+remain intact and can be later split and send upstream to the
+subproject.</p></div>
+</dd>
+</dl></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_options_for_split">OPTIONS FOR split</h2>
+<div class="sectionbody">
+<div class="dlist"><dl>
+<dt class="hdlist1">
+--annotate=&lt;annotation&gt;
+</dt>
+<dd>
+<p>
+        This option is only valid for the split command.
+</p>
+<div class="paragraph"><p>When generating synthetic history, add &lt;annotation&gt; as a prefix to each
+commit message.  Since we&#8217;re creating new commits with the same commit
+message, but possibly different content, from the original commits, this
+can help to differentiate them and avoid confusion.</p></div>
+<div class="paragraph"><p>Whenever you split, you need to use the same &lt;annotation&gt;, or else you
+don&#8217;t have a guarantee that the new re-created history will be identical
+to the old one.  That will prevent merging from working correctly.  git
+subtree tries to make it work anyway, particularly if you use --rejoin,
+but it may not always be effective.</p></div>
+</dd>
+<dt class="hdlist1">
+-b &lt;branch&gt;
+</dt>
+<dt class="hdlist1">
+--branch=&lt;branch&gt;
+</dt>
+<dd>
+<p>
+        This option is only valid for the split command.
+</p>
+<div class="paragraph"><p>After generating the synthetic history, create a new branch called
+&lt;branch&gt; that contains the new history.  This is suitable for immediate
+pushing upstream.  &lt;branch&gt; must not already exist.</p></div>
+</dd>
+<dt class="hdlist1">
+--ignore-joins
+</dt>
+<dd>
+<p>
+        This option is only valid for the split command.
+</p>
+<div class="paragraph"><p>If you use <em>--rejoin</em>, git subtree attempts to optimize its history
+reconstruction to generate only the new commits since the last
+<em>--rejoin</em>.  <em>--ignore-join</em> disables this behaviour, forcing it to
+regenerate the entire history.  In a large project, this can take a long
+time.</p></div>
+</dd>
+<dt class="hdlist1">
+--onto=&lt;onto&gt;
+</dt>
+<dd>
+<p>
+        This option is only valid for the split command.
+</p>
+<div class="paragraph"><p>If your subtree was originally imported using something other than git
+subtree, its history may not match what git subtree is expecting.  In
+that case, you can specify the commit id &lt;onto&gt; that corresponds to the
+first revision of the subproject&#8217;s history that was imported into your
+project, and git subtree will attempt to build its history from there.</p></div>
+<div class="paragraph"><p>If you used <em>git subtree add</em>, you should never need this option.</p></div>
+</dd>
+<dt class="hdlist1">
+--rejoin
+</dt>
+<dd>
+<p>
+        This option is only valid for the split command.
+</p>
+<div class="paragraph"><p>After splitting, merge the newly created synthetic history back into
+your main project.  That way, future splits can search only the part of
+history that has been added since the most recent --rejoin.</p></div>
+<div class="paragraph"><p>If your split commits end up merged into the upstream subproject, and
+then you want to get the latest upstream version, this will allow git&#8217;s
+merge algorithm to more intelligently avoid conflicts (since it knows
+these synthetic commits are already part of the upstream repository).</p></div>
+<div class="paragraph"><p>Unfortunately, using this option results in <em>git log</em> showing an extra
+copy of every new commit that was created (the original, and the
+synthetic one).</p></div>
+<div class="paragraph"><p>If you do all your merges with <em>--squash</em>, don&#8217;t use <em>--rejoin</em> when you
+split, because you don&#8217;t want the subproject&#8217;s history to be part of
+your project anyway.</p></div>
+</dd>
+</dl></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_example_1_add_command">EXAMPLE 1. Add command</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Let&#8217;s assume that you have a local repository that you would like
+to add an external vendor library to. In this case we will add the
+git-subtree repository as a subdirectory of your already existing
+git-extensions repository in ~/git-extensions/:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code class="shell">git subtree add --prefix=git-subtree --squash \
+        git://github.com/apenwarr/git-subtree.git master</code></pre>
+</div></div>
+<div class="paragraph"><p><em>master</em> needs to be a valid remote ref and can be a different branch
+name</p></div>
+<div class="paragraph"><p>You can omit the --squash flag, but doing so will increase the number
+of commits that are included in your local repository.</p></div>
+<div class="paragraph"><p>We now have a ~/git-extensions/git-subtree directory containing code
+from the master branch of git://github.com/apenwarr/git-subtree.git
+in our git-extensions repository.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_example_2_extract_a_subtree_using_commit_merge_and_pull">EXAMPLE 2. Extract a subtree using commit, merge and pull</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Let&#8217;s use the repository for the git source code as an example.
+First, get your own copy of the git.git repository:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code class="shell">git clone git://git.kernel.org/pub/scm/git/git.git test-git
+$ cd test-git</code></pre>
+</div></div>
+<div class="paragraph"><p>gitweb (commit 1130ef3) was merged into git as of commit
+0a8f4f0, after which it was no longer maintained separately.
+But imagine it had been maintained separately, and we wanted to
+extract git&#8217;s changes to gitweb since that time, to share with
+the upstream.  You could do this:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code class="shell">git subtree split --prefix=gitweb --annotate='(split) ' \
+        0a8f4f0^.. --onto=1130ef3 --rejoin \
+        --branch gitweb-latest
+$ gitk gitweb-latest
+$ git push git@github.com:whatever/gitweb.git gitweb-latest:master</code></pre>
+</div></div>
+<div class="paragraph"><p>(We use <em>0a8f4f0^..</em> because that means "all the changes from
+0a8f4f0 to the current version, including 0a8f4f0 itself.")</p></div>
+<div class="paragraph"><p>If gitweb had originally been merged using <em>git subtree add</em> (or
+a previous split had already been done with --rejoin specified)
+then you can do all your splits without having to remember any
+weird commit ids:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code class="shell">git subtree split --prefix=gitweb --annotate='(split) ' --rejoin \
+        --branch gitweb-latest2</code></pre>
+</div></div>
+<div class="paragraph"><p>And you can merge changes back in from the upstream project just
+as easily:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code class="shell">git subtree pull --prefix=gitweb \
+        git@github.com:whatever/gitweb.git master</code></pre>
+</div></div>
+<div class="paragraph"><p>Or, using <em>--squash</em>, you can actually rewind to an earlier
+version of gitweb:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code class="shell">git subtree merge --prefix=gitweb --squash gitweb-latest~10</code></pre>
+</div></div>
+<div class="paragraph"><p>Then make some changes:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code class="shell">date &gt;gitweb/myfile
+$ git add gitweb/myfile
+$ git commit -m 'created myfile'</code></pre>
+</div></div>
+<div class="paragraph"><p>And fast forward again:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code class="shell">git subtree merge --prefix=gitweb --squash gitweb-latest</code></pre>
+</div></div>
+<div class="paragraph"><p>And notice that your change is still intact:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code class="shell">ls -l gitweb/myfile</code></pre>
+</div></div>
+<div class="paragraph"><p>And you can split it out and look at your changes versus
+the standard gitweb:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>git log gitweb-latest..$(git subtree split --prefix=gitweb)</code></pre>
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_example_3_extract_a_subtree_using_branch">EXAMPLE 3. Extract a subtree using branch</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Suppose you have a source directory with many files and
+subdirectories, and you want to extract the lib directory to its own
+git project. Here&#8217;s a short way to do it:</p></div>
+<div class="paragraph"><p>First, make the new repository wherever you want:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code class="shell">&lt;go to the new location&gt;
+$ git init --bare</code></pre>
+</div></div>
+<div class="paragraph"><p>Back in your original directory:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code class="shell">git subtree split --prefix=lib --annotate="(split)" -b split</code></pre>
+</div></div>
+<div class="paragraph"><p>Then push the new branch onto the new empty repository:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code class="shell">git push &lt;new-repo&gt; split:master</code></pre>
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_author">AUTHOR</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Written by Avery Pennarun &lt;<a href="mailto:apenwarr@gmail.com">apenwarr@gmail.com</a>&gt;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_git">GIT</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Part of the <a href="git.html">git(1)</a> suite</p></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2015-08-30 17:24:36 CUT
+</div>
+</div>
+</body>
+</html>

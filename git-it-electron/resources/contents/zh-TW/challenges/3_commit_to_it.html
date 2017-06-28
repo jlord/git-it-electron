@@ -1,0 +1,61 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>在你的 repository 中建立一個新檔案，新增一些內容到那個檔案並且將那些修改 commit 到 Git 中。
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Commits</h2>
+  <p>Commits 是使用 Git 的核心。每個 Commit 都是你描述且紀錄你做了什麼事的時間點，也可以說是專案歷史時間軸上的某一個時間點。</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>建立新文件</h3>
+  <p>現在你有了一個 repository 了，新增一個檔案到裡頭吧！</p>
+  <p>打開一個文字編輯器。然後隨意寫幾行文字，例如：「嗨！」之類的，並將檔案儲存為 <code>readme.txt</code> 到你在上個挑戰中所建立的「hello-world」資料夾。</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>檢查狀態、Add 及 Commit 修改</h3>
+  <p>接著，檢查你的 repository 的 <strong>status</strong>，看看是否在裡頭有任何修改。你知道你剛剛有修改了某些東西，但 Git 知道嗎？</p>
+
+  <p>請確定你執行以下指令時，位置是在「hello-world」資料夾裡頭。讓我們用 Git 來看看你的 repository 中有什麼改變：</p>
+
+  <p>首先，檢查狀態：</p>
+  <p><code class="shell">git status</code></p>
+  <p>Git 會告訴你一個檔案已經被加入</p>
+
+  <p>接著，用 Git 將剛剛建立的新檔案<strong>「加」</strong>進你想 <strong>commit</strong>（也就是儲存）的修改。
+  <p><code class="shell">git add readme.txt</code></p>
+
+  <p>最後，將那些修改 <strong>commit</strong> 到 repository 的歷史紀錄當中，
+  並隨附上一個簡短的更新說明。</p>
+  <p><code class="shell">git commit -m "Created readme"</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>繼續修改檔案</h3>
+  <p>現在在多寫一行文字到 <code>readme.txt</code> 之中並存檔。</p>
+
+  <p>在終端機裡，你可以查看在上一個 commit 和現在有那些<strong>差異（diff）</strong>存在</p>
+
+  <p>告訴 git 顯示檔案<strong>差異（diff）</strong>：</p>
+  <p><code class="shell">git diff</code></p>
+
+  <p>現在，利用你剛剛所學到的知識，commit 這個最新的修改。</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>檢查 repository 中的修改 status</strong></li>
+    <li><code class="shell">git status</code></li>
+    <li><strong>查看對檔案的修改</strong></li>
+    <li><code class="shell">git diff</code></li>
+    <li><strong>準備 commit 對於一個檔案的修改</strong></li>
+    <li><code class="shell">git add &#60;FILENAME&#62;</code></li>
+    <li><strong>準備 commit 對於所有檔案的修改</strong></li>
+    <li><code class="shell">git add .</code></li>
+    <li><strong>commit (也就是儲存）你準備好的修改並附上一個簡短的異動說明</strong></li>
+    <li><code class="shell">git commit -m "your commit message"</code></li>
+  <ul>
+</div>

@@ -1,0 +1,55 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>請安裝 Git 到你的電腦上，並且設定好 Git 內部的使用者名稱和電子信箱。</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Git</h2>
+    <p>Git 是一個<strong>開源軟體</strong>（完全免費），作者為 Linus Torvalds，他也是 Linux 作業系統的作者。</p>
+    <p>Git 是一個專門做修改記錄的程式，在軟體、程式設計的領域中叫做<strong>版本控制</strong>。</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>安裝 Git</h3>
+    <p>我們建議你到 <a href="https://desktop.github.com/">GitHub Desktop</a> 來取得 Git。我們不會使用它提供的桌面程式，，不過它內建了 Git，也是在各個平台上安裝 Git
+        最簡單的方法。</p>
+    <ul>
+        <li>Windows：使用 <strong>Git Shell</strong> 當作終端機。</li>
+        <li>Mac：開啟 GitHub Desktop，並從「Preferences」選單點選「command line tools install」。安裝完畢之後，開啟「終端機」這個應用程式。</li>
+    </ul>
+    <p>如果已經安裝過 Git 或不清楚有沒有安裝過，你可以打開終端機，在裡面輸入 <code>git --version</code> ，如果你已經安裝完畢，你應該會看到 Git的版本編號（<code>> 1.7.10</code>）。需要更多資訊，請上
+        <a href="http://git-scm.com">Git 官網</a>查詢。</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Git 軟體</h2>
+    <p>GitHub Desktop 可以透過 Git 來完成許多東西，但並不是所有功能都能透過 GitHub Desktop來使用，這也是為什麼」學習指令是一件重要的事情。</p>
+    <p>Git 不像是你電腦裡的其他軟體。你不會在桌面上看到一個軟體圖示，但你可以隨時透過終端機或是其他 Git 的桌面程式（如 GitHub Desktop）來使用。</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>設定 Git</h3>
+    <p>安裝好 Git 後，打開 <strong>終端機</strong>，並輸入以下指令來確認你有順利安裝好 Git：</p>
+    <p><code class="shell">git --version </code></p>
+    <p>如果有安裝成功，這個指令將會告訴你，你所安裝的版本號碼，如：</p>
+    <p><code class="comment">git version 1.9.1</code></p>
+
+    <p>接下來，讓 Git 知道這台電腦所做的修改該連結到什麼使用者：</p>
+    <p>設定你的名字：</p>
+    <p><code class="shell">git config --global user.name "
+        <Your Name>"
+    </code></p>
+    <p>設定你的電子信箱：</p>
+    <p><code class="shell">git config --global user.email "
+        <youremail
+        @example.com>"</code></p>
+
+    <p>現在，你已經完成了第一個挑戰！按一下「Verify」按鈕來檢查。</p>
+</div>
+
+{{{ verify_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <h3>文件中的金錢符號</h3>
+    <p>這個金錢符號 <code>$</code> 會常常出現在程式的文件中，錢號代表這個指令是<strong>終端機</strong>的指令（參考上面的指令寫法）。在輸入指令的時候是不需要輸入 <code>$</code>
+        的，只需要輸入它後面的指令即可。例如如果你要輸入最後面「確認完成步驟的指令」，只要在終端機輸入 <code>git-it verify</code> 就好了。</p>
+</div>

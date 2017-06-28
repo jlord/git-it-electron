@@ -1,0 +1,14 @@
+#!/bin/sh
+
+WORDPAD="$(ls {"$PROGRAMFILES/Windows NT","$SYSTEMROOT"}/*/wordpad.exe 2>&- | head -1)"
+
+test $# = 1 &&
+case "$1" in
+\\*|/*|?:*) ;; # do nothing
+*) set "$(pwd -W)/$1";;
+esac
+
+test -x "$WORDPAD" && exec "$WORDPAD" "$@"
+
+echo "Could not launch $WORDPAD"
+exit 1
