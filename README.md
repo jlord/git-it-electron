@@ -61,3 +61,4 @@ When you've completed the steps in a challenge click 'Verify'. Depending on the 
 
 You can do a lot of things from your terminal like delete, rename, copy or create files and folders; run scripts and send things back and forth between servers (like the ones storing things on GitHub.com) and your computer (also a server!).
 # my-blog
+# my-blog
