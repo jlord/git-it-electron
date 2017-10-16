@@ -85,6 +85,11 @@ This will output the contents of the application to a folder at `../out/Git-it-l
 $ npm run pack-win
 ```
 
+This will output the flatpak packaged application to a folder at `../out/Git-it-flatpak-x64`. This requires you to run `npm run pack-lin` first.
+```bash
+$ npm run pack-flatpak
+```
+
 A note from `electron-packager`, the module we use to package these apps:
 
 > **Building Windows apps from non-Windows platforms**
