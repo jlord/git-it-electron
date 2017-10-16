@@ -1,0 +1,63 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>GitHub 에서 프로젝트를 포크(fork)하고 로컬(local)에 클론(clone)해보세요.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>포크(fork)</h2>
+  <p>이 앞까지는 로컬에서 프로젝트를 만들고 이를 GitHub 에 푸시했습니다. 하지만 그것은 GitHub 를 이용하는 즐거움의 반 밖에 되지 않습니다! 나머지 반은 다른 사람들, 다른 프로젝트와 함께 일하는 것입니다.</p>
+
+  <p>저장소를 <strong>포크</strong> 하면 당신의 GitHub 계정에 그것의 복사본을 생성하게됩니다. 당신이 포크한 복사본은 리모트 저장소로서의 생명을 얻게되죠. 이것은 아직 당신의 컴퓨터에는 없고 당신의 GitHub 계정에만 존재합니다. 포크는 어떤 프로젝트의 당신만의 버전을 만들거나(원본으로부터의 이 전환은 결정의 기로에 선것과도 같음) 원본 프로젝트에 당신의 변경들을 기여하기 위해 사용됩니다(버그 수정이나 새로운 기능).</p>
+
+  <p>포크한 저장소를 당신의 GitHub 계정으로부터 당신의 컴퓨터로 가져오기 위해서는 <strong>클론</strong> 을 해야합니다. 이 클론 작업은 당신의 컴퓨터에 리모트 저장소를 복사해서, 로컬에서 작업 할 수 있게 해줍니다.</p>
+
+  <img src="../../../assets/imgs/clone.png" alt="A diagram showing a repository from GitHub copied onto your GitHub account and then copied onto your local computer from there." width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Patchwork 저장소 포크(fork)하기</h3>
+  <p>우리가 작업할 프로젝트는 <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a> 에 있습니다. 이 페이지로 가서 오른쪽 위에 있는 'Fork' 버튼을 누르세요. 로딩이 끝나고 나면 당신의 계정에 복사본을 가지게 됩니다. 브라우저 주소표시줄에 있는 당신의 포크 저장소의 HTTP URL을 복사하세요. 이것은 GitHub 서버에 있는 당신의 포크 저장소의 주소입니다.</p>
+  <!-- TODO write address for user here -->
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>로컬(local)에서 포크(fork) 클론(clone)하기</h3>
+  <p>이제 터미널에서 당신의 컴퓨터에 저장소를 클론할 것입니다. 이것은 자동으로 저장소를 위한 새 폴더를 생성해주기 때문에 직접 폴더를 만드실 필요가 없습니다. 다른 Git 저장소 폴더 안에서 클론하는 것은 아닌지 꼭 확인하세요!</p>
+
+  <p>그러므로 이전 챌린지에서 사용했던 'hello-world' 디렉토리 안에 있는 것은 아닌지 확인하셔야 합니다. 이 폴더에서 나오고 싶으시다면 아래 과정대로 하세요:</p>
+
+  <p>'hello-world' 폴더에서 나오기:<br><span class="inline-tip">팁: 점 두개는 한 단계 디렉토리 밖을 의미합니다</span></p>
+  <p><code class="shell">cd ..</code></p>
+
+  <p>이제 다른 Git 저장소 안에 있지 않으므로 당신의 포크를 클론하세요:</p>
+  <p><code class="shell">git clone &#60;GITHUB에서복사한URL&#62;</code></p>
+
+  <p>포크한 저장소의 로컬 복사본을 위해 만들어진 폴더로 이동하세요(지금의 경우에는 'patchwork'):</p>
+  <p><code class="shell">cd patchwork</code></p>
+
+  <p>이제 당신의 컴퓨터에 저장소의 복사본을 가져왔고, 이 저장소는 자동으로 당신의 GitHub 계정에 있는 리모트 저장소(포크해온 복사본)에 자동으로 연결됩니다. <code>git remote -v</code> 를 입력해서 포크한 저장소의 주소가 설정되어있는지 확인해보세요.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>원본 저장소(repository)에 연결하기</h3>
+
+  <p>만약 포크했던 원본 저장소에 변경이 생긴다면 어떻게 될까요? 당신은 그 변경들도 <strong>풀</strong> 해올 수 있기를 바랄 것입니다. 이를 위해 원본 저장소 <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a> 로 새로운 리모트 연결을 추가해 봅시다.</p>
+
+  <p>이 리모트 연결에는 아무 이름이나 붙일 수 있지만, 일반적으로 이러한 경우에 'upstream' 이라는 이름을 사용합니다. 우리도 그 이름을 사용하기로 하죠.</p>
+
+  <p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+
+  <p>제대로 리모트 설정이 되었는지 확인하기 위해 <code>git remote -v</code> 을 입력해 저장된 주소들을 불러와보세요. <b>포크해온 주소가 'origin' 리모트로, 원본 주소가 'upstream' 리모트로 되어있어야 합니다.</b></p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>리모트 추가하기</strong></li>
+    <li><code class="shell">git remote add &#60;리모트이름&#62; &#60;URL&#62;</code></li>
+    <li><strong>리모트 URL 변경하기</strong></li>
+    <li><code class="shell">git remote set-url &#60;리모트이름&#62; &#60;URL&#62;</code></li>
+    <li><strong>리모트 연결들 보기</strong></li>
+    <li><code class="shell">git remote -v</code></li>
+  </ul>
+</div>

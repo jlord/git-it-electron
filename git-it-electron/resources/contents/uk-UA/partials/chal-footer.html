@@ -1,0 +1,30 @@
+<div class="prenext">
+    <div class="u-floatLeft">
+        <a href="{{ preurl }}" class="u-inline-block all-caps">{{ prename }}
+            <div class="arrow-left"></div>
+        </a>
+    </div>
+    <div class="u-textRight u-floatRight">
+        <a href="{{ nexturl }}" class="u-inlineBlock all-caps">{{ nextname }}
+            <div class="arrow-right"></div>
+        </a>
+    </div>
+</div>
+
+<style>
+    .chal-no-pass.border-box::before {
+        content: "Не вийшло?";
+    }
+
+    .chal-tip.border-box::before {
+        content: "Підказки";
+    }
+
+    .chal-step.border-box::before {
+        content: "Крок";
+    }
+
+    .chal-goal.border-box::before {
+        content: "Мета";
+    }
+</style>

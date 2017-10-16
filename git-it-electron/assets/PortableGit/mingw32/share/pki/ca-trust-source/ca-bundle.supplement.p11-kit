@@ -1,0 +1,89 @@
+[p11-kit-object-v1]
+label: "Distrust: O=Egypt Trust, OU=VeriSign Trust Network (cert 1/3)"
+class: certificate
+certificate-type: x-509
+issuer: "0%81%CA1%0B0%09%06%03U%04%06%13%02US1%170%15%06%03U%04%0A%13%0EVeriSign%2C%20Inc.1%1F0%1D%06%03U%04%0B%13%16VeriSign%20Trust%20Network1%3A08%06%03U%04%0B%131%28c%29%201999%20VeriSign%2C%20Inc.%20-%20For%20authorized%20use%20only1E0C%06%03U%04%03%13%3CVeriSign%20Class%203%20Public%20Primary%20Certification%20Authority%20-%20G3"
+serial-number: "%02%10L%006%1B%E5%08%2B%A9%AA%CEt%0A%05%3E%FB4"
+x-distrusted: true
+
+
+[p11-kit-object-v1]
+label: "Distrust: O=Egypt Trust, OU=VeriSign Trust Network (cert 2/3)"
+class: certificate
+certificate-type: x-509
+issuer: "0%81%CA1%0B0%09%06%03U%04%06%13%02US1%170%15%06%03U%04%0A%13%0EVeriSign%2C%20Inc.1%1F0%1D%06%03U%04%0B%13%16VeriSign%20Trust%20Network1%3A08%06%03U%04%0B%131%28c%29%201999%20VeriSign%2C%20Inc.%20-%20For%20authorized%20use%20only1E0C%06%03U%04%03%13%3CVeriSign%20Class%203%20Public%20Primary%20Certification%20Authority%20-%20G3"
+serial-number: "%02%10%3E%0C%9E%87i%AA%95%5C%EA%23%D8E%9E%D4%5BQ"
+x-distrusted: true
+
+
+[p11-kit-object-v1]
+label: "Distrust: O=Egypt Trust, OU=VeriSign Trust Network (cert 3/3)"
+class: certificate
+certificate-type: x-509
+issuer: "0%81%CA1%0B0%09%06%03U%04%06%13%02US1%170%15%06%03U%04%0A%13%0EVeriSign%2C%20Inc.1%1F0%1D%06%03U%04%0B%13%16VeriSign%20Trust%20Network1%3A08%06%03U%04%0B%131%28c%29%201999%20VeriSign%2C%20Inc.%20-%20For%20authorized%20use%20only1E0C%06%03U%04%03%13%3CVeriSign%20Class%203%20Public%20Primary%20Certification%20Authority%20-%20G3"
+serial-number: "%02%10%12%BD%26%A2%AE3%C0%7F%24%7BjXi%F2%0Av"
+x-distrusted: true
+
+
+[p11-kit-object-v1]
+label: "Distrust a pb.com certificate that does not comply with the baseline requirements."
+class: certificate
+certificate-type: x-509
+issuer: "0N1%0B0%09%06%03U%04%06%13%02US1%100%0E%06%03U%04%0A%13%07Equifax1-0%2B%06%03U%04%0B%13%24Equifax%20Secure%20Certificate%20Authority"
+serial-number: "%02%03%15y%14"
+x-distrusted: true
+
+
+[p11-kit-object-v1]
+label: "Distrusted AC DG Tresor SSL"
+class: certificate
+certificate-type: x-509
+issuer: "0K1%0B0%09%06%03U%04%06%13%02FR1%0E0%0C%06%03U%04%0A%13%05DGTPE1%2C0%2A%06%03U%04%03%13%23AC%20DGTPE%20Signature%20Authentification"
+serial-number: "%02%03%03%1D%A7"
+x-distrusted: true
+
+
+[p11-kit-object-v1]
+label: "MITM subCA 1 issued by Trustwave"
+class: certificate
+certificate-type: x-509
+issuer: "0%81%AB1%0B0%09%06%03U%04%06%13%02US1%110%0F%06%03U%04%08%13%08Illinois1%100%0E%06%03U%04%07%13%07Chicago1%210%1F%06%03U%04%0A%13%18Trustwave%20Holdings%2C%20Inc.1301%06%03U%04%03%13%2ATrustwave%20Organization%20Issuing%20CA%2C%20Level%2021%1F0%1D%06%09%2A%86H%86%F7%0D%01%09%01%16%10ca%40trustwave.com"
+serial-number: "%02%04kI%D2%05"
+x-distrusted: true
+
+
+[p11-kit-object-v1]
+label: "MITM subCA 2 issued by Trustwave"
+class: certificate
+certificate-type: x-509
+issuer: "0%81%AB1%0B0%09%06%03U%04%06%13%02US1%110%0F%06%03U%04%08%13%08Illinois1%100%0E%06%03U%04%07%13%07Chicago1%210%1F%06%03U%04%0A%13%18Trustwave%20Holdings%2C%20Inc.1301%06%03U%04%03%13%2ATrustwave%20Organization%20Issuing%20CA%2C%20Level%2021%1F0%1D%06%09%2A%86H%86%F7%0D%01%09%01%16%10ca%40trustwave.com"
+serial-number: "%02%04kI%D2%06"
+x-distrusted: true
+
+
+[p11-kit-object-v1]
+label: "TURKTRUST Mis-issued Intermediate CA 1"
+class: certificate
+certificate-type: x-509
+issuer: "0%81%AC1%3D0%3B%06%03U%04%03%0C4T%C3%9CRKTRUST%20Elektronik%20Sunucu%20Sertifikas%C4%B1%20Hizmetleri1%0B0%09%06%03U%04%06%13%02TR1%5E0%5C%06%03U%04%0A%0CUT%C3%9CRKTRUST%20Bilgi%20%C4%B0leti%C5%9Fim%20ve%20Bili%C5%9Fim%20G%C3%BCvenli%C4%9Fi%20Hizmetleri%20A.%C5%9E.%20%28c%29%20Kas%C4%B1m%20%202005"
+serial-number: "%02%02%08%27"
+x-distrusted: true
+
+
+[p11-kit-object-v1]
+label: "TURKTRUST Mis-issued Intermediate CA 2"
+class: certificate
+certificate-type: x-509
+issuer: "0%81%AC1%3D0%3B%06%03U%04%03%0C4T%C3%9CRKTRUST%20Elektronik%20Sunucu%20Sertifikas%C4%B1%20Hizmetleri1%0B0%09%06%03U%04%06%13%02TR1%5E0%5C%06%03U%04%0A%0CUT%C3%9CRKTRUST%20Bilgi%20%C4%B0leti%C5%9Fim%20ve%20Bili%C5%9Fim%20G%C3%BCvenli%C4%9Fi%20Hizmetleri%20A.%C5%9E.%20%28c%29%20Kas%C4%B1m%20%202005"
+serial-number: "%02%02%08d"
+x-distrusted: true
+
+
+[p11-kit-object-v1]
+label: "Add missing BasicConstraints for Entrust root"
+id: "%55%e4%81%d1%11%80%be%d8%89%b9%08%a3%31%f9%a1%24%09%16%b9%70"
+x-public-key-info: "%30%82%01%22%30%0d%06%09%2a%86%48%86%f7%0d%01%01%01%05%00%03%82%01%0f%00%30%82%01%0a%02%82%01%01%00%ad%4d%4b%a9%12%86%b2%ea%a3%20%07%15%16%64%2a%2b%4b%d1%bf%0b%4a%4d%8e%ed%80%76%a5%67%b7%78%40%c0%73%42%c8%68%c0%db%53%2b%dd%5e%b8%76%98%35%93%8b%1a%9d%7c%13%3a%0e%1f%5b%b7%1e%cf%e5%24%14%1e%b1%81%a9%8d%7d%b8%cc%6b%4b%03%f1%02%0c%dc%ab%a5%40%24%00%7f%74%94%a1%9d%08%29%b3%88%0b%f5%87%77%9d%55%cd%e4%c3%7e%d7%6a%64%ab%85%14%86%95%5b%97%32%50%6f%3d%c8%ba%66%0c%e3%fc%bd%b8%49%c1%76%89%49%19%fd%c0%a8%bd%89%a3%67%2f%c6%9f%bc%71%19%60%b8%2d%e9%2c%c9%90%76%66%7b%94%e2%af%78%d6%65%53%5d%3c%d6%9c%b2%cf%29%03%f9%2f%a4%50%b2%d4%48%ce%05%32%55%8a%fd%b2%64%4c%0e%e4%98%07%75%db%7f%df%b9%08%55%60%85%30%29%f9%7b%48%a4%69%86%e3%35%3f%1e%86%5d%7a%7a%15%bd%ef%00%8e%15%22%54%17%00%90%26%93%bc%0e%49%68%91%bf%f8%47%d3%9d%95%42%c1%0e%4d%df%6f%26%cf%c3%18%21%62%66%43%70%d6%d5%c0%07%e1%02%03%01%00%01"
+class: x-certificate-extension
+object-id: 2.5.29.19
+value: "%30%0f%06%03%55%1d%13%01%01%ff%04%05%30%03%01%01%ff"
+

@@ -1,0 +1,56 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>새 저장소(repository)를 당신의 컴퓨터에 만들어보세요.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>저장소(repository)</h2>
+  <p><strong>저장소</strong> 는 연관된 항목들의 모음입니다. 소프트웨어를 작성하는 우리의 경우에서는 소프트웨어 프로젝트에 연관된 파일들의 모음입니다. 이를 관련된 모든 파일들이 들어가있는 프로젝트 폴더로도 상상할 수 있습니다. 사실 그것이 당신의 컴퓨터에서 보여질 모습이기는 합니다. 가끔 줄여서 "repos" 라고도 부릅니다.</p>
+
+  <img src="../../../assets/imgs/repos.png" alt="A drawing of four file folders" width="600">
+
+  <p>Git 에 무엇이 당신의 프로젝트인지 말하면 Git 은 그 폴더에의 모든 변경들을 추적하기 시작할 것입니다. 이러한 작업이 그 폴더를 Git 저장소(Git 에 의해 추적되는 항목들이 있는 폴더)로 만듭니다. Git 은 파일이 추가되었을 때, 삭제되었을 때, 심지어 하나의 파일에서 하나의 문자가 변경되었을 때도 추적합니다. 모든 변경들과 누가, 언제 그것을 변경했는지가 Git 에 의해 추적됩니다. 소프트웨어 분야에서 이와 같이 변경을 추적하는 것을 <strong>버전 콘트롤(version control)</strong>이라고 부릅니다.</p>
+
+  <h2>터미널(terminal) 사용하기</h2>
+  <p><strong>터미널</strong> (또는 Bash) 는 마우스로 어플리케이션을 클릭하는 것과 달리 명령어(command)를 입력함으로서 컴퓨터를 다룰 수 있는 방법입니다. 명령어를 입력하여 파일의 이름을 바꾸고, 파일을 열고, 폴더를 만들고, 폴더에서 폴더로 옮기고, 더 많은 모든 것들을 할 수 있습니다. 심지어 터미널에서 텍스트 에디터(<a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank">Vim</a> 같은)를 이용해 코드를 작업할 수도 있어 영원히 떠날 필요가 없습니다!</p>
+
+  <p>컴퓨터를 탐색하는 것 외에도, 터미널에서 <strong>command-line interface (CLI)</strong> 를 가지고 있는 프로그램을 사용하는 것도 가능합니다. CLI 를 가지고 있다는 것은 터미널에서 명령어로 구동이 될 수 있다는 것을 의미합니다. Git 도 그 중 하나입니다. 명령어의 첫번째 부분은 컴퓨터에게 당신이 Git 에게 얘기하고 있다는 것을 알려줍니다. 그 뒤에 따라오는 부분들은 Git 명령과 Git 이 동작하도록 하는 여러가지 옵션들입니다.</p>
+
+  <p>당신은 Git-it 에서 컴퓨터를 탐색하기 위한 몇몇 커맨드라인 동작들과 Git 명령어들을 배우게 될 것입니다.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>저장소(repository) 생성하기</h3>
+  <p>지금부터 새 프로젝트 폴더를 생성하고 이를 Git 저장소로 초기화 할 것입니다. 이 챌린지에서는 폴더 이름을 'hello-world' 로 할 것이지만, 이미 같은 이름을 가진 폴더가 있다면('hello-world'는 흔한 첫 프로젝트 이름입니다) 다른 이름을 선택해도 괜찮습니다.</p>
+
+  <p>터미널을 열 시간입니다!<p>
+
+  <p>터미널 윈도우에서 명령어를 하나씩 입력한 후 엔터/리턴을 누르세요.</p>
+
+  <p>먼저, 새 폴더를 만듭니다:<br><span class="inline-tip">팁: mkdir 은 <em>make directory</em> 를 의미합니다.</span></p>
+  <code class="shell">mkdir hello-world</code>
+
+  <p>그 다음 그 폴더로 들어갑니다:<br><span class="inline-tip">팁: cd 는 <em>change directory</em> 를 의미합니다.</span></p>
+  <code class="shell">cd hello-world</code>
+
+  <p>마지막으로, Git 에게 지금 있는 폴더를 초기화(추적을 시작) 하라고 얘기합니다:</p>
+  <code class="shell">git init</code>
+
+  <p>마지막 명령어는 "Initialized empty Git repository" 로 시작하는 무언가를 반환해야만 합니다. 위의 다른 명령들은 아무것도 반환하지 않습니다.</p>
+
+  <p>해냈습니다! 이 폴더가 Git 저장소로 설정이 되었는지 확실히 하고 싶다면, <code>git status</code> 를 입력하고 'fatal: Not a git repository...' 라는 메시지를 반환하지 않는지 확인하면 됩니다.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>새 폴더 생성하기 (aka make directory)</strong></li>
+    <code class="shell">mkdir &#60;폴더이름&#62;</code>
+    <li><strong>존재하는 폴더 탐색하기 (aka change directory)</strong></li>
+    <code class="shell">cd &#60;폴더이름&#62;</code>
+    <li><strong>폴더에 있는 항목들의 리스트 보기</strong></li>
+    <code class="shell">ls </code>
+    <li><strong>현재 폴더에서 Git 켜기</strong></li>
+    <code class="shell">git init</code>
+  </ul>
+</div>

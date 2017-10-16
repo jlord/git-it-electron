@@ -1,0 +1,92 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+  <p>Adicionar um branch para o repositório que você fez fork para trabalhar nas mudanças.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+  <h2>Branches</h2>
+  <p>Repositórios Git usam branches para isolar o trabalho quando eles precisam. É uma prática comum, quando trabalhando em um projeto com outras pessoas, criar um <strong>branch</strong> antes de fazer alterações. Desta forma, você pode fazer seu trabalho enquanto o branch principal, geralmente chamado de "master", permanece estável. Quando você tiver terminado seu trabalho em um branch, você faz o merge (união) dele com o "master".</p>
+
+  <p>O diagrama abaixo mostra como você pode ramificar (lembrado que branch significa "ramo") o seu branch "master", fazer o serviço e então fazer merge destas mudanças com o "master". Você pode até mesmo ramificar ramificações, caso sinta necessidade, o branch "master" não precisa ser a base.</p>
+
+  <img src="../../../assets/imgs/branches-ptbr.png" width="100%">
+
+  <p>Para ter uma melhor ideia de como os branches funcionam em um projeto, veja este guia do GitHub: <a href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a></p>
+
+  <h2>Páginas do GitHub</h2>
+  <p>O GitHub vai, automaticamente, servir e hospedar arquivos de websites estáticos em branches nomeados "gh-pages". Este serviço gratuito é chamado <a href="http://pages.github.com">GitHub Pages</a>. Como o projeto que você fez fork cria um website, seu branch principal é chamado de "gh-pages" ao invés de "master". Todos os repositórios que possuem um branch chamado "gh-pages" com arquivos de um website podem ser encontrados, na versão hospedada, usando o seguinte padrão para o URL:</p>
+
+  <code>http://usuariodogithub.github.io/nomedorepositorio</code>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Criar um branch</h3>
+  <p>Quando você cria um branch, o Git copia todos os arquivos em que você está trabalhando e os coloca no novo branch que você acabou de criar.</p>
+
+  <p>Enquanto ainda dentro do seu repositório "patchwork" local, digite <code>git status</code> para ver em qual branch você está no momento. O Git deverá dizer que você está no branch nomeado "gh-pages".</p>
+
+  <p>Agora, crie um novo branch e o chame de "add-&#60;usuario&#62;", onde  'usuario' é seu usuário. Por exemplo, "add-diobrando". <strong>Branches são sensitivos a letras maiúsculas e minúsculas, portanto nomeie ele exatamente como seu usuário está no GitHub</strong>.</p>
+
+  <p><code class="shell">git branch &#60;NOMEDOBRANCH&#62;</code></p>
+
+  <p>Agora você possui um branch com novo nome e idêntico ao"gh-pages".</p>
+
+  <p>Para ir até este branch para poder trabalhar nele, similar a usar <code>cd</code> para mudar de diretório no terminal, você deve fazer <strong>checkout</strong> de um branch. Para ir para outro branch:</p>
+
+  <p><code class="shell">git checkout &#60;NOMEDOBRANCH&#62;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Passo: Criar um Novo Arquivo</h3>
+  <p>De volta ao editor de texto:</p>
+  <ul>
+    <li>Crie um novo arquivo chamado de <span style="white-space: nowrap;">"add-&#60;USUARIO&#62;.txt"</span>, onde 'USUARIO' é seu usuário. Por exemplo, "add-diobrando.txt".</li>
+    <li>Então, escreva o seu usuário do GitHub nele, isso é tudo, pessoal. Por exemplo, eu escreveria "diobrando".</li>
+    <li>Salve este arquivo na pasta 'contributors' em Patchwork <strong>Patchwork/contributors/add-seuusuario.txt</strong></li>
+    <li>Em seguida, cheque sua alterações (veja abaixo).</li>
+  </ul>
+</div>
+
+<div class="chal-step blue-border border-box">
+  <h3>Checando</h3>
+  <p>Siga estes passos para checar um projeto:</p>
+
+  <p><code class="shell">git status</code></p>
+  <p><code class="shell">git add &#60;NOMEDOARQUIVO&#62;</code></p>
+  <p><code class="shell">git commit -m "Mensagem do Commit"</code></p>
+
+  <p>Agora faça push de sua alteração para o seu fork no GitHub:</p>
+  <p><code class="shell">git push origin &#60;NOMEDOBRANCH&#62;</code></p>
+
+  <p>Certifique-se de que você está fazendo push para a "origin", o qual é o endereço do seu fork do GitHub. Se você receber um erro, cheque para ter certeza que você tem seus remotos configurados devidamente com a "origin" apontando para seu fork e a "upstream" apontando para o repositório original: <code>git remote -v</code>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-no-pass grey-border border-box">
+  <h4>O arquivo NÃO está na pasta contributors</h4>
+  <p>O arquivo deve estar na pasta 'contributors' existente no repositório Patchwork. Se você o colocar em algum outro lugar, simplesmente use o Finder ou o Explorador de Arquivos do Windows para mover seu arquivo para esta pasta. Você pode checar o <code>git status</code> novamente e você verá se encontra ele nas suas mudanças. Prepare e então faça commit de "todas" (-A) as mudanças (adições e deleções) com o comando abaixo.</p>
+  <p><code class="shell">git add -A</code></p>
+  <p><code class="shell">git commit -m "mover arquivo para a pasta contributors'</code></p>
+
+  <h4>Nome do branch experado: _____</h4>
+  <p>O nome do branch deve corresponder ao nome do usuário exatamente. Para mudar o nome de seu branc:</p>
+  <p><code class="shell">git branch -m &#60;NOVONOMEDOBRANCH&#62;</code></p>
+  <p>Quando você fizer suas alterações, verifique novamente!</p>
+</div>
+
+<div class="chal-tip grey-border border-box">
+  <ul class="no-list-style">
+    <li><strong>Você pode criar e ir para um branch com uma linha de código</strong></li>
+    <li><code class="shell">git checkout -b &#60;NOMEDOBRANCH&#62;</code></li>
+    <li><strong>Criar um novo branch</strong></li>
+    <li><code class="shell">git branch &#60;NOMEDOBRANCH&#62;</code></li>
+    <li><strong>Ir para um branch</strong></li>
+    <li><code class="shell">git checkout &#60;NOMEDOBRANCH&#62;</code></li>
+    <li><strong>Lista de branches</strong></li>
+    <li><code class="shell">git branch</code></li>
+    <li><strong>Renomear o branch em que você está</strong></li>
+    <li><code class="shell">git branch -m &#60;NOVONOMEDOBRANCH&#62;</code></li>
+    <li><strong>Verificar em qual branch você está</strong></li>
+    <li><code class="shell">git status</code></li>
+  </ul>
+</div>

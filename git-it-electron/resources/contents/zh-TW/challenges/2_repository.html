@@ -1,0 +1,57 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>在自己的電腦上建立一個新的 Repository。</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Repositories</h2>
+    <p>一個 <strong>Repository</strong>
+        是一個相關物件的集合。舉個例子：當你在撰寫軟體時，他就是一個和專案相關的檔案的集合。你可以把它想成一個專案資料夾，其中包含了所有跟專案相關的檔案。Repository 實際上在電腦裡的樣子就像底下的圖。有時候
+        repositories 會被簡稱為 repos。</p>
+    <img src="../../../assets/imgs/repos.png" alt="A drawing of four file folders" width="100%">
+    <p>你告訴 Git 你專案的資料夾在哪，然後 Git 就會開始記錄這資料夾裏的一切更動。Git repository 的形成條件就是：一個被 Git 追蹤的資料夾以及裡面的檔案。Git
+        將會追蹤檔案的新增、刪除，甚至只是檔案中一個字的差距。除了檔案的修改以外，Git 還會追蹤什麼人在什麼時候做了這些更動。在軟體中進行這樣的追蹤，稱之為<strong>版本控制</strong>。</p>
+
+    <h2>使用終端機</h2>
+    <p><strong>終端機</strong>（或是
+        Bash）是一種靠輸入指令而非滑鼠的方式命令你的電腦做某些事。透過輸入指令，你可以重新命名檔案、開啟檔案、建立新資料夾、並在不同目錄（資料夾）之間切換…等。你甚至不需離開終端機便可以在終端機裡使用文字編輯器（例如 <a
+                href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>）。</p>
+    <p>除了瀏覽你的電腦，你也可以在終端機裏使用具有<strong>終端機界面（command-line interface，CLI）</strong>的程式，這類的程式可藉由輸入鍵盤指令來運行。Git 便是其中之一。上一個挑戰你讓
+        Git 知道你是誰。緊接著，我們將會告訴你 Git 的一些指令及選項。</p>
+    <p>在 Git-it 裡你將學會一些終端機和 Git 基本的操作指令，而在每個挑戰中會解釋這些指令的功用。</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>建立一個 Repository</h3>
+    <p>你將建立一個新的資料夾，並把它初始化為一個 Git repository。</p>
+    <p>為了讓事情更單純，請把你的資料夾和你的專案取同一個英文名稱。而這次的挑戰中請把資料夾取名叫作「hello-world」吧。</p>
+    <p>該是時候打開你的終端機了！打開終端機，將下列指令一一輸入至終端機吧！（每個指令後面記得用 ENTER 換行）</p>
+    <p>首先，建立新資料夾：<br><span class="inline-tip">提示：你可以透過 mkdir 來<em>建立資料夾</em></span></p>
+    <code class="shell">mkdir hello-world</code>
+    <p>接著，進入這個資料夾：<br><span class="inline-tip">提示：你可以透過 cd 來<em>切換資料夾</em></span></p>
+    <code class="shell">cd hello-world</code>
+    <p>最後，告訴 Git 初始化你現在所在的資料夾，開始追蹤！</p>
+    <code class="shell">git init</code>
+    <p>最後一個指令應該會返回一段含有「Initialized empty Git repository」的文字，其他指令則不會有任何輸出。</p>
+
+    <p>就是這樣！如果你想要再次確認此資料夾是否已經是個 Git repository，輸入 <code>git status</code>，只要不是顯示「fatal: Not a git repository...」，那就對了！
+    </p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>建立一個新資料夾 (或稱做目錄)</strong></li>
+        <code class="shell">mkdir
+            <FOLDERNAME>
+        </code>
+        <li><strong>進入一個資料夾 (或稱做切換目錄)</strong></li>
+        <code class="shell">cd
+            <FOLDERNAME>
+        </code>
+        <li><strong>列出資料夾內容</strong></li>
+        <code class="shell">ls </code>
+        <li><strong>為一個資料夾加上 Git 功能</strong></li>
+        <code class="shell">git init</code>
+    </ul>
+</div>

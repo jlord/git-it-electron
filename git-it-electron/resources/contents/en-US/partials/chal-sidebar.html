@@ -1,0 +1,15 @@
+<div id="challenge-sidebar" class="sidebar">
+    <ul class="list-of-challenges">
+        <h3>Challenges</h3>
+        {{#each challenges}}
+        <li>
+            <a id="{{ this.[0] }}" data-id="{{ @index }}" href="{{ this.[0] }}.html"
+               class="challenge-item{{#if this.[2]}} current{{/if }}">
+                <div class="current-arrow">▶️</div>
+                {{ this.[1] }}
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+
+</div>

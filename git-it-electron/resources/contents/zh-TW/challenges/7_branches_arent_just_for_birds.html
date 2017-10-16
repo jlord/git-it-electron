@@ -1,0 +1,121 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>在你本地的 forked repository 新增一個 branch。</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>分支(Branches)</h2>
+    <p>Git repositories 用 branches 來分隔進度。當需要跟其他人一起進行專案時，在你完成負責的部份之前，經常需要利用 <strong>branch</strong>
+        來保護你對程式所做的修改。如此，你就可以讓主要的「master」 branch 保持穩定，不被未完成的修改影響。等到你完成在 branch 上的修改，就可以把它合併(merge)回「master」 branch。</p>
+    <p>這張圖告訴你，你要如何切換到其他分支、修改，並合併回「master」分支，甚至你不一定要以「master」為基底。</p>
+    <img src="../../../assets/imgs/branches.png"
+         alt="A diagram showing a horizontal line, representing the master branch, with another line branching off the top and later re-joining the original. Another line branches off the master branch line from below and yet another branch branches off of that. Both of these meet back up with the original master line, too."
+         width="100%">
+    <p>在 GitHub 導覽中有張不錯的示意圖，解釋在專案中 branches 是如何運作的：<a href="https://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a>
+    </p>
+    <h2>GitHub Pages</h2>
+    <p>GitHub 會自動發佈你放在「gh-pages」 branch 裡的靜態檔案，並架設一個網站。這個免費服務叫做 <a href="http://pages.github.com">GitHub Pages</a>。如果你要為你
+        forked 的專案建立一個網站，它的預設 branch 是「gh-pages」而不是「master」。而你會發現所有含有「gh-pages」分支的 repository，他們的網址都長得像這樣：</p>
+    <code>http://githubusername.github.io/repositoryname</code>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>新增一個 branch</h3>
+    <p>當你新增 branch 的時候，Git 會拷貝目前 branch 上所有的檔案到新的 branch。</p>
+    <p>在終端機輸入 <code>git status</code> 可以知道目前你在哪個 branch（現在應該會在「gh-pages」）。</p>
+    <p>新增一個 branch 並命名為「add-
+        <username>」，請用你的帳號名稱替換掉 'username'。例如「add-jlord」。<strong>Branches 的名字有分大小寫，所以請確定輸入的帳號名稱跟 GitHub
+            上顯示的一模一樣。</strong>
+    </p>
+    <p><code class="shell">git branch
+        <BRANCH_NAME>
+    </code></p>
+    <p>現在，你擁有了一個全新、內容跟 'gh-pages' 一模一樣的 branch！</p>
+    <p>如果要切換到另一個 branch 工作，你可以用 <strong>checkout</strong>。切換到剛剛新增的 branch：</p>
+    <p><code class="shell">git checkout
+        <BRANCH_NAME>
+    </code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>新增一個檔案</h3>
+    <p>回到你的文字編輯器：</p>
+    <ul>
+        <li>新增一個檔案並命名為 <span style="white-space: nowrap;">「add-<USERNAME>.txt」</span>，請用你的帳號名稱替換
+            'username'，像這樣，「add-jlord.txt」。
+        </li>
+        <li>在檔案裡寫下你的 GitHub 帳號名稱。例如，我就會寫「jlord」。</li>
+        <li>將檔案存到在 Patchwork 裡的「contributors」資料夾： <strong>Patchwork/contributors/add-yourusername.txt</strong></li>
+        <li>接著，把你的修改記錄下來！</li>
+    </ul>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>紀錄修改</h3>
+    <p>按照以下的步驟，把剛才的修改用 Git 記錄下來：</p>
+
+    <p><code class="shell">git status</code></p>
+    <p><code class="shell">git add
+        <FILENAME>
+    </code></p>
+    <p><code class="shell">git commit -m "
+        <commit message>"
+    </code></p>
+
+    <p>Push 剛才記錄好的修改到 GitHub 上，你 forked 的 repository 裡頭：</p>
+    <p><code class="shell">git push origin
+        <BRANCH_NAME>
+    </code></p>
+
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-no-pass grey-border border-box">
+    <h4>拒絕存取...error: 403</h4>
+    <p>你正試著把修改 push 到一個你沒有寫入權限的 repository。在這裡，你可能推到原本的 repository (jlord/patchwork)了，請確定你的 push 的目的是 origin，且 origin
+        是指向你 fork 的專案的 GitHub 網址。你可以透過 <code>git remote -v</code>來檢查所有的 remote 指向哪裡，你應該要有一個「origin」指向你 fork 的 repository
+        及一個「upstream」指向原始的 repository。</p>
+    <p>如果 remote 指向錯誤的網址，你可以用 <code>git remote set-url
+        <BRANCH_NAME>
+            <URLFROMGITHUB>
+    </code> 來修改網址。
+
+    <p>剛才新增的檔案應該要放到 Patchwork repository 的 'contributors'
+        資料夾裡。如果不小心放到別的地方，請打開 Finder 或是 Windows 的檔案總管將該檔案移到
+        'contributors' 資料夾，然後可以用 <code>git status</code> 看你剛才移動檔案之後所造成的結果。用以下的指令 Stage 並且 commit 全部的修改（加上
+        -A，會將新增檔案跟刪除檔案的動作一起記錄下來）：</p>
+    <p><code class="shell">git add -A</code></p>
+    <p><code class="shell">git commit -m "move file into contributors folder"</code></p>
+
+    <h4>Branch name expected: _____</h4>
+    <p>Branch 的名字應該要跟你的帳號名稱一模一樣。用以下的指令修改 branch 的名字：</p>
+    <p><code class="shell">git branch -m
+        <NEW_BRANCH_NAME>
+    </code></p>
+    <p>完成以上的動作之後，再重新 verify！</p>
+</div>
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li>只用一個指令就新增並切換到新的 branch</li>
+        <li><code class="shell">git checkout -b
+            <BRANCH_NAME>
+        </code></li>
+        <li>新增 branch</li>
+        <li><code class="shell">git branch
+            <BRANCH_NAME>
+        </code></li>
+        <li>切換到另一個 branch</li>
+        <li><code class="shell">git checkout
+            <BRANCH_NAME>
+        </code></li>
+        <li>列出所有的 branches</li>
+        <li><code class="shell">git branch</code></li>
+        <li>重新命名目前所在的 branch</li>
+        <li><code class="shell">git branch -m
+            <NEW_BRANCH_NAME>
+        </code></li>
+        <li>看目前正在哪個 branch</li>
+        <li><code class="shell">git status</code></li>
+    </ul>
+</div>

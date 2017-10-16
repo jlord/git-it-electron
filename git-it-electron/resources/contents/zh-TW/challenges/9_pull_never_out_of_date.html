@@ -1,0 +1,38 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>從其他 collaborators 那裡 pull 修改，確保檔案是最新的版本。</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>從 Remote pull 到本地</h2>
+    <p>若是和別人一起合作，就會需要把檔案保持在最新狀態，以免修改到相同的檔案造成版本衝突。因此，你就會需要時常 <strong>pull</strong> 其他人對程式所作的修改。</p>
+
+    <img src="../../../assets/imgs/pull.png"
+         alt="A diagram shows a computer pulling information down from a repository's website" width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Reporobot 都做了些什麼呢？</h3>
+    <p>把 GitHub 上 'origin' remote 的更新 pull 到你的電腦上，來看 Reporobot 是否有在 'add-' branch 做了任何修改：</p>
+    <p><code class="shell">git pull
+        <REMOTE_NAME>
+            <REMOTE_BRANCH>
+    </code></p>
+    <p>如果沒有任何修改，Git 會告訴你 'Already up-to-date'。若有修改的話，Git 會把那些修改 merge 到電腦裡哦。</p>
+    <p>Reporobot 有修改嗎？Git 會告訴你那些地方有變化。可以打開修改過的檔案看看，Reporobot 修改了什麼。哇！Reporobot 真是個藝術家呀！</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>檢查 Git 狀態</strong></li>
+        <code class="shell">git status</code>
+        <li><strong>從遠端分支 pull 更新回來</strong></li>
+        <code class="shell">git pull
+            <REMOTE_NAME>
+                <REMOTE_BRANCH>
+        </code>
+        <li><strong>在收取更新前先檢查 remote 是否有變動</strong></li>
+        <code class="shell">git fetch --dry-run</code>
+    </ul>
+</div>

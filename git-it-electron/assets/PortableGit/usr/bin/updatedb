@@ -1,0 +1,413 @@
+#! /bin/sh
+# updatedb -- build a locate pathname database
+# Copyright (C) 1994, 1996, 1997, 2000, 2001, 2003, 2004, 2005, 2006,
+# 2010, 2011 Free Software Foundation, Inc.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# csh original by James Woods; sh conversion by David MacKenzie.
+
+#exec 2> /tmp/updatedb-trace.txt
+#set -x
+
+version='
+updatedb (GNU findutils) 4.5.14
+Copyright (C) 2007,2008,2009,2010 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Eric B. Decker, James Youngman, and Kevin Dalley.
+'
+
+
+usage="\
+Usage: $0 [--findoptions='-option1 -option2...']
+       [--localpaths='dir1 dir2...'] [--netpaths='dir1 dir2...']
+       [--prunepaths='dir1 dir2...'] [--prunefs='fs1 fs2...']
+       [--output=dbfile] [--netuser=user] [--localuser=user]
+       [--old-format] [--dbformat] [--version] [--help]
+
+Report bugs to <bug-findutils@gnu.org>."
+changeto=/
+old=no
+for arg
+do
+  # If we are unable to fork, the back-tick operator will
+  # fail (and the shell will emit an error message).  When
+  # this happens, we exit with error value 71 (EX_OSERR).
+  # Alternative candidate - 75, EX_TEMPFAIL.
+  opt=`echo $arg|sed 's/^\([^=]*\).*/\1/'`  || exit 71
+  val=`echo $arg|sed 's/^[^=]*=\(.*\)/\1/'` || exit 71
+  case "$opt" in
+    --findoptions) FINDOPTIONS="$val" ;;
+    --localpaths) SEARCHPATHS="$val" ;;
+    --netpaths) NETPATHS="$val" ;;
+    --prunepaths) PRUNEPATHS="$val" ;;
+    --prunefs) PRUNEFS="$val" ;;
+    --output) LOCATE_DB="$val" ;;
+    --netuser) NETUSER="$val" ;;
+    --localuser) LOCALUSER="$val" ;;
+    --old-format) old=yes ;;
+    --changecwd)  changeto="$val" ;;
+    --dbformat)   dbformat="$val" ;;
+    --version) fail=0; echo "$version" || fail=1; exit $fail ;;
+    --help)    fail=0; echo "$usage"   || fail=1; exit $fail ;;
+    *) echo "updatedb: invalid option $opt
+$usage" >&2
+       exit 1 ;;
+  esac
+done
+
+
+
+
+case "${dbformat:+yes}_${old}" in
+    yes_yes)
+	echo "The --dbformat and --old cannot both be specified." >&2
+	exit 1
+	;;
+	*)
+	;;
+esac
+
+if test "$old" = yes || test "$dbformat" = "old" ; then
+    echo "Warning: future versions of findutils will shortly discontinue support for the old locate database format." >&2
+    old=yes
+    sort="/usr/bin/sort"
+    print_option="-print"
+    frcode_options=""
+else
+    frcode_options=""
+    case "$dbformat" in
+	"")
+		# Default, use LOCATE02
+	    ;;
+	LOCATE02)
+	    ;;
+	slocate)
+	    frcode_options="$frcode_options -S 1"
+	    ;;
+	*)
+	    echo "Unsupported locate database format ${dbformat}: Supported formats are:" >&2
+	    echo "LOCATE02, slocate, old" >&2
+	    exit 1
+    esac
+
+
+    if true
+    then
+        sort="/usr/bin/sort -z"
+        print_option="-print0"
+        frcode_options="$frcode_options -0"
+    else
+        sort="/usr/bin/sort"
+        print_option="-print"
+    fi
+fi
+
+getuid() {
+    # format of "id" output is ...
+    # uid=1(daemon) gid=1(other)
+    # for `id's that don't understand -u
+    id | cut -d'(' -f 1 | cut -d'=' -f2
+}
+
+# figure out if su supports the -s option
+select_shell() {
+    if su "$1" -s $SHELL -c false < /dev/null  ; then
+	# No.
+	echo ""
+    else
+	if su "$1" -s $SHELL -c true < /dev/null  ; then
+	    # Yes.
+	    echo "-s $SHELL"
+        else
+	    # su is unconditionally failing.  We won't be able to
+	    # figure out what is wrong, so be conservative.
+	    echo ""
+	fi
+    fi
+}
+
+
+# You can set these in the environment, or use command-line options,
+# to override their defaults:
+
+# Any global options for find?
+: ${FINDOPTIONS=}
+
+# What shell shoud we use?  We should use a POSIX-ish sh.
+: ${SHELL="/bin/sh"}
+
+# Non-network directories to put in the database.
+: ${SEARCHPATHS="/"}
+
+# Network (NFS, AFS, RFS, etc.) directories to put in the database.
+: ${NETPATHS=}
+
+# Directories to not put in the database, which would otherwise be.
+: ${PRUNEPATHS="
+/afs
+/amd
+/proc
+/sfs
+/tmp
+/usr/tmp
+/var/tmp
+"}
+
+# Trailing slashes result in regex items that are never matched, which
+# is not what the user will expect.   Therefore we now reject such
+# constructs.
+for p in $PRUNEPATHS; do
+    case "$p" in
+	/*/)   echo "$0: $p: pruned paths should not contain trailing slashes" >&2
+	       exit 1
+    esac
+done
+
+# The same, in the form of a regex that find can use.
+test -z "$PRUNEREGEX" &&
+  PRUNEREGEX=`echo $PRUNEPATHS|sed -e 's,^,\\\(^,' -e 's, ,$\\\)\\\|\\\(^,g' -e 's,$,$\\\),'`
+
+# The database file to build.
+: ${LOCATE_DB=/usr/var/locatedb}
+
+# Directory to hold intermediate files.
+if test -d /var/tmp; then
+  : ${TMPDIR=/var/tmp}
+elif test -d /usr/tmp; then
+  : ${TMPDIR=/usr/tmp}
+else
+  : ${TMPDIR=/tmp}
+fi
+export TMPDIR
+
+# The user to search network directories as.
+: ${NETUSER=daemon}
+
+# The directory containing the subprograms.
+if test -n "$LIBEXECDIR" ; then
+    : LIBEXECDIR already set, do nothing
+else
+    : ${LIBEXECDIR=/usr/libexec}
+fi
+
+# The directory containing find.
+if test -n "$BINDIR" ; then
+    : BINDIR already set, do nothing
+else
+    : ${BINDIR=/usr/bin}
+fi
+
+# The names of the utilities to run to build the database.
+: ${find:=${BINDIR}/find}
+: ${frcode:=${LIBEXECDIR}/frcode}
+: ${bigram:=${LIBEXECDIR}/bigram}
+: ${code:=${LIBEXECDIR}/code}
+
+make_tempdir () {
+    # This implementation is adapted from the GNU Autoconf manual.
+    {
+        tmp=`
+    (umask 077 && mktemp -d "$TMPDIR/updatedbXXXXXX") 2>/dev/null
+    ` &&
+        test -n "$tmp" && test -d "$tmp"
+    } || {
+	# This method is less secure than mktemp -d, but it's a fallback.
+	#
+	# We use $$ as well as $RANDOM since $RANDOM may not be available.
+	# We also add a time-dependent suffix.  This is actually somewhat
+	# predictable, but then so is $$.  POSIX does not require date to
+	# support +%N.
+	ts=`date +%N%S || date +%S 2>/dev/null`
+        tmp="$TMPDIR"/updatedb"$$"-"${RANDOM:-}${ts}"
+        (umask 077 && mkdir "$tmp")
+    }
+    echo "$tmp"
+}
+
+checkbinary () {
+    if test -x "$1" ; then
+	: ok
+    else
+      eval echo "updatedb needs to be able to execute $1, but cannot." >&2
+      exit 1
+    fi
+}
+
+for binary in $find $frcode $bigram $code
+do
+  checkbinary $binary
+done
+
+
+: ${PRUNEFS="
+9P
+NFS
+afs
+autofs
+cifs
+coda
+devfs
+devpts
+ftpfs
+iso9660
+mfs
+ncpfs
+nfs
+nfs4
+proc
+shfs
+smbfs
+sysfs
+"}
+
+if test -n "$PRUNEFS"; then
+prunefs_exp=`echo $PRUNEFS |sed -e 's/\([^ ][^ ]*\)/-o -fstype \1/g' \
+ -e 's/-o //' -e 's/$/ -o/'`
+else
+  prunefs_exp=''
+fi
+
+# Make and code the file list.
+# Sort case insensitively for users' convenience.
+
+rm -f $LOCATE_DB.n
+trap 'rm -f $LOCATE_DB.n; exit' HUP TERM
+
+if test $old = no; then
+# LOCATE02 or slocate format
+if {
+cd "$changeto"
+if test -n "$SEARCHPATHS"; then
+  if [ "$LOCALUSER" != "" ]; then
+    # : A1
+    su $LOCALUSER `select_shell $LOCALUSER` -c \
+    "$find $SEARCHPATHS $FINDOPTIONS \
+     \\( $prunefs_exp \
+     -type d -regex '$PRUNEREGEX' \\) -prune -o $print_option"
+  else
+    # : A2
+    $find $SEARCHPATHS $FINDOPTIONS \
+     \( $prunefs_exp \
+     -type d -regex "$PRUNEREGEX" \) -prune -o $print_option
+  fi
+fi
+
+if test -n "$NETPATHS"; then
+myuid=`getuid`
+if [ "$myuid" = 0 ]; then
+    # : A3
+    su $NETUSER `select_shell $NETUSER` -c \
+     "$find $NETPATHS $FINDOPTIONS \\( -type d -regex '$PRUNEREGEX' -prune \\) -o $print_option" ||
+    exit $?
+  else
+    # : A4
+    $find $NETPATHS $FINDOPTIONS \( -type d -regex "$PRUNEREGEX" -prune \) -o $print_option ||
+    exit $?
+  fi
+fi
+} | $sort -f | $frcode $frcode_options > $LOCATE_DB.n
+then
+    : OK so far
+    true
+else
+    rv=$?
+    echo "Failed to generate $LOCATE_DB.n" >&2
+    rm -f $LOCATE_DB.n
+    exit $rv
+fi
+
+# To avoid breaking locate while this script is running, put the
+# results in a temp file, then rename it atomically.
+if test -s $LOCATE_DB.n; then
+  chmod 644 ${LOCATE_DB}.n
+  mv ${LOCATE_DB}.n $LOCATE_DB
+else
+  echo "updatedb: new database would be empty" >&2
+  rm -f $LOCATE_DB.n
+fi
+
+else # old
+
+if temp_directory="`make_tempdir`"; then
+    bigrams="${temp_directory}"/bigrams
+    filelist="${temp_directory}"/filelist
+else
+    echo "failed to create temporary directory" >&2
+    exit 1
+fi
+
+rm -f $LOCATE_DB.n
+trap 'rm -f $LOCATE_DB.n; rm -rf "${temp_directory}"; exit' HUP TERM
+
+# Alphabetize subdirectories before file entries using tr.  James Woods says:
+# "to get everything in monotonic collating sequence, to avoid some
+# breakage i'll have to think about."
+{
+cd "$changeto"
+if test -n "$SEARCHPATHS"; then
+  if [ "$LOCALUSER" != "" ]; then
+    # : A5
+    su $LOCALUSER `select_shell $LOCALUSER` -c \
+    "$find $SEARCHPATHS $FINDOPTIONS \
+     \( $prunefs_exp \
+     -type d -regex '$PRUNEREGEX' \) -prune -o $print_option" || exit $?
+  else
+    # : A6
+    $find $SEARCHPATHS $FINDOPTIONS \
+     \( $prunefs_exp \
+     -type d -regex "$PRUNEREGEX" \) -prune -o $print_option || exit $?
+  fi
+fi
+
+if test -n "$NETPATHS"; then
+  myuid=`getuid`
+  if [ "$myuid" = 0 ]; then
+    # : A7
+    su $NETUSER `select_shell $NETUSER` -c \
+     "$find $NETPATHS $FINDOPTIONS \\( -type d -regex '$PRUNEREGEX' -prune \\) -o $print_option" ||
+    exit $?
+  else
+    # : A8
+    $find $NETPATHS $FINDOPTIONS \( -type d -regex "$PRUNEREGEX" -prune \) -o $print_option ||
+    exit $?
+  fi
+fi
+} | tr / '\001' | $sort -f | tr '\001' / > "$filelist"
+
+# Compute the (at most 128) most common bigrams in the file list.
+$bigram $bigram_opts < $filelist | sort | uniq -c | sort -nr |
+  awk '{ if (NR <= 128) print $2 }' | tr -d '\012' > "$bigrams"
+
+# Code the file list.
+$code "$bigrams" < "$filelist" > $LOCATE_DB.n
+
+rm -rf "${temp_directory}"
+
+# To reduce the chances of breaking locate while this script is running,
+# put the results in a temp file, then rename it atomically.
+if test -s $LOCATE_DB.n; then
+  chmod 644 ${LOCATE_DB}.n
+  mv ${LOCATE_DB}.n $LOCATE_DB
+else
+  echo "updatedb: new database would be empty" >&2
+  rm -f $LOCATE_DB.n
+fi
+
+fi
+
+exit 0

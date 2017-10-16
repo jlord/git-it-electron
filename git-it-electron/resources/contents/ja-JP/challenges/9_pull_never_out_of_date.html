@@ -1,0 +1,35 @@
+<div id="challenge-desc" class="challenge">
+    <h2>The Challenge:</h2>
+    <p>コラボレーターの変更をPullして、ファイルを最新に保とう</p>
+</div>
+
+<h2>リモートからのPull</h2>
+<p>もし誰かと一緒に作業していて、ファイルを最新に保ちたいという状況になった時には、<strong>pull</strong>することで変更を取り込むことができます。</p>
+
+<img src="../../../assets/imgs/pull.png" width="600">
+
+<h2>Step: Reporobotはなにをやってるかな?</h2>
+<p>'origin'という名前のGitHub上のリモートサーバをPullして、Reporobotが'add-'ブランチに対して何か変更をしてないか見てみましょう:</p>
+
+<p><code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code></p>
+
+<p>何も変更がなければ'Already up-to-date'と表示されます。
+    何か変更されていれば、Gitがそれらの変更をローカルにマージしてくれるはずです。</p>
+
+<p>Reporobotはなにか変更していましたか? Gitはどこに変更が加わったかも教えてくれます。
+    ファイルを開いて、Reporobotの変更を見てみましょう。おおっ、
+    Reporobotって、アーティストなんだね!</p>
+
+{{{verify_directory_button}}}
+
+<div class="blue-border-box">
+    <h2>TIPS</h2>
+    <ul>
+        <li><strong>Gitの状態を確認する</strong></li>
+        <code>$ git status</code>
+        <li><strong>リモートのブランチから変更をPullする</strong></li>
+        <code>$ git pull &lt;REMOTENAME&gt; &lt;REMOTEBRANCH&gt;</code>
+        <li><strong>Pullする前にリモート上で行われた変更を見てみる</strong></li>
+        <code>$ git fetch --dry-run</code>
+    </ul>
+</div>

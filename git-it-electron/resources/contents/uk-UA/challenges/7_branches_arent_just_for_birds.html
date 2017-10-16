@@ -1,0 +1,121 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Створення гілки, локально, у вашому форкнутому репозиторії, для роботи над вашими змінами.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Гілки (Branches)</h2>
+    <p>Git репозиторії використовують гілки для ізоляції роботи над певною частиною проекту, за потребою.
+        Це загальна практика, коли ви працюєте самі, або із іншими людьми над проектом, ізолювати свої зміни у власній
+        гілці. Це спосіб працювати над своїми функціоналом, в той час,
+        коли на гілці master залишається стабільна версія проекту. Коли робота у вашій гілці завершена, її можна
+        змерджити у гілку "master".</p>
+    <p>Діаграма що наведена нижче показує, як ви можете перейти на іншу гілку із 'master', зробити свою роботу та
+        змерджити зміни назад у 'master'
+        Також ви можете зробити гілку не лише із 'master' а із будь-якої іншої гілки.</p>
+
+    <img src="../../../assets/imgs/branches.png"
+         alt="Діаграма показує горизонтальну лінію, що показує гілку master, із іншою гілкою із неї, яка потім знову зливається із 'master'. Інша гілка відгалужуєтсья від 'master' знизу, і із неї відгалужується ще одна гілка. Потім обидві гілки також повертаються у гілку 'master'"
+         width="100%">
+
+    <p>Для кращого розуміння того .як працюють гілки, дивіться GitHub Guide: <a
+            href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a></p>
+
+    <h2>GitHub Сторінки</h2>
+    <p>GitHub буде автоматично слідкувати та хостити статичні вебсайти із файлів у гілці 'gh-pages'. Цей безкоштовний сервіс називається <a href="http://pages.github.com">GitHub Pages</a>. Так як проект який ви форкаєте створює вебсайт,
+        його головна гілка називаєтсья 'gh-pages' а не 'master'. Всі репозиторії що мають гілку 'gh-pages'із файлами вебсайту
+        , можна побачити онлайн, використавши маску URL:</p>
+
+    <code>http://githubusername.github.io/repositoryname</code>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Створення гілки</h3>
+    <p>Коли ви створюєте гілку, Git копіює все із вашої поточної гілки і кладе це у гілку що ви хочете створити.</p>
+
+    <p>Доки ви всередині репозиторія  'patchwork', введіть <code>git status</code> щоб побачити гілку в якій ви зараз знаходитесь.
+        Git повинен відповісти що ви зараз у гілці 'gh-pages'.</p>
+
+    <p>Тепер створіть нову гілку та назвіть її "add-&#60;username&#62;", де 'username' це ваш юзернейм. Наприклад,
+        "add-jlord". <strong> Не забувайте про те що гілки чутливі до регістру </strong>.</p>
+
+    <p><code class="shell">git branch &#60;BRANCHNAME&#62;</code></p>
+
+    <p>Тепер у вас є гілка, яка ідентична гілці 'gh-pages'.</p>
+
+    <p>Щоб перейти у цю гілку та почати у ній працювати, потрібно зробити <strong>checkout</strong> гілки:</p>
+
+    <p><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Крок: Створення нового файлу</h3>
+    <p>Поверніться у ваш текстовий редактор:</p>
+    <ul>
+        <li>Створіть новий файл із назвою <span style="white-space: nowrap;">"add-&#60;USERNAME&#62;.txt"</span>, де
+            'username' ваш юзернейм. Наприклад, "add-jlord.txt".
+        </li>
+        <li>Далі, просто напишіть ваш GitHub юзернейм у ньому.</li>
+        <li>Збережіть цей файл у папці 'contributors' у Patchwork: <strong>Patchwork/contributors/add-yourusername.txt</strong>
+        </li>
+        <li>Далі, внесіть свої зміни (дивіться нижче).</li>
+    </ul>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Внесення змін</h3>
+    <p>Пройдіть ці кроки для внесення змін у проект</p>
+
+    <p><code class="shell">git status</code></p>
+    <p><code class="shell">git add &#60;contributors/FILENAME&#62;</code></p>
+    <p><code class="shell">git commit -m "commit message"</code></p>
+
+    <p>Тепер надішліть (push) ваші зміни до <b>вашого форку</b>, 'origin', on GitHub:</p>
+    <p><code class="shell">git push origin &#60;BRANCHNAME&#62;</code></p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-no-pass grey-border border-box">
+    <h4>Permission denied...error: 403</h4>
+    <p>Ви надсилаєте зміни до репозиторію, до якого немаєте прав на запис. В цьому випадку, ви напевне надсилаєте зміни до оригінального 'jlord/patchwork'. Переконайтесь, що ви надсилаєте зміни до 'origin' і він вказує на ваш репозиторій
+        на GitHub. Для того щоб це перевірити виконайте <code>git remote -v</code>.
+        Ви повинні отримати 'upstream' що вказує на 'jlord/patchwork' та 'origin' що вказує на 'yourusername/patchwork'.
+
+    <p>Щоб виправити цю пробелму потрібно перезаписати url: <code>git remote set-url origin
+        <URLTOYOURFORK>
+    </code>.
+
+    <h4>Authentication failed...error: 401</h4>
+    <p>Ви не розпізнані. У вас повинна бути увімкнена 2FA (Two Factor Authentication), для того щоб підтверджувати свої дії унікальним токеном, таким як пароль. Ви можете згенерувати його <a
+                href="https://help.github.com/articles/creating-an-access-token-for-command-line-use">слідуючи цим інструкціям</a>. Вам потрібно зберегти його, та використовувати як пароль. Також ви можете
+        <a href="https://help.github.com/articles/caching-your-github-password-in-git/">зберегти цей ключ доступу</a> на
+        вашому комп'ютері і відпаде потреба його вводити кожного разу.</p>
+
+    <h4>Файл НЕ в папці contributors</h4>
+    <p>Файл що ви створили повинен знаходитися всередині папки 'contributors' у репозиторії Patchwork. якщо ви поклали його в іншому місці, просто використайте Finder чи Windows Explorer (Провідник) щоб перенести його у правильну папку.
+        Ви можете перевірити  <code>git status</code> знову і побачите свої зміни. Застейджіть а тоді commit "all" (-A) цих змін, за допомогою команд що наведені нижче</p>
+    <p><code class="shell">git add -A</code></p>
+    <p><code class="shell">git commit -m "move file into contributors folder"</code></p>
+
+    <h4>Branch name expected: _____</h4>
+    <p>Назва гілки повинна містити саме ваш юзернейм. Для зміни назви гілки, використайте:</p>
+    <p><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></p>
+    <p>Після внесення змін, зробіть перевірку.</p>
+</div>
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Ви можете створити та перейти у гілку однією командою</strong></li>
+        <li><code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Створити нову гілку</strong></li>
+        <li><code class="shell">git branch &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Перейти на гілку</strong></li>
+        <li><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Список гілок</strong></li>
+        <li><code class="shell">git branch</code></li>
+        <li><strong>Перейментувати гілку в якій ви знаходитесь.</strong></li>
+        <li><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></li>
+        <li><strong>Перевірити, в якій гілці ви знаходитесь.</strong></li>
+        <li><code class="shell">git status</code></li>
+    </ul>
+</div>

@@ -1,0 +1,261 @@
+
+/* CHALLENGE BORDER BOX STYLES
+   -------------------------------------------------------------------------- */
+
+.border-box {
+  border: 1px solid;
+  padding: 18px;
+  margin: 18px 0 36px;
+  border-radius: 2px;
+  margin-bottom: 34px;
+}
+
+.border-box::before {
+  margin: -32px -8px 0;
+  float: left;
+  background: #fff;
+  padding: 0 8px;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.blue-border.border-box {
+  border-color: #BADFFF;
+}
+
+.blue-border.border-box::before {
+  color: #0087ff;
+}
+
+.grey-border.border-box {
+  border-color: #999;
+}
+
+.grey-border.border-box::before {
+  color: rgba(51, 57, 53, 0.83);
+}
+
+
+.chal-no-pass.border-box::before {
+  content: "Didn't Pass?";
+}
+
+.chal-tip.border-box::before {
+  content: "Tips";
+}
+
+.chal-step.border-box::before {
+  content: "Step";
+}
+
+.chal-goal.border-box::before {
+  content: "Goal";
+}
+
+.blue-border.border-box code {
+  background: rgba(136, 204, 255, 0.15);
+  color: #4F6375;
+}
+
+.blue-border.border-box code.comment {
+  background: none;
+  padding-left: 0;
+}
+
+gre7-border.border-box code {
+  background: rgba(157, 166, 179, 0.16);
+}
+
+/* RESET MARGINS AND PADDINGS IN BOXES
+   -------------------------------------------------------------------------- */
+
+.border-box p:last-child,
+.solid-box p:last-child {
+  margin-bottom: 0;
+}
+
+.solid-box h2:first-child {
+  margin-top: 0;
+}
+
+.solid-box h2 {
+  margin-top: 40px;
+}
+
+
+/* CHALLENGE SOLID BOX STYLES
+   -------------------------------------------------------------------------- */
+
+/* This option gives solid boxes an octicon tab */
+
+ /*.solid-box::before {
+   margin: -40px -8px 0;
+   float: left;
+   border-radius: 2px;
+   font-family: 'Octicons';
+   font-weight: 200;
+   font-size: 32px;
+   padding: 4px 8px 0px;
+ }*/
+
+ /*.chal-goal.bright-blue.solid-box::before {
+   content: "\f07b";
+   background: rgba(136,204,255,1);
+ }
+
+ .chal-background.light-blue.solid-box::before {
+   content: "\f007";
+   background: #E6F6FF;
+ }*/
+
+.solid-box {
+  border-radius: 2px;
+  padding: 24px;
+  margin-bottom: 34px;
+}
+
+.light-blue.solid-box {
+   color: #4F6375;
+   background: rgba(136, 204, 255, 0.18);
+}
+
+.bright-blue.solid-box {
+  color: #fff;
+  background: rgba(136,204,255,1);
+}
+
+.bold-blue.solid-box {
+   background-color: #0087ff;
+   color: #fff;;
+}
+
+.solid-box code {
+   border-color: #fff;
+   display: inline-block;
+}
+
+ /* VERIFY
+    -------------------------------------------------------------------------- */
+
+ .verify h3 {
+   display: inline-block;
+   padding-right: 12px;
+ }
+
+ #directory-path:empty {
+   display: none;
+ }
+
+ #directory-path:before {
+   content: 'Verifying: ';
+ }
+
+ #path-required-warning,
+ #directory-path {
+   padding: 6px 12px 6px 10px;
+   vertical-align: middle;
+   margin-bottom: 0;
+   font-size: 13px;
+   font-weight: 400;
+   text-align: center;
+   white-space: nowrap;
+   margin-left: -3px;
+   color: #8cf;
+ }
+
+ #path-required-warning {
+   display: none;
+ }
+
+ #path-required-warning.show {
+   display: inline;
+ }
+
+ #path-required-warning.show + #directory-path {
+   display: none;
+ }
+
+ .verify-fail:before {
+   content: '✗ ';
+ }
+
+ .verify-pass:before {
+   content: '✔︎ ';
+ }
+
+ #verify-list {
+   display: none;
+   list-style: none;
+   padding-left: 0;
+ }
+
+ #challenge-completed {
+   color: #2BDA9E;
+   font-size: 24px;
+   font-family: "NothingYouCouldDo";
+ }
+
+ #challenge-completed h2 {
+   padding: 0; margin: 0;
+ }
+
+ #verify-spinner.sk-double-bounce {
+   display: none;
+   width: 26px;
+   height: 26px;
+   position: relative;
+   margin: 0 auto 0 14px;
+   vertical-align: middle;
+ }
+
+ #verify-spinner.sk-double-bounce .sk-child {
+   background-color: #E0E0E0;
+ }
+
+/* CODE STYLES
+   -------------------------------------------------------------------------- */
+
+code {
+  font-size: 0.8em;
+  background: rgba(157, 166, 179, 0.16);
+  padding: 6px 6px 3px 6px;
+  border-radius: 2px;
+  font-family: 'Liberation Mono', Monaco, Courier New, monospace;
+  white-space: nowrap;
+}
+
+code.shell:before {
+  content: "$ ";
+  opacity: 0.4;
+}
+
+.blue-border-box code {
+  border: none;
+  background: rgba(136, 204, 255, 0.15);
+}
+
+.prenext {
+  overflow: auto;
+}
+
+.inline-tip {
+  font-style: normal;
+  font-family: 'Liberation Mono', Monaco, Courier New, monospace;
+  font-size: .7em;
+}
+
+/* PAGES STYLES
+   -------------------------------------------------------------------------- */
+
+.blue-border-box {
+  border: 1px solid #BADFFF;
+  padding: 18px;
+  margin: 18px 0 36px;
+  border-radius: 2px;
+}
+
+.blue-border-box code {
+  border: none;
+  color: #4F6375;
+  background: rgba(136, 204, 255, 0.15);
+}

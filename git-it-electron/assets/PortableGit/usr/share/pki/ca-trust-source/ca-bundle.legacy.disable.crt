@@ -1,0 +1,584 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 903804111 (0x35def4cf)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, O=Equifax, OU=Equifax Secure Certificate Authority
+        Validity
+            Not Before: Aug 22 16:41:51 1998 GMT
+            Not After : Aug 22 16:41:51 2018 GMT
+        Subject: C=US, O=Equifax, OU=Equifax Secure Certificate Authority
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:c1:5d:b1:58:67:08:62:ee:a0:9a:2d:1f:08:6d:
+                    91:14:68:98:0a:1e:fe:da:04:6f:13:84:62:21:c3:
+                    d1:7c:ce:9f:05:e0:b8:01:f0:4e:34:ec:e2:8a:95:
+                    04:64:ac:f1:6b:53:5f:05:b3:cb:67:80:bf:42:02:
+                    8e:fe:dd:01:09:ec:e1:00:14:4f:fc:fb:f0:0c:dd:
+                    43:ba:5b:2b:e1:1f:80:70:99:15:57:93:16:f1:0f:
+                    97:6a:b7:c2:68:23:1c:cc:4d:59:30:ac:51:1e:3b:
+                    af:2b:d6:ee:63:45:7b:c5:d9:5f:50:d2:e3:50:0f:
+                    3a:88:e7:bf:14:fd:e0:c7:b9
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  DirName: C = US, O = Equifax, OU = Equifax Secure Certificate Authority, CN = CRL1
+
+            X509v3 Private Key Usage Period: 
+                Not After: Aug 22 16:41:51 2018 GMT
+            X509v3 Key Usage: 
+                Certificate Sign, CRL Sign
+            X509v3 Authority Key Identifier: 
+                keyid:48:E6:68:F9:2B:D2:B2:95:D7:47:D8:23:20:10:4F:33:98:90:9F:D4
+
+            X509v3 Subject Key Identifier: 
+                48:E6:68:F9:2B:D2:B2:95:D7:47:D8:23:20:10:4F:33:98:90:9F:D4
+            X509v3 Basic Constraints: 
+                CA:TRUE
+            1.2.840.113533.7.65.0: 
+                0...V3.0c....
+    Signature Algorithm: sha1WithRSAEncryption
+         58:ce:29:ea:fc:f7:de:b5:ce:02:b9:17:b5:85:d1:b9:e3:e0:
+         95:cc:25:31:0d:00:a6:92:6e:7f:b6:92:63:9e:50:95:d1:9a:
+         6f:e4:11:de:63:85:6e:98:ee:a8:ff:5a:c8:d3:55:b2:66:71:
+         57:de:c0:21:eb:3d:2a:a7:23:49:01:04:86:42:7b:fc:ee:7f:
+         a2:16:52:b5:67:67:d3:40:db:3b:26:58:b2:28:77:3d:ae:14:
+         77:61:d6:fa:2a:66:27:a0:0d:fa:a7:73:5c:ea:70:f1:94:21:
+         65:44:5f:fa:fc:ef:29:68:a9:a2:87:79:ef:79:ef:4f:ac:07:
+         77:38
+Trusted Uses:
+  Code Signing, E-mail Protection, TLS Web Server Authentication
+No Rejected Uses.
+Alias: Equifax Secure CA
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIDIDCCAomgAwIBAgIENd70zzANBgkqhkiG9w0BAQUFADBOMQswCQYDVQQGEwJV
+UzEQMA4GA1UEChMHRXF1aWZheDEtMCsGA1UECxMkRXF1aWZheCBTZWN1cmUgQ2Vy
+dGlmaWNhdGUgQXV0aG9yaXR5MB4XDTk4MDgyMjE2NDE1MVoXDTE4MDgyMjE2NDE1
+MVowTjELMAkGA1UEBhMCVVMxEDAOBgNVBAoTB0VxdWlmYXgxLTArBgNVBAsTJEVx
+dWlmYXggU2VjdXJlIENlcnRpZmljYXRlIEF1dGhvcml0eTCBnzANBgkqhkiG9w0B
+AQEFAAOBjQAwgYkCgYEAwV2xWGcIYu6gmi0fCG2RFGiYCh7+2gRvE4RiIcPRfM6f
+BeC4AfBONOziipUEZKzxa1NfBbPLZ4C/QgKO/t0BCezhABRP/PvwDN1Dulsr4R+A
+cJkVV5MW8Q+XarfCaCMczE1ZMKxRHjuvK9buY0V7xdlfUNLjUA86iOe/FP3gx7kC
+AwEAAaOCAQkwggEFMHAGA1UdHwRpMGcwZaBjoGGkXzBdMQswCQYDVQQGEwJVUzEQ
+MA4GA1UEChMHRXF1aWZheDEtMCsGA1UECxMkRXF1aWZheCBTZWN1cmUgQ2VydGlm
+aWNhdGUgQXV0aG9yaXR5MQ0wCwYDVQQDEwRDUkwxMBoGA1UdEAQTMBGBDzIwMTgw
+ODIyMTY0MTUxWjALBgNVHQ8EBAMCAQYwHwYDVR0jBBgwFoAUSOZo+SvSspXXR9gj
+IBBPM5iQn9QwHQYDVR0OBBYEFEjmaPkr0rKV10fYIyAQTzOYkJ/UMAwGA1UdEwQF
+MAMBAf8wGgYJKoZIhvZ9B0EABA0wCxsFVjMuMGMDAgbAMA0GCSqGSIb3DQEBBQUA
+A4GBAFjOKer89961zgK5F7WF0bnj4JXMJTENAKaSbn+2kmOeUJXRmm/kEd5jhW6Y
+7qj/WsjTVbJmcVfewCHrPSqnI0kBBIZCe/zuf6IWUrVnZ9NA2zsmWLIodz2uFHdh
+1voqZiegDfqnc1zqcPGUIWVEX/r87yloqaKHee9570+sB3c4MDMwHgYIKwYBBQUH
+AwMGCCsGAQUFBwMEBggrBgEFBQcDAQwRRXF1aWZheCBTZWN1cmUgQ0E=
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+    Signature Algorithm: md5WithRSAEncryption
+        Issuer: C=US, O=Equifax Secure Inc., CN=Equifax Secure Global eBusiness CA-1
+        Validity
+            Not Before: Jun 21 04:00:00 1999 GMT
+            Not After : Jun 21 04:00:00 2020 GMT
+        Subject: C=US, O=Equifax Secure Inc., CN=Equifax Secure Global eBusiness CA-1
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:ba:e7:17:90:02:65:b1:34:55:3c:49:c2:51:d5:
+                    df:a7:d1:37:8f:d1:e7:81:73:41:52:60:9b:9d:a1:
+                    17:26:78:ad:c7:b1:e8:26:94:32:b5:de:33:8d:3a:
+                    2f:db:f2:9a:7a:5a:73:98:a3:5c:e9:fb:8a:73:1b:
+                    5c:e7:c3:bf:80:6c:cd:a9:f4:d6:2b:c0:f7:f9:99:
+                    aa:63:a2:b1:47:02:0f:d4:e4:51:3a:12:3c:6c:8a:
+                    5a:54:84:70:db:c1:c5:90:cf:72:45:cb:a8:59:c0:
+                    cd:33:9d:3f:a3:96:eb:85:33:21:1c:3e:1e:3e:60:
+                    6e:76:9c:67:85:c5:c8:c3:61
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            Netscape Cert Type: 
+                SSL CA, S/MIME CA, Object Signing CA
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Authority Key Identifier: 
+                keyid:BE:A8:A0:74:72:50:6B:44:B7:C9:23:D8:FB:A8:FF:B3:57:6B:68:6C
+
+            X509v3 Subject Key Identifier: 
+                BE:A8:A0:74:72:50:6B:44:B7:C9:23:D8:FB:A8:FF:B3:57:6B:68:6C
+    Signature Algorithm: md5WithRSAEncryption
+         30:e2:01:51:aa:c7:ea:5f:da:b9:d0:65:0f:30:d6:3e:da:0d:
+         14:49:6e:91:93:27:14:31:ef:c4:f7:2d:45:f8:ec:c7:bf:a2:
+         41:0d:23:b4:92:f9:19:00:67:bd:01:af:cd:e0:71:fc:5a:cf:
+         64:c4:e0:96:98:d0:a3:40:e2:01:8a:ef:27:07:f1:65:01:8a:
+         44:2d:06:65:75:52:c0:86:10:20:21:5f:6c:6b:0f:6c:ae:09:
+         1c:af:f2:a2:18:34:c4:75:a4:73:1c:f1:8d:dc:ef:ad:f9:b3:
+         76:b4:92:bf:dc:95:10:1e:be:cb:c8:3b:5a:84:60:19:56:94:
+         a9:55
+Trusted Uses:
+  E-mail Protection
+No Rejected Uses.
+Alias: Equifax Secure Global eBusiness CA
+-----BEGIN TRUSTED CERTIFICATE-----
+MIICkDCCAfmgAwIBAgIBATANBgkqhkiG9w0BAQQFADBaMQswCQYDVQQGEwJVUzEc
+MBoGA1UEChMTRXF1aWZheCBTZWN1cmUgSW5jLjEtMCsGA1UEAxMkRXF1aWZheCBT
+ZWN1cmUgR2xvYmFsIGVCdXNpbmVzcyBDQS0xMB4XDTk5MDYyMTA0MDAwMFoXDTIw
+MDYyMTA0MDAwMFowWjELMAkGA1UEBhMCVVMxHDAaBgNVBAoTE0VxdWlmYXggU2Vj
+dXJlIEluYy4xLTArBgNVBAMTJEVxdWlmYXggU2VjdXJlIEdsb2JhbCBlQnVzaW5l
+c3MgQ0EtMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAuucXkAJlsTRVPEnC
+UdXfp9E3j9HngXNBUmCbnaEXJnitx7HoJpQytd4zjTov2/KaelpzmKNc6fuKcxtc
+58O/gGzNqfTWK8D3+ZmqY6KxRwIP1ORROhI8bIpaVIRw28HFkM9yRcuoWcDNM50/
+o5brhTMhHD4ePmBudpxnhcXIw2ECAwEAAaNmMGQwEQYJYIZIAYb4QgEBBAQDAgAH
+MA8GA1UdEwEB/wQFMAMBAf8wHwYDVR0jBBgwFoAUvqigdHJQa0S3ySPY+6j/s1dr
+aGwwHQYDVR0OBBYEFL6ooHRyUGtEt8kj2Puo/7NXa2hsMA0GCSqGSIb3DQEBBAUA
+A4GBADDiAVGqx+pf2rnQZQ8w1j7aDRRJbpGTJxQx78T3LUX47Me/okENI7SS+RkA
+Z70Br83gcfxaz2TE4JaY0KNA4gGK7ycH8WUBikQtBmV1UsCGECAhX2xrD2yuCRyv
+8qIYNMR1pHMc8Y3c7635s3a0kr/clRAevsvIO1qEYBlWlKlVMDAwCgYIKwYBBQUH
+AwQMIkVxdWlmYXggU2VjdXJlIEdsb2JhbCBlQnVzaW5lc3MgQ0E=
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4 (0x4)
+    Signature Algorithm: md5WithRSAEncryption
+        Issuer: C=US, O=Equifax Secure Inc., CN=Equifax Secure eBusiness CA-1
+        Validity
+            Not Before: Jun 21 04:00:00 1999 GMT
+            Not After : Jun 21 04:00:00 2020 GMT
+        Subject: C=US, O=Equifax Secure Inc., CN=Equifax Secure eBusiness CA-1
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:ce:2f:19:bc:17:b7:77:de:93:a9:5f:5a:0d:17:
+                    4f:34:1a:0c:98:f4:22:d9:59:d4:c4:68:46:f0:b4:
+                    35:c5:85:03:20:c6:af:45:a5:21:51:45:41:eb:16:
+                    58:36:32:6f:e2:50:62:64:f9:fd:51:9c:aa:24:d9:
+                    f4:9d:83:2a:87:0a:21:d3:12:38:34:6c:8d:00:6e:
+                    5a:a0:d9:42:ee:1a:21:95:f9:52:4c:55:5a:c5:0f:
+                    38:4f:46:fa:6d:f8:2e:35:d6:1d:7c:eb:e2:f0:b0:
+                    75:80:c8:a9:13:ac:be:88:ef:3a:6e:ab:5f:2a:38:
+                    62:02:b0:12:7b:fe:8f:a6:03
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            Netscape Cert Type: 
+                SSL CA, S/MIME CA, Object Signing CA
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Authority Key Identifier: 
+                keyid:4A:78:32:52:11:DB:59:16:36:5E:DF:C1:14:36:40:6A:47:7C:4C:A1
+
+            X509v3 Subject Key Identifier: 
+                4A:78:32:52:11:DB:59:16:36:5E:DF:C1:14:36:40:6A:47:7C:4C:A1
+    Signature Algorithm: md5WithRSAEncryption
+         75:5b:a8:9b:03:11:e6:e9:56:4c:cd:f9:a9:4c:c0:0d:9a:f3:
+         cc:65:69:e6:25:76:cc:59:b7:d6:54:c3:1d:cd:99:ac:19:dd:
+         b4:85:d5:e0:3d:fc:62:20:a7:84:4b:58:65:f1:e2:f9:95:21:
+         3f:f5:d4:7e:58:1e:47:87:54:3e:58:a1:b5:b5:f8:2a:ef:71:
+         e7:bc:c3:f6:b1:49:46:e2:d7:a0:6b:e5:56:7a:9a:27:98:7c:
+         46:62:14:e7:c9:fc:6e:03:12:79:80:38:1d:48:82:8d:fc:17:
+         fe:2a:96:2b:b5:62:a6:a6:3d:bd:7f:92:59:cd:5a:2a:82:b2:
+         37:79
+Trusted Uses:
+  E-mail Protection
+No Rejected Uses.
+Alias: Equifax Secure eBusiness CA 1
+-----BEGIN TRUSTED CERTIFICATE-----
+MIICgjCCAeugAwIBAgIBBDANBgkqhkiG9w0BAQQFADBTMQswCQYDVQQGEwJVUzEc
+MBoGA1UEChMTRXF1aWZheCBTZWN1cmUgSW5jLjEmMCQGA1UEAxMdRXF1aWZheCBT
+ZWN1cmUgZUJ1c2luZXNzIENBLTEwHhcNOTkwNjIxMDQwMDAwWhcNMjAwNjIxMDQw
+MDAwWjBTMQswCQYDVQQGEwJVUzEcMBoGA1UEChMTRXF1aWZheCBTZWN1cmUgSW5j
+LjEmMCQGA1UEAxMdRXF1aWZheCBTZWN1cmUgZUJ1c2luZXNzIENBLTEwgZ8wDQYJ
+KoZIhvcNAQEBBQADgY0AMIGJAoGBAM4vGbwXt3fek6lfWg0XTzQaDJj0ItlZ1MRo
+RvC0NcWFAyDGr0WlIVFFQesWWDYyb+JQYmT5/VGcqiTZ9J2DKocKIdMSODRsjQBu
+WqDZQu4aIZX5UkxVWsUPOE9G+m34LjXWHXzr4vCwdYDIqROsvojvOm6rXyo4YgKw
+Env+j6YDAgMBAAGjZjBkMBEGCWCGSAGG+EIBAQQEAwIABzAPBgNVHRMBAf8EBTAD
+AQH/MB8GA1UdIwQYMBaAFEp4MlIR21kWNl7fwRQ2QGpHfEyhMB0GA1UdDgQWBBRK
+eDJSEdtZFjZe38EUNkBqR3xMoTANBgkqhkiG9w0BAQQFAAOBgQB1W6ibAxHm6VZM
+zfmpTMANmvPMZWnmJXbMWbfWVMMdzZmsGd20hdXgPfxiIKeES1hl8eL5lSE/9dR+
+WB5Hh1Q+WKG1tfgq73HnvMP2sUlG4tega+VWeponmHxGYhTnyfxuAxJ5gDgdSIKN
+/Bf+KpYrtWKmpj29f5JZzVoqgrI3eTArMAoGCCsGAQUFBwMEDB1FcXVpZmF4IFNl
+Y3VyZSBlQnVzaW5lc3MgQ0EgMQ==
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 105 (0x69)
+    Signature Algorithm: md5WithRSAEncryption
+        Issuer: C=HU, L=Budapest, O=NetLock Halozatbiztonsagi Kft., OU=Tanusitvanykiadok, CN=NetLock Uzleti (Class B) Tanusitvanykiado
+        Validity
+            Not Before: Feb 25 14:10:22 1999 GMT
+            Not After : Feb 20 14:10:22 2019 GMT
+        Subject: C=HU, L=Budapest, O=NetLock Halozatbiztonsagi Kft., OU=Tanusitvanykiadok, CN=NetLock Uzleti (Class B) Tanusitvanykiado
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:b1:ea:04:ec:20:a0:23:c2:8f:38:60:cf:c7:46:
+                    b3:d5:1b:fe:fb:b9:99:9e:04:dc:1c:7f:8c:4a:81:
+                    98:ee:a4:d4:ca:8a:17:b9:22:7f:83:0a:75:4c:9b:
+                    c0:69:d8:64:39:a3:ed:92:a3:fd:5b:5c:74:1a:c0:
+                    47:ca:3a:69:76:9a:ba:e2:44:17:fc:4c:a3:d5:fe:
+                    b8:97:88:af:88:03:89:1f:a4:f2:04:3e:c8:07:0b:
+                    e6:f9:b3:2f:7a:62:14:09:46:14:ca:64:f5:8b:80:
+                    b5:62:a8:d8:6b:d6:71:93:2d:b3:bf:09:54:58:ed:
+                    06:eb:a8:7b:dc:43:b1:a1:69
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:4
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            Netscape Cert Type: 
+                SSL CA, S/MIME CA, Object Signing CA
+            Netscape Comment: 
+                FIGYELEM! Ezen tanusitvany a NetLock Kft. Altalanos Szolgaltatasi Felteteleiben leirt eljarasok alapjan keszult. A hitelesites folyamatat a NetLock Kft. termekfelelosseg-biztositasa vedi. A digitalis alairas elfogadasanak feltetele az eloirt ellenorzesi eljaras megtetele. Az eljaras leirasa megtalalhato a NetLock Kft. Internet honlapjan a https://www.netlock.net/docs cimen vagy kerheto az ellenorzes@netlock.net e-mail cimen. IMPORTANT! The issuance and the use of this certificate is subject to the NetLock CPS available at https://www.netlock.net/docs or by e-mail at cps@netlock.net.
+    Signature Algorithm: md5WithRSAEncryption
+         04:db:ae:8c:17:af:f8:0e:90:31:4e:cd:3e:09:c0:6d:3a:b0:
+         f8:33:4c:47:4c:e3:75:88:10:97:ac:b0:38:15:91:c6:29:96:
+         cc:21:c0:6d:3c:a5:74:cf:d8:82:a5:39:c3:65:e3:42:70:bb:
+         22:90:e3:7d:db:35:76:e1:a0:b5:da:9f:70:6e:93:1a:30:39:
+         1d:30:db:2e:e3:7c:b2:91:b2:d1:37:29:fa:b9:d6:17:5c:47:
+         4f:e3:1d:38:eb:9f:d5:7b:95:a8:28:9e:15:4a:d1:d1:d0:2b:
+         00:97:a0:e2:92:36:2b:63:ac:58:01:6b:33:29:50:86:83:f1:
+         01:48
+Trusted Uses:
+  E-mail Protection
+No Rejected Uses.
+Alias: NetLock Business (Class B) Root
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIFSzCCBLSgAwIBAgIBaTANBgkqhkiG9w0BAQQFADCBmTELMAkGA1UEBhMCSFUx
+ETAPBgNVBAcTCEJ1ZGFwZXN0MScwJQYDVQQKEx5OZXRMb2NrIEhhbG96YXRiaXp0
+b25zYWdpIEtmdC4xGjAYBgNVBAsTEVRhbnVzaXR2YW55a2lhZG9rMTIwMAYDVQQD
+EylOZXRMb2NrIFV6bGV0aSAoQ2xhc3MgQikgVGFudXNpdHZhbnlraWFkbzAeFw05
+OTAyMjUxNDEwMjJaFw0xOTAyMjAxNDEwMjJaMIGZMQswCQYDVQQGEwJIVTERMA8G
+A1UEBxMIQnVkYXBlc3QxJzAlBgNVBAoTHk5ldExvY2sgSGFsb3phdGJpenRvbnNh
+Z2kgS2Z0LjEaMBgGA1UECxMRVGFudXNpdHZhbnlraWFkb2sxMjAwBgNVBAMTKU5l
+dExvY2sgVXpsZXRpIChDbGFzcyBCKSBUYW51c2l0dmFueWtpYWRvMIGfMA0GCSqG
+SIb3DQEBAQUAA4GNADCBiQKBgQCx6gTsIKAjwo84YM/HRrPVG/77uZmeBNwcf4xK
+gZjupNTKihe5In+DCnVMm8Bp2GQ5o+2So/1bXHQawEfKOml2mrriRBf8TKPV/riX
+iK+IA4kfpPIEPsgHC+b5sy96YhQJRhTKZPWLgLViqNhr1nGTLbO/CVRY7QbrqHvc
+Q7GhaQIDAQABo4ICnzCCApswEgYDVR0TAQH/BAgwBgEB/wIBBDAOBgNVHQ8BAf8E
+BAMCAAYwEQYJYIZIAYb4QgEBBAQDAgAHMIICYAYJYIZIAYb4QgENBIICURaCAk1G
+SUdZRUxFTSEgRXplbiB0YW51c2l0dmFueSBhIE5ldExvY2sgS2Z0LiBBbHRhbGFu
+b3MgU3pvbGdhbHRhdGFzaSBGZWx0ZXRlbGVpYmVuIGxlaXJ0IGVsamFyYXNvayBh
+bGFwamFuIGtlc3p1bHQuIEEgaGl0ZWxlc2l0ZXMgZm9seWFtYXRhdCBhIE5ldExv
+Y2sgS2Z0LiB0ZXJtZWtmZWxlbG9zc2VnLWJpenRvc2l0YXNhIHZlZGkuIEEgZGln
+aXRhbGlzIGFsYWlyYXMgZWxmb2dhZGFzYW5hayBmZWx0ZXRlbGUgYXogZWxvaXJ0
+IGVsbGVub3J6ZXNpIGVsamFyYXMgbWVndGV0ZWxlLiBBeiBlbGphcmFzIGxlaXJh
+c2EgbWVndGFsYWxoYXRvIGEgTmV0TG9jayBLZnQuIEludGVybmV0IGhvbmxhcGph
+biBhIGh0dHBzOi8vd3d3Lm5ldGxvY2submV0L2RvY3MgY2ltZW4gdmFneSBrZXJo
+ZXRvIGF6IGVsbGVub3J6ZXNAbmV0bG9jay5uZXQgZS1tYWlsIGNpbWVuLiBJTVBP
+UlRBTlQhIFRoZSBpc3N1YW5jZSBhbmQgdGhlIHVzZSBvZiB0aGlzIGNlcnRpZmlj
+YXRlIGlzIHN1YmplY3QgdG8gdGhlIE5ldExvY2sgQ1BTIGF2YWlsYWJsZSBhdCBo
+dHRwczovL3d3dy5uZXRsb2NrLm5ldC9kb2NzIG9yIGJ5IGUtbWFpbCBhdCBjcHNA
+bmV0bG9jay5uZXQuMA0GCSqGSIb3DQEBBAUAA4GBAATbrowXr/gOkDFOzT4JwG06
+sPgzTEdM43WIEJessDgVkcYplswhwG08pXTP2IKlOcNl40JwuyKQ433bNXbhoLXa
+n3BukxowOR0w2y7jfLKRstE3Kfq51hdcR0/jHTjrn9V7lagonhVK0dHQKwCXoOKS
+NitjrFgBazMpUIaD8QFIMC0wCgYIKwYBBQUHAwQMH05ldExvY2sgQnVzaW5lc3Mg
+KENsYXNzIEIpIFJvb3Q=
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 104 (0x68)
+    Signature Algorithm: md5WithRSAEncryption
+        Issuer: C=HU, L=Budapest, O=NetLock Halozatbiztonsagi Kft., OU=Tanusitvanykiadok, CN=NetLock Expressz (Class C) Tanusitvanykiado
+        Validity
+            Not Before: Feb 25 14:08:11 1999 GMT
+            Not After : Feb 20 14:08:11 2019 GMT
+        Subject: C=HU, L=Budapest, O=NetLock Halozatbiztonsagi Kft., OU=Tanusitvanykiadok, CN=NetLock Expressz (Class C) Tanusitvanykiado
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:eb:ec:b0:6c:61:8a:23:25:af:60:20:e3:d9:9f:
+                    fc:93:0b:db:5d:8d:b0:a1:b3:40:3a:82:ce:fd:75:
+                    e0:78:32:03:86:5a:86:95:91:ed:53:fa:9d:40:fc:
+                    e6:e8:dd:d9:5b:7a:03:bd:5d:f3:3b:0c:c3:51:79:
+                    9b:ad:55:a0:e9:d0:03:10:af:0a:ba:14:42:d9:52:
+                    26:11:22:c7:d2:20:cc:82:a4:9a:a9:fe:b8:81:76:
+                    9d:6a:b7:d2:36:75:3e:b1:86:09:f6:6e:6d:7e:4e:
+                    b7:7a:ec:ae:71:84:f6:04:33:08:25:32:eb:74:ac:
+                    16:44:c6:e4:40:93:1d:7f:ad
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:4
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            Netscape Cert Type: 
+                SSL CA, S/MIME CA, Object Signing CA
+            Netscape Comment: 
+                FIGYELEM! Ezen tanusitvany a NetLock Kft. Altalanos Szolgaltatasi Felteteleiben leirt eljarasok alapjan keszult. A hitelesites folyamatat a NetLock Kft. termekfelelosseg-biztositasa vedi. A digitalis alairas elfogadasanak feltetele az eloirt ellenorzesi eljaras megtetele. Az eljaras leirasa megtalalhato a NetLock Kft. Internet honlapjan a https://www.netlock.net/docs cimen vagy kerheto az ellenorzes@netlock.net e-mail cimen. IMPORTANT! The issuance and the use of this certificate is subject to the NetLock CPS available at https://www.netlock.net/docs or by e-mail at cps@netlock.net.
+    Signature Algorithm: md5WithRSAEncryption
+         10:ad:7f:d7:0c:32:80:0a:d8:86:f1:79:98:b5:ad:d4:cd:b3:
+         36:c4:96:48:c1:5c:cd:9a:d9:05:2e:9f:be:50:eb:f4:26:14:
+         10:2d:d4:66:17:f8:9e:c1:27:fd:f1:ed:e4:7b:4b:a0:6c:b5:
+         ab:9a:57:70:a6:ed:a0:a4:ed:2e:f5:fd:fc:bd:fe:4d:37:08:
+         0c:bc:e3:96:83:22:f5:49:1b:7f:4b:2b:b4:54:c1:80:7c:99:
+         4e:1d:d0:8c:ee:d0:ac:e5:92:fa:75:56:fe:64:a0:13:8f:b8:
+         b8:16:9d:61:05:67:80:c8:d0:d8:a5:07:02:34:98:04:8d:33:
+         04:d4
+Trusted Uses:
+  E-mail Protection
+No Rejected Uses.
+Alias: NetLock Express (Class C) Root
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIFTzCCBLigAwIBAgIBaDANBgkqhkiG9w0BAQQFADCBmzELMAkGA1UEBhMCSFUx
+ETAPBgNVBAcTCEJ1ZGFwZXN0MScwJQYDVQQKEx5OZXRMb2NrIEhhbG96YXRiaXp0
+b25zYWdpIEtmdC4xGjAYBgNVBAsTEVRhbnVzaXR2YW55a2lhZG9rMTQwMgYDVQQD
+EytOZXRMb2NrIEV4cHJlc3N6IChDbGFzcyBDKSBUYW51c2l0dmFueWtpYWRvMB4X
+DTk5MDIyNTE0MDgxMVoXDTE5MDIyMDE0MDgxMVowgZsxCzAJBgNVBAYTAkhVMREw
+DwYDVQQHEwhCdWRhcGVzdDEnMCUGA1UEChMeTmV0TG9jayBIYWxvemF0Yml6dG9u
+c2FnaSBLZnQuMRowGAYDVQQLExFUYW51c2l0dmFueWtpYWRvazE0MDIGA1UEAxMr
+TmV0TG9jayBFeHByZXNzeiAoQ2xhc3MgQykgVGFudXNpdHZhbnlraWFkbzCBnzAN
+BgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA6+ywbGGKIyWvYCDj2Z/8kwvbXY2wobNA
+OoLO/XXgeDIDhlqGlZHtU/qdQPzm6N3ZW3oDvV3zOwzDUXmbrVWg6dADEK8KuhRC
+2VImESLH0iDMgqSaqf64gXadarfSNnU+sYYJ9m5tfk63euyucYT2BDMIJTLrdKwW
+RMbkQJMdf60CAwEAAaOCAp8wggKbMBIGA1UdEwEB/wQIMAYBAf8CAQQwDgYDVR0P
+AQH/BAQDAgAGMBEGCWCGSAGG+EIBAQQEAwIABzCCAmAGCWCGSAGG+EIBDQSCAlEW
+ggJNRklHWUVMRU0hIEV6ZW4gdGFudXNpdHZhbnkgYSBOZXRMb2NrIEtmdC4gQWx0
+YWxhbm9zIFN6b2xnYWx0YXRhc2kgRmVsdGV0ZWxlaWJlbiBsZWlydCBlbGphcmFz
+b2sgYWxhcGphbiBrZXN6dWx0LiBBIGhpdGVsZXNpdGVzIGZvbHlhbWF0YXQgYSBO
+ZXRMb2NrIEtmdC4gdGVybWVrZmVsZWxvc3NlZy1iaXp0b3NpdGFzYSB2ZWRpLiBB
+IGRpZ2l0YWxpcyBhbGFpcmFzIGVsZm9nYWRhc2FuYWsgZmVsdGV0ZWxlIGF6IGVs
+b2lydCBlbGxlbm9yemVzaSBlbGphcmFzIG1lZ3RldGVsZS4gQXogZWxqYXJhcyBs
+ZWlyYXNhIG1lZ3RhbGFsaGF0byBhIE5ldExvY2sgS2Z0LiBJbnRlcm5ldCBob25s
+YXBqYW4gYSBodHRwczovL3d3dy5uZXRsb2NrLm5ldC9kb2NzIGNpbWVuIHZhZ3kg
+a2VyaGV0byBheiBlbGxlbm9yemVzQG5ldGxvY2submV0IGUtbWFpbCBjaW1lbi4g
+SU1QT1JUQU5UISBUaGUgaXNzdWFuY2UgYW5kIHRoZSB1c2Ugb2YgdGhpcyBjZXJ0
+aWZpY2F0ZSBpcyBzdWJqZWN0IHRvIHRoZSBOZXRMb2NrIENQUyBhdmFpbGFibGUg
+YXQgaHR0cHM6Ly93d3cubmV0bG9jay5uZXQvZG9jcyBvciBieSBlLW1haWwgYXQg
+Y3BzQG5ldGxvY2submV0LjANBgkqhkiG9w0BAQQFAAOBgQAQrX/XDDKACtiG8XmY
+ta3UzbM2xJZIwVzNmtkFLp++UOv0JhQQLdRmF/iewSf98e3ke0ugbLWrmldwpu2g
+pO0u9f38vf5NNwgMvOOWgyL1SRt/Syu0VMGAfJlOHdCM7tCs5ZL6dVb+ZKATj7i4
+Fp1hBWeAyNDYpQcCNJgEjTME1DAsMAoGCCsGAQUFBwMEDB5OZXRMb2NrIEV4cHJl
+c3MgKENsYXNzIEMpIFJvb3Q=
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number:
+            b9:2f:60:cc:88:9f:a1:7a:46:09:b8:5b:70:6c:8a:af
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, O=VeriSign, Inc., OU=Class 2 Public Primary Certification Authority - G2, OU=(c) 1998 VeriSign, Inc. - For authorized use only, OU=VeriSign Trust Network
+        Validity
+            Not Before: May 18 00:00:00 1998 GMT
+            Not After : Aug  1 23:59:59 2028 GMT
+        Subject: C=US, O=VeriSign, Inc., OU=Class 2 Public Primary Certification Authority - G2, OU=(c) 1998 VeriSign, Inc. - For authorized use only, OU=VeriSign Trust Network
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:a7:88:01:21:74:2c:e7:1a:03:f0:98:e1:97:3c:
+                    0f:21:08:f1:9c:db:97:e9:9a:fc:c2:04:06:13:be:
+                    5f:52:c8:cc:1e:2c:12:56:2c:b8:01:69:2c:cc:99:
+                    1f:ad:b0:96:ae:79:04:f2:13:39:c1:7b:98:ba:08:
+                    2c:e8:c2:84:13:2c:aa:69:e9:09:f4:c7:a9:02:a4:
+                    42:c2:23:4f:4a:d8:f0:0e:a2:fb:31:6c:c9:e6:6f:
+                    99:27:07:f5:e6:f4:4c:78:9e:6d:eb:46:86:fa:b9:
+                    86:c9:54:f2:b2:c4:af:d4:46:1c:5a:c9:15:30:ff:
+                    0d:6c:f5:2d:0e:6d:ce:7f:77
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha1WithRSAEncryption
+         72:2e:f9:7f:d1:f1:71:fb:c4:9e:f6:c5:5e:51:8a:40:98:b8:
+         68:f8:9b:1c:83:d8:e2:9d:bd:ff:ed:a1:e6:66:ea:2f:09:f4:
+         ca:d7:ea:a5:2b:95:f6:24:60:86:4d:44:2e:83:a5:c4:2d:a0:
+         d3:ae:78:69:6f:72:da:6c:ae:08:f0:63:92:37:e6:bb:c4:30:
+         17:ad:77:cc:49:35:aa:cf:d8:8f:d1:be:b7:18:96:47:73:6a:
+         54:22:34:64:2d:b6:16:9b:59:5b:b4:51:59:3a:b3:0b:14:f4:
+         12:df:67:a0:f4:ad:32:64:5e:b1:46:72:27:8c:12:7b:c5:44:
+         b4:ae
+Trusted Uses:
+  E-mail Protection
+No Rejected Uses.
+Alias: Verisign Class 2 Public Primary Certification Authority - G2
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIDAzCCAmwCEQC5L2DMiJ+hekYJuFtwbIqvMA0GCSqGSIb3DQEBBQUAMIHBMQsw
+CQYDVQQGEwJVUzEXMBUGA1UEChMOVmVyaVNpZ24sIEluYy4xPDA6BgNVBAsTM0Ns
+YXNzIDIgUHVibGljIFByaW1hcnkgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkgLSBH
+MjE6MDgGA1UECxMxKGMpIDE5OTggVmVyaVNpZ24sIEluYy4gLSBGb3IgYXV0aG9y
+aXplZCB1c2Ugb25seTEfMB0GA1UECxMWVmVyaVNpZ24gVHJ1c3QgTmV0d29yazAe
+Fw05ODA1MTgwMDAwMDBaFw0yODA4MDEyMzU5NTlaMIHBMQswCQYDVQQGEwJVUzEX
+MBUGA1UEChMOVmVyaVNpZ24sIEluYy4xPDA6BgNVBAsTM0NsYXNzIDIgUHVibGlj
+IFByaW1hcnkgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkgLSBHMjE6MDgGA1UECxMx
+KGMpIDE5OTggVmVyaVNpZ24sIEluYy4gLSBGb3IgYXV0aG9yaXplZCB1c2Ugb25s
+eTEfMB0GA1UECxMWVmVyaVNpZ24gVHJ1c3QgTmV0d29yazCBnzANBgkqhkiG9w0B
+AQEFAAOBjQAwgYkCgYEAp4gBIXQs5xoD8JjhlzwPIQjxnNuX6Zr8wgQGE75fUsjM
+HiwSViy4AWkszJkfrbCWrnkE8hM5wXuYuggs6MKEEyyqaekJ9MepAqRCwiNPStjw
+DqL7MWzJ5m+ZJwf15vRMeJ5t60aG+rmGyVTyssSv1EYcWskVMP8NbPUtDm3Of3cC
+AwEAATANBgkqhkiG9w0BAQUFAAOBgQByLvl/0fFx+8Se9sVeUYpAmLho+Jscg9ji
+nb3/7aHmZuovCfTK1+qlK5X2JGCGTUQug6XELaDTrnhpb3LabK4I8GOSN+a7xDAX
+rXfMSTWqz9iP0b63GJZHc2pUIjRkLbYWm1lbtFFZOrMLFPQS32eg9K0yZF6xRnIn
+jBJ7xUS0rjBKMAoGCCsGAQUFBwMEDDxWZXJpc2lnbiBDbGFzcyAyIFB1YmxpYyBQ
+cmltYXJ5IENlcnRpZmljYXRpb24gQXV0aG9yaXR5IC0gRzI=
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number:
+            7d:d9:fe:07:cf:a8:1e:b7:10:79:67:fb:a7:89:34:c6
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority - G2, OU=(c) 1998 VeriSign, Inc. - For authorized use only, OU=VeriSign Trust Network
+        Validity
+            Not Before: May 18 00:00:00 1998 GMT
+            Not After : Aug  1 23:59:59 2028 GMT
+        Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority - G2, OU=(c) 1998 VeriSign, Inc. - For authorized use only, OU=VeriSign Trust Network
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:cc:5e:d1:11:5d:5c:69:d0:ab:d3:b9:6a:4c:99:
+                    1f:59:98:30:8e:16:85:20:46:6d:47:3f:d4:85:20:
+                    84:e1:6d:b3:f8:a4:ed:0c:f1:17:0f:3b:f9:a7:f9:
+                    25:d7:c1:cf:84:63:f2:7c:63:cf:a2:47:f2:c6:5b:
+                    33:8e:64:40:04:68:c1:80:b9:64:1c:45:77:c7:d8:
+                    6e:f5:95:29:3c:50:e8:34:d7:78:1f:a8:ba:6d:43:
+                    91:95:8f:45:57:5e:7e:c5:fb:ca:a4:04:eb:ea:97:
+                    37:54:30:6f:bb:01:47:32:33:cd:dc:57:9b:64:69:
+                    61:f8:9b:1d:1c:89:4f:5c:67
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha1WithRSAEncryption
+         51:4d:cd:be:5c:cb:98:19:9c:15:b2:01:39:78:2e:4d:0f:67:
+         70:70:99:c6:10:5a:94:a4:53:4d:54:6d:2b:af:0d:5d:40:8b:
+         64:d3:d7:ee:de:56:61:92:5f:a6:c4:1d:10:61:36:d3:2c:27:
+         3c:e8:29:09:b9:11:64:74:cc:b5:73:9f:1c:48:a9:bc:61:01:
+         ee:e2:17:a6:0c:e3:40:08:3b:0e:e7:eb:44:73:2a:9a:f1:69:
+         92:ef:71:14:c3:39:ac:71:a7:91:09:6f:e4:71:06:b3:ba:59:
+         57:26:79:00:f6:f8:0d:a2:33:30:28:d4:aa:58:a0:9d:9d:69:
+         91:fd
+Trusted Uses:
+  E-mail Protection
+No Rejected Uses.
+Alias: Verisign Class 3 Public Primary Certification Authority - G2
+-----BEGIN TRUSTED CERTIFICATE-----
+MIIDAjCCAmsCEH3Z/gfPqB63EHln+6eJNMYwDQYJKoZIhvcNAQEFBQAwgcExCzAJ
+BgNVBAYTAlVTMRcwFQYDVQQKEw5WZXJpU2lnbiwgSW5jLjE8MDoGA1UECxMzQ2xh
+c3MgMyBQdWJsaWMgUHJpbWFyeSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eSAtIEcy
+MTowOAYDVQQLEzEoYykgMTk5OCBWZXJpU2lnbiwgSW5jLiAtIEZvciBhdXRob3Jp
+emVkIHVzZSBvbmx5MR8wHQYDVQQLExZWZXJpU2lnbiBUcnVzdCBOZXR3b3JrMB4X
+DTk4MDUxODAwMDAwMFoXDTI4MDgwMTIzNTk1OVowgcExCzAJBgNVBAYTAlVTMRcw
+FQYDVQQKEw5WZXJpU2lnbiwgSW5jLjE8MDoGA1UECxMzQ2xhc3MgMyBQdWJsaWMg
+UHJpbWFyeSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eSAtIEcyMTowOAYDVQQLEzEo
+YykgMTk5OCBWZXJpU2lnbiwgSW5jLiAtIEZvciBhdXRob3JpemVkIHVzZSBvbmx5
+MR8wHQYDVQQLExZWZXJpU2lnbiBUcnVzdCBOZXR3b3JrMIGfMA0GCSqGSIb3DQEB
+AQUAA4GNADCBiQKBgQDMXtERXVxp0KvTuWpMmR9ZmDCOFoUgRm1HP9SFIIThbbP4
+pO0M8RcPO/mn+SXXwc+EY/J8Y8+iR/LGWzOOZEAEaMGAuWQcRXfH2G71lSk8UOg0
+13gfqLptQ5GVj0VXXn7F+8qkBOvqlzdUMG+7AUcyM83cV5tkaWH4mx0ciU9cZwID
+AQABMA0GCSqGSIb3DQEBBQUAA4GBAFFNzb5cy5gZnBWyATl4Lk0PZ3BwmcYQWpSk
+U01UbSuvDV1Ai2TT1+7eVmGSX6bEHRBhNtMsJzzoKQm5EWR0zLVznxxIqbxhAe7i
+F6YM40AIOw7n60RzKprxaZLvcRTDOaxxp5EJb+RxBrO6WVcmeQD2+A2iMzAo1KpY
+oJ2daZH9MEowCgYIKwYBBQUHAwQMPFZlcmlzaWduIENsYXNzIDMgUHVibGljIFBy
+aW1hcnkgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkgLSBHMg==
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number:
+            70:ba:e4:1d:10:d9:29:34:b6:38:ca:7b:03:cc:ba:bf
+    Signature Algorithm: md2WithRSAEncryption
+        Issuer: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
+        Validity
+            Not Before: Jan 29 00:00:00 1996 GMT
+            Not After : Aug  1 23:59:59 2028 GMT
+        Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:c9:5c:59:9e:f2:1b:8a:01:14:b4:10:df:04:40:
+                    db:e3:57:af:6a:45:40:8f:84:0c:0b:d1:33:d9:d9:
+                    11:cf:ee:02:58:1f:25:f7:2a:a8:44:05:aa:ec:03:
+                    1f:78:7f:9e:93:b9:9a:00:aa:23:7d:d6:ac:85:a2:
+                    63:45:c7:72:27:cc:f4:4c:c6:75:71:d2:39:ef:4f:
+                    42:f0:75:df:0a:90:c6:8e:20:6f:98:0f:f8:ac:23:
+                    5f:70:29:36:a4:c9:86:e7:b1:9a:20:cb:53:a5:85:
+                    e7:3d:be:7d:9a:fe:24:45:33:dc:76:15:ed:0f:a2:
+                    71:64:4c:65:2e:81:68:45:a7
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: md2WithRSAEncryption
+         bb:4c:12:2b:cf:2c:26:00:4f:14:13:dd:a6:fb:fc:0a:11:84:
+         8c:f3:28:1c:67:92:2f:7c:b6:c5:fa:df:f0:e8:95:bc:1d:8f:
+         6c:2c:a8:51:cc:73:d8:a4:c0:53:f0:4e:d6:26:c0:76:01:57:
+         81:92:5e:21:f1:d1:b1:ff:e7:d0:21:58:cd:69:17:e3:44:1c:
+         9c:19:44:39:89:5c:dc:9c:00:0f:56:8d:02:99:ed:a2:90:45:
+         4c:e4:bb:10:a4:3d:f0:32:03:0e:f1:ce:f8:e8:c9:51:8c:e6:
+         62:9f:e6:9f:c0:7d:b7:72:9c:c9:36:3a:6b:9f:4e:a8:ff:64:
+         0d:64
+Trusted Uses:
+  E-mail Protection
+No Rejected Uses.
+Alias: Verisign Class 3 Public Primary Certification Authority
+-----BEGIN TRUSTED CERTIFICATE-----
+MIICPDCCAaUCEHC65B0Q2Sk0tjjKewPMur8wDQYJKoZIhvcNAQECBQAwXzELMAkG
+A1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMTcwNQYDVQQLEy5DbGFz
+cyAzIFB1YmxpYyBQcmltYXJ5IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTk2
+MDEyOTAwMDAwMFoXDTI4MDgwMTIzNTk1OVowXzELMAkGA1UEBhMCVVMxFzAVBgNV
+BAoTDlZlcmlTaWduLCBJbmMuMTcwNQYDVQQLEy5DbGFzcyAzIFB1YmxpYyBQcmlt
+YXJ5IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MIGfMA0GCSqGSIb3DQEBAQUAA4GN
+ADCBiQKBgQDJXFme8huKARS0EN8EQNvjV69qRUCPhAwL0TPZ2RHP7gJYHyX3KqhE
+BarsAx94f56TuZoAqiN91qyFomNFx3InzPRMxnVx0jnvT0Lwdd8KkMaOIG+YD/is
+I19wKTakyYbnsZogy1Olhec9vn2a/iRFM9x2Fe0PonFkTGUugWhFpwIDAQABMA0G
+CSqGSIb3DQEBAgUAA4GBALtMEivPLCYATxQT3ab7/AoRhIzzKBxnki98tsX63/Do
+lbwdj2wsqFHMc9ikwFPwTtYmwHYBV4GSXiHx0bH/59AhWM1pF+NEHJwZRDmJXNyc
+AA9WjQKZ7aKQRUzkuxCkPfAyAw7xzvjoyVGM5mKf5p/AfbdynMk2OmufTqj/ZA1k
+MEUwCgYIKwYBBQUHAwQMN1ZlcmlzaWduIENsYXNzIDMgUHVibGljIFByaW1hcnkg
+Q2VydGlmaWNhdGlvbiBBdXRob3JpdHk=
+-----END TRUSTED CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number:
+            3c:91:31:cb:1f:f6:d0:1b:0e:9a:b8:d0:44:bf:12:be
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
+        Validity
+            Not Before: Jan 29 00:00:00 1996 GMT
+            Not After : Aug  2 23:59:59 2028 GMT
+        Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:c9:5c:59:9e:f2:1b:8a:01:14:b4:10:df:04:40:
+                    db:e3:57:af:6a:45:40:8f:84:0c:0b:d1:33:d9:d9:
+                    11:cf:ee:02:58:1f:25:f7:2a:a8:44:05:aa:ec:03:
+                    1f:78:7f:9e:93:b9:9a:00:aa:23:7d:d6:ac:85:a2:
+                    63:45:c7:72:27:cc:f4:4c:c6:75:71:d2:39:ef:4f:
+                    42:f0:75:df:0a:90:c6:8e:20:6f:98:0f:f8:ac:23:
+                    5f:70:29:36:a4:c9:86:e7:b1:9a:20:cb:53:a5:85:
+                    e7:3d:be:7d:9a:fe:24:45:33:dc:76:15:ed:0f:a2:
+                    71:64:4c:65:2e:81:68:45:a7
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha1WithRSAEncryption
+         10:72:52:a9:05:14:19:32:08:41:f0:c5:6b:0a:cc:7e:0f:21:
+         19:cd:e4:67:dc:5f:a9:1b:e6:ca:e8:73:9d:22:d8:98:6e:73:
+         03:61:91:c5:7c:b0:45:40:6e:44:9d:8d:b0:b1:96:74:61:2d:
+         0d:a9:45:d2:a4:92:2a:d6:9a:75:97:6e:3f:53:fd:45:99:60:
+         1d:a8:2b:4c:f9:5e:a7:09:d8:75:30:d7:d2:65:60:3d:67:d6:
+         48:55:75:69:3f:91:f5:48:0b:47:69:22:69:82:96:be:c9:c8:
+         38:86:4a:7a:2c:73:19:48:69:4e:6b:7c:65:bf:0f:fc:70:ce:
+         88:90
+Trusted Uses:
+  E-mail Protection
+No Rejected Uses.
+Alias: Verisign Class 3 Public Primary Certification Authority
+-----BEGIN TRUSTED CERTIFICATE-----
+MIICPDCCAaUCEDyRMcsf9tAbDpq40ES/Er4wDQYJKoZIhvcNAQEFBQAwXzELMAkG
+A1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMTcwNQYDVQQLEy5DbGFz
+cyAzIFB1YmxpYyBQcmltYXJ5IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTk2
+MDEyOTAwMDAwMFoXDTI4MDgwMjIzNTk1OVowXzELMAkGA1UEBhMCVVMxFzAVBgNV
+BAoTDlZlcmlTaWduLCBJbmMuMTcwNQYDVQQLEy5DbGFzcyAzIFB1YmxpYyBQcmlt
+YXJ5IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MIGfMA0GCSqGSIb3DQEBAQUAA4GN
+ADCBiQKBgQDJXFme8huKARS0EN8EQNvjV69qRUCPhAwL0TPZ2RHP7gJYHyX3KqhE
+BarsAx94f56TuZoAqiN91qyFomNFx3InzPRMxnVx0jnvT0Lwdd8KkMaOIG+YD/is
+I19wKTakyYbnsZogy1Olhec9vn2a/iRFM9x2Fe0PonFkTGUugWhFpwIDAQABMA0G
+CSqGSIb3DQEBBQUAA4GBABByUqkFFBkyCEHwxWsKzH4PIRnN5GfcX6kb5sroc50i
+2JhucwNhkcV8sEVAbkSdjbCxlnRhLQ2pRdKkkirWmnWXbj9T/UWZYB2oK0z5XqcJ
+2HUw19JlYD1n1khVdWk/kfVIC0dpImmClr7JyDiGSnoscxlIaU5rfGW/D/xwzoiQ
+MEUwCgYIKwYBBQUHAwQMN1ZlcmlzaWduIENsYXNzIDMgUHVibGljIFByaW1hcnkg
+Q2VydGlmaWNhdGlvbiBBdXRob3JpdHk=
+-----END TRUSTED CERTIFICATE-----

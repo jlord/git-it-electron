@@ -1,0 +1,140 @@
+#!/bin/sh
+
+# gpg-archive - gpg-ized tar using the same format as PGP's PGP Zip.
+# Copyright (C) 2005 Free Software Foundation, Inc.
+#
+# This file is part of GnuPG.
+#
+# GnuPG is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# GnuPG is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, see <http://www.gnu.org/licenses/>.
+# Despite the name, PGP Zip format is actually an OpenPGP-wrapped tar
+# file.  To be compatible with PGP itself, this must be a USTAR format
+# tar file.  Unclear on whether there is a distinction here between
+# the GNU or POSIX variant of USTAR.
+
+VERSION=1.4.19
+TAR=/usr/bin/tar
+GPG=gpg
+
+usage="\
+Usage: gpg-zip [--help] [--version] [--encrypt] [--decrypt] [--symmetric]
+       [--list-archive] [--output FILE] [--gpg GPG] [--gpg-args ARGS]
+       [--tar TAR] [--tar-args ARGS] filename1 [filename2, ...]
+       directory1 [directory2, ...]
+
+Encrypt or sign files into an archive."
+
+while test $# -gt 0 ; do
+  case $1 in
+    -h | --help | --h*)
+      echo "$usage"
+      exit 0
+      ;;
+    --list-archive)
+      list=yes
+      create=no
+      unpack=no
+      shift
+      ;;
+    --encrypt | -e)
+      gpg_args="$gpg_args --encrypt"
+      list=no
+      create=yes
+      unpack=no
+      shift
+      ;;
+    --decrypt | -d)
+      gpg_args="$gpg_args --decrypt"
+      list=no
+      create=no
+      unpack=yes
+      shift
+      ;;
+    --symmetric | -c)
+      gpg_args="$gpg_args --symmetric"
+      list=no
+      create=yes
+      unpack=no
+      shift
+      ;;
+    --sign | -s)
+      gpg_args="$gpg_args --sign"
+      list=no
+      create=yes
+      unpack=no
+      shift
+      ;;
+    --recipient | -r)
+      gpg_args="$gpg_args --recipient $2"
+      shift
+      shift
+      ;;
+    --local-user | -u)
+      gpg_args="$gpg_args --local-user $2"
+      shift
+      shift
+      ;;
+    --output | -o)
+      gpg_args="$gpg_args --output $2"
+      shift
+      shift
+      ;;
+    --version)
+      echo "gpg-zip (GnuPG) $VERSION"
+      exit 0
+      ;;
+    --gpg)
+      GPG=$1
+      shift
+      ;;
+    --gpg-args)
+      gpg_args="$gpg_args $2"
+      shift
+      shift
+      ;;
+    --tar)
+      TAR=$1
+      shift
+      ;;
+    --tar-args)
+      tar_args="$tar_args $2"
+      shift
+      shift
+      ;;
+    --)
+      shift
+      break
+      ;;
+    -*)
+      echo "$usage" 1>&2
+      exit 1
+      ;;
+    *)
+      break
+      ;;
+  esac
+done
+
+if test x$create = xyes ; then
+#   echo "$TAR -cf - "$@" | $GPG --set-filename x.tar $gpg_args" 1>&2
+   $TAR -cf - "$@" | $GPG --set-filename x.tar $gpg_args
+elif test x$list = xyes ; then
+#   echo "cat \"$1\" | $GPG $gpg_args | $TAR $tar_args -tf -" 1>&2
+   cat "$1" | $GPG $gpg_args | $TAR $tar_args -tf -
+elif test x$unpack = xyes ; then
+#   echo "cat \"$1\" | $GPG $gpg_args | $TAR $tar_args -xvf -" 1>&2
+   cat "$1" | $GPG $gpg_args | $TAR $tar_args -xvf -
+else
+   echo "$usage" 1>&2
+   exit 1
+fi
