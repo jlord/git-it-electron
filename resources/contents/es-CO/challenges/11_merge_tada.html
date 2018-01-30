@@ -1,65 +1,65 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Merge your branch locally, delete the branch and pull from upstream.</p>
+    <p>Fusiona (merge) tu rama (branch) localmente, borra la rama y hala (pull) desde upstream.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2>Cleaning up</h2>
+    <h2>Limpieza</h2>
 
-    <p>Once you don't need branches anymore you can delete them locally and remotely. This is helpful so that you don't
-        end up with a pile of old branches.</p>
+    <p>Una vez que ya no necesitas las ramas puedes eliminarlas local y remotamente. Esto ayuda a que no
+        termines con una pila de ramas viejas.</p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Merge Locally</h3>
-    <p>Your pull request has been merged! Your branch was merged into the 'gh-pages' branch of the original on GitHub.
-        You can merge your branch locally, too.</p>
+    <h3>Fusionar (merge) localmente</h3>
+    <p>Tu pull request ha sido fusionado! Tu rama fue fusionada en la rama 'gh-pages' de el repositorio original en GitHub.
+        Puedes fusionar la rama localmente, también.</p>
 
-    <p>First, move into the branch you want to merge into—in this case, the branch 'gh-pages'.</p>
-    <p><code class="shell">git checkout gh-pages</code></p>
+    <p>Primero, muevete a la rama a la cual quieres fusionarle los cambios en este caso, la rama 'gh-pages'.</p>
+    <p><code class="shell">git checkout gh-pages</code></p> 
 
-    <p>Now tell Git what branch you want to merge in—in this case, your feature branch that begins with "add-".</p>
+    <p>Ahora dile a Git desde cuál rama quieres traer los cambios, en este caso, tu rama "feature" que empieza con "add-".</p>
     <p><code class="shell">git merge &#60;BRANCHNAME&#62;</code></p>
 
-    <p>Tidy up by deleting your feature branch. Now that it has been merged you don't really need it around.</p>
+    <p>Ordenar el repositorio eliminando la "feature branch". Ahora que has fusionado no la necesitarás.</p>
     <p><code class="shell">git branch -d &#60;BRANCHNAME&#62;</code></p>
 
-    <p>You can also delete the branch from your remote on GitHub:</p>
+    <p>También puedes eliminar la rama de tu remoto en GitHub:</p>
     <p><code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Pull from Upstream</h3>
-    <p>And last but not least, the original has changed since your pull request was merged—Reporobot added your name to
-        the website! If you pull in these changes from upstream you'll be up to date and have that version too. You can
-        actually see it live as well at: yourusername.github.io/patchwork.</p>
+    <h3>Hala (Pull) desde Upstream</h3>
+    <p>Y por último pero no menos importante, el repositorio original ha cambiado desde que tu pull request fue fusionado, añadió tu nombre a 
+        el sitio web! Si halas esos cambios desde upstream estarás al día y tendrás esa versión también. Puedes
+        ver el sitio online en: tunombredeusuario.github.io/patchwork.</p>
 
-    <p>To pull from the original upstream:</p>
+    <p>Para halar desde el original upstream:</p>
     <p><code class="shell">git pull upstream gh-pages</code></p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2>Congratulations!</h2>
-    <p>You've created local repositories, remote repositories, worked with a collaborator, pushed, pulled and joined the
-        millions of others developing and enriching open source!</p>
+    <h2>Felicitaciones!</h2>
+    <p>Has creado repositorios, repositorios remotos, trabajado con un colaborador, empujado (push), halado (pulled) y te has unido millones
+        de personas desarrollando y enriqueciendo el código abierto!</p>
 
-    <p>Visit <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> to see your name
-        incorporated! Looking to keep going? Checkout the <a href="../pages/resources.html#what-next">What Next</a>
-        section on the resources page in this app.</p>
+    <p>Visita <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> para ver tu nombre
+        incorporado! Quieres continuar? Revisa la sección <a href="../pages/resources.html#what-next">Qué sigue</a>
+        section en la página de recursos de esta aplicación.</p>
 </div>
 
 {{{ verify_directory_button }}}
 
 <div class="chal-tip grey-border border-box">
     <ul class="no-list-style">
-        <li><strong>Merge a branch into current branch</strong></li>
+        <li><strong>Fusiona una rama a tu rama actual</strong></li>
         <code class="shell">git merge &#60;BRANCHNAME&#62;</code>
-        <li><strong>Change the branch you're working on</strong></li>
+        <li><strong>Cambia la branch en la que estás trabajando</strong></li>
         <code class="shell">git checkout &#60;BRANCHNAME&#62;</code>
-        <li><strong>Delete a local branch</strong></li>
+        <li><strong>Borra una rama local</strong></li>
         <code class="shell">git branch -d &#60;BRANCHNAME&#62;</code>
-        <li><strong>Delete a remote branch</strong></li>
+        <li><strong>Borra una rama remota</strong></li>
         <code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
-        <li><strong>Pull from a remote branch</strong></li>
+        <li><strong>Hala (Pull) desde una rama remota</strong></li>
         <code class="shell">git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
     </ul>
 </div>
