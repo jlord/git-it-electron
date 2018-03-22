@@ -1,5 +1,5 @@
 var locale = require('../lib/locale.js')
-module.exports = function menu (app, mainWindow) {
+module.exports = function menu(app, mainWindow) {
   var darwinMenu = [
     {
       label: 'Git-it',
@@ -127,7 +127,7 @@ module.exports = function menu (app, mainWindow) {
         {
           label: 'Repository',
           click: function () {
-            require('shell').openExternal('http://github.com/jlord/git-it-electron')
+            require('electron').shell.openExternal('http://github.com/jlord/git-it-electron')
           }
         },
         {
