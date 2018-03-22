@@ -1,5 +1,5 @@
 var locale = require('../lib/locale.js')
-module.exports = function menu(app, mainWindow) {
+module.exports = function menu (app, mainWindow) {
   var darwinMenu = [
     {
       label: 'Git-it',
