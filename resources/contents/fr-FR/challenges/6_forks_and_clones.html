@@ -1,0 +1,87 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Forker un projet GitHub et le cloner localement.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Fork</h2>
+    <p>Jusqu'à présent, vous avez réalisé un projet localement et l'avez poussé à GitHub, mais ce n'est que la moitié 
+    du plaisir! L'autre moitié est de travailler avec d'autres personnes et d'autres projets.</p>
+
+    <p>Lorsque vous <strong> forkez </ strong> un dépôt, vous en créez une copie sur votre compte GitHub. Votre fork 
+    commence sa vie en tant que dépôt <strong> distant </ strong> - Il existe juste sur votre compte GitHub, et non sur 
+    votre ordinateur. Les forks sont utilisées pour créer votre propre version d'un projet (cette différenciation de 
+    l'original est comme une sorte de bifurcation de la route du projet) ou contribuer en partageant vos modifications 
+    (telles que les corrections de bogues ou les nouvelles fonctionnalités) avec le projet original.</p>
+
+    <p>Pour obtenir un dépot forké à partir de votre compte GitHub sur votre ordinateur, vous devez le <strong> cloner </ strong>. 
+    Le clonage copie le dépôt distant sur votre ordinateur afin que vous puissiez travailler localement.</p>
+
+    <img src="../../../assets/imgs/clone.png"
+         alt="Un diagramme montrant un dépôt de GitHub copié sur votre compte GitHub puis copié sur votre ordinateur local."
+         width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Forkez le dépôt Patchwork</h3>
+    <p>Le projet avec lequel nous travaillerons est situé ici : 
+    <a href="http://github.com/jlord/patchwork" target="_blank"> github.com/jlord/patchwork </a>.
+    Accédez à cette page et cliquez sur le bouton 'Fork' en haut à droite. Une fois l'animation terminée, vous avez 
+    une copie de ce projet sur votre compte. Copiez l'URL HTTPS de votre fork dans la barre d'adresse de votre 
+    navigateur, c'est l'adresse de votre projet forké sur les serveurs de GitHub.</p>
+    <!-- TODO write address for user here -->
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Clonage de votre fork en local</h3>
+    <p>Maintenant, dans le terminal, vous clonez le référentiel sur votre ordinateur. Il créera automatiquement un 
+    nouveau dossier pour le dépôt. Assurez-vous de ne pas le cloner à l'intérieur d'un autre dossier contenant un dépôt Git! </p>
+
+    <p>Assurez-vous de ne pas être dans le répertoire 'hello-world' des défis précédents. Pour sortir de ce dossier, 
+    afin de pouvoir cloner, procédez comme suit:
+    </p>
+
+    <p>Sortir du dossier 'hello-world':<br><span class="inline-tip">Astuce: les deux points désignent le répertoire père.</span>
+    </p>
+    <p><code class="shell">cd ..</code></p>
+
+    <p>Maintenant que vous n'êtes plus dans un dépôt Git, clonez votre fork:</p>
+    <p><code class="shell">git clone &#60;URLFROMGITHUB&#62;</code></p>
+
+    <p>Entrez dans le dossier créé qui contient la copie locale de votre fork (dans ce cas, nommée 'patchwork').
+    <p><code class="shell">cd patchwork</code></p>
+
+    <p>Maintenant, vous avez une copie du dépôt sur votre ordinateur et il est automatiquement connecté au dépôt distant
+        (votre copie forkée) de votre compte GitHub. Tapez <code> git remote -v </ code> pour voir que l'adresse 
+        distante est déjà configurée.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Connectez-vous au dépôt d'origine</h3>
+
+    <p>What if the original repository you forked happens to change? You'll want to be able to <strong>pull</strong> in
+        those changes too. So let's add another remote connection, this time to the original, <a
+                href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>, repository with
+        its URL.</p>
+
+    <p>You can name this remote connection anything you want, but typically people use the name 'upstream'; let's use
+        that for this.</p>
+
+    <p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+
+    <p>Qu'arrive-t-il si le dépôt d'origine change ? Vous voudrez pouvoir <strong>tirer</strong> ces changements 
+    localement. Nous allons donc ajouter un autre remote, cette fois-ci à version originale du projet, 
+    <a href = "http://github.com/jlord/patchwork" target = "_ blank">github.com/jlord/patchwork</a>.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Ajouter un remote</strong></li>
+        <li><code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
+        <li><strong>Changer l'URL d'un remote</strong></li>
+        <li><code class="shell">git remote set-url &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
+        <li><strong>Afficher l'adresse des remotes</strong></li>
+        <li><code class="shell">git remote -v</code></li>
+    </ul>
+</div>
