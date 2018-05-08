@@ -37,7 +37,8 @@ You can view the [releases](http://github.com/jlord/git-it-electron/releases) se
 ![executables](https://cloud.githubusercontent.com/assets/1305617/14696588/2b10abf8-0731-11e6-945e-f3d57114bce9.png)
 
 - **Mac** Right (control) click the Git-it icon, select Open and then Open again. You can drag the icon into your Applications directory if you want, but it's not required. If needed, more [detailed installation instructions](https://github.com/jlord/git-it-electron/issues/121#issue-149747488) can be found in this issue.
-- **Windows and Linux** Double-click the executable.
+- **Windows** Double-click the executable.
+- **Linux** Double-click the executable. If the app isn't running, [see this issue](https://github.com/jlord/git-it-electron/issues/182).
 
 ## Get Started!
 
