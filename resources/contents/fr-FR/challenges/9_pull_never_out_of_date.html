@@ -1,0 +1,41 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Gardez vos fichiers à jour en tirant les modifications des collaborateurs.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h3>Tirer depuis un Remote</h3>
+    <p>Si vous travaillez sur quelque chose avec quelqu'un d'autre, vous devez toujours rester à jour avec les dernières 
+    modifications. Vous aurez donc besoin de <strong>tirer (pull)</strong> les modifications qui ont pu être poussées 
+    dans le dépôt central sur GitHub.
+    </p>
+
+    <img src="../../../assets/imgs/pull.png"
+         alt="Schéma montrant un ordinateur tirant des informations sur le site Web d'un dépôt" width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>What has Reporobot been up to?</h3>
+    <p>Voir si Reporobot a apporté des modifications à votre branche tirant les modifications de la remote 'origin' sur
+    GitHub:</p>
+
+    <p><code class="shell">git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code></p>
+
+    <p>Si rien n'a changé, il vous dira 'Already up-to-date'. S'il y a des changements, Git fusionnera ces changements
+    dans votre version locale.</p>
+
+    <p>Mais qu'est ce que Reporobot a bien pu modifier? Git vous dit où des changements ont été apportés. Vous pouvez 
+    ouvrir le fichier et voir les mises à jour de Reporobot. Surprise, Reporobot est un artiste!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Vérifier l'état de Git</strong></li>
+        <code class="shell">git status</code>
+        <li><strong>Tirer les modifications d'une branche distante</strong></li>
+        <code class="shell">git pull &lt;REMOTENAME&gt; &lt;REMOTEBRANCH&gt;</code>
+        <li><strong>Voir les modifications apportées à un remote avant de tirer</strong></li>
+        <code class="shell">git fetch --dry-run</code>
+    </ul>
+</div>

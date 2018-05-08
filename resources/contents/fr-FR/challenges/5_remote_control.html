@@ -1,0 +1,113 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Connectez votre dépôt local à votre dépôt distant et y pousser vos modifications.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Remotes</h2>
+
+    <p>Lorsque vous mettez quelque chose sur GitHub, cette copie vit sur l'un des serveurs de GitHub. Cela en fait une copie
+        <Strong>distante (remote)</ strong> car elle n'est pas sur votre ordinateur, mais sur un serveur "distant". 
+        En <strong>poussant (push)</strong> les modifications de votre dêpot <strong> local </ strong> (celui sur votre ordinateur) sur 
+        votre "remote" maintenez à jour la copie partagée.</p>
+
+    <p>Les autres peuvent toujours obtenir la derniere version de votre projet en <strong> tirant (pull) </ strong> vos 
+    modifications à partir de votre "remote". C'est ainsi que chacun peut travailler sur un projet sans avoir besoin 
+    d'accéder à votre ordinateur où votre copie locale est stockée.</p>
+
+    <img src="../../../assets/imgs/remotes.png"
+         alt="Un diagramme montrant GitHub comme serveur central qui crée le site GitHub.com. Deux ordinateurs, de part et d'autre, poussent et tirent de GitHub."
+         width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Créer un dépôt distant</h3>
+    <p>Vous voulez synchroniser votre version <strong>local</strong> avec celle enregistrée sur GitHub.com. 
+    Créez d'abord un dépôt <strong>distant (remote)</strong> sur GitHub.com.</p>
+
+    <ul>
+        <li>Aller à <a href="http://github.com "target="_blank"> github.com </a>, connectez-vous, puis cliquez sur '+' dans le haut
+            À droite, puis cliquez sur 'New repository'.</li>
+        <li>Donnez-lui un nom qui correspond au nom de votre dépôt local, 'hello-world', et une brève description.</li>
+        <li>Rendez-le public. Cela signifie qu'il sera répertorié sur votre profil public.</li>
+        <li>Ne pas initialiser avec un README car nous avons déjà un fichier, localement, nommé "readme.txt". 
+        Cette option de GitHub peut vous aider si vous ne l'aviez pas encore fait.
+        </li>
+        <li>Laissez «.gitignore» et «licence» définis sur «none». Nous n'utiliserons pas ces options dans ce tutoriel.</li>
+        <li>Cliquer enfin sur "create repository"!</li>
+    </ul>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Readmes, .gitignores et Licenses</h2>
+    <p>Ce sont des fichiers communs dans les projets open source afin de faciliter le démarrage d'un nouveau projet, 
+    GitHub fournit une option pour les créer pour vous.</p>
+    <p>Un <strong> readme </ strong> décrit le projet, comment l'utiliser, et souvent, comment y contribuer (bien que 
+    parfois il y ait aussi un fichier 'CONTRIBUTING.md' pour ces informations).</p>
+    <p>
+    Le fichier <strong> .gitignore </ strong> est une liste de fichiers que Git devrait <em> ne pas </ em> suivre, 
+    par exemple, les fichiers avec des mots de passe!</p>
+    <p>Le fichier <strong>licence</strong> est le type de licence que vous avez utilisé pour votre projet. Cela permet 
+    aux autres de savoir comment votre contenu peut être utilisé. Les informations sur les types de licences sont 
+    trouvable sur la page suivante: <a href="http://www.choosealicense.com" target="_blank"> choosealicense.com </a>.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3> Connectez votre dépôt local à votre remote</h3>
+    <p> Maintenant, vous avez créé un dépôt vide sur GitHub.com. En haut, vous verrez 'Configuration rapide', assurez-vous 
+    que le bouton "HTTPS" soit sélectionné et copiez l'adresse: c'est l'adresse de votre dépôt Git sur les serveurs de GitHub.</p>
+
+    <p>Retour dans votre terminal, et à l'intérieur du dossier 'hello-world' que vous avez initialisé en tant que dépôt 
+    Git dans les défis précédents. Vous voulez que Git retienne l'adresse de la version à distance présente sur les 
+    serveurs de GitHub. Vous pouvez avoir plusieurs remotes, pour les différencier, chacun a un nom. Le remote principal 
+    est généralement appelé <code>origin</code>.
+    </p>
+
+    <p>Pour ajouter une télécommande nommée 'origine' à votre dépôt:</p>
+    <code class="shell">git remote add origin &lt;URLFROMGITHUB&gt;</code>
+
+    <p>Votre dépôt <strong>local</strong> sait maintenant où votre référentiel <strong>distant</strong>, nommé 'origin', 
+    se trouve sur les serveurs de GitHub. Pensez-y comme ajout d'un nom et d'une adresse sur la numérotation rapide, 
+    maintenant lorsque vous devez envoyer quelque chose là-bas, vous le pouvez.</p>
+
+    <blockquote>
+        <p><strong>Utilisateurs Windows:</strong></p>
+        <p>Si vous avez <strong>GitHub Desktop</strong> sur votre ordinateur, une remote nommée 'origin' est automatiquement
+            créé dans votre dépôt local. Dans ce cas, vous devrez préciser l'URL à associer à 'origin'. 
+            Utilisez cette commande au lieu du 'add' ci-dessus:</p>
+        <code class="shell">git remote set-url origin &lt;URLFROMGITHUB&gt;</code>
+    </blockquote>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Poussez votre travail dans votre remote</h3>
+    <p>Ensuite, <strong> poussez </ strong> (envoyer) tout ce que vous avez effectué localement dans votre dépôt distant sur GitHub.
+        C'est quelque chose que vous ferez souvent pour que votre version à distance soit à jour et synchronisée avec l'état 
+        de votre version locale.</p>
+
+    <p>Git dispose d'un système de branche afin que vous puissiez travailler sur différentes parties d'un projet à différents moments. 
+    Nous allons apprendre plus à ce propos par la suite, mais par défaut, la première branche est nommée «master». 
+    Lorsque vous poussez (et tirez plus tard) d'un projet, vous dites à Git le <strong> nom de branche </ strong> que 
+    vous voulez ainsi que le nom du <strong>remote</strong> avec lequel vous voulez travailler.</p>
+
+    <p>Dans ce cas, nous enverrons notre branche nommée 'master' à notre remote sur GitHub nommée 'origin'. </p>
+    <code class="shell">git push origin master</code>
+
+    <p>Maintenant, accédez à la page de votre dépôt sur GitHub.com et actualisez la page. <strong>Wow!</strong> votre dépôt distant est à jour avec le local. Félicitation vous avez créé votre premier dépôt public!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Ajouter un remote</strong></li>
+        <code class="shell">git remote add &lt;REMOTENAME&gt; &lt;URL&gt;</code>
+        <li><strong>Modifier l'URL d'un remote</strong></li>
+        <code class="shell">git remote set-url &lt;REMOTENAME&gt; &lt;URL&gt;</code>
+        <li><strong>Tirer des changement à partir d'un remote</strong></li>
+        <code class="shell">git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
+        <li><strong>Afficher l'adresse d'un remote</strong></li>
+        <code class="shell">git remote -v</code>
+        <li><strong>Pousser des modifications</strong></li>
+        <code class="shell">git push &lt;REMOTENAME&gt; &lt;BRANCH&gt;</code>
+    </ul>
+</div>

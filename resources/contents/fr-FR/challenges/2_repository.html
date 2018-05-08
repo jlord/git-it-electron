@@ -1,0 +1,82 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Créez un nouveau dépôt sur votre ordinateur.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Dépôts</h2>
+    <p>Un <strong>dépôt</ strong> est un ensemble d'éléments liés. Dans notre cas, l'écriture de logiciels, c'est une
+        collection de fichiers liés à un projet. Vous pouvez l'imaginer comme un dossier de projet avec tous les éléments 
+        pertinents à l'intérieur de celui-ci. En fait, c'est ce à quoi il ressemblera sur votre ordinateur. Dans la 
+        littérature (et aussi dans la suite de ce guide) vous trouverez aussi les appellations "Référentiel", 
+        "Repositorie" ou plus simplement "Repo" pour parler de dépôt</p>
+
+    <img src="../../../assets/imgs/repos.png" alt="A drawing of four file folders" width="600">
+
+    <p>Vous dites à Git quel est votre projet et Git va commencer à suivre toutes les modifications apportées à ce dossier. 
+       Cela en fait un dépôt Git: un dossier suivi par Git. Git suit lorsque les fichiers sont ajoutés, soustraits ou 
+       même modifiée (que ce soit d'une seule lettre ou en intégralité). En plus de cela Git suit qui à apporté ces 
+       modifications. Dans l'univers du développement logiciel, ce suivi des modifications s'appellent 
+       <strong>la gestion de version</strong>.</p>
+
+    <h2>Utilisation du terminal</h2>
+    <p><strong>Terminal</ strong>(ou Bash) est un moyen pour indiquer à votre ordinateur de faire des choses en tapant 
+    des commandes plutôt que de cliquer sur les applications avec votre souris. Vous pouvez renommer des fichiers, 
+    ouvrir des fichiers, créer de nouveaux dossiers, changer de répertoires et plus tous en exécutant des commandes 
+    textuelle. 
+    
+    Vous pouvez même utiliser un éditeur de texte adapté au code (comme 
+    <a href = "http://en.wikipedia.org/wiki/Vim_(text_editor)" target = "_ blank"> Vim </a>) pour ne plus jamais avoir 
+    besoin de quitter votre console!</p>
+
+    <p>En plus de naviguer sur votre ordinateur, vous pouvez également utiliser des programmes qui ont une 
+    <strong>interface en ligne de commande(CLI)</strong>. Cela signifie qu'ils peuvent être utilisés à partir de commandes 
+    lancées dans un terminal. Git est l'un d'entre eux ! 
+    
+    La première partie de la commande permet à votre ordinateur de savoir que vous parlez à Git. Les parties qui suivent 
+    sont les commandes et les différentes options que vous souhaitez passer à Git.</p>
+
+    <p>Dans Git-it, vous apprendrez quelques actions de base de la ligne de commande (en plus des commandes Git) pour 
+    naviguer sur votre ordinateur; Elles sont décrites au fur et à mesure des étapes.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Créer un Dépôt</h3>
+    <p>Vous allez créer un nouveau dossier de projet puis l'initialiser en tant que dépôt Git. Nommer le dossier 
+    'hello-world' dans ce défi, vous pouvez choisir un nom différent si vous avez déjà un dossier nommé ainsi (c'est 
+    un nom commun en informatique).</p>
+
+    <p>Ouvrez votre terminal!</p>
+
+    <p>Dans la fenêtre de votre terminal, tapez ces commandes, une à la fois, en appuyant sur la touche "Entrée" pour 
+    valider votre saisie</p>
+
+    <p>Tout d'abord, créez un nouveau dossier:<br><span class = "inline-tip">Astuce: mkdir signifie <em>make directory</em></span></p>
+    <code class="shell">mkdir hello-world</code>
+
+    <p> Ensuite, entrez dans ce dossier:<br><span class="inline-tip">Astuce: cd signifie <em>change directory</em></span></p>
+    <code class="shell">cd hello-world</code>
+
+    <p>Enfin, dites à Git d'initialiser(démarrer le suivi) du dossier dans lequel vous êtes:</p>
+    <code class="shell">git init</code>
+
+    <p>La dernière commande devrait renvoyer quelque chose commençant par "Initialized empty Git repository". 
+    Les autres commandes ne renvoie rien.</p>
+
+    <p> Vous l'avez fait! Si vous voulez être sûr que c'est un dépôt Git, tapez <code>git status</code> 
+    et s'il ne vous retourne pas 'fatal: Not a git repository...' c'est que tout est parfait !</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Créer un nouveau dossier (aka make directory)</strong></li>
+        <code class="shell">mkdir &#60;FOLDERNAME&#62;</code>
+        <li><strong> Naviguer dans un dossier existant (aka change directory)</strong></li>
+        <code class="shell">cd &#60;FOLDERNAME&#62;</code>
+        <li><strong>Lister les éléments dans un dossier</strong></li>
+        <code class="shell">ls </code>
+        <li><strong>Activez Git pour un repertoire</strong></li>
+        <code class="shell">git init</code>
+    </ul>
+</div>
