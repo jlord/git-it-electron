@@ -35,7 +35,7 @@
 body {
   font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
   line-height: 1.8em;
-  color: rgba(51, 57, 53, 0.83);
+  color: #322b32;
   background-color: #f5f5f5;
   background-color: #fff;
   font-size: 1.1em;
@@ -51,19 +51,19 @@ li {
 }
 
 a {
-  color: #0087ff;
+  color: #774872;
   text-decoration: none;
 }
 
 a:hover {
-  color: #4BABFF;
+  color: #8c5586;
 }
 
 blockquote {
-  border-left: 1px solid rgb(186, 223, 255);
+  border-left: 1px solid #a0639a;
   padding-left: 18px;
   margin: 30px 0;
-  color: rgba(51, 57, 53, 0.83);
+  color: #322b32;
 }
 
 img {
@@ -165,7 +165,7 @@ ul.no-list-style {
   text-transform: capitalize;
   font-size: 19px;
   font-weight: 800;
-  color: #4BABFF;
+  color: #8c5586;
   line-height: 1;
   display: inline-block;
 }
@@ -177,7 +177,7 @@ ul.no-list-style {
 }
 
 .filledblock:hover {
-  background: #4BABFF;
+  background: #8c5586;
   color: #fff;
   border-radius: 2px;
 }
@@ -225,7 +225,7 @@ ul.no-list-style {
   top: 9px;
   height: 6px;
   width: 6px;
-  border: 0.15em solid #0087ff;
+  border: 0.15em solid #774872;
   border-radius: 50px;
 }
 
@@ -235,8 +235,8 @@ ul.no-list-style {
   top: 12px;
   height: 6px;
   width: 6px;
-  border: 0.15em solid #0087ff;
-  background-color: #0087ff;
+  border: 0.15em solid #774872;
+  background-color: #774872;
   border-radius: 50px;
 }
 
@@ -250,7 +250,7 @@ ul.no-list-style {
 }
 
 .challenge-item.current {
-  background-color: #8cf;
+  background-color: #a0639a;
   color: #fff;
   margin-right: -3px;
   border-color: white;
@@ -265,7 +265,7 @@ ul.no-list-style {
 .challenge-name {
   text-transform: capitalize;
   font-weight: 900;
-  color: #0087ff;
+  color: #774872;
 }
 
 /* FOOTER
@@ -277,7 +277,7 @@ ul.no-list-style {
   width: 10px;
   height: 10px;
   border-bottom-left-radius: 8px;
-  border-color: #000;
+  border-color: #322b32;
   border-bottom: 1px solid;
   border-left: 1px solid;
   position: absolute;
@@ -301,7 +301,7 @@ ul.no-list-style {
   width: 10px;
   height: 10px;
   border-bottom-right-radius: 8px;
-  border-color: #000;
+  border-color: #322b32;
   border-bottom: 1px solid;
   border-right: 1px solid;
   position: relative;
@@ -331,23 +331,23 @@ ul.no-list-style {
 }
 
 .progress-circles .border-left {
-  border-left: 1px solid #0087ff;
+  border-left: 1px solid #774872;
 }
 
 .progress-circle {
   display: inline-block;
   width: 10px;
 	height: 10px;
-  border: 0.15em solid #0087ff;
+  border: 0.15em solid #774872;
 	border-radius: 50px;
 }
 
 .progress-circle.completed {
-  background: #0087ff;
+  background: #774872;
 }
 
 .progress-circle.completed + .progress-circle:not(.completed) {
-  background: #8cf;
+  background: #a0639a;
   animation: blink 1s steps(2, start) infinite;
 }
 

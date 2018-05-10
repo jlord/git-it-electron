@@ -3,7 +3,7 @@
 
 button {
   display: inline-block;
-  background-color: rgba(203, 203, 203, 0.38);
+  background-color: #322b32;
   color: #FFFFFF;
   padding: 6px 12px;
   margin-bottom: 0;
@@ -20,11 +20,11 @@ button:focus {
 }
 
 button:hover {
-  background-color: #badfff;
+  background-color: #201b20;
 }
 
 button:disabled {
-  background-color: rgba(24,105,177,1);
+  background-color: #695a69;
 }
 
 button .octicon {
@@ -39,30 +39,30 @@ button .octicon {
 
 .btn-primary {
   margin: 9px 0;
-  background: #0087ff;
+  background: #774872;
   color: #fff;
   border-radius: 2px;
   text-transform: inherit;
 }
 
 .btn-secondary {
-  background: #8cf;
+  background: #a0639a;
   color: #fff;
   border-radius: 2px;
 }
 
 .btn-white {
   background: #fff;
-  color: #0087ff;
+  color: #774872;
   border-radius: 2px;
 }
 
 .btn-outline {
-  border: 1px solid #8cf;
+  border: 1px solid #774872;
   background: none;
   padding: 4px 13px;
   border-radius: 3px;
-  color: #0087ff;
+  color: #774872;
   display: inline-block;
 }
 
@@ -75,7 +75,7 @@ button .octicon {
 }
 
 .btn-primary:hover {
-  background: #057ce7;
+  background: #8c5586;
 }
 
 .btn-large {
@@ -89,38 +89,38 @@ button .octicon {
 }
 
 .border-group-left {
-  border: 1px solid #0087ff;
+  border: 1px solid #774872;
   border-radius: 2px 0 0 2px;
   padding: 10px 14px;
 }
 
 .border-group-middle {
-  border-top: 1px solid #0087ff;
-  border-bottom: 1px solid #0087ff;
+  border-top: 1px solid #774872;
+  border-bottom: 1px solid #774872;
   padding: 10px 14px;
   margin-left: -4px;
 }
 
 .border-group-right {
-  border: 1px solid #0087ff;
+  border: 1px solid #774872;
   border-radius: 0 2px 2px 0;
   padding: 10px 14px;
 }
 
 .border-group-right.btn {
-  border: 1px solid #88CCFF;
-  color: #88CCFF;
-  border-left-color: #0087FF;
+  border: 1px solid #8c5586;
+  color: #8c5586;
+  border-left-color: #774872;
 }
 
 .border-group-right.btn:hover {
-  border: 1px solid #0087ff;
-  color: #0087ff;
+  border: 1px solid #774872;
+  color: #774872;
   cursor: pointer;
 }
 
 .border-group-container {
-  color: #0087ff;
+  color: #774872;
   padding: 20px 0;
   user-select: none;
 }

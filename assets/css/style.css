@@ -40,8 +40,7 @@
 body {
   font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
   line-height: 1.8em;
-  color: rgba(51, 57, 53, 0.83);
-  background-color: #f5f5f5;
+  color: #322b32;
   background-color: #fff;
   font-size: 15px;
   margin: 0;
@@ -60,12 +59,12 @@ h1, h2, h3, h4, .toc {
 }
 
 a {
-  color: #0087ff;
+  color: #774872;
   text-decoration: none;
 }
 
 a:hover {
-  color: #4BABFF;
+  color: #8c5586;
 }
 
 p {
@@ -74,10 +73,10 @@ p {
 }
 
 blockquote {
-  border-left: 2px solid rgba(51, 57, 53, 0.83);
+  border-left: 2px solid #322b32;
   padding-left: 18px;
   margin: 30px 0;
-  color: rgba(51, 57, 53, 0.83);
+  color: #322b32;
 }
 
 img {
@@ -172,7 +171,7 @@ img {
   text-transform: capitalize;
   font-size: 19px;
   font-weight: 800;
-  color: #4BABFF;
+  color: #8c5586;
   line-height: 1;
   display: inline-block;
 }
@@ -184,7 +183,7 @@ img {
 }
 
 .filledblock:hover {
-  background: #4BABFF;
+  background: #8c5586;
   color: #fff;
 }
 
@@ -230,7 +229,7 @@ img {
   top: 9px;
   height: 6px;
   width: 6px;
-  border: 0.15em solid #0087ff;
+  border: 0.15em solid #774872;
   border-radius: 50px;
 }
 
@@ -240,8 +239,8 @@ img {
   top: 12px;
   height: 6px;
   width: 6px;
-  border: 0.15em solid #0087ff;
-  background-color: #0087ff;
+  border: 0.15em solid #774872;
+  background-color: #774872;
   border-radius: 50px;
 }
 
@@ -255,8 +254,8 @@ img {
 }
 
 .challenge-item.current {
-  background-color: #8cf;
-  color: #0087FF;
+  background-color: #a0639a;
+  color: #774872;
   margin-right: -3px;
   border-color: white;
   border-radius: 0 2px 2px 0;
@@ -270,7 +269,7 @@ img {
 .challenge-name {
   text-transform: capitalize;
   font-weight: 900;
-  color: #0087ff;
+  color: #774872;
 }
 
 /* CHALLENGES
@@ -332,7 +331,7 @@ code.shell:before {
 
 .blue-border-box h2,
 .challenge h2 {
-  color: #08f;
+  color: #8c5586;
 }
 
 .blue-border-box h2,
@@ -378,14 +377,14 @@ code.shell:before {
 
 .challenge p {
   margin: 0;
-  color: #0087ff;
+  color: #774872;
 }
 
 /* VERIFY
    -------------------------------------------------------------------------- */
 
 .verify {
-  background-color: #0087ff;
+  background-color: #774872;
   color: #fff;
   padding: 18px;
   border-radius: 2px;
@@ -512,30 +511,30 @@ button .octicon {
 
 .btn-primary {
   margin: 9px 0;
-  background: #0087ff;
+  background: #774872;
   color: #fff;
   border-radius: 2px;
   text-transform: inherit;
 }
 
 .btn-secondary {
-  background: #8cf;
+  background: #a0639a;
   color: #fff;
   border-radius: 2px;
 }
 
 .btn-white {
   background: #fff;
-  color: #0087ff;
+  color: #774872;
   border-radius: 2px;
 }
 
 .btn-outline {
-  border: 1px solid #8cf;
+  border: 1px solid #774872;
   background: none;
   padding: 4px 13px;
   border-radius: 3px;
-  color: #0087ff;
+  color: #774872;
   display: inline-block;
 }
 
@@ -548,7 +547,7 @@ button .octicon {
 }
 
 .btn-primary:hover {
-  background: #057ce7;
+  background: #8c5586;
 }
 
 .btn-large {
@@ -562,38 +561,38 @@ button .octicon {
 }
 
 .border-group-left {
-  border: 1px solid #0087ff;
+  border: 1px solid #774872;
   border-radius: 2px 0 0 2px;
   padding: 10px 14px;
 }
 
 .border-group-middle {
-  border-top: 1px solid #0087ff;
-  border-bottom: 1px solid #0087ff;
+  border-top: 1px solid #774872;
+  border-bottom: 1px solid #774872;
   padding: 10px 14px;
   margin-left: -4px;
 }
 
 .border-group-right {
-  border: 1px solid #0087ff;
+  border: 1px solid #774872;
   border-radius: 0 2px 2px 0;
   padding: 10px 14px;
 }
 
 .border-group-right.btn {
-  border: 1px solid #88CCFF;
-  color: #88CCFF;
-  border-left-color: #0087FF;
+  border: 1px solid #a0639a;
+  color: #fff;
+  border-left-color: #774872;
 }
 
 .border-group-right.btn:hover {
-  border: 1px solid #0087ff;
-  color: #0087ff;
+  border: 1px solid #774872;
+  color: #774872;
   cursor: pointer;
 }
 
 .border-group-container {
-  color: #0087ff;
+  color: #774872;
   padding: 20px 0;
 }
 
@@ -632,7 +631,7 @@ button .octicon {
   width: 10px;
   height: 10px;
   border-bottom-left-radius: 8px;
-  border-color: #000;
+  border-color: #322b32;
   border-bottom: 1px solid;
   border-left: 1px solid;
   position: absolute;
@@ -656,7 +655,7 @@ button .octicon {
   width: 10px;
   height: 10px;
   border-bottom-right-radius: 8px;
-  border-color: #000;
+  border-color: #322b32;
   border-bottom: 1px solid;
   border-right: 1px solid;
   position: relative;
@@ -681,19 +680,19 @@ button .octicon {
    -------------------------------------------------------------------------- */
 
 .progress-circles .border-left {
-  border-left: 1px solid #0087ff;
+  border-left: 1px solid #774872;
 }
 
 .progress-circle {
   display: inline-block;
   width: 10px;
 	height: 10px;
-  border: 0.15em solid #0087ff;
+  border: 0.15em solid #774872;
 	border-radius: 50px;
 }
 
 .progress-circle.completed {
-  background: #0087ff;
+  background: #774872;
 }
 
 .progress-circle.completed + .progress-circle:not(.completed) {

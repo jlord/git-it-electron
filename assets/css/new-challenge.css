@@ -20,11 +20,11 @@
 }
 
 .blue-border.border-box {
-  border-color: #BADFFF;
+  border-color: #a0639a;
 }
 
 .blue-border.border-box::before {
-  color: #0087ff;
+  color: #774872;
 }
 
 .grey-border.border-box {
@@ -32,7 +32,7 @@
 }
 
 .grey-border.border-box::before {
-  color: rgba(51, 57, 53, 0.83);
+  color: #322b32;
 }
 
 
@@ -53,8 +53,8 @@
 }
 
 .blue-border.border-box code {
-  background: rgba(136, 204, 255, 0.15);
-  color: #4F6375;
+  background: #efefef;
+  color: #333;
 }
 
 .blue-border.border-box code.comment {
@@ -63,7 +63,7 @@
 }
 
 gre7-border.border-box code {
-  background: rgba(157, 166, 179, 0.16);
+  background: #efefef;
 }
 
 /* RESET MARGINS AND PADDINGS IN BOXES
@@ -88,26 +88,6 @@ gre7-border.border-box code {
 
 /* This option gives solid boxes an octicon tab */
 
- /*.solid-box::before {
-   margin: -40px -8px 0;
-   float: left;
-   border-radius: 2px;
-   font-family: 'Octicons';
-   font-weight: 200;
-   font-size: 32px;
-   padding: 4px 8px 0px;
- }*/
-
- /*.chal-goal.bright-blue.solid-box::before {
-   content: "\f07b";
-   background: rgba(136,204,255,1);
- }
-
- .chal-background.light-blue.solid-box::before {
-   content: "\f007";
-   background: #E6F6FF;
- }*/
-
 .solid-box {
   border-radius: 2px;
   padding: 24px;
@@ -115,17 +95,17 @@ gre7-border.border-box code {
 }
 
 .light-blue.solid-box {
-   color: #4F6375;
-   background: rgba(136, 204, 255, 0.18);
+   color: #333;
+   background: #efefef;
 }
 
 .bright-blue.solid-box {
   color: #fff;
-  background: rgba(136,204,255,1);
+  background: #efefef;
 }
 
 .bold-blue.solid-box {
-   background-color: #0087ff;
+   background-color: #774872;
    color: #fff;;
 }
 
@@ -217,7 +197,7 @@ gre7-border.border-box code {
 
 code {
   font-size: 0.8em;
-  background: rgba(157, 166, 179, 0.16);
+  background: #efefef;
   padding: 6px 6px 3px 6px;
   border-radius: 2px;
   font-family: 'Liberation Mono', Monaco, Courier New, monospace;
@@ -231,7 +211,7 @@ code.shell:before {
 
 .blue-border-box code {
   border: none;
-  background: rgba(136, 204, 255, 0.15);
+  background: #efefef;
 }
 
 .prenext {
@@ -248,7 +228,7 @@ code.shell:before {
    -------------------------------------------------------------------------- */
 
 .blue-border-box {
-  border: 1px solid #BADFFF;
+  border: 1px solid #efefef;
   padding: 18px;
   margin: 18px 0 36px;
   border-radius: 2px;
@@ -256,6 +236,6 @@ code.shell:before {
 
 .blue-border-box code {
   border: none;
-  color: #4F6375;
-  background: rgba(136, 204, 255, 0.15);
+  color: #333;
+  background: #efefef;
 }

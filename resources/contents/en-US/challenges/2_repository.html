@@ -3,7 +3,7 @@
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2> Repositories</h2>
+    <h2>Repositories</h2>
     <p>A <strong>repository</strong> is a collection of related items. In our case, when writing software, it is a
         collection of files related to a software project. You can imagine it as a project folder with all the relevant
         files inside of it. In fact, that's what it will look like on your computer anyways. Sometimes they're called
@@ -19,16 +19,14 @@
     <h2>Using Terminal</h2>
     <p><strong>Terminal</strong> (or Bash) is a way to instruct your computer to do things by typing commands rather
         than clicking applications with your mouse. You can rename files, open files, create new folders, move between
-        directories (folders) and more all by running typed commands. You can even use a text editor for code (like <a
-                href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) in your terminal and
-        never have to leave!</p>
+        directories (folders) and more all by running typed commands.</p>
 
     <p>Besides navigating your computer, you can also use programs in Terminal that have a <strong>command-line
         interface (CLI)</strong>, meaning they can be run with commands in terminal. Git is one of these. The first part
         of the command lets your computer know you're talking to Git. The parts following that are the commands and the
         different options you want Git to act on.</p>
 
-    <p>In Git-it you'll learn a few basic command-line actions (in addition to Git commands) for navigating your
+    <p>In this tutorial you'll learn a few basic command-line actions (in addition to Git commands) for navigating your
         computer; they're described within the steps.</p>
 </div>
 
@@ -42,10 +40,16 @@
 
     <p>In your terminal window, type these commands, one at a time, pressing enter/return after each.</p>
 
-    <p>First, make a new folder:<br><span class="inline-tip">Tip: mkdir stands for <em>make directory</em></span></p>
-    <code class="shell">mkdir hello-world</code>
+    <p>Firstly, let's make a new folder for all of our projects we'll do on the course:<br><span class="inline-tip">Tip: mkdir stands for <em>make directory</em></span></p>
+    <code class="shell">mkdir Projects</code>
 
     <p>Then go into that folder:<br><span class="inline-tip">Tip: cd stands for <em>change directory</em></span></p>
+    <code class="shell">cd Projects</code>
+
+    <p>Make a new folder for the project:</p>
+    <code class="shell">mkdir hello-world</code>
+
+    <p>Then go into that folder:</p>
     <code class="shell">cd hello-world</code>
 
     <p>Finally, tell Git to initialize (start tracking) the folder you are now in:</p>
@@ -71,4 +75,10 @@
         <li><strong>Turn Git on for a folder</strong></li>
         <code class="shell">git init</code>
     </ul>
+</div>
+
+<div class="chal-tip grey-border border-box">
+    <h3>Initialising a Git repository in the correct folder</h3>
+    <p>One of the most common mistakes among students when first starting out with Git, is to initialise their Git repository (<code class="shell">git init</code>) inside their home folder (<code class="shell">~</code>) or their Projects folder.</p>
+    <p>Always ensure you only initialize a new repository inside a single project folder so each project has its own repository.</p>
 </div>
