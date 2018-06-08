@@ -1,0 +1,70 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Fusionnez votre branche localement, supprimez la branche et tirez depuis 'upstream'.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Nettoyage</h2>
+
+    <p>Une fois que vous n'avez plus besoin de branches, vous pouvez les supprimer localement et à distance. 
+    Ceci est utile pour que l'on ne se retrouvent avec une pile de vieilles branches devenues inutiles.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Fusionner localement</h3>
+    <p>Votre pull request a été fusionnée! Votre branche a été fusionnée dans la branche 'gh-pages' de l'original sur GitHub.
+        Vous pouvez également fusionner votre branche localement. 
+    </p>
+
+    <p>Tout d'abord, passez sur la branche avec laquelle vous souhaitez fusionner, dans ce cas la branche 'gh-pages'.</p>
+    <p><code class="shell">git checkout gh-pages</code></p>
+
+    <p>Maintenant, dites à Git quelle branche vous souhaitez fusionner, dans ce cas, votre branche de fonctionnalité 
+    qui commence par 'add-'.</p>
+    <p><code class="shell">git merge &#60;BRANCHNAME&#62;</code></p>
+
+    <p>Nettoyer en supprimant la branche de fonctionnalité. Maintenant qu'elle a été fusionné, vous n'en avez plus 
+    vraiment besoin.</p>
+    <p><code class="shell">git branch -d &#60;BRANCHNAME&#62;</code></p>
+
+    <p>Vous pouvez également supprimer la branche de votre remote sur GitHub:</p>
+    <p><code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Tirer depuis Upstream</h3>
+    <p>Last but not least, l'original a changé depuis que votre pull request a été fusionnée : Reporobot a ajouté 
+    votre nom au site Web! Si vous tirez ces changements depuis le remote 'upstream', vous serez à jour et disposerez 
+    également de cette version. Vous pourrez le voir en live sur la page dont l'adresse est de cette forme : 
+    yourusername.github.io/patchwork.
+    </p>
+
+    <p>Pour tirer depuis le dépôt original sur le remote upstream:</p>
+    <p><code class="shell">git pull upstream gh-pages</code></p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Félicitations!</h2>
+    <p>Vous avez créé des dépôts locaux, des dépôts à distance, travaillé avec un collaborateur, poussé, tiré et joint 
+    les millions d'autres personnes qui développent et enrichissent l'open source!</p>
+
+    <p>Visitez <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> pour voir votre 
+    nom incorporé! Vous voulez continuer et aller plus loin ? Regardez la section <a href="../pages/resources.html#what-next">What Next</a>
+    dans les ressources de cette application.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Fusionner une branche dans la branche courante</strong></li>
+        <code class="shell">git merge &#60;BRANCHNAME&#62;</code>
+        <li><strong>Changer la branche sur laquelle vous travaillez</strong></li>
+        <code class="shell">git checkout &#60;BRANCHNAME&#62;</code>
+        <li><strong>Supprimer une branche locale</strong></li>
+        <code class="shell">git branch -d &#60;BRANCHNAME&#62;</code>
+        <li><strong>Supprimer une branche distante</strong></li>
+        <code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
+        <li><strong>Tirer depuis une branche distante</strong></li>
+        <code class="shell">git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+    </ul>
+</div>

@@ -1,0 +1,107 @@
+<p>Voici les commandes de terminal et Git utilisées dans les défis de Git-it.</p>
+
+<h2>Bash/Terminal Basics</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Créer un nouveau répertoire</strong></li>
+        <code class="shell">mkdir &#60;FOLDERNAME&#62;</code>
+        <li><strong>Naviguer à l'interieur d'un répertoire</strong></li>
+        <code class="shell">cd &#60;FOLDERNAME&#62;</code>
+        <li><strong>Lister le contenue d'un répertoire</strong></li>
+        <code class="shell">ls </code>
+    </ul>
+</div>
+
+<h2>Configuring Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Vérifier la version de Git</strong></li>
+        <code>git --version</code>
+        <li><strong>Configurer votre nom</strong></li>
+        <code>git config --global user.name "Your Name"</code>
+        <li><strong>Configurer votre email</strong></li>
+        <code>git config --global user.email youremail@example.com</code>
+        <li><strong>Configurer votre compte Github (case sensitive)</strong></li>
+        <code>git config --global user.username uSeRnAmE</code>
+    </ul>
+</div>
+
+<h2>Git Basics</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Activer Git pour un dossier</strong></li>
+        <code class="shell">git init</code>
+        <li><strong>Vérifier l'état des changements dans un dossier</strong></li>
+        <code class="shell">git status</code>
+        <li><strong>Affichier les changements des fichiers</strong></li>
+        <code class="shell">git diff</code>
+        <li><strong>Ajouter les changements d'un fichier au prochain commit</strong></li>
+        <code class="shell">git add &#60;FILENAME&#62;</code>
+        <li><strong>Ajouter tous les changements</strong></li>
+        <code class="shell">git add .</code>
+        <li><strong>Pour soumettre (aka commit) les changements ajoutés avec un message de description</strong>
+        </li>
+        <code class="shell">git commit -m "your commit message"</code>
+        <li><strong>Copier un dépôt en local</strong></li>
+        <code class="shell">git clone &#60;URL&#62;</code>
+    </ul>
+</div>
+<h2>Git Branches</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Créer une nouvelle branche</strong></li>
+        <code class="shell">git branch &#60;BRANCHNAME&#62;</code>
+        <li><strong>Se déplacer sur une branche</strong></li>
+        <code class="shell">git checkout &#60;BRANCHNAME&#62;</code>
+        <li><strong>Créer et se déplacer sur la nouvelle branche</strong></li>
+        <code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code>
+        <li><strong>Lister les branches</strong></li>
+        <code class="shell">git branch</code>
+        <li><strong>Renommer la branche courante</strong></li>
+        <code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code>
+    </ul>
+</div>
+
+<h2>Git Remotes</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Ajouter un remote</strong></li>
+        <code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code>
+        <li><strong>Configurer l'URL vers un remote</strong></li>
+        <code class="shell">git remote set-url &#60;REMOTENAME&#62; &#60;URL&#62;</code>
+        <li><strong>Lister les remotes</strong></li>
+        <code class="shell">git remote -v</code>
+    </ul>
+</div>
+
+<h2>Pulling in Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Pull (tirer) les derniers changements</strong></li>
+        <code class="shell">git pull</code>
+        <li><strong>Pull les changement depuis une branche sur un remote</strong></li>
+        <code class="shell">git pull &#60;REMOTENAME&#62; &#60;REMOTEBRANCH&#62;</code>
+        <li><strong>Voir les changement avant de les tirer effectivement</strong></li>
+        <code class="shell">git fetch --dry-run</code>
+    </ul>
+</div>
+
+<h2>Push &#38; Merge in Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Push (pousser) les changements soumis</strong></li>
+        <code class="shell">git push &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+        <li><strong>Merge une branche dans la branche courante</strong></li>
+        <code class="shell">git merge &#60;BRANCHNAME&#62;</code>
+    </ul>
+</div>
+
+<h2>Deleting Remotes and Branches in Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Suprimer une branche locale</strong></li>
+        <code class="shell">git branch -D &#60;BRANCHNAME&#62;</code>
+        <li><strong>Suprimer une branche distante</strong></li>
+        <code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
+    </ul>
+</div>
