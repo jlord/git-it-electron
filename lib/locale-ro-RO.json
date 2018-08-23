@@ -1,0 +1,46 @@
+{
+  "n": {
+    ".gitignore": ".gitignore",
+    "repository": "depozit",
+    "repositories": "depozite",
+    "branch": "ramură",
+    "branches": "ramuri",
+    "fork": "bifurcație",
+    "forks": "bifurcații",
+    "request": "cerere",
+    "pull request": "cerere de retragere",
+    "pull requests": "cereri de retragere",
+    "commit": "operație",
+    "commits": "operații",
+    "upstream": "amonte",
+    "feature": "funcții",
+    "status": "stare",
+    "diff": "diferențe",
+    "readme": "README",
+    "collaborator": "colaborator",
+    "collaborators": "colaboratori",
+    "remote": "distant",
+    "remotes": "distanți",
+    "contributing": "contributor",
+    "connections": "connexiuni"
+  },
+  "v": {
+    "add": "adaugă",
+    "fork": "bifurcă",
+    "forked": "bifurcat",
+    "clone": "clonează",
+    "push": "împinge",
+    "close": "închide",
+    "pull": "retrage",
+    "commit": "operează",
+    "merge": "fuziona",
+    "merged": "fuzionat",
+    "checkout": "schimbă",
+    "stage": "indexează"
+  },
+  "adj": {
+    "merged": "fuzionat",
+    "forked": "bifurcat",
+    "remote": "distant"
+  }
+}
