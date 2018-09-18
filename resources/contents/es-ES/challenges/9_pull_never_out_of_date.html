@@ -1,0 +1,39 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Mantén tus archivos actualizados halando (pulling) los cambios de los colaboradores.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h3>Halando (pulling) de un remoto</h3>
+    <p>Si estás trabajando en algo con alguien más necesitas estar al día con los últimos cambios. Allí vas a querer
+        <strong>halar (pull)</strong> cualquiera de los cambios que pueden haber sido hechos al repositorio central en GitHub.</p>
+
+    <img src="../../../assets/imgs/pull.png"
+         alt="A diagram shows a computer pulling information down from a repository's website" width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>¿Qué ha estado haciendo Reporobot?</h3>
+    <p>Revisa si Reporobot ha hecho algún cambio en tu branch halando cualquier cambio hecho en el remoto con nombre 'origin' en
+        GitHub:</p>
+
+    <p><code class="shell">git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code></p>
+
+    <p>Si nada ha cambiado, Git te mostrará un mensaje similar a 'Already up-to-date'. Si hay cambios, Git fusionará esos cambios
+        en versión local.</p>
+
+    <p>¿Hizo Reporobot cambios? Git te dice dónde fueron los cambios. Puedes abrir ese archivo con los cambios que Reporobot
+        hizo. ¡Sorpresa, Reporobot es un artista!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Git status</strong></li>
+        <code class="shell">git status</code>
+        <li><strong>Halar (pull) los cambios desde una branch remota</strong></li>
+        <code class="shell">git pull &lt;REMOTENAME&gt; &lt;REMOTEBRANCH&gt;</code>
+        <li><strong>Ver los cambios de una rama remota antes de halarlos</strong></li>
+        <code class="shell">git fetch --dry-run</code>
+    </ul>
+</div>

@@ -1,0 +1,74 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Crea un nuevo repositorio en tu computadora.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2> Repositorios</h2>
+    <p>Un <strong>repositorio</strong> es una colección de elementos relacionados. En nuestro caso, cuándo estamos escribiendo software, es una
+        colección de archivos relacionados a un proyecto de software. Puedes imaginarlo cómo la carpeta de un proyecto con todos los archivos
+        relevantes en us interior. De hecho, es cómo se verá en tu computadora de todas maneras. Algunas veces son llamados
+        "repos" cómo abreviación.</p>
+
+    <img src="../../../assets/imgs/repos.png" alt="A drawing of four file folders" width="600">
+
+    <p>Le dices a Git lo que es tu proyect y Git empezará a hacerle seguimiento a todos los cambios en esa carpeta. Esto es lo que conforma
+        repositorio de Git: una carpeta de elementos que son seguidos por Git. Git hace seguimiento cuándo se añaden archivos, cuándo se extraen incluso cuándo una
+        simple letra en un simple archivo ha sido cambiada. A todo esto Git le añade quién y cuándo lo hizo. En software,
+        al proceso de hacer seguimiento a los cambios se le llama <strong>control de versiones</strong>.</p>
+
+    <h2>Usando la Terminal(consola)</h2>
+    <p><strong>Terminal</strong> (o Bash, o consola o línea de comandos) es la manera de decirle a tu computadora que haga cosas escribiendo comandos en vez de
+        dar click en las aplicaciones con el ratón (mouse). Puedes renombrar archivos, abrir archivos, crear nuevas carpetas, moverse entre
+        directorios (carpetas) y mucho más sólo con escribir comandos. Puedes incluso usar un editor de texto para código (como <a
+                href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) en tu terminal y
+        y nunca dejar de usarla!</p>
+
+    <p>Además de navegar en tu computadora, puedes usar programas en la Terminal que tienen <strong>Interfaz de línea de comandos (command-line
+        interface CLI)</strong>, esto significa que pueden funcionar con comandos desde la terminal. Git es uno de estos. La primera parte
+        del comando se le permiet a tu computadora que le estás hablando a Git. Las siguientes partes son comandos y
+        diferentes opciones que quieres Git haga.</p>
+
+    <p>En Git-it aprenderás algunas acciones de línea de comandos básicas (además de los comandos de Git) para navegar tu
+        computadora; ellos son descritos dentro de los pasos.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Crear un Repositorio</h3>
+    <p>Vas a crear un nuevo proyecto en una carpeta y entonces iniciarás un repositorio de Git. Llamaremos la carpeta 'hello-world'
+      en este reto, pero puedes elegir el nombre que quieras si ya tienes una carpeta con este nombre (es un nombre común para crear proyectos de prueba).</p>
+
+    <p>Es tiempo de abrir tu terminal!
+    <p>
+
+    <p>En la ventana de tu terminal, escribe estos comandos, uno a la vez, presionando enter después de cada uno.</p>
+
+    <p>Primero, crear una nueva carpeta:<br><span class="inline-tip">Ten en cuenta: mkdir hace referencia a <em>make directory</em> (crear directorio) del idioma inglés</span></p>
+    <code class="shell">mkdir hello-world</code>
+
+    <p>Ahora vamos a situarnos dentro de la carpeta:<br><span class="inline-tip">Ten en cuenta: cd hace referencia a <em>change directory</em></span> (cambiar directorio) del idioma inglés</p>
+    <code class="shell">cd hello-world</code>
+
+    <p>Finalmente, dile a Git que inicie (empiece el seguimiento) de la carpeta en la que estás situado:</p>
+    <code class="shell">git init</code>
+
+    <p>El último comando debe retornar algo cómo "Initialized empty Git repository". Los otros comandos
+        no tienen retorno.</p>
+
+    <p>Lo lograste! Si quieres estar seguro que es repositorio de Git, escribe <code>git status</code> y si 
+        no retorna 'fatal: Not a git repository...', lo has logrado!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Crear nueva carpera (make directory)</strong></li>
+        <code class="shell">mkdir &#60;NOMBREDELACARPETA&#62;</code>
+        <li><strong>Navegar o moverse hacia una carpeta existente (change directory)</strong></li>
+        <code class="shell">cd &#60;NOMBREDELACARPETA&#62;</code>
+        <li><strong>Listar los contenidos de una carpeta</strong></li>
+        <code class="shell">ls </code>
+        <li><strong>Iniciar Git en una carpeta</strong></li>
+        <code class="shell">git init</code>
+    </ul>
+</div>

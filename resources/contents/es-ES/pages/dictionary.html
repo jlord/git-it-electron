@@ -1,0 +1,108 @@
+<p>A continuación están los comandos de consola (terminal, shell) y Git usados en los retos de Git-it.</p>
+
+<h2>Comandos básico Bash/Terminal</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Crear nueva carpeta (crear nuevo directorio)</strong></li>
+        <code class="shell">mkdir &#60;NOMBREDELDIRECTORIO&#62;</code>
+        <li><strong>Navegar hacia una carpeta (directorio) existente</strong></li>
+        <code class="shell">cd &#60;NOMBREDELDIRECTORIO&#62;</code>
+        <li><strong>Listar los elementos que hay dentro de una carpeta</strong></li>
+        <code class="shell">ls </code>
+    </ul>
+</div>
+
+<h2>Configuración de Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Verificar la versión de Git</strong></li>
+        <code>git --version</code>
+        <li><strong>Establecer tu nombre</strong></li>
+        <code>git config --global user.name "Your Name"</code>
+        <li><strong>Establecer tu email</strong></li>
+        <code>git config --global user.email youremail@example.com</code>
+        <li><strong>Establecer tu cuenta de Github (sensitivo a mayúsculas y minúsculas)</strong></li>
+        <code>git config --global user.username uSeRnAmE</code>
+    </ul>
+</div>
+
+<h2>Comandos básicos de Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Iniciar Git dentro de una carpeta</strong></li>
+        <code class="shell">git init</code>
+        <li><strong>Verificar el estado de los cambios</strong></li>
+        <code class="shell">git status</code>
+        <li><strong>Ver los cambios dentro de los archivos</strong></li>
+        <code class="shell">git diff</code>
+        <li><strong>Agregar los cambios de un archivo para crear un commit</strong></li>
+        <code class="shell">git add &#60;NOMBREDEARCHIVO&#62;</code>
+        <li><strong>Agregar todos los cambios en todos los archivos</strong></li>
+        <code class="shell">git add .</code>
+        <li><strong>Crear un commit (guardar) los cambios que agregaste con un corto mensaje descriptivo de los cambios</strong>
+        </li>
+        <code class="shell">git commit -m "mensaje descriptivo"</code>
+        <li><strong>Copiar un repositorio a tu computadora</strong></li>
+        <code class="shell">git clone &#60;URL&#62;</code>
+    </ul>
+</div>
+
+<h2>Ramas (branches) de Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Crear una nueva rama (branch)</strong></li>
+        <code class="shell">git branch &#60;NOMBREDELARAMA&#62;</code>
+        <li><strong>Moverse a una rama</strong></li>
+        <code class="shell">git checkout &#60;NOMBREDELARAMA&#62;</code>
+        <li><strong>Crear una rama nueva y moverse inmediatamente a la misma</strong></li>
+        <code class="shell">git checkout -b &#60;NOMBREDELARAMA&#62;</code>
+        <li><strong>Listado de las ramas</strong></li>
+        <code class="shell">git branch</code>
+        <li><strong>Renombrar la rama en la cual estás ubicado</strong></li>
+        <code class="shell">git branch -m &#60;NUEVONOMBREDELARAMA&#62;</code>
+    </ul>
+</div>
+
+<h2>Conexiones a repositorios remotos en Git (Git Remotes)</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Agregar una conexión remota</strong></li>
+        <code class="shell">git remote add &#60;NOMBREDELREMOTO&#62; &#60;URLDELREMOTO&#62;</code>
+        <li><strong>Agregar o cambiar la url de un remoto</strong></li>
+        <code class="shell">git remote set-url &#60;NOMBREDELREMOTO&#62; &#60;NUEVAURLDELREMOTO&#62;</code>
+        <li><strong>Ver las conexiones remotas</strong></li>
+        <code class="shell">git remote -v</code>
+    </ul>
+</div>
+
+<h2>Halar (pull) los cambios en Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Halar (pull in) cambios</strong></li>
+        <code class="shell">git pull</code>
+        <li><strong>Halar (pull in) los cambios desde una rama remota</strong></li>
+        <code class="shell">git pull &#60;NOMBREDELREMOTO&#62; &#60;NOMBRERAMAREMOTA&#62;</code>
+        <li><strong>Ver cambios remotos antes de halar</strong></li>
+        <code class="shell">git fetch --dry-run</code>
+    </ul>
+</div>
+
+<h2>Empujar (push) &#38; en Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Empujar (push) cambios</strong></li>
+        <code class="shell">git push &#60;NOMBREDELREMOTO&#62; &#60;NOMBREDELARAMA&#62;</code>
+        <li><strong>Fucionar (merge) una rama a la rama actual</strong></li>
+        <code class="shell">git merge &#60;NOMBREDELARAMA&#62;</code>
+    </ul>
+</div>
+
+<h2>Borrar conexiones remotas y ramas en Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Borrar una rama local</strong></li>
+        <code class="shell">git branch -D &#60;NOMBREDELARAMA&#62;</code>
+        <li><strong>Borrar una rama remota</strong></li>
+        <code class="shell">git push &#60;NOMBREREMOTO&#62; --delete &#60;NOMBREDELARAMA&#62;</code>
+    </ul>
+</div>

@@ -1,0 +1,125 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>añade una branch, localmente, a tu repositorio bifurcado para trabajar en tus cambios.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Branches (ramas)</h2>
+    <p>Los repositorios de Git usan ramas para separar el trabajo cuándo es necesario. Es una práctica común que cuándo se trabaja en un proyecto con
+        otras personas crear una <strong>branch</strong> mantener tus cambios. De esta manera puedes hacer
+        tu trabajo mientras que la rama principal, comunmente llamada 'master', mantiene estable. Cuándo el trabajo en tu rama es finalizado
+        fusionas tu rama con la rama 'master'.</p>
+
+    <p>El siguiente diagrama muestra cómo puedes crear una rama a partir de 'master', hacer el trabajo y luego fusionar esos cambios de vuelta
+        a 'master'. Incluso puedes crear una rama desde tu rama, la rama 'master' no necesariamente tiene que ser
+        la base.</p>
+
+    <img src="../../../assets/imgs/branches.png"
+         alt="A diagram showing a horizontal line, representing the master branch, with another line branching off the top and later re-joining the original. Another line branches off the master branch line from below and yet another branch branches off of that. Both of these meet back up with the original master line, too."
+         width="100%">
+
+    <p>Para una mejor entendimiento de cómo funcionan las ramas en un proyecto, revisa la guía de GitHub: <a
+            href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a> (en inglés)</p>
+
+    <h2>Páginas de GitHub</h2>
+    <p>GitHub automáticamente servirá y alojará sitio web de archivos estáticos en las ramas branches nombradas cómo 'gh-pages'. Este servicio gratuito
+        es llamado <a href="http://pages.github.com">GitHub Pages</a>. Cómo el proyecto bifurcado crea un sitio web, su
+        rama principal se llama 'gh-pages' en vez de 'master'. Todos los repositorios que tienen una rama 'gh-pages' con sitio web
+        pueden ser encontradas, en línea, usando el siguiente patrón en la URL:</p>
+
+    <code>http://githubusername.github.io/repositoryname</code>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Crea una rama</h3>
+    <p>Cuándo creas una rama, Git copia todo lo que hay en la rama que estás actualmente y lo pone en la rama
+        que acabas de crear.</p>
+
+    <p>Estando dentro de tu repositorio local 'patchwork', escribe <code>git status</code> para ver en cuál rama
+        estás actualmente. Git podría decirte que estás en la rama 'gh-pages'.</p>
+
+    <p>Ahora crea una nueva rama y nombrala "add-&#60;username&#62;", donde 'username' es tu nombre de usuario de GitHub. Por ejemplo,
+        "add-jlord". <strong>Las ramas son sensibles a mayúsculas así que nombra tu rama exactamente de la misma forma que aparece tu cuenta de usuario de GitHub</strong>.</p>
+
+    <p><code class="shell">git branch &#60;BRANCHNAME&#62;</code></p>
+
+    <p>Ahora tienes una rama con un nombre que es idéntica a la rama 'gh-pages'.</p>
+
+    <p>Para pasarte a esa rama debes hacer <strong>checkout</strong> a ella. Ve a la nueva rama:</p>
+
+    <p><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Paso: Crear un nuevo archivo</h3>
+    <p>Vuelve a tu editor de texto:</p>
+    <ul>
+        <li>Crea un archivo llamado <span style="white-space: nowrap;">"add-&#60;USERNAME&#62;.txt"</span>, dónde
+            'username' es tu nombre de usuario. Por ejemplo, "add-jlord.txt".
+        </li>
+        <li>Entonces, sólo escribe tu nombre de usuario GitHub en él, eso es todo. Por ejemplo, Yo escribiría 'jlord'.</li>
+        <li>Guarda este archivo en la carpeta 'contributors' dentro de Patchwork: <strong>Patchwork/contributors/add-yourusername.txt</strong>
+        </li>
+        <li>Siguiente paso, Verifica los cambios (mira abajo).</li>
+    </ul>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Check-in</h3>
+    <p>Haz los siguientes pasos para guardar tus cambios: </p>
+
+    <p><code class="shell">git status</code></p>
+    <p><code class="shell">git add &#60;contributors/FILENAME&#62;</code></p>
+    <p><code class="shell">git commit -m "mensaje de commit"</code></p>
+
+    <p>Ahora haz push de tus cambios <b>al fork</b>, 'origin', en GitHub:</p>
+    <p><code class="shell">git push origin &#60;BRANCHNAME&#62;</code></p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-no-pass grey-border border-box">
+    <h4>Permission denied...error: 403</h4>
+    <p>Estas empujando cambios a un repositorio en el cual no tienes permisos de escritura. En este caso, vas a queerer enviarlos a
+        el original 'jlord/patchwork'. Asegurate que estás apuntando a 'origin' y que origin apunta a tu fork en GitHub. To check and see what your remotes are and where they point run <code>git remote -v</code>.
+        Deberías tener a 'upstream' apuntando a 'jlord/patchwork' y 'origin' apuntando a 'yourusername/patchwork'.
+
+    <p>Para arreglar un remoto que apunta a la dirección equivocada puedes cambiar su url: <code>git remote set-url origin
+        <URLTOYOURFORK>
+    </code>.
+
+    <h4>Authentication failed...error: 401</h4>
+    <p>Tu identidad no pudo ser verificada. Pueden que tengas (Autenticación a dos pasos) activada en este caso tienes que usar un toke de acceso personal cómo tu contraseña. 
+        Puedes generar uno en <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use">siguiendo las instrucciones</a>. 
+        Necesitarás mantenelo y usarlo en lugar de tu contraseña cuándo sea requerido. También puedes 
+        <a href="https://help.github.com/articles/caching-your-github-password-in-git/">guardar este token de acceso</a> en tu computadora para re usarlo.</p>
+
+    <h4>El archivo no está en la carpeta contributors</h4>
+    <p>El archivo creado debería estar en el interior de la carpeta 'contributors' en el repositorio Patchwork repository. Si
+        lo pusiste en otro lugar, simplemente usa el Finder el explorador de windows para mover el archivo a la carpeta. Puedes
+        verificar con <code>git status</code> otra vez y verás tus cambios. Añade y haz commit "all" (-A) de
+        estos cambios (adiciones y borrados) con los siguientes comandos.</p>
+    <p><code class="shell">git add -A</code></p>
+    <p><code class="shell">git commit -m "mover archivo a la carpeta contributors"</code></p>
+
+    <h4>Nombre de la rama esperado: _____</h4>
+    <p>El nombre de la rama debería coincidir con tu nombre de usuario exactament. Para cambiar el nombre de la rama:</p>
+    <p><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></p>
+    <p>Una vez hagas estos cambios, verifica nuevamente!</p>
+</div>
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Crear y moverse a la rama en una sola línea</strong></li>
+        <li><code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Crear una rama nueva</strong></li>
+        <li><code class="shell">git branch &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Moverse a una rama</strong></li>
+        <li><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Listado de las ramas</strong></li>
+        <li><code class="shell">git branch</code></li>
+        <li><strong>Renombrar la rama en la que estás situado</strong></li>
+        <li><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></li>
+        <li><strong>Vericar la rama en la que estás y su estado</strong></li>
+        <li><code class="shell">git status</code></li>
+    </ul>
+</div>
