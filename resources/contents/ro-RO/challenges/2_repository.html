@@ -1,74 +1,73 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Create a new repository on your computer.</p>
+    <p>Creează un depozit nou pe calculatorul tău.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2> Repositories</h2>
-    <p>A <strong>repository</strong> is a collection of related items. In our case, when writing software, it is a
-        collection of files related to a software project. You can imagine it as a project folder with all the relevant
-        files inside of it. In fact, that's what it will look like on your computer anyways. Sometimes they're called
-        "repos" for short.</p>
+    <h2>Depozite</h2>
+    <p>Un <strong>depozit</strong> este o colecție de elemente înrudite. În cazul nostru, când scriem soft, este o
+        colecție de fișiere legate de un proiect soft. Ți-l poți imagina ca pe un folder de proiect cu toate fișierele
+        relevante în interiorul său. De fapt, așa va arăta pe calculatorul tău oricum. Uneori sunt numite
+        "depouri" pe scurt.</p>
 
     <img src="../../../assets/imgs/repos.png" alt="A drawing of four file folders" width="600">
 
-    <p>You tell Git what your project is and Git will start tracking all of the changes to that folder. This makes it a
-        Git repository: a folder of items being tracked by Git. Git tracks when files are added, subtracted or even a
-        single letter in a single file is changed. All of this plus who did it and when is tracked by Git. In software,
-        tracking changes like this is called <strong>version control</strong>.</p>
+    <p>Îi spui lui Git ce este proiectul tău și Git va începe să urmărească toate schimbările din acel folder. Această îl face
+        depozit Git: un folder cu elemente care sunt urmărite de Git. Git urmărește când sunt adăugate fișiere, șterse sau chiar
+        dacă o singură literă dintr-un singur fișier se schimbă. Toate acestea plus cine a făcut-o când este urmărit de Git. În soft,
+        urmărirea schimbărilor în acest fel se numește <strong>controlul versiunii</strong>.</p>
 
-    <h2>Using Terminal</h2>
-    <p><strong>Terminal</strong> (or Bash) is a way to instruct your computer to do things by typing commands rather
-        than clicking applications with your mouse. You can rename files, open files, create new folders, move between
-        directories (folders) and more all by running typed commands. You can even use a text editor for code (like <a
-                href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) in your terminal and
-        never have to leave!</p>
+    <h2>Folosirea terminalului</h2>
+    <p><strong>Terminalul</strong> (sau Bash) este un mod de a-ți instrui calculatorul să facă lucruri tastând comenzi în loc
+        de a face click pe aplicații cu mouse-ul. Poți redenumi fișiere, deschide fișiere, crea noi foldere, naviga între
+        directoare (foldere) și mai multe, toate executând comenzi tastate. Poți chiar folosi un editor de text pentru cod (ca <a
+                href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) în terminal și să nu fie
+        nevoie să pleci niciodată!</p>
 
-    <p>Besides navigating your computer, you can also use programs in Terminal that have a <strong>command-line
-        interface (CLI)</strong>, meaning they can be run with commands in terminal. Git is one of these. The first part
-        of the command lets your computer know you're talking to Git. The parts following that are the commands and the
-        different options you want Git to act on.</p>
+    <p>Pe lângă navigarea prin calculator, poți de asemenea folosi programe în terminal care au <strong>interfețe în linie
+        de comandă (CLI)</strong>, însemnând că pot fi executate cu comenzi din terminal. Git este unul dintre acestea. Prima parte
+        a comenzii îi spune calculatorului tău că vorbești cu Git. Părțile după aceea sunt comenzile și
+        diferitele opțiuni pe baza cărora vrei să acționeze Git.</p>
 
-    <p>In Git-it you'll learn a few basic command-line actions (in addition to Git commands) for navigating your
-        computer; they're described within the steps.</p>
+    <p>În Git-it vei învăța câteva acțiuni de bază în linia de comandă (pe lângă comenzile Git) pentru a naviga în calculator;
+        sunt descrise în pași.</p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Create a Repository</h3>
-    <p>You're going to create a new project folder and then initialize it as a Git repository. We'll name the folder 'hello-world'
-      in this challenge, but you can choose a different name if you already have a folder named this (it's a common first project name).</p>
+    <h3>Creează un depozit</h3>
+    <p>Vei crea un nou folder de proiect și apoi îl vei inițializa ca depozit Git. Vom numi folderul 'hello-world'
+      în această provocare, dar poți alege un nume diferit dacă ai deja un folder numit așa (este un nume comun pentru un prim proiect).</p>
 
-    <p>Time to open your terminal!
+    <p>E momentul să îți deschizi terminalul!
     <p>
 
-    <p>In your terminal window, type these commands, one at a time, pressing enter/return after each.</p>
+    <p>În fereastra terminalului, tastează aceste comenzi, pe rând, apăsând ENTER după fiecare.</p>
 
-    <p>First, make a new folder:<br><span class="inline-tip">Tip: mkdir stands for <em>make directory</em></span></p>
+    <p>Mai întâi, creeaza un nou folder:<br><span class="inline-tip">Sugestie: mkdir înseamnă <em>make directory (creează director)</em></span></p>
     <code class="shell">mkdir hello-world</code>
 
-    <p>Then go into that folder:<br><span class="inline-tip">Tip: cd stands for <em>change directory</em></span></p>
+    <p>Apoi du-te în acel folder:<br><span class="inline-tip">Sugestie: cd înseamnă <em>change directory (schimbă director)</em></span></p>
     <code class="shell">cd hello-world</code>
 
-    <p>Finally, tell Git to initialize (start tracking) the folder you are now in:</p>
+    <p>La final, spune-i lui Git să inițializeze (să înceapă urmărească) folderul în care te afli acum:</p>
     <code class="shell">git init</code>
 
-    <p>The last command should return something starting with "Initialized empty Git repository". The others commands do
-        not return anything.</p>
+    <p>Ultima comandă ar trebui să întoarcă ceva care începe cu "Initialized empty Git repository". Celelalte comenzi nu întorc nimic.</p>
 
-    <p>You did it! If you want to be double-sure that it's a Git repository, type <code>git status</code> and if it
-        doesn't return 'fatal: Not a git repository...', you're golden!</p>
+    <p>Ai reușit! Dacă vrei să te asiguri că este un depozit Git, tastează <code>git status</code> și dacă
+        nu întoarce 'fatal: Not a git repository...' este perfect!</p>
 </div>
 
 {{{ verify_directory_button }}}
 
 <div class="chal-tip grey-border border-box">
     <ul class="no-list-style">
-        <li><strong>Make a new folder (aka make directory)</strong></li>
-        <code class="shell">mkdir &#60;FOLDERNAME&#62;</code>
-        <li><strong>Navigate into an existing folder (aka change directory)</strong></li>
-        <code class="shell">cd &#60;FOLDERNAME&#62;</code>
-        <li><strong>List the items in a folder</strong></li>
+        <li><strong>Creează un nou folder (creează director)</strong></li>
+        <code class="shell">mkdir &#60;NUME_FOLDER&#62;</code>
+        <li><strong>Navighează într-un folder (schimbă director)</strong></li>
+        <code class="shell">cd &#60;NUME_FOLDER&#62;</code>
+        <li><strong>Listează elementele dintr-un folder</strong></li>
         <code class="shell">ls </code>
-        <li><strong>Turn Git on for a folder</strong></li>
+        <li><strong>Activează Git pentru un folder</strong></li>
         <code class="shell">git init</code>
     </ul>
 </div>
