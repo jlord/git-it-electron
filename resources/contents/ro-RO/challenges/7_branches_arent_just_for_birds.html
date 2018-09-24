@@ -1,124 +1,123 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Add a branch, locally, to your forked repository to work on your changes.</p>
+    <p>Adaugă o ramură, local, depozitului tău bifurcat pentru a lucra la schimbări.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2>Branches</h2>
-    <p>Git repositories use branches to isolate work when needed. It's common practice when working on a project or with
-        others on a project to create a <strong>branch</strong> to keep your working changes in. This way you can do
-        your work while the main, commonly named 'master', branch stays stable. When the work on your branch is finished
-        you merge it back into the 'master' master branch.</p>
+    <h2>Ramuri</h2>
+    <p>Depozitele Git folosesc ramuri pentru a izola contribuțiile când este nevoie. Este o practică obișnuită când lucrezi la un proiect sau cu
+        alții la un proiect să creezi o <strong>ramură</strong> pentru a păstra schimbările în lucru. În acest fel poți lucra
+        în timp ce ramura principală, numită obișnuit 'master', rămâne stabilă. Când ai terminat de lucrat pe ramura ta,
+        o fuzionezi înapoi în ramura 'master'.</p>
 
-    <p>The diagram below shows how you can branch off of your 'master' branch, do work and then merge those changes back
-        into 'master'. You can even branch off of a branch if you need to, the 'master' branch doesn't have to be the
-        base.</p>
+    <p>Diagrama de mai jos prezintă cum poți ramifica de pe ramura 'master', lucra și apoi fuziona acele schimbări
+        înapoi în 'master'. Poți chiar să ramifici și dintr-o ramută, ramura 'master' nu trebuie să fie
+        baza.</p>
 
     <img src="../../../assets/imgs/branches.png"
-         alt="A diagram showing a horizontal line, representing the master branch, with another line branching off the top and later re-joining the original. Another line branches off the master branch line from below and yet another branch branches off of that. Both of these meet back up with the original master line, too."
+         alt="O diagramă care ilustrează o linie orizontală reprezentând ramura master, cu o altă linie ramificată de la vârf și mai târziu reunindu-se cu cea originară. O altă linie se ramifică din ramură master de dedesubt și încă o ramură se ramifică din aceea. Ambele se întâlnesc de asemenea cu linia master originară."
          width="100%">
 
-    <p>For a great visualization on how branches work in a project, see this GitHub Guide: <a
+    <p>Pentru o bună vizualizare a modului în care funcționează ramurile într-un proiect, vezi acest ghid GitHub: <a
             href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a></p>
 
-    <h2>GitHub Pages</h2>
-    <p>GitHub will automatically serve and host static website files in branches named 'gh-pages'. This free service is
-        called <a href="http://pages.github.com">GitHub Pages</a>. Since the project you forked creates a website, its
-        main branch is named 'gh-pages' instead of 'master'. All repositories that have a 'gh-pages' branch with website
-        files can be found, live online, using this pattern for the URL:</p>
+    <h2>Pagini GitHub</h2>
+    <p>GitHub va servi automat și va găzdui fișiere web statice în ramuri numite 'gh-pages'. Acest serviciu gratuit
+        se numește <a href="http://pages.github.com">GitHub Pages</a> (Pagini GitHub). Deoarece proiectul pe care l-ai bifurcat creează un site,
+        ramura sa principală se numește 'gh-pages' în loc de 'master'. Toate depozitele care au o ramură 'gh-pages' cu fișiere
+        web se găsesc, active online, folosind acest tipar pentru URL:</p>
 
     <code>http://githubusername.github.io/repositoryname</code>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Create a branch</h3>
-    <p>When you create a branch, Git copies everything from the current branch you're on and places it in the branch
-        you've requested be made.</p>
+    <h3>Creează o ramură</h3>
+    <p>Când creezi o ramură, Git copiază totul din ramura curentă în care te afli și îl pune în ramura
+        pe care ai cerut-o să fie creată.</p>
 
-    <p>While still inside of your local 'patchwork' repository, type <code>git status</code> to see what branch you're
-        currently on. Git should reply that you're on the 'gh-pages' branch.</p>
+    <p>Cât încă te afli în depozitul local 'patchwork', tastează <code>git status</code> pentru a vedea în care ramură te afli.
+        Git ar trebui să răspundă că ești pe ramura 'gh-pages'.</p>
 
-    <p>Now create a new branch and name it "add-&#60;username&#62;", where 'username' is your username. For instance,
-        "add-jlord". <strong>Branches are case-sensitive so name your branch exactly the way your GitHub name
-            appears</strong>.</p>
+    <p>Acum creează o nouă ramură și numește-o „add-&#60;numeutilizator&#62;”, unde 'numeutilizator' numele tău de utilizator. De exemplu,
+        "add-jlord". <strong>Ramurile diferențiază litere mari, așa că numește-ți ramura exact cum apare numele tău de GitHub</strong>.</p>
 
-    <p><code class="shell">git branch &#60;BRANCHNAME&#62;</code></p>
+    <p><code class="shell">git branch &#60;NUMERAMURĂ&#62;</code></p>
 
-    <p>Now you have a branch with a new name that is identical to 'gh-pages'.</p>
+    <p>Acum ai o ramură cu un nume noi care este identică cu 'gh-pages'.</p>
 
-    <p>To go into that branch and work on it you <strong>checkout</strong> a branch. Go on your new branch:</p>
+    <p>Pentru a trece pe acea ramura și a lucra la ea <strong>schimbă</strong> ramruă. Du-te pe noua ta ramură:</p>
 
-    <p><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></p>
+    <p><code class="shell">git checkout &#60;NUMERAMURĂ&#62;</code></p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Step: Create a new file</h3>
-    <p>Back in your text editor:</p>
+    <h3>Pas: Creează un nou fișier</h3>
+    <p>În editorul de text:</p>
     <ul>
-        <li>Create a new file named <span style="white-space: nowrap;">"add-&#60;USERNAME&#62;.txt"</span>, where
-            'username' is your username. For instance, "add-jlord.txt".
+        <li>Creează un nou fișier numit <span style="white-space: nowrap;">"add-&#60;NUMEUTILIZATOR&#62;.txt"</span>, unde
+            'numeutilizator' este numele tău de utiliator. De exemplu, "add-jlord.txt".
         </li>
-        <li>Then, just write your GitHub username in it, that's it and that's all. For instance, I'd type 'jlord'.</li>
-        <li>Save this file in the 'contributors' folder in Patchwork: <strong>Patchwork/contributors/add-yourusername.txt</strong>
+        <li>Apoi, scrie-ți numele de utilizator de GitHub username în el, doar atât. De exemplu, eu aș tasta 'jlord'.</li>
+        <li>Salvează acest fișier în folderul 'contributors' din Patchwork: <strong>Patchwork/contributors/add-yourusername.txt</strong>
         </li>
-        <li>Next, check in your changes (see below).</li>
+        <li>În continuare, operează-ți schimbările (vezi mai jos).</li>
     </ul>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Check-in</h3>
-    <p>Go through the steps for checking in a project: </p>
+    <h3>Operează</h3>
+    <p>Urmează pașii pentru a opera într-un proiect: </p>
 
     <p><code class="shell">git status</code></p>
-    <p><code class="shell">git add &#60;contributors/FILENAME&#62;</code></p>
-    <p><code class="shell">git commit -m "commit message"</code></p>
+    <p><code class="shell">git add &#60;contributors/NUMEFIȘIER&#62;</code></p>
+    <p><code class="shell">git commit -m "mesag de operare"</code></p>
 
-    <p>Now push your update to <b>your fork</b>, 'origin', on GitHub:</p>
-    <p><code class="shell">git push origin &#60;BRANCHNAME&#62;</code></p>
+    <p>Acum împinge-ți schimbărea pe <b>bifurcația ta</b>, 'origin', pe GitHub:</p>
+    <p><code class="shell">git push origin &#60;NUMERAMURĂ&#62;</code></p>
 </div>
 
 {{{ verify_directory_button }}}
 
 <div class="chal-no-pass grey-border border-box">
     <h4>Permission denied...error: 403</h4>
-    <p>You are pushing changes to a repository you don't have write access to. In this case, you're likely pushing to
-        the original 'jlord/patchwork'. Make sure that you're pushing to 'origin' and that it points to your fork's
-        address on GitHub. To check and see what your remotes are and where they point run <code>git remote -v</code>.
-        You should have 'upstream' pointing to 'jlord/patchwork' and 'origin' pointing to 'yourusername/patchwork'.
+    <p>Împingi schimbări într-un depozit unde nu ai acces de scriere. În acest caz, probabil împingi în
+        'jlord/patchwork' originar. Asigură-te că împingi în 'origin' și că indică spre adresa bifurcației tale
+        de pe GitHub. Pentru a verifica și a vedea care sunt depozitele la distanță și unde indică, execută <code>git remote -v</code>.
+        Ar trebui să ai 'upstream' indicând spre 'jlord/patchwork' și 'origin' indicând spre 'yourusername/patchwork'.
 
-    <p>To fix a remote that is pointing to the wrong place you can re-set its url: <code>git remote set-url origin
-        <URLTOYOURFORK>
+    <p>Pentru a ajusta un depozit la distanță care indică spre locul greșit, îi poți reseta url-ul: <code>git remote set-url origin
+        <URLCĂTREBIFURCAȚIE>
     </code>.
 
     <h4>Authentication failed...error: 401</h4>
-    <p>Your identity could not be verified. You may have 2FA (Two Factor Authentication) turned on in which case you must use a personal access token as your password. You can generate one by <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use">following these instructions</a>. You'll need to keep this and use it in place of your password when prompted. You can also <a href="https://help.github.com/articles/caching-your-github-password-in-git/">save this access token</a> on your computer so that you don't have to re-enter it.</p>
+    <p>Identitatea nu a putut fi verificată. S-ar putea să ai activată 2FA (Autentificare în doi factori) caz în care trebuie să folosești un token personal de acces ca parolă. Poți genera unul <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use">urmând aceste instrucțiuni</a>. Va trebui să păstrezi asta și să o folosești în locul parolei când îți este solicitată. Poți de asemea <a href="https://help.github.com/articles/caching-your-github-password-in-git/">să salvezi acest token de acces</a> pe calculatorul tău ca să nu fie nevoie să îl retastezi.</p>
 
-    <h4>File NOT in contributors folder</h4>
-    <p>The file you create should be placed inside the existing 'contributors' folder in the Patchwork repository. If
-        you put it somewhere else, simply use Finder or Windows Explorer to move your file into the folder. You can
-        check <code>git status</code> again and you'll find it sees your changes. Stage and then commit "all" (-A) of
-        these changes (additions and deletions) with the commands below.</p>
+    <h4>Fișierul NU este în folderul contributors</h4>
+    <p>Fișierul pe care îl creezi ar trebui să fie plasat în interiorul folderului 'contributors' existent din din depozitul Patchwork. Dacă
+        l-ai pus altundeva, pur și simplu folosește Finder sau Windows Explorer pentru a-ți muta fișierul în folder. Poți
+        verifica <code>starea GIT</code> iar și iar și vei descoperi că îți vede schimbările. Indexează și apoi operează toate (-A)
+        aceste schimbări (adăugări și ștergeri) cu comenzile de mai jos.</p>
     <p><code class="shell">git add -A</code></p>
-    <p><code class="shell">git commit -m "move file into contributors folder"</code></p>
+    <p><code class="shell">git commit -m "mută fișierul în folderul contributors"</code></p>
 
     <h4>Branch name expected: _____</h4>
-    <p>The branch name should match your user name exactly. To change your branch name:</p>
-    <p><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></p>
-    <p>When you've made your updates, verify again!</p>
+    <p>Numele ramurii ar trebui să reflecte numele exact. Pentru a schimba numele ramurii:</p>
+    <p><code class="shell">git branch -m &#60;NUMENOUDERAMURĂ&#62;</code></p>
+    <p>Când ai făcut modificările, verifică din nou!</p>
 </div>
 
 <div class="chal-tip grey-border border-box">
     <ul class="no-list-style">
-        <li><strong>You can create and switch to a branch in one line</strong></li>
-        <li><code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code></li>
-        <li><strong>Create a new branch</strong></li>
-        <li><code class="shell">git branch &#60;BRANCHNAME&#62;</code></li>
-        <li><strong>Move onto a branch</strong></li>
-        <li><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></li>
-        <li><strong>List the branches</strong></li>
+        <li><strong>Poți cre și schimbă pe o ramură cu un singur rând</strong></li>
+        <li><code class="shell">git checkout -b &#60;NUMERAMURĂ&#62;</code></li>
+        <li><strong>Creează o ramură nouă</strong></li>
+        <li><code class="shell">git branch &#60;NUMERAMURĂ&#62;</code></li>
+        <li><strong>Treci pe o ramură</strong></li>
+        <li><code class="shell">git checkout &#60;NUMERAMURĂ&#62;</code></li>
+        <li><strong>Listează ramurile</strong></li>
         <li><code class="shell">git branch</code></li>
-        <li><strong>Rename a branch you're currently on</strong></li>
-        <li><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></li>
-        <li><strong>Verify what branch you're working on</strong></li>
+        <li><strong>Redenumește o ramură pe care te afli</strong></li>
+        <li><code class="shell">git branch -m &#60;NUMENOUDERAMURĂ&#62;</code></li>
+        <li><strong>Verifică pe ce ramură lucrezi</strong></li>
         <li><code class="shell">git status</code></li>
     </ul>
 </div>

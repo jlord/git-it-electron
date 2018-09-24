@@ -1,65 +1,65 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Merge your branch locally, delete the branch and pull from upstream.</p>
+    <p>Fuzionează-ți ramura local, șterge ramura și retrage de la 'upstream'.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2>Cleaning up</h2>
+    <h2>Curățarea</h2>
 
-    <p>Once you don't need branches anymore you can delete them locally and remotely. This is helpful so that you don't
-        end up with a pile of old branches.</p>
+    <p>Odată ce nu mai ai nevoie de ramuri, poți să le ștergi local și la distanță. Asta ajută ca să nu sfârșești
+        cu o grămadă de ramuri vechi.</p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Merge Locally</h3>
-    <p>Your pull request has been merged! Your branch was merged into the 'gh-pages' branch of the original on GitHub.
-        You can merge your branch locally, too.</p>
+    <h3>Fuzionează local</h3>
+    <p>Cererea ta de retragere a fost fuzionată! Ramura ta a fost fuzionată în ramura 'gh-pages' de pe GitHub originar.
+        Îți poți fuziona și ramura locală.</p>
 
-    <p>First, move into the branch you want to merge into—in this case, the branch 'gh-pages'.</p>
+    <p>Întâi, treci pe ramura în care vrei să fuzionezi, în acest caz, ramura 'gh-pages'.</p>
     <p><code class="shell">git checkout gh-pages</code></p>
 
-    <p>Now tell Git what branch you want to merge in—in this case, your feature branch that begins with "add-".</p>
-    <p><code class="shell">git merge &#60;BRANCHNAME&#62;</code></p>
+    <p>Acum spune-i lui Git ce ramură vrei să fuzionezi, în acest caz, ramura cu opțiuni care începe cu „add-”.</p>
+    <p><code class="shell">git merge &#60;NUMERAMURĂ&#62;</code></p>
 
-    <p>Tidy up by deleting your feature branch. Now that it has been merged you don't really need it around.</p>
-    <p><code class="shell">git branch -d &#60;BRANCHNAME&#62;</code></p>
+    <p>Fă curat ștergând ramura cu opțiuni. Acum că a fost fuzionată nu mai ai nevoie de ea.</p>
+    <p><code class="shell">git branch -d &#60;NUMERAMURĂ&#62;</code></p>
 
-    <p>You can also delete the branch from your remote on GitHub:</p>
-    <p><code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
+    <p>Poți de asemenea să ștergi ramura din depozitul la distanță de pe GitHub:</p>
+    <p><code class="shell">git push &#60;NUMEDEPOZITLADISTANȚĂ&#62; --delete &#60;NUMERAMURĂ&#62;</code></p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Pull from Upstream</h3>
-    <p>And last but not least, the original has changed since your pull request was merged—Reporobot added your name to
-        the website! If you pull in these changes from upstream you'll be up to date and have that version too. You can
-        actually see it live as well at: yourusername.github.io/patchwork.</p>
+    <h3>Retrage de pe upstream</h3>
+    <p>Și ultimul dar nu cel din urmă, versiunea originară s-a schimbat de când cererea ta retragere a fost fuzionată, Reporobot ți-a adăugat numele
+        la site! Dacă retragi aceste schimbări de pe upstream vei fi la zi și vei avea de asemenea acea versiune. Poți,
+        de fapt, să o vezi activă la: yourusername.github.io/patchwork.</p>
 
-    <p>To pull from the original upstream:</p>
+    <p>Pentru a retrage din depozitul „upstream” originar:</p>
     <p><code class="shell">git pull upstream gh-pages</code></p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2>Congratulations!</h2>
-    <p>You've created local repositories, remote repositories, worked with a collaborator, pushed, pulled and joined the
-        millions of others developing and enriching open source!</p>
+    <h2>Felicitări!</h2>
+    <p>Ai creat depozite locale, depozite la distanță, ai împins, retras, lucrat cu un colaborator și te-ai alăturat
+        milioanelor care dezvoltă și îmbogățesc open source!</p>
 
-    <p>Visit <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> to see your name
-        incorporated! Looking to keep going? Checkout the <a href="../pages/resources.html#what-next">What Next</a>
-        section on the resources page in this app.</p>
+    <p>Vizitează <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> pentru a-ți vedea numele
+        încorporat! Vrei să continui? Du-te la secțiunea <a href="../pages/resources.html#what-next">Ce urmează</a>
+        de pe pagina de resurse din această aplicație.</p>
 </div>
 
 {{{ verify_directory_button }}}
 
 <div class="chal-tip grey-border border-box">
     <ul class="no-list-style">
-        <li><strong>Merge a branch into current branch</strong></li>
-        <code class="shell">git merge &#60;BRANCHNAME&#62;</code>
-        <li><strong>Change the branch you're working on</strong></li>
-        <code class="shell">git checkout &#60;BRANCHNAME&#62;</code>
-        <li><strong>Delete a local branch</strong></li>
-        <code class="shell">git branch -d &#60;BRANCHNAME&#62;</code>
-        <li><strong>Delete a remote branch</strong></li>
-        <code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
-        <li><strong>Pull from a remote branch</strong></li>
-        <code class="shell">git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+        <li><strong>Fuzionează o ramură în ramura curentă</strong></li>
+        <code class="shell">git merge &#60;NUMERAMURĂ&#62;</code>
+        <li><strong>Schimbă ramura la care lucrezi</strong></li>
+        <code class="shell">git checkout &#60;NUMERAMURĂ&#62;</code>
+        <li><strong>Șterge o ramură locală</strong></li>
+        <code class="shell">git branch -d &#60;NUMERAMURĂ&#62;</code>
+        <li><strong>Șterge o ramură la distanță</strong></li>
+        <code class="shell">git push &#60;NUMEDEPOZITLADISTANȚĂ&#62; --delete &#60;NUMERAMURĂ&#62;</code>
+        <li><strong>Retrage dintr-o ramură la distanță</strong></li>
+        <code class="shell">git pull &#60;NUMEDEPOZITLADISTANȚĂ&#62; &#60;NUMERAMURĂ&#62;</code>
     </ul>
 </div>
