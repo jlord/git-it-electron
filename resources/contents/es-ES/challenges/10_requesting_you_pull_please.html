@@ -1,0 +1,56 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Enviar una solicitud de aceptación de tus cambios (Pull Request) al repositorio original Patchwork.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Pull Requests</h2>
+    <p>Habitualmente, cuando haces cambios y mejoras a un proyecto que has bifurcado, vas a querer enviar esos cambios a los
+        encargados de mantener el repositorio original y <strong>solicitarles (request)</strong> que <strong>tiren (pull)</strong> de esos cambios
+        al original, para que aquéllos que lo usan se puedan beneficiar de las actualizaciones. Eso es un <strong>pull request</strong>.</p>
+
+    <p>Queremos añadirte a la lista de personas que finalizaron este taller, así que crea un <strong>pull request</strong> para añadir
+        tu archivo con tu usuario al repositorio original: <a href="https://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.
+    </p>
+
+    <img src="../../../assets/imgs/pullrequest.png" width="100%"
+         alt="Una ilustración mostrando dos opciones. La última opción contiene más letras del alfabeto que la primera y está pidiéndole que acepte su trabajo de manera que el alfabeto esté completo.">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Crear un pull request</h3>
+    <p>Visita el repositorio original que bifurcaste en GitHub, en este caso <a href="https://github.com/jlord/patchwork">http://github.com/jlord/patchwork</a>.
+    </p>
+
+    <p>Muchas de las veces, GitHub detectará si has empujado (push) una branch a un fork y lo mostrará en la parte superior de la página del repositorio original.
+        Si puedes ver tu rama 'add-username', puedes hacer clic en 'Create a Pull Request' (crear un pull request) desde ahí mismo. Si no:</p>
+
+    <ul>
+        <li>Haz clic en el botón verde que dice 'New Pull Request'.</li>
+        <li>Selecciona la rama que tiene los cambios que quieres enviar. Debería ser la que se llama 'add-yourusername'.</li>
+    </ul>
+
+    <p>Ahora verás una página con los detalles que están en proceso de ser enviados. Esta página muestra
+        los commits con los cambios, en el apartado diff, asociando el pull request y comparándolo con la rama 'gh-pages'
+        del original.</p>
+
+    <p>Si el repositorio original tiene <strong>documentación de contribución</strong>, GitHub lo enlazará. Esta es 
+        la documentación en la que los propietarios del repositorio describen la que consideran la mejor manera de hacer contribuciones a ese proyecto. ¡Es de gran ayuda leer si
+        quisieras saber si tus cambios serán aceptados!</p>
+
+    <p>Si todo en la página se ve bien y es lo que esperabas:</p>
+
+    <ul>
+        <li>Haz clic en 'Create pull request'</li>
+        <li>Añade un título y una descripción a los cambios que has sugerido al autor del repositorio original para ser incorporados.</li>
+        <li>Haz clic en 'Send pull request'!</li>
+    </ul>
+
+    <p><strong>¡Bingo! Enviaste un pull request — tómate unos segundos para disfrutar el momento.</strong>
+
+    <p>Si todo está bien con tu pull request, será fusionado en unos momentos en este caso. Si no está automáticamente fusionado después de unos poco minutos, 
+        entonces tendrás algunos comentarios que te hizo @reporobot explicando por qué no los pudo fusionar (merge). Si es el
+        caso, cierra tu pull request en GitHub, haz los cambios necesarios en tu rama, vuelve a enviar los cambios a tu fork
+        y reabre (esto le avisará @reporobot para que revise nuevamente) tu pull request.</p>
+</div>
+
+{{{ verify_button }}}

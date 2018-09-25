@@ -1,0 +1,68 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Crea un archivo en tu nuevo repositorio, añade algo al archivo y guarda (commit) el cambio en Git.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Commits (guardar)</h2>
+    <p>Los commits son el centro de Git. Es en ese momento, cuando haces un commit, cuando guardas y describes el trabajo que has hecho. Son
+        los puntos en la línea del tiempo del historial de tu proyecto.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Crea un nuevo archivo</h3>
+    <p>Ahora que tienes un repositorio iniciado, agreguémosle un archivo.</p>
+    <p>Abre tu editor de texto y crea un nuevo archivo vacío. Ahora escribe algo de texto, por ejemplo "Hola!", y
+        guarda el archivo como 'readme.txt' en la carpeta 'hola-mundo' que creaste en el anterior reto.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Verificar el estado + hacer commit de los cambios</h3>
+    <p>Ahore revisemos el <strong>estado (status)</strong> de tu repositorio para verificar si ha habido cambios. Tú sabes que
+        has cambiado algo, pero ¿lo sabe Git?</p>
+
+    <p>Asegúrate de que aún estás en el directorio 'hola-mundo' cuando ejecutes estos comandos. Usa Git para ver
+        qué cambió en tu repositorio:</p>
+
+    <p>Primero, verifica el estado:</p>
+    <p><code class="shell">git status</code></p>
+    <p>Git debería decirte que un archivo ha sido añadido.</p>
+
+    <p>Entonces <strong>añade (add)</strong> el archivo que acabaste de crear, de forma que sea parte de los cambios que vas a <strong>guardar (commit)</strong>
+        con Git:</p>
+    <p><code class="shell">git add readme.txt</code></p>
+
+    <p>Finalmente, haz <strong>commit (guarda)</strong> estos cambios en el historial del repositorio con un
+        mensaje (m) corto que describe la actualización realizada.</p>
+    <p><code class="shell">git commit -m "readme creado"</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Siguiente paso: Crea más cambios</h3>
+    <p>Ahora añade otra línea a 'readme.txt' y guarda el archivo otra vez.</p>
+
+    <p>En la terminal, puedes ver las diferencias <strong>diff</strong> que hay entre el archivo ahora mismo y el archivo en el momento que creaste
+        el último commit. </p>
+
+    <p>Dile a Git que te muestre las diferencias <strong>diff</strong>:</p>
+    <p><code class="shell">git diff</code></p>
+
+    <p>Ahora con lo que aprendiste previamente, crea un commit (guarda) con el cambio más reciente.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Para verificar el estado de los cambios en un repositorio</strong></li>
+        <li><code class="shell">git status</code></li>
+        <li><strong>Ver diferencias entre las versiones (commits) de los archivos</strong></li>
+        <li><code class="shell">git diff</code></li>
+        <li><strong>Añadir un archivo para ser guardado (commit)</strong></li>
+        <li><code class="shell">git add &#60;NOMBREDELARCHIVO&#62;</code></li>
+        <li><strong>Para añadir todos los archivos con cambios</strong></li>
+        <li><code class="shell">git add .</code></li>
+        <li><strong>Para crear un commit (guardar) los cambios que añadiste con un mensaje corto que los describe</strong>
+        </li>
+        <li><code class="shell">git commit -m "tu descripción del commit"</code></li>
+        <ul>
+</div>
