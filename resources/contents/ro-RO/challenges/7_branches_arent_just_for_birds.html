@@ -10,7 +10,7 @@
         o fuzionezi înapoi în ramura 'master'.</p>
 
     <p>Diagrama de mai jos prezintă cum poți ramifica de pe ramura 'master', lucra și apoi fuziona acele schimbări
-        înapoi în 'master'. Poți chiar să ramifici și dintr-o ramută, ramura 'master' nu trebuie să fie
+        înapoi în 'master'. Poți chiar să ramifici și dintr-o ramură, ramura 'master' nu trebuie să fie
         baza.</p>
 
     <img src="../../../assets/imgs/branches.png"
@@ -37,14 +37,14 @@
     <p>Cât încă te afli în depozitul local 'patchwork', tastează <code>git status</code> pentru a vedea în care ramură te afli.
         Git ar trebui să răspundă că ești pe ramura 'gh-pages'.</p>
 
-    <p>Acum creează o nouă ramură și numește-o „add-&#60;numeutilizator&#62;”, unde 'numeutilizator' numele tău de utilizator. De exemplu,
+    <p>Acum creează o nouă ramură și numește-o „add-&#60;numeutilizator&#62;”, unde 'numeutilizator' este numele tău de utilizator. De exemplu,
         "add-jlord". <strong>Ramurile diferențiază litere mari, așa că numește-ți ramura exact cum apare numele tău de GitHub</strong>.</p>
 
     <p><code class="shell">git branch &#60;NUMERAMURĂ&#62;</code></p>
 
     <p>Acum ai o ramură cu un nume noi care este identică cu 'gh-pages'.</p>
 
-    <p>Pentru a trece pe acea ramura și a lucra la ea <strong>schimbă</strong> ramruă. Du-te pe noua ta ramură:</p>
+    <p>Pentru a trece pe acea ramura și a lucra la ea <strong>schimbă</strong> ramură. Du-te pe noua ta ramură:</p>
 
     <p><code class="shell">git checkout &#60;NUMERAMURĂ&#62;</code></p>
 </div>
@@ -56,7 +56,7 @@
         <li>Creează un nou fișier numit <span style="white-space: nowrap;">"add-&#60;NUMEUTILIZATOR&#62;.txt"</span>, unde
             'numeutilizator' este numele tău de utiliator. De exemplu, "add-jlord.txt".
         </li>
-        <li>Apoi, scrie-ți numele de utilizator de GitHub username în el, doar atât. De exemplu, eu aș tasta 'jlord'.</li>
+        <li>Apoi, scrie-ți numele de utilizator de GitHub în el, doar atât. De exemplu, eu aș tasta 'jlord'.</li>
         <li>Salvează acest fișier în folderul 'contributors' din Patchwork: <strong>Patchwork/contributors/add-yourusername.txt</strong>
         </li>
         <li>În continuare, operează-ți schimbările (vezi mai jos).</li>
@@ -69,7 +69,7 @@
 
     <p><code class="shell">git status</code></p>
     <p><code class="shell">git add &#60;contributors/NUMEFIȘIER&#62;</code></p>
-    <p><code class="shell">git commit -m "mesag de operare"</code></p>
+    <p><code class="shell">git commit -m "mesaj de operare"</code></p>
 
     <p>Acum împinge-ți schimbărea pe <b>bifurcația ta</b>, 'origin', pe GitHub:</p>
     <p><code class="shell">git push origin &#60;NUMERAMURĂ&#62;</code></p>
@@ -82,17 +82,17 @@
     <p>Împingi schimbări într-un depozit unde nu ai acces de scriere. În acest caz, probabil împingi în
         'jlord/patchwork' originar. Asigură-te că împingi în 'origin' și că indică spre adresa bifurcației tale
         de pe GitHub. Pentru a verifica și a vedea care sunt depozitele la distanță și unde indică, execută <code>git remote -v</code>.
-        Ar trebui să ai 'upstream' indicând spre 'jlord/patchwork' și 'origin' indicând spre 'yourusername/patchwork'.
+        Ar trebui să ai 'upstream' indicând spre 'jlord/patchwork' și 'origin' indicând spre 'numeletăudeutilizator/patchwork'.
 
     <p>Pentru a ajusta un depozit la distanță care indică spre locul greșit, îi poți reseta url-ul: <code>git remote set-url origin
-        <URLCĂTREBIFURCAȚIE>
+        URLCĂTREBIFURCAȚIE
     </code>.
 
     <h4>Authentication failed...error: 401</h4>
-    <p>Identitatea nu a putut fi verificată. S-ar putea să ai activată 2FA (Autentificare în doi factori) caz în care trebuie să folosești un token personal de acces ca parolă. Poți genera unul <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use">urmând aceste instrucțiuni</a>. Va trebui să păstrezi asta și să o folosești în locul parolei când îți este solicitată. Poți de asemea <a href="https://help.github.com/articles/caching-your-github-password-in-git/">să salvezi acest token de acces</a> pe calculatorul tău ca să nu fie nevoie să îl retastezi.</p>
+    <p>Identitatea nu a putut fi verificată. S-ar putea să ai activată 2FA (Autentificare în doi factori) caz în care trebuie să folosești un token personal de acces ca parolă. Poți genera unul <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use">urmând aceste instrucțiuni</a>. Va trebui să păstrezi asta și să o folosești în locul parolei când îți este solicitată. Poți de asemenea <a href="https://help.github.com/articles/caching-your-github-password-in-git/">să salvezi acest token de acces</a> pe calculatorul tău ca să nu fie nevoie să îl retastezi.</p>
 
     <h4>Fișierul NU este în folderul contributors</h4>
-    <p>Fișierul pe care îl creezi ar trebui să fie plasat în interiorul folderului 'contributors' existent din din depozitul Patchwork. Dacă
+    <p>Fișierul pe care îl creezi ar trebui să fie plasat în interiorul folderului 'contributors' existent din depozitul Patchwork. Dacă
         l-ai pus altundeva, pur și simplu folosește Finder sau Windows Explorer pentru a-ți muta fișierul în folder. Poți
         verifica <code>starea GIT</code> iar și iar și vei descoperi că îți vede schimbările. Indexează și apoi operează toate (-A)
         aceste schimbări (adăugări și ștergeri) cu comenzile de mai jos.</p>
@@ -107,7 +107,7 @@
 
 <div class="chal-tip grey-border border-box">
     <ul class="no-list-style">
-        <li><strong>Poți cre și schimbă pe o ramură cu un singur rând</strong></li>
+        <li><strong>Poți crea și schimba pe o ramură cu un singur rând</strong></li>
         <li><code class="shell">git checkout -b &#60;NUMERAMURĂ&#62;</code></li>
         <li><strong>Creează o ramură nouă</strong></li>
         <li><code class="shell">git branch &#60;NUMERAMURĂ&#62;</code></li>
