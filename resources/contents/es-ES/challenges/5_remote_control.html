@@ -10,8 +10,8 @@
         lugar. <strong>Empujando (pushing)</strong> tus cambios <strong>locales</strong> (los de tu ordenador) a éste, lo mantienes
         al día.</p>
 
-    <p>Otras personas siempre pueden obtener lo más reciente de tu proyecto <strong>tirando (pulling)</strong> demtus cambios desde el
-        remoto (a otro ordenadir). Así es cómo varias personas pueden trabajar juntas en un proyecto sin necesidad de tener acceso a
+    <p>Otras personas siempre pueden obtener lo más reciente de tu proyecto <strong>tirando (pulling)</strong> de tus cambios desde el
+        remoto (a otro ordenador). Así es cómo varias personas pueden trabajar juntas en un proyecto sin necesidad de tener acceso a
         tu ordenador, donde está almacenada tu copia local.</p>
 
     <img src="../../../assets/imgs/remotes.png"
@@ -21,16 +21,16 @@
 
 <div class="chal-step blue-border border-box">
     <h3>Crear un repositorio remoto</h3>
-    <p>Si quieres sincronizar tu versión <strong>local</strong> con la que está guardada GitHub.com, primero crea un nuevo repositorio <strong>remoto (remote)</strong>
+    <p>Si quieres sincronizar tu versión <strong>local</strong> con la que está guardada en GitHub.com, primero crea un nuevo repositorio <strong>remoto (remote)</strong>
         en GitHub.com.</p>
 
     <ul>
-        <li>Ve a <a href="http://github.com " target="_blank">github.com</a>, haz login, y haz clic en el '+' en la parte derecha
-            arriba y después en 'Nuevo repositorio' ('New repository').
+        <li>Ve a <a href="http://github.com " target="_blank">github.com</a>, haz login, y haz clic en el '+' situado arriba a la derecha
+            y después en 'Nuevo repositorio' ('New repository').
         </li>
         <li>Dale un nombre que coincida con el nombre de tu repositorio local, 'hola-mundo', y una descripción corta.</li>
         <li>Hazlo público. Esto significa que será listado en tu perfil público.</li>
-        <li>No inicialices con una archivo README porque ya tienes un archivo, localmente, llamado 'readme.txt'. Esta opción es una ayuda
+        <li>No inicialices con un archivo README porque ya tienes un archivo, localmente, llamado 'readme.txt'. Esta opción es una ayuda
             de GitHub si todavía no has creado uno local en tu ordenador.
         </li>
         <li>Las opciones '.gitignore' and 'license' deben quedar en 'none' (ninguna). No las usaremos en este tutorial.</li>
@@ -52,11 +52,11 @@
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Conecta tu Local a tu remoto</h3>
+    <h3>Conecta tu Local a tu Remoto</h3>
     <p>Ahora que has iniciado un repositorio remoto en GitHub.com, en la parte de arriba puedes ver una 'configuración rápida' ('Quick Setup'). Asegúrate de que
         el botón 'HTTPS' está seleccionado y copia la dirección, que es la dirección de tu repositorio en los servidores de GitHub.</p>
 
-    <p>Vuelve a la terminal, y situado dentro de la carpeta 'hola-mundo' que inicializaste como repositorio de Git  en el reto anterior, vas a decirle a Git que recuerde la dirección de la versión remota en los servidores GitHub. Puedes
+    <p>Vuelve a la terminal, y situado dentro de la carpeta 'hola-mundo' que inicializaste como repositorio de Git en el reto anterior, vas a decirle a Git que recuerde la dirección de la versión remota en los servidores GitHub. Puedes
         tener varios remotos configurados en tu ordenador local, por lo que el remoto necesita un nombre. El remoto principal es generalmente llamado <code>origin</code>.
     </p>
 
@@ -91,7 +91,7 @@
     <code class="shell">git push origin master</code>
 
     <p>Ahora ve a la página de tu repositorio remoto en GitHub.com y actualízala. <strong>¡Wow!</strong> Todo 
-        es lo mismo ahora en tu ordenador local y remotamente en GitHub. Felicitaciones, ¡has creado tu primer repositorio público!</p>
+        es lo mismo ahora en tu ordenador local y remotamente en GitHub. Felicidades, ¡has creado tu primer repositorio público!</p>
 </div>
 
 {{{ verify_directory_button }}}
