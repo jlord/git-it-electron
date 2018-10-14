@@ -6,8 +6,8 @@
     <h2>Branches</h2>
     <p>Les dépôts Git utilisent des branches pour isoler le travail au besoin. C'est une pratique courante lorsque vous 
     travaillez sur un projet de créer une <strong>branche</strong> pour que vos modifications de travail soient 
-    conservée à part. De cette façon, vous pouvez faire votre travail, tandis que la branche principale, généralement 
-    nommée «master», reste stable. Lorsque le travail sur votre branche est terminé vous le fusionnez dans la branche 
+    conservées à part. De cette façon, vous pouvez faire votre travail, tandis que la branche principale, généralement 
+    nommée «master», reste stable. Lorsque le travail sur votre branche est terminé, vous le fusionnez dans la branche 
     principale 'master'.</p>
 
     <p>Le schéma ci-dessous montre comment vous pouvez dériver de votre branche 'master', travailler et fusionner ces 
@@ -22,11 +22,11 @@
     GitHub: <a href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a></p>
 
     <h2>GitHub Pages</h2>
-    <p>GitHub hébergera automatiquement les fichiers de sites statiques. Pour être accessible comme un site web, il 
-    doivent être situées dans la branche nommée 'gh-pages'. Ce service gratuit est appelé 
+    <p>GitHub hébergera automatiquement les fichiers de sites statiques. Pour être accessibles comme un site web, ils 
+    doivent être situés dans la branche nommée 'gh-pages'. Ce service gratuit est appelé 
     <a href="http://pages.github.com">GitHub Pages</a>. Puisque le projet que vous avez lancé crée un site Web, la 
-    branche principale sera 'gh-pages' au lieu de 'master'. Tous les dépôt qui ont une branche 'gh-pages' ont un site 
-    Web directement accessible en ligne, se situant à l'URL construite sur le modèle suivant:</p>
+    branche principale sera 'gh-pages' au lieu de 'master'. Tous les dépôts qui ont une branche 'gh-pages' ont un site 
+    Web directement accessible en ligne, se situant à l'URL construite sur le modèle suivant :</p>
     
     <code>http://githubusername.github.io/repositoryname</code>
 </div>
@@ -34,32 +34,32 @@
 <div class="chal-step blue-border border-box">
     <h3>Créer une branche</h3>
     <p>Lorsque vous créez une branche, Git copie l'intégralité de la branche sur laquelle vous vous trouvez et la place 
-    dans la branche nouvellement crée.</p>
+    dans la branche nouvellement créée.</p>
 
-    <p>Toujours dans votre dépôt local «patchwork», tapez <code> git status </ code> pour voir sur 
+    <p>Toujours dans votre dépôt local «patchwork», tapez <code>git status</code> pour voir sur 
     quelle branche vous êtes. Git devrait répondre que vous êtes sur la branche 'gh-pages'.</p>
 
     <p>Créez maintenant une nouvelle branche et nommez-la "add-&#60;username&#62;", où 'username' est votre nom 
-    d'utilisateur. Par exemple, "Add-jlord". <strong>Les branches sont sensibles à la casse, nommez-là exactement avec 
+    d'utilisateur. Par exemple, "add-jlord". <strong>Les branches sont sensibles à la casse, nommez-là exactement avec 
     la même capitalisation que votre compte GitHub</strong>.</p>
 
     <p><code class="shell">git branch &#60;BRANCHNAME&#62;</code></p>
 
     <p>Maintenant, vous avez une branche avec un nouveau nom identique à 'gh-pages'.</p>
 
-    <p>Pour entrer dans une branche et travailler dessus, vous devez <strong> checkout </ strong> cette branche. Allez 
-    sur votre nouvelle branche: </p>
+    <p>Pour entrer dans une branche et travailler dessus, vous devez <strong>checkout</strong> cette branche. Allez 
+    sur votre nouvelle branche :</p>
     <p><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Étape: Créer un nouveau fichier</h3>
-    <p>Retour dans votre éditeur de texte:</p>
+    <h3>Créer un nouveau fichier</h3>
+    <p>Retour dans votre éditeur de texte :</p>
     <ul>
         <li>Créez un nouveau fichier nommé <span style="white-space: nowrap;">"add-&#60;USERNAME&#62;.txt"</span>, où
             'username' est votre nom d'utilisateur. Par exemple, "add-jlord.txt".
         </li>
-        <li>Écrivez simplement votre nom d'utilisateur GitHub et c'est tout. Par exemple, je taperez 'jlord'.</li>
+        <li>Écrivez simplement votre nom d'utilisateur GitHub et c'est tout. Par exemple, je taperais 'jlord'.</li>
         <li>Enregistrez ce fichier dans le dossier 'contributors' de Patchwork: <strong>Patchwork/contributors/add-yourusername.txt</strong>
         </li>
         <li>Vérifiez vos modifications (voir ci-dessous).</li>
@@ -68,13 +68,13 @@
 
 <div class="chal-step blue-border border-box">
     <h3>Vérification</h3>
-    <p>Effectuez les étapes ci-après pour vérifier un projet: </p>
+    <p>Effectuez les étapes ci-après pour vérifier un projet :</p>
 
     <p><code class="shell">git status</code></p>
     <p><code class="shell">git add &#60;contributors/FILENAME&#62;</code></p>
     <p><code class="shell">git commit -m "commit message"</code></p>
 
-    <p>Maintenant vous pouvez pousser vos modifications sur <b>votre fork</b>, avec le remote 'origin', sur GitHub:</p>
+    <p>Maintenant vous pouvez pousser vos modifications sur <b>votre fork</b>, avec le remote 'origin', sur GitHub :</p>
     <p><code class="shell">git push origin &#60;BRANCHNAME&#62;</code></p>
 </div>
 
@@ -86,11 +86,11 @@
     <p>Vous essayer de pousser des modifications à un référentiel auquel vous n'avez pas accès en écriture. Dans ce cas, 
     vous poussez probablement sur le dépôt original 'jlord/patchwork'. Assurez-vous que avez bien poussé sur le remote 'origin' 
     et qu'il pointe bien vers l'adresse de votre fork sur GitHub. Pour vérifier et voir quels sont les remotes et où ils 
-    pointent, exécutez <code> git remote -v </ code>. Vous devriez avoir 'upstream' indiquant 'jlord/patchwork' et 
+    pointent, exécutez <code>git remote -v</code>. Vous devriez avoir 'upstream' indiquant 'jlord/patchwork' et 
     'origin' indiquant 'yourusername/patchwork'
     </p>
     
-    <p>Pour réparer un remote qui pointe vers le mauvais endroit, vous pouvez redéfinir son URL:</p>
+    <p>Pour réparer un remote qui pointe vers le mauvais endroit, vous pouvez redéfinir son URL :</p>
     
     <p><code>git remote set-url origin <URLTOYOURFORK></code></p>
 
@@ -98,26 +98,24 @@
     
     <p>Votre identité n'a pas pu être vérifiée. Vous avez peut-être activé 2FA (Two Factor Authentication) auquel cas 
     vous devez utiliser un jeton d'accès personnel comme mot de passe. Vous pouvez en générer un en 
-    <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use">suivant ces instructions </a>. 
+    <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use">suivant ces instructions</a>. 
     Vous devrez le garder et l'utiliser à la place de votre mot de passe lorsque vous y êtes invité. Vous pouvez 
-    également <a href="https://help.github.com/articles/caching-your-github-password-in-git/"> enregistrer ce jeton 
-    d'accès </a> sur votre ordinateur afin de ne plus avoir à le saisir.
-    </p>
+    également <a href="https://help.github.com/articles/caching-your-github-password-in-git/">enregistrer ce jeton d'accès </a> 
+    sur votre ordinateur afin de ne plus avoir à le saisir.</p>
 
     <h4>File NOT in contributors folder</h4>
     
-    <p> Le fichier que vous créez doit être placé dans le dossier 'contributors' du référentiel Patchwork. Si vous 
-    l'avez mis ailleurs, déplacez votre fichier dans le dossier. Vous pouvez vérifiez à nouveau <code> git status</code> 
+    <p>Le fichier que vous créez doit être placé dans le dossier 'contributors' du référentiel Patchwork. Si vous 
+    l'avez mis ailleurs, déplacez votre fichier dans le dossier. Vous pouvez vérifiez à nouveau <code>git status</code> 
     et vous verrez vos modifications. Ajoutez et soumettez (commit) "toutes" (-A) les modifications (ajouts et 
-    suppressions) avec les commandes ci-dessous.
-    </p>
+    suppressions) avec les commandes ci-dessous.</p>
     <p><code class="shell">git add -A</code></p>
     <p><code class="shell">git commit -m "move file into contributors folder"</code></p>
 
     <h4>Branch name expected: _____</h4>
-    <p>Le nom de la branche doit correspondre exactement à votre nom d'utilisateur. Pour changer votre nom de branche:</p>
+    <p>Le nom de la branche doit correspondre exactement à votre nom d'utilisateur. Pour changer votre nom de branche :</p>
     <p><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></p>
-    <p>Lorsque vous avez effectué vos mises à jour, vérifiez à nouveau!</p>
+    <p>Lorsque vous avez effectué vos mises à jour, vérifiez à nouveau !</p>
 </div>
 
 <div class="chal-tip grey-border border-box">
