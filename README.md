@@ -7,7 +7,7 @@ Git-it is a desktop (Mac, Windows and Linux) app that teaches you how to use Git
 
 **🚩The app includes translations in these languages: Spanish (ES), Spanish (CO), French, Portugese (BR), Ukrainian, Traditional Chinese, Japanese, and Korean. 🚩**
 
-Previously it ran _in_ terminal (the command line application) with a guide online but now the guide _is_ the app and it runs on your desktop on its own :sparkles: **This will be the only maintained version going forward** :arrow_right:
+Previously it ran _in_ terminal (the command line application) with a guide online but now the guide _is_ the app and it runs on your desktop on its own :sparkles: **This will be the only maintained version going forward** :arrow_right:.
 
 ---
 ## Hello future Forkers, Branchers and Pull Requesters!
