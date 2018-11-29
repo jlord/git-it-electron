@@ -1,0 +1,59 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Tạo một repository trên máy.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2> Repositories</h2>
+    <p>Một <strong>repository</strong> là một bộ sưu tập của những thành phần liên quan đến nhau. Trong trường hợp ta xét đến, khi viết một phần mềm, repository là một tập hợp các files liên quan đến project phần mềm. Để dễ hình dung, repository như một bộ tài liệu của project với tất cả các files liên quan bên trong, chứa cả lịch sử thay đổi, các thành phần dự án. Có thể gọi tắt là "repos".</p>
+
+    <img src="../../../assets/imgs/repos.png" alt="A drawing of four file folders" width="600">
+
+    <p>Hãy cho Git biết dự án của bạn, Git sẽ tự bắt đầu theo dấu tất cả sự thay đổi trong repos đó. Vì thế Git cũng tự tạo một Git repository: một folder gồm những thành phần được theo dõi bởi Git. Git theo dấu khi files đã được thêm vào, xóa đi hay thậm chí chỉ một chữ đơn lẻ trong một file bị thay đổi. Và tất cả sự thay đổi được thay đổi bởi ai, Git cũng sẽ ghi lại. Đối với lập trình phần mềm,
+   theo dấu thay đổi như vậy được gọi là kiểm soát phiên bản - <strong>version control</strong>.</p>
+
+    <h2>Dùng Terminal</h2>
+    <p><strong>Terminal</strong> (hay Bash) là một cách truyền đạt cho máy tính thông tin để làm việc thông qua cách dòng lệnh thay vì click trên ứng dụng bằng chuột. Bạn có thể đặt lại tên files, mở files, tạo ra folder mới, dịch chuyển giữa các directory (folder) và hơn thế nữa chỉ bằng việc chạy các dòng lệnh. Bạn có thể dùng trình soạn thảo văn bản cho code(như là <a
+                href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) trong terminal của mình.</p>
+
+    <p>Bên cạnh việc điều hướng cho máy tính, bạn cũng có thể sử dụng các chương trình khác Terminal mà có giao diện <strong>command-line (CLI)</strong>, đồng nghĩa với việc chúng có thể chạy dòng lệnh như terminal. Git là một trong số đó. Phần đầu tiên của dòng lệnh cho máy tính hiểu rằng bạn đang giao tiếp với Git. Những phần sau là lệnh hoặc các lựa chọn khác nhau mà bạn muốn Git.</p>
+
+    <p>Trong Git-it, bạn sẽ học một vài lệnh cơ bản để thao tác với dòng lệnh (và cả lệnh của Git) để điều hướng cho máy tính; chúng được mô tả trong từng bước.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Tạo ra một Repository</h3>
+    <p>Bạn sẽ tạo một folder cho dự án (project) và khởi tạo nó như một "kho Git" - Git repository. Ta sẽ đặt tên folder đó là 'hello-world' trong thử thách này, nhưng vẫn có thể chọn tên khác, 'hello-world' thường là tên cho project đầu tiên.</p>
+
+    <p>Đã đến lúc mở terminal!
+    <p>
+
+    <p>Trong cửa sổ dòng lệnh Terminal, gõ những lệnh này, cùng lúc rồi enter hay return sau mỗi lệnh.</p>
+
+    <p>Đầu tiên, tạo một folder:<br><span class="inline-tip">Tip: mkdir viết tắt bởi <em>make directory - tạo directory</em></span></p>
+    <code class="shell">mkdir hello-world</code>
+
+    <p>Vào bên trong folder:<br><span class="inline-tip">Tip: cd viết tắt bởi <em>change directory - chuyển hướng</em></span></p>
+    <code class="shell">cd hello-world</code>
+
+    <p>Cuối cùng, nói với Git để khởi tạo (bắt đầu tracking) folder hiện tại bạn đang dùng:</p>
+    <code class="shell">git init</code>
+
+    <p>Dòng lệnh cuối cùng phải trả về kết quả bắt đầu với "Initialized empty Git repository". Những dòng lệnh khác không trả về kết quả.</p>
+
+    <p>Đã xong! Nếu bạn muốn chắc chắn rằng Git repository đã được tạo, gõ vào<code>git status</code> và nếu nó không trả về'fatal: Not a git repository...', bạn đã làm đúng rồi!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Tạo folder mới (hay directory mới)</strong></li>
+        <code class="shell">mkdir &#60;FOLDERNAME&#62;</code>
+        <li><strong>Chuyển hướng đến một folder(hay directory) đã có</strong></li>
+        <code class="shell">cd &#60;FOLDERNAME&#62;</code>
+        <li><strong>Xem danh sách các thành phần trong folder</strong></li>
+        <code class="shell">ls </code>
+        <li><strong>Tạo Git repository</strong></li>
+        <code class="shell">git init</code>
+    </ul>
+</div>
