@@ -1,0 +1,67 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Lấy về một project từ GitHub.com và tạo bản sao ở local.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Forks</h2>
+    <p>Bây giờ bạn đã tạo một project trên máy và push lên GitHub, nhưng đó chỉ là một nửa sự thú vị! Phần còn lại là làm việc với người khác trên những project khác.</p>
+
+    <p>Khi bạn <strong>fork</strong> (gắp về) một repository, bạn đang làm công việc tạo một bản sao của repos đó trên tài khoản GitHub của bạn. Bản sao được 'fork' về bắt đầu vòng đời của mình như một <strong>remote</strong> repository, chỉ tồn tại tên GitHub account của bạn chứ không có trong máy tính của bạn. Các bản fork thường được dùng cho việc tạo ra phiên bản của chính bạn trong một project (sự chuyển hướng từ bản gốc giống như bạn rẽ từ ngã ba đường) hoặc cộng tác lại với các thay đổi từ bạn (ví dụ như sửa lỗi hoặc phát triển chức năng mới) gửi đến project gốc. </p>
+
+    <p>Để có một repos được fork về từ tài khoản GitHub của bạn chạy trên máy tính của bạn, bạn sẽ phải <strong>clone</strong> repos đó. Thao tác này sẽ tạo ra bản sao chép từ remote lên máy tính của bạn và bạn có thể làm việc với nó ở local.</p>
+
+    <img src="../../../assets/imgs/clone.png"
+         alt="Biểu đồ thể hiện repository từ GitHub được sao chép vào tài khoản GitHub của bạn và sao chép vào máy tính của bạn."
+         width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Gắp về Patchwork Repository</h3>
+    <p>Project ta sẽ làm ở địa chỉ <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.
+        Đi đến trang web, click vào 'Fork' ở phía trên bên phải. Khi việc fork hoàn thành, bạn có một bản copy trên tài khoản của mình. Sao chép URL dạng HTTP của bản fork từ thanh địa chỉ trên trình duyệt, đó chính là địa chỉ của bản fork trên máy chủ GitHub.</p>
+    <!-- TODO write address for user here -->
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Sao chép bản Fork tại Local</h3>
+    <p>Lúc này, trong terminal, bạn sẽ clone repos về máy tính. Nó sẽ tự động tạo ra một folder cho repos nên bạn không cần tạo ra. Nhưng hãy đảm bảo bạn chưa clone nó trong một Git repos khác!</p>
+
+    <p>Vậy hãy chắc chắn bạn đang không đứng trong project 'hello-world' của challenge trước. Để quay lại và thoát folder này, bạn có thể clone, làm theo hướng dẫn dưới đây:</p>
+
+    <p>Quay về 'hello-world' folder:<br><span class="inline-tip">Tip: hai dấu chấm có ý nghĩa bước ra khỏi directory cấp một\</span>
+    </p>
+    <p><code class="shell">cd ..</code></p>
+
+    <p>Giờ bạn không còn trong Git repos nào khác, clone bản fork của bạn thôi:</p>
+    <p><code class="shell">git clone &#60;URLFROMGITHUB&#62;</code></p>
+
+    <p>Đi đến folder đã được tạo cho bản copy được fork về (trong trường hợp này, nó có tên là 'patch work').</p>
+    <p><code class="shell">cd patchwork</code></p>
+
+    <p>Vậy là bạn đã có bản copy của repository trên máy tính và được kết nối tự động đến remote repos (bản copy được fork) trên GitHub account của bạn. Gõ vào <code>git remote -v</code> để xem địa chỉ dẫn đến bản fork đã được cài đặt.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Kết nối đến repository gốc</h3>
+
+    <p>Sẽ thế nào nếu bản repos gốc bạn fork về có thay đổi? Bạn sẽ cần <strong>pull</strong> những thay đổi đó về. Giờ hãy thêm vào một kết nối remote khác, đây là lúc kết nối đến bản gốc, <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>, repos đi kèm URL gốc.</p>
+
+    <p>Bạn có thể đặt bất cứ cái tên nào cho kết nối từ xa, nhưng thông thường, người ta thường sử dụng tên 'upstream'; hãy dùng nó trong lần này.</p>
+
+    <p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+
+    <p>Để chắc chắn bạn đã cài đặt đúng remote, nhập vào <code>git remote -v</code> để lấy ra danh sách các địa chỉ bạn đã lưu. <b>Bạn phải có một remote 'origin' cùng với địa chỉ của bản fork và một remote 'upstream' với địa chỉ của bản gốc, URL được đánh dấu ở bước trên.</b></p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Thêm một remote</strong></li>
+        <li><code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
+        <li><strong>Thay đổi URL của một remote</strong></li>
+        <li><code class="shell">git remote set-url &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
+        <li><strong>Xem tất cả các kết nối remote</strong></li>
+        <li><code class="shell">git remote -v</code></li>
+    </ul>
+</div>
