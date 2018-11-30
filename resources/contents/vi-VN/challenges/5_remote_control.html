@@ -1,5 +1,5 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Kết nối repos local của bạn với một remote (điều khiển từ xa) và đưa lên Git những thay đổi bạn đã làm.</p>
+    <p>Kết nối repos cục bộ của bạn với một remote (điều khiển từ xa) và đưa lên Git những thay đổi bạn đã làm.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
@@ -22,9 +22,9 @@
     <ul>
         <li>Đi đến <a href="http://github.com " target="_blank">github.com</a>, đăng nhập, và click biểu tượng '+' ở phía trên bên phải rồi chọn 'New Repository'.
         </li>
-        <li>Đặt cho repos đó một cái tên trùng với local repos của bạn, 'hello-world', và một vài mô tả ngắn trong description.</li>
+        <li>Đặt cho repos đó một cái tên trùng với repos cục bộ của bạn, 'hello-world', và một vài mô tả ngắn trong description.</li>
         <li>Đặt nó ở trạng thái công khai. Điều này làm cho repos đó sẽ được hiển thị trên profile của bạn công khai.</li>
-        <li>Không cần tạo file README vì ta đã có sẵn file trong local có tên là 'readme.txt'. Đây chỉ là một lựa chọn mà GitHub hỗ trợ nếu bạn chưa tạo file README.</li>
+        <li>Không cần tạo file README vì ta đã có sẵn file trong repos cục bộ có tên là 'readme.txt'. Đây chỉ là một lựa chọn mà GitHub hỗ trợ nếu bạn chưa tạo file README.</li>
         <li>Bỏ qua '.gitignore' và 'license' đặt là 'none'. Ta chưa cần dùng đến trong challenge lần này.</li>
         <li>Click tạo repos - create repository!</li>
     </ul>
@@ -41,11 +41,11 @@
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Kết nối Local đến Remote</h3>
+    <h3>Kết nối repos cục bộ đến Remote</h3>
     <p>Giờ bạn đã có một repository trắng trên GitHub.com. Ở phía trên bạn sẽ thấy 'Quick Setup', đảm bảo rằng nút
         'HTTPS' đã được chọn và sao chép địa chỉ đó, đó chính là địa chỉ repos của bạn trên máy chủ GitHub.</p>
 
-    <p>Quay trở lại với terminal và repos 'hello-world' local mà bạn đã tạo Git repos trong challenge trước đó, bạn cần cho Git biết và nhớ địa chỉ của remote version trên máy chủ GitHub. Bạn có thể có nhiều remote và mỗi remote yêu cầu một tên. Ở dạng nguyên thủy, tên thường được đặt là <code>origin</code>.
+    <p>Quay trở lại với terminal và repos 'hello-world' cục bộ mà bạn đã tạo Git repos trong challenge trước đó, bạn cần cho Git biết và nhớ địa chỉ của remote version trên máy chủ GitHub. Bạn có thể có nhiều remote và mỗi remote yêu cầu một tên. Ở dạng nguyên thủy, tên thường được đặt là <code>origin</code>.
     </p>
 
     <p>Để thêm remote có tên 'origin' vào repos:</p>
@@ -55,7 +55,7 @@
 
     <blockquote>
         <p><strong>Đối với người dùng Windows:</strong></p>
-        <p>Nếu bạn có <strong>GitHub Desktop</strong> trên máy tính, một remote có tên 'origin' sẽ tự động được tạo trong repos local. Trong trường hợp này, bạn chỉ cần cho nó biết URL liên kết với 'origin'. Dùng lệnh này thay cho 'add':</p>
+        <p>Nếu bạn có <strong>GitHub Desktop</strong> trên máy tính, một remote có tên 'origin' sẽ tự động được tạo trong repos cục bộ. Trong trường hợp này, bạn chỉ cần cho nó biết URL liên kết với 'origin'. Dùng lệnh này thay cho 'add':</p>
 
         <code class="shell">git remote set-url origin &lt;URLFROMGITHUB&gt;</code>
     </blockquote>
