@@ -1,0 +1,59 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Ghép nhánh cục bộ, xóa nhánh và kéo nhánh từ "thượng nguồn".</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Làm sạch</h2>
+
+    <p>Khi bạn không cần đến các nhánh nữa, bạn có thể xóa cả ở repos cục bộ lẫn remote repos. Việc này hữu ích với việc bạn không phải  kết thúc với một nhánh cũ không cần đến.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Merge Locally - Ghép nhánh cục bộ</h3>
+    <p>Pull request của bạn đã được ghép! Nhánh của bạn được ghép vào nhánh 'gh-pages' của bản gốc trên GitHub. Bạn cũng có thể ghép nhánh cục bộ.</p>
+
+    <p>Đầu tiên, chuyển đến nhánh mà bạn muốn ghép vào, trong trường hợp này là nhánh 'gh-pages'.</p>
+    <p><code class="shell">git checkout gh-pages</code></p>
+
+    <p>Giờ thì nói cho Git nhánh mà bạn muốn merge, chức năng với nhánh sẽ bắt đầu với "add-".</p>
+    <p><code class="shell">git merge &#60;BRANCHNAME&#62;</code></p>
+
+    <p>Làm cho mọi thứ trở nên gọn gàng với việc xóa nhánh chức năng. Nhánh giờ đã được ghép, bạn không cần đến nhánh này nữa:</p>
+    <p><code class="shell">git branch -d &#60;BRANCHNAME&#62;</code></p>
+
+    <p>Bạn cũng có thể xóa nhánh từ remote của GitHub:</p>
+    <p><code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Pull về từ thượng nguồn (Upstream)</h3>
+    <p>Cuối cùng nhưng không kém phần quan trọng, bản gốc đã thay đổi vì pull request của bạn đã được ghép vào—Reporobot thêm tên bạn vào website! Nếu bạn pull những thay đổi này từ upstream bạn sẽ cập nhật và nó sẽ có phên bản đi kèm. Bạn có thể xem tại: yourusername.github.io/patchwork.</p>
+
+    <p>Để pull từ upstream gốc:</p>
+    <p><code class="shell">git pull upstream gh-pages</code></p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Chúc mừng!</h2>
+    <p>Bạn đã tạo một repos cục bộ, một remote repos, cộng tác, gửi lên, kéo về và tham gia phát triển cho cộng đồng mã nguồn mở với hàng triệu nhà phát triển khác!</p>
+
+    <p>Ghé thăm <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> để thấy tên bạn được thêm vào đó! Muốn tìm cách để tiếp tục? Xem thử <a href="../pages/resources.html#what-next">What Next</a>
+        trong trang nguồn của ứng dụng.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Ghép một nhánh vào nhánh hiện tại</strong></li>
+        <code class="shell">git merge &#60;BRANCHNAME&#62;</code>
+        <li><strong>Đổi nhánh làm việc</strong></li>
+        <code class="shell">git checkout &#60;BRANCHNAME&#62;</code>
+        <li><strong>Xóa một nhánh cục bộ</strong></li>
+        <code class="shell">git branch -d &#60;BRANCHNAME&#62;</code>
+        <li><strong>Xóa một nhánh từ remote</strong></li>
+        <code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
+        <li><strong>Pull về từ một nhánh</strong></li>
+        <code class="shell">git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+    </ul>
+</div>
