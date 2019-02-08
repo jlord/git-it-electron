@@ -1,0 +1,70 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Install Git on your computer and configure your name and email.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Git</h2>
+    <p>Git is free <strong>open source software</strong> (the <a href="https://github.com/git/git">source code is
+        public</a>) written by Linus Torvalds who also wrote the Linux operating system's kernel. </p>
+    <p>Git is a program for keeping track of changes over time, known in programming as <strong>version control</strong>.
+        If you've used a track changes feature in a text editing software then you're already familiar with the concept!
+    </p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Install Git</h3>
+    <p>We recommend installing Git on your computer by downloading the <a href="https://desktop.github.com">GitHub
+        Desktop</a> app. We'll not use the desktop app in Git-it (we're learning terminal!) but it includes Git and is
+        the easiest way to install Git on all platforms in the same way.</p>
+
+    <ul>
+        <li><strong>Windows</strong>: Use the <strong>Git Shell</strong> for your terminal.</li>
+        <li><strong>Mac</strong>: Open GitHub Desktop and from Preferences, select the command line tools install. Use
+            the <strong>terminal</strong> app as your terminal.
+        </li>
+    </ul>
+
+    <p>Already have Git or not sure? Type <code>git --version</code> in your terminal and if it returns a version number
+        higher than <code>1.7.10</code>, you're set! For more information, visit the <a href="http://git-scm.com">Git
+            website</a>.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Git Software</h2>
+    <p>The GitHub Desktop app can do a lot of things with Git but not all, which is why learning the terminal is
+        important. But once you've got that down, you'll be glad to have the desktop app because it organizes your
+        project's information more visually, like the GitHub website.</p>
+
+    <p>Git on its own isn't like other programs on your computer. You'll likely not see an icon on your desktop, but it
+        will always be available to you and you'll be able to access it at anytime from your terminal or Git desktop
+        applications.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Configure Git</h3>
+    <p>Once GitHub Desktop (and therefore Git) is installed, open your <strong>terminal</strong>.
+        You can verify that Git is really there by typing:</p>
+
+    <p><code class="shell">git --version </code></p>
+
+    <p>This will return the version of Git on your computer and look something like this:</p>
+
+    <p><code class="comment">git version 1.9.1</code></p>
+
+    <p>Next, configure Git so it knows to associate your work to you:</p>
+    <p>Set your name:</p>
+    <p><code class="shell">git config --global user.name "Your Name"</code></p>
+    <p>Now set your email:</p>
+    <p><code class="shell">git config --global user.email "youremail@example.com"</code></p>
+
+    <p>You're done with your first challenge! Click the 'Verify' button to check the challenge.</p>
+</div>
+
+{{{ verify_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <h3>Dollar Signs in Code Documentation</h3>
+    <p>Dollar signs <code>$</code> are often used in programming documentation to signify that the line is <strong>command
+        line</strong> code (see the code snippets above). You don't actually type the <code>$</code> in though, only
+        type what comes after.</p>
+</div>
