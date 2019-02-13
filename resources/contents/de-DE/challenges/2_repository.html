@@ -1,7 +1,13 @@
+<!--
 <div id="challenge-desc" class="chal-goal blue-border border-box">
     <p>Create a new repository on your computer.</p>
 </div>
+-->
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Erzeuge ein neues Repository (dt. Ablage) auf Deinem Computer.</p>
+</div>
 
+<!--
 <div class="chal-background light-blue solid-box">
     <h2> Repositories</h2>
     <p>A <strong>repository</strong> is a collection of related items. In our case, when writing software, it is a
@@ -31,7 +37,24 @@
     <p>In Git-it you'll learn a few basic command-line actions (in addition to Git commands) for navigating your
         computer; they're described within the steps.</p>
 </div>
+-->
+<div class="chal-background light-blue solid-box">
+    <h2>Repositories - Verzeichnisse</h2>
+    <p>Ein <strong>Repository</strong> (dt. Ablage) ist eine Sammlung zusammenhängender Elemente, im Falle der Softwareentwicklung, eine Sammlung von Dateien zum Softwareprojekt. Man kann es sich als einen Projektordner mit allen relevanten Dateien vorstellen. Für den Nutzer wird es letztlich auch als ein solcher Projektordner in Erscheinung treten. Abgekürzt werden "Repositories" auch als "Repos" bezeichnet.</p>
 
+    <img src="../../../assets/imgs/repos.png" alt="Darstellung von vier Projektordnern" width="600">
+
+    <p>Wenn du nun Git Deinen Projektordner übergibst, wird Git anfangen alle Änderungen in diesem Ordner nachzuverfolgen. Somit wird Dein Projektordner zu einem Git-Repository: Ein Verzeichnis von Dateien, die von Git nachverfolgt werden. Git registriert hierbei wenn Dateien hinzugefügt oder Dateien gelöscht werden und insbesondere auch wenn einzelne Zeichen innerhalb einer Datei verändert werden. All diese Änderungen, inklusive der Informationen Wer diese Änderungen Wann gemacht hat, verfolgt und protokolliert Git. In der Softwareentwicklung wird dieses Verhalten als <strong>Versionsverwaltung</strong> bezeichnet.</p>
+
+    <h2>Das Terminal</h2>
+    <p>Das <strong>Terminal</strong> (auch Bash) ist ein Weg dem Computer Anweisungen mittels schriftlicher Kommandos zu erteilen (statt z.B. durch Mausklick). Im Terminal ist es möglich Dateien zu öffnen, umzubenennen, zu verschieben, Ordner anzulegen, und vieles mehr durch die Eingabe von schriftlichen Kommandos. Das Terminal ist an vielen Stellen sogar mächtiger, als Anwendungen auf grafischer Ebene. Selbst die Textbearbeitung von Code ist mittels Texteditoren (z.B. <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) direkt im Terminal möglich.</p>
+
+    <p>Neben der Verzeichnis-Navigation ist es im Terminal auch möglich Programme zu verwenden, die eine <strong>Kommandozeilen-Schnittstelle</strong> besitzen ('command-line interface' (CLI)), die also mittels Kommandos im Terminal gesteuert werden können. Git ist ein solches Programm. Der erste Teil des Kommandos sagt dem Computer dabei, dass das Kommando an Git gerichtet ist. Die folgenden Teile sind dann die Kommandos und verschiedenen Optionen, die Git ausführen soll</p>
+
+    <p>In Git-it wirst Du ein paar grundlegende Terminal-Kommandos kennen lernen (zusätzlich zu den Git-Kommandos), die für die grundlegende Navigation im Terminal nötig sind. Diese Kommandos sind innerhalb der Schritte beschrieben.</p>
+</div>
+
+<!--
 <div class="chal-step blue-border border-box">
     <h3>Create a Repository</h3>
     <p>You're going to create a new project folder and then initialize it as a Git repository. We'll name the folder 'hello-world'
@@ -57,9 +80,33 @@
     <p>You did it! If you want to be double-sure that it's a Git repository, type <code>git status</code> and if it
         doesn't return 'fatal: Not a git repository...', you're golden!</p>
 </div>
+-->
+<div class="chal-step blue-border border-box">
+    <h3>Erzeuge ein Repository</h3>
+    <p>In dieser Aufgabe wirst Du eine neues Projektverzeichnis anlegen und dieses dann als Git-Repository initialisieren. In der Aufgabenstellung nennen wir diesen Ordner 'Hello-World', Du kannst aber auch einen beliebigen anderen Namen verwenden ('Hello-World' ist ein sehr typischer Name für erste Test-Projekte).</p>
+
+    <p>Öffne jetzt Dein Terminal!
+    <p>
+
+    <p>Gib in deinem Terminal-Fenster die folgenden Befehle nacheinander ein und bestätige diese jeweils mit der Enter-/Eingabe-Taste.</p>
+
+    <p>Erstelle zuerst einen neuen Ordner:<br><span class="inline-tip">Tipp: mkdir ist eine Abkürzung für <em>'make directory'</em>(dt. Verzeichnis erstellen)</span></p>
+    <code class="shell">mkdir hello-world</code>
+
+    <p>Wechsle Dein Arbeitsverzeichnis in diesen Ordner:<br><span class="inline-tip">Tipp: cd ist eine Abkürzung für <em>'change directory'</em>(dt. Verzeichnis wechseln)</span></p>
+    <code class="shell">cd hello-world</code>
+
+    <p>Weiße Git an, das aktuelle Verzeichnis zu initialisieren und Änderungen ab nun nachzuverfolgen:</p>
+    <code class="shell">git init</code>
+
+    <p>Das letzte Kommando sollte Dir so etwas wie "Initialized empty Git repository" (dt. Leeres Git-Repository initialisiert) zurückgeben. Die vorherigen Kommandos erzeugen dagegen keine direkte Ausgabe/Rückgabe.</p>
+
+    <p>Das war es! Wenn Du möchtest, kannst Du Deine Arbeit nochmals kontrollieren, indem Du <code>git status</code> in die Kommandozeile eingibst. Solange Du keinen Fehler 'fatal: Not a git repository...' (dt. Dies ist kein Git-Repository) zurückbekommst, hast due es geschafft!</p>
+</div>
 
 {{{ verify_directory_button }}}
 
+<!--
 <div class="chal-tip grey-border border-box">
     <ul class="no-list-style">
         <li><strong>Make a new folder (aka make directory)</strong></li>
@@ -69,6 +116,19 @@
         <li><strong>List the items in a folder</strong></li>
         <code class="shell">ls </code>
         <li><strong>Turn Git on for a folder</strong></li>
+        <code class="shell">git init</code>
+    </ul>
+</div>
+-->
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Erzeuge einen neuen Ordner (aka make directory)</strong></li>
+        <code class="shell">mkdir &#60;FOLDERNAME&#62;</code>
+        <li><strong>Navigiere in einen existierenden Ordner (aka change directory)</strong></li>
+        <code class="shell">cd &#60;FOLDERNAME&#62;</code>
+        <li><strong>Liste die Elemente in einem Ordner auf</strong></li>
+        <code class="shell">ls </code>
+        <li><strong>Initialisiere Git für einen Ordner</strong></li>
         <code class="shell">git init</code>
     </ul>
 </div>
