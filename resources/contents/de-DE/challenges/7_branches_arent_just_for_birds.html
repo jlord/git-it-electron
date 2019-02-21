@@ -1,7 +1,13 @@
+<!--
 <div id="challenge-desc" class="chal-goal blue-border border-box">
     <p>Add a branch, locally, to your forked repository to work on your changes.</p>
 </div>
+-->
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Füge lokal einen Ast zu Deinem Repository hinzu, um Änderungen hinzuzufügen.</p>
+</div>
 
+<!--
 <div class="chal-background light-blue solid-box">
     <h2>Branches</h2>
     <p>Git repositories use branches to isolate work when needed. It's common practice when working on a project or with
@@ -28,7 +34,26 @@
 
     <code>http://githubusername.github.io/repositoryname</code>
 </div>
+-->
+<div class="chal-background light-blue solid-box">
+    <h2>Branches</h2>
+    <p>Git Repositorys benutzen Branches (dt. Äste), um Veränderungen wenn nötig zu isolieren. Es ist übliche Praxis in gemeinsamen Projekten, Änderungen in einem eigenen<strong>Branch</strong> (Ast) zu erstellen. Auf diese Weise können Änderungen getätigt und entwickelt werden, während der Hauptast (üblicherweiße 'master' genannt) stabil bleibt. Wenn die Arbeit im Nebenast dann stabil und beendet ist, wird der Nebenast wieder in den Hauptast eingefügt und verschmolzen (engl. merge).</p>
 
+    <p>Das folgende Diagramm zeigt, wie Du von Deinem Hauptast('master'-Branch) abzweigen kannst, im Nebenast arbeiten und dann diese Änderungen wieder in den Hauptast integrieren kannst. Du kannst wenn nötig sogar von einem Nebenast weitere Äste abzweigen, Basis muss hierfür nicht zwangsläufig der Hauptast sein.</p>
+
+    <img src="../../../assets/imgs/branches.png"
+         alt="Das Diagramm zeigt eine horizontale Line, die den Master-Branch darstellt, sowie eine weitere, nach oben abzweigende Linie (ein Branch), die später wieder im Master-Branch zusammengeführt werden. Eine weitere Linie zweigt vom Master-Branch nach unten ab, von der wiederum eine weitere Linie (ein Branch) abzweigt. Diese beiden Zweige werden später unabhängig voneinander mit dem Master-Branch zusammengeführt."
+         width="100%">
+
+    <p>Eine gute Visialisierung für die Funktion von Branches in einem Projekt ist im GitHub-Guide zu finden (engl.):<a href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a></p>
+
+    <h2>GitHub Webseiten</h2>
+    <p>GitHub hostet automatisch statische Webseiten-Dateien, die in Branches mit dem Namen 'gh-pages' abgelegt sind. Dieser kostenlose Service ist als <a href="http://pages.github.com">GitHub Pages</a> (dt. GitHub Seiten) bekannt. Da das in der letzen Aufgabe abgespaltete Projekt 'patchwork' eine Webseite erstellt, ist der Hauptast in diesem Projekt auch als 'gh-pages' benannt, anstatt 'master'. Alle Repositorys, die einen 'gh-pages'-Branch mit Webseiten-Dateien besitzen, sind live online unter dem folgenden URL-Muster:</p>
+
+    <code>http://GitHubNutzername.github.io/RepositoryName</code>
+</div>
+
+<!--
 <div class="chal-step blue-border border-box">
     <h3>Create a branch</h3>
     <p>When you create a branch, Git copies everything from the current branch you're on and places it in the branch
@@ -49,7 +74,25 @@
 
     <p><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></p>
 </div>
+-->
+<div class="chal-step blue-border border-box">
+    <h3>Erzeuge einen Branch</h3>
+    <p>Wenn Du einen neuen Branch erzeugst, kopiert Git automatisch alles aus dem aktuellen Branch und speichert es in dem neu erstellten Branch ab.</p>
 
+    <p>Gib im Terminal - noch immer in Deinem lokalen 'patchwork'-Repository - den Befehl <code>git status</code> ein, um zu sehen in welchem Branch Git aktuell arbeitet. Git sollte Dir den Branch 'gh-pages' zurückgeben.</p>
+
+    <p>Erzeuge nun einen neuen Branch mit der Bezeichnung "add-&#60;NutzerName&#62;", wobei 'NutzerName' deinen GitHub-Nutzernamen darstellen soll (Bsp. "add-jlord"). <strong>Achtung:</strong>Branches sind 'case-sensitive', das heißt Groß- und Kleinschreibung müssen unterschieden werden! Benenne Deinen jetzigen Branch im Repository exakt nach Deinem GitHub Nutzernamen!</p>
+
+    <p><code class="shell">git branch &#60;BRANCHNAME&#62;</code></p>
+
+    <p>Jetzt existert in Deinem Repository ein neuer Branch, der inhaltlich dem Branch 'gh-pages' entspricht.</p>
+
+    <p>Um in diesem Branch zu arbeiten, musst Du den Branch auswählen. In Git wird hierfür der Befehl <strong>checkout</strong> (dt. austesten) verwendet. Wähle Deinen neuen Branch aus:</p>
+
+    <p><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></p>
+</div>
+
+<!--
 <div class="chal-step blue-border border-box">
     <h3>Step: Create a new file</h3>
     <p>Back in your text editor:</p>
@@ -63,7 +106,21 @@
         <li>Next, check in your changes (see below).</li>
     </ul>
 </div>
+-->
+<div class="chal-step blue-border border-box">
+    <h3>Nächster Schritt: Erstelle eine neue Datei</h3>
+    <p>Im Text-Editor:</p>
+    <ul>
+        <li>Erzeuge eine Datei mit dem Namen <span style="white-space: nowrap;">"add-&#60;NutzerName&#62;.txt"</span>, worin 'NutzerName' wieder Deinen GitHub-Nutzernamen bezeichnet. (Im bereits genannten Bsp.: "add-jlord.txt")
+        </li>
+        <li>Als Inhalt der Textdatei schreibe einzig und alleine Deinen GitHub-Nutzernamen in die Datei. (Im Bsp. 'jlord').</li>
+        <li>Speichere diese Datei im Ordner 'contributors' (dt. Mitwirkende) im Patchwork-Verzeichnis: <strong>Patchwork/contributors/add-NutzerName.txt</strong>
+        </li>
+        <li>Diese Änderungen kannst Du nun im Repository sichern.</li>
+    </ul>
+</div>
 
+<!--
 <div class="chal-step blue-border border-box">
     <h3>Check-in</h3>
     <p>Go through the steps for checking in a project: </p>
@@ -75,9 +132,22 @@
     <p>Now push your update to <b>your fork</b>, 'origin', on GitHub:</p>
     <p><code class="shell">git push origin &#60;BRANCHNAME&#62;</code></p>
 </div>
+-->
+<div class="chal-step blue-border border-box">
+    <h3>Änderungen im Repository sichern</h3>
+    <p>Gehe durch die folgenden Befehle, um Deine Änderungen am Projekt zu speichern: </p>
+
+    <p><code class="shell">git status</code></p>
+    <p><code class="shell">git add &#60;contributors/DATEINAME&#62;</code></p>
+    <p><code class="shell">git commit -m "Commit Nachricht"</code></p>
+
+    <p>Schiebe jetzt Deine Aktualisierung in <b>Deinen Fork</b> 'origin' bei GitHub:</p>
+    <p><code class="shell">git push origin &#60;BRANCHNAME&#62;</code></p>
+</div>
 
 {{{ verify_directory_button }}}
 
+<!--
 <div class="chal-no-pass grey-border border-box">
     <h4>Permission denied...error: 403</h4>
     <p>You are pushing changes to a repository you don't have write access to. In this case, you're likely pushing to
@@ -105,7 +175,28 @@
     <p><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></p>
     <p>When you've made your updates, verify again!</p>
 </div>
+-->
+<div class="chal-no-pass grey-border border-box">
+    <h4>Permission denied...error: 403</h4>
+    <p>'Permission denied' (dt. Erlaubnis verweigert) bezeichnet den Fehler, wenn Du versuchst auf ein Repository zu schieben zu dem Du keine Änderungs-Berechtigung besitzt. In unserem Fall versuchst Du vermutlich auf das Original-Repository 'jlord/patchwork' zu schieben. Stelle sicher, dass Du zum Remote 'origin' schieben möchtest, und dass dieser Remote auf die Adresse Deines Forks bei GitHub zeigt. Um Deine Remotes anzuschauen und zu überprüfen wohin diese zeigen nutze den Befehl <code>git remote -v</code>. Du solltest hier den Remote 'upstream' sehen, der auf 'jlord/patchwork' zeigt, sowie den Remote 'origin', der auf 'DeinNutzerName/patchwork' zeigt.
 
+    <p>Um den Fehler eines fehlgeleiteten Remote zu beheben und den Zeiger des Remotes neu zu setzen nutze folgenden Befehl: <code>git remote set-url origin <URLTOYOURFORK></code>.
+
+    <h4>Authentication failed...error: 401</h4>
+    <p>'Authentication failed' (dt. Authetifizierung fehlgeschlagen) bezeichnet den Fehler, dass Deine Identität nicht verifiziert werden konnte. Falls du die zwei-Faktor-Authetifizierung aktiviert hast (2FA - Two Factor Authentication), muss ein Access-Token als Passwort verwendet werden. Generiert werden kann dieser durch verfolgen der <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use">Anweisungen in der GitHub Hilfe</a>. Dieser Access-Token fungiert dann als Dein Passwort - bewahren ihn also gut auf! Du kannst den Access-Token auch <a href="https://help.github.com/articles/caching-your-github-password-in-git/">auf Deinem Computer speichern</a>, damit Du ihn nicht immer wieder eingeben musst.</p>
+
+    <h4>File NOT in contributors folder</h4>
+    <p>'File NOT in contributors folder' (dt. Datei nicht im Ordner 'contributors') - Die erstellte Datei sollte im 'contributors'-Verzeichnis in Deinem Patchwork-Repository gespeichert sein. Solltest Du sie an einem anderen Ort abgespeichert haben, benutze am besten die Suche und schiebe die Datei in das 'contributors'-Verzeichnis. Teste anschließend erneut den <code>git status</code> füge die Datei in Git den Änderungen hinzu (oder füge alle Änderungen hinzu: <code>git add -A</code>) und übergib die Änderungen an die Historie:</p>
+    <p><code class="shell">git add -A</code></p>
+    <p><code class="shell">git commit -m "Datei in das contributors Verzeichnis verschoben"</code></p>
+
+    <h4>Branch name expected: _____</h4>
+    <p>'Branch name expected: _____' (dt. Branch-Name erwartet:) Der Branch-Name sollte exakt Deinem Nutzernamen entsprechen. Um den Branch-Namen zu ändern nutze den Befehl:</p>
+    <p><code class="shell">git branch -m &#60;NEUERBRANCHNAME&#62;</code></p>
+    <p>Wenn Du diese Aktualisierungen gemacht hast, kannst Du Deinen Erfolg erneut prüfen lassen!</p>
+</div>
+
+<!--
 <div class="chal-tip grey-border border-box">
     <ul class="no-list-style">
         <li><strong>You can create and switch to a branch in one line</strong></li>
@@ -119,6 +210,23 @@
         <li><strong>Rename a branch you're currently on</strong></li>
         <li><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></li>
         <li><strong>Verify what branch you're working on</strong></li>
+        <li><code class="shell">git status</code></li>
+    </ul>
+</div>
+-->
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Du kannst einen Branch mit einem einzigen Kommando erzeugen und auswählen</strong></li>
+        <li><code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Erzeugen einen neuen Branch</strong></li>
+        <li><code class="shell">git branch &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Wähle einen Branch aus</strong></li>
+        <li><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Liste die verfügbaren Branches auf</strong></li>
+        <li><code class="shell">git branch</code></li>
+        <li><strong>Benenne den akutell ausgewählten Branch um</strong></li>
+        <li><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></li>
+        <li><strong>Schaue, auf welchem Branch Du aktuell arbeitest</strong></li>
         <li><code class="shell">git status</code></li>
     </ul>
 </div>
