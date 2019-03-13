@@ -1,114 +1,115 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Connect your local repository to a remote one and push changes to it.</p>
+    <p>Łączenie lokalnego repozytorium ze zdalnym i wypychanie zmian.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2>Remotes</h2>
+    <h2>Repozytoria zdalne</h2>
 
-    <p>When you put something on GitHub that copy lives on one of GitHub's servers. This makes it a
-        <strong>remote</strong> repository because it is not on your computer, but on a server, "remote" and somewhere
-        else. By <strong>pushing</strong> your <strong>local</strong> (on your computer) changes to it, you keep it up
-        to date.</p>
+    <p>Kiedy umieszczasz coś na GitHub ta kopia żyje na jednym z serwerów do niego należących. To czyni je 
+        <strong>repozytorium zdalnym</strong> gdyż nie znajduje się ono na Twoim komputerze, ale na serwerze, "zdalnie"
+        i gdzieś indziej. <strong>Wypychając</strong> swoje <strong>lokalne</strong> (znajdujące się na Twoim komputerze)
+        zmiany, czynisz je aktualnym.</p>
 
-    <p>Others can always then get the latest from your project by <strong>pulling</strong> your changes down from the
-        remote (and onto their computer). This is how everyone can work on a project together without needing access to
-        your computer where your local copy is stored.</p>
+    <p>Inni mogą zawsze <strong>pobrać</strong> najaktualniejsze zmiany z twojego projektu wprost z repozytorium zdalnego
+        (i prosto na swój komputer). To właśnie tak wszyscy razem pracują nad jednym projektem bez konieczności uzyskiwania
+        dostępu do Twojego komputera, gdzie przechowywana jest kopia lokalna.</p>
 
     <img src="../../../assets/imgs/remotes.png"
-         alt="A diagram showing GitHub as a central server which creates the GitHub.com website. Two computers, on either side, are pushing and pulling from GitHub."
+         alt="Diagram pokazujący GitHub jako centralny serwer tworzący stronę GitHub.com. Dwa komputery, po różnych stronach, wypychają i pobierają zmiany z GitHuba."
          width="100%">
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Create a Remote Repository</h3>
-    <p>You want to sync your <strong>local</strong> version with one stored on GitHub.com. First create a new <strong>remote</strong>
-        repository on GitHub.com.</p>
+    <h3>Tworzenie repozytorium zdalnego</h3>
+    <p>Chcesz zsynchronizować zmiany zawarte w <strong>lokalnej</strong> wersji repozytorium z tymi przechowywanymi na GitHub.com.
+        Najpierw utwórz nowe repozytorium <strong>zdalne</strong> na GitHub.com.</p>
 
     <ul>
-        <li>Go to <a href="http://github.com " target="_blank">github.com</a>, log in, and click the '+' in the top
-            right and then click 'New repository'.
+        <li>Przejdź do <a href="http://github.com" target="_blank">github.com</a>, zaloguj się i kliknij ikonę '+' w prawym 
+            górnym rogu, a następnie wybierz opcję 'New repository'.
         </li>
-        <li>Give it a name that matches your local repository's name, 'hello-world', and a short description.</li>
-        <li>Make it public. This means it'll be listed on your public profile.</li>
-        <li>Don't initialize with a README because we already have a file, locally, named 'readme.txt'. This is a helper
-            option from GitHub if you hadn't already made it.
+        <li>Nadaj jemu nazwę odpowiadającą nazwie Twojego lokalnego repozytorium, 'hello-world', oraz krótki opis.</li>
+        <li>Wybierz repozytorium publiczne. Oznacza to, że zostanie ono zamieszczone w Twoim profilu publicznym.</li>
+        <li>Nie inicjuj repozytorium plikiem README ponieważ już taki mamy lokalnie - 'readme.txt'. To jest opcja pomocnicza
+            GitHuba, jeśli jeszcze nie masz takiego pliku.
         </li>
-        <li>Leave '.gitignore' and 'license' set to 'none'. We won't use them this tutorial.</li>
-        <li>Click create repository!</li>
+        <li>Pozostaw '.gitignore' i 'license' ustawione na 'none'. Nie będziemy korzystać z nich w ramach tego poradnika.</li>
+        <li>Kliknij przycisk by zatwierdzić utworzenie repozytorium!</li>
     </ul>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2>Readmes, .gitignores and Licenses</h2>
-    <p>These are common files in open source projects so to make starting a new project easier, GitHub provides an
-        option for creating them for you.</p>
-    <p>A <strong>readme</strong> explains what the project is, how to use it, and often times, how to contribute (though
-        sometimes there is an extra file, 'CONTRIBUTING.md', for those details).</p>
-    <p>A <strong>.gitignore</strong> is a list of files that Git should <em>not</em> track, for instance, files with
-        passwords!</p>
-    <p>A <strong>license</strong> file is the type of license you put on your project. This lets others know how they
-        can use it. Information on the types is here: <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a>.
+    <h2>Readme, .gitignore i licencje</h2>
+    <p>Są to pliki popularne w projektach open source, więc by ułatwić utworzenie nowych projektów, GitHub oferuje 
+        utworzenie ich w Twoim imieniu.</p>
+    <p><strong>Readme</strong> ('czytaj to') wyjaśnia czym jest projekt, jak z niego korzystać, a czasami także jak 
+        włączyć się do pracy na rzecz jego rozwoju (choć czasem jest to wyjaśniane w dodatkowym pliku 'CONTRIBUTING.md',
+        tworzonym specjalnie na taką okazję).</p>
+    <p><strong>.gitignore</strong> zawiera listę plików których Git <em>nie</em> powinien śledzić, takie jakie pliki
+        zawierające hasła czy dostępy do systemów produkcyjnych!</p>
+    <p><strong>Plik license</strong> zawiera rodzaj licencji jaka udzielana jest na projekt. Pozwala to innym na zapoznanie
+        się z zasadami jego użytkowania. Informacje odnośnie rodzajów licencji można znaleźć tutaj: <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a>.
     </p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Connect your Local to your Remote</h3>
-    <p>Now you've got an empty repository started on GitHub.com. At the top you'll see 'Quick Setup', make sure the
-        'HTTPS' button is selected and copy the address—this is the address of your repository on GitHub's servers.</p>
+    <h3>Podłączanie repozytorium lokalnego do repozytorium zdalnego</h3>
+    <p>Teraz posiadasz już utworzone puste repozytorium zdalne na on GitHub.com. Na górze znajdziesz 'Quick Setup',
+        upewnij się, że wybrano opcję 'HTTPS' i skopiuj adres - to jest adres Twojego repozytorium na serwerach GitHuba.</p>
 
-    <p>Back in your terminal, and inside of the 'hello-world' folder that you initialized as a Git repository in the
-        earlier challenge, you want to tell Git to remember the address of the remote version on GitHub's servers. You
-        can have multiple remotes so each requires a name. The primary remote is typically named <code>origin</code>.
+    <p>W swoim terminalu, w folderze 'hello-world' gdzie zainicjowałeś repozytorium w poprzednim wyzwaniu, chcesz 
+        powiedzieć Gitowi by zapamiętał adres zdalnej wersji tego repozytorium na serwerach GitHuba. Ponieważ możesz 
+        mieć wiele repozytoriów zdalnych, każde z nich wymaga osobnej nazwy. Główne repozytorium zdalne jest często
+        nazywane <code>origin</code>.
     </p>
 
-    <p>To add a remote named 'origin' to your repository:</p>
-    <code class="shell">git remote add origin &lt;URLFROMGITHUB&gt;</code>
+    <p>W celu dodania repozytorium zdalnego 'origin' do wersji lokalnej:</p>
+    <code class="shell">git remote add origin &lt;URLDOGITHUBA&gt;</code>
 
-    <p>Your <strong>local</strong> repository now knows where your <strong>remote</strong> repository, named 'origin',
-        lives on GitHub's servers. Think of it as adding a name and address on speed dial—now when you need to send
-        something there, you can.</p>
+    <p>Twoje repozytorium <strong>lokalne</strong> wie już gdzie szukać repozytorium <strong>zdalnego</strong>, nazwanego 'origin'.
+        Pomyśl o tym jak o dodawaniu nazwy i numeru telefonu do szybkiego wybierania, jeśli chcesz szybko do kogoś zadzwonić,
+        wystarczy po prostu wybrać odpowiednią opcję.</p>
 
     <blockquote>
-        <p><strong>Windows Users:</strong></p>
-        <p>If you have <strong>GitHub Desktop</strong> on your computer, a remote named 'origin' is automatically
-            created in your local repository. In that case, you'll just need to tell it what URL to associate with
-            'origin'. Use this command instead of the 'add' one above:</p>
+        <p><strong>Użytkownicy Windowsa:</strong></p>
+        <p>Jeśli posiadasz na swoim komputerze aplikację <strong>GitHub Desktop</strong>, zdalne repozytorium nazwane 'origin'
+            jest automatycznie dodawane do lokalnego repozytorium. W tej sytuacji jedyne co musisz zrobić to poinformować
+            jaki adres URL z nim powiązać. Użyj tego polecenia zamiast 'add' powyżej:</p>
 
-        <code class="shell">git remote set-url origin &lt;URLFROMGITHUB&gt;</code>
+        <code class="shell">git remote set-url origin &lt;URLDOGITHUBA&gt;</code>
     </blockquote>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Push Work to your Remote</h3>
-    <p>Next you want to <strong>push</strong> (send) everything you've done locally to your remote repository on GitHub.
-        This is something you'll do often so that your remote version is up to date and matching the state of your local
-        version.</p>
+    <h3>Wypychanie zmian do repozytorium zdalnego</h3>
+    <p>Następnie chcesz <strong>wypchnąć</strong> (wysłać) wszystkie zmiany lokalne do repozytorium zdalnego na GitHub.
+        To jest coś, co będziesz robić często by zapewnić, że wersja zdalna jest zawsze zaktualizowana o lokalne zmiany.</p>
 
-    <p>Git has a branching system so that you can work on different parts of a project at different times. We'll learn
-        more about that later, but by default the first branch is named 'master'. When you push (and later pull) from a
-        project, you tell Git the <strong>branch name</strong> you want and the name of the <strong>remote</strong> that
-        it lives on.</p>
+    <p>Git posiada system gałęzi, co umożliwia skoncentrowanie prac nad różnymi aspektami projektu w różnych chwilach.
+        Więcej dowiemy się o tym później, ale domyślnie pierwsza gałąź nazywana jest 'master'. Kiedy wypychasz (i później pobierasz)
+        zmiany, musisz powiedzieć gitowi z której gałęzi ma skorzystać używając jej <strong>nazwy</strong> oraz nazwy repozytorium 
+        <strong>zdalnego</strong> na którym ona istnieje.</p>
 
-    <p>In this case, we'll send our branch named 'master' to our remote on GitHub named 'origin'. </p>
+    <p>W tym przypadku, wyślemy naszą gałąź nazwaną 'master' na nasze repozytorium GitHub nazwane 'origin'. </p>
     <code class="shell">git push origin master</code>
 
-    <p>Now go to your remote repository's page on GitHub.com and refresh the page. <strong>Wow!</strong> Everything is
-        now the same locally as it is remotely. Congrats on your first public repository!</p>
+    <p>Teraz przejdź na stronę swojego repozytorium zdalnego na GitHub.com i odśwież stronę. <strong>Wow!</strong> Wszystko 
+        jest teraz zsynchronizowane. Gratulacje utworzenia pierwszego repozytorium zdalnego!</p>
 </div>
 
 {{{ verify_directory_button }}}
 
 <div class="chal-tip grey-border border-box">
     <ul class="no-list-style">
-        <li><strong>Add remote connections</strong></li>
-        <code class="shell">git remote add &lt;REMOTENAME&gt; &lt;URL&gt;</code>
-        <li><strong>Set a URL to a remote</strong></li>
-        <code class="shell">git remote set-url &lt;REMOTENAME&gt; &lt;URL&gt;</code>
-        <li><strong>Pull in changes</strong></li>
-        <code class="shell">git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
-        <li><strong>View remote addresses</strong></li>
+        <li><strong>Dodawanie repozytorium zdalnego</strong></li>
+        <code class="shell">git remote add &lt;NAZWAZDALNA&gt; &lt;URL&gt;</code>
+        <li><strong>Zmiana adresu URL do repozytorium zdalnego</strong></li>
+        <code class="shell">git remote set-url &lt;NAZWAZDALNA&gt; &lt;URL&gt;</code>
+        <li><strong>Pobieranie zmian</strong></li>
+        <code class="shell">git pull &lt;NAZWAZDALNA&gt; &lt;BRANCHNAME&gt;</code>
+        <li><strong>Wyświetlanie listy repozytoriów zdalnych</strong></li>
         <code class="shell">git remote -v</code>
-        <li><strong>Push changes</strong></li>
-        <code class="shell">git push &lt;REMOTENAME&gt; &lt;BRANCH&gt;</code>
+        <li><strong>Wypychanie zmians</strong></li>
+        <code class="shell">git push &lt;NAZWAZDALNA&gt; &lt;BRANCH&gt;</code>
     </ul>
 </div>
