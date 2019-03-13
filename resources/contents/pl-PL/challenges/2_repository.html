@@ -1,74 +1,73 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Create a new repository on your computer.</p>
+    <p>Tworzenie nowego repozytorium na Twoim komputerze.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2> Repositories</h2>
-    <p>A <strong>repository</strong> is a collection of related items. In our case, when writing software, it is a
-        collection of files related to a software project. You can imagine it as a project folder with all the relevant
-        files inside of it. In fact, that's what it will look like on your computer anyways. Sometimes they're called
-        "repos" for short.</p>
+    <h2>Repozytoria</h2>
+    <p><strong>Repozytorium</strong> jest zbiorem powiązanych elementów. W naszym przypadku, kiedy piszemy aplikację
+        jest to kolekcja plików związanych z danym projektem. Wyobraź sobie to jako folder z projektem zawierający 
+        wszystkie powiązane z nim pliki. W rzeczywistości tak właśnie będzie to wyglądało. Repozytoria często nazywa
+        się "repo".</p>
 
-    <img src="../../../assets/imgs/repos.png" alt="A drawing of four file folders" width="600">
+    <img src="../../../assets/imgs/repos.png" alt="Ilustracja przedstawiająca cztery foldery" width="600">
 
-    <p>You tell Git what your project is and Git will start tracking all of the changes to that folder. This makes it a
-        Git repository: a folder of items being tracked by Git. Git tracks when files are added, subtracted or even a
-        single letter in a single file is changed. All of this plus who did it and when is tracked by Git. In software,
-        tracking changes like this is called <strong>version control</strong>.</p>
+    <p>Wskazujesz Gitowi czym jest Twój projekt i zaczyna on śledzić wszystkie zmiany w wybranym folderze. To czyni go
+        repozytorium Git: folder z elementami śledzony przez Git. Git śledzi jakie elementy są dodawane, usuwane,
+        a nawet kosmetyczne zmiany jak korekta jednej litery w pojedynczym pliku. Wszystko to plus kto dokonał zmiany
+        i kiedy są śledzone przez Git. W programowaniu, śledzenie takich zmian nazywane jest <strong>kontrolą wersji</strong>.</p>
 
-    <h2>Using Terminal</h2>
-    <p><strong>Terminal</strong> (or Bash) is a way to instruct your computer to do things by typing commands rather
-        than clicking applications with your mouse. You can rename files, open files, create new folders, move between
-        directories (folders) and more all by running typed commands. You can even use a text editor for code (like <a
-                href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) in your terminal and
-        never have to leave!</p>
+    <h2>Korzystanie z terminala</h2>
+    <p><strong>Terminal</strong> (lub Bash) jest sposobem na poinstruowanie Twojego komputera co ma zrobić poprzez wpisywanie
+        poleceń zamiast interakcji z aplikacją poprzez interfejs graficzny. Możliwe jest zmienianie nazw plików, otwieranie ich,
+        tworzenie nowych katalogów i poruszanie się między nimi, a także wiele więcej za pomocą samych komend. Możesz nawet korzystać
+        z edytora tekstowego by tworzyć program (jak <a
+                href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) w swoim terminalu i nigdy nie musieć go zamykać!</p>
 
-    <p>Besides navigating your computer, you can also use programs in Terminal that have a <strong>command-line
-        interface (CLI)</strong>, meaning they can be run with commands in terminal. Git is one of these. The first part
-        of the command lets your computer know you're talking to Git. The parts following that are the commands and the
-        different options you want Git to act on.</p>
+    <p>Oprócz nawigacji po swoim komputerze możesz także uruchamiać programy korzystające z <strong>wiersza poleceń (ang. CLI - Command Line Interface)</strong>,
+        co oznacza iż mogą one być uruchamiane za pomocą poleceń wydawanych w terminalu. Git jest jednym z nich. Pierwsza część 
+        polecenia mówi Twojemu komputerowi, że rozmawiasz z Gitem. Następne składowe polecenia są poleceniami i różnymi opcjami 
+        mówiącymi Gitowi jak ma się zachować.</p>
 
-    <p>In Git-it you'll learn a few basic command-line actions (in addition to Git commands) for navigating your
-        computer; they're described within the steps.</p>
+    <p>W Git-it nauczysz się paru podstawowych akcji wiersza poleceń (jako dodatek do poleceń Git) do nawigowania po Twoim komputerze; 
+        są opisane w poszczególnych krokach.</p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Create a Repository</h3>
-    <p>You're going to create a new project folder and then initialize it as a Git repository. We'll name the folder 'hello-world'
-      in this challenge, but you can choose a different name if you already have a folder named this (it's a common first project name).</p>
+    <h3>Tworzenie repozytorium</h3>
+    <p>Utworzysz nowy folder projektu i zainicjujesz w nim nowe repozytorium Git. Na potrzeby tego wyzwania nazwiemy ten folder 'hello-world', 
+        ale możesz wybrać inną nazwę jeśli posiadasz już folder o tej nazwie (jest to popularna nazwa dla pierwszych projektów).</p>
 
-    <p>Time to open your terminal!
+    <p>Czas otworzyć terminal!
     <p>
 
-    <p>In your terminal window, type these commands, one at a time, pressing enter/return after each.</p>
+    <p>W oknie Twojego terminala wprowadź następujące polecenia, jedno po drugim, zatwierdzając przyciskiem enter/return po każdej wprowadzonej linii.</p>
 
-    <p>First, make a new folder:<br><span class="inline-tip">Tip: mkdir stands for <em>make directory</em></span></p>
+    <p>Najpierw, utwórz nowy folder:<br><span class="inline-tip">Rada: mkdir jest skróceniem angielskiego wyrażenia <em>make directory</em> (pol. <em>utwórz katalog</em>)</span></p>
     <code class="shell">mkdir hello-world</code>
 
-    <p>Then go into that folder:<br><span class="inline-tip">Tip: cd stands for <em>change directory</em></span></p>
+    <p>Następnie przejdź do tego katalogu:<br><span class="inline-tip">Rada: cd jest skróceniem angielskiego wyrażenia <em>change directory</em> (pol. <em>zmień katalog</em>)</span></p>
     <code class="shell">cd hello-world</code>
 
-    <p>Finally, tell Git to initialize (start tracking) the folder you are now in:</p>
+    <p>Na koniec, powiedz Gitowi by zainicjalizował (zaczął śledzić zmiany) folder, w którym się znajdujesz:</p>
     <code class="shell">git init</code>
 
-    <p>The last command should return something starting with "Initialized empty Git repository". The others commands do
-        not return anything.</p>
+    <p>Ostatnie polecenie powinno zwrócić informację zawierającą "Initialized empty Git repository". Inne polecenia nie powinny zwrócić nic.</p>
 
-    <p>You did it! If you want to be double-sure that it's a Git repository, type <code>git status</code> and if it
-        doesn't return 'fatal: Not a git repository...', you're golden!</p>
+    <p>Udało Ci się! Jeśli chcesz się upewnić, że inicjalizacja repozytorium Git przebiegła poprawnie, wpisz <code>git status</code> i jeśli
+        wykonanie tego polecenia nie zwróci 'fatal: Not a git repository...', masz to jak w banku!</p>
 </div>
 
 {{{ verify_directory_button }}}
 
 <div class="chal-tip grey-border border-box">
     <ul class="no-list-style">
-        <li><strong>Make a new folder (aka make directory)</strong></li>
-        <code class="shell">mkdir &#60;FOLDERNAME&#62;</code>
-        <li><strong>Navigate into an existing folder (aka change directory)</strong></li>
-        <code class="shell">cd &#60;FOLDERNAME&#62;</code>
-        <li><strong>List the items in a folder</strong></li>
+        <li><strong>Tworzenie nowego folderu (aka tworzenie katalogu)</strong></li>
+        <code class="shell">mkdir &#60;NAZWAFOLDERU&#62;</code>
+        <li><strong>Przejście do istniejącego folderu (aka zmiana katalogu)</strong></li>
+        <code class="shell">cd &#60;NAZWAFOLDERU&#62;</code>
+        <li><strong>Wyświetlenie zawartości bieżącego katalogu</strong></li>
         <code class="shell">ls </code>
-        <li><strong>Turn Git on for a folder</strong></li>
+        <li><strong>Inicjalizacja repozytorium Git w bieżącym katalogu</strong></li>
         <code class="shell">git init</code>
     </ul>
 </div>
