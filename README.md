@@ -24,9 +24,9 @@ As a part of the challenges you'll also create a (free) account on GitHub. If yo
 
 #### Git
 
-We recommend installing [GitHub Desktop](http://desktop.github.com) (free) because it installs Git in the most consistent way across supported operating systems (Windows and Mac). We won't use the app itself in the challenges (but it is really useful once you get going in Git!), just the Git that it install for you.
+We recommend installing Git on your computer by installing the [newest version](https://git-scm.com/downloads) from the Git website.
 
-Note—If you're using Windows, you should use the **Git Shell** app as your terminal—it is installed with GitHub Desktop. In Mac and Linux you can use the app **Terminal**, which is already on your computer.
+Note—If you're using Windows, you should use the **Git Shell** app as your terminal—it is installed with Git. In Mac and Linux you can use the app **Terminal**, which is already on your computer.
 
 #### Text Editor
 
