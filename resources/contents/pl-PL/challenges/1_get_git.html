@@ -1,0 +1,70 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Instalacja git na Twoim komputerze i skonfigurowanie Twojej nazwy oraz e-maila.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Git</h2>
+    <p>Git jest darmowym <strong>oprogramowaniem o otwartym kodzie</strong> (<a href="https://github.com/git/git">kod źródłowy jest
+        publicznie dostępny</a>) napisanym przez Linusa Torvaldsa, który stworzył również jądro systemu operacyjnego Linux. </p>
+    <p>Git jest programem służącym do śledzenia zmian w czasie, znanym w programowaniu jako <strong>kontrola wersji</strong>.
+        Jeśli używałeś funkcji śledzenia zmian w edytorach tekstowych to jesteś już zaznajomiony z tą koncepcją!
+    </p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Instalacja git</h3>
+    <p>Zalecamy zainstalowanie Git na Twoim komputerze poprzez pobranie aplikacji <a href="https://desktop.github.com">GitHub
+        Desktop</a>. Nie będziemy używać aplikacji okienkowej w Git-it (uczymy się obsługi z poziomu terminala!), ale zawiera ona Gita i jest
+        najprostszym sposobem na zainstalowanie Gita na wszystkich platformach w ten sam sposób.</p>
+
+    <ul>
+        <li><strong>Windows</strong>: Użyj <strong>Git Shell</strong> jako aplikację terminala.</li>
+        <li><strong>Mac</strong>: Otwórz GitHub Desktop i poprzez Preferences wybierz instalację wiersza poleceń. Korzystaj
+            z aplikacji <strong>terminala</strong>.
+        </li>
+    </ul>
+
+    <p>Masz już Gita lub nie jesteś pewien? Wpisz <code>git --version</code> w aplikacji terminala i jeśli zwrócona zostanie wersja wyższa niż
+         <code>1.7.10</code>, jesteś gotów! Po więcej informacji odwiedź <a href="http://git-scm.com">stronę Gita</a>.
+    </p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Oprogramowanie Git</h2>
+    <p>Aplikacja GitHub Desktop umożliwia zrobienie wielu rzeczy za pomocą Gita lecz nie wszystkie, dlatego też nauka obsługi z poziomu wiersza
+        poleceń jest ważna. Kiedy już to opanujesz, będziesz cieszyć się, że posiadasz aplikację okienkową, ponieważ organizuje ona informacje o
+        projekcie w sposób bardziej zwizualizowany, jak strona GitHub.</p>
+
+    <p>Git sam w sobie nie jest jak inne programy na Twoim komputerze. Prawdopodobnie nie zobaczysz jego ikony na swoim pulpicie, ale
+        zawsze będzie on dostępny i będziesz mógł z niego skorzystać w każdej chwili poprzez terminal lub aplikacje okienkowe Git.
+    </p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Konfiguracja Gita</h3>
+    <p>Kiedy aplikacja GitHub Desktop (a co za tym idzie również Git) zostanie zainstalowana, otwórz swój <strong>terminal</strong>.
+        Możesz sprawdzić czy Git na pewno tam jest wpisując:</p>
+
+    <p><code class="shell">git --version </code></p>
+
+    <p>Spowoduje to zwrócenie wersji Gita zainstalowanej na Twoim komputerze, wyglądającej podobnie jak to:</p>
+
+    <p><code class="comment">git version 1.9.1</code></p>
+
+    <p>Następnie skonfiguruj Gita, by wiązał wykonywane czynności z Tobą:</p>
+    <p>Ustawianie nazwy:</p>
+    <p><code class="shell">git config --global user.name "Twoja nazwa"</code></p>
+    <p>Teraz skonfiguruj swój adres e-mail:</p>
+    <p><code class="shell">git config --global user.email "twójemail@example.com"</code></p>
+
+    <p>Ukończyłeś swoje pierwsze wyzwanie! Kliknij przycisk 'Zweryfikuj' by sprawdzić poprawność wykonanych czynności.</p>
+</div>
+
+{{{ verify_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <h3>Symbol dolara w dokumentacji</h3>
+    <p>Symbol dolara <code>$</code> jest często używany w dokumentacji w celu podkreślenia że linia stanowi treść <strong>polecenia</strong> 
+        (zobacz fragmenty kodu powyżej). Tak naprawdę nie jest konieczne wpisywanie znaku <code>$</code> jako część polecenia, a jedynie 
+        tylko tego, co po nim następuje.</p>
+</div>
