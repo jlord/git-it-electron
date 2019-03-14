@@ -1,14 +1,14 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Dodawanie gałęzi lokalnie do sforkowanego repozytorium by pracować nad własnymi zmianami.</p>
+    <p>Dodanie gałęzi lokalnie do sforkowanego repozytorium by pracować nad własnymi zmianami.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
     <h2>Gałęzie</h2>
     <p>Repozytoria Git korzystają z gałęzi do odizolowania pracy, gdy jest to wymagane. Tworzenie <strong>gałęzi</strong> jest powszechną praktyką 
         gdy współpracujesz z innymi osobami nad projektem. W ten sposób możesz kontynuować pracę podczas gdy gałąź główna 
-        (często nazywana 'master') posiada stabilną wersję. Kiedy ukończysz pracę, <strong>scalasz</strong> ją do głównej gałęzi.</p>
+        (często nazywana 'master') przechowuje stabilną wersję aplikacji. Kiedy ukończysz pracę, <strong>scalasz</strong> swoją gałąź do głównej gałęzi.</p>
 
-    <p>Diagram poniżej pokazuje 'rozgałęzianie' od głównej gałęzi 'master', wykonanie pracy, a następnie scalenie zmian z powrotem 
+    <p>Diagram poniżej pokazuje 'odgałęzienie' biegnące od głównej gałęzi 'master', wykonanie pracy, a następnie scalenie zmian z powrotem 
         do 'master'. Nie ma wymagania, że źródłem dla nowej gałęzi musi być 'master' - może to być dowolna inna gałąź.</p>
 
     <img src="../../../assets/imgs/branches.png"
@@ -19,7 +19,7 @@
             href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a></p>
 
     <h2>GitHub Pages</h2>
-    <p>GitHub automatycznie prezentuje i hostuje strony internetowe w gałęziach nazwanych 'gh-pages'. Ta darmowa usługa 
+    <p>GitHub automatycznie prezentuje i hostuje strony internetowe przechowywane w gałęziach nazwanych 'gh-pages'. Ta darmowa usługa 
         nosi nazwę <a href="http://pages.github.com">GitHub Pages</a>. Ponieważ projekt którego forka utworzyłeś tworzy stronę, 
         jego główna gałąź nazwana została 'gh-pages' zamiast 'master'. Wszystkie repozytoria zawierające gałąź 'gh-pages' ze stroną 
         mogą zostać odnalezione w sieci przy użyciu poniższego wzorca adresu URL:</p>
@@ -29,9 +29,9 @@
 
 <div class="chal-step blue-border border-box">
     <h3>Tworzenie gałęzi</h3>
-    <p>Kiedy tworzysz gałąź git kopiuje całą zawartość bieżącej gałęzi (tej, na której jesteś) i umieszcza ją na nowej gałęzi.</p>
+    <p>Kiedy tworzysz gałąź git kopiuje całą zawartość bieżącej gałęzi (tej, która jest obecnie aktywna) i umieszcza ją na nowej gałęzi.</p>
 
-    <p>Będąc wciąż w lokalnym repozytorium 'patchwork' repository, wpisz <code>git status</code> by sprawdzić na jakiej gałęzi jesteś 
+    <p>Będąc wciąż w lokalnym repozytorium 'patchwork', wpisz <code>git status</code> by sprawdzić na jakiej gałęzi jesteś 
         obecnie. Git powinien odpowiedzieć, że jest to gałąź 'gh-pages'.</p>
 
     <p>Teraz utwórz nową gałąź i nadaj jej nazwę "add-&#60;nazwaużytkownika&#62;", gdzie 'nazwaużytkownika' to Twoja nazwa użytkownika 
@@ -40,7 +40,7 @@
 
     <p><code class="shell">git branch &#60;NAZWAGAŁĘZI&#62;</code></p>
 
-    <p>Posiadasz nową gałąź oraz starą o nazwie 'gh-pages'.</p>
+    <p>Posiadasz teraz nową gałąź oraz starą nazwaną 'gh-pages'.</p>
 
     <p>Aby przełączyć się na nowo utworzoną gałąź i na niej pracować należy użyć opcji <strong>checkout</strong>. Przełącz się na nową gałąź:</p>
 
@@ -87,8 +87,9 @@
     </code>.
 
     <h4>Authentication failed...error: 401</h4>
-    <p>Twoja tożsamość nie mogła zostać zweryfikowana. Być może została uruchomiona weryfikacja dwuetapowa (2FA, Two Factor Authentication), w tym wypadku musisz uwierzytelnić się personalnym tokenem wprowadzając go jako hasło. 
-        Możesz wygenerować jeden na podstawie <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use">following these instructions</a>. You'll need to keep this and use it in place of your password when prompted. You can also <a href="https://help.github.com/articles/caching-your-github-password-in-git/">tego artykułu</a> na swoim komputerze by nie musieć wpisywać go ponownie.</p>
+    <p>Twoja tożsamość nie mogła zostać zweryfikowana. Być może została uruchomiona weryfikacja dwuetapowa (2FA, Two Factor Authentication), 
+        w tym wypadku musisz uwierzytelnić się osobistym tokenem wprowadzając go jako hasło. Możesz wygenerować jeden na podstawie <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use">following these instructions</a>. You'll need to keep this and use it in place of your password when prompted. You can also <a href="https://help.github.com/articles/caching-your-github-password-in-git/">tego artykułu</a>
+        na swoim komputerze by nie musieć wpisywać go ponownie.</p>
 
     <h4>Plik NIE znajdujący się w folderze 'contributors'</h4>
     <p>Utworzony przez Ciebie plik powinien być umieszczony w istniejącym folderze 'contributors' w repozytorium Patchwork. 

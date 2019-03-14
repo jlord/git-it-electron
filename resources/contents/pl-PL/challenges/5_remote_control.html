@@ -1,5 +1,5 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Łączenie lokalnego repozytorium ze zdalnym i wypychanie zmian.</p>
+    <p>Połączenie lokalnego repozytorium ze zdalnym i wypchnięcie zmian.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
@@ -8,11 +8,10 @@
     <p>Kiedy umieszczasz coś na GitHub ta kopia żyje na jednym z serwerów do niego należących. To czyni je 
         <strong>repozytorium zdalnym</strong> gdyż nie znajduje się ono na Twoim komputerze, ale na serwerze, "zdalnie"
         i gdzieś indziej. <strong>Wypychając</strong> swoje <strong>lokalne</strong> (znajdujące się na Twoim komputerze)
-        zmiany, czynisz je aktualnym.</p>
+        zmiany, dokonujesz jego aktualizacji.</p>
 
-    <p>Inni mogą zawsze <strong>pobrać</strong> najaktualniejsze zmiany z twojego projektu wprost z repozytorium zdalnego
-        (i prosto na swój komputer). To właśnie tak wszyscy razem pracują nad jednym projektem bez konieczności uzyskiwania
-        dostępu do Twojego komputera, gdzie przechowywana jest kopia lokalna.</p>
+    <p>Inni mogą zawsze <strong>pobrać</strong> na swój komputer najaktualniejsze zmiany z twojego projektu wprost z repozytorium zdalnego.
+        To właśnie tak wszyscy razem pracują nad jednym projektem bez konieczności uzyskiwania dostępu do Twojego komputera, gdzie przechowywana jest kopia lokalna.</p>
 
     <img src="../../../assets/imgs/remotes.png"
          alt="Diagram pokazujący GitHub jako centralny serwer tworzący stronę GitHub.com. Dwa komputery, po różnych stronach, wypychają i pobierają zmiany z GitHuba."
@@ -29,9 +28,8 @@
             górnym rogu, a następnie wybierz opcję 'New repository'.
         </li>
         <li>Nadaj jemu nazwę odpowiadającą nazwie Twojego lokalnego repozytorium, 'hello-world', oraz krótki opis.</li>
-        <li>Wybierz repozytorium publiczne. Oznacza to, że zostanie ono zamieszczone w Twoim profilu publicznym.</li>
-        <li>Nie inicjuj repozytorium plikiem README ponieważ już taki mamy lokalnie - 'readme.txt'. To jest opcja pomocnicza
-            GitHuba, jeśli jeszcze nie masz takiego pliku.
+        <li>Wybierz repozytorium publiczne. Oznacza to, że będzie wyświetlane w Twoim profilu oraz widoczne dla każdej osoby je odwiedzającej.</li>
+        <li>Nie inicjuj repozytorium plikiem README ponieważ już taki mamy lokalnie - 'readme.txt'. Jest to opcja pomocnicza GitHuba, przydatna jeśli jeszcze nie masz takiego pliku.
         </li>
         <li>Pozostaw '.gitignore' i 'license' ustawione na 'none'. Nie będziemy korzystać z nich w ramach tego poradnika.</li>
         <li>Kliknij przycisk by zatwierdzić utworzenie repozytorium!</li>
@@ -40,14 +38,14 @@
 
 <div class="chal-background light-blue solid-box">
     <h2>Readme, .gitignore i licencje</h2>
-    <p>Są to pliki popularne w projektach open source, więc by ułatwić utworzenie nowych projektów, GitHub oferuje 
+    <p>Są to pliki popularne w projektach open source, więc by ułatwić utworzenie nowego projektu, GitHub oferuje 
         utworzenie ich w Twoim imieniu.</p>
     <p><strong>Readme</strong> ('czytaj to') wyjaśnia czym jest projekt, jak z niego korzystać, a czasami także jak 
-        włączyć się do pracy na rzecz jego rozwoju (choć czasem jest to wyjaśniane w dodatkowym pliku 'CONTRIBUTING.md',
+        włączyć się do pracy na rzecz jego rozwoju (choć często jest to wyjaśniane w dodatkowym pliku 'CONTRIBUTING.md',
         tworzonym specjalnie na taką okazję).</p>
-    <p><strong>.gitignore</strong> zawiera listę plików których Git <em>nie</em> powinien śledzić, takie jakie pliki
-        zawierające hasła czy dostępy do systemów produkcyjnych!</p>
-    <p><strong>Plik license</strong> zawiera rodzaj licencji jaka udzielana jest na projekt. Pozwala to innym na zapoznanie
+    <p><strong>.gitignore</strong> zawiera listę plików których Git <strong>nie powinien</strong> śledzić, takie jakie pliki
+        zawierające hasła czy dane dostępowe do systemów produkcyjnych.</p>
+    <p><strong>license</strong> zawiera rodzaj licencji jaka udzielana jest na projekt. Pozwala to innym na zapoznanie
         się z zasadami jego użytkowania. Informacje odnośnie rodzajów licencji można znaleźć tutaj: <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a>.
     </p>
 </div>
@@ -58,23 +56,22 @@
         upewnij się, że wybrano opcję 'HTTPS' i skopiuj adres - to jest adres Twojego repozytorium na serwerach GitHuba.</p>
 
     <p>W swoim terminalu, w folderze 'hello-world' gdzie zainicjowałeś repozytorium w poprzednim wyzwaniu, chcesz 
-        powiedzieć Gitowi by zapamiętał adres zdalnej wersji tego repozytorium na serwerach GitHuba. Ponieważ możesz 
-        mieć wiele repozytoriów zdalnych, każde z nich wymaga osobnej nazwy. Główne repozytorium zdalne jest często
-        nazywane <code>origin</code>.
+        powiedzieć Gitowi by zapamiętał adres zdalnej wersji tego repozytorium. Ponieważ możesz mieć wiele repozytoriów zdalnych,
+        każde z nich wymaga osobnej nazwy. Główne repozytorium zdalne jest często nazywane <code>origin</code>.
     </p>
 
     <p>W celu dodania repozytorium zdalnego 'origin' do wersji lokalnej:</p>
     <code class="shell">git remote add origin &lt;URLDOGITHUBA&gt;</code>
 
     <p>Twoje repozytorium <strong>lokalne</strong> wie już gdzie szukać repozytorium <strong>zdalnego</strong>, nazwanego 'origin'.
-        Pomyśl o tym jak o dodawaniu nazwy i numeru telefonu do szybkiego wybierania, jeśli chcesz szybko do kogoś zadzwonić,
-        wystarczy po prostu wybrać odpowiednią opcję.</p>
+        Pomyśl o tym jak o dodawaniu nazwy i numeru telefonu do szybkiego wybierania, jeśli potrzebujesz się z kimś szybko skontaktować,
+        wystarczy po prostu wybrać odpowiednią opcję przypisaną do klawisza.</p>
 
     <blockquote>
         <p><strong>Użytkownicy Windowsa:</strong></p>
         <p>Jeśli posiadasz na swoim komputerze aplikację <strong>GitHub Desktop</strong>, zdalne repozytorium nazwane 'origin'
             jest automatycznie dodawane do lokalnego repozytorium. W tej sytuacji jedyne co musisz zrobić to poinformować
-            jaki adres URL z nim powiązać. Użyj tego polecenia zamiast 'add' powyżej:</p>
+            jaki adres URL z nim powiązać. Użyj poniższego polecenia zamiast podanego powyżej 'add':</p>
 
         <code class="shell">git remote set-url origin &lt;URLDOGITHUBA&gt;</code>
     </blockquote>
@@ -83,7 +80,7 @@
 <div class="chal-step blue-border border-box">
     <h3>Wypychanie zmian do repozytorium zdalnego</h3>
     <p>Następnie chcesz <strong>wypchnąć</strong> (wysłać) wszystkie zmiany lokalne do repozytorium zdalnego na GitHub.
-        To jest coś, co będziesz robić często by zapewnić, że wersja zdalna jest zawsze zaktualizowana o lokalne zmiany.</p>
+        To jest coś, co będziesz robić często by wersja zdalna pozostała zawsze zaktualizowana o lokalne zmiany.</p>
 
     <p>Git posiada system gałęzi, co umożliwia skoncentrowanie prac nad różnymi aspektami projektu w różnych chwilach.
         Więcej dowiemy się o tym później, ale domyślnie pierwsza gałąź nazywana jest 'master'. Kiedy wypychasz (i później pobierasz)
@@ -109,7 +106,7 @@
         <code class="shell">git pull &lt;NAZWAZDALNA&gt; &lt;BRANCHNAME&gt;</code>
         <li><strong>Wyświetlanie listy repozytoriów zdalnych</strong></li>
         <code class="shell">git remote -v</code>
-        <li><strong>Wypychanie zmians</strong></li>
+        <li><strong>Wypychanie zmian</strong></li>
         <code class="shell">git push &lt;NAZWAZDALNA&gt; &lt;BRANCH&gt;</code>
     </ul>
 </div>
