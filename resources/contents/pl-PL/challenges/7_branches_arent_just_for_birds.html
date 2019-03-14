@@ -1,124 +1,122 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Add a branch, locally, to your forked repository to work on your changes.</p>
+    <p>Dodawanie gałęzi lokalnie do sforkowanego repozytorium by pracować nad własnymi zmianami.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2>Branches</h2>
-    <p>Git repositories use branches to isolate work when needed. It's common practice when working on a project or with
-        others on a project to create a <strong>branch</strong> to keep your working changes in. This way you can do
-        your work while the main, commonly named 'master', branch stays stable. When the work on your branch is finished
-        you merge it back into the 'master' master branch.</p>
+    <h2>Gałęzie</h2>
+    <p>Repozytoria Git korzystają z gałęzi do odizolowania pracy, gdy jest to wymagane. Tworzenie <strong>gałęzi</strong> jest powszechną praktyką 
+        gdy współpracujesz z innymi osobami nad projektem. W ten sposób możesz kontynuować pracę podczas gdy gałąź główna 
+        (często nazywana 'master') posiada stabilną wersję. Kiedy ukończysz pracę, <strong>scalasz</strong> ją do głównej gałęzi.</p>
 
-    <p>The diagram below shows how you can branch off of your 'master' branch, do work and then merge those changes back
-        into 'master'. You can even branch off of a branch if you need to, the 'master' branch doesn't have to be the
-        base.</p>
+    <p>Diagram poniżej pokazuje 'rozgałęzianie' od głównej gałęzi 'master', wykonanie pracy, a następnie scalenie zmian z powrotem 
+        do 'master'. Nie ma wymagania, że źródłem dla nowej gałęzi musi być 'master' - może to być dowolna inna gałąź.</p>
 
     <img src="../../../assets/imgs/branches.png"
-         alt="A diagram showing a horizontal line, representing the master branch, with another line branching off the top and later re-joining the original. Another line branches off the master branch line from below and yet another branch branches off of that. Both of these meet back up with the original master line, too."
+         alt="Diagram przedstawiający poziomą linię reprezentującą główną gałąź, wraz z inną linią od niej biegnącą w górę, a następnie wracającą do oryginału. Inna linia również odgałęzia się od głównej gałęzi, a od niej odchodzi kolejna. Obie również wracają z powrotem do gałęzi głównej."
          width="100%">
 
-    <p>For a great visualization on how branches work in a project, see this GitHub Guide: <a
+    <p>Dla lepszej wizualizacji sposobu działania gałęzi w projektach zapoznaj się z tym poradnikiem GitHuba: <a
             href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a></p>
 
     <h2>GitHub Pages</h2>
-    <p>GitHub will automatically serve and host static website files in branches named 'gh-pages'. This free service is
-        called <a href="http://pages.github.com">GitHub Pages</a>. Since the project you forked creates a website, its
-        main branch is named 'gh-pages' instead of 'master'. All repositories that have a 'gh-pages' branch with website
-        files can be found, live online, using this pattern for the URL:</p>
+    <p>GitHub automatycznie prezentuje i hostuje strony internetowe w gałęziach nazwanych 'gh-pages'. Ta darmowa usługa 
+        nosi nazwę <a href="http://pages.github.com">GitHub Pages</a>. Ponieważ projekt którego forka utworzyłeś tworzy stronę, 
+        jego główna gałąź nazwana została 'gh-pages' zamiast 'master'. Wszystkie repozytoria zawierające gałąź 'gh-pages' ze stroną 
+        mogą zostać odnalezione w sieci przy użyciu poniższego wzorca adresu URL:</p>
 
-    <code>http://githubusername.github.io/repositoryname</code>
+    <code>http://nazwaużytkownika.github.io/nazwarepozytorium</code>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Create a branch</h3>
-    <p>When you create a branch, Git copies everything from the current branch you're on and places it in the branch
-        you've requested be made.</p>
+    <h3>Tworzenie gałęzi</h3>
+    <p>Kiedy tworzysz gałąź git kopiuje całą zawartość bieżącej gałęzi (tej, na której jesteś) i umieszcza ją na nowej gałęzi.</p>
 
-    <p>While still inside of your local 'patchwork' repository, type <code>git status</code> to see what branch you're
-        currently on. Git should reply that you're on the 'gh-pages' branch.</p>
+    <p>Będąc wciąż w lokalnym repozytorium 'patchwork' repository, wpisz <code>git status</code> by sprawdzić na jakiej gałęzi jesteś 
+        obecnie. Git powinien odpowiedzieć, że jest to gałąź 'gh-pages'.</p>
 
-    <p>Now create a new branch and name it "add-&#60;username&#62;", where 'username' is your username. For instance,
-        "add-jlord". <strong>Branches are case-sensitive so name your branch exactly the way your GitHub name
-            appears</strong>.</p>
+    <p>Teraz utwórz nową gałąź i nadaj jej nazwę "add-&#60;nazwaużytkownika&#62;", gdzie 'nazwaużytkownika' to Twoja nazwa użytkownika 
+        w serwisie GitHub, na przykład "add-jlord". <strong>Ponieważ nazwa gałęzi rozróżnia duże i małe litery pamiętaj o wprowadzeniu 
+             nazwy użytkownika dokładnie tak, jak widnieje w GitHub</strong>.</p>
 
-    <p><code class="shell">git branch &#60;BRANCHNAME&#62;</code></p>
+    <p><code class="shell">git branch &#60;NAZWAGAŁĘZI&#62;</code></p>
 
-    <p>Now you have a branch with a new name that is identical to 'gh-pages'.</p>
+    <p>Posiadasz nową gałąź oraz starą o nazwie 'gh-pages'.</p>
 
-    <p>To go into that branch and work on it you <strong>checkout</strong> a branch. Go on your new branch:</p>
+    <p>Aby przełączyć się na nowo utworzoną gałąź i na niej pracować należy użyć opcji <strong>checkout</strong>. Przełącz się na nową gałąź:</p>
 
-    <p><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></p>
+    <p><code class="shell">git checkout &#60;NAZWAGAŁĘZI&#62;</code></p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Step: Create a new file</h3>
-    <p>Back in your text editor:</p>
+    <h3>Krok: Tworzenie nowego pliku</h3>
+    <p>Wróć do swojego ulubionego edytora tekstowego:</p>
     <ul>
-        <li>Create a new file named <span style="white-space: nowrap;">"add-&#60;USERNAME&#62;.txt"</span>, where
-            'username' is your username. For instance, "add-jlord.txt".
+        <li>Utwórz nowy plik nazwany <span style="white-space: nowrap;">"add-&#60;NAZWAUŻYTKOWNIKA&#62;.txt"</span>, gdzie
+            'NAZWAUŻYTKOWNIKA' jest Twoją nazwą użytkownika, na przykład "add-jlord.txt".
         </li>
-        <li>Then, just write your GitHub username in it, that's it and that's all. For instance, I'd type 'jlord'.</li>
-        <li>Save this file in the 'contributors' folder in Patchwork: <strong>Patchwork/contributors/add-yourusername.txt</strong>
+        <li>Następnie, jako jego zawartość wpisz swoją nazwę użytkownika w GitHub, tylko tyle i aż tyle. Przykładowo, wpisałbym 'jlord'.</li>
+        <li>Zapisz ten plik w folderze 'contributors' w repozytorium lokalnym Patchwork: <strong>Patchwork/contributors/add-NAZWAUŻYTKOWNIKA.txt</strong>
         </li>
-        <li>Next, check in your changes (see below).</li>
+        <li>Następnie zapisz zmiany w repozytorium (zobacz poniżej).</li>
     </ul>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Check-in</h3>
-    <p>Go through the steps for checking in a project: </p>
+    <h3>Zapisywanie zmian</h3>
+    <p>Przejdź przez poniższe kroki by zapisać swoje zmiany: </p>
 
     <p><code class="shell">git status</code></p>
-    <p><code class="shell">git add &#60;contributors/FILENAME&#62;</code></p>
-    <p><code class="shell">git commit -m "commit message"</code></p>
+    <p><code class="shell">git add &#60;contributors/NAZWAPLIKU&#62;</code></p>
+    <p><code class="shell">git commit -m "informacja opisująca zmiany"</code></p>
 
-    <p>Now push your update to <b>your fork</b>, 'origin', on GitHub:</p>
-    <p><code class="shell">git push origin &#60;BRANCHNAME&#62;</code></p>
+    <p>Teraz wypchnij swoje zmiany do <b>swojego forka</b>, 'origin', na GitHubie:</p>
+    <p><code class="shell">git push origin &#60;NAZWAGAŁĘZI&#62;</code></p>
 </div>
 
 {{{ verify_directory_button }}}
 
 <div class="chal-no-pass grey-border border-box">
     <h4>Permission denied...error: 403</h4>
-    <p>You are pushing changes to a repository you don't have write access to. In this case, you're likely pushing to
-        the original 'jlord/patchwork'. Make sure that you're pushing to 'origin' and that it points to your fork's
-        address on GitHub. To check and see what your remotes are and where they point run <code>git remote -v</code>.
-        You should have 'upstream' pointing to 'jlord/patchwork' and 'origin' pointing to 'yourusername/patchwork'.
+    <p>Wypychasz zmiany do repozytorium, w którym nie masz prawa zapisu. W tym wypadku, prawdopodobnie próbujesz wypchnąć zmiany 
+        do oryginalnego repozytorium 'jlord/patchwork'. Upewnij się, że 'pushujesz' do 'origin' oraz że repozytorium zdalne o tej nazwie 
+        kieruje do Twojego forka w GitHub. By sprawdzić listę repozytoriów zdalnych wraz z ich adresami uruchom polecenie <code>git remote -v</code> w terminalu.
+        Powinieneś mieć repozytorium zdalne 'upstream' kierujące do 'jlord/patchwork' oraz 'origin' kierujące do 'NAZWAUŻYTKOWNIKA/patchwork'.
 
-    <p>To fix a remote that is pointing to the wrong place you can re-set its url: <code>git remote set-url origin
-        <URLTOYOURFORK>
+    <p>By naprawić połączenia z repozytoriami zdalnymi kierujące pod niewłaściwy adres możesz ustawić ich adres URL ponownie: <code>git remote set-url origin
+        <URLDOTWOJEGOFORKA>
     </code>.
 
     <h4>Authentication failed...error: 401</h4>
-    <p>Your identity could not be verified. You may have 2FA (Two Factor Authentication) turned on in which case you must use a personal access token as your password. You can generate one by <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use">following these instructions</a>. You'll need to keep this and use it in place of your password when prompted. You can also <a href="https://help.github.com/articles/caching-your-github-password-in-git/">save this access token</a> on your computer so that you don't have to re-enter it.</p>
+    <p>Twoja tożsamość nie mogła zostać zweryfikowana. Być może została uruchomiona weryfikacja dwuetapowa (2FA, Two Factor Authentication), w tym wypadku musisz uwierzytelnić się personalnym tokenem wprowadzając go jako hasło. 
+        Możesz wygenerować jeden na podstawie <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use">following these instructions</a>. You'll need to keep this and use it in place of your password when prompted. You can also <a href="https://help.github.com/articles/caching-your-github-password-in-git/">tego artykułu</a> na swoim komputerze by nie musieć wpisywać go ponownie.</p>
 
-    <h4>File NOT in contributors folder</h4>
-    <p>The file you create should be placed inside the existing 'contributors' folder in the Patchwork repository. If
-        you put it somewhere else, simply use Finder or Windows Explorer to move your file into the folder. You can
-        check <code>git status</code> again and you'll find it sees your changes. Stage and then commit "all" (-A) of
-        these changes (additions and deletions) with the commands below.</p>
+    <h4>Plik NIE znajdujący się w folderze 'contributors'</h4>
+    <p>Utworzony przez Ciebie plik powinien być umieszczony w istniejącym folderze 'contributors' w repozytorium Patchwork. 
+        Jeśli umieściłeś go gdzieś indziej, użyj Findera albo Eksploratora Windows by przenieść go we właściwe miejsce. Możesz
+        zweryfikować status repozytorium ponownie za pomocą <code>git status</code> by zobaczyć swoje zmiany. Dodaj wszystkie (-A) zmiany
+        do zatwierdzenia, a następnie zatwierdź je używając poleceń poniżej.</p>
     <p><code class="shell">git add -A</code></p>
-    <p><code class="shell">git commit -m "move file into contributors folder"</code></p>
+    <p><code class="shell">git commit -m "przeniesienie pliku do folderu contributors"</code></p>
 
     <h4>Branch name expected: _____</h4>
-    <p>The branch name should match your user name exactly. To change your branch name:</p>
-    <p><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></p>
-    <p>When you've made your updates, verify again!</p>
+    <p>Nazwa gałęzi powinna dokładnie odpowiadać Twojej nazwy użytkownika w GitHub. Zmień nazwę gałęzi:</p>
+    <p><code class="shell">git branch -m &#60;NOWANAZWAGAŁĘZI&#62;</code></p>
+    <p>Kiedy poczynisz zmiany zweryfikuj je ponownie!</p>
 </div>
 
 <div class="chal-tip grey-border border-box">
     <ul class="no-list-style">
-        <li><strong>You can create and switch to a branch in one line</strong></li>
-        <li><code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code></li>
-        <li><strong>Create a new branch</strong></li>
-        <li><code class="shell">git branch &#60;BRANCHNAME&#62;</code></li>
-        <li><strong>Move onto a branch</strong></li>
-        <li><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></li>
-        <li><strong>List the branches</strong></li>
+        <li><strong>Tworzenie i zmiana aktualnej gałęzi jednym poleceniem</strong></li>
+        <li><code class="shell">git checkout -b &#60;NAZWAGAŁĘZI&#62;</code></li>
+        <li><strong>Tworzenie nowej gałęzi</strong></li>
+        <li><code class="shell">git branch &#60;NAZWAGAŁĘZI&#62;</code></li>
+        <li><strong>Zmiana aktualnej gałęzi</strong></li>
+        <li><code class="shell">git checkout &#60;NAZWAGAŁĘZI&#62;</code></li>
+        <li><strong>Wypisanie wszystkich gałęzi</strong></li>
         <li><code class="shell">git branch</code></li>
-        <li><strong>Rename a branch you're currently on</strong></li>
-        <li><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></li>
-        <li><strong>Verify what branch you're working on</strong></li>
+        <li><strong>Zmiana nazwy aktualnej gałęzi</strong></li>
+        <li><code class="shell">git branch -m &#60;NOWANAZWAGAŁĘZI&#62;</code></li>
+        <li><strong>Sprawdzenie aktualnej gałęzi</strong></li>
         <li><code class="shell">git status</code></li>
     </ul>
 </div>
