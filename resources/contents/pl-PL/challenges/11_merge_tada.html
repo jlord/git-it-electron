@@ -1,65 +1,65 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Merge your branch locally, delete the branch and pull from upstream.</p>
+    <p>Scalanie gałęzi lokalnie, usuwanie gałęzi i pobieranie z repozytorium oryginalnego.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2>Cleaning up</h2>
+    <h2>Sprzątanie</h2>
 
-    <p>Once you don't need branches anymore you can delete them locally and remotely. This is helpful so that you don't
-        end up with a pile of old branches.</p>
+    <p>Kiedy gałęzie nie są Ci już potrzebne możesz usunąć je z repozytorium lokalnego i zdalnego. Jest to pomocne, gdyż 
+        repozytorium nie zostaje zaśmiecone starymi gałęziami.</p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Merge Locally</h3>
-    <p>Your pull request has been merged! Your branch was merged into the 'gh-pages' branch of the original on GitHub.
-        You can merge your branch locally, too.</p>
+    <h3>Scalanie lokalnie</h3>
+    <p>Twój pull request został scalony! Twoja gałąź została scalona do gałęzi 'gh-pages' w oryginalnym repozytorium na GitHubie.
+        Możesz również scalić swoją gałąź lokalnie.</p>
 
-    <p>First, move into the branch you want to merge into—in this case, the branch 'gh-pages'.</p>
+    <p>Najpierw, przejdź na gałąź do której chcesz scalać — w tym wypadku będzie to gałąź 'gh-pages'.</p>
     <p><code class="shell">git checkout gh-pages</code></p>
 
-    <p>Now tell Git what branch you want to merge in—in this case, your feature branch that begins with "add-".</p>
-    <p><code class="shell">git merge &#60;BRANCHNAME&#62;</code></p>
+    <p>Teraz poinstruuj Gita którą gałąź chcesz scalić — w tym wypadku będzie to gałąź, której nazwa zaczyna się od "add-".</p>
+    <p><code class="shell">git merge &#60;NAZWAGAŁĘZI&#62;</code></p>
 
-    <p>Tidy up by deleting your feature branch. Now that it has been merged you don't really need it around.</p>
-    <p><code class="shell">git branch -d &#60;BRANCHNAME&#62;</code></p>
+    <p>Posprzątaj po sobie usuwając scaloną już gałąź. Gdy została scalona nie będzie już więcej potrzebna.</p>
+    <p><code class="shell">git branch -d &#60;NAZWAGAŁĘZI&#62;</code></p>
 
-    <p>You can also delete the branch from your remote on GitHub:</p>
-    <p><code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
+    <p>Możesz również usunąć gałąź z Twojego repozytorium zdalnego na GitHubie:</p>
+    <p><code class="shell">git push &#60;NAZWAREPOZYTORIUM&#62; --delete &#60;NAZWAGAŁĘZI&#62;</code></p>
 </div>
 
 <div class="chal-step blue-border border-box">
-    <h3>Pull from Upstream</h3>
-    <p>And last but not least, the original has changed since your pull request was merged—Reporobot added your name to
-        the website! If you pull in these changes from upstream you'll be up to date and have that version too. You can
-        actually see it live as well at: yourusername.github.io/patchwork.</p>
+    <h3>Pobieranie z repozytorium oryginalnego</h3>
+    <p>Ostatnią, ale nie mniej ważną informacją jest fakt, że oryginalne repozytorium zmieniło się ponieważ Twój pull request został zaakceptowany — 
+        Reporobot dodał Twoją nazwę do strony! Jeśli pobierzesz te zmiany z repozytorium oryginalnego będziesz posiadał aktualną 
+        kopię repozytorium. Możesz również zobaczyć ją na żywo pod adresem: twojanazwaużytkownika.github.io/patchwork.</p>
 
-    <p>To pull from the original upstream:</p>
+    <p>Aby pobrać zmiany z oryginalnego repozytorium:</p>
     <p><code class="shell">git pull upstream gh-pages</code></p>
 </div>
 
 <div class="chal-background light-blue solid-box">
-    <h2>Congratulations!</h2>
-    <p>You've created local repositories, remote repositories, worked with a collaborator, pushed, pulled and joined the
-        millions of others developing and enriching open source!</p>
+    <h2>Gratulacje!</h2>
+    <p>Tworzyłeś lokalne repozytoria, zdalne repozytoria, pracowałeś ze współpracownikiem, wypychałeś, pobierałeś i dołączyłeś do milionów 
+        innych ludzi programujących i wzbogacających świat open source!</p>
 
-    <p>Visit <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> to see your name
-        incorporated! Looking to keep going? Checkout the <a href="../pages/resources.html#what-next">What Next</a>
-        section on the resources page in this app.</p>
+    <p>Odwiedź <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> by zobaczyć swój nick w tym gronie! 
+        Nie chcesz zwalniać tempa? Sprawdź sekcję <a href="../pages/resources.html#what-next">Co dalej?</a>
+        na stronie z zasobami do nauki w tej aplikacji.</p>
 </div>
 
 {{{ verify_directory_button }}}
 
 <div class="chal-tip grey-border border-box">
     <ul class="no-list-style">
-        <li><strong>Merge a branch into current branch</strong></li>
-        <code class="shell">git merge &#60;BRANCHNAME&#62;</code>
-        <li><strong>Change the branch you're working on</strong></li>
-        <code class="shell">git checkout &#60;BRANCHNAME&#62;</code>
-        <li><strong>Delete a local branch</strong></li>
-        <code class="shell">git branch -d &#60;BRANCHNAME&#62;</code>
-        <li><strong>Delete a remote branch</strong></li>
-        <code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
-        <li><strong>Pull from a remote branch</strong></li>
-        <code class="shell">git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+        <li><strong>Scalanie gałęzi do aktywnej gałęzi</strong></li>
+        <code class="shell">git merge &#60;NAZWAGAŁĘZI&#62;</code>
+        <li><strong>Zmiana aktywnej gałęzi</strong></li>
+        <code class="shell">git checkout &#60;NAZWAGAŁĘZI&#62;</code>
+        <li><strong>Usuwanie gałęzi lokalnej</strong></li>
+        <code class="shell">git branch -d &#60;NAZWAGAŁĘZI&#62;</code>
+        <li><strong>Usuwanie gałęzi zdalnej</strong></li>
+        <code class="shell">git push &#60;NAZWAREPOZYTORIUM&#62; --delete &#60;NAZWAGAŁĘZI&#62;</code>
+        <li><strong>Pobieranie z gałęzi zdalnej</strong></li>
+        <code class="shell">git pull &#60;NAZWAREPOZYTORIUM&#62; &#60;NAZWAGAŁĘZI&#62;</code>
     </ul>
 </div>
