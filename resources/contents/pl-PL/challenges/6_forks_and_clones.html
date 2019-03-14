@@ -1,0 +1,83 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Sforkowanie projektu w GitHub.com i sklonowanie go lokalnie.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Forki</h2>
+    <p>Jak dotąd utworzyłeś projekt lokalnie i wypchnąłeś do repozytorium na GitHub.com, ale to tylko połowa zabawy!
+        Druga połowa to współpraca z innymi ludźmi nad innymi projektami.</p>
+
+    <p>Kiedy <strong>forkujesz</strong> repozytorium, tworzysz jego kopię na swoim koncie GitHub. Twoja sforkowana
+        kopia zaczyna życie jako repozytorium <strong>zdalne</strong> - istnieje po prostu na Twoim koncie GitHub, nie na
+        Twoim komputerze. Forki są używane do tworzenia własnych wersji projektu (to 'odejście' od oryginału jest jak
+        wybranie drugiej drogi na skrzyżowaniu) lub współpracy nad nim (jak łatanie błędów czy wprowadzanie nowych funkcjonalności).</p>
+
+    <p>By pobrać sforkowane repozytorium ze swojego konta GitHub na swój komputer należy je <strong>sklonować</strong>.
+        Klonowanie powoduje skopiowanie repozytorium zdalnego na Twój komputer w celu umożliwienia pracowania lokalnie.</p>
+
+    <img src="../../../assets/imgs/clone.png"
+         alt="Diagram przedstawiający repozytorium z GitHuba skopiowane na Twoje konto GitHub i następnie skopiowane stamtąd na Twój komputer."
+         width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Forkowanie repozytorium Patchwork</h3>
+    <p>Projekt nad którym pochylimy się tym razem znajduje się pod adresem <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.
+        Przejdź na tę stronę i kliknij przycisk 'Fork' w górnej prawej części widoku. Kiedy animacja forkowania się zakończy,
+        będziesz posiadać kopię repozytorium na swoim koncie. Skopiuj adres HTTP z paska
+        adresu swojej przeglądarki - to jest adres Twojego forka na serwerach GitHuba.</p>
+    <!-- TODO write address for user here -->
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Klonowanie forka lokalnie</h3>
+    <p>Teraz za pomoca terminala sklonujesz repozytorium na swój komputer. Nowy folder zostanie automatycznie utworzony
+        by przechować repozytorium, więc nie ma potrzeby tworzyć go samodzielnie. Upewnij się jednak że nie klonujesz go
+        do folderu w innym repozytorium!</p>
+
+    <p>Upewnij się zatem, że <strong>nie</strong> jesteś w folderze 'hello-world' z poprzednich wyzwań. By wycofać się z niego
+        i sklonowania forka, podążaj za poniższymi krokami:</p>
+
+    <p>Wycofaj się z folderu 'hello-world':<br><span class="inline-tip">Rada: dwie kropki oznaczają przejście do katalogu o 1 poziom wyżej</span>
+    </p>
+    <p><code class="shell">cd ..</code></p>
+
+    <p>Po wyjściu z folderu zawierającego repozytorium Gita sklonuj swojego forka:</p>
+    <p><code class="shell">git clone &#60;URLDOGITHUBA&#62;</code></p>
+
+    <p>Przejdź do folderu utworzonego dla Twojej lokalnej kopii forka (w tym przypadku nazwanej 'patchwork').</p>
+    <p><code class="shell">cd patchwork</code></p>
+
+    <p>Teraz posiadasz kopię repozytorium na swoim komputerze i jest ona połączona z repozytorium zdalnym (Twojej sforkowanej kopii)
+        na Twoim koncie GitHub. Wpisz <code>git remote -v</code> by zobaczyć, że adres forka został już skonfigurowany.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Łączenie z oryginalnym repozytorium</h3>
+
+    <p>Co jeśli oryginał sforkowanego repozytorium się zmieni? Chcesz przecież mieć możliwość <strong>pobierania</strong> zmian,
+         które pojawiły się w oryginale. Dodaj zatem kolejne odwołanie do repozytorium zdalnego, tym razem do oryginału <a
+                href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.</p>
+
+    <p>Możesz nazwać odwołanie do tego repozytorium jak tylko zechcesz, aczkolwiek typową nazwą funkcjonującą w społeczności jest 'upstream';
+         skorzystajmy zatem z tej konwencji.</p>
+
+    <p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+
+    <p>Aby mieć pewność że połączenia ze zdalnymi repozytoriami skonfigurowano poprawnie wpisz <code>git remote -v</code> w celu wypisania 
+        listy przechowywanych adresów. <b>Powinieneś zobaczyć odwołanie nazwane 'origin' odwołujące się do Twojego forka oraz 'upstream' 
+            referujące do oryginalnej wersji repozytorium.</b></p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Dodawanie repozytorium zdalnego</strong></li>
+        <li><code class="shell">git remote add &#60;NAZWAZDALNA&#62; &#60;URL&#62;</code></li>
+        <li><strong>Zmiana adresu repozytorium zdalnego</strong></li>
+        <li><code class="shell">git remote set-url &#60;NAZWAZDALNA&#62; &#60;URL&#62;</code></li>
+        <li><strong>Wyświetlanie listy repozytoriów zdalnych</strong></li>
+        <li><code class="shell">git remote -v</code></li>
+    </ul>
+</div>

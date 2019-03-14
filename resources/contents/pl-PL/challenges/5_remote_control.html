@@ -1,0 +1,112 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Połączenie lokalnego repozytorium ze zdalnym i wypchnięcie zmian.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Repozytoria zdalne</h2>
+
+    <p>Kiedy umieszczasz coś na GitHub ta kopia żyje na jednym z serwerów do niego należących. To czyni je 
+        <strong>repozytorium zdalnym</strong> gdyż nie znajduje się ono na Twoim komputerze, ale na serwerze, "zdalnie"
+        i gdzieś indziej. <strong>Wypychając</strong> swoje <strong>lokalne</strong> (znajdujące się na Twoim komputerze)
+        zmiany, dokonujesz jego aktualizacji.</p>
+
+    <p>Inni mogą zawsze <strong>pobrać</strong> na swój komputer najaktualniejsze zmiany z twojego projektu wprost z repozytorium zdalnego.
+        To właśnie tak wszyscy razem pracują nad jednym projektem bez konieczności uzyskiwania dostępu do Twojego komputera, gdzie przechowywana jest kopia lokalna.</p>
+
+    <img src="../../../assets/imgs/remotes.png"
+         alt="Diagram pokazujący GitHub jako centralny serwer tworzący stronę GitHub.com. Dwa komputery, po różnych stronach, wypychają i pobierają zmiany z GitHuba."
+         width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Tworzenie repozytorium zdalnego</h3>
+    <p>Chcesz zsynchronizować zmiany zawarte w <strong>lokalnej</strong> wersji repozytorium z tymi przechowywanymi na GitHub.com.
+        Najpierw utwórz nowe repozytorium <strong>zdalne</strong> na GitHub.com.</p>
+
+    <ul>
+        <li>Przejdź do <a href="http://github.com" target="_blank">github.com</a>, zaloguj się i kliknij ikonę '+' w prawym 
+            górnym rogu, a następnie wybierz opcję 'New repository'.
+        </li>
+        <li>Nadaj jemu nazwę odpowiadającą nazwie Twojego lokalnego repozytorium, 'hello-world', oraz krótki opis.</li>
+        <li>Wybierz repozytorium publiczne. Oznacza to, że będzie wyświetlane w Twoim profilu oraz widoczne dla każdej osoby je odwiedzającej.</li>
+        <li>Nie inicjuj repozytorium plikiem README ponieważ już taki mamy lokalnie - 'readme.txt'. Jest to opcja pomocnicza GitHuba, przydatna jeśli jeszcze nie masz takiego pliku.
+        </li>
+        <li>Pozostaw '.gitignore' i 'license' ustawione na 'none'. Nie będziemy korzystać z nich w ramach tego poradnika.</li>
+        <li>Kliknij przycisk by zatwierdzić utworzenie repozytorium!</li>
+    </ul>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Readme, .gitignore i licencje</h2>
+    <p>Są to pliki popularne w projektach open source, więc by ułatwić utworzenie nowego projektu, GitHub oferuje 
+        utworzenie ich w Twoim imieniu.</p>
+    <p><strong>Readme</strong> ('czytaj to') wyjaśnia czym jest projekt, jak z niego korzystać, a czasami także jak 
+        włączyć się do pracy na rzecz jego rozwoju (choć często jest to wyjaśniane w dodatkowym pliku 'CONTRIBUTING.md',
+        tworzonym specjalnie na taką okazję).</p>
+    <p><strong>.gitignore</strong> zawiera listę plików których Git <strong>nie powinien</strong> śledzić, takie jakie pliki
+        zawierające hasła czy dane dostępowe do systemów produkcyjnych.</p>
+    <p><strong>license</strong> zawiera rodzaj licencji jaka udzielana jest na projekt. Pozwala to innym na zapoznanie
+        się z zasadami jego użytkowania. Informacje odnośnie rodzajów licencji można znaleźć tutaj: <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a>.
+    </p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Podłączanie repozytorium lokalnego do repozytorium zdalnego</h3>
+    <p>Teraz posiadasz już utworzone puste repozytorium zdalne na on GitHub.com. Na górze znajdziesz 'Quick Setup',
+        upewnij się, że wybrano opcję 'HTTPS' i skopiuj adres - to jest adres Twojego repozytorium na serwerach GitHuba.</p>
+
+    <p>W swoim terminalu, w folderze 'hello-world' gdzie zainicjowałeś repozytorium w poprzednim wyzwaniu, chcesz 
+        powiedzieć Gitowi by zapamiętał adres zdalnej wersji tego repozytorium. Ponieważ możesz mieć wiele repozytoriów zdalnych,
+        każde z nich wymaga osobnej nazwy. Główne repozytorium zdalne jest często nazywane <code>origin</code>.
+    </p>
+
+    <p>W celu dodania repozytorium zdalnego 'origin' do wersji lokalnej:</p>
+    <code class="shell">git remote add origin &lt;URLDOGITHUBA&gt;</code>
+
+    <p>Twoje repozytorium <strong>lokalne</strong> wie już gdzie szukać repozytorium <strong>zdalnego</strong>, nazwanego 'origin'.
+        Pomyśl o tym jak o dodawaniu nazwy i numeru telefonu do szybkiego wybierania, jeśli potrzebujesz się z kimś szybko skontaktować,
+        wystarczy po prostu wybrać odpowiednią opcję przypisaną do klawisza.</p>
+
+    <blockquote>
+        <p><strong>Użytkownicy Windowsa:</strong></p>
+        <p>Jeśli posiadasz na swoim komputerze aplikację <strong>GitHub Desktop</strong>, zdalne repozytorium nazwane 'origin'
+            jest automatycznie dodawane do lokalnego repozytorium. W tej sytuacji jedyne co musisz zrobić to poinformować
+            jaki adres URL z nim powiązać. Użyj poniższego polecenia zamiast podanego powyżej 'add':</p>
+
+        <code class="shell">git remote set-url origin &lt;URLDOGITHUBA&gt;</code>
+    </blockquote>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Wypychanie zmian do repozytorium zdalnego</h3>
+    <p>Następnie chcesz <strong>wypchnąć</strong> (wysłać) wszystkie zmiany lokalne do repozytorium zdalnego na GitHub.
+        To jest coś, co będziesz robić często by wersja zdalna pozostała zawsze zaktualizowana o lokalne zmiany.</p>
+
+    <p>Git posiada system gałęzi, co umożliwia skoncentrowanie prac nad różnymi aspektami projektu w różnych chwilach.
+        Więcej dowiemy się o tym później, ale domyślnie pierwsza gałąź nazywana jest 'master'. Kiedy wypychasz (i później pobierasz)
+        zmiany, musisz powiedzieć gitowi z której gałęzi ma skorzystać używając jej <strong>nazwy</strong> oraz nazwy repozytorium 
+        <strong>zdalnego</strong> na którym ona istnieje.</p>
+
+    <p>W tym przypadku, wyślemy naszą gałąź nazwaną 'master' na nasze repozytorium GitHub nazwane 'origin'. </p>
+    <code class="shell">git push origin master</code>
+
+    <p>Teraz przejdź na stronę swojego repozytorium zdalnego na GitHub.com i odśwież stronę. <strong>Wow!</strong> Wszystko 
+        jest teraz zsynchronizowane. Gratulacje utworzenia pierwszego repozytorium zdalnego!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Dodawanie repozytorium zdalnego</strong></li>
+        <code class="shell">git remote add &lt;NAZWAZDALNA&gt; &lt;URL&gt;</code>
+        <li><strong>Zmiana adresu URL do repozytorium zdalnego</strong></li>
+        <code class="shell">git remote set-url &lt;NAZWAZDALNA&gt; &lt;URL&gt;</code>
+        <li><strong>Pobieranie zmian</strong></li>
+        <code class="shell">git pull &lt;NAZWAZDALNA&gt; &lt;BRANCHNAME&gt;</code>
+        <li><strong>Wyświetlanie listy repozytoriów zdalnych</strong></li>
+        <code class="shell">git remote -v</code>
+        <li><strong>Wypychanie zmian</strong></li>
+        <code class="shell">git push &lt;NAZWAZDALNA&gt; &lt;BRANCH&gt;</code>
+    </ul>
+</div>

@@ -1,0 +1,108 @@
+<p>Poniżej znajduje się spis poleceń terminala i Gita używanych w wyzwaniach Git-it.</p>
+
+<h2>Podstawy Bash/Terminala</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Tworzenie nowego folderu (aka tworzenie nowego katalogu)</strong></li>
+        <code class="shell">mkdir &#60;NAZWAKATALOGU&#62;</code>
+        <li><strong>Nawigacja do istniejącego folderu (aka zmiana katalogu)</strong></li>
+        <code class="shell">cd &#60;NAZWAKATALOGU&#62;</code>
+        <li><strong>Wypisanie zawartości folderu</strong></li>
+        <code class="shell">ls </code>
+    </ul>
+</div>
+
+<h2>Konfiguracja Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Sprawdzenie wersji Git</strong></li>
+        <code>git --version</code>
+        <li><strong>Ustawienie swojej nazwy</strong></li>
+        <code>git config --global user.name "Twoja nazwa"</code>
+        <li><strong>Ustawienie swojego adresu e-mail</strong></li>
+        <code>git config --global user.email twójemail@example.com</code>
+        <li><strong>Ustawienie swojej nazwy GitHub (wielkość znaków ma znaczenie)</strong></li>
+        <code>git config --global user.username uSeRnAmE</code>
+    </ul>
+</div>
+
+<h2>Podstawy Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Włączanie Git dla bieżącego katalogu</strong></li>
+        <code class="shell">git init</code>
+        <li><strong>Sprawdzenie statusu zmian w repozytorium</strong></li>
+        <code class="shell">git status</code>
+        <li><strong>Wyświetlenie zmian w plikach</strong></li>
+        <code class="shell">git diff</code>
+        <li><strong>Dodawanie zmian do obszaru zatwierdzania</strong></li>
+        <code class="shell">git add &#60;NAZWAPLIKU&#62;</code>
+        <li><strong>Dodawanie wszystkich zmian do obszaru zatwierdzania</strong></li>
+        <code class="shell">git add .</code>
+        <li><strong>Zatwierdzenie (zapisanie) zmian wybranych do zatwierdzenia wraz z krótką informacją je opisującą</strong>
+        </li>
+        <code class="shell">git commit -m "krótki opis zmian"</code>
+        <li><strong>Skopiowanie (sklonowanie) repozytorium na Twój komputer</strong></li>
+        <code class="shell">git clone &#60;URL&#62;</code>
+    </ul>
+</div>
+
+<h2>Gałęzie</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Tworzenie nowej gałęzi</strong></li>
+        <code class="shell">git branch &#60;NAZWAGAŁĘZI&#62;</code>
+        <li><strong>Przełączanie aktywnej gałęzi</strong></li>
+        <code class="shell">git checkout &#60;NAZWAGAŁĘZI&#62;</code>
+        <li><strong>Tworzenie nowej gałęzi i przełączenie na nią jednym poleceniem </strong></li>
+        <code class="shell">git checkout -b &#60;NAZWAGAŁĘZI&#62;</code>
+        <li><strong>Wypisanie listy gałęzi</strong></li>
+        <code class="shell">git branch</code>
+        <li><strong>Zmiana nazwy aktywnej gałęzi</strong></li>
+        <code class="shell">git branch -m &#60;NOWANAZWAGAŁĘZI&#62;</code>
+    </ul>
+</div>
+
+<h2>Repozytoria zdalne</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Dodawanie repozytorium zdalnego</strong></li>
+        <code class="shell">git remote add &#60;NAZWAREPOZDALNEGO&#62; &#60;URL&#62;</code>
+        <li><strong>Ustawienie URL do repozytorium zdalnego</strong></li>
+        <code class="shell">git remote set-url &#60;NAZWAREPOZDALNEGO&#62; &#60;URL&#62;</code>
+        <li><strong>Przeglądanie listy repozytoriów zdalnych</strong></li>
+        <code class="shell">git remote -v</code>
+    </ul>
+</div>
+
+<h2>Pobieranie zmian</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Pobieranie zmian</strong></li>
+        <code class="shell">git pull</code>
+        <li><strong>Pobieranie zmian z gałęzi w repozytorium zdalnym</strong></li>
+        <code class="shell">git pull &#60;NAZWAREPOZDALNEGO&#62; &#60;GAŁĄŹZDALNA&#62;</code>
+        <li><strong>Wyświetlenie zmian z repozytorium zdalnego przed ich pobraniem</strong></li>
+        <code class="shell">git fetch --dry-run</code>
+    </ul>
+</div>
+
+<h2>Wypychanie i scalanie</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Wypychanie zmian</strong></li>
+        <code class="shell">git push &#60;NAZWAREPOZDALNEGO&#62; &#60;NAZWAGAŁĘZI&#62;</code>
+        <li><strong>Scalanie gałęzi o podanej nazwie do aktywnej gałęzi</strong></li>
+        <code class="shell">git merge &#60;NAZWAGAŁĘZI&#62;</code>
+    </ul>
+</div>
+
+<h2>Usuwanie gałęzi lokalnych i zdalnych</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Usuwanie gałęzi lokalnej</strong></li>
+        <code class="shell">git branch -D &#60;NAZWAGAŁĘZI&#62;</code>
+        <li><strong>Usuwanie gałęzi zdalnej</strong></li>
+        <code class="shell">git push &#60;NAZWAREPOZDALNEGO&#62; --delete &#60;NAZWAGAŁĘZI&#62;</code>
+    </ul>
+</div>
