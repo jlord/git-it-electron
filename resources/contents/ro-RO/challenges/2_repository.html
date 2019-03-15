@@ -1,0 +1,73 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Creează un depozit nou pe calculatorul tău.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Depozite</h2>
+    <p>Un <strong>depozit</strong> este o colecție de elemente înrudite. În cazul nostru, când scriem soft, este o
+        colecție de fișiere legate de un proiect soft. Ți-l poți imagina ca pe un folder de proiect cu toate fișierele
+        relevante în interiorul său. De fapt, așa va arăta pe calculatorul tău oricum. Uneori sunt numite
+        "depouri" pe scurt.</p>
+
+    <img src="../../../assets/imgs/repos.png" alt="A drawing of four file folders" width="600">
+
+    <p>Îi spui lui Git ce este proiectul tău și Git va începe să urmărească toate schimbările din acel folder. Această îl face
+        depozit Git: un folder cu elemente care sunt urmărite de Git. Git urmărește când sunt adăugate fișiere, șterse sau chiar
+        dacă o singură literă dintr-un singur fișier se schimbă. Toate acestea plus cine a făcut-o când este urmărit de Git. În soft,
+        urmărirea schimbărilor în acest fel se numește <strong>controlul versiunii</strong>.</p>
+
+    <h2>Folosirea terminalului</h2>
+    <p><strong>Terminalul</strong> (sau Bash) este un mod de a-ți instrui calculatorul să facă lucruri tastând comenzi în loc
+        de a face click pe aplicații cu mouse-ul. Poți redenumi fișiere, deschide fișiere, crea noi foldere, naviga între
+        directoare (foldere) și mai multe, toate executând comenzi tastate. Poți chiar folosi un editor de text pentru cod (ca <a
+                href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) în terminal și să nu fie
+        nevoie să pleci niciodată!</p>
+
+    <p>Pe lângă navigarea prin calculator, poți de asemenea folosi programe în terminal care au <strong>interfețe în linie
+        de comandă (CLI)</strong>, însemnând că pot fi executate cu comenzi din terminal. Git este unul dintre acestea. Prima parte
+        a comenzii îi spune calculatorului tău că vorbești cu Git. Părțile după aceea sunt comenzile și
+        diferitele opțiuni pe baza cărora vrei să acționeze Git.</p>
+
+    <p>În Git-it vei învăța câteva acțiuni de bază în linia de comandă (pe lângă comenzile Git) pentru a naviga în calculator;
+        sunt descrise în pași.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Creează un depozit</h3>
+    <p>Vei crea un nou folder de proiect și apoi îl vei inițializa ca depozit Git. Vom numi folderul 'hello-world'
+      în această provocare, dar poți alege un nume diferit dacă ai deja un folder numit așa (este un nume comun pentru un prim proiect).</p>
+
+    <p>E momentul să îți deschizi terminalul!
+    <p>
+
+    <p>În fereastra terminalului, tastează aceste comenzi, pe rând, apăsând ENTER după fiecare.</p>
+
+    <p>Mai întâi, creeaza un nou folder:<br><span class="inline-tip">Sugestie: mkdir înseamnă <em>make directory (creează director)</em></span></p>
+    <code class="shell">mkdir hello-world</code>
+
+    <p>Apoi du-te în acel folder:<br><span class="inline-tip">Sugestie: cd înseamnă <em>change directory (schimbă director)</em></span></p>
+    <code class="shell">cd hello-world</code>
+
+    <p>La final, spune-i lui Git să inițializeze (să înceapă urmărească) folderul în care te afli acum:</p>
+    <code class="shell">git init</code>
+
+    <p>Ultima comandă ar trebui să întoarcă ceva care începe cu "Initialized empty Git repository". Celelalte comenzi nu întorc nimic.</p>
+
+    <p>Ai reușit! Dacă vrei să te asiguri că este un depozit Git, tastează <code>git status</code> și dacă
+        nu întoarce 'fatal: Not a git repository...' este perfect!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Creează un nou folder (creează director)</strong></li>
+        <code class="shell">mkdir &#60;NUME_FOLDER&#62;</code>
+        <li><strong>Navighează într-un folder (schimbă director)</strong></li>
+        <code class="shell">cd &#60;NUME_FOLDER&#62;</code>
+        <li><strong>Listează elementele dintr-un folder</strong></li>
+        <code class="shell">ls </code>
+        <li><strong>Activează Git pentru un folder</strong></li>
+        <code class="shell">git init</code>
+    </ul>
+</div>

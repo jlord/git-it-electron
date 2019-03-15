@@ -1,0 +1,85 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Bifurcă un proiect de pe GitHub.com și clonează-l local.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Bifurcații</h2>
+    <p>Până acum ai făcut un proiect local și l-ai împins pe GitHub, dar aceea este doar o parte din poveste! Cealaltă parte este
+        lucrul cu alți oameni și alte proiecte.</p>
+
+    <p>Când <strong>bifurci</strong> un depozit, creezi o copie a sa pe contul de GitHub. Copia ta bifurcată 
+        își începe viața ca depozit <strong>la distanță</strong>, există doar pe contul tău de GitHub, nu pe calculatorul
+        tău. Bifurcațiile sunt folosite pentru a crea propria versiune a unui proiect (această diversiune de la original este ca
+        a urma o bifurcație de pe drum) sau a contribui cu schimbările tale (cum ar fi repararea de probleme sau noi opțiuni) la proiectul
+        original.</p>
+
+    <p>Pentru a obține un depozit bifurcat din contul tău de GitHub pe calculatorul tău <strong>clonează-l</strong>. Această
+        acțiune de clonare copiază depozitul la distanță pe calculatorul tău, astfel încât să poți lucra la el local.</p>
+
+    <img src="../../../assets/imgs/clone.png"
+         alt="O diagramă care ilustrează un depozit de pe GitHub copiat pe contul tău de GitHub și copiat apoi pe calculatorul tău."
+         width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Bifurcă depozitul Patchwork</h3>
+    <p>Proiectul cu care vom lucra este la <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.
+        Du-te pe acea pagină și fă click pe butonul 'Fork' din dreapta sus. Odată ce s-a încheiat animația de bifurcare, ai
+        o copie în contul tău. Copiază URL-ul de HTTP al bifurcației tale din bara de adresă din browserul tău, aceasta este adresa
+        bifurcației tale pe serverele GitHub.</p>
+    <!-- TODO write address for user here -->
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Clonează-ți bifurcația local</h3>
+    <p>Acum, în terminal, vei clona depozitul pe calculatorul tău. Va crea automat un nou folder pentru
+        depozit, așa că nu este nevoie să creezi unul. Dar asigură-te că nu îl clonezi în interiorul unui alt
+        folder de depozit Git!</p>
+
+    <p>Deci, asigură-te că nu ești în interiorul directorului 'hello-world' din provocările anterioare. Pentru a reveni și a părăsi
+        acest folder pentru a putea clona, urmează acești pași:</p>
+
+    <p>Ieși din folderul 'hello-world':<br><span class="inline-tip">Pont: cele două puncte înseamnă ieși din director cu un nivel</span>
+    </p>
+    <p><code class="shell">cd ..</code></p>
+
+    <p>Acum că nu mai ești într-un alt depozit Git, clonează-ți bifurcația:</p>
+    <p><code class="shell">git clone &#60;URLDELAGITHUB&#62;</code></p>
+
+    <p>Intră în folderul pe care l-ai creat pentru copia ta locală a bifurcației (în acest caz, numită 'patchwork').</p>
+    <p><code class="shell">cd patchwork</code></p>
+
+    <p>Acum ai o copie a depozitului pe calculatorul tău și este conectată automat la depozitul
+        la distanță (copia ta bifurcată) de pe contul tău de GitHub. Tastează <code>git remote -v</code> pentru a vedea că adresa
+        către bifurcație este deja setată.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Conectează-te la depozitul original</h3>
+
+    <p>Ce se întâmplă dacă depozitul originar se schimbă? Vei vrea să poți <strong>retrage</strong>
+        și acele schimbări. Deci, haide să adaugăm o altă conexiune la distanță, de data asta la depozitul originar, <a
+                href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>, cu URL-ul său.</p>
+
+    <p>Poți numi această conexiune la distanță oricum vrei, dar tipic oamenii folosesc numele 'upstream'; haide să îl folosim
+        pentru asta.</p>
+
+    <p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+
+    <p>Ca să te asiguri că ai depozitele la distanță corecte, tastează <code>git remote -v</code> pentru a lista adresele pe care
+        le-ai stocat. <b>Ar trebui să ai un depozit la distanță 'origin' cu adresa bifurcației tale și apoi un depozit la distanță 'upstream' cu
+            adresa către cel originar, URL-ul notat mai sus în acest pas.</b></p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Adaugă un depozit la distanță</strong></li>
+        <li><code class="shell">git remote add &#60;NUMEDEPOZITLADISTANȚĂ&#62; &#60;URL&#62;</code></li>
+        <li><strong>Schimbă URL pentru depozit la distanță</strong></li>
+        <li><code class="shell">git remote set-url &#60;NUMEDEPOZITLADISTANȚĂ&#62; &#60;URL&#62;</code></li>
+        <li><strong>Vizualizează conexiuni la distanță</strong></li>
+        <li><code class="shell">git remote -v</code></li>
+    </ul>
+</div>

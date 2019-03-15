@@ -1,0 +1,53 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Creează un cont de GitHub și adaugă-ți numele de utilizator la Git config.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Lucrând mai bine, împreună</h2>
+
+    <p>Depozitul pe care l-ai creat până acum este doar pe calculatorul tău, ceea ce este util, dar este destul de greu de colaborat cu alții.
+        Nu îți face griji, pentru asta este GitHub!</p>
+
+    <p>GitHub este un site care le permite oamenilor de pretutindeni să încarce ceea ce lucrează cu Git astfel încât toți să poată
+        să lucreze împreună ușor la același proiect. GitHub acționează ca depozitul central pentru tine și toți ceilalți
+        pentru a colabora. Împingi schimbările în el și retragi schimbările de la alții.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Creează un cont de GitHub</h3>
+
+    <p>Vizitează <a href="http://github.com" target="_blank">github.com</a> și creează un cont gratis.
+        <strong>Bate palma, bine ai venit!</strong></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Adaugă numele de utilizator de GitHub în Git</h3>
+    <p>Adaugă-ți numele de utilizator de GitHub în configurația de Git. Vom face asta doar de dragul lui Git-it; este mai ușor
+        să verificăm provocările următoare. Salvează-l exact cum l-ai creat pe GitHub și <strong>folosește litere mari
+            unde este cazul</strong>. Nu trebuie să adaugi "&#60;" și "&#62;".</p>
+
+    <p>Adaugă-ți numele de utilizator GitHub la configurația de Git:</p>
+    <code class="shell">git config --global user.username &#60;NUmeUTilIZatOR&#62;</code>
+
+    <p>Poți verifica ce ai setat în Git config tastând:</p>
+    <code>git config --global user.username</code>
+</div>
+
+{{{ verify_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <p>Asigură-te că tastezi "<strong>user.username</strong>" mai sus, nu "user.name", ceea ce ar suprascrie numele pe care l-ai setat
+        în prima provocare și te va lăsa fără proprietate username! Dacă descoperi că ai făcut asta, este ok,
+        repetă pasul din prima provocare pentru a-ți adăuga numele și apoi termină pasul de mai sus.</p>
+</div>
+
+<div class="chal-no-pass grey-border border-box">
+    <h4>Numele de utilizator de GitHub și Git config nu se potrivesc</h4>
+
+    <p>O eroare comună este să nu ai numele de utilizator de GitHub identic cu cel pe care l-ai setat cu <code>git config</code>.
+        De exemplu, 'JLord' nu este același ca 'jlord'</p>
+    <p>Pentru a-ți schimba numele de utilizator setat cu Git, execută aceeași comandă pe care ai executat-o mai devreme, dar cu litere mari
+        corecte:</p>
+    <p><code class="shell">git config --global user.username &#60;NUmeUTilIZatOR&#62;</code></p>
+    <p>După ce ai actualizat, verifică din nou!</p>
+</div>

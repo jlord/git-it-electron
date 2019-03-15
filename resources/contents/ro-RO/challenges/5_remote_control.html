@@ -1,0 +1,114 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Conectează-ți depozitul local la unul la distanță și împinge schimbări în el.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Depozite la distanță</h2>
+
+    <p>Când pui ceva pe GitHub, acea copie rămâne pe unul dintre serverele GitHub. Aceasta îl face un depozit
+        <strong>la distanță</strong>, deoarece nu este pe calculatorul tău, ci pe un server „la distanță” și
+        altundeva. <strong>Împingându-ți</strong> schimbările <strong>locale</strong> (de pe calculator) pe el, îl menții
+        actualizat.</p>
+
+    <p>Alții pot mereu să obțină ultimele schimbări din proiectul tău <strong>retrăgându-ți</strong> schimbările
+        de pe depozitul la distanță (pe calculatorul tău). Acesta este modul în care toți pot lucra la un proiect fără a avea nevoie de acces
+        la calculatorul tău unde este stocată copia ta locală.</p>
+
+    <img src="../../../assets/imgs/remotes.png"
+         alt="O diagramă care ilustrează GitHub ca server central care creează site-ul GitHub.com. Două calculatoare, de ambele părți, împing și retrag de pe GitHub."
+         width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Creează un depozit la distanță</h3>
+    <p>Vrei să îți sincronizezi versiunea <strong>locală</strong> cu cea stocată pe GitHub.com. Mai întâi, creează un nou depozit <strong>la distanță</strong>
+        pe GitHub.com.</p>
+
+    <ul>
+        <li>Du-te la <a href="http://github.com " target="_blank">github.com</a>, autentifică-te și fă click pe '+' în dreapta
+            sus și apoi clic pe 'New repository'.
+        </li>
+        <li>Alege un nume care se protrivește cu numele depozitului local, 'hello-world', și o scurtă descriere.</li>
+        <li>Fă-l public. Asta înseamnă că va fi listat în profilul public.</li>
+        <li>Nu-l inițializa cu un README, deoarece avem deja un fișier local numit 'readme.txt'. Aceasta este o opțiune
+            ajutătoare de la GitHub dacă nu l-ai creat deja.
+        </li>
+        <li>Lasă '.gitignore' și 'license' setate la 'none'. Nu le vom folosi în acest tutorial.</li>
+        <li>Fă click pe 'create repository'!</li>
+    </ul>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Fișiere readme, .gitignore și licențe</h2>
+    <p>Acestea sunt fișiere comune în proiectele open source, așa că, pentru a face începutul unui proiect mai ușor, GitHub oferă
+        o opțiune pentru crearea lor pentru tine.</p>
+    <p>Un <strong>readme</strong> explică ce este proiectul, cum să îl folosești și, adesea, cum să contribui (deși,
+        uneori, există un fișier suplimentar, 'CONTRIBUTING.md', pentru acele detalii).</p>
+    <p>Un <strong>.gitignore</strong> este o listă de fișiere pe care Git <em>nu</em> ar trebui să le urmărească, de exemplu, fișiere
+        cu parole!</p>
+    <p>Un fișier de <strong>licență</strong> este un tip de licență pe care o pui pe proiectul tău. Acesta le permite altora să știe
+        cum îl pot folosi. Informații despre tipuri sunt aici: <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a>.
+    </p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Conectează-ți depozitul local la cel la distanță</h3>
+    <p>Acum ai un depozit gol început pe GitHub.com. În partea de sus vei vedea 'Quick Setup', asigură-te că
+        butonul 'HTTPS' este selectat și copiază adresa—aceasta este adresa depozitului tău de pe serverele GitHub.</p>
+
+    <p>Înapoi în terminal și în interiorul folderului 'hello-world' pe care l-ai inițializat ca depozit Git în
+        provocarea anterioară, vrei să îi spui lui Git să își amintească adresa versiunii la distanță de pe serverele GitHub.
+        Poți avea multiple depozite la distanță, așa că fiecare necesită un nume. Depozitul la distanță primar se numește tipic <code>origin</code>.
+    </p>
+
+    <p>Pentru a adăuga un depozit la distanță 'origin' depozitului tău:</p>
+    <code class="shell">git remote add origin &lt;URLDELAGITHUB&gt;</code>
+
+    <p>Depozitul <strong>local</strong> știe acum unde se află depozitul tău <strong>la distanță</strong> numit 'origin',
+        pe serverele GitHub. Privește-o ca adăugând un nume și o adresă în contactele preferate; acum, când trebuie să trimiți
+        ceva acolo, poți.</p>
+
+    <blockquote>
+        <p><strong>Utilizatorii de Windows:</strong></p>
+        <p>Dacă ai <strong>GitHub Desktop</strong> pe calculator, un depozit la distanță 'origin' este creat
+            automat în depozitul local. În acel caz, va trebui să îi spui ce URL să asocieze
+            cu 'origin'. Folosește această comandă în loc de cea cu 'add' de mai sus:</p>
+
+        <code class="shell">git remote set-url origin &lt;URLDELAGITHUB&gt;</code>
+    </blockquote>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Împinge-ți schimbările în depozitul la distanță</h3>
+    <p>Vrei în continuare <strong>să împingi</strong> (trimiți) tot ce ai făcut local în depozitul la distanță de pe GitHub.
+        Asta este ceva ce vei face adesea, astfel încât versiunea la distanță să fie la zi și să reflecte starea versiunii
+        locale.</p>
+
+    <p>Git are un sistem de ramificare, astfel încât să poți lucra la diferite părți ale unui proiect la momente diferite. Vom învăța
+        mai multe despre asta mai târziu, dar, implicit, prima ramură se numește 'master'. Când împingi (și mai târziu retragi) pe un
+        proiect, îi spui lui Git <strong>numele ramurii</strong> pe care o vrei și numele <strong>depozitului la distanță</strong>
+        pe care se află.</p>
+
+    <p>În acest caz, ne vom trimite ramura numită 'master' pe depozitul la distanță de pe GitHub numit 'origin'. </p>
+    <code class="shell">git push origin master</code>
+
+    <p>Acum du-te pe pagina depozitului la distanță de pe GitHub.com și reîncarcă pagina. <strong>Oau!</strong> Totul este
+        acum la fel local cum este la distanță. Felicitări pentru primul tău depozit public!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Adaugă conexiuni la distanță</strong></li>
+        <code class="shell">git remote add &lt;NUMEDEPOZITLADISTANȚĂ&gt; &lt;URL&gt;</code>
+        <li><strong>Setează URL către depozit la distanță</strong></li>
+        <code class="shell">git remote set-url &lt;NUMEDEPOZITLADISTANȚĂ&gt; &lt;URL&gt;</code>
+        <li><strong>Retrage schimbări</strong></li>
+        <code class="shell">git pull &lt;NUMEDEPOZITLADISTANȚĂ&gt; &lt;NUMERAMURĂ&gt;</code>
+        <li><strong>Vizualizează adrese la distanță</strong></li>
+        <code class="shell">git remote -v</code>
+        <li><strong>Împinge schimbări</strong></li>
+        <code class="shell">git push &lt;NUMEDEPOZITLADISTANȚĂ&gt; &lt;NUMERAMURĂ&gt;</code>
+    </ul>
+</div>

@@ -1,0 +1,108 @@
+<p>Mai jos sunt comenzile de terminal și Git folosite în provocările Git-it.</p>
+
+<h2>Fundamente de bash/terminal</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Creează un nou folder (creează director)</strong></li>
+        <code class="shell">mkdir &#60;NUME_FOLDER&#62;</code>
+        <li><strong>Treci într-un folder existent (schimbă director)</strong></li>
+        <code class="shell">cd &#60;NUME_FOLDER&#62;</code>
+        <li><strong>Listează elementele dintr-un folder</strong></li>
+        <code class="shell">ls</code>
+    </ul>
+</div>
+
+<h2>Configurare Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Verifică versiune Git</strong></li>
+        <code>git --version</code>
+        <li><strong>Setează-ți numele</strong></li>
+        <code>git config --global user.name "numele tău"</code>
+        <li><strong>Setează-ți adresa de email</strong></li>
+        <code>git config --global user.email adresa_ta@example.com</code>
+        <li><strong>Setează-ți contul de Github (sensibil la litere mari)</strong></li>
+        <code>git config --global user.username nUmEuTiLiZaToR</code>
+    </ul>
+</div>
+
+<h2>Fundament Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Activează Git pentru un folder</strong></li>
+        <code class="shell">git init</code>
+        <li><strong>Verifică starea schimbărilor la un depozit</strong></li>
+        <code class="shell">git status</code>
+        <li><strong>Vizualizează schimbări pentru fișiere</strong></li>
+        <code class="shell">git diff</code>
+        <li><strong>Adaugă schimbările unui fișier pentru a fi operate</strong></li>
+        <code class="shell">git add &#60;NUME_FIȘIER&#62;</code>
+        <li><strong>Pentru a adăuga toate schimbările la fișiere</strong></li>
+        <code class="shell">git add .</code>
+        <li><strong>Pentru a opera (salva) schimbările pe care le-ai adăugat cu un scurt mesaj care descrie schimbările</strong>
+        </li>
+        <code class="shell">git commit -m "mesaj de operare"</code>
+        <li><strong>Copiază un depozit pe calculatorul tău</strong></li>
+        <code class="shell">git clone &#60;URL&#62;</code>
+    </ul>
+</div>
+
+<h2>Ramuri Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Creează o nouă ramură</strong></li>
+        <code class="shell">git branch &#60;NUME_RAMURĂ&#62;</code>
+        <li><strong>Treci într-o ramură</strong></li>
+        <code class="shell">git checkout &#60;NUME_RAMURĂ&#62;</code>
+        <li><strong>Poți crea și trece într-o ramură cu un rând</strong></li>
+        <code class="shell">git checkout -b &#60;NUME_RAMURĂ&#62;</code>
+        <li><strong>Listează ramurile</strong></li>
+        <code class="shell">git branch</code>
+        <li><strong>Redenumește ramura în care te afli acum</strong></li>
+        <code class="shell">git branch -m &#60;NUME_RAMURĂ&#62;</code>
+    </ul>
+</div>
+
+<h2>Depozite Git la distanță</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Adaugă conexiuni la distanță</strong></li>
+        <code class="shell">git remote add &#60;NUME_DEPOZIT_LA_DISTANȚĂ&#62; &#60;URL&#62;</code>
+        <li><strong>Setează URL către depozit la distanță</strong></li>
+        <code class="shell">git remote set-url &#60;NUME_DEPOZIT_LA_DISTANȚĂ&#62; &#60;URL&#62;</code>
+        <li><strong>Vizualizează conexiuni la distanță</strong></li>
+        <code class="shell">git remote -v</code>
+    </ul>
+</div>
+
+<h2>Retrage în Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Retrage schimbări</strong></li>
+        <code class="shell">git pull</code>
+        <li><strong>Retrage schimbări de pe o ramură la distanță</strong></li>
+        <code class="shell">git pull &#60;NUME_DEPOZIT_LA_DISTANȚĂ&#62; &#60;NUME_RAMURĂ_LA_DISTANȚĂ&#62;</code>
+        <li><strong>Vizualizează schimbările la depozit înainte să retragi</strong></li>
+        <code class="shell">git fetch --dry-run</code>
+    </ul>
+</div>
+
+<h2>Împinge și fuzionează în Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Împinge schimbări</strong></li>
+        <code class="shell">git push &#60;NUME_DEPOZIT_LA_DISTANȚĂ&#62; &#60;NUME_RAMURĂ_LA_DISTANȚĂ&#62;</code>
+        <li><strong>Fuzionează o ramură în ramura curentă</strong></li>
+        <code class="shell">git merge &#60;NUME_RAMURĂ&#62;</code>
+    </ul>
+</div>
+
+<h2>Șterge depozite la distanță și ramuri în git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Șterge o ramură locală</strong></li>
+        <code class="shell">git branch -D &#60;NUME_RAMURĂ&#62;</code>
+        <li><strong>Șterge o ramură la distanță</strong></li>
+        <code class="shell">git push &#60;NUME_DEPOZIT_LA_DISTANȚĂ&#62; --delete &#60;NUME_RAMURĂ&#62;</code>
+    </ul>
+</div>
