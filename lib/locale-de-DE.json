@@ -17,12 +17,12 @@
     "status": "Status",
     "diff": "Unterschiede (diff)",
     "readme": "Hilfedatei (readme)",
-    "collaborator": "Teammitglied",
-    "collaborators": "Teammitglieder",
+    "collaborator": "Teammitglied (collaborator)",
+    "collaborators": "Teammitglieder (collaborators)",
     "remote": "zentraler Projektordner (remote)",
     "remotes": "zentrale Projektordner (remotes)",
-    "contributing": "mitmachen",
-    "connections": "Verbindungen"
+    "contributing": "mitmachen (contributing)",
+    "connections": "Verbindungen (connections)"
   },
   "v": {
     "add": "hinzufügen (add)",
@@ -30,7 +30,7 @@
     "forked": "kopiert (forked)",
     "clone": "Arbeitskopie erstellen (clone)",
     "push": "hochladen (push)",
-    "close": "schließen",
+    "close": "schließen (close)",
     "pull": "herunterladen (pull)",
     "commit": "Änderung bestätigen (commit)",
     "merge": "zusammenführen (merge)",
@@ -39,7 +39,7 @@
     "stage": "vorbereiten (stage)"
   },
   "adj": {
-    "merged": "zusammengeführte(s/r) (merged",
+    "merged": "zusammengeführte(s/r) (merged)",
     "forked": "kopierte(s/r) (forked)",
     "remote": "ferne(s/r) (remote)"
   }
