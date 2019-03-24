@@ -1,11 +1,46 @@
 {
   "n": {
- 
+    ".gitignore": "Ignorierdatei (.gitignore)",
+    "repository": "Projektordner (repository)",
+    "repositories": "Projektordner (repositories)",
+    "branch": "Zweig (branch)",
+    "branches": "Zweige (branches)",
+    "fork": "Kopie (fork)",
+    "forks": "Kopien (forks)",
+    "request": "Anfrage (request)",
+    "pull request": "Änderungsanfrage (pull request)",
+    "pull requests": "Änderungsanfragen (pull requests)",
+    "commit": "Änderungssatz (commit)",
+    "commits": "Änderungssätze (commits)",
+    "upstream": "ursprüngliches Projekt (upstream)",
+    "feature": "Funktionalität (feature)",
+    "status": "Status",
+    "diff": "Unterschiede (diff)",
+    "readme": "Hilfedatei (readme)",
+    "collaborator": "Teammitglied",
+    "collaborators": "Teammitglieder",
+    "remote": "zentraler Projektordner (remote)",
+    "remotes": "zentrale Projektordner (remotes)",
+    "contributing": "mitmachen",
+    "connections": "Verbindungen"
   },
-  
   "v": {
+    "add": "hinzufügen (add)",
+    "fork": "kopieren (fork)",
+    "forked": "kopiert (forked)",
+    "clone": "Arbeitskopie erstellen (clone)",
+    "push": "hochladen (push)",
+    "close": "schließen",
+    "pull": "herunterladen (pull)",
+    "commit": "Änderung bestätigen (commit)",
+    "merge": "zusammenführen (merge)",
+    "merged": "zusammengeführt (merged)",
+    "checkout": "wechseln (checkout)",
+    "stage": "vorbereiten (stage)"
   },
-  
   "adj": {
+    "merged": "zusammengeführte(s/r) (merged",
+    "forked": "kopierte(s/r) (forked)",
+    "remote": "ferne(s/r) (remote)"
   }
 }
