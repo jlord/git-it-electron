@@ -16,7 +16,7 @@
     "feature": "Funktionalität (feature)",
     "status": "Status",
     "diff": "Unterschiede (diff)",
-    "readme": "Hilfedatei (readme)",
+    "readme": "Liesmich (readme)",
     "collaborator": "Teammitglied (collaborator)",
     "collaborators": "Teammitglieder (collaborators)",
     "remote": "zentraler Projektordner (remote)",
@@ -35,7 +35,7 @@
     "commit": "Änderung bestätigen (commit)",
     "merge": "zusammenführen (merge)",
     "merged": "zusammengeführt (merged)",
-    "checkout": "wechseln (checkout)",
+    "checkout": "auswählen (checkout)",
     "stage": "vorbereiten (stage)"
   },
   "adj": {
