@@ -1,0 +1,60 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Cài đặt Git trên máy tính và cấu hình nó với tên và email của bạn.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Git</h2>
+    <p>Git là một<strong>phần mềm mã nguồn mở, miễn phí</strong> (mã nguồn <a href="https://github.com/git/git">được công khai</a>) viết bởi Linus Torvalds cũng là người đã phát triển hệ điều hành kernel Linux. </p>
+    <p>Git là một chương trình theo dấu sự thay đổi theo thời gian, trong lập trình được hiểu là chương trình <strong>kiểm soát phiên bản</strong>.
+        Nếu bạn đã sử dụng một tính năng theo dấu thay đổi trong phần mềm soạn thảo, thì bạn hiểu cơ chế rồi đó, tương tự với Git!
+    </p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Install Git</h3>
+    <p>Lời khuyên khi cài đặt Git trên máy tính là bạn nên download từ trang chủ ứng dụng <a href="https://desktop.github.com">GitHub
+        Desktop</a>. Ta sẽ không dùng ứng dụng desktop đối với Git-it (vì ta đang học sử dụng với terminal) nhưng Git Desktop chứa Git và là cách dễ nhất để cài đặt Git trên mọi nền tảng.</p>
+
+    <ul>
+        <li><strong>Windows</strong>: Sử dụng <strong>Git Shell</strong> thay thế cho terminal.</li>
+        <li><strong>Mac</strong>: Chạy ứng dụng GitHub Desktop vào phần Preferences, chọn cài đặt công cụ cửa sổ dòng lệnh.Sử dụng <strong>terminal</strong> của ứng dụng như terminal trên máy.
+        </li>
+    </ul>
+
+    <p>Để chắc chắn bạn đã có Git trong máy chưa, gõ vào <code>git --version</code> trong terminal và kết quả trả về nếu là một con số lớn hơn phiên bản <code>1.7.10</code>, bạn đã cài đặt thành công! Để tìm hiểu thêm, bạn có thể tham khảo <a href="http://git-scm.com">Git
+            website</a>.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Git Software</h2>
+    <p>GitHub Desktop có thể làm rất nhiều thứ với Git nhưng đó không phải là tất cả, đó cũng chính là lý do tại sao học Git với terminal lại quan trọng. Nhưng khi bạn có GitHub Desktop, bạn cũng sẽ cảm thấy thoải mái khi các dự án của bạn được tổ chức theo kiểu vật lý ảo giống như GitHub website.</p>
+
+    <p>Git không giống những chương trình bạn có trên máy tính. Bạn gần như chẳng thấy biểu tượng của Git trên màn hình desktop, nhưng nó luôn khả dụng và sẵn sàng để truy cập bất cứ lúc nào từ Terminal hoặc Git Desktop.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Configure Git</h3>
+    <p>Khi GitHub Desktop (đương nhiên bao gồm Git) được cài đặt, hãy mở <strong>terminal</strong> của bạn lên.
+        Bạn có thể xác thực Git đang khả dụng bằng cách gõ:</p>
+
+    <p><code class="shell">git --version </code></p>
+
+    <p>Kết quả trả về là phiên bản Git bạn đã cài đặt, trông sẽ như thế này:</p>
+
+    <p><code class="comment">git version 1.9.1</code></p>
+
+    <p>Tiếp theo, cấu hình cho Git để nó kết nối các phần công việc của bạn:</p>
+    <p>Đặt tên:</p>
+    <p><code class="shell">git config --global user.name "Ten Ban"</code></p>
+    <p>Và email:</p>
+    <p><code class="shell">git config --global user.email "youremail@example.com"</code></p>
+
+    <p>Vậy là bạn đã hoàn thành thử thách đầu tiên! Click 'Verify' để xác nhận bạn đã qua thử thách.</p>
+</div>
+
+{{{ verify_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <h3>Biểu tượng dollar trong tài liệu code</h3>
+    <p>Biểu tượng dollar <code>$</code> thường được sử dụng trong các tài liệu lập trình để tạo dấu hiệu rằng sau nó là code của một <strong>dòng lệnh</strong> (xem đoạn mã phía trên). Bạn không cần phải gõ <code>$</code> khi thao tác, chỉ cần gõ câu lệnh vào sau nó.</p>
+</div>

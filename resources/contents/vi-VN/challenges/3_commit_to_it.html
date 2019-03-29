@@ -1,0 +1,62 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Tạo một file trong repository mới, thêm vài thứ trong đó và "commit" sự thay đổi đó với Git.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Commits</h2>
+    <p>Những commit ("cam kết") là cốt lõi của việc sử dụng Git. Đó là những thời điểm mà bạn lưu và mô tả việc mà bạn đã hoàn thành, nó đánh dấu cho lịch sử các thay đổi trên timeline của project.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Tạo một File mới</h3>
+    <p>Giờ bạn đã có repository, hãy add thêm file vào đó.</p>
+    <p>Mở text editor và tạo ra một file trống. Hãy viết vài dòng, kiểu như "Xin chào, Việt Nam!", và lưu file dưới tên 'readme.txt'trong folder 'hello-world' bạn vừa tạo trong challenge trước.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Kiểm tra trạng thái và thêm commit thay đổi</h3>
+    <p>Tiếp theo, kiểm tra  <strong>status</strong> (trạng thái) của repository để thấy những thay đổi, nếu có. Bạn biết mình đã thay đổi thứ gì đó, vậy Git thì sao?</p>
+
+    <p>Hãy đảm bảo bạn vẫn đang làm việc trong directory 'hello-world' của mình trong lúc bạn chạy những dòng lệnh. Sử dụng Git để xem sự thay đổi trong repos của bạn:</p>
+
+    <p>Đầu tiên, kiểm tra trạng thái:</p>
+    <p><code class="shell">git status</code></p>
+    <p>Git sẽ cho bạn biết có một file đã được thêm mới.</p>
+
+    <p>Sau đó <strong>add</strong> file bạn vừa tạo để nó trở thành một phần trong thay đổi mà bạn sẽ <strong>commit</strong>
+        (hay lưu lại) với Git:</p>
+    <p><code class="shell">git add readme.txt</code></p>
+
+    <p>Cuối cùng, <strong>commit</strong> tất cả những thay đổi đó vào lịch sử của repos với một thông điệp ngắn (m - message) để mô tả việc cập nhật.</p>
+    <p><code class="shell">git commit -m "Created readme"</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Hãy tiếp tục tạo thêm thay đổi</h3>
+    <p>Giờ hãy thêm vào những dòng khác trong file 'readme.txt' và lưu nó lại.</p>
+
+    <p>Trong terminal, bạn có thể xem được <strong>sự khác biệt</strong> giữa file hiện tại và chính nó trong commit trước đó. </p>
+
+    <p>Hãy nói với Git để thấy sự khác nhau (difference) <strong>diff</strong>:</p>
+    <p><code class="shell">git diff</code></p>
+
+    <p>Và bây giờ, với những gì bạn đã học ở trên, nhớ commit những thay đổi cuối nhé!.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Kiểm tra trạng thái thay đổi của một repository</strong></li>
+        <li><code class="shell">git status</code></li>
+        <li><strong>Xem sự thay đổi</strong></li>
+        <li><code class="shell">git diff</code></li>
+        <li><strong>Commit những thay đổi của file</strong></li>
+        <li><code class="shell">git add &#60;FILENAME&#62;</code></li>
+        <li><strong>Thêm mới những file thay đổi</strong></li>
+        <li><code class="shell">git add .</code></li>
+        <li><strong>Commit sự thay đổi bạn đã thêm vào với một thông điệp ngắn</strong>
+        </li>
+        <li><code class="shell">git commit -m "viet gi do vao day"</code></li>
+        </ul>
+</div>

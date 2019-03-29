@@ -1,0 +1,105 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Thêm nhánh, thêm repos cục bộ vào bản fork để làm việc với các thay đổi.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Branches - nhánh</h2>
+    <p>Git repositories sử dụng các nhanh đơn lẻ để làm việc khi cần đến. Một công việc thường xuyên khi làm dự án hoặc làm cùng dự án với những người khác là tạo ra các <strong>branch</strong> để ghi dấu những thay đổi trong suốt quá trình. Với cách này, bạn có thể làm việc của mình khi nhánh chính, thường có tên là 'master' ở trạng thái ổn định. Khi công việc trên nhánh của bạn kết thúc, bạn sẽ ghép nó lại với nhánh 'master'.</p>
+
+    <p>Sơ đồ dưới đây cho thấy cách mà bạn có thể phân nhánh từ nhánh 'master', làm việc sau đó ghép những thay đổi về với nhánh 'master'. Bạn cũng có thể chia nhánh từ một nhánh nếu cần, nhánh 'master' không nhất thiết phải làm nhánh gốc.</p>
+
+    <img src="../../../assets/imgs/branches.png"
+         alt="Sơ đồ cho thấy đường nằm ngang, đại diện cho nhánh master, cùng với những dòng khác phân nhánh ở trên và sau cùng đều về lại nhánh chính. Một dòng khác phân nhánh master từ dưới và một dòng khác được phân nhánh từ nhánh đó. Tất cả các nhánh này sẽ gặp lại nhau ở nhánh gốc là master."
+         width="100%">
+
+    <p>Để có một hình dung rõ nét về cách các nhánh làm việc, hãy xem qua hướng dẫn từ GitHub: <a
+            href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a></p>
+
+    <h2>Trang GitHub</h2>
+    <p>GitHub sẽ tự động phân phối và lưu trữ các file của trang web tĩnh trong nhánh có tên 'gh-pages'. Dịch vụ miễn phí này có tên <a href="http://pages.github.com">GitHub Pages</a>. Vì project mà bạn fork về tạo ra một website, nên nhánh chính của nó có tên 'gh-pages' thay vì 'master'. Tất cả các repos có nhánh 'gh-pages' cùng với các file của website có thể tìm thấy trực tuyến, sử dụng mẫu này cho URL:</p>
+
+    <code>http://githubusername.github.io/repositoryname</code>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Tạo một nhánh</h3>
+    <p>Khi bạn tạo ra một nhánh, Git sao chép mọi thứ từ nhánh hiện tại bạn đang làm việc và đặt nó vào nhánh mà bạn yêu cầu được tạo.</p>
+
+    <p>Khi vẫn đứng trong repos 'patchwork', hãy nhập vào <code>git status</code> để xem nhánh mà bạn đang đứng. Git sẽ trả về tên nhánh là'gh-pages'.</p>
+
+    <p>Giờ hãy tạo một nhánh mới và đặt tên nó "add-&#60;username&#62;", với 'username' là tên của bạn. Ví dụ, "add-jlord". <strong>Các nhánh có phân biệt hoa thường nên hãy đặt tên nhánh chính xác với tên hiển thị trên GitHub của bạn</strong>.</p>
+
+    <p><code class="shell">git branch &#60;BRANCHNAME&#62;</code></p>
+
+    <p>Giờ bạn đã có một nhánh với tên mới giống hệt như 'gh-pages'.</p>
+
+    <p>Để đi đến nhánh đó và làm việc trên nhánh đó,bạn phải <strong>checkout</strong> sang nhánh đó. Đi đến nhánh mới:</p>
+
+    <p><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Bước tiếp theo: Tạp một file</h3>
+    <p>Quay lại với text editor:</p>
+    <ul>
+        <li>Tạo một file mới có tên <span style="white-space: nowrap;">"add-&#60;USERNAME&#62;.txt"</span>, username là username của bạn. Ví dụ: "add-jlord.txt".
+        </li>
+        <li>Sau đó, nhập vào username GitHub của bạn, vậy là xong. Ví dụ, tôi sẽ gõ 'jlord'.</li>
+        <li>Lưu file lại trong mục 'contributors' của Patchwork: <strong>Patchwork/contributors/add-yourusername.txt</strong>
+        </li>
+        <li>Tiếp theo, kiểm tra các thay đổi (xem dưới đây).</li>
+    </ul>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Check-in</h3>
+    <p>Đến với bước đăng ký vào một project: </p>
+
+    <p><code class="shell">git status</code></p>
+    <p><code class="shell">git add &#60;contributors/FILENAME&#62;</code></p>
+    <p><code class="shell">git commit -m "commit message"</code></p>
+
+    <p>Giờ hãy gửi các cập nhật bản <b>fork</b> của bạn, nhánh 'origin', trên GitHub:</p>
+    <p><code class="shell">git push origin &#60;BRANCHNAME&#62;</code></p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-no-pass grey-border border-box">
+    <h4>Permission denied...error: 403</h4>
+    <p>Bạn đang gửi lên các cập nhật, thay đổi của repos nhưng bạn không truy cập được. Trong trường hợp này, có vẻ như bạn đang gửi vào remote origin của 'jlord/patchwork'. Hãy đảm bảo rằng bạn đang gửi lên đúng remote 'origin' và đó trỏ đến đúng địa chỉ bản fork của bạn trên GitHub. Để kiểm tra, xem các remote và nơi nó trỏ đến, chạy lệnh <code>git remote -v</code>. Bạn sẽ nhận được 'upstream' đang trỏ đến 'jlord/patchwork' và 'origin' đang trỏ đến 'yourusername/patchwork'.
+
+    <p>Để sửa lại địa chỉ cho remote, bạn có thể đặt lại URL của nó khi chạy lệnh: <code>git remote set-url origin
+        &#60;URLTOYOURFORK&#62;
+    </code>.
+
+    <h4>Authentication failed...error: 401</h4>
+    <p>Danh tính của bạn chưa được xác thực. Có thể bạn đã cài đặt 2FA (Two Factor Authentication - Hai yếu tố xác thực), vì vậy bản phải sử dụng một token truy cập cá nhân thay cho password. Bạn có thể mở rộng kiến thức về nó tại đây <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use">làm theo những hướng dẫn này</a>. Bạn cần giữ và sử dụng nó thay cho password khi sử dụng. Bạn cũng có thể <a href="https://help.github.com/articles/caching-your-github-password-in-git/"> để lưu lại token truy cập</a> trên máy tính để không phải nhập lại nó.</p>
+
+    <h4>File NOT in contributors folder</h4>
+    <p>File bạn tạo có thể được đặt bên trong một folder 'contributor' trong thư mục của Patchwork repos. Nếu bạn để nó ở đâu đó khác, hãy thử dụng công cụ tìm kiếm tìm nó và đưa nó vào folder. Bạn có thể kiểm tra trạng thái lại của git <code>git status</code> và bạn sẽ thấy các thay đổi của mình. Chạy lệnh đó và rồi commit tất cả - "all" (-A) những thay đổi này (thêm mới và xóa bớt) bằng lệnh ở dưới.</p>
+    <p><code class="shell">git add -A</code></p>
+    <p><code class="shell">git commit -m "chuyển file vào thư mục đóng góp"</code></p>
+
+    <h4>Branch name expected: _____</h4>
+    <p>Tên nhánh của bạn có thể không trùng khớp với tên người dùng đúng của bạn. Để thay đổi tên nhánh:</p>
+    <p><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></p>
+    <p>Khi bạn đã cập nhật xong, đừng quên xác nhận lại!</p>
+</div>
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Bạn có thể tạo và chuyển nhánh trên cùng một dòng lệnh</strong></li>
+        <li><code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Tạo một nhánh mới</strong></li>
+        <li><code class="shell">git branch &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Chuyển đến một nhánh</strong></li>
+        <li><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Xem danh sách các nhánh</strong></li>
+        <li><code class="shell">git branch</code></li>
+        <li><strong>Đổi tên nhánh hiện tại bạn đang làm việc trên đó</strong></li>
+        <li><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></li>
+        <li><strong>Xác nhận nhánh bạn đang làm việc trên đó</strong></li>
+        <li><code class="shell">git status</code></li>
+    </ul>
+</div>

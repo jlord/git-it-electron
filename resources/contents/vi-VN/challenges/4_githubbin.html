@@ -1,0 +1,45 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Tạo tài khoản GitHub và add username vào cấu hình Git.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Làm tốt hơn, cùng nhau!</h2>
+
+    <p>Repos bạn vừa tạo giờ đã có trên máy tính, tiện dụng, nhưng lại khá khó khăn cho việc chia sẻ và làm việc với nó cùng người khác. Đừng lo lắng, đã có GitHub lo rồi!</p>
+
+    <p>GitHub là một website cho phép mọi người ở mọi nơi có thể đăng tải mọi thứ mà họ làm việc với Git, vì vậy mọi người đều có thể cộng tác với nhau trên cùng một project. GitHub đóng vai trò repos trung gian cho bạn và những người khác khi chia sẻ với nhau. Bạn đưa lên (push) những thay đổi của mình và kéo về (pull) những thay đổi của người khác.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Tạo một tài khoản GitHubCreate a GitHub Account</h3>
+
+    <p>Truy cập <a href="http://github.com" target="_blank">github.com</a> và đăng ký tài khoản, hoàn toàn miễn phí. <strong>High
+        five, welcome!</strong></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Thêm mới GitHub username vào Git</h3>
+    <p>Thêm mới GitHub username vào phần cấu hình Git của bạn. Ta sẽ làm việc này dành cho Git-it; nó làm cho việc xác nhận trong những challenges tới dễ dàng hơn. Hãy lưu username chính xác với tài khoản bạn đã tạo trên GitHub và nhớ<strong> viết hoa những chữ đã viết hoa</strong>. Lưu ý là, bạn không cần phải nhập "&#60;" và "&#62;".</p>
+
+    <p>Thêm mới username GitHub vào phần cấu hình Git:</p>
+    <code class="shell">git config --global user.username &#60;USerNamE&#62;</code>
+
+    <p>Kiểm tra lại việc cài đặt vừa xong:</p>
+    <code>git config --global user.username</code>
+</div>
+
+{{{ verify_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <p>Hãy chắc chắn rằng bạn đã gõ "<strong>user.username</strong>" trên đây chứ không phải là "user.name", điều này có thể ghi đè lên tên mà bạn đã cài đặt trong challenge đầu tiên và bỏ qua phần username! Nếu bạn nhận ra mình đã gõ sai, không sao, hãy làm lại các bước trong challenge đầu tiên và thêm tên của mình sau đó hoàn thành bước thêm username.</p>
+</div>
+
+<div class="chal-no-pass grey-border border-box">
+    <h4>GitHub và Git không trùng khớp username</h4>
+
+    <p>Một lỗi thường gặp là username GitHub của bạn không khớp với username đã được cài đặt trong phần<code>git config</code>.
+        Ví dụ, 'JLord' không giống với 'jlord'</p>
+    <p>Để đổi username đã đặt trong Git, hãy làm lại các lệnh bạn đã làm trước đó và đừng quên những phần cần viết hoa:</p>
+    <p><code class="shell">git config --global user.username &#60;USerNamE&#62;</code></p>
+    <p>Khi bạn đã hoàn thành cập nhật, hãy xác nhận lại nhé!</p>
+</div>
