@@ -22,25 +22,20 @@
     <h3>新增一個 branch</h3>
     <p>當你新增 branch 的時候，Git 會拷貝目前 branch 上所有的檔案到新的 branch。</p>
     <p>在終端機輸入 <code>git status</code> 可以知道目前你在哪個 branch（現在應該會在「gh-pages」）。</p>
-    <p>新增一個 branch 並命名為「add-
-        <username>」，請用你的帳號名稱替換掉 'username'。例如「add-jlord」。<strong>Branches 的名字有分大小寫，所以請確定輸入的帳號名稱跟 GitHub
+    <p>新增一個 branch 並命名為 "add-&#60;username&#62;"，請用你的帳號名稱替換掉 'username'。例如「add-jlord」。<strong>Branches 的名字有分大小寫，所以請確定輸入的帳號名稱跟 GitHub
             上顯示的一模一樣。</strong>
     </p>
-    <p><code class="shell">git branch
-        <BRANCH_NAME>
-    </code></p>
+    <p><code class="shell">git branch &#60;BRANCHNAME&#62;</code></p>
     <p>現在，你擁有了一個全新、內容跟 'gh-pages' 一模一樣的 branch！</p>
     <p>如果要切換到另一個 branch 工作，你可以用 <strong>checkout</strong>。切換到剛剛新增的 branch：</p>
-    <p><code class="shell">git checkout
-        <BRANCH_NAME>
-    </code></p>
+    <p><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></p>
 </div>
 
 <div class="chal-step blue-border border-box">
     <h3>新增一個檔案</h3>
     <p>回到你的文字編輯器：</p>
     <ul>
-        <li>新增一個檔案並命名為 <span style="white-space: nowrap;">「add-<USERNAME>.txt」</span>，請用你的帳號名稱替換
+        <li>新增一個檔案並命名為 <span style="white-space: nowrap;">"add-&#60;USERNAME&#62;.txt"</span>，請用你的帳號名稱替換
             'username'，像這樣，「add-jlord.txt」。
         </li>
         <li>在檔案裡寫下你的 GitHub 帳號名稱。例如，我就會寫「jlord」。</li>
@@ -54,17 +49,11 @@
     <p>按照以下的步驟，把剛才的修改用 Git 記錄下來：</p>
 
     <p><code class="shell">git status</code></p>
-    <p><code class="shell">git add
-        <FILENAME>
-    </code></p>
-    <p><code class="shell">git commit -m "
-        <commit message>"
-    </code></p>
+    <p><code class="shell">git add &#60;contributors/FILENAME&#62;</code></p>
+    <p><code class="shell">git commit -m "&#60;commit message&#62;"</code></p>
 
     <p>Push 剛才記錄好的修改到 GitHub 上，你 forked 的 repository 裡頭：</p>
-    <p><code class="shell">git push origin
-        <BRANCH_NAME>
-    </code></p>
+    <p><code class="shell">git push origin &#60;BRANCHNAME&#62;</code></p>
 
 </div>
 
@@ -75,10 +64,7 @@
     <p>你正試著把修改 push 到一個你沒有寫入權限的 repository。在這裡，你可能推到原本的 repository (jlord/patchwork)了，請確定你的 push 的目的是 origin，且 origin
         是指向你 fork 的專案的 GitHub 網址。你可以透過 <code>git remote -v</code>來檢查所有的 remote 指向哪裡，你應該要有一個「origin」指向你 fork 的 repository
         及一個「upstream」指向原始的 repository。</p>
-    <p>如果 remote 指向錯誤的網址，你可以用 <code>git remote set-url
-        <BRANCH_NAME>
-            <URLFROMGITHUB>
-    </code> 來修改網址。
+    <p>如果 remote 指向錯誤的網址，你可以用 <code>git remote set-url origin &#60;URLTOYOURFORK>&#62;</code> 來修改網址。
 
     <p>剛才新增的檔案應該要放到 Patchwork repository 的 'contributors'
         資料夾裡。如果不小心放到別的地方，請打開 Finder 或是 Windows 的檔案總管將該檔案移到
@@ -89,9 +75,7 @@
 
     <h4>Branch name expected: _____</h4>
     <p>Branch 的名字應該要跟你的帳號名稱一模一樣。用以下的指令修改 branch 的名字：</p>
-    <p><code class="shell">git branch -m
-        <NEW_BRANCH_NAME>
-    </code></p>
+    <p><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></p>
     <p>完成以上的動作之後，再重新 verify！</p>
 </div>
 
