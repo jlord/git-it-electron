@@ -4,7 +4,7 @@
 </div>
 -->
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-	<p>Installiere Git und speichere deinen Namen und deine E-Mail.</p>
+	<p>Installiere Git und konfiguriere deinen Namen und deine Mail-Adresse.</p>
 </div>
 
 <!--
@@ -19,8 +19,8 @@
 -->
 <div class="chal-background light-blue solid-box">
     <h2>Git</h2>
-	<p>Git ist eine kostenfreie <strong>Open-Source Software</strong> (der <a href="https://github.com/git/git">Quellcode</a> ist frei verfügbar), geschrieben von Linus Torvalds, dem Entwickler des Linux-Kernels.</p>
-    <p>Git ist eine Software, die Datei-Änderungen über den Verlauf der Zeit nachverfolgt, was in der Softwareentwicklung auch als <strong>Versionsverwaltung</strong> bezeichnet wird. Wenn Du bereits eine Funktion wie z.B. "Änderungen nachverfolgen" in Microsoft Word verwendet hast, ist dir dieses Konzept bereits bekannt!
+	<p>Git ist eine kostenfreie <strong>Open-Source Software</strong> (der <a href="https://github.com/git/git">Quellcode</a> ist frei verfügbar), die von Linus Torvalds - dem Entwickler des Linux-Kernels - geschrieben wurde.</p>
+    <p>Es handelt sich dabei um eine Software zur <strong>Versionsverwaltung</strong>, die Dateiänderungen im Verlauf der Zeit nachverfolgt und protokolliert. Wenn du bereits eine Funktion wie z.B. "Änderungen nachverfolgen" in Microsoft Word verwendet hast, ist dir dieses Konzept bereits bekannt!
     </p>
 </div>
 
@@ -43,15 +43,15 @@
 -->
 <div class="chal-step blue-border border-box">
     <h3>Git installieren</h3>
-    <p>Wir empfehlen Dir, die <a href="https://git-scm.com/downloads">aktuelle Version</a> von der Git Webseite herunterzuladen und auf deinem Computer zu installieren.</p>
+    <p>Wir empfehlen Dir die <a href="https://git-scm.com/downloads">aktuelle Version von der Git Webseite</a> herunterzuladen und diese auf deinem Computer zu installieren.</p>
 
     <ul>
-        <li><strong>Windows</strong>: Benutze die <strong>Git Shell</strong> als Dein Terminal.</li>
-        <li><strong>Mac</strong>: Benutze die <strong>Terminal-App</strong> als Dein Terminal.
+        <li><strong>Windows</strong>: Benutze <strong>Git Bash</strong> als Terminal.</li>
+        <li><strong>Mac</strong>: Benutze die <strong>Terminal-App</strong> als Terminal.
         </li>
     </ul>
 
-    <p>Du hast Git schon installiert oder bist dir nicht sicher? Tippe <code>git --version</code> in dein Terminal ein, wenn Du in der Ausgabe eine Versions-Nummer größer als <code>1.7.10</code> siehst, ist die passende Software installiert. Weitere Informationen dazu findest Du auf der <a href="http://git-scm.com">Git Webseite</a>.</p>
+    <p>Du hast Git schon installiert oder bist dir nicht sicher? Tippe <code>git --version</code> im Terminal ein. Wenn du in der Ausgabe eine Versions-Nummer größer als <code>1.7.10</code> siehst, ist die passende Software installiert. Weitere Informationen dazu findest du auf der <a href="http://git-scm.com">Git Webseite</a>.</p>
 </div>
 
 <!--
@@ -69,9 +69,9 @@
 -->
 <div class="chal-background light-blue solid-box">
     <h2>Git Software</h2>
-    <p>Git selbst ist kein typisches Programm auf deinem Computer. Du wirst zwar kein Desktop-Icon sehen, aber trotzdem wird Git immer für Dich verfügbar sein und Du wirst es aus dem Terminal oder durch Git Desktop-Anwendungen nutzen können.</p>
+    <p>Git selbst ist kein typisches Programm auf dem Computer. Für Git selbst gibt es kein typisches Desktop-Symbol oder eine Benutzerobefläche, aber trotzdem wird Git immer für Dich verfügbar sein. Du wirst es aus dem Terminal oder durch spezielle Git-Benutzerobeflächen nutzen können.</p>
 	
-	<p>GitHub bietet eine solche Desktop-Anwendung, die <a href="https://desktop.github.com">GitHub Desktop</a> App. Die GitHub Desktop App stellt zwar einen Großteil, jedoch leider nicht alle Funktionen von Git dem Nutzer zur Verfügung. Daher ist es wichtig, auch die Terminal-Funktionalität von Git zu kennen. Sobald Du diese jedoch beherrschst, wird Dir die Desktop App eine nette Hilfe sein, da sie (wie die GitHub Webseite) Deine Projekte übersichtlich darstellt.</p>
+	<p>GitHub bietet eine solche Benutzerobefläche an, die <a href="https://desktop.github.com">GitHub Desktop</a> App. Die GitHub Desktop App stellt zwar einen Großteil der Funktionen von Git dem Nutzer zur Verfügung, leider jedoch nicht alle Funktionen. Daher ist es wichtig, auch die Terminal-Funktionalität von Git zu kennen. Sobald du diese aber beherrschst wird Dir die Desktop App eine nette Hilfe sein, da sie (wie die GitHub Webseite) Deine Projekte übersichtlich darstellt.</p>
 </div>
 
 <!--
@@ -97,21 +97,21 @@
 -->
 <div class="chal-step blue-border border-box">
     <h3>Git konfigurieren</h3>
-    <p>Wenn Du Git installiert hast kannst du Dein <strong>Terminal</strong> öffnen. Du kannst die Installation von Git mit folgendem Befehl überprüfen:</p>
+    <p>Wenn du Git installiert hast kannst du Dein <strong>Terminal</strong> öffnen. Überprüfe die Installation von Git mit dem folgenden Befehl:</p>
 
     <p><code class="shell">git --version </code></p>
 
-    <p>Dies wird dir die Versions-Nummer deiner Git-Installation zurückgeben und sollte in etwa so aussehen:</p>
+    <p>Dies gibt dir die Versions-Nummer deiner Git-Installation zurück und sollte in etwa so aussehen:</p>
 
     <p><code class="comment">git version 1.9.1</code></p>
 
-    <p>Als nächstes kannst du Git so konfigurieren, dass es Deine Arbeit mit Dir verknüpfen kann:</p>
-    <p>Speichere Deinen Namen:</p>
+    <p>Nun kannst du Git so konfigurieren, dass es Deine Arbeit mit Dir verknüpfen kann.</p>
+    <p>Konfiguriere Deinen Namen:</p>
     <p><code class="shell">git config --global user.name "Dein Name"</code></p>
-    <p>Speichere deine E-Mail:</p>
+    <p>Konfiguriere deine Mail-Adresse:</p>
     <p><code class="shell">git config --global user.email "DeineEmail@Beispiel.de"</code></p>
 
-    <p>Damit hast Du die erste Aufgabe erledigt! Klicke auf den 'Prüfen'-Button, um deine Arbeit zu kontrollieren.</p>
+    <p>Damit hast du die erste Aufgabe erledigt! Klicke auf den 'Prüfen'-Button, um deine Arbeit zu kontrollieren.</p>
 </div>
 
 {{{ verify_button }}}
@@ -126,5 +126,5 @@
 -->
 <div class="chal-tip grey-border border-box">
     <h3>Dollar-Zeichen in der Code-Dokumentation</h3>
-    <p>Dollar-Zeichen <code>$</code> werden oft in Programm-Dokumentationen verwendet um zu signalisieren, dass diese Zeile <strong>Kommandozeilen-Code</strong> enthält (vergleiche die Code-Schnipsel oben). Das <code>$</code> wird dann aber nicht in die Kommandozeile übernommen, sondern nur der darauf folgende Text wird verwendet.</p>
+    <p>Dollar-Zeichen <code>$</code> werden in Programm-Dokumentationen oft verwendet um <strong>Kommandozeilen-Code</strong> zu markieren (vgl. die Code-Schnipsel oben). Das <code>$</code> wird dann aber nicht in die Kommandozeile übernommen, nur der darauf folgende Text wird verwendet.</p>
 </div>
