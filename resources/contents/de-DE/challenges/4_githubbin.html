@@ -4,7 +4,7 @@
 </div>
 -->
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-	<p>Erstelle einen GitHub Account und speichere Deinen Nutzernamen in der Git-Konfiguration.</p>
+	<p>Erstelle einen Benutzeraccount bei GitHub und speichere deinen Nutzernamen in der Git-Konfiguration.</p>
 </div>
 
 <!--
@@ -20,11 +20,11 @@
 </div>
 -->
 <div class="chal-background light-blue solid-box">
-    <h2>Zusammen Arbeiten macht mehr Spaß!</h2>
+    <h2>Gemeinsam besser arbeiten!</h2>
 
-    <p>Das Repository, das Du bisher erstellt hast befindet sich ausschließlich auf Deinem Computer. Das ist zwar einfach, macht es aber schwer die Dateien mit Anderen zu teilen und gemeinsam daran zu arbeiten. Und genau dafür ist GitHub gemacht!</p>
+    <p>Das Repository, das du erstellt hast befindet sich bisher ausschließlich lokal auf deinem Computer. Das ist zwar einfach, macht es aber schwer die Dateien mit Anderen zu teilen und gemeinsam daran zu arbeiten. Doch genau dafür gibt es GitHub!</p>
 
-    <p>GitHub ist eine Webseite, die es Menschen aus aller Welt erlaubt Ihre mit Git online zu verwalten, damit alle gemeinsam am selben Projekt arbeiten können. GitHub fungiert dabei als ein zentrales Repository für Dich und alle, mit denen Du das Projekt teilen möchtest. Du schiebst (engl. push) Deine Änderungen auf den Server und ziehst (engl. pull) von dort die Änderungen anderer Personen.</p>
+    <p>GitHub ist eine Webseite, die es Menschen aus aller Welt erlaubt ihre Projekte mit Git online zu verwalten, damit alle gemeinsam am selben Projekt arbeiten können. GitHub fungiert dabei als ein zentrales Repository für alle, die am gemeinsamen Projekt arbeiten. Jeder Nutzer schiebt (engl. push) dabei seine eigenen Änderungen auf den Server und zieht (engl. pull) sich von dort die Änderungen anderer Personen.</p>
 </div>
 
 <!--
@@ -38,7 +38,7 @@
 <div class="chal-step blue-border border-box">
     <h3>Erstelle einen GitHub Account</h3>
 
-    <p>Besuche <a href="http://github.com" target="_blank">github.com</a> und registriere dich für einen kostenlosen Account. <strong>Herzlich Willkommen!</strong></p>
+    <p>Besuche <a href="http://github.com" target="_blank">github.com</a> und registriere dich dort für einen kostenlosen Account. <strong>Herzlich Willkommen!</strong></p>
 </div>
 
 <!--
@@ -56,13 +56,13 @@
 </div>
 -->
 <div class="chal-step blue-border border-box">
-    <h3>Füge Deinen GitHub Benutzernamen zu Git hinzu</h3>
-    <p>Füge Deinen GitHub Benutzernamen zu Deiner Git-Konfiguration hinzu. Wir machen dies hier hauptsächlich für Git-it, nur so wird es möglich die kommenden Aufgaben zu prüfen. Speichere Deinen Nutzernamen exakt so, wie Du ihn auf GitHub erstellt hast. (<strong>Groß- und Kleinschreibung</strong> beachten! - Die Platzhalter "&#60;" und "&#62;" müssen nicht eingegben werden!).</p>
+    <h3>Füge deinen GitHub Benutzernamen zu Git hinzu</h3>
+    <p>Füge nun deinen GitHub Benutzernamen zu deiner lokalen Git-Konfiguration hinzu. Wir benötigen dies hier hauptsächlich für Git-it, nur so wird es möglich deine Arbeit in den kommenden Aufgaben zu überprüfen. Speichere deinen Nutzernamen exakt so, wie Du ihn auf GitHub erstellt hast. (<strong>Groß- und Kleinschreibung</strong> beachten! - Die Platzhalter "&#60;" und "&#62;" müssen nicht mit eingegeben werden!).</p>
 
-    <p>Füge Deinen GitHub Benutzernamen zu Deiner Git-Konfiguration hinzu.:</p>
-    <code class="shell">git config --global user.username &#60;USerNamE&#62;</code>
+    <p>Füge deinen GitHub Benutzernamen zu deiner lokalen Git-Konfiguration hinzu:</p>
+    <code class="shell">git config --global user.username &#60;NutzerName&#62;</code>
 
-    <p>Was Du in deiner Git-Konfiguration eingestellt hast kannst Du nochmal überprüfen:</p>
+    <p>Was deine Git-Konfiguration nun abgespeichert hat, kannst du auch nocheinmal überprüfen:</p>
     <code>git config --global user.username</code>
 </div>
 
@@ -76,7 +76,7 @@
 </div>
 -->
 <div class="chal-tip grey-border border-box">
-    <p>Stelle sicher, dass du "<strong>user.username</strong>" eingibst und nicht "user.name", welches den Namen aus der ersten Aufgabe überschreiben und Deinen GitHub Benutzernamen leer lassen würde! Falls es dir doch passiert sein sollte, wiederhole einfach die Schritte der ersten Aufgabe um Deinen Namen hinzuzufügen und wiederhole dann die Schritte aus dieser Aufgabe.</p>
+    <p>Stelle sicher, dass du "<strong>user.username</strong>" eingibst und nicht "user.name", welches den Namen aus der ersten Aufgabe überschreiben und deinen GitHub Benutzernamen leer lassen würde! Falls es dir doch passiert sein sollte, wiederhole einfach die Schritte der ersten Aufgabe um deinen Namen hinzuzufügen und wiederhole dann die Schritte aus dieser Aufgabe.</p>
 </div>
 
 <!--
@@ -95,7 +95,7 @@
     <h4>GitHub- & Git-Benutzername in der Konfiguration stimmen nicht überein.</h4>
 
     <p>Ein typischer Fehler ist, dass der Benutzername bei GitHub und in der Git-Konfiguration nicht übereinstimmen. Zum Beispiel ist "JLord" nicht das selbe wie "jlord"</p>
-    <p>Um Deinen mit Git gespeicherten Benutzernamen zu ändern, wiederhole einfach das ausgeführte Kommando mit dem korrekt geschriebenen Benutzernamen:</p>
-    <p><code class="shell">git config --global user.username &#60;USerNamE&#62;</code></p>
-    <p>Wenn Du dies wiederholt hast, kannst Du das Ergebnis erneut prüfen!</p>
+    <p>Um deinen lokal mit Git gespeicherten Benutzernamen zu ändern, wiederhole einfach das ausgeführte Kommando mit dem korrekt geschriebenen Benutzernamen:</p>
+    <p><code class="shell">git config --global user.username &#60;NutzerName&#62;</code></p>
+    <p>Wenn du dies wiederholt hast, kannst du das Ergebnis erneut prüfen!</p>
 </div>
