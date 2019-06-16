@@ -4,7 +4,7 @@
 </div>
 -->
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Spalte ein Projekt auf GitHub ab und klone es auf Deinen Computer.</p>
+    <p>Spalte auf GitHub ein Projekt ab und klone es auf deinen Computer.</p>
 </div>
 
 <!--
@@ -29,14 +29,14 @@
 -->
 <div class="chal-background light-blue solid-box">
     <h2>Forks - Abspaltungen</h2>
-    <p>Bisher hast Du ein lokales Projekt neu erstellt und es auf GitHub geschoben. Das ist aber nur der halbe Spaß! Genauso schön ist es mit Anderen Menschen an Projekten zusammenzuarbeiten!</p>
+    <p>Bisher hast du ein Projekt lokal neu erstellt und es dann zu GitHub geschoben. Aber das ist nur der halbe Spaß! Die andere Hälfte ist an fremden Projekten mitarbeiten zu können!</p>
 
-    <p>Wenn zu ein Repository <strong>abspaltest</strong> (engl. fork), erzeugst Du eine Kopie davon in Deinem GitHub Account. Die abgespaltete Kopie beginnt ihre Existenz als ein <strong>Remote</strong>-Repository in deinem GitHub Account - sie existiert noch nicht auf Deinem Computer. Forks werden verwendet, um eigene Versionen eines Projektes zu erstellen und von dort Veränderungen (wie z.B. Bugfixes oder neue Funktionen) zum originalen Projekt beizutragen.</p>
+    <p>Wenn du ein Repository <strong>abspaltest</strong> (engl. fork), erzeugst du eine aktuelle Kopie des Projektes in deinem eigenen GitHub Account. Die abgespaltete Kopie beginnt somit ihre Existenz als ein eigenes <strong>Remote</strong>-Repository in deinem Account - sie existiert bisher noch nicht lokal auf deinem Computer. Forks werden verwendet, um eigene Versionen eines Projektes zu erstellen und dann von dort Veränderungen zum originalen Projekt beizutragen (z.B. Bugfixes oder neue Funktionen).</p>
 
-    <p>Um ein abgespaltetes Projekt aus Deinem GitHub Account auf Deinen Computer zu bekommen, wird es <strong>geklont</strong>. Dieses Klonen kopiert das gesamte Remote-Repository auf Deinen Computer, damit Du dann lokal daran arbeiten kannst.</p>
+    <p>Um ein abgespaltetes Projekt aus deinem GitHub Account auf deinen Computer zu bekommen, wird es <strong>geklont</strong>. Dieses Klonen kopiert das gesamte Remote-Repository auf deinen Computer, damit du dann lokal daran arbeiten kannst.</p>
 
     <img src="../../../assets/imgs/clone.png"
-         alt="Die Skizze zeigt ein Repository von GitHub, das zuerst in Deinen GitHub-Account abgespalten und dann von dort auf Deinen lokalen Computer kopiert wird."
+         alt="Die Skizze zeigt ein Repository von GitHub, das zuerst in deinen GitHub-Account abgespalten und von dort auf deinen lokalen Computer kopiert wird."
          width="100%">
 </div>
 
@@ -52,7 +52,7 @@
 -->
 <div class="chal-step blue-border border-box">
     <h3>Spalte das Patchwork Repository ab</h3>
-    <p>Das Projekt mit dem wir arbeiten werden ist <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>. Öffne diese Seite und klicke auf den 'Fork'-Button in der rechten oberen Ecke. Sobald die Animation fertig ist, hast Du eine Kopie des Repository in Deinem Account. Kopiere nun die URL aus der Adresszeile deines Browsers. Das ist die Adresse Deines Forks auf dem GitHub-Server.</p>
+    <p>Das Projekt mit dem wir arbeiten werden ist <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>. Öffne die Seite und klicke auf den 'Fork'-Button in der rechten oberen Ecke. Sobald die Animation fertig ist, hast du eine Kopie des Repository in deinem Account gespeichert. Kopiere nun die URL aus der Adresszeile deines Browsers. Das ist die Adresse deines Forks auf dem GitHub-Server.</p>
     <!-- TODO write address for user here -->
 </div>
 
@@ -82,22 +82,22 @@
 </div>
 -->
 <div class="chal-step blue-border border-box">
-    <h3>Klone Dein Fork auf Deinen Computer</h3>
-    <p>Wieder im Terminal, wirst Du das Repository auf Deinen Computer klonen. Git wird dabei automatisch einen neuen Ordner für das Repository erzeugen, wir müssen also kein Verzeichnis extra erstellen. Stelle aber sicher, dass Du nicht in das Verzeichnis eines anderen Git-Repository hinein klonst!</p>
+    <h3>Klone das abgespaltete Repository auf deinen Computer</h3>
+    <p>Im Terminal wirst du das Repository jetzt auf deinen Computer klonen. Git erzeugt dabei automatisch einen neuen Ordner für das Repository, wir müssen also kein Verzeichnis extra erstellen. Stelle aber sicher, dass du nicht in das Verzeichnis eines anderen Git-Repository hinein klonst!</p>
 
-    <p>Versichere Dich also, dass Du Dich nicht innerhalb Deines 'hello-world' Verzeichnisses aus den vorherigen Aufgaben befindest. Um das 'hello-world' Verzeichnis zu verlassen und das abgespaltete Repository zu klonen, folge diesen Schritten:</p>
+    <p>Versichere dich also, dass du dich nicht innerhalb deines 'hello-world' Verzeichnisses aus den vorherigen Aufgaben befindest. Um das 'hello-world' Verzeichnis zu verlassen und das abgespaltete Repository zu klonen, führe die folgenden Schritte aus:</p>
 
-    <p>Verlasse Deinen 'hello-world' Ordner:<br><span class="inline-tip">Tipp: Die beiden Punkte stehen für das Verlassen des Verzeichnisses um eine Ebene.</span>
+    <p>Verlasse deinen 'hello-world' Ordner:<br><span class="inline-tip">Tipp: Die beiden Punkte bezeichnen das Verlassen des aktuellen Verzeichnisses um eine Ebene.</span>
     </p>
     <p><code class="shell">cd ..</code></p>
 
-    <p>Da Du Dich jetzt nicht mehr innerhalb eines anderen Git-Repository befindest, klone Dein Fork:</p>
+    <p>Da du dich jetzt nicht mehr innerhalb eines anderen Git-Repository befindest, klone dein Repository:</p>
     <p><code class="shell">git clone &#60;URLVONGITHUB&#62;</code></p>
 
-    <p>Öffne den Ordner, der für Deine lokale Kopie des Repository erzeugt wurde (in diesem Fall der Ordner 'patchwork').</p>
+    <p>Öffne den Ordner, der für deine lokale Kopie des Repository erzeugt wurde (in diesem Fall der Ordner 'patchwork').</p>
     <p><code class="shell">cd patchwork</code></p>
 
-    <p>Jetzt hast Du eine Kopie des Repository auf Deinem Copmuter, welches automatisch mit dem Remote-Repository in Deinem GitHub-Account (die abgespaltete Kopie) verbunden ist. Gib <code>git remote -v</code> ein, um zu sehen, dass die Adresse zum Remote-Repository bereits gespeichert ist.</p>
+    <p>Du hast jetzt eine lokale Kopie des Repository auf deinem Copmuter, welches automatisch mit dem Remote-Repository in deinem GitHub-Account (die abgespaltete Kopie) verbunden ist. Gib <code>git remote -v</code> ein, um zu sehen, dass die Adresse zum Remote-Repository bereits gespeichert ist.</p>
 </div>
 
 <!--
@@ -120,15 +120,15 @@
 </div>
 -->
 <div class="chal-step blue-border border-box">
-    <h3>Verbinde Dein Repository mit dem Originalen Repository</h3>
+    <h3>Verbinde dein Repository mit dem originalen Repository</h3>
 
-    <p>Was passiert, wenn sich das originale Repository verändert? Du wirst Dir die Möglichkeit wünschen, diese Änderungen auch in dein Repository zu <strong>ziehen</strong>. Hierfür fügen wir nun noch eine weitere Remote-Verbindung hinzu, diesmal zum originalen <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a> Repository mit der passenden URL.</p>
+    <p>Was passiert, wenn sich nun das originale Repository verändert? Du wirst dir die Möglichkeit wünschen, diese Änderungen auch in dein abgespaltetes Repository <strong>ziehen</strong> zu können. Hierfür fügen wir nun noch eine weitere Remote-Verbindung hinzu, diesmal zum originalen <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a> Repository mit der passenden URL.</p>
 
     <p>Du kannst diese Remote-Verbindung theoretisch frei benennen, üblicherweiße verwendet man hierfür aber den Begriff 'upstream' (dt. stromaufwärts). Wir möchten diesen Begriff auch hier verwenden.</p>
 
     <p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
 
-    <p>Um sicherzustellen, dass die Remotes richtig eingestellt sind, gib das Kommando <code>git remote -v</code> ein, um eine Liste der gespeicherten Adressen angzeigt zu bekommen. <b>Du solltest einen 'origin'-Remote mit der Adresse Deines Fork, sowie einen 'upstream'-Remote mit der oben genannten, originalen Adresse besitzen.</b></p>
+    <p>Um sicherzustellen, dass die Remotes richtig eingestellt sind, gib das Kommando <code>git remote -v</code> ein, um eine Liste der gespeicherten Adressen angezeigt zu bekommen. <b>Du solltest einen 'origin'-Remote mit der Adresse deines Fork, sowie einen 'upstream'-Remote mit der oben genannten, originalen Adresse besitzen.</b></p>
 </div>
 
 {{{ verify_directory_button }}}
@@ -151,7 +151,7 @@
         <li><code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
         <li><strong>Ändere die URL eines Remote</strong></li>
         <li><code class="shell">git remote set-url &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
-        <li><strong>Liste die Remote-Verbindungen auf</strong></li>
+        <li><strong>Liste die gespeicherten Remote-Verbindungen auf</strong></li>
         <li><code class="shell">git remote -v</code></li>
     </ul>
 </div>
