@@ -4,7 +4,7 @@
 </div>
 -->
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Halte Deine Dateien aktuell, durch ziehen der Änderungen Mitwirkender.</p>
+    <p>Halte deine lokalen Dateien aktuell, indem du die Änderungen Mitwirkender zu dir ziehst.</p>
 </div>
 
 <!--
@@ -19,7 +19,7 @@
 -->
 <div class="chal-background light-blue solid-box">
     <h3>Von einem Remote ziehen</h3>
-    <p>Wenn du mit Anderen gemeinsam an etwas arbeitetes, solltest du mit den letzten Änderungen aktuell bleiben. Änderungen, die auf dem zentralen GitHub-Repository gemacht wurden solltest Du dir also in Dein lokales Repository ziehen (engl. <strong>pull</strong>).</p>
+    <p>Wenn du mit Anderen gemeinsam an einem Projekt arbeitest, sollten deine Dateien natürlich immer mit allen Änderungen synchron bleiben. Änderungen, die auf dem zentralen GitHub-Repository gemacht wurden solltest du dir also regelmäßig in dein lokales Repository ziehen (engl. <strong>pull</strong>).</p>
 
     <img src="../../../assets/imgs/pull.png"
          alt="Die Skizze zeigt einen Computer, der Informationen von der Webseite eines Repository zieht." width="100%">
@@ -42,13 +42,13 @@
 -->
 <div class="chal-step blue-border border-box">
     <h3>Was hat Reporobot vor?</h3>
-    <p>Sieh nach, ob Reporobot in Deinem Branch etwas geändert hat, indem Du die Änderungen vom Remote 'origin' auf GitHub ziehst:</p>
+    <p>Sieh nach, ob Reporobot in deinem Branch etwas geändert hat, indem du die Änderungen vom Remote 'origin' (bei GitHub) auf deinen Computer ziehst:</p>
 
     <p><code class="shell">git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code></p>
 
-    <p>Falls sich nichts geändert hat, wird Git dir 'Already up-to-date' (dt. bereits aktuell) zurückgeben. Wenn etwas geändert wurde, wird Git diese Änderungen in Deine lokale Version einpflegen.</p>
+    <p>Wenn sich nichts geändert hat, wird Git dir 'Already up-to-date' (dt. bereits aktuell) zurückgeben. Falls aber etwas geändert wurde, pflegt Git diese Änderungen automatisch in deine lokale Version ein.</p>
 
-    <p>Hat Reporobot etwas geändert? Git sagt Dir, wo Änderungen erfolgt sind. Du kannst die Datei öffnen und Reporobot's Änderungen anschauen. Überraschung, Reporobot ist ein Künstler!</p>
+    <p>Hat Reporobot etwas geändert? Git sagt dir, wo Änderungen erfolgt sind. Du kannst die Datei öffnen und Reporobot's Änderungen anschauen. Überraschung, Reporobot ist ein Künstler!</p>
 </div>
 
 {{{ verify_directory_button }}}
@@ -71,7 +71,7 @@
         <code class="shell">git status</code>
         <li><strong>Ziehe Änderungen von einem Remote Branch</strong></li>
         <code class="shell">git pull &lt;REMOTENAME&gt; &lt;REMOTEBRANCH&gt;</code>
-        <li><strong>Schaue Dir die Änderungen an, bevor Du sie vom Remote ziehst</strong></li>
+        <li><strong>Schaue dir die Änderungen an, bevor du sie vom Remote ziehst</strong></li>
         <code class="shell">git fetch --dry-run</code>
     </ul>
 </div>
