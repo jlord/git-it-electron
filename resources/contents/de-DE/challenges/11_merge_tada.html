@@ -4,7 +4,7 @@
 </div>
 -->
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Führe deinen Branch lokal zusammen, lösche den Branch und ziehe vom Remote 'upstream'.</p>
+    <p>Führe deine Branches lokal zusammen, lösche den dann überflüssigen Branch und ziehe vom Remote 'upstream'.</p>
 </div>
 
 <!--
@@ -18,7 +18,7 @@
 <div class="chal-background light-blue solid-box">
     <h2>Aufräumen</h2>
 
-    <p>Wenn du Branches nicht mehr benötigst, kannst du sie sowohl lokal, als auch auf dem Remote löschen. Dies hilft, um nicht irgendwann mit einem Haufen alter Branches dazustehen.</p>
+    <p>Wenn du Branches nicht mehr benötigst kannst du sie sowohl lokal, als auch auf dem Remote löschen. Dies hilft dir nicht irgendwann mit einem Haufen alter Branches dazustehen.</p>
 </div>
 
 <!--
@@ -41,19 +41,19 @@
 </div>
 -->
 <div class="chal-step blue-border border-box">
-    <h3>Führe lokal zusammen</h3>
-    <p>Dein Pull-Request wurde akzeptiert! Dein Branch wurde in den Branch 'gh-pages' des originalen GitHub-Repository integriert (engl. merge). Du kannst nun Deinen lokalen Branch auch integrieren.</p>
+    <h3>Führe deine Branches lokal zusammen</h3>
+    <p>Dein Pull-Request wurde akzeptiert! Dein Branch wurde in den Branch 'gh-pages' des originalen GitHub-Repository integriert (engl. merge). Du kannst nun deinen lokalen Branch auch im lokalen Repository integrieren.</p>
 
-    <p>Zuerst, wähle den Branch aus, in den Du hinein integrieren möchtest. In unserem Fall der Branch 'gh-pages'.</p>
+    <p>Wähle dazu zuerst den Branch aus, in den du hinein integrieren möchtest. In unserem Fall der Branch 'gh-pages'.</p>
     <p><code class="shell">git checkout gh-pages</code></p>
 
-    <p>Sage nun Git, welchen Branch du integrieren möchtest, in diesem Fall Deinen Branch, der mit "add-" anfängt.</p>
+    <p>Nun sage Git, welchen Branch du integrieren möchtest. In unserem Fall ist das dein Branch 'add-&#60;NutzerName&#62;'.</p>
     <p><code class="shell">git merge &#60;BRANCHNAME&#62;</code></p>
 
-    <p>Räume auf, indem Du Deinen Branch löschst. Da die Änderungen bereits zusammengeführt wurden, brauchst Du den Branch nicht mehr wirklich.</p>
+    <p>Räume auf, indem du den jetzt integrierten Branch löschst. Da die Änderungen zusammengeführt wurden brauchst du den Branch nicht mehr, deine Änderungen sind jetzt im anderen Branch integriert.</p>
     <p><code class="shell">git branch -d &#60;BRANCHNAME&#62;</code></p>
 
-    <p>Du kannst den Branch auch von Deinem Remote-Repository auf GitHub löschen:</p>
+    <p>Du kannst den Branch auch von deinem Remote-Repository auf GitHub löschen:</p>
     <p><code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
 </div>
 
@@ -69,8 +69,8 @@
 </div>
 -->
 <div class="chal-step blue-border border-box">
-    <h3>Vom Upstream ziehen</h3>
-    <p>Letztlich hat sich auch das Original verändert, zumal Dein Pull-Request akzeptiert wurde. - Reporobot hat Deinen Namen zur Webseite hinzugefügt! Wenn Du diese Änderungen nun vom Upstream ziehst, wird Dein Repository wieder aktuell sein und die Version mit Deinem Namen zeigen. Du kannst die Webseite deines Repository live unter der folgenden Url anschauen: DeinNutzerName.github.io/patchwork.</p>
+    <h3>Vom Remote 'upstream' ziehen</h3>
+    <p>Letztlich hat sich auch das originale Repository verändert, da dein Pull-Request akzeptiert wurde. - Reporobot hat deinen Namen zur Webseite hinzugefügt! Wenn du diese Änderungen nun vom originalen Repository (Remote 'upstream') ziehst, wird dein Repository wieder aktuell sein und die Webseite die Version mit deinem Namen anzeigen. Du kannst die Webseite deines Repository unter der folgenden URL anschauen: DeinNutzerName.github.io/patchwork.</p>
 
     <p>Um vom originalen Repository 'upstream' zu ziehen:</p>
     <p><code class="shell">git pull upstream gh-pages</code></p>
@@ -89,10 +89,9 @@
 -->
 <div class="chal-background light-blue solid-box">
     <h2>Gratulation!</h2>
-    <p>Du hast lokale Repositorys und Remote-Repositorys erstellt, mit Mitarbeitern zusammen gearbeitet, Änderungen geschoben und gezogen und bist der Gemeinschaft von Millionen anderer Entwickler beigetreten, die Open-Source Software bereichern!</p>
+    <p>Du hast lokale Repositorys und Remote-Repositorys erstellt, mit Mitarbeitern zusammen gearbeitet, Änderungen zum Server geschoben und von dort gezogen und bist der GitHub-Gemeinschaft von Millionen anderer Entwickler beigetreten, die Open-Source Software bereichern!</p>
 
-    <p>Öffne <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> um die Aufnahme Deines Namens zu sehen! Du willst weitermachen? Schau Dir den Abschnitt '<a href="../pages/resources.html#what-next">Und was jetzt?</a>' auf der Ressourcen-Seite dieser App an!
-        section on the resources page in this app.</p>
+    <p>Öffne <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> um die Aufnahme deines Namens in das Verzeichnis der Workshop-Absolventen zu sehen! Du willst weitermachen? Schau dir den Abschnitt '<a href="../pages/resources.html#what-next">Und was jetzt?</a>' auf der Ressourcen-Seite dieser App an!</p>
 </div>
 
 {{{ verify_directory_button }}}
@@ -117,7 +116,7 @@
     <ul class="no-list-style">
         <li><strong>Integriere einen Branch in den aktuellen Branch</strong></li>
         <code class="shell">git merge &#60;BRANCHNAME&#62;</code>
-        <li><strong>Ändere den Branch, auf dem du aktuell arbeitest</strong></li>
+        <li><strong>Wähle den Branch aus, auf dem du aktuell arbeitest</strong></li>
         <code class="shell">git checkout &#60;BRANCHNAME&#62;</code>
         <li><strong>Lösche den lokalen Branch</strong></li>
         <code class="shell">git branch -d &#60;BRANCHNAME&#62;</code>
