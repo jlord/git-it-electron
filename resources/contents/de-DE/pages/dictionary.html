@@ -1,13 +1,13 @@
-<p>Aufgelistet sind die Terminal und Git-Kommandos, die in den Git-it Aufgaben verwendet werden.</p>
+<p>Aufgelistet sind die Terminal- und Git-Kommandos, die in den Git-it Aufgaben verwendet werden.</p>
 
 <h2>Bash/Terminal Grundlagen</h2>
 <div class="blue-border-box">
     <ul class="no-list-style">
-        <li><strong>Erzeuge einen neuen Ordner (aka make directory)</strong></li>
+        <li><strong>Erstelle einen neuen Ordner (aka make directory)</strong></li>
         <code class="shell">mkdir &#60;ORDNERNAME&#62;</code>
-        <li><strong>Navigiere in einen vorhandenen Ordner (aka change directory)</strong></li>
+        <li><strong>Navigiere in einen existierenden Ordner (aka change directory)</strong></li>
         <code class="shell">cd &#60;ORDNERNAME&#62;</code>
-        <li><strong>Erstelle eine Liste der Elemente in einem Ordner</strong></li>
+        <li><strong>Liste die Elemente im aktuellen Ordner auf</strong></li>
         <code class="shell">ls </code>
     </ul>
 </div>
@@ -17,11 +17,11 @@
     <ul class="no-list-style">
         <li><strong>Überprüfe die Git-Version</strong></li>
         <code>git --version</code>
-        <li><strong>Speichere Deinen Namen</strong></li>
+        <li><strong>Speichere deinen Namen</strong></li>
         <code>git config --global user.name "Dein Name"</code>
-        <li><strong>Speichere Deine Email-Adresse</strong></li>
+        <li><strong>Speichere deine Email-Adresse</strong></li>
         <code>git config --global user.email deineemail@beispiel.de</code>
-        <li><strong>Speichere Deinen GitHub Account (Groß- & Kleinschreibung beachten!)</strong></li>
+        <li><strong>Speichere deinen GitHub Account (Groß- & Kleinschreibung beachten!)</strong></li>
         <code>git config --global user.username NuTzeRnAmE</code>
     </ul>
 </div>
@@ -29,19 +29,19 @@
 <h2>Git Grundlagen</h2>
 <div class="blue-border-box">
     <ul class="no-list-style">
-        <li><strong>Aktiviere Git für einen Ordner</strong></li>
+        <li><strong>Initialisiere Git für einen Ordner</strong></li>
         <code class="shell">git init</code>
-        <li><strong>Überprüfe den Status der Veränderungen in einem Repository</strong></li>
+        <li><strong>Überprüfe den Status deines Repository</strong></li>
         <code class="shell">git status</code>
-        <li><strong>Zeige die Veränderungen</strong></li>
+        <li><strong>Lass dir die Unterschiede anzeigen</strong></li>
         <code class="shell">git diff</code>
-        <li><strong>Füge die Veränderungen einer Datei zum nächsten Commit hinzu</strong></li>
+        <li><strong>Füge die Änderungen an einer Datei zum nächsten Commit hinzu.</strong></li>
         <code class="shell">git add &#60;DATEINAME&#62;</code>
-        <li><strong>Um alle Änderungen hinzuzufügen</strong></li>
+        <li><strong>Um alle geänderten Dateien hinzuzufügen</strong></li>
         <code class="shell">git add .</code>
-        <li><strong>Um die hinzugefügten Änderungen zu übergeben (zu speichern) - inklusive einer kurzen Nachricht, die die Änderungen beschreibt</strong></li>
+        <li><strong>Übergib die hinzugefügten Änderungen an die Git-(Repository-)Historie, inklusive einer kurzen Nachricht zur Beschreibung der Veränderungen.</strong></li>
         <code class="shell">git commit -m "Deine Nachricht"</code>
-        <li><strong>Klone ein Repository auf Deinen Computer</strong></li>
+        <li><strong>Klone ein Repository auf deinen Computer</strong></li>
         <code class="shell">git clone &#60;URL&#62;</code>
     </ul>
 </div>
@@ -53,11 +53,11 @@
         <code class="shell">git branch &#60;BRANCHNAME&#62;</code>
         <li><strong>Wähle einen Branch aus</strong></li>
         <code class="shell">git checkout &#60;BRANCHNAME&#62;</code>
-        <li><strong>Du kannst einen Branch mit einem Befehl erstellen und direkt auswählen</strong></li>
+        <li><strong>Du kannst einen Branch mit einem einzigen Kommando erzeugen und auswählen</strong></li>
         <code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code>
-        <li><strong>Liste die Branches auf</strong></li>
+        <li><strong>Liste die verfügbaren Branches auf</strong></li>
         <code class="shell">git branch</code>
-        <li><strong>Benenne den aktuellen Branch um</strong></li>
+        <li><strong>Benenne den aktuell ausgewählten Branch um</strong></li>
         <code class="shell">git branch -m &#60;NEUERBRANCHNAME&#62;</code>
     </ul>
 </div>
@@ -67,9 +67,9 @@
     <ul class="no-list-style">
         <li><strong>Füge eine Remote-Verbindung hinzu</strong></li>
         <code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code>
-        <li><strong>Speichere die URL zu einem Remote</strong></li>
+        <li><strong>Speichere die URL zu einem existierenden Remote</strong></li>
         <code class="shell">git remote set-url &#60;REMOTENAME&#62; &#60;URL&#62;</code>
-        <li><strong>Zeige die Remote-Verbindungen</strong></li>
+        <li><strong>Zeige die gespeicherten Remote-Adressen an</strong></li>
         <code class="shell">git remote -v</code>
     </ul>
 </div>
@@ -79,9 +79,9 @@
     <ul class="no-list-style">
         <li><strong>Änderungen ziehen</strong></li>
         <code class="shell">git pull</code>
-        <li><strong>Änderungen von einem Remote-Branch ziehen</strong></li>
+        <li><strong>Ziehe Änderungen von einem Remote Branch</strong></li>
         <code class="shell">git pull &#60;REMOTENAME&#62; &#60;REMOTEBRANCH&#62;</code>
-        <li><strong>Die Veränderungen des Remote anzeigen (vor dem ziehen)</strong></li>
+        <li><strong>Schaue dir die Änderungen an, bevor du sie vom Remote ziehst</strong></li>
         <code class="shell">git fetch --dry-run</code>
     </ul>
 </div>
@@ -89,9 +89,9 @@
 <h2>Schieben(push) &#38; Verbinden(merge) in Git</h2>
 <div class="blue-border-box">
     <ul class="no-list-style">
-        <li><strong>Änderungen zum Remote schieben</strong></li>
+        <li><strong>Schiebe Änderungen auf den Server</strong></li>
         <code class="shell">git push &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
-        <li><strong>Einen Branch mit dem aktuellen Branch verbinden</strong></li>
+        <li><strong>Integriere einen Branch in den aktuellen Branch</strong></li>
         <code class="shell">git merge &#60;BRANCHNAME&#62;</code>
     </ul>
 </div>
@@ -99,8 +99,8 @@
 <h2>Remotes und Branches löschen</h2>
 <div class="blue-border-box">
     <ul class="no-list-style">
-        <li><strong>Lösche einen lokalen Branch</strong></li>
-        <code class="shell">git branch -D &#60;BRANCHNAME&#62;</code>
+        <li><strong>Lösche den lokalen Branch</strong></li>
+        <code class="shell">git branch -d &#60;BRANCHNAME&#62;</code>
         <li><strong>Lösche einen Remote-Branch</strong></li>
         <code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
     </ul>
