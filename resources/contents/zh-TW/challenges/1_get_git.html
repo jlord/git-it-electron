@@ -4,25 +4,26 @@
 
 <div class="chal-background light-blue solid-box">
     <h2>Git</h2>
-    <p>Git 是一個<strong>開源軟體</strong>（完全免費），作者為 Linus Torvalds，他也是 Linux 作業系統的作者。</p>
-    <p>Git 是一個專門做修改記錄的程式，在軟體、程式設計的領域中叫做<strong>版本控制</strong>。</p>
+    <p>Git 是一個<strong>開源軟體</strong>(其 <a href="https://github.com/git/git">原始碼是公開的</a>)，作者為 Linus Torvalds，他也是 Linux 作業系統核心的作者。</p>
+    <p>Git 是一個專門做修改記錄的程式，在軟體、程式設計的領域中叫做<strong>版本控制</strong>。
+        如果你曾經在文字編輯器上使用過追蹤修改的功能，那麼你就已經熟悉這個概念了!</p>
 </div>
 
 <div class="chal-step blue-border border-box">
     <h3>安裝 Git</h3>
-    <p>我們建議你到 <a href="https://desktop.github.com/">GitHub Desktop</a> 來取得 Git。我們不會使用它提供的桌面程式，，不過它內建了 Git，也是在各個平台上安裝 Git
+    <p>我們建議你到 <a href="https://desktop.github.com/">GitHub Desktop</a> 來取得 Git。我們不會使用它提供的桌面程式(我們要透過終端機來學習!)，不過它內建了 Git，也是在各個平台上安裝 Git
         最簡單的方法。</p>
     <ul>
-        <li>Windows：使用 <strong>Git Shell</strong> 當作終端機。</li>
-        <li>Mac：開啟 GitHub Desktop，並從「Preferences」選單點選「command line tools install」。安裝完畢之後，開啟「終端機」這個應用程式。</li>
+        <li><strong>Windows</strong>：使用 <strong>Git Shell</strong> 當作終端機。</li>
+        <li><strong>Mac</strong>：開啟 GitHub Desktop，並從「Preferences」選單點選「command line tools install」。安裝完畢之後，開啟「終端機」這個應用程式。</li>
     </ul>
-    <p>如果已經安裝過 Git 或不清楚有沒有安裝過，你可以打開終端機，在裡面輸入 <code>git --version</code> ，如果你已經安裝完畢，你應該會看到 Git的版本編號（<code>> 1.7.10</code>）。需要更多資訊，請上
+    <p>如果已經安裝過 Git 或不清楚有沒有安裝過，你可以打開終端機，在裡面輸入 <code>git --version</code> ，如果你看到Git的版本編號(<code>> 1.7.10</code>以上版本)，那麼就表示你已經安裝成功了!。需要更多資訊，請上
         <a href="http://git-scm.com">Git 官網</a>查詢。</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
     <h2>Git 軟體</h2>
-    <p>GitHub Desktop 可以透過 Git 來完成許多東西，但並不是所有功能都能透過 GitHub Desktop來使用，這也是為什麼」學習指令是一件重要的事情。</p>
+    <p>GitHub Desktop可以透過 Git 來完成許多東西，但並不是所有功能都能透過GitHub Desktop來使用，這也是為什麼學習終端機指令是一件重要的事情。不過一旦你精熟終端機指令後，你將會高興有GitHub Desktop，因為它可以更視覺化地管理你的專案，就像在Github網站上那樣。</p>
     <p>Git 不像是你電腦裡的其他軟體。你不會在桌面上看到一個軟體圖示，但你可以隨時透過終端機或是其他 Git 的桌面程式（如 GitHub Desktop）來使用。</p>
 </div>
 
@@ -35,13 +36,9 @@
 
     <p>接下來，讓 Git 知道這台電腦所做的修改該連結到什麼使用者：</p>
     <p>設定你的名字：</p>
-    <p><code class="shell">git config --global user.name "
-        <Your Name>"
-    </code></p>
+    <p><code class="shell">git config --global user.name "你的名字"</code></p>
     <p>設定你的電子信箱：</p>
-    <p><code class="shell">git config --global user.email "
-        <youremail
-        @example.com>"</code></p>
+    <p><code class="shell">git config --global user.email "你的email@example.com"</code></p>
 
     <p>現在，你已經完成了第一個挑戰！按一下「Verify」按鈕來檢查。</p>
 </div>
