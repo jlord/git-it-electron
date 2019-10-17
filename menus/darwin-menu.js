@@ -45,6 +45,16 @@ module.exports = function menu (app, mainWindow) {
       ]
     },
     {
+      label: 'Edit',
+      submenu: [
+        {
+          label: 'Copy',
+          accelerator: 'Command+C',
+          selector: 'copy:'
+        }
+      ]
+    },
+    {
       label: 'View',
       submenu: [
         {
