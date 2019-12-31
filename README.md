@@ -18,7 +18,7 @@ This application contains challenges for learning Git and GitHub—by using _rea
 
 ## What to Install
 
-You will need this app, Git-it as well as a text editor. You'll also of course need Git and the first challenge in Git-it helps you get that set up. But if you want to get a head start, go for it! You'll continue to use Git and your text editor throughout your bright social coding future.
+You will need [this app](https://github.com/jlord/git-it-electron/releases/latest), Git-it as well as a text editor. You'll also of course need Git and the first challenge in Git-it helps you get that set up. But if you want to get a head start, go for it! You'll continue to use Git and your text editor throughout your bright social coding future.
 
 As a part of the challenges you'll also create a (free) account on GitHub. If you've already got one, high-five!
 
