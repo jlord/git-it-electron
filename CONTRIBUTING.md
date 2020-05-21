@@ -14,7 +14,7 @@ Contributions are more than welcome! Checkout the [help wanted](https://github.c
 
 **Code style is [JS Standard](http://standardjs.com) and no ES6 syntax** :tada: but open to relevant new methods.
 
-Changes to the content of the pages must be made in the `challenge-content` directory (for appropriate language). For more information on how the app works, **see the [documentation](docs.md)**.
+Changes to the content of the pages must be made in the `resources\contents` directory (for appropriate language). For more information on how the app works, **see the [documentation](docs.md)**.
 
 ## Building Locally
 
