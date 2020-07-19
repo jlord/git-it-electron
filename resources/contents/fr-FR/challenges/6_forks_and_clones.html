@@ -58,19 +58,18 @@
 <div class="chal-step blue-border border-box">
     <h3>Connectez-vous au dépôt d'origine</h3>
 
-    <p>What if the original repository you forked happens to change? You'll want to be able to <strong>pull</strong> in
-        those changes too. So let's add another remote connection, this time to the original, <a
-                href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>, repository with
-        its URL.</p>
-
-    <p>You can name this remote connection anything you want, but typically people use the name 'upstream'; let's use
-        that for this.</p>
-
-    <p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
-
     <p>Qu'arrive-t-il si le dépôt d'origine change ? Vous voudrez pouvoir <strong>tirer</strong> ces changements 
     localement. Nous allons donc ajouter un autre remote, cette fois-ci à version originale du projet, 
     <a href = "http://github.com/jlord/patchwork" target = "_ blank">github.com/jlord/patchwork</a>.</p>
+
+    <p>Vous pouvez appeler cette connexion par le nom que vous voudrez, mais habituellement les gens utilisent 'upstream',
+        c'est à dire "amont" ; utilisons ce mot ici.</p>
+
+    <p><code class="shell">git remote add upstream https://github.com/jlord/patchwork.git</code></p>
+
+    <p>Pour être sûr d'avoir le remote correctement installé, entrez <code>git remote -v</code> pour lister les adresses que
+        vous avez enregistrées. <b>Vous devriez avoir un remote 'origin' avec l'adresse de votre fork et ensuite un remote 'upstream'
+        avec l'adresse de l'original, l'URL notée plus haut à cette étape.</b></p>
 </div>
 
 {{{ verify_directory_button }}}
