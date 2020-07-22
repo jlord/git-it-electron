@@ -1,0 +1,26 @@
+ cookie in a cross-site request by specifying its SameSite attribute
+Because a cookie's SameSite attribute was not set or is invalid, it defaults to SameSite=Lax, which will prevent the cookie from being sent in a cross-site request in a future version of the browser. This behavior protects user data from accidentally leaking to third parties and cross-site request forgery.
+
+Resolve this issue by updating the attributes of the cookie:
+Specify SameSite=None and Secure if the cookie should be sent in cross-site requests. This enables third-party use.
+Specify SameSite=Strict or SameSite=Lax if the cookie should not be sent in cross-site requests
+
+14 cookies
+9 requests
+Learn more: SameSite cookies explained
+Indicate whether a cookie is intended to be set in cross-site context by specifying its SameSite attribute# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
+version: 2.1
+
+
+# Use a package of configuration called an orb.
+orbs:
+  # Declare a dependency on the welcome-orb
+  welcome: circleci/welcome-orb@0.4.1
+# Orchestrate or schedule a s
+jobs
+workflows:
+  # Name the workflow "welcome"
+  welcome:
+    # Run the welcome/run job in its own container
+    jobs:
+      - welcome/run
