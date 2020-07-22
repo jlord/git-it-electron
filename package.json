@@ -1,6 +1,6 @@
 {
   "name": "git-it-electron",
-  "version": "4.2.2",
+  "version": "4.3.0",
   "description": "An open source desktop app for learning Git and GitHub",
   "keywords": [
     "Git",
@@ -14,6 +14,7 @@
   "productName": "Git-it",
   "main": "main.js",
   "scripts": {
+    "prestart": "npm run build-all",
     "start": "electron .",
     "test": "standard lib/*.js lib/verify/*.js menus/*.js main.js",
     "clean": "rimraf built/*",

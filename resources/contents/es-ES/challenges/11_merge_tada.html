@@ -1,0 +1,64 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Fusiona (merge) tu rama (branch) localmente, borra la rama y tira (pull) desde upstream.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Limpieza</h2>
+
+    <p>Una vez que ya no necesitas las ramas puedes eliminarlas local y remotamente. Esto ayuda a que no
+        termines con una pila de ramas viejas.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Fusionar (merge) localmente</h3>
+    <p>¡Tu pull request ha sido fusionado! Tu rama fue fusionada en la rama 'gh-pages' de el repositorio original en GitHub.
+        Puedes fusionar la rama localmente, también.</p>
+
+    <p>Primero, cámbiate a la rama a la cual quieres fusionarle los cambios. En este caso, la rama 'gh-pages'.</p>
+    <p><code class="shell">git checkout gh-pages</code></p> 
+
+    <p>Ahora dile a Git desde qué rama quieres traer los cambios. En este caso, tu rama que empieza con "add-".</p>
+    <p><code class="shell">git merge &#60;NOMBREDELABRANCH&#62;</code></p>
+
+    <p>Ordena el repositorio eliminando la branch sobre la que has trabajado. Ahora que has fusionado los cambios que hiciste ahí, ya no te hace falta.</p>
+    <p><code class="shell">git branch -d &#60;NOMBREDELABRANCH&#62;</code></p>
+
+    <p>También puedes eliminar la rama de tu remoto en GitHub:</p>
+    <p><code class="shell">git push &#60;NOMBREDELREMOTO&#62; --delete &#60;NOMBREDELABRANCH&#62;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Tira (pull) desde upstream</h3>
+    <p>Y por último, pero no menos importante, el repositorio original ha cambiado desde que tu pull request fue fusionado, ¡añadió tu nombre al sitio web! Si tiras de esos cambios desde upstream, estarás al día y tendrás esa versión también. Puedes
+        ver el sitio online en: tunombredeusuario.github.io/patchwork.</p>
+
+    <p>Para tirar desde el original upstream:</p>
+    <p><code class="shell">git pull upstream gh-pages</code></p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>¡Enhorabuena!</h2>
+    <p>¡Has creado repositorios, repositorios remotos, trabajado con un colaborador, empujado (push), tirado (pull) y te has unido millones
+        de personas desarrollando y enriqueciendo el código abierto!</p>
+
+    <p>Visita <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> para ver tu nombre
+        incorporado. ¿Quieres continuar? Revisa la sección <a href="../pages/resources.html#what-next">Qué más</a>
+        en la página de recursos de esta aplicación.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Fusiona una rama a tu rama actual</strong></li>
+        <code class="shell">git merge &#60;NOMBREDELABRANCH&#62;</code>
+        <li><strong>Cambia la rama en la que estás trabajando</strong></li>
+        <code class="shell">git checkout &#60;NOMBREDELABRANCH&#62;</code>
+        <li><strong>Borra una rama local</strong></li>
+        <code class="shell">git branch -d &#60;NOMBREDELABRANCH&#62;</code>
+        <li><strong>Borra una rama remota</strong></li>
+        <code class="shell">git push &#60;NOMBREDELREMOTO&#62; --delete &#60;NOMBREDELABRANCH&#62;</code>
+        <li><strong>Tira (pull) desde una rama remota</strong></li>
+        <code class="shell">git pull &#60;NOMBREDELREMOTO&#62; &#60;NOMBREDELABRANCH&#62;</code>
+    </ul>
+</div>

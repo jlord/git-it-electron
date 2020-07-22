@@ -1,0 +1,65 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Créez un fichier dans votre nouveau référentiel, ajoutez quelque chose à ce fichier et suivez-lz avec Git.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Commits</h2>
+    <p>Les commits sont essentiels à l'utilisation de Git. Ce sont les moments où vous enregistrez et décrivez le 
+    travail que vous avez accompli. Ils sont les instants clefs dans la chronologie de l'historique du projet.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Créer un nouveau fichier</h3>
+    <p>Maintenant que vous avez un référentiel commencé, ajoutez-y un fichier.</p>
+    <p>Ouvrez votre éditeur de texte et créez un nouveau fichier vide. Maintenant, écrivez un peu de texte, tapez peut-être "Bonjour!", et
+        enregistrez le fichier sous «readme.txt» dans le dossier «hello-world» que vous avez créé lors du précédent défi.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Vérifier l'état + ajouter et soumettre les modifications</h3>
+    <p>Ensuite, vérifiez le <strong> statut </ strong> de votre dépôt pour savoir s'il y a eu des changements. Vous savez que vous avez changé quelque chose , mais Git le sait-il aussi ?</p>
+
+    <p>Assurez-vous que vous êtes toujours dans votre répertoire «hello-world» lorsque vous exécutez ces commandes. Utilisez maintenant Git pour voir ce qui a changé dans votre dépôt:</p>
+
+    <p>Tout d'abord, vérifiez le statut:</p>
+    <p><code class="shell">git status</code></p>
+    <p>Git devrait vous dire qu'un fichier a été ajouté.</p>
+
+    <p>Puis <strong>ajouter</strong> le fichier que vous venez de créer afin qu'il devienne une partie des modifications que vous <strong>soumettez </ strong> avec Git: </p>
+    <p><code class="shell">git add readme.txt</code></p>
+
+    <p>Enfin, <strong>soumettez (commit)</ strong> ces modifications à l'historique du dépôt avec un court (m) message 
+    décrivant les mises à jour.</p>
+    
+    <p><code class="shell">git commit -m "Création du fichier readme"</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Étape: Effectuez plus de modifications</h3>
+    <p>Ajoutez une autre ligne au fichier "readme.txt" et enregistrez le fichier à nouveau.</p>
+
+    <p>Dans le terminal, vous pouvez afficher les <strong>différences</strong> entre le fichier actuel et la dernière version soumise.</p>
+
+    <p>Dites à Git de vous afficher le <strong>diff</strong>:</p>
+    <p><code class="shell">git diff</code></p>
+
+    <p>Maintenant, avec ce que vous venez d'apprendre ci-dessus, soumettez ces derniers changements.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Vérifiez l'état des modifications dans un dépôt</strong></li>
+        <li><code class="shell">git status</code></li>
+        <li><strong>Afficher les modifications apportés aux fichiers</strong></li>
+        <li><code class="shell">git diff</code></li>
+        <li><strong>Ajouter les modifications d'un fichier à soumettre</strong></li>
+        <li><code class="shell">git add &#60;FILENAME&#62;</code></li>
+        <li><strong>Pour ajouter toutes les modifications d'un seul coup</strong></li>
+        <li><code class="shell">git add .</code></li>
+        <li><strong> Pour soumettre les modifications que vous avez ajoutées avec un court message décrivant les modifications</strong>
+        </li>
+        <li><code class="shell">git commit -m "your commit message"</code></li>
+        <ul>
+</div>

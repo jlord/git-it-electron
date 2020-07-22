@@ -1,0 +1,112 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Conecta tu repositorio local a uno remoto y empuja (push) los cambios a este último.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Remotos (remotes)</h2>
+
+    <p>Cuando pones algo en GitHub, esa copia vive en uno de los servidores de GitHub. Esto lo convierte en un
+        repositorio <strong>remoto (remote)</strong> porque no está en tu ordenador, está en un servidor "remoto" en algún otro
+        lugar. <strong>Empujando (pushing)</strong> tus cambios <strong>locales</strong> (los de tu ordenador) a éste, lo mantienes
+        al día.</p>
+
+    <p>Otras personas siempre pueden obtener lo más reciente de tu proyecto <strong>tirando (pulling)</strong> de tus cambios desde el
+        remoto (a otro ordenador). Así es cómo varias personas pueden trabajar juntas en un proyecto sin necesidad de tener acceso a
+        tu ordenador, donde está almacenada tu copia local.</p>
+
+    <img src="../../../assets/imgs/remotes.png"
+         alt="Un diagrama que muestra GitHub como servidor central que crea el sitio web GitHub.com. Dos ordenadores, uno a cada lado, están empujando (push) y tirando (pull) de GitHub."
+         width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Crear un repositorio remoto</h3>
+    <p>Si quieres sincronizar tu versión <strong>local</strong> con la que está guardada en GitHub.com, primero crea un nuevo repositorio <strong>remoto (remote)</strong>
+        en GitHub.com.</p>
+
+    <ul>
+        <li>Ve a <a href="http://github.com " target="_blank">github.com</a>, haz login, y haz clic en el '+' situado arriba a la derecha
+            y después en 'Nuevo repositorio' ('New repository').
+        </li>
+        <li>Dale un nombre que coincida con el nombre de tu repositorio local, 'hola-mundo', y una descripción corta.</li>
+        <li>Hazlo público. Esto significa que será listado en tu perfil público.</li>
+        <li>No inicialices con un archivo README porque ya tienes un archivo, localmente, llamado 'readme.txt'. Esta opción es una ayuda
+            de GitHub si todavía no has creado uno local en tu ordenador.
+        </li>
+        <li>Las opciones '.gitignore' and 'license' deben quedar en 'none' (ninguna). No las usaremos en este tutorial.</li>
+        <li>Haz clic en 'Create Repository' (crear repositorio).</li>
+    </ul>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Readmes, .gitignores y Licenses</h2>
+    <p>Estos son archivos comunes en proyectos de código abierto, así que para iniciar un proyecto más fácilmente, GitHub ofrece una
+        opción para crearlos por ti.</p>
+    <p>Un <strong>README</strong> describe lo que es el proyecto, cómo usarlo y, generalmente, cómo contribuir al mismo (algunas
+        veces hay un archivo extra, 'CONTRIBUTING.md', para estos últimos detalles).</p>
+    <p>Un <strong>.gitignore</strong> es una lista de archivos a los que Git <em>NO</em> debería hacer seguimiento, por ejemplo, ¡archivos con
+        contraseñas!</p>
+    <p>Un archivo <strong>license</strong> describe el tipo de licencia que pusiste en tu proyecto. Esto permite a otros saber cómo 
+        pueden usarlo. Puedes encontrar más información de los tipos de licencia en: <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a>.
+    </p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Conecta tu Local a tu Remoto</h3>
+    <p>Ahora que has iniciado un repositorio remoto en GitHub.com, en la parte de arriba puedes ver una 'configuración rápida' ('Quick Setup'). Asegúrate de que
+        el botón 'HTTPS' está seleccionado y copia la dirección, que es la dirección de tu repositorio en los servidores de GitHub.</p>
+
+    <p>Vuelve a la terminal, y situado dentro de la carpeta 'hola-mundo' que inicializaste como repositorio de Git en el reto anterior, vas a decirle a Git que recuerde la dirección de la versión remota en los servidores GitHub. Puedes
+        tener varios remotos configurados en tu ordenador local, por lo que el remoto necesita un nombre. El remoto principal es generalmente llamado <code>origin</code>.
+    </p>
+
+    <p>Para agregar un remoto llamado 'origin' a tu repositorio:</p>
+    <code class="shell">git remote add origin &lt;URLDEGITHUB&gt;</code>
+
+    <p>Tu repositorio <strong>local</strong> ahora sabe dónde está tu repositorio <strong>remoto</strong>, llamado 'origin',
+        que está ubicado en los servidores de GitHub. Piensa en esto como si añadieras un nombre y un número de teléfono en los contactos de tu teléfono móvil para llamarlos rápidamente
+        cada vez que te haga falta.</p>
+
+    <blockquote>
+        <p><strong>Usuarios de Windows:</strong></p>
+        <p>Si tienes <strong>GitHub Desktop</strong> en tu ordenador, un remoto llamado 'origin' se crea automáticamente en tu repositorio local. En este caso, sólo necesitarás decirle qué URL asociar con
+            'origin'. Para esto, en vez de usar el comando 'add' mencionado anteriormente, utiliza el siguiente:</p>
+
+        <code class="shell">git remote set-url origin &lt;URLDEGITHUB&gt;</code>
+    </blockquote>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Empuja (push) tu trabajo al remoto</h3>
+    <p>Lo siguiente es hacer <strong>push</strong> (empujar) todo lo que has hecho localmente a tu repositorio remoto en GitHub.
+        Esto es algo que harás con frecuencia para que tu versión remota esté al día y coincida con el estado tu versión
+        local.</p>
+
+    <p>Git tiene un sistema de ramas (branches) para que puedas trabajar en diferentes partes del proyecto en tiempos diferentes. Aprenderemos
+        más acerca de ello después, pero por defecto la primera branch es nombrada 'master'. Cuando empujas (push) (y más adelante tiras) desde un
+        proyecto, le dices a Git el <strong>nombre de la rama (branch name)</strong> que quieres y el nombre del <strong>remoto</strong>
+        en el que debe residir.</p>
+
+    <p>En este caso, vamos a enviar una rama llamada 'master' a nuestro remoto en GitHub llamado 'origin'. </p>
+    <code class="shell">git push origin master</code>
+
+    <p>Ahora ve a la página de tu repositorio remoto en GitHub.com y actualízala. <strong>¡Wow!</strong> Todo 
+        es lo mismo ahora en tu ordenador local y remotamente en GitHub. Felicidades, ¡has creado tu primer repositorio público!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Agregar conexiones remotas</strong></li>
+        <code class="shell">git remote add &lt;NOMBREDELREMOTO&gt; &lt;URL&gt;</code>
+        <li><strong>Modificar la URL de un remoto</strong></li>
+        <code class="shell">git remote set-url &lt;NOMBREDELREMOTO&gt; &lt;URL&gt;</code>
+        <li><strong>Tirar de los cambios</strong></li>
+        <code class="shell">git pull &lt;NOMBREDELREMOTO&gt; &lt;NOMBREDELBRANCH&gt;</code>
+        <li><strong>Ver las direcciones remotas</strong></li>
+        <code class="shell">git remote -v</code>
+        <li><strong>Empujar cambios</strong></li>
+        <code class="shell">git push &lt;NOMBREDELREMOTO&gt; &lt;BRANCH&gt;</code>
+    </ul>
+</div>

@@ -1,0 +1,46 @@
+{
+  "n": {
+    ".gitignore": ".gitignore",
+    "repository": "dépôt",
+    "repositories": "dépôts",
+    "branch": "branche",
+    "branches": "branches",
+    "fork": "fork",
+    "forks": "forks",
+    "request": "requête",
+    "pull request": "pull request",
+    "pull requests": "pull requests",
+    "commit": "commit",
+    "commits": "commits",
+    "upstream": "upstream",
+    "feature": "fonctionnalité",
+    "status": "état",
+    "diff": "différences",
+    "readme": "README",
+    "collaborator": "collaborateur",
+    "collaborators": "collaborateur",
+    "remote": "remote",
+    "remotes": "remotes",
+    "contributing": "contribuer",
+    "connections": "connexions"
+  },
+  "v": {
+    "add": "ajouter",
+    "fork": "forker",
+    "forked": "forké",
+    "clone": "cloner",
+    "push": "pousser",
+    "close": "fermer",
+    "pull": "tirer",
+    "commit": "commiter",
+    "merge": "fusionner",
+    "merged": "fusionné",
+    "checkout": "checkout",
+    "stage": "checkout"
+  },
+  "adj": {
+    "merged": "fusionné",
+    "forked": "forké",
+    "remote": "distant"
+  }
+}
