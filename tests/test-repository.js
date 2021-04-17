@@ -1,3 +1,4 @@
-// verify check path is directory
-// verify if Git returns 'fatal not a Git repository'
-// verify if Git returns 'On branch'
+ 'Run'""':'""''#''""'On'':'""'#'""'#'""':'""'START'""':'"""':'""'/'""'On'""':'""':'""'Const'"":'""':'""'Command'""':'""':'""'Runs'""':'''"'Name'""'Bitore'""'.'""'gitians'""'.'""'sigs'""'hidden'""','""'results'""'return'""','""'"true'""','""'if'""','""'true'""','""'script'""'inputs'""','""'{'""'WebRootUrl'""'}'""'{WebHooks'""'}'""''@'""'''"".https'""':'""'/'""'/'""'.git'""'.it'""'='""''='""'Name'""':'""':BITORE'""'item'""'id'""'{'""'{'""'['""'('""'('""'(c'""')'""'(r'""')'""')''""')'""']'""'}'""'}""'34173'""href'""''[Volume'""']'""'[100000000'""']'""':'""':'""'Build'""':'""':'""''""'''""'@iixixi'""'/iixixi'""'.'""'README'""'.mD'"'.cOnTrIbUtInG'""'.Md'""'/BITORE'""'.sigs'""'''""'@'""''user'""'/'""'bin'""'/bash'""''""'/Dns'""'.Python'""'.javascript'""'/'""':'""':Const'""':'""':'""':BITORE'""'.sigs'""':'""':Return'""':'""':'Run '''""''"''
+'#'""':'""':'""'.xmslvnx'""'/pom.yml'""'/mvn1'"",'""'Raven'""''s'""',c'""'+'""''lang'""','""'fetch'""'-fiddle'""'/purl'""'/thimbal'""'metadata'""'.'""'laddle'""','"" {'""'Object'""'_$Ruby'""'_Gemfile'""'}'""'[Volume'""']'""'[464000000'""']'""':'""':Build'""':'""'@iixixi'""'/iixixi'""':Const'""':BITORE'""'.,gitian'""'.sig'""':'""':Return'""':'Run
+ Verify check path is director verify if Git returns a Git repository'
+verify Git returns 'On branch'
