@@ -1,0 +1,98 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Добавьте ветку локально в свой разветвленный репозиторий для работы с вашими изменениями.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Ветви</h2>
+    <p> Репозитории Git используют ветки, чтобы изолировать работу, когда это необходимо. Обычной практикой при работе над проектом или совместно с другими участниками проекта является создание <strong> ветки </strong>, чтобы сохранить ваши рабочие изменения. Таким образом, вы можете выполнять свою работу, пока основная, обычно называемая 'master', ветвь остается стабильным. Когда работа над вашей веткой закончена, вы снова объединяете ее с веткой 'master'. </p>
+
+    <p> На диаграмме ниже показано, как вы можете отделиться от своей ветки 'master', выполнить работу, а затем объединить эти изменения обратно в ветку 'master'. Вы даже можете ответвиться от ветки, если вам нужно, ветвь 'master' не обязательно должна быть базовой. </p>
+
+    <img src="../../../assets/imgs/branches.png"
+         alt="A diagram showing a horizontal line, representing the master branch, with another line branching off the top and later re-joining the original. Another line branches off the master branch line from below and yet another branch branches off of that. Both of these meet back up with the original master line, too."
+         width="100%">
+    <p> Чтобы лучше понять, как работают ветки в проекте, см. это руководство GitHub: <a href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a> </p>
+
+    <h2>GitHub Pages</h2>
+    <p> GitHub будет автоматически обслуживать и размещать файлы статических веб-сайтов в ветках с именем 'gh-pages'. Эта бесплатная служба называется <a href="http://pages.github.com"> GitHub Pages </a>. Поскольку разветвленный проект создает веб-сайт, его основная ветвь называется 'gh-pages' вместо 'master'. Все репозитории, в которых есть ветка 'gh-pages' с файлами веб-сайтов, можно найти в интерактивном режиме, используя этот шаблон для URL: </p>
+    <code>http://githubusername.github.io/repositoryname</code>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Создание ветки</h3>
+    <p> Когда вы создаете ветку, Git копирует все из текущей ветки, в которой вы находитесь, и помещает ее в ветку, которую вы просили создать. </p>
+
+    <p> Находясь в локальном репозитории 'patchwork', введите <code> git status </code>, чтобы узнать, в какой ветке вы сейчас находитесь. Git должен ответить, что вы находитесь в ветке 'gh-pages'. </p>
+
+    <p> Теперь создайте новую ветку и назовите ее "add-&#60;username&#62;", где username - ваше имя пользователя. Например, "add-jlord". <strong> Ветви чувствительны к регистру, поэтому назовите ветку точно так, как отображается ваше имя GitHub </strong>. </p>
+
+    <p><code class="shell">git branch &#60;BRANCHNAME&#62;</code></p>
+
+    <p> Теперь у вас есть ветка с новым именем, идентичным 'gh-pages'. </p>
+
+    <p> Чтобы перейти в эту ветку и поработать над ней, вы должны <strong> переключиться </strong> на ветку. Зайдите в свою новую ветку: </p>
+
+    <p><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Шаг: Создайте новый файл</h3>
+    <p>В текстовом редакторе:</p>
+    <ul>
+        <li> Создайте новый файл с именем <span style = "white-space: nowrap;"> "add-&#60;USERNAME&#62;.txt"</span>, где 'USERNAME' - ваше имя пользователя. Например, "add-jlord.txt". </li>
+        <li> Затем просто напишите в нем свое имя пользователя GitHub, вот и все. Например, я бы набрал 'jlord'. </li>
+        <li> Сохраните это в файле 'contributors' в папке Patchwork: <strong>Patchwork/contributors/add-yourusername.txt</strong></li>
+        <li>Затем проверьте свои изменения (см. ниже).</li>
+    </ul>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Check-in</h3>
+    <p>Выполните шаги для регистрации проекта: </p>
+
+    <p><code class="shell">git status</code></p>
+    <p><code class="shell">git add &#60;contributors/FILENAME&#62;</code></p>
+    <p><code class="shell">git commit -m "commit message"</code></p>
+
+    <p>Теперь отправьте обновление в <b> ваш форк </b>, 'origin', на GitHub:</p>
+    <p><code class="shell">git push origin &#60;BRANCHNAME&#62;</code></p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-no-pass grey-border border-box">
+    <h4>Отказано в доступе ... ошибка: 403</h4>
+    <p>Вы отправляете изменения в репозиторий, к которому у вас нет доступа на запись. В этом случае вы, скорее всего, отправляете к исходному 'jlord/patchwork'. Убедитесь, что вы отправляете на 'origin' и что он указывает на адрес вашего форма на GitHub. Чтобы проверить и увидеть, какие у вас есть удаленные репозитории и куда они указывают, выполните <code> git remote -v </code>. У вас должно быть 'upstream', указывающее на 'jlord/patchwork', и 'origin', указывающее на 'yourusername/patchwork'.
+
+    <p>Чтобы исправить удаленный репозиторий, указывающий не на то место, вы можете повторно установить его URL:<code>git remote set-url origin<URLTOYOURFORK></code>.
+
+    <h4>Ошибка аутентификации...ошибка: 401</h4>
+    <p> Не удалось подтвердить вашу личность. У вас может быть включена 2FA (двухфакторная аутентификация), и в этом случае вы должны использовать токен личного доступа в качестве пароля. Вы можете создать его, <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use"> следуя этим инструкциям </a>. Вам нужно будет сохранить его и использовать вместо пароля при появлении запроса. Вы также можете <a href="https://help.github.com/articles/caching-your-github-password-in-git/"> сохранить этот токен доступа </a> на своем компьютере, чтобы не нужно было вводить его повторно. </p>
+
+    <h4>Файл НЕ в папке 'contributors'</h4>
+    <p> Созданный вами файл должен быть помещен в существующую папку 'contributors' в репозитории Patchwork. Если вы поместили его в другое место, просто используйте Finder или проводник Windows, чтобы переместить файл в папку. Вы можете снова проверить <code> git status </code>, и вы обнаружите, что он видит ваши изменения. Подготовьте, а затем зафиксируйте «все» (-A) эти изменения (добавлений и удалений) с помощью команд ниже. </p>
+    <p><code class="shell">git add -A</code></p>
+    <p><code class="shell">git commit -m "move file into contributors folder"</code></p>
+
+    <h4>Ожидается название ветви: _____</h4>
+    <p>Название ветки должно точно соответствовать вашему имени пользователя. Чтобы изменить название вашей ветки:</p>
+    <p><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></p>
+    <p>Когда вы сделали ваши обновления, проверьте еще раз!</p>
+</div>
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Вы можете создать ветку и переключиться на нее одной строкой</strong></li>
+        <li><code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Создать новую ветку</strong></li>
+        <li><code class="shell">git branch &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Перейти на ветку</strong></li>
+        <li><code class="shell">git checkout &#60;BRANCHNAME&#62;</code></li>
+        <li><strong>Перечислить ветки</strong></li>
+        <li><code class="shell">git branch</code></li>
+        <li><strong>Переименовать ветку, в которой вы сейчас находитесь</strong></li>
+        <li><code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code></li>
+        <li><strong>Проверить ветку, на которой вы работаете</strong></li>
+        <li><code class="shell">git status</code></li>
+    </ul>
+</div>

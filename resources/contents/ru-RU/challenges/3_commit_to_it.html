@@ -1,0 +1,56 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p> Создайте файл в своем новом репозитории, добавьте что-нибудь в этот файл и зафиксируйте это изменение с помощью Git. </p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Коммиты</h2>
+    <p> Коммиты - это основа использования Git. Это моменты, когда вы сохраняете и описываете проделанную работу. Это отметки на шкале времени истории вашего проекта. </p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Создайте новый файл</h3>
+    <p>Теперь, когда у вас есть репозиторий, давайте добавим в него файл.</p>
+    <p> Откройте текстовый редактор и создайте новый пустой файл. Теперь напишите немного текста, например, введите «Hello!» И сохраните файл как «readme.txt» в папке «hello-world», которую вы создали в предыдущем задании. </p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Проверить статус + добавить и зафиксировать изменения</h3>
+    <p> Затем проверьте <strong> статус </strong> вашего репозитория, чтобы узнать, были ли в нем изменения. Вы знаете, что что-то изменили, но знает-ли Git? </p>
+
+    <p> Убедитесь, что вы все еще находитесь в своей директории 'hello-world', когда выполняете эти команды. Используйте Git, чтобы узнать, что изменилось в вашем репозитории: </p>
+
+    <p> Сначала проверьте статус: </p>
+    <p><code class="shell">git status</code></p>
+    <p> Git должен сообщить вам, что был добавлен файл. </p>
+    <p> Затем <strong> добавьте (add) </strong> только что созданный файл, чтобы он стал частью изменений, которые вы <strong> зафиксируете (commit) </strong> (или сохраните) с помощью Git: </p>
+    <p><code class="shell">git add readme.txt</code></p>
+    <p> Наконец, <strong> зафиксируйте (commit) </strong> эти изменения в истории репозитория с коротким (m) сообщением с описанием обновлений. </p>
+    <p><code class="shell">git commit -m "Created readme"</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Шаг: внесите больше изменений</h3>
+    <p> Теперь добавьте еще одну строку в readme.txt и снова сохраните файл. </p>
+    <p> В терминале вы можете просмотреть <strong> разницу (diff) </strong> между файлом сейчас и тем, каким он был при последнем коммите. </p>
+    <p> Попросите Git, чтобы он показал вам <strong> разницу (diff) </strong>: </p>
+    <p><code class="shell">git diff</code></p>
+    <p> Теперь, используя то, что вы только что узнали выше, зафиксируйте это последнее изменение. </p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Проверить статус изменений в репозитории</strong></li>
+        <li><code class="shell">git status</code></li>
+        <li><strong>Просмотр изменений в файлах</strong></li>
+        <li><code class="shell">git diff</code></li>
+        <li><strong>Добавить изменения файла для фиксации</strong></li>
+        <li><code class="shell">git add &#60;FILENAME&#62;</code></li>
+        <li><strong>Чтобы добавить все изменения файлов</strong></li>
+        <li><code class="shell">git add .</code></li>
+        <li><strong>Для фиксации (или сохранения) добавленных вами изменений с помощью короткого сообщения с описанием изменений</strong>
+        </li>
+        <li><code class="shell">git commit -m "your commit message"</code></li>
+        <ul>
+</div>

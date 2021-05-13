@@ -1,0 +1,55 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Объедините вашу ветку локально, удалите ветку и получите данные из отслеживаемой ветки.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Очистка</h2>
+    <p> Если вам больше не нужны ветки, вы можете удалить их локально или удаленно. Это полезно, чтобы у вас не образовалась куча старых веток. </p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Объедините локально</h3>
+    <p> Ваш запрос на принятие изменений был объединен! Ваша ветка была объединена с веткой 'gh-pages' исходного репозитория на GitHub. Вы также можете объединить свою ветку локально. </p>
+    <p> Сначала перейдите в ветку, с которой вы хотите выполнить слияние - в данном случае ветку 'gh-pages'. </p>
+
+    <p><code class="shell">git checkout gh-pages</code></p>
+    <p> Теперь сообщите Git, в какую ветку вы хотите выполнить объединение - в данном случае это функциональная ветка, которая начинается с "add-". </p>
+    <p><code class="shell">git merge &#60;BRANCHNAME&#62;</code></p>
+    <p> Приведите в порядок, удалив функциональную ветку. Теперь, когда он был объединен, он вам больше не нужен. </p>
+    <p><code class="shell">git branch -d &#60;BRANCHNAME&#62;</code></p>
+
+    <p>Вы также можете удалить ветку со своего удаленного репозитория на GitHub:</p>
+    <p><code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Получите данные из отслеживаемой ветки</h3>
+    <p> И последнее, но не менее важное: исходный репозиторий изменился с момента объединения вашего запроса на принятие изменений - Reporobot добавил ваше имя на веб-сайт! Если вы получите данные из отслеживаемой ветки, ваша ветка будет в актуальном состоянии. Вы также можете увидеть это вживую по адресу yourusername.github.io/patchwork. </p>
+
+    <p>Чтобы получить данные из отслеживаемой ветки:</p>
+    <p><code class="shell">git pull upstream gh-pages</code></p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Поздравления!</h2>
+    <p> Вы создали локальные репозитории, удаленные репозитории, работали с соавтором, отправили, получили и присоединились к миллионам других, разрабатывающих и обогащающих открытый исходный код! </p>
+
+    <p> Посетите <a href="https://jlord.github.io/patchwork" target="_blank"> jlord.github.io/patchwork </a>, чтобы увидеть свое имя! Хотите продолжить? Ознакомьтесь с разделом <a href="../pages/resources.html#what-next"> Что дальше </a> на странице ресурсов в этом приложении. </p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Объединить ветку в текущую ветку</strong></li>
+        <code class="shell">git merge &#60;BRANCHNAME&#62;</code>
+        <li><strong>Измените ветку, над которой вы работаете</strong></li>
+        <code class="shell">git checkout &#60;BRANCHNAME&#62;</code>
+        <li><strong>Удалить локальную ветку</strong></li>
+        <code class="shell">git branch -d &#60;BRANCHNAME&#62;</code>
+        <li><strong>Удалить удаленную ветку</strong></li>
+        <code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
+        <li><strong>Получить данные из удаленной ветки</strong></li>
+        <code class="shell">git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+    </ul>
+</div>
