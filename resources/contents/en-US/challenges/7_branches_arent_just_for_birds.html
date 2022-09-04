@@ -51,13 +51,16 @@
 
 <div class="chal-step blue-border border-box">
     <h3>Step: Create a new file</h3>
-    <p>Create a new file from a Terminal with your GitHub username as content: For instance, <em>add-jlord.txt</em> with content <em>jlord</em></p>
+    <p>Inside CONTRIBUTORS folder, create a new file with your GitHub username as content: For instance, <em>add-jlord.txt</em> with content <em>jlord</em></p>
+    <p>Using Terminal:</p>
     <ul>
+        <li>Make sure you're inside patchwork repo: <code class="shell">pwd</code></li>
+        <li>Go inside CONTRIBUTORS folder: <code class="shell">cd CONTRIBUTORS</code></li>
         <li>
-          <code class="shell">echo "&lt;username&gt;" &gt; CONTRIBUTORS/add-&lt;your_username&gt;.txt</code>  
+          Create the required file with your username as content: <code class="shell">echo "&lt;username&gt;" &gt; add-&lt;your_username&gt;.txt</code>  
         </li>
     </ul>
-    <p>Alternatively, back in your text editor:</p>
+    <p>Alternatively, use your text editor:</p>
     <ul>
         <li>Create a new file named <span style="white-space: nowrap;">"add-&#60;username&#62;.txt"</span>, where
             'username' is your GitHub username. For instance, "add-jlord.txt".
@@ -74,7 +77,7 @@
     <p>Go through the steps for checking in a project: </p>
 
     <p><code class="shell">git status</code></p>
-    <p><code class="shell">git add &#60;CONTRIBUTORS/add-&lt;your_username&gt;.txt</code></p>
+    <p><code class="shell">git add add-&lt;your_username&gt;.txt</code></p>
     <p><code class="shell">git commit -m "added a text file with my username"</code></p>
 
     <p>Now push your update to <b>your fork</b>, 'origin', on GitHub:</p>
