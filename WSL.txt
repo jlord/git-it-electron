@@ -1,0 +1,33 @@
+- update WSL to version 2
+- open Powershell as an amdin and type
+> wsl -l -v
+> wsl --update
+> wsl --shutdown
+> wsl --set-version Ubuntu 2
+> On VMWAre VM
+  - https://marduc812.com/2020/11/30/how-to-install-wsl2-inside-vmware-fusion-virtual-machine/
+
+Windows 11
+
+- install nodejs using nvm
+$ sudo apt update -y
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+$ nvm --version
+$ nvm install node
+$ sudo apt install -y  libgtk2.0-dev libxss1 libasound2 libgconf2-dev
+
+Install XServer for Windows
+- https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242
+
+$ clone git-it-electron repository
+$ cd git-it-electron
+$ npm install
+- don't update
+$ npm start
+
+Windows 10
+- everything above +
+- export LIBGL_ALWAYS_INDIRECT=1
+
+Make sure XServer is running
+- just open the saved xconfig.xlaunch file

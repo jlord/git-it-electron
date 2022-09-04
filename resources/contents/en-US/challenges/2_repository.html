@@ -51,11 +51,16 @@
     <p>Finally, tell Git to initialize (start tracking) the folder you are now in:</p>
     <code class="shell">git init</code>
 
-    <p>The last command should return something starting with "Initialized empty Git repository". The others commands do
+    <p>The last command should return something starting with "Initialized empty Git repository". The other commands do
         not return anything.</p>
+    
+    <p><code>git init</code> creates a hidden folder called .git to keep track of the local repository. You can verify by using
+        the following bash command that list every thing in the current folder in details:</p>
+    <code class="shell">ls -al</code>
 
-    <p>You did it! If you want to be double-sure that it's a Git repository, type <code>git status</code> and if it
-        doesn't return 'fatal: Not a git repository...', you're golden!</p>
+    <p>If you want to be double-sure that it's a Git repository, type the following command:</p>
+        <code class="shell">git status</code>
+    <p>You did it! If it doesn't return 'fatal: Not a git repository...', you're golden!</p>
 </div>
 
 {{{ verify_directory_button }}}
@@ -68,7 +73,9 @@
         <code class="shell">cd &#60;FOLDERNAME&#62;</code>
         <li><strong>List the items in a folder</strong></li>
         <code class="shell">ls </code>
-        <li><strong>Turn Git on for a folder</strong></li>
+        <li><strong>Turn a folder into a Git repository</strong></li>
         <code class="shell">git init</code>
+        <li><strong>List all the items (including hidden) in a folder in details</strong></li>
+        <code class="shell">ls -al</code>
     </ul>
 </div>

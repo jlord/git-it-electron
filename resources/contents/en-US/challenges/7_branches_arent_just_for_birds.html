@@ -6,24 +6,23 @@
     <h2>Branches</h2>
     <p>Git repositories use branches to isolate work when needed. It's common practice when working on a project or with
         others on a project to create a <strong>branch</strong> to keep your working changes in. This way you can do
-        your work while the main, commonly named 'master', branch stays stable. When the work on your branch is finished
-        you merge it back into the 'master' master branch.</p>
+        your work while the main branch stays stable. When the work on your branch is finished
+        you merge it back into the 'main' branch.</p>
 
-    <p>The diagram below shows how you can branch off of your 'master' branch, do work and then merge those changes back
-        into 'master'. You can even branch off of a branch if you need to, the 'master' branch doesn't have to be the
+    <p>The diagram below shows how you can branch off of your 'main' branch, do work and then merge those changes back
+        into 'main'. You can even branch off of a branch if you need to, the 'main' branch doesn't have to be the
         base.</p>
 
     <img src="../../../assets/imgs/branches.png"
-         alt="A diagram showing a horizontal line, representing the master branch, with another line branching off the top and later re-joining the original. Another line branches off the master branch line from below and yet another branch branches off of that. Both of these meet back up with the original master line, too."
+         alt="A diagram showing a horizontal line, representing the main branch, with another line branching off the top 
+         and later re-joining the original. Another line branches off the main branch line from below and yet another 
+         branch branches off of that. Both of these meet back up with the original main line, too."
          width="100%">
-
-    <p>For a great visualization on how branches work in a project, see this GitHub Guide: <a
-            href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a></p>
 
     <h2>GitHub Pages</h2>
     <p>GitHub will automatically serve and host static website files in branches named 'gh-pages'. This free service is
         called <a href="http://pages.github.com">GitHub Pages</a>. Since the project you forked creates a website, its
-        main branch is named 'gh-pages' instead of 'master'. All repositories that have a 'gh-pages' branch with website
+        main branch is named 'gh-pages' instead of 'main'. All repositories that have a 'gh-pages' branch with website
         files can be found, live online, using this pattern for the URL:</p>
 
     <code>http://githubusername.github.io/repositoryname</code>
@@ -52,16 +51,22 @@
 
 <div class="chal-step blue-border border-box">
     <h3>Step: Create a new file</h3>
-    <p>Back in your text editor:</p>
+    <p>Create a new file from a Terminal with your GitHub username as content: For instance, <em>add-jlord.txt</em> with content <em>jlord</em></p>
     <ul>
-        <li>Create a new file named <span style="white-space: nowrap;">"add-&#60;USERNAME&#62;.txt"</span>, where
-            'username' is your username. For instance, "add-jlord.txt".
+        <li>
+          <code class="shell">echo "&lt;username&gt;" &gt; CONTRIBUTORS/add-&lt;your_username&gt;.txt</code>  
+        </li>
+    </ul>
+    <p>Alternatively, back in your text editor:</p>
+    <ul>
+        <li>Create a new file named <span style="white-space: nowrap;">"add-&#60;username&#62;.txt"</span>, where
+            'username' is your GitHub username. For instance, "add-jlord.txt".
         </li>
         <li>Then, just write your GitHub username in it, that's it and that's all. For instance, I'd type 'jlord'.</li>
-        <li>Save this file in the 'contributors' folder in Patchwork: <strong>Patchwork/contributors/add-yourusername.txt</strong>
+        <li>Save this file in the 'CONTRIBUTORS' folder in patchwork repo: <strong>patchwork/CONTRIBUTORS/add-&lt;your_username&gt;.txt</strong>
         </li>
-        <li>Next, check in your changes (see below).</li>
     </ul>
+    <p>Next, check in your changes (see below).</p>
 </div>
 
 <div class="chal-step blue-border border-box">
@@ -69,8 +74,8 @@
     <p>Go through the steps for checking in a project: </p>
 
     <p><code class="shell">git status</code></p>
-    <p><code class="shell">git add &#60;contributors/FILENAME&#62;</code></p>
-    <p><code class="shell">git commit -m "commit message"</code></p>
+    <p><code class="shell">git add &#60;CONTRIBUTORS/add-&lt;your_username&gt;.txt</code></p>
+    <p><code class="shell">git commit -m "added a text file with my username"</code></p>
 
     <p>Now push your update to <b>your fork</b>, 'origin', on GitHub:</p>
     <p><code class="shell">git push origin &#60;BRANCHNAME&#62;</code></p>
@@ -81,7 +86,7 @@
 <div class="chal-no-pass grey-border border-box">
     <h4>Permission denied...error: 403</h4>
     <p>You are pushing changes to a repository you don't have write access to. In this case, you're likely pushing to
-        the original 'jlord/patchwork'. Make sure that you're pushing to 'origin' and that it points to your fork's
+        the original 'rambasnet/patchwork'. Make sure that you're pushing to 'origin' and that it points to your fork's
         address on GitHub. To check and see what your remotes are and where they point run <code>git remote -v</code>.
         You should have 'upstream' pointing to 'jlord/patchwork' and 'origin' pointing to 'yourusername/patchwork'.
 
