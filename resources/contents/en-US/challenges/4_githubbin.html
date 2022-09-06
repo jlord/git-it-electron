@@ -1,5 +1,5 @@
 <div id="challenge-desc" class="chal-goal blue-border border-box">
-    <p>Create a GitHub account and add your username to your Git config.</p>
+    <p>Create a GitHub account, add SSH keys and add your username to your local Git config.</p>
 </div>
 
 <div class="chal-background light-blue solid-box">
@@ -21,6 +21,32 @@
 </div>
 
 <div class="chal-step blue-border border-box">
+    <h3>SSH Keys and Authentication</h3>
+    <p>In order to read and write or sync with the remote repositories, 
+        your local git needs to authenticate with the remotes, e.g., GitHub.com.</p>
+    <p>Using SSH public/private key pairs is more secure and seamless way to authenticate without using the password.</p>
+    <p>Let's configure our local git to authenticate with GitHub.com. You need to do this once per develpment system.</p>
+    <ol>
+        <li>Open a Terminal and type the command<code class="shell">ssh-keygen</code>. 
+            Press enter using suggested default until you get the prompt back. 
+            If you see: ... /id_rsa already exits. Overwrite (y/n)? Enter n, we don't wan't to overwrite existing key-pairs.</li>
+        <li>
+            Copy the public key to clipboard.
+            <ul>
+                <li><code class="shell">cat ~/.ssh/id_rsa.pub</code></li>
+                <li>Select and copy (right click) the display contents starting with ssh-rsa ... to the end. </li>
+            </ul>
+        </li>
+        <li>Paste the public key on GitHub.com (login)->Click your profile avatar->Settings->SSh and GPG keys->New SSH key.
+            Give it an appropriate Title such as Windows 11 and paste into the Key textbox and Add SSH key.
+        </li>
+        <li>Test the authentication: <code class="shell">ssh -T git@github.com</code>. 
+            If you see: <em>Hi &lt;your_github_username&gt;! You've successfully authenticated, ...</em><strong>Awesome. You're on a roll</strong>.
+        </li>
+    </ol>
+</div>
+
+<div class="chal-step blue-border border-box">
     <h3>Add GitHub username to Git</h3>
     <p>Add your GitHub username to your Git configuration. We'll do this just for the sake of Git-it; it makes it easier
         to verify the upcoming challenges. Save it exactly as you created it on GitHub and <strong>capitalize where
@@ -30,7 +56,7 @@
     <code class="shell">git config --global user.username &#60;UserName&#62;</code>
 
     <p>You can double check what you have set in your Git config by typing:</p>
-    <code>git config --global user.username</code>
+    <code class="shell">git config --global user.username</code>
 </div>
 
 {{{ verify_button }}}
