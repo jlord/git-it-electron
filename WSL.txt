@@ -26,8 +26,8 @@ $ npm install
 $ npm start
 
 Windows 10
-- everything above +
+- everything above plus
 - export LIBGL_ALWAYS_INDIRECT=1
 
 Make sure XServer is running
-- just open the saved xconfig.xlaunch file
+- just open the saved xconfig.xlaunch file evertime the system reboots
