@@ -25,11 +25,11 @@ As a part of the challenges you'll also create a (free) account on GitHub. If yo
 ### Git
 
 On Windows, download standalone installer from [https://git-scm.com/download/win](https://git-scm.com/download/win).
-Use default or recommended settings while installing git. You need to the "Git Shell" tas your terminal.
+Use default or recommended settings while installing git. You need to use the "Git Shell" as your terminal to complete Git-it challenges.
 
-On Mac download and install git following the instructions: [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+On Mac, download and install git following the instructions here: [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
 
-On Mac and Linux you can use the app **Terminal**, which is already on your computer.
+On Mac and Linux, you can use the app **Terminal**, which is already on your computer.
 
 ### Text Editor
 
