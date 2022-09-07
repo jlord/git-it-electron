@@ -18,11 +18,11 @@ This application contains challenges for learning Git and GitHub—by using _rea
 
 ## What to Install
 
-You will need this app, Git-it as well as a text editor. You'll also of course need Git and the first challenge in Git-it helps you get that set up. But if you want to get a head start, go for it! You'll continue to use Git and your text editor throughout your bright social coding future.
+You will need this app, Git-it, git, and a text editor. The first challenge in Git-it helps you get that configured once installed. But if you want to get a head start, go for it! You'll continue to use Git and your text editor throughout your bright social coding future.
 
 As a part of the challenges you'll also create a (free) account on GitHub. If you've already got one, high-five!
 
-#### Git
+### Git
 
 On Windows, download standalone installer from [https://git-scm.com/download/win](https://git-scm.com/download/win).
 Use default or recommended settings while installing git. You need to the "Git Shell" tas your terminal.
@@ -31,11 +31,11 @@ On Mac download and install git following the instructions: [https://git-scm.com
 
 On Mac and Linux you can use the app **Terminal**, which is already on your computer.
 
-#### Text Editor
+### Text Editor
 
 Any text editor will do it. Some recommended editors are: [Atom](http://atom.io) which is built on [Electron.js](http://electron.atom.io), just like Git-it, [Sublime](https://www.sublimetext.com), [Microsoft VS Code](https://code.visualstudio.com) and [Adobe Brackets](http://brackets.io), etc.
 
-#### Git-it
+### Git-it
 
 You can view the [https://github.com/rambasnet/git-it-electron/releases](https://github.com/rambasnet/git-it-electron/releases) section of this repository to find the download for your operating system. Click to download your version. Once it has downloaded to your default Downloads directory, unzip or extract contents to a folder and run the Git-it executable. The executables for Mac, Windows and Linux:
 
@@ -57,13 +57,22 @@ When you've completed the steps in a challenge click 'Verify'. Depending on the 
 
 ---
 
-### Tips For Getting Started
+## Tips For Getting Started
 
-**Code snippets** often times look like `$ some command --here`. The dollar sign identifies the line as one a user would enter into the command line, but you don't actually include it when you type it into terminal. In this case, you'd actually just type `some command --here`.
+### Code snippets
 
-**Variables** are indicated by `<VARIABLENAME>` or <`<variable_name>`in code snippets. When you actually use the line of code, replace `<VARIABLENAME>`, with your data/value. For instance to make a new folder in terminal the format is, `mkdir <FOLDERNAME>`, so if you wanted to make a folder named 'octocat', you'd type: `mkdir octocat`.
+Often times you'll see `$ some command --here`. The dollar sign identifies the line as one a user would enter into the command line, but you don't actually include it when you type it into terminal. In this case, you'd actually just type `some command --here`.
 
-**Command line, Terminal and Bash** all basically mean the same thing: the MS-DOS, Doogie Howser looking screen full of words and numbers. It's awesomely powerful and allows you to control your computer with text commands.
+### Variables
 
-You can do a lot of things from your terminal like delete, rename, copy or create files and folders; run scripts and send things back and forth between servers (like the ones storing things on GitHub.com) and your computer (also a server!). To lean Linux Command Line this resource [http://linuxcommand.org/index.php](http://linuxcommand.org/index.php) is highly recommended. Note that you can run some basic utility Linux Bash commands even on Windows using git-bash or Powershell.
+Variables are indicated by `< >` e.g., `<VARIABLENAME>` or `<variable_name>`in code snippets. When you actually use the line of code, replace `<VARIABLENAME>`, with your data/value/content. For instance to make a new folder in terminal the format is, `mkdir <FOLDERNAME>`, so if you wanted to make a folder named 'octocat', you'd type: `mkdir octocat`.
 
+### Command line, Terminal and Bash
+
+They all basically mean the same thing: the MS-DOS, Doogie Howser looking screen full of words and numbers. It's awesomely powerful and allows you to control your computer with text commands.
+
+You can do a lot of things from your terminal like delete, rename, copy or create files and folders; run scripts and send things back and forth between servers (like the ones storing things on GitHub.com) and your computer (also a server!).
+
+### Tips for Learning Bash Commands
+
+To lean Linux/Mac Bash commands, this resource [http://linuxcommand.org/index.php](http://linuxcommand.org/index.php) is highly recommended. Note that you can run some basic utility Linux Bash commands even on Windows using git-bash or Powershell. Windows 10 and newer verion allow you to install Ubuntu as an App via WSL; see [https://docs.microsoft.com/en-us/windows/wsl/install](https://docs.microsoft.com/en-us/windows/wsl/install) for details.
