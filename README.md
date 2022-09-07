@@ -24,17 +24,20 @@ As a part of the challenges you'll also create a (free) account on GitHub. If yo
 
 #### Git
 
-We recommend installing [GitHub Desktop](http://desktop.github.com) (free) because it installs Git in the most consistent way across supported operating systems (Windows and Mac). We won't use the app itself in the challenges (but it is really useful once you get going in Git!), just the Git that it install for you.
+On Windows, download standalone installer from [https://git-scm.com/download/win](https://git-scm.com/download/win).
+Use default or recommended settings while installing git. You need to the "Git Shell" tas your terminal.
 
-Note—If you're using Windows, you should use the **Git Shell** app as your terminal—it is installed with GitHub Desktop. In Mac and Linux you can use the app **Terminal**, which is already on your computer.
+On Mac download and install git following the instructions: [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+
+On Mac and Linux you can use the app **Terminal**, which is already on your computer.
 
 #### Text Editor
 
-I'm quite partial (I'm on the team!) but [Atom](http://atom.io) is a great text editor (also free) and it is built on [Electron.js](http://electron.atom.io), just like Git-it. Visit the website and download the version for your operating system. [Sublime](https://www.sublimetext.com), [Microsoft VS Code](https://code.visualstudio.com) and [Adobe Brackets](http://brackets.io) are other options.
+Any text editor will do it. Some recommended editors are: [Atom](http://atom.io) which is built on [Electron.js](http://electron.atom.io), just like Git-it, [Sublime](https://www.sublimetext.com), [Microsoft VS Code](https://code.visualstudio.com) and [Adobe Brackets](http://brackets.io), etc.
 
 #### Git-it
 
-You can view the [releases](http://github.com/jlord/git-it-electron/releases) section of this repository to find the download for your operating system. Click to download your version. Once it has downloaded to your default Downloads directory, unzip the folder and run the Git-it executable. The executables for Mac, Windows and Linux:
+You can view the [https://github.com/rambasnet/git-it-electron/releases](https://github.com/rambasnet/git-it-electron/releases) section of this repository to find the download for your operating system. Click to download your version. Once it has downloaded to your default Downloads directory, unzip or extract contents to a folder and run the Git-it executable. The executables for Mac, Windows and Linux:
 
 ![executables](https://cloud.githubusercontent.com/assets/1305617/14696588/2b10abf8-0731-11e6-945e-f3d57114bce9.png)
 
@@ -42,7 +45,7 @@ You can view the [releases](http://github.com/jlord/git-it-electron/releases) se
 - **Windows** Double-click the executable.
 - **Linux** Double-click the executable. If the app isn't running, [see this issue](https://github.com/jlord/git-it-electron/issues/182).
 
-## Get Started!
+## Get Started
 
 Open Git-it and click the button to begin the first challenge. Have your terminal and text editor open, too. Follow along with the instructions in each challenge and use the terminal or editor as instructed.
 
@@ -56,10 +59,11 @@ When you've completed the steps in a challenge click 'Verify'. Depending on the 
 
 ### Tips For Getting Started
 
-**Code snippets** often times look like `$ some code-stuff --here`. The dollar sign identifies the line as one a user would enter into the command line, but you don't actually include it when you type it into terminal. In this case, you'd actually just type `some code-stuff --here`.
+**Code snippets** often times look like `$ some command --here`. The dollar sign identifies the line as one a user would enter into the command line, but you don't actually include it when you type it into terminal. In this case, you'd actually just type `some command --here`.
 
-**Variables** are indicated by `<VARIABLENAME>` in code snippets. When you actually use the line of code, replace `<VARIABLENAME>`, with your variable. For instance to make a new folder in terminal the format is, `mkdir <FOLDERNAME>`, so if you wanted to make a folder named 'octocat', you'd type: `mkdir octocat`.
+**Variables** are indicated by `<VARIABLENAME>` or <`<variable_name>`in code snippets. When you actually use the line of code, replace `<VARIABLENAME>`, with your data/value. For instance to make a new folder in terminal the format is, `mkdir <FOLDERNAME>`, so if you wanted to make a folder named 'octocat', you'd type: `mkdir octocat`.
 
-**Command line, terminal and bash** all basically mean the same thing: the MS-DOS, Doogie Howser looking screen full of words and numbers. It's awesomely powerful and allows you to control your computer with text commands.
+**Command line, Terminal and Bash** all basically mean the same thing: the MS-DOS, Doogie Howser looking screen full of words and numbers. It's awesomely powerful and allows you to control your computer with text commands.
 
-You can do a lot of things from your terminal like delete, rename, copy or create files and folders; run scripts and send things back and forth between servers (like the ones storing things on GitHub.com) and your computer (also a server!).
+You can do a lot of things from your terminal like delete, rename, copy or create files and folders; run scripts and send things back and forth between servers (like the ones storing things on GitHub.com) and your computer (also a server!). To lean Linux Command Line this resource [http://linuxcommand.org/index.php](http://linuxcommand.org/index.php) is highly recommended. Note that you can run some basic utility Linux Bash commands even on Windows using git-bash or Powershell.
+
