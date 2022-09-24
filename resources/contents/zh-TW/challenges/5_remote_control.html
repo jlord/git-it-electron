@@ -8,14 +8,15 @@
         的主機上也有一份了，所以叫做遠端(Remote)。當你把<strong>本地的</strong>程式修改 <strong>push</strong>到遠端，這就叫做同步。</p>
     <p>其他人可以透過 pull 你的 remote repository 來取得專案的最新版本，儲存到他們的電腦上。這樣一來，大家就可以一起修改同一個專案，而不需要用 USB 或 Email 等其他方式來取得專案的最新進度。</p>
     <img src="../../../assets/imgs/remotes.png"
-         alt="A diagram showing GitHub as a central server which creates the GitHub.com website. Two computers, on either side, are pushing and pulling from GitHub."
-         width="100%">
+        alt="A diagram showing GitHub as a central server which creates the GitHub.com website. Two computers, on either side, are pushing and pulling from GitHub."
+        width="100%">
 </div>
 
 <div class="chal-step blue-border border-box">
     <h3>建立一個 Remote Repository</h3>
     <p>你想要把<strong>本地的</strong>版本和存在 GitHub.com 上的 <strong>remote</strong> 版本做同步。所以我們先在 GitHub 上開啟一個新的
-        <strong>remote</strong> repository。</p>
+        <strong>remote</strong> repository。
+    </p>
     <ul>
         <li>到 <a href="http://github.com/" target="_blank">github.com</a> 登入，然後按一下右上角的「+」號來新增一個 repository。</li>
         <li>取一個名字，最好和你電腦上的程式名稱一樣，也就是「hello-world」，並且給它一個簡短的說明。</li>
@@ -33,7 +34,7 @@
     <p><strong>.gitignore</strong> 則是要忽略的檔案清單，這是用來告訴 Git，當在做版本控制記錄的時候，<em>不要</em>理會這些檔案。例如，當某個檔案中包含密碼的時候，我們就不希望 Git
         記錄它們下來。</p>
     <p><strong>License</strong>（著作權聲明）是用來聲明一個程式可以、或不可以被怎麼樣的使用。你可以到<a href="http://www.choosealicense.com"
-                                                                     target="_blank">choosealicense.com</a> 參考一些範例。</p>
+            target="_blank">choosealicense.com</a> 參考一些範例。</p>
     <!-- <p>但就現在在做的練習來說，我們暫時不需要著作權聲明。</p> -->
 </div>
 
@@ -62,10 +63,10 @@
 <div class="chal-step blue-border border-box">
     <h3>把你的修改 Push 到遠端</h3>
     <p>接下來你需要 <strong>push</strong>（傳送）所有你在本地做的修改到 GitHub 上的遠端 repository。通常你會希望遠端的程式版本和本地的程式版本是一樣的。</p>
-    <p>Git 有一個 branching 系統，讓你可以同時修改一個程式的不同功能，之後會再深入介紹。系統會預設一個名稱給最初的 branch，通常就會叫做 'master'。當你 push（或之後
+    <p>Git 有一個 branching 系統，讓你可以同時修改一個程式的不同功能，之後會再深入介紹。系統會預設一個名稱給最初的 branch，通常就會叫做 'main'。當你 push（或之後
         pull）一個專案的時候，你必須要告訴 Git 你想要的是哪一個 remote 上的哪一個 branch 的進度。</p>
-    <p>也就是說，我們現在想要把「master」 branch 的程式傳送到先前新增的 「origin」 remote。</p>
-    <code class="shell">git push origin master</code>
+    <p>也就是說，我們現在想要把「main」 branch 的程式傳送到先前新增的 「origin」 remote。</p>
+    <code class="shell">git push origin main</code>
     <p>完成之後，你現在就可以回到 GitHub 的 repository 頁面，重新整理。哇！程式是不是都同步了呢？恭喜你建立了第一個公開的 repository！</p>
 </div>
 
