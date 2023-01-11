@@ -1,0 +1,108 @@
+<p> Ниже приведены команды терминала и Git, используемые в задачах Git-it. </p>
+
+<h2> Основы Bash/Терминала </h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Создание новой папки (также известное как создание нового каталога)</strong></li>
+        <code class="shell">mkdir &#60;FOLDERNAME&#62;</code>
+        <li><strong>Переход в существующую папку (также известное как изменение каталога)</strong></li>
+        <code class="shell">cd &#60;FOLDERNAME&#62;</code>
+        <li><strong>Показать список элементов в папке</strong></li>
+        <code class="shell">ls </code>
+    </ul>
+</div>
+
+<h2>Настройка Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Проверить версию Git</strong></li>
+        <code>git --version</code>
+        <li><strong>Укажите свое имя</strong></li>
+        <code>git config --global user.name "Your Name"</code>
+        <li><strong>Укажите свой адрес электронной почты</strong></li>
+        <code>git config --global user.email youremail@example.com</code>
+        <li><strong>Установите свою учетную запись Github (с учетом регистра)</strong></li>
+        <code>git config --global user.username uSeRnAmE</code>
+    </ul>
+</div>
+
+<h2>Основы Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Включите Git для папки</strong></li>
+        <code class="shell">git init</code>
+        <li><strong>Проверить статус изменений в репозитории</strong></li>
+        <code class="shell">git status</code>
+        <li><strong>Просмотр изменений в файлах</strong></li>
+        <code class="shell">git diff</code>
+        <li><strong>Добавить изменения файла для фиксации/коммита</strong></li>
+        <code class="shell">git add &#60;FILENAME&#62;</code>
+        <li><strong>Добавить все изменения в файлах</strong></li>
+        <code class="shell">git add .</code>
+        <li><strong>Для фиксации (или сохранения) добавленных вами изменений с помощью короткого сообщения с описанием изменений</strong>
+        </li>
+        <code class="shell">git commit -m "your commit message"</code>
+        <li><strong>Скопируйте репозиторий на свой компьютер</strong></li>
+        <code class="shell">git clone &#60;URL&#62;</code>
+    </ul>
+</div>
+
+<h2>Ветви Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Создать новую ветку</strong></li>
+        <code class="shell">git branch &#60;BRANCHNAME&#62;</code>
+        <li><strong>Перейти на ветку</strong></li>
+        <code class="shell">git checkout &#60;BRANCHNAME&#62;</code>
+        <li><strong>Вы можете создать ветку и переключиться на нее одной строкой</strong></li>
+        <code class="shell">git checkout -b &#60;BRANCHNAME&#62;</code>
+        <li><strong>Показать список веток</strong></li>
+        <code class="shell">git branch</code>
+        <li><strong>Переименуйте ветку, в которой вы сейчас находитесь</strong></li>
+        <code class="shell">git branch -m &#60;NEWBRANCHNAME&#62;</code>
+    </ul>
+</div>
+
+<h2>Удаленные репозитории Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Добавить удаленные подключения</strong></li>
+        <code class="shell">git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code>
+        <li><strong>Установить URL-адрес на удаленный репозиторий</strong></li>
+        <code class="shell">git remote set-url &#60;REMOTENAME&#62; &#60;URL&#62;</code>
+        <li><strong>Посмотреть список удаленных подключений</strong></li>
+        <code class="shell">git remote -v</code>
+    </ul>
+</div>
+
+<h2>Получение данных в Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Получение изменений</strong></li>
+        <code class="shell">git pull</code>
+        <li><strong>Получение изменений из удаленной ветки </strong></li>
+        <code class="shell">git pull &#60;REMOTENAME&#62; &#60;REMOTEBRANCH&#62;</code>
+        <li><strong>Посмотреть изменения в удаленной ветке перед его получением </strong></li>
+        <code class="shell">git fetch --dry-run</code>
+    </ul>
+</div>
+
+<h2>Отправка &#38; Слияние в Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Отправка изменений</strong></li>
+        <code class="shell">git push &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
+        <li><strong>Слиять ветку в текущую ветку</strong></li>
+        <code class="shell">git merge &#60;BRANCHNAME&#62;</code>
+    </ul>
+</div>
+
+<h2>Удаление удаленных репозиторий и веток в Git</h2>
+<div class="blue-border-box">
+    <ul class="no-list-style">
+        <li><strong>Удаление локальной ветки</strong></li>
+        <code class="shell">git branch -D &#60;BRANCHNAME&#62;</code>
+        <li><strong>Удаление удаленной ветки </strong></li>
+        <code class="shell">git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
+    </ul>
+</div>
