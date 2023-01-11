@@ -37,7 +37,7 @@
   "homepage": "https://github.com/jlord/git-it-electron",
   "devDependencies": {
     "electron": "^1.4.3",
-    "electron-packager": "^8.0.0",
+    "electron-packager": "^17.1.1",
     "rimraf": "^2.5.4",
     "standard": "^5.4.1"
   },
