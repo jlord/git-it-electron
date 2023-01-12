@@ -8,21 +8,24 @@
     <p>When you put something on GitHub that copy lives on one of GitHub's servers. This makes it a
         <strong>remote</strong> repository because it is not on your computer, but on a server, "remote" and somewhere
         else. By <strong>pushing</strong> your <strong>local</strong> (on your computer) changes to it, you keep it up
-        to date.</p>
+        to date.
+    </p>
 
     <p>Others can always then get the latest from your project by <strong>pulling</strong> your changes down from the
         remote (and onto their computer). This is how everyone can work on a project together without needing access to
         your computer where your local copy is stored.</p>
 
     <img src="../../../assets/imgs/remotes.png"
-         alt="A diagram showing GitHub as a central server which creates the GitHub.com website. Two computers, on either side, are pushing and pulling from GitHub."
-         width="100%">
+        alt="A diagram showing GitHub as a central server which creates the GitHub.com website. Two computers, on either side, are pushing and pulling from GitHub."
+        width="100%">
 </div>
 
 <div class="chal-step blue-border border-box">
     <h3>Create a Remote Repository</h3>
-    <p>You want to sync your <strong>local</strong> version with one stored on GitHub.com. First create a new <strong>remote</strong>
-        repository on GitHub.com.</p>
+    <p>You want to sync your <strong>local</strong> version with one stored on GitHub.com. First create a new
+        <strong>remote</strong>
+        repository on GitHub.com.
+    </p>
 
     <ul>
         <li>Go to <a href="http://github.com " target="_blank">github.com</a>, log in, and click the '+' in the top
@@ -47,7 +50,8 @@
     <p>A <strong>.gitignore</strong> is a list of files that Git should <em>not</em> track, for instance, files with
         passwords!</p>
     <p>A <strong>license</strong> file is the type of license you put on your project. This lets others know how they
-        can use it. Information on the types is here: <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a>.
+        can use it. Information on the types is here: <a href="http://www.choosealicense.com"
+            target="_blank">choosealicense.com</a>.
     </p>
 </div>
 
@@ -85,12 +89,12 @@
         version.</p>
 
     <p>Git has a branching system so that you can work on different parts of a project at different times. We'll learn
-        more about that later, but by default the first branch is named 'master'. When you push (and later pull) from a
+        more about that later, but by default the first branch is named 'main'. When you push (and later pull) from a
         project, you tell Git the <strong>branch name</strong> you want and the name of the <strong>remote</strong> that
         it lives on.</p>
 
-    <p>In this case, we'll send our branch named 'master' to our remote on GitHub named 'origin'. </p>
-    <code class="shell">git push origin master</code>
+    <p>In this case, we'll send our branch named 'main' to our remote on GitHub named 'origin'. </p>
+    <code class="shell">git push origin main</code>
 
     <p>Now go to your remote repository's page on GitHub.com and refresh the page. <strong>Wow!</strong> Everything is
         now the same locally as it is remotely. Congrats on your first public repository!</p>
