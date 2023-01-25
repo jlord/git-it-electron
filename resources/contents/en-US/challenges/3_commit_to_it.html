@@ -10,8 +10,15 @@
 
 <div class="chal-step blue-border border-box">
     <h3>Create a New File</h3>
-    <p>Now that you've got a repository started let's add a file to it.</p>
-    <p>Open your text editor and create a new empty file. Now write a little bit of text, perhaps type "Hello!", and
+    <p>Now that you've got a repository started, let's add a file with some content to it.</p>
+    <p>Type the following bash commands on a Terminal:</p>
+    <code class="shell">pwd</code><br />
+    <code class="shell">ls</code><br />
+    <code class="shell">cd hello-world</code><br />
+    <code class="shell">echo Hello > readme.txt</code><br />
+    <code class="shell">ls</code><br />
+    <code class="shell">cat readme.txt</code>
+    <p>Alternatively, open your text editor and create a new empty file. Now write a little bit of text, perhaps type "Hello!", and
         save the file as 'readme.txt' in the 'hello-world' folder you created in the last challenge.</p>
 </div>
 
@@ -38,6 +45,7 @@
 
 <div class="chal-step blue-border border-box">
     <h3>Step: Make More Changes</h3>
+    <code class="shell">echo "Good Bye\!" >> readme.txt</code>
     <p>Now add another line to 'readme.txt' and save the file again.</p>
 
     <p>In terminal, you can view the <strong>diff</strong>erence between the file now and how it was at your last
@@ -53,6 +61,18 @@
 
 <div class="chal-tip grey-border border-box">
     <ul class="no-list-style">
+        <li><strong>Print the current working directory</strong></li>
+        <li><code class="shell">pwd</code></li>
+        <li><strong>Print text on Terminal</strong></li>
+        <li><code class="shell">echo "some text"</code></li>
+        <li><strong>See contents of a text file</strong></li>
+        <li><code class="shell">cat &lt;FILENAME&gt;</code></li>
+        <li><strong>Redirect output to a text file (ceate a new file or truncate existing one)</strong></li>
+        <li><code class="shell">echo "some text" &gt; FILENAME</code></li>
+        <li><strong>Append text to a file</strong></li>
+        <li><code class="shell">echo "some more text" &gt;&gt; FILENAME</code></li>
+        <li><strong>See contents of a text file</strong></li>
+        <li><code class="shell">cat &lt;FILENAME&gt;</code></li>
         <li><strong>Check status of changes to a repository</strong></li>
         <li><code class="shell">git status</code></li>
         <li><strong>View changes to files</strong></li>
@@ -61,8 +81,8 @@
         <li><code class="shell">git add &#60;FILENAME&#62;</code></li>
         <li><strong>To add all files changes</strong></li>
         <li><code class="shell">git add .</code></li>
-        <li><strong>To commit (aka save) the changes you've added with a short message describing the changes</strong>
+        <li><strong>To commit (aka save) the changes you've added to the lcoal repo with a short message describing the changes</strong>
         </li>
         <li><code class="shell">git commit -m "your commit message"</code></li>
-        <ul>
+    <ul>
 </div>
