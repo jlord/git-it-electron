@@ -33,7 +33,7 @@ On Mac and Linux, you can use the app **Terminal**, which is already on your com
 
 ### Text Editor
 
-Any text editor will do it. Some recommended editors are: [Atom](http://atom.io) which is built on [Electron.js](http://electron.atom.io), just like Git-it, [Sublime](https://www.sublimetext.com), [Microsoft VS Code](https://code.visualstudio.com) and [Adobe Brackets](http://brackets.io), etc.
+Any text editor will do it. [Sublime](https://www.sublimetext.com), [Microsoft VS Code](https://code.visualstudio.com) and [Adobe Brackets](http://brackets.io), etc.
 
 ### Git-it
 
