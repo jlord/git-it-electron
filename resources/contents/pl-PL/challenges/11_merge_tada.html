@@ -1,0 +1,65 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Scalanie gałęzi lokalnie, usunięcie gałęzi i pobieranie z repozytorium oryginalnego.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Sprzątanie</h2>
+
+    <p>Kiedy gałęzie nie są Ci już potrzebne możesz usunąć je z repozytorium lokalnego i zdalnego. Jest to pomocne, gdyż 
+        repozytorium nie zostaje zaśmiecone starymi gałęziami.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Scalanie lokalnie</h3>
+    <p>Twój pull request został scalony! Twoja gałąź została scalona do gałęzi 'gh-pages' w oryginalnym repozytorium na GitHubie.
+        Możesz również scalić swoją gałąź lokalnie.</p>
+
+    <p>Najpierw, przejdź na gałąź do której chcesz scalić zmiany z innej gałęzi — w tym wypadku będzie to gałąź 'gh-pages'.</p>
+    <p><code class="shell">git checkout gh-pages</code></p>
+
+    <p>Teraz poinstruuj Gita która gałąź będzie źródłem scalanych zmian — w tym wypadku będzie to gałąź, której nazwa zaczyna się od "add-".</p>
+    <p><code class="shell">git merge &#60;NAZWAGAŁĘZI&#62;</code></p>
+
+    <p>Posprzątaj po sobie usuwając scaloną już gałąź. Gdy została scalona nie będzie już więcej potrzebna.</p>
+    <p><code class="shell">git branch -d &#60;NAZWAGAŁĘZI&#62;</code></p>
+
+    <p>Możesz również usunąć gałąź z Twojego repozytorium zdalnego na GitHubie:</p>
+    <p><code class="shell">git push &#60;NAZWAREPOZYTORIUM&#62; --delete &#60;NAZWAGAŁĘZI&#62;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Pobieranie z repozytorium oryginalnego</h3>
+    <p>Ostatnią, ale nie mniej ważną informacją jest fakt, że oryginalne repozytorium zmieniło się ponieważ Twój pull request został zaakceptowany — 
+        Reporobot dodał Twoją nazwę do strony! Jeśli pobierzesz te zmiany z repozytorium oryginalnego będziesz posiadał aktualną 
+        kopię repozytorium. Możesz również zobaczyć ją na żywo pod adresem: twojanazwaużytkownika.github.io/patchwork.</p>
+
+    <p>Aby pobrać zmiany z oryginalnego repozytorium:</p>
+    <p><code class="shell">git pull upstream gh-pages</code></p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Gratulacje!</h2>
+    <p>Tworzyłeś lokalne repozytoria, zdalne repozytoria, pracowałeś ze współpracownikiem, wypychałeś, pobierałeś i dołączyłeś do milionów 
+        innych ludzi programujących i wzbogacających świat open source!</p>
+
+    <p>Odwiedź <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> by zobaczyć swój nick w tym gronie! 
+        Nie chcesz zwalniać tempa? Sprawdź sekcję <a href="../pages/resources.html#what-next">Co dalej?</a>
+        na stronie z zasobami do nauki w tej aplikacji.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Scalanie gałęzi do aktywnej gałęzi</strong></li>
+        <code class="shell">git merge &#60;NAZWAGAŁĘZI&#62;</code>
+        <li><strong>Zmiana aktywnej gałęzi</strong></li>
+        <code class="shell">git checkout &#60;NAZWAGAŁĘZI&#62;</code>
+        <li><strong>Usuwanie gałęzi lokalnej</strong></li>
+        <code class="shell">git branch -d &#60;NAZWAGAŁĘZI&#62;</code>
+        <li><strong>Usuwanie gałęzi zdalnej</strong></li>
+        <code class="shell">git push &#60;NAZWAREPOZYTORIUM&#62; --delete &#60;NAZWAGAŁĘZI&#62;</code>
+        <li><strong>Pobieranie z gałęzi zdalnej</strong></li>
+        <code class="shell">git pull &#60;NAZWAREPOZYTORIUM&#62; &#60;NAZWAGAŁĘZI&#62;</code>
+    </ul>
+</div>

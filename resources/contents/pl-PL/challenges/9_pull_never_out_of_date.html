@@ -1,0 +1,38 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Zadbanie o aktualność plików poprzez pobranie zmian od współpracowników.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h3>Pobieranie z repozytorium zdalnego</h3>
+    <p>Jeśli pracujesz nad czymś z kimś innym musisz posiadać aktualną wersję projektu. Będziesz chciał pobrać zmiany
+        które mogły zostać wypchnięte do centralnego repozytorium GitHub.</p>
+
+    <img src="../../../assets/imgs/pull.png"
+         alt="Diagram pokazujący komputer pobierający informację z centralnego repozytorium" width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Co zrobił Reporobot?</h3>
+    <p>Sprawdź czy Reporobot dokonał zmian na Twojej gałęzi próbując pobrać zmiany z 'origin' na GitHub:</p>
+
+    <p><code class="shell">git pull &lt;REPOZYTORIUMZDALNE&gt; &lt;NAZWAGAŁĘZI&gt;</code></p>
+
+    <p>Jeśli nic się nie zmieniło, otrzymasz komunikat 'Already up-to-date'. Jeśli jednak pojawiły się zmiany,
+        Git scali je do Twojej wersji lokalnej.</p>
+
+    <p>Czy Reporobot zrobił jakieś zmiany? Git powie Ci gdzie zostały one zrobione. Możesz otworzyć ten plik i zobaczyć poprawki Reporobota.
+        Niespodzianka, Reporobot jest artystą!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Sprawdzenie statusu repozytorium</strong></li>
+        <code class="shell">git status</code>
+        <li><strong>Pobieranie zmian z gałęzi zdalnej</strong></li>
+        <code class="shell">git pull &lt;REPOZYTORIUMZDALNE&gt; &lt;GAŁĄŹZDALNA&gt;</code>
+        <li><strong>Podgląd zmian zanim zostaną pobrane</strong></li>
+        <code class="shell">git fetch --dry-run</code>
+    </ul>
+</div>

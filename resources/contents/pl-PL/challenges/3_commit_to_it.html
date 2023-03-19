@@ -1,0 +1,67 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Utworzenie pliku w Twoim nowym repozytorium, dodanie mu zawartości i zatwierdzenie zmian za pomocą Git.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Zatwierdzenia zmian</h2>
+    <p>Zatwierdzenia zmian (potocznie zwane commitami od angielskiego <em>Commits</em>) są kluczem do korzystania z Gita.
+        Są to momenty w których zapisywałeś i opisywałeś wykonaną pracę. To punkty na osi czasu Twojego projektu.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Tworzenie nowego pliku</h3>
+    <p>Teraz gdy masz już skonfigurowane repozytorium dodaj do niego plik.</p>
+    <p>Otwórz swój edytor tekstowy i utwórz nowy pusty plik. Teraz wprowadź do niego zawartość - możeto być podstawowe przywitanie "Cześć!" - 
+        i zapisz go jako 'readme.txt' w folderze 'hello-world' utworzonym w ostatnim wyzwaniu.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Sprawdzanie statusu oraz dodawanie i zatwierdzanie zmian</h3>
+    <p>Następnie sprawdź <strong>status</strong> repozytorium by dowiedzieć się czy miały miejsce zmiany. Ty wiesz o tym
+        kiedy coś zmieniasz, ale czy Git wie?</p>
+
+    <p>Upewnij się, że nadal jesteś w folderze 'hello-world' kiedy będziesz uruchamiał poniższe polecenia. Za pomocą Gita
+        sprawdź co się zmieniło w repozytorium:</p>
+
+    <p>Najpierw sprawdź status repozytorium:</p>
+    <p><code class="shell">git status</code></p>
+    <p>Git powinien powiadomić Cię o utworzeniu nowego pliku.</p>
+
+    <p>Następnie <strong>dodaj</strong> dopiero utworzony plik do listy zmian do <strong>zatwierdzenia</strong>
+        (zapisania) za pomocą Gita:</p>
+    <p><code class="shell">git add readme.txt</code></p>
+
+    <p>Na koniec, <strong>zatwierdź</strong> wybrane zmiany w historii repozytorium wraz z krótką
+        wiadomością je opisującą.</p>
+    <p><code class="shell">git commit -m "Utworzono readme"</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Krok: zrób więcej zmian</h3>
+    <p>Dodaj kolejną linię do 'readme.txt' i po raz kolejny zapisz plik.</p>
+
+    <p>W terminalu możesz zobaczyć różnicę pomiędzy plikiem teraz, a ostatnim zatwierdzonym stanem.</p>
+
+    <p>Poinstruuj gita by wyświetlił różnice:</p>
+    <p><code class="shell">git diff</code></p>
+
+    <p>Wykorzystując wiedzę z poprzedniego kroku, zapisz bieżące zmiany.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Sprawdzanie statusu zmian w repozytorium</strong></li>
+        <li><code class="shell">git status</code></li>
+        <li><strong>Wyświetlanie zmian w plikach</strong></li>
+        <li><code class="shell">git diff</code></li>
+        <li><strong>Dodawanie zmian w pliku do zatwierdzania</strong></li>
+        <li><code class="shell">git add &#60;NAZWAPLIKU&#62;</code></li>
+        <li><strong>Dodawanie wszystkich zmian do zatwierdzania</strong></li>
+        <li><code class="shell">git add .</code></li>
+        <li><strong>Zatwierdzanie dodanych zmian wraz z ich krótkim opisem</strong>
+        </li>
+        <li><code class="shell">git commit -m "opis nowych zmian"</code></li>
+        <ul>
+</div>
