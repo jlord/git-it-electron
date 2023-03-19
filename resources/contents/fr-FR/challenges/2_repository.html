@@ -14,14 +14,14 @@
 
     <p>Vous dites à Git quel est votre projet et Git va commencer à suivre toutes les modifications apportées à ce dossier. 
        Cela en fait un dépôt Git: un dossier suivi par Git. Git suit lorsque les fichiers sont ajoutés, soustraits ou 
-       même modifiée (que ce soit d'une seule lettre ou en intégralité). En plus de cela Git suit qui à apporté ces 
+       même modifiée (que ce soit d'une seule lettre ou en intégralité). En plus de cela Git suit qui a apporté ces 
        modifications. Dans l'univers du développement logiciel, ce suivi des modifications s'appellent 
        <strong>la gestion de version</strong>.</p>
 
     <h2>Utilisation du terminal</h2>
     <p><strong>Terminal</ strong>(ou Bash) est un moyen pour indiquer à votre ordinateur de faire des choses en tapant 
     des commandes plutôt que de cliquer sur les applications avec votre souris. Vous pouvez renommer des fichiers, 
-    ouvrir des fichiers, créer de nouveaux dossiers, changer de répertoires et plus tous en exécutant des commandes 
+    ouvrir des fichiers, créer de nouveaux dossiers, changer de répertoires et plus simplement en exécutant des commandes 
     textuelle. 
     
     Vous pouvez même utiliser un éditeur de texte adapté au code (comme 
@@ -50,20 +50,20 @@
     <p>Dans la fenêtre de votre terminal, tapez ces commandes, une à la fois, en appuyant sur la touche "Entrée" pour 
     valider votre saisie</p>
 
-    <p>Tout d'abord, créez un nouveau dossier:<br><span class = "inline-tip">Astuce: mkdir signifie <em>make directory</em></span></p>
+    <p>Tout d'abord, créez un nouveau dossier:<br><span class = "inline-tip">Astuce: mkdir signifie <em>make directory</em> (créer un dossier)</span></p>
     <code class="shell">mkdir hello-world</code>
 
-    <p> Ensuite, entrez dans ce dossier:<br><span class="inline-tip">Astuce: cd signifie <em>change directory</em></span></p>
+    <p> Ensuite, entrez dans ce dossier:<br><span class="inline-tip">Astuce: cd signifie <em>change directory</em> (changer de dossier)</span></p>
     <code class="shell">cd hello-world</code>
 
     <p>Enfin, dites à Git d'initialiser(démarrer le suivi) du dossier dans lequel vous êtes:</p>
     <code class="shell">git init</code>
 
-    <p>La dernière commande devrait renvoyer quelque chose commençant par "Initialized empty Git repository". 
+    <p>La dernière commande devrait renvoyer quelque chose commençant par "Initialized empty Git repository" (ou "Dépôt Git vide initialisé" si vous avez une version de git en français). 
     Les autres commandes ne renvoie rien.</p>
 
     <p> Vous l'avez fait! Si vous voulez être sûr que c'est un dépôt Git, tapez <code>git status</code> 
-    et s'il ne vous retourne pas 'fatal: Not a git repository...' c'est que tout est parfait !</p>
+    et s'il ne vous retourne pas 'fatal: Not a git repository...' (ou "fatal: ni ceci ni aucun de ses répertoires parents n'est un dépôt git") c'est que tout est parfait !</p>
 </div>
 
 {{{ verify_directory_button }}}
