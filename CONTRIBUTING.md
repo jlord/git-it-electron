@@ -85,6 +85,10 @@ This will output the contents of the application to a folder at `../out/Git-it-l
 $ npm run pack-win
 ```
 
+This will output the contents of the application to a folder at `../out/Git-it-linux-ia32`.
+```bash
+$ npm run pack-ia32
+
 A note from `electron-packager`, the module we use to package these apps:
 
 > **Building Windows apps from non-Windows platforms**
