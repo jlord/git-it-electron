@@ -1,0 +1,91 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Kết nối repos cục bộ của bạn với một remote (điều khiển từ xa) và đưa lên Git những thay đổi bạn đã làm.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Remotes</h2>
+
+    <p>Khi bạn đưa thứ gì đó lên GitHub, máy chủ GitHub sẽ sao lưu ngay một bản. Đó là lí do ta có <strong>remote</strong> của repository bởi nó không nằm trên máy tính của bạn mà nằm trên một server, "remote" (điều khiển từ xa) và nơi nào đó. Với việc <strong>push</strong> các repos <strong>local</strong> (trên máy tính) và thay đổi nó, bạn giữ cho việc cật nhật nó được diễn ra mọi lúc có thay đổi.</p>
+
+    <p>Người khác cũng có thể lấy được những thay đổi mới nhất từ project của bạn bằng việc <strong>pull</strong> về các thay đổi của bạn thông qua remote (và trên máy của họ). Đây là cách mà mọi người làm việc cùng một project với nhau mà không cần phải truy cập vào máy tính của bạn - nơi chứa repos.</p>
+
+    <img src="../../../assets/imgs/remotes.png"
+         alt="Một biểu đồ thể hiện GitHub là máy chủ trung gian thông qua website GitHub.com. Hai máy tính, ở hai nơi khác nhau, cùng đưa lên (push) và kéo về (pull) các thay đổi từ GitHub."
+         width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Tạo một Repos Remote</h3>
+    <p>Bạn muốn đồng bộ <strong>local</strong> version với một repos đã lưu trên GitHub.com. Đầu tiên, tạo ra một<strong>remote</strong>
+        repository mới trên GitHub.com.</p>
+
+    <ul>
+        <li>Đi đến <a href="http://github.com " target="_blank">github.com</a>, đăng nhập, và click biểu tượng '+' ở phía trên bên phải rồi chọn 'New Repository'.
+        </li>
+        <li>Đặt cho repos đó một cái tên trùng với repos cục bộ của bạn, 'hello-world', và một vài mô tả ngắn trong description.</li>
+        <li>Đặt nó ở trạng thái công khai. Điều này làm cho repos đó sẽ được hiển thị trên profile của bạn công khai.</li>
+        <li>Không cần tạo file README vì ta đã có sẵn file trong repos cục bộ có tên là 'readme.txt'. Đây chỉ là một lựa chọn mà GitHub hỗ trợ nếu bạn chưa tạo file README.</li>
+        <li>Bỏ qua '.gitignore' và 'license' đặt là 'none'. Ta chưa cần dùng đến trong challenge lần này.</li>
+        <li>Click tạo repos - create repository!</li>
+    </ul>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>README, gitignores and Licenses</h2>
+    <p>Có những file thường thấy trong các dự án open source, nên để dễ dàng cho việc bắt đầu một project mới, GitHub cung cấp một lựa chọn tạo ra các file đó cho bạn.</p>
+    <p>Một file <strong>readme</strong> giải thích về project: project đó là gì, sử dụng nó như thế nào, và thường là làm sao để cộng tác(contribute) (đôi khi mục này được tách ra một file, có tên là 'CONTRIBUTING.md', để chi tiết hơn).</p>
+    <p>Một file<strong>.gitignore</strong> là một danh sách của các file mà Git <em>không</em> phải để ý, theo dõi thay đổi files with
+        passwords!</p>
+    <p>Một giấy phép - <strong>license</strong> file là một dạng giấy phép bạn đặt cho project của mình. Nó chứa thông tin cho người khác biết cách sử dụng nó. Thông tin của dạng này bạn có thể tìm ở đây: <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a>.
+    </p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Kết nối repos cục bộ đến Remote</h3>
+    <p>Giờ bạn đã có một repository trắng trên GitHub.com. Ở phía trên bạn sẽ thấy 'Quick Setup', đảm bảo rằng nút
+        'HTTPS' đã được chọn và sao chép địa chỉ đó, đó chính là địa chỉ repos của bạn trên máy chủ GitHub.</p>
+
+    <p>Quay trở lại với terminal và repos 'hello-world' cục bộ mà bạn đã tạo Git repos trong challenge trước đó, bạn cần cho Git biết và nhớ địa chỉ của remote version trên máy chủ GitHub. Bạn có thể có nhiều remote và mỗi remote yêu cầu một tên. Ở dạng nguyên thủy, tên thường được đặt là <code>origin</code>.
+    </p>
+
+    <p>Để thêm remote có tên 'origin' vào repos:</p>
+    <code class="shell">git remote add origin &lt;URLFROMGITHUB&gt;</code>
+
+    <p>Repos trên <strong>local</strong> của bạn giờ đã biết <strong>remote</strong> repos có tên 'origin' trên máy chủ GitHub nằm ở đâure. Có thể liên tưởng với việc bạn thêm tên và địa chỉ trong mục quay số nhanh khi bạn cần gửi đến nó, bạn chỉ việc gửi theo số quay số nhanh đã lưu.</p>
+
+    <blockquote>
+        <p><strong>Đối với người dùng Windows:</strong></p>
+        <p>Nếu bạn có <strong>GitHub Desktop</strong> trên máy tính, một remote có tên 'origin' sẽ tự động được tạo trong repos cục bộ. Trong trường hợp này, bạn chỉ cần cho nó biết URL liên kết với 'origin'. Dùng lệnh này thay cho 'add':</p>
+
+        <code class="shell">git remote set-url origin &lt;URLFROMGITHUB&gt;</code>
+    </blockquote>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Đẩy lên Remote</h3>
+    <p>Tiếp đó, bạn muốn <strong>push</strong> (gửi) mọi thứ bạn đã hoàn thành dưới local đến remote repos của bạn trên GitHub. Đây là việc bạn sẽ làm thường xuyên vì vậy remote version cập nhật và so khớp với trạng thái của local version.</p>
+
+    <p>Git có hệ thống rẽ nhánh nên bạn có thể làm việc với các phần khác nhau của project ở những thời điểm khác nhau. Ta sẽ học sâu về nó sau, nhưng mặc định, nhánh đầu tiên có tên là 'master'. Khi bạn đẩy (và sau đó là kéo về) từ một project, bạn sẽ cho Git biết <strong>branch name</strong> - tên nhánh mà bạn muốn và tên của <strong>remote</strong> mà bạn cần.</p>
+
+    <p>Trong trường hợp này, ta sẽ gửi đến branch có tên 'master' nằm trên remote trên GitHub tên là 'origin'. </p>
+    <code class="shell">git push origin master</code>
+
+    <p>Và giờ ta đi đến remote repos của bạn trên GitHub.com và chạy lại trang. <strong>Wow!</strong> Tất cả các file đã được cập nhật giống với local repos!. Vậy là bạn đã hoàn thành với repos đầu tiên!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Thêm kết nối từ xa</strong></li>
+        <code class="shell">git remote add &lt;REMOTENAME&gt; &lt;URL&gt;</code>
+        <li><strong>Đặt URL cho remote</strong></li>
+        <code class="shell">git remote set-url &lt;REMOTENAME&gt; &lt;URL&gt;</code>
+        <li><strong>Kéo về những thay đổi</strong></li>
+        <code class="shell">git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
+        <li><strong>Xem địa chỉ của remote</strong></li>
+        <code class="shell">git remote -v</code>
+        <li><strong>Gửi lên các thay đổi</strong></li>
+        <code class="shell">git push &lt;REMOTENAME&gt; &lt;BRANCH&gt;</code>
+    </ul>
+</div>
