@@ -1,0 +1,65 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Fuzionează-ți ramura locală, șterge ramura și retrage de la 'upstream'.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Curățarea</h2>
+
+    <p>Odată ce nu mai ai nevoie de ramuri, poți să le ștergi local și la distanță. Asta ajută ca să nu sfârșești
+        cu o grămadă de ramuri vechi.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Fuzionează local</h3>
+    <p>Cererea ta de retragere a fost fuzionată! Ramura ta a fost fuzionată în ramura 'gh-pages' de pe GitHub originar.
+        Îți poți fuziona și ramura locală.</p>
+
+    <p>Întâi, treci pe ramura în care vrei să fuzionezi, în acest caz, ramura 'gh-pages'.</p>
+    <p><code class="shell">git checkout gh-pages</code></p>
+
+    <p>Acum spune-i lui Git ce ramură vrei să fuzionezi, în acest caz, ramura cu opțiuni care începe cu „add-”.</p>
+    <p><code class="shell">git merge &#60;NUMERAMURĂ&#62;</code></p>
+
+    <p>Fă curat ștergând ramura cu opțiuni. Acum că a fost fuzionată nu mai ai nevoie de ea.</p>
+    <p><code class="shell">git branch -d &#60;NUMERAMURĂ&#62;</code></p>
+
+    <p>Poți de asemenea să ștergi ramura din depozitul la distanță de pe GitHub:</p>
+    <p><code class="shell">git push &#60;NUMEDEPOZITLADISTANȚĂ&#62; --delete &#60;NUMERAMURĂ&#62;</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Retrage de pe upstream</h3>
+    <p>Și ultimul dar nu cel din urmă, versiunea originară s-a schimbat de când cererea ta de retragere a fost fuzionată, Reporobot ți-a adăugat numele
+        la site! Dacă retragi aceste schimbări de pe upstream vei fi la zi și vei avea de asemenea acea versiune. Poți,
+        de fapt, să o vezi activă la: numeletăudeutilizator.github.io/patchwork.</p>
+
+    <p>Pentru a retrage din depozitul „upstream” originar:</p>
+    <p><code class="shell">git pull upstream gh-pages</code></p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Felicitări!</h2>
+    <p>Ai creat depozite locale, depozite la distanță, ai împins, retras, lucrat cu un colaborator și te-ai alăturat
+        milioanelor care dezvoltă și îmbogățesc open source!</p>
+
+    <p>Vizitează <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> pentru a-ți vedea numele
+        încorporat! Vrei să continui? Du-te la secțiunea <a href="../pages/resources.html#what-next">Ce urmează</a>
+        de pe pagina de resurse din această aplicație.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Fuzionează o ramură în ramura curentă</strong></li>
+        <code class="shell">git merge &#60;NUMERAMURĂ&#62;</code>
+        <li><strong>Schimbă ramura la care lucrezi</strong></li>
+        <code class="shell">git checkout &#60;NUMERAMURĂ&#62;</code>
+        <li><strong>Șterge o ramură locală</strong></li>
+        <code class="shell">git branch -d &#60;NUMERAMURĂ&#62;</code>
+        <li><strong>Șterge o ramură la distanță</strong></li>
+        <code class="shell">git push &#60;NUMEDEPOZITLADISTANȚĂ&#62; --delete &#60;NUMERAMURĂ&#62;</code>
+        <li><strong>Retrage dintr-o ramură la distanță</strong></li>
+        <code class="shell">git pull &#60;NUMEDEPOZITLADISTANȚĂ&#62; &#60;NUMERAMURĂ&#62;</code>
+    </ul>
+</div>

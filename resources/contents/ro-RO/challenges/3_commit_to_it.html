@@ -1,0 +1,67 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Creează un fișier în noul depozit, adaugă ceva la acel fișier și operează acea schimbare cu Git.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Operări</h2>
+    <p>Operările sunt esența folosirii Git. Sunt momentele în care salvezi și descrii ceea ce ai lucrat. Sunt bifele
+        din desfășurătorul istoriei proiectului tău.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Creează un nou fișier</h3>
+    <p>Acum că ai început un depozit, haide să adaugăm fișiere la el.</p>
+    <p>Deschide editorul de text și creează un nou fișier gol. Acum scrie un mic text, poate "Hello!", și
+        salvează fișierul ca 'readme.txt' în directorul 'hello-world' pe care l-ai creat în ultima provocare.</p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Verifică starea + adaugă și operează schimbări</h3>
+    <p>În continuare verifică <strong>starea</strong> depozitului pentru a afla dacă au existat schimbări. Știi că
+        ai schimbat ceva, dar știe și Git?</p>
+
+    <p>Asigură-te că ești încă în directorul 'hello-world' când execuți aceste comenzi. Folosește Git pentru a vedea
+        ce s-a schimbat în depozitul tău:</p>
+
+    <p>Întâi, verifică starea:</p>
+    <p><code class="shell">git status</code></p>
+    <p>Git ar trebui să îți spună că a fost adăugat un fișier.</p>
+
+    <p>Apoi <strong>adaugă</strong> fișierul pe care tocmai l-ai creat astfel încât să devină parte din schimbările pe care le vei <strong>opera</strong>
+        (salva) cu Git:</p>
+    <p><code class="shell">git add readme.txt</code></p>
+
+    <p>În sfârșit, <strong>operează</strong> acele schimbări în istoria depozitului cu un scurt
+        (m) mesaj care descrie schimbările.</p>
+    <p><code class="shell">git commit -m "Creat readme"</code></p>
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Pas: Fă mai multe schimbări</h3>
+    <p>Acum adaugă o altă linie la 'readme.txt' și salvează fișierul din nou.</p>
+
+    <p>În terminal, poți vizualiza diferența dintre fișierul de acum și cum era la ultima operare.</p>
+
+    <p>Spune-i lui Git să arate <strong>diferența</strong>:</p>
+    <p><code class="shell">git diff</code></p>
+
+    <p>Acum, cu ce ai învățat mai sus, operează această ultimă schimbare.</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Verifică starea schimbărilor dintr-un depozit</strong></li>
+        <li><code class="shell">git status</code></li>
+        <li><strong>Vizualizează schimbările din fișiere</strong></li>
+        <li><code class="shell">git diff</code></li>
+        <li><strong>Adaugă schimbările unui fișier pentru a fi operate</strong></li>
+        <li><code class="shell">git add &#60;NUME_FIȘIER&#62;</code></li>
+        <li><strong>Pentru a adăuga toate schimbările fișierelor</strong></li>
+        <li><code class="shell">git add .</code></li>
+        <li><strong>Pentru a opera (salva) schimbările pe care le-ai adăugat cu un scurt mesaj care descrie schimbările</strong>
+        </li>
+        <li><code class="shell">git commit -m "mesajul de operare"</code></li>
+        <ul>
+</div>

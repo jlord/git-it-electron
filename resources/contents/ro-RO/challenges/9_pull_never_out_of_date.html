@@ -1,0 +1,39 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Ține-ți fișierul la zi retrăgând schimbări de la colaborator.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h3>Retragere dintr-un depozit la distanță</h3>
+    <p>Dacă lucrezi la ceva cu altcineva trebuie să fii la zi cu ultimele schimbări. Așadar,
+        vei vrea <strong>să retragi</strong> orice schimbări care ar fi putut fi împinse în depozitul central GitHub.</p>
+
+    <img src="../../../assets/imgs/pull.png"
+         alt="O diagramă care ilustrează un calculator retrăgând informații de pe site-ul unui depozit" width="100%">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Ce a făcut Reporobot?</h3>
+    <p>Vezi dacă Reporobot a făcut vreo schimbare în ramura ta retrăgând orice schimbări din depozitul la distanță numit 'origin' de pe
+        GitHub:</p>
+
+    <p><code class="shell">git pull &lt;NUMEDEPOZITLADISTANȚĂ&gt; &lt;NUMERAMURĂ&gt;</code></p>
+
+    <p>Dacă nu s-a schimbat nimic, îți va spune 'Already up-to-date'. Dacă există schimbări, Git va fuziona acele schimbări
+        în versiunea ta locală.</p>
+
+    <p>A făcut Reporobot vreo schimbare? Git îți spune unde au fost făcute schimbările. Poți deschide acel fișier și vedea schimbările lui Reporobot.
+        Surpriză, Reporobot este artist!</p>
+</div>
+
+{{{ verify_directory_button }}}
+
+<div class="chal-tip grey-border border-box">
+    <ul class="no-list-style">
+        <li><strong>Verifică starea Git</strong></li>
+        <code class="shell">git status</code>
+        <li><strong>Retrage schimbări de pe o ramură la distanță</strong></li>
+        <code class="shell">git pull &lt;NUMEDEPOZITLADISTANȚĂ&gt; &lt;RAMURĂLADISTANȚĂ&gt;</code>
+        <li><strong>Vezi schimbările la depozitul la distanță înainte să retragi</strong></li>
+        <code class="shell">git fetch --dry-run</code>
+    </ul>
+</div>

@@ -1,0 +1,56 @@
+<div id="challenge-desc" class="chal-goal blue-border border-box">
+    <p>Operează o cerere de retragere la depozitul originar Patchwork.</p>
+</div>
+
+<div class="chal-background light-blue solid-box">
+    <h2>Cereri de retragere</h2>
+    <p>Adesea când aduci schimbări și îmbunătățiri unui proiect pe care l-ai bifurcat, vei vrea să trimiți acele schimbări
+        celui care menține versiunea originară și <strong>să ceri</strong> <strong>să retragă</strong> acele schimbări
+        în versiunea originară astfel încât toată lumea să poată beneficia de schimbări, aceea este o <strong>cerere de retragere</strong>.</p>
+
+    <p>Vrem să adaugăm la listă, așa că fă o <strong>o cerere de retragere</strong> pentru a-ți adăuga
+        fișierul cu nume de utilizator în versiunea originară: <a href="https://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.
+    </p>
+
+    <img src="../../../assets/imgs/pullrequest.png" width="100%"
+         alt="O ilustrație prezentând două opțiuni. A doua opțiune conține mai mult din alfabet decât prima și îi cere primeia să accepte contribuția sa astfel încât alfabetul să fie complet.">
+</div>
+
+<div class="chal-step blue-border border-box">
+    <h3>Creează o cerere de retragere</h3>
+    <p>Vizitează depozitul originar pe care l-ai bifurcat pe GitHub, în acest caz <a href="https://github.com/jlord/patchwork">http://github.com/jlord/patchwork</a>.
+    </p>
+
+    <p>Adesea Git va detecta că ai împins o ramură într-o bifurcație și o va ilustra în partea de sus a site-ului celui originar.
+        Dacă vezi asta cu ramura ta 'add-username', poți face click pentru a crea o cerere de retragere de acolo. Dacă nu:</p>
+
+    <ul>
+        <li>Fă click pe butonul verde 'New pull request'.</li>
+        <li>Selectează ramura cu schimbările pe care vrei să le operezi. Ar trebui să fie cea cu 'add-yourusername'.</li>
+    </ul>
+
+    <p>Vei vedea acum o pagină cu detaliile cererii de retragere pe care urmează să o operezi. Această pagină ilustrează
+        indexările și schimbările, sub formă de diferențe, asociate cu cererea ta de retragere prin comparație cu ramura 'gh-pages'
+        a celui originar.</p>
+
+    <p>Dacă depozitul originar are o <strong>documentație de contribuție</strong>, GitHub va face legătura la ea. Aceasta este
+        documentația de la proprietarii depozitului despre cum să faci contribuții cel mai bine la acel proiect, foarte util de citit dată
+        ai vrea să vezi schibările adoptate!</p>
+
+    <p>Dacă totul de pe pagină arată bine și cum te aștepți:</p>
+
+    <ul>
+        <li>Fă click pe 'Create pull request'</li>
+        <li>Adaugă un titlu și o descriere schimbărilor pe care le sugerezi autorului originar să le retragă.</li>
+        <li>Fă click pe 'Send pull request'!</li>
+    </ul>
+
+    <p><strong>Bingo! Ți-ai trimis cererea de retragere, alocă-ți câteva secunde ca să te bucuri de moment.</strong>
+
+    <p>Dacă totul este în regulă cu cererea ta de retragere, va fi fuzionată în câteva momente. Dacă nu este fuzionată automat în
+        câteva momente, vei primi probabil niște comentarii de la @reporobot explicând de ce nu a putut să o fuzioneze. Dacă este
+        cazul, închide-ți cererea de retragere de pe GitHub, fă schimbările necesare la ramura ta, împinge acele schimbări înapoi
+        în bifurcația ta și redeschide-ți cererea de retragere (asta îl va anunța pe @reporobot să se uite din nou).</p>
+</div>
+
+{{{ verify_button }}}
