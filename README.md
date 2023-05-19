@@ -1,4 +1,4 @@
-# Git-it (Desktop App) - adapted for Manchester Codes
+# Git-it (Desktop App) - adapted for Command Shift
 
 ![Git-It](screenshot.png)
 Git-it is a desktop (Mac, Windows and Linux) app that teaches you how to use Git and GitHub on the [command line](https://en.wikipedia.org/wiki/Command-line_interface). Please work through all of the steps, ensuring you verify your solutions along the way.
