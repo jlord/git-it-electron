@@ -8,6 +8,7 @@ var BrowserWindow = electron.BrowserWindow
 var Menu = electron.Menu
 var ipcMain = electron.ipcMain
 var dialog = electron.dialog
+var MenuItem = electron.MenuItem
 
 var darwinTemplate = require('./menus/darwin-menu.js')
 var otherTemplate = require('./menus/other-menu.js')
@@ -105,6 +106,15 @@ app.on('ready', function appReady () {
     menu = Menu.buildFromTemplate(otherTemplate(app, mainWindow))
     mainWindow.setMenu(menu)
   }
+
+  var ctxMenu = new Menu()
+  ctxMenu.append(new MenuItem({role: 'startspeaking'}))
+  ctxMenu.append(new MenuItem({role: 'stopspeaking'}))
+  ctxMenu.append(new MenuItem({role: 'copy'}))
+  ctxMenu.append(new MenuItem({role: 'selectall'}))
+  mainWindow.webContents.on('context-menu', function(e, params){
+    ctxMenu.popup(mainWindow, params.x, params.y)
+  })
 
   mainWindow.on('closed', function winClosed () {
     mainWindow = null
