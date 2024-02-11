@@ -63,3 +63,4 @@ When you've completed the steps in a challenge click 'Verify'. Depending on the 
 **Command line, terminal and bash** all basically mean the same thing: the MS-DOS, Doogie Howser looking screen full of words and numbers. It's awesomely powerful and allows you to control your computer with text commands.
 
 You can do a lot of things from your terminal like delete, rename, copy or create files and folders; run scripts and send things back and forth between servers (like the ones storing things on GitHub.com) and your computer (also a server!).
+
